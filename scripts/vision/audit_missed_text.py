@@ -26,6 +26,19 @@ Two filters matter, and they pull in opposite directions:
 
 Found 2026-08-08, after four such gaps turned up by hand in one ten-page title.
 
+Three classes it could NOT see were added 2026-09-16, after a reviewer found five
+such groups by hand in one batch while this reported two of them:
+
+* **A sign a character reads aloud.** The balloon contains the sign's words, so a
+  membership test says covered while the sign itself was never boxed. Matching is
+  now against the lettering groups, not all of them.
+* **A sign the art repeats.** Three A-1 PEA-NUTS sacks in one panel, one grouped,
+  reads as covered because a set has no multiplicity. Counted now -- which needs
+  ``visible_text`` to list a repeated sign once per instance.
+* **A drawn device.** ``!``, ``?``, a ring of ``$``. ``normalize`` deletes
+  everything that is not a letter or a digit, so these reduced to the empty string
+  and were skipped as nothing to compare. ``device_key`` keeps the marks.
+
 Must be run with ``uv run`` from the barks-ocr checkout so the path deps resolve.
 """
 
@@ -34,7 +47,8 @@ import json
 import re
 import sys
 import unicodedata
-from collections import defaultdict
+from collections import Counter, defaultdict
+from dataclasses import dataclass
 from difflib import SequenceMatcher
 from pathlib import Path
 
@@ -50,6 +64,9 @@ from barks_ocr.utils.vision_schema import TYPE_KEY, VISIBLE_TEXT_KEY
 CAPTURE_FILE_SUFFIX = "-page-capture.json"
 CAPTURE_MODEL_KEY = "capture_model"
 TITLE_TYPE = "title"
+# Types that are somebody TALKING. Lettering quoted inside one of these is not
+# the same thing as the lettering being boxed in the art.
+SPEECH_TYPES = frozenset({"dialogue", "thought", "narration"})
 IGNORE_FILE = Path(__file__).with_name("missed-text-ignore.txt")
 SCOPED_ENTRY_FIELDS = 3  # volume, page, and the lettering itself
 
@@ -84,6 +101,33 @@ def normalize(text: str | None) -> str:
     folded = unicodedata.normalize("NFKD", strip_markup(unescape_markup(text or "")))
     folded = "".join(c for c in folded if not unicodedata.combining(c))
     return re.sub(r"[^A-Z0-9]", "", folded.upper())
+
+
+def device_key(text: str | None) -> str:
+    r"""Reduce a DRAWN DEVICE to a comparable key, keeping its punctuation.
+
+    ``normalize`` deletes everything that is not a letter or a digit, so a drawn
+    device -- a lone ``!``, a ``?``, a row of ``$`` signs -- reduces to the empty
+    string and is then skipped as "nothing to compare". The audit could not see
+    a device even when the pass had transcribed one, which is how the ring of
+    dollar signs round Scrooge's head on *Back to Long Ago!* 102 panel 3 reached
+    a reviewer by hand: a device is lettering, it just has no letters.
+
+    Whitespace is dropped so ``$ $ $\n$`` and ``$$$$`` compare equal; a run of
+    one repeated mark is collapsed to that mark, because the pass counts a row of
+    exclamation marks by eye and the engines do not.
+    """
+    squashed = re.sub(r"\s+", "", strip_markup(unescape_markup(text or "")))
+    if not squashed:
+        return ""
+    if len(set(squashed)) == 1:
+        return squashed[0]
+    return squashed
+
+
+def comparable(text: str | None) -> str:
+    """Return the key this lettering matches on: its letters, or its marks if it has none."""
+    return normalize(text) or device_key(text)
 
 
 def load_ignores() -> set[tuple[int | None, str | None, str]]:
@@ -150,24 +194,48 @@ def near_match(needle: str, grouped: set[str]) -> str | None:
 
 def index_pages(
     page_groups: list[SpeechPageGroup],
-) -> tuple[dict[str, dict[OcrTypes, set[str]]], dict[str, Path], set[str]]:
+) -> tuple[
+    dict[str, dict[OcrTypes, set[str]]],
+    dict[str, dict[OcrTypes, Counter[str]]],
+    dict[str, dict[OcrTypes, set[str]]],
+    dict[str, Path],
+    set[str],
+]:
     """Fold a title's page groups into per-page lookups.
 
     ``get_speech_page_groups`` yields one entry per (page, engine), so the
     grouped text has to be collected back into a page before a page's single
     capture can be compared against it.
 
-    Returns the grouped text per page per engine, each page's capture file, and
-    the title's story-logo texts.
+    Returns, per page per engine: the grouped text, how many groups carry each
+    text, and the subset of it grouped as LETTERING rather than as speech -- then
+    each page's capture file and the title's story-logo texts.
+
+    The count is what catches a sign the art shows more than once and an engine
+    boxed once: *Donald's Pet Service* 103 panel 3 stands three A-1 PEA-NUTS
+    sacks side by side and one was grouped, which a set comparison reads as
+    covered. The lettering subset is what catches a sign a CHARACTER READS ALOUD,
+    where the balloon contains the sign's words and so covers them without the
+    sign itself ever being boxed.
     """
     grouped_text: dict[str, dict[OcrTypes, set[str]]] = defaultdict(dict)
+    grouped_counts: dict[str, dict[OcrTypes, Counter[str]]] = defaultdict(dict)
+    grouped_lettering: dict[str, dict[OcrTypes, set[str]]] = defaultdict(dict)
     capture_files: dict[str, Path] = {}
     logos: set[str] = set()
     for page_group in page_groups:
         page = page_group.fanta_page
         groups = page_group.speech_page_json.get("groups", {})
-        grouped_text[page][page_group.ocr_index] = {
-            normalize(g.get("ai_text")) for g in groups.values()
+        engine = page_group.ocr_index
+        grouped_text[page][engine] = {comparable(g.get("ai_text")) for g in groups.values()}
+        grouped_counts[page][engine] = Counter(
+            comparable(g.get("ai_text")) for g in groups.values()
+        )
+        # Lettering the art itself carries, as against somebody saying it aloud.
+        grouped_lettering[page][engine] = {
+            comparable(g.get("ai_text"))
+            for g in groups.values()
+            if g.get(TYPE_KEY) not in SPEECH_TYPES
         }
         capture_files.setdefault(
             page, page_group.ocr_prelim_groups_json_file.parent / (page + CAPTURE_FILE_SUFFIX)
@@ -176,7 +244,7 @@ def index_pages(
             normalize(g.get("ai_text")) for g in groups.values() if g.get(TYPE_KEY) == TITLE_TYPE
         }
     logos.discard("")
-    return grouped_text, capture_files, logos
+    return grouped_text, grouped_counts, grouped_lettering, capture_files, logos
 
 
 def page_capture(capture_file: Path) -> list[str] | None:
@@ -187,6 +255,51 @@ def page_capture(capture_file: Path) -> list[str] | None:
     if not capture.get(CAPTURE_MODEL_KEY):
         return None  # never vision-passed, so visible_text carries no claim
     return capture.get(VISIBLE_TEXT_KEY) or None
+
+
+@dataclass(frozen=True)
+class PageIndex:
+    """One page's grouped text, indexed the three ways the audit needs to ask about it.
+
+    ``per_engine`` is what each engine grouped, ``counts`` is how many groups
+    carry each text, and ``lettering`` is the subset grouped as something the ART
+    carries rather than as somebody speaking.
+    """
+
+    per_engine: dict[OcrTypes, set[str]]
+    counts: dict[OcrTypes, Counter[str]]
+    lettering: dict[OcrTypes, set[str]]
+    every_text: set[str]
+    logos: set[str]
+
+
+def classify(needle: str, item: str, wanted: int, index: PageIndex) -> tuple[str, str, list]:
+    """Decide what one piece of ``visible_text`` is; return a verdict, a line and engines.
+
+    Verdicts are ``missing``, ``one-engine``, ``near``, ``suppressed`` and
+    ``covered``. For ``near`` the line is the grouped text it nearly matches.
+
+    Two of the cases exist because a set comparison answers the wrong question.
+    A sign whose words a CHARACTER READS ALOUD is contained by that balloon, so
+    it tests as covered while never having been boxed. And a sign the art shows
+    more often than the engines grouped it -- three peanut sacks, one group --
+    needs a count, not a membership test.
+    """
+    have = [engine for engine, texts in index.per_engine.items() if covers(needle, texts)]
+    if not have:
+        if any(needle == logo or needle in logo or logo in needle for logo in index.logos):
+            return "suppressed", item, []
+        close = near_match(needle, index.every_text)
+        return ("near", close, []) if close else ("missing", item, [])
+    if not any(covers(needle, index.lettering[engine]) for engine in have):
+        return "missing", f"{item}  [quoted aloud, not boxed]", []
+    short = [engine for engine in have if index.counts[engine].get(needle, 0) < wanted]
+    if short:
+        grouped_n = min(index.counts[engine].get(needle, 0) for engine in short)
+        return "missing", f"{item}  [{wanted} in the art, {grouped_n} grouped]", []
+    if len(have) < len(index.per_engine):
+        return "one-engine", item, have
+    return "covered", item, []
 
 
 def audit_title(
@@ -208,7 +321,7 @@ def audit_title(
         logger.warning(f'Skipping "{title_str}": {exc}')
         return [], [], 0, 0
 
-    grouped_text, capture_files, logos = index_pages(page_groups)
+    grouped_text, grouped_counts, grouped_lettering, capture_files, logos = index_pages(page_groups)
     findings: list[Finding] = []
     near_misses: list[NearMiss] = []
     pages_checked = 0
@@ -219,22 +332,30 @@ def audit_title(
         if visible is None:
             continue
         pages_checked += 1
-        every_text = set().union(*per_engine.values()) if per_engine else set()
+        index = PageIndex(
+            per_engine=per_engine,
+            counts=grouped_counts[page],
+            lettering=grouped_lettering[page],
+            every_text=set().union(*per_engine.values()) if per_engine else set(),
+            logos=logos,
+        )
+        wanted = Counter(comparable(item) for item in visible)
+        wanted.pop("", None)
+        seen: Counter[str] = Counter()
         for item in visible:
-            needle = normalize(item)
+            needle = comparable(item)
             if not needle:
                 continue
-            have = [engine for engine, texts in per_engine.items() if covers(needle, texts)]
-            close = None if have else near_match(needle, every_text)
-            if have:
-                if len(have) < len(per_engine):
-                    findings.append((title_str, volume, page, item, have))
-            elif any(needle == logo or needle in logo or logo in needle for logo in logos):
+            seen[needle] += 1
+            if seen[needle] > 1:
+                continue  # one report per distinct lettering; multiplicity handled below
+            verdict, line, engines = classify(needle, item, wanted[needle], index)
+            if verdict == "suppressed":
                 suppressed += 1
-            elif close:
-                near_misses.append((title_str, volume, page, item, close))
-            else:
-                findings.append((title_str, volume, page, item, []))
+            elif verdict == "near":
+                near_misses.append((title_str, volume, page, item, line))
+            elif verdict != "covered":
+                findings.append((title_str, volume, page, line, engines))
 
     return findings, near_misses, pages_checked, suppressed
 
