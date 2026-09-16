@@ -42,7 +42,7 @@ Ranked by how often the class has actually fired against how cheap the check is.
 Each names the incident it comes from, so a check that never fires can be
 retired on evidence rather than kept out of habit.
 
-### 1. ~~Vol. 19 staged into the prelim repo~~ — **BUILT, and downgraded** (2026-09-02)
+### 1. ~~Vol. 19 staged into the prelim repo~~ — **BUILT, downgraded (2026-09-02), re-armed (2026-09-16)**
 
 Built as `scripts/vision/check_prelim_staged.py`, wired into the prelim repo's
 `.git/hooks/pre-commit` as a forwarder. **Two of this entry's three claims were
@@ -57,15 +57,22 @@ those paths would block the person the directory belongs to. Dropped.
 pre-commit hook runs, git has already expanded a directory or glob into
 individual paths; only its consequences survive.
 
-*The general form — refuse a staged set spanning more than one volume — does not
-survive the replay either.* Over all 380 commits, **19 span multiple volumes and
-none is a mistake**: they are the corpus-wide sweeps this workflow runs on
-purpose — the `other:` speaker audit (6 volumes), "settle every outstanding
-vision text correction" (3), an em-dash fix that reached 23. Spans run 2 to 23
-for deliberate work, so neither spanning nor its size separates accident from
-intent, and a gate firing on 5% of real commits gets trained away. **It ships as
-a named, counted warning** — enough to make "I meant one title and staged ten
-volumes" obvious, without refusing anything.
+*The general form — refuse a staged set spanning more than one volume — did not
+survive the replay.* Over all 380 commits, **19 span multiple volumes and none is
+a mistake**: they are the corpus-wide sweeps this workflow runs on purpose — the
+`other:` speaker audit (6 volumes), "settle every outstanding vision text
+correction" (3), an em-dash fix that reached 23. Spans run 2 to 23 for deliberate
+work, so neither spanning nor its size separates accident from intent, and a gate
+firing on 5% of real commits gets trained away. It therefore shipped on 2026-09-02
+as a named, counted warning.
+
+**Overridden 2026-09-16: it now refuses.** Changed by decision, not by new
+evidence — the replay above is unchanged, so the 5% figure is the expected
+false-positive rate, not a worst case. A deliberate sweep passes `--no-verify`,
+which also skips the format refusal in entry 2; stage a sweep only once its
+groups files are known good. If the gate does start getting bypassed by reflex,
+that is the trained-away failure the replay predicted, and the honest fix is to
+go back to a warning rather than to keep a gate nobody reads.
 
 ### 2. Prelim JSON reformatted by a scripted edit — **BUILT** (2026-09-02)
 
@@ -170,7 +177,7 @@ Written from a friction log, each described the failure accurately and the
 | entry | the premise | what the data said |
 |---|---|---|
 | 1 | never stage Vol. 19 | it is tracked, and its owner commits it |
-| 1 | refuse a multi-volume stage | 19 of 380 commits span, none a mistake |
+| 1 | refuse a multi-volume stage | 19 of 380 commits span, none a mistake (refused anyway since 2026-09-16, by decision) |
 | 2 | one prelim JSON format | three, and an apply writes two of them |
 | 3 | compare stored text by id | markup made 95% of it noise |
 | 4 | duplicated `ai_text` finds residue | 100 findings, every visible one real lettering |

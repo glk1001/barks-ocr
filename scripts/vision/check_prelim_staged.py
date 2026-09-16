@@ -16,15 +16,17 @@ also matches Vol. 19, and `"Carl Barks Vol. 2*"` matches Vol. 20 through Vol. 29
 ten volumes at once. The repo usually holds unrelated in-progress work, so a glob
 that over-matches sweeps somebody else's editing session into your commit.
 
-This WARNS; it does not refuse. Replaying the check over all 380 commits found
-**19 that span more than one volume, and none of them a mistake**: they are the
-corpus-wide sweeps this workflow runs on purpose -- the `other:` speaker audit
-(6 volumes), "settle every outstanding vision text correction" (3), "confirm the
-last 34 type corrections in the corpus" (2), an em-dash fix that reached 23. The
-spans run from 2 to 23 for deliberate work, so neither the fact of spanning nor
-its size separates an accident from intent, and a gate firing on 5% of real
-commits would be trained away inside a month. A named, counted warning printed
-at commit time still makes "I meant one title and staged ten volumes" obvious.
+This REFUSES, by decision on 2026-09-16; it shipped as a warning on 2026-09-02.
+The replay that made it a warning still stands and is worth keeping in view:
+over all 380 commits, **19 span more than one volume and none of them is a
+mistake**: they are the corpus-wide sweeps this workflow runs on purpose -- the
+`other:` speaker audit (6 volumes), "settle every outstanding vision text
+correction" (3), "confirm the last 34 type corrections in the corpus" (2), an
+em-dash fix that reached 23. Spans run from 2 to 23 for deliberate work, so
+neither the fact of spanning nor its size separates an accident from intent.
+A deliberate sweep therefore has to pass `--no-verify`, which also skips the
+format check below; stage such a sweep only once the groups files are known
+good. Expect this gate to fire on roughly 5% of real commits.
 
 It does NOT hardcode Vol. 19. That directory is tracked and its owner commits it
 under their own name; a hook cannot tell who is committing, and one that refused
@@ -92,13 +94,13 @@ def volume_of(path: str) -> str | None:
 
 
 def check_span(paths: list[str]) -> list[str]:
-    """Note a staged set covering more than one volume. Advisory, never fatal.
+    """Report a staged set covering more than one volume. Fatal.
 
     Args:
         paths: staged repo-relative paths.
 
     Returns:
-        Warning lines; empty if the set covers at most one volume.
+        Offender lines; empty if the set covers at most one volume.
 
     """
     by_volume: dict[str, int] = defaultdict(int)
@@ -117,7 +119,8 @@ def check_span(paths: list[str]) -> list[str]:
         lines.append(f"    ... and {len(listed) - MAX_LISTED} more")
     lines.append("  A vision pass touches one title. A volume pathspec matches the")
     lines.append('  decade above it -- "Carl Barks Vol. 2*" is Vol. 20 through 29.')
-    lines.append("  Deliberate corpus sweeps look like this too -- check the list, not the fact.")
+    lines.append("  A deliberate corpus sweep looks like this too -- read the list, then")
+    lines.append("  bypass if it is the set you meant.")
     return lines
 
 
@@ -197,7 +200,7 @@ def _emit(kind: str, count: int, lines: list[str]) -> None:
 
 
 def main() -> None:
-    """Warn on a multi-volume stage, and refuse a badly formatted one."""
+    """Refuse a multi-volume stage, and refuse a badly formatted one."""
     argv = sys.argv[1:]
     repo = Path(argv[argv.index("--repo") + 1]) if "--repo" in argv else Path.cwd()
 
@@ -205,19 +208,20 @@ def main() -> None:
     if not paths:
         return
 
-    # Advisory: the history says spanning is deliberate 19 times out of 19, so
-    # this is here to be read, not to stop anything.
-    warnings = check_span(paths)
-    if warnings:
-        _emit("NOTE", len(paths), warnings)
-
+    span = check_span(paths)
     errors, noted = check_format(repo, paths)
+
+    # Both refusals are reported before exiting: a sweep that is also
+    # mis-formatted should not have to run the hook twice to learn it.
     if noted:
         _emit("NOTE", len(paths), noted)
-    if not errors:
+    if span:
+        _emit("REFUSING", len(paths), span)
+    if errors:
+        _emit("REFUSING", len(paths), errors)
+    if not span and not errors:
         return
 
-    _emit("REFUSING", len(paths), errors)
     print("\n  Bypass this commit only: git commit --no-verify\n")
     raise SystemExit(1)
 

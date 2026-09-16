@@ -71,7 +71,9 @@ must stay out**. The format is `json.dumps(d, indent=4)`, ASCII-escaped, with
 `*-page-capture.json` and `*-panel-descriptions.json`, which an apply also
 writes, are `indent=2` **with** a trailing newline. Prove the round trip before
 any scripted edit, or a one-string change reformats the whole file. The prelim
-repo's pre-commit hook now refuses a mis-formatted groups file.
+repo's pre-commit hook now refuses a mis-formatted groups file, and (since
+2026-09-16) also refuses a staged set spanning more than one volume -- a
+deliberate corpus sweep needs `git commit --no-verify`, which skips both checks.
 
 To work in a second checkout of that repo (a `git worktree`, so that hand edits
 stay out of the tree another session is using), set `BARKS_OCR_PRELIM_DIR` to
