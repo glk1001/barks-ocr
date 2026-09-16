@@ -7203,7 +7203,101 @@ speaker corrections over 411 passed groups (4.6%)** -- 2 and 17 by title.
   the apply canonicalises it and reports `Canonicalized 69 speaker value(s)`.
   Write it bare when a character is in the story's own cast list in `roster.txt`.
 
+### Findings to paste into the next run (2026-09-16, sixtieth batch, THREE OF FOUR REVIEWED -- *Migrating Millions*, *The Cat Box*, *Grandma's Present*)
+
+**226 groups over 19 pages, ZERO speaker corrections and ZERO `cap_colour`
+corrections**, and all 17 type proposals held. By the confidence the pass wrote:
+*Migrating Millions* high 0/73, medium 0/3; *The Cat Box* high 0/40, medium
+0/10; *Grandma's Present* high 0/100. All three mirrored clean onto paddleocr --
+group, `speaker_reviewed` and `identified_by` counts and the speaker,
+`cap_colour`, confidence and type distributions identical per title. No group was
+added by the review and the missed-text audit stayed at zero on all 19 pages.
+
+- **READ THE ZERO AS A DENOMINATOR, NOT AS A METHOD RESULT.** *Migrating
+  Millions* has **7** groups in the nephew domain; *The Cat Box* and *Grandma's
+  Present* have **none at all** -- both are solo-Gyro stories whose casts are an
+  inventor, a goose, a duck and two cats. A batch can score 0.0% simply by not
+  containing the work that goes wrong. The fourth title of this batch, *Knight in
+  Shining Armor*, is where the nephew reading actually was, and it is still out.
+  Do not carry "the last batch ran at zero" into a cap-dense title as confidence.
+- **A CLOUD EDGE ALONE IS NOT A THOUGHT; THE BUBBLE TRAIL AND THE BEAK ARE.**
+  Four groups stored `dialogue` were thoughts (*Migrating Millions* 095 g2, 096
+  g2; *Grandma's Present* 141 g14, 146 g1) and all four held. What separates them
+  at 1.3-1.5x is a trail of **separate round bubbles** running to a **shut beak**,
+  against a **pointed tail** and an **open beak**. The counter-example is
+  *Grandma's Present* 141 p6, where Barks draws excited speech with a bumpy,
+  cloud-like outline -- pointed tail, open beak, and it is dialogue as stored.
+  Three of the seven solo-speaker balloons I checked this way flipped and four did
+  not, so check them rather than assuming either way.
+- **`allbold.py` CANNOT SCREEN FOR THIS, OR FOR THIS BATCH'S EMPHASIS.** It
+  measures stroke width, and all four titles set emphasis in an **italic** of the
+  same weight: on *Migrating Millions* 092 g1 the plainly slanted `ALWAYS` scores
+  0.98. Run it, but on a title lettered this way expect it to report nothing and
+  read the slant off the page image instead.
+- **ANIMAL AND CHARACTER NOISES: 13 MOVES TO `dialogue`, ALL HELD.** Cat yowls
+  lettered bare and lettered in a balloon, two cats hissing, a translated
+  serenade. This confirms the roster rule rather than extending it.
+- **BUT `GULP` STAYED `sound_effect` WITH ITS MAKER NAMED, AND THE REVIEW
+  AGREED** (*The Cat Box* 137 g10, `speaker` `other:the grey cat`). This is the
+  useful counter-datum to the corpus's 100-to-1 `sound_effect` -> `dialogue`
+  trend: a swallow is the **throat**, not the voice, and it falls under the same
+  exception the roster makes for a whistled tune. The shape that worked is
+  **name the maker in `speaker` and leave the type alone**, with the reasoning in
+  the note so a reviewer can flip it in one key.
+- **A RELAYED VOICE KEEPS ITS OWNER, IN BOTH DIRECTIONS.** Through one machine in
+  one story: *The Cat Box* 138 g10 is the cat's serenade coming out of the
+  translator's horn and takes the cat; 140 g7 and g8 are Gyro's own singing
+  coming out of the same horn and take Gyro. Both held. The horn is never the
+  speaker.
+- **IN A THREE-HANDER, THE PERSON NAMED IN THE LINE IS USUALLY THE ONE NOT
+  SAYING IT.** *Grandma's Present* 148 p3 has two balloons that cross over --
+  `YOU SURE WOULD HAVE IT EASY, GUS!` is Grandma's and `AND YOU'D HAVE IT EVEN
+  EASIER, GRANDMA!` is Gus's, each addressed to the other, traced at 2.6x on
+  silhouettes. And 148 g3, `YES, GRANDMA, AND ALL I'D HAVE TO DO ALL DAY IS TOSS
+  IN ONE SHOVELFUL!`, reads as Gyro and is Gus: **Gyro is not in the panel at
+  all**. Check who is in frame before letting the register assign anything.
+- **A FORM OF ADDRESS SEPARATES NOBODY.** *Grandma's Present* 143 g11's `HEY!
+  HOLD ON, MR. GEARLOOSE!` reads as Grandma's register, and it is Gus, who uses
+  both `MR. GEARLOOSE` and `GYRO` inside two pages. Separate them on the drawing:
+  Gus is a white goose in a **green cap** and dark vest, Grandma a duck with
+  **white hair, a black dress and a white apron** and no cap.
+- **SCROOGE'S TOP HAT BAND PRINTS THE ROSTER BLUE.** On *Migrating Millions* it
+  is `#01a4d6`-`#08a4d2` H193-194, which is why 094 p3, 094 p7 and 096 p3 all
+  report blue with no nephew wearing any. Same trap as the standing
+  `Donald wears Dewey's blue` note -- check the head the blob sits on.
+- **A REVIEW OVERWRITES `speaker_confidence` TO `high`.** All 226 groups now read
+  high; the `--since` split above is the only surviving record of what the pass
+  wrote. And `--since` mattered for type too: without it these three titles would
+  have reported 17 + **27** stale rows -- 16 on *The Cat Box* and 11 on
+  *Grandma's Present*, adjudicated 2026-08-22 to 08-24 -- nearly tripling the
+  headline count.
+- **CORPUS DRIFT WORTH A SWEEP, NOT MINE:** the apply canonicalises
+  `other:Grandma Duck` to a bare `Grandma Duck`, and the corpus still carries
+  **8 rows of the prefixed form** from an earlier title.
+
 ## Per-volume cap palette
+
+Vol. 16, Vol. 18 and Vol. 20, four titles read 2026-09-16 (sixtieth batch;
+the Vol. 18 row is pass-derived and its review is still outstanding):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Migrating Millions* (16) | 096 p7, two boys beside Scrooge, caps big and lit | `#e01a1f` H358.5 520px (094 p6); `#e51a1f` 2,676px (096 p7); `#e31c1f` 510px (096 p8); dark sliver `#bb2e31` H358.7 26px (094 p7) | `#4fa43e` H110.0 3,153px (096 p7) | `#08a4d2` H193.7 485px (094 p6); `#16a3be` H189.6 360px (096 p8) | a band on a black cap outdoors; several panels print no cap ink at all (096 p3, 098 p2) |
+| *Knight in Shining Armor* (18) | 086 p2 and 083 p7, three boys with their caps on | `#e71c20` H358.8 (078 p1, p3); rims `#b92e19` H7.9 325px (086 p2), `#b42c1a` H7.0 140px (087 p8), `#e61b20` 3,230px (083 p7) | `#4fa43e` H110.0 2,187px (084 p2); `#50a43f`/`#009e49` 1,951px (083 p7); `#4ea43e` H110.6 858px (085 p8); shaded `#65a465` H120.0 S0.38 392px (086 p2); small `#68aa41` H97.7 110px (084 p1) | `#00a5d5` H193.5 331-3,007px (078 p3, p4; 083 p7; 085 p8); **teal** `#25a48a`/`#22a590`/`#00a288` H167-170, 146-225px, ranked blue (082 p1, 084 p1, 086 p2) | a thin rim on a black cap **outdoors only**; the boys are drawn bare-headed indoors through 079, 080 and 081, and 081 p8 is a street and still capless |
+| *The Cat Box*, *Grandma's Present* (20) | none -- no nephews in either | -- | -- | -- | Gyro solo stories: Gyro, Gus Goose, Grandma Duck and two cats. No cap key at all |
+
+- *Migrating Millions*: **Scrooge's top hat band is the roster blue** `#01a4d6`-`#08a4d2`,
+  and his coat is `#a04453` -- between them they account for nearly every blob
+  `capwide` reports on that title. The valley greens are H147-151 at S0.94-1.0,
+  well clear of the H110 cap green.
+- *Knight in Shining Armor*: `title_bands` **under-reports this title badly** --
+  it gives 086 p2 `red=3 green=2 blue=0` on a panel where all three boys are
+  banded. Use `title_heads`' per-head `CAP-INK` and then probe each crown; two of
+  my probes returned zero only because they were 40px too high. Donald's cap is
+  the roster `#00a5d5` and so are the sky, the bus and the painted doorframe of
+  078 p5, which is why that panel's blue is worthless. The orange plume is
+  `#ed671e` H21-26 and the giant strawberry costume `#e71c20` -- both sit where a
+  cap would be.
 
 Vol. 18, one title read 2026-09-16 (fifty-ninth batch):
 
