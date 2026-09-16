@@ -9232,3 +9232,79 @@ Vol. 18 and Vol. 16, three titles read 2026-09-16 (sixty-first batch; none revie
 - *Back to Long Ago!*: Scrooge's coat is `#a04453` and accounts for most of what the
   census hangs on his head; the shop awning on 094 p3 of *Fearsome Flowers* and the
   ticket-office lettering here are both the roster blue.
+
+### Findings to paste into the next run (2026-09-16, sixty-first batch, ONE OF THREE REVIEWED -- *Fearsome Flowers*)
+
+**143 groups, 7 speaker corrections in the 141 the pass wrote (5.0%), 7 of 65 in
+the nephew domain (10.8%)**; by the confidence the pass wrote, **high 6/130
+(4.6%), medium 2/11 (18.2%)**. The one type proposal held, no text correction was
+proposed. The review added 2 groups. Mirrored clean: 143/143 reviewed on both
+engines, 128 `identified_by`, distributions identical. 29 images, 2.9 per page.
+(Two further `unknown -> none` moves in the tool's output are the reviewer setting
+the speaker on the two ADDED groups, not corrections to the pass; the counts above
+exclude them.)
+
+- **FOUR OF THE SEVEN CORRECTIONS ARE CALLS WHERE MY OWN NOTE CONTAINED THE
+  REVIEWER'S ANSWER.** This is the single finding of the review.
+  - 091 g0 I wrote `MEDIUM, and the reason is worth checking: the GREEN-capped boy
+    at the left is the one drawn with his beak open and a hand raised... If the
+    review reads the beaks rather than the tip this is Louie.` The review read the
+    beaks. It is Louie.
+  - 097 g1/g2 I wrote `Reviewer: the two present are Huey and Dewey` and declined
+    to split the joined pair. The review split it as **Huey then Dewey**, in that
+    order -- the exact mapping in my note.
+  - So the rule is not "look harder", it is **CASH THE NOTE**. When the note names
+    the alternative reading and the alternative is a NAME, take the name: the cost
+    of being wrong is one keystroke and the cost of declining is a guaranteed
+    correction. `feedback_use_the_evidence_you_already_wrote` is now four batches
+    old and this is its worst instance, because the note was not merely evidence --
+    it was the answer, written out, with the reviewer addressed by name.
+- **THE MULTI-TAIL RULE I DERIVED THIS BATCH IS WRONG IN THE DECLINING DIRECTION,
+  AND ALL THREE INSTANCES REVERSED.** I found that a balloon spoken by more than
+  one boy carries one tail per boy, and turned that into "two tails means a chorus,
+  so `nephews`". The review named **every** one of them: 097 g1, 097 g2 and 097 g6.
+  The corrected rule:
+  - **A CLUSTER OF JOINED BALLOONS IS NOT A CHORUS.** When N stacked balloons carry
+    N tails between them, the tails belong to the cluster and map to the balloons
+    IN ORDER -- upper balloon to left tail, lower to right. That is what the review
+    did on 097 g1/g2.
+  - **ONE GROUP WITH TWO TAILS TAKES THE FIRST (LEFTMOST) TAIL.** 097 g6's two tips
+    were at panel (586,208) and (843,181); the review took the left one and called
+    it Dewey.
+  - A chorus is still what you record when the tails cannot be told apart -- three
+    tails fanning to three distinct boys on ONE group, as on 088 g2 -- but two
+    balloons with two tails is two speakers, not one collective.
+- **THE TWO `nephews -> Huey` MOVES ARE NOT ABSENT-CAP ERRORS, AND ONE OF THEM HAS
+  NO RED INK BEHIND IT.** Both were re-scanned after the review:
+  - **092 g1**: the ink is exactly where the pass put it -- `capwide` at min_area=3
+    over the head band returns red `#e71c20` a=301 and a=263 at panel (845,297) and
+    (788,270), BOTH on the BACK boy (head x777-876), and nothing at all on the front
+    boy (x662-757). The disagreement is **which boy the tail reaches**: the pass put
+    the tip at (683,267), inside the front boy's skull. This is a tail call, not a
+    cap call, and the lesson is that a tip inside the near boy's skull loses to the
+    far boy when only the far boy can be named.
+  - **095 g5**: `capwide` over the WHOLE panel at min_area=3 returns **red: 2 blobs
+    of 4px and 3px at `#562216` H11.2** -- dark brown, not cap ink. The two visible
+    crowns carry a green sliver and blue, and the third boy is behind a tree trunk.
+    **The recorded `cap_colour: red` has no printed ink behind it in that panel.**
+    Flagging rather than absorbing: if the name came from the scene rather than the
+    art, the colour field should be null, because that field is the only check on
+    the convention.
+- **THE MISSED-TEXT AUDIT SUPPRESSED A REAL ITEM AS A NEAR DUPLICATE.** The review
+  added TWO groups, not the one the audit reported. 090's `50¢` was flagged; 092
+  p3's `BLACK EYED SUSANS` plant tag was **not**, because the same words appear in
+  the neighbouring balloon (`THE TAG SAYS THEY'RE BLACK-EYED SUSANS!`) and the audit
+  files that as "nearly a grouped text" and drops it. **A sign that a character
+  reads aloud is invisible to the audit by construction.** Put it in the hand-back
+  from the `visible_text` list directly whenever the page has a sign somebody quotes
+  -- I had transcribed this tag and described it in g5's note, and still let the
+  audit's silence stand in for a decision.
+- **MEDIUM IS THE WORSE BET FOR THE SIXTH BATCH RUNNING**: 18.2% against high's
+  4.6%, a factor of four. Both medium reversals (091 g0, 093 g11) were gap tips.
+  Note the asymmetry: the gap tip that went to a NAME held nothing back and was
+  reversed to another name, while the gap tip that over-named (093 g11 Huey ->
+  nephews) is the only over-naming in the title. Gap tips are where medium lives and
+  they are worth about one in five.
+- **11 OF THE 18 BOYS THE PASS NAMED HELD, AND THE 3 PURELY-CAP CALLS ALL HELD.**
+  Naming off a band that sits on a crown was not reversed once; every reversal
+  involved a tail.
