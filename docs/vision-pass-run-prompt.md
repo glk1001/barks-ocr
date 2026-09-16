@@ -9167,8 +9167,12 @@ corrections, 1 missed-text item in the batch.
   contact-sheet scale. *Fearsome Flowers* is bare-headed indoors and capped outdoors;
   *Donald's Pet Service* the same, plus 107 p1 knocks both caps into the air;
   *Back to Long Ago!* has the boys CARRYING their caps in their hands through
-  108-110 while they pack. **A cap in a hand, a cap in mid-air and a cap on a head
-  are three different facts and only the third names anybody.**
+  108-110 while they pack. **[STRUCK OUT AFTER REVIEW -- this said "a cap in a hand,
+  a cap in mid-air and a cap on a head are three different facts and only the third
+  names anybody", and it is FLATLY WRONG. A cap names its owner wherever it is in
+  the panel. It cost *Back to Long Ago!* most of its 22 under-namings. See the
+  third-of-three section below, and note that the rule was already in THIS FILE at
+  the *Magic Hourglass* and *Rich Finds* entries before I wrote the contradiction.]**
 - **A BALLOON SPOKEN BY MORE THAN ONE BOY IS DRAWN WITH ONE TAIL PER BOY, and
   both titles do it.** *Fearsome Flowers* 088 g2 has three tails fanning to three
   boys, 093 g15 has two, 097 g2/g3/g6 have two each; *Back to Long Ago!* 099 g6 has
@@ -9420,3 +9424,101 @@ anchor, a clean cap still names its wearer, and you should still expect red to b
 Huey. It changes only what you write in the colour field when the art disagrees --
 and it means a title-wide disagreement is a finding to report, not a local key to
 adopt.
+
+### Findings to paste into the next run (2026-09-16, sixty-first batch, THREE OF THREE -- *Back to Long Ago!*, batch closed)
+
+**295 groups, 47 speaker corrections in the 292 the pass wrote (16.1%), 36 of 69
+in the nephew domain (52.2%)**; by the confidence the pass wrote, **high 42/287
+(14.6%), medium 4/5 (80.0%)**. Both type proposals held. The review added 3
+groups. Mirrored clean: 295/295 reviewed on both engines, 273 `identified_by`,
+distributions identical. 26 images, 1.24 per page. **This is much the worst title
+in the batch and one of the worst in the ledger, and the cost was not images --
+it was 1.24 per page, the cheapest of the three.**
+
+- **I CONTRADICTED A RULE THAT WAS ALREADY IN THIS FILE, AND IT COST 22 CALLS.**
+  Twenty-two of the corrections are collectives the review named **from the boys'
+  own caps, held in their hands while they packed**. I had written the opposite
+  into this very document: *"a cap in a hand, a cap in mid-air and a cap on a head
+  are three different facts and only the third names anybody."* The correct rule
+  was already here, twice, from earlier batches -- ***Magic Hourglass***: "A cap in
+  a hand names its holder", and the *Rich Finds* entry extending it to "a cap lying
+  at a boy's side indoors". I appended my contradiction to the same file.
+  **108 panel 1 proves it three for three**: capwide puts green at x170-306, red at
+  x440-504 and blue at x646-720, and the three balloons above them were named
+  **Louie, Huey, Dewey in exactly that order**. The rule, stated once and for all:
+  **A CAP NAMES ITS OWNER WHEREVER IT IS IN THE PANEL -- worn, held, on the sofa
+  beside him, or knocked into the air above him -- provided you can tell whose it
+  is.** *Donald's Pet Service* 107 g2 is the airborne case and the review named that
+  one too.
+- **SO "BARE-HEADED" IS THE WRONG QUESTION.** I ran the montage check for "is
+  there a black mass on the head", answered no across 108-110, and stopped. The
+  question is **"where is this boy's cap"**, and on a packing page the answer is
+  "in his hand, 200px lower down". Scan the whole panel for the three inks and ask
+  whose each one is, rather than scanning crowns.
+- **TEN DONALD-AGAINST-NEPHEW CONFUSIONS, THE OLDEST ERROR CLASS IN THE FILE.**
+  Six `nephews -> Donald` and four the other way. They cluster on the pages where
+  the family is drawn small (113, 116, 117) and where Donald is IN the row of boys
+  rather than apart from them -- 117 g1 I gave to "Donald in the middle of the three
+  boys, the tall figure of the group" and it is Huey. When Donald stands among them
+  at small scale, height is not a discriminator; find the bow tie or the sailor
+  collar, or say `nephews`.
+- **NINE `other:` ROLE ERRORS, AND TWO ARE PURE CARELESSNESS.**
+  - **115 g12/g13 are swapped.** `STILL A DEAL, SENOR?` I gave to Scrooge because
+    it addresses a "Senor" -- but the boat owner calls SCROOGE Senor (`SURE THING,
+    SENOR!`, g9, two panels earlier). The address names the ADDRESSEE, so the
+    question is the owner's and `YOU ASK THE DUMBEST QUESTIONS!` is Scrooge's. I
+    had the evidence in the same panel sequence and read it backwards.
+  - **116 g1 `VIVA EL SUNSHINE!` is a villager, not a nephew.** A line in Spanish,
+    in a Caribbean port, from a crowd -- and I gave it to a boy.
+  - The rest are collectives: `other:Donald and the nephews` -> `Donald` or
+    `nephews` (117, 118), and three `Donald` -> `other:Donald and Scrooge` at the
+    end (119 g14, 120 g14/g15) where the two of them speak together.
+- **MEDIUM WAS 4 OF 5 WRONG.** Eighty per cent. Across the batch medium ran
+  18.2% / n-a / 80.0% against high's 4.6% / 0.8% / 14.6%. **Seventh batch running.**
+- **THE REVIEW ADDED THREE DRAWN DEVICES I NEVER GROUPED** -- thought-bubble `!`
+  marks on 102 and 117, and the **ring of dollar signs round Scrooge's head on 102
+  panel 3**. I described that panel in my own capture as "Scrooge alone in close-up
+  ringed by floating dollar signs" and put "dollar signs" in its `objects`, and
+  still did not box them. **A drawn device is LETTERING: `!`, `?`, `$` go in
+  `visible_text` and, when no group covers them, into `added_groups`.** The roster
+  already says a device over one figure names that figure; I applied it to devices
+  Gemini had already grouped and never once added one it had missed. That is the
+  batch's THIRD missed-text blind spot, after the read-aloud sign and the repeated
+  sign -- and the only one that is entirely mine, because the audit cannot see what
+  `visible_text` never mentioned.
+- **THE PASS MIS-TRANSCRIBED ITS OWN SOUND EFFECT AND MARKED THE GROUP CORRECT.**
+  103 and 105 record the time-travel bell as `BONG` in `visible_text` while asserting
+  `text_ok: true` on a group holding `BOING`. The art reads B-O-I-N-G, the group was
+  right, the capture was wrong, and the two halves of my own output disagreed. The
+  audit's near-miss WARN caught it -- **read that row, it is not always the group
+  that is wrong.** Captures corrected.
+- **WHAT DID HOLD:** both type corrections (100 g7 and 101 g11, the pink caption box
+  against the tailed cream balloon); every Scrooge/Spellcaster call in the 1564
+  flashback, all settled by who is addressed by name and never by the art; and the
+  decision to record the flashback under `Scrooge` and `Donald` rather than
+  `other:Matey McDuck` -- not one of those 90 Scrooge groups was touched.
+
+### Batch close -- sixty-first batch, all three reviewed
+
+| title | groups | speaker corrections | nephew domain | high | medium | images/pg |
+|---|---|---|---|---|---|---|
+| *Fearsome Flowers* | 143 | 7 / 141 (5.0%) | 10.8% | 4.6% | 18.2% | 2.9 |
+| *Donald's Pet Service* | 134 | 1 / 132 (0.8%) | 1.7% | 0.8% | -- | 1.4 |
+| *Back to Long Ago!* | 295 | 47 / 292 (16.1%) | 52.2% | 14.6% | 80.0% | 1.24 |
+| **batch** | **572** | **55 / 565 (9.7%)** | **26.6%** | **11.0%** | **56.3%** | **1.68** |
+
+**The spread is the whole story, and it is not about effort.** The cheapest title
+per page was also the worst and the second-cheapest was the best. What separated
+them:
+
+- ***Pet Service* had an anchor**: four dialogue lines naming a boy and then
+  isolating him. 0.8%.
+- ***Back to Long Ago!* had a rule I contradicted**, one already written in this
+  file. 16.1%, and 22 of the 47 come from that single mistake.
+
+**Five of the batch's 55 corrections are calls whose answer I had already written
+into my own note**, and 22 more come from overriding a standing rule. So roughly
+half the batch's error is not perception at all -- it is failing to use what was
+already known, either in the note or in the file. **The cheapest possible
+improvement for the next run is not more images. It is reading the last review's
+findings properly and cashing the notes.**
