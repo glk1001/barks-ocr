@@ -11,9 +11,10 @@ totals row in each, and a cross-volume table when more than one is named.
 WHERE EACH NUMBER COMES FROM.
 
 - **Pages and passed state** come from `vision_status.scan_titles`, the same scan
-  behind `barks-ocr-vision-status --titles`. It drops pages the page map claims
-  for a title but which belong to another story, which `review_findings.py` does
-  not -- that is why it once counted *Genghis Khan* as 287 groups instead of 269.
+  behind `barks-ocr-vision-status --titles`, narrowed to the volumes asked for.
+  It drops pages the page map claims for a title but which belong to another
+  story, which `review_findings.py` does not -- that is why it once counted
+  *Genghis Khan* as 287 groups instead of 269.
 - **Groups, review progress and corrections** come from the easyocr groups of
   each passed page. A correction is a group whose `speaker_was` differs from its
   current speaker. A `_was` equal to the current value records a correction that
@@ -448,12 +449,16 @@ def main() -> None:
 
     comics_database = ComicsDatabase()
     speech_groups = SpeechGroups(comics_database)
-    all_stats = scan_titles(comics_database, speech_groups)
-    stats = [s for s in all_stats if s.volume in volumes]
+    wanted = frozenset(volumes)
+    stats = scan_titles(comics_database, speech_groups, wanted)
     units = load_ledger(LEDGER)
 
-    known = {s.title for s in all_stats}
+    # Only the volumes asked for were scanned, so a ledger row from any other
+    # volume is unknown here for a harmless reason and must not be reported.
+    known = {s.title for s in stats}
     for unit in units:
+        if unit.volume not in wanted:
+            continue
         for title in unit.titles:
             if title not in known:
                 _console.print(f"[yellow]!! ledger title not found in the corpus:[/] {title!r}")
