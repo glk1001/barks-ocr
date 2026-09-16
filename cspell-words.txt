@@ -21,6 +21,7 @@ bolditalic
 boxlayout
 bufferfmt
 bunx
+bijective
 capscan
 capsum
 capwide
@@ -106,6 +107,7 @@ qint
 readtext
 recognise
 rects
+revd
 rowname
 sapg
 scancode
