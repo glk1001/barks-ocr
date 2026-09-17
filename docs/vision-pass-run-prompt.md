@@ -9927,20 +9927,20 @@ where the review added a group.
 - **MEDIUM IS STILL WHERE THE ERROR IS** (18.5% vs 5.3%), but the absence claims
   above were all written at high.
 
-### Findings to paste into the next run (2026-09-17, sixty-fifth batch, ALL FOUR REVIEWED -- *Imagination Invention* one straggler short)
+### Findings to paste into the next run (2026-09-17, sixty-fifth batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
-**379 groups, 16 speaker corrections (4.2%), every one in the nephew domain (15.5%
+**379 groups, 17 speaker corrections (4.5%), every one in the nephew domain (16.5%
 of 103).** By title: *Picnic* 0/44, *The Sure-Fire Gold Finder* 0/50, *Gyro's
-Imagination Invention* 10/142, *Red Apple Sap* 6/143. By the confidence the pass
-wrote: **high 7/352 (2.0%), medium 9/27 (33.3%)** -- the widest split recorded. All
+Imagination Invention* 11/142, *Red Apple Sap* 6/143. By the confidence the pass
+wrote: **high 7/352 (2.0%), medium 10/27 (37.0%)** -- the widest split recorded. All
 28 type proposals confirmed; no text corrections. 51 images over 30 pages, 1.70 per
-page. *Picnic*, *Gold Finder* and *Red Apple Sap* mirrored clean at full review;
-*Imagination Invention* is held for 143 g9, left without `speaker_reviewed`.
+page. All four mirrored clean at full review; *Imagination Invention* came back one
+straggler short (143 g9), signed off separately.
 
 - **A GYRO SOLO STORY IS FREE ACCURACY.** 94 groups, 0 speaker corrections, 19 type
   proposals all confirmed. The balloon drawing test -- a trail of bubbles is a
   thought, a pointed tail is speech -- carried both titles. Spend nothing extra there.
-- **MEDIUM WAS WRONG ONE TIME IN THREE.** 9 of 27. Every medium was a tail read at
+- **MEDIUM WAS WRONG MORE THAN ONE TIME IN THREE.** 10 of 27. Every medium was a tail read at
   page scale or a tip in a gap, and the pass's own note already said so. Where a
   medium is a gap tip between two boys, crop at 2x+ before writing it; a medium left
   as page-scale reading is a coin toss with a note attached.
@@ -9962,7 +9962,8 @@ page. *Picnic*, *Gold Finder* and *Red Apple Sap* mirrored clean at full review;
   151 g14 (`Huey`, a few pixels) -> `Dewey`, the alternative the note named; 153 g5
   and 153 g17 (both page-scale) -> `Louie`, the boy neither note considered. 145 g10
   (`Louie`, tail pointing "away from Donald") -> `Donald`, again the named
-  alternative.
+  alternative. 143 g9 (`Dewey`, a balloon point read off a 1x crop with the pointing
+  boy as the alternative) -> `Huey`, the red-capped boy neither reading named.
 - **A COLOURIST ERROR CAN BE A TOUCH OF THE WRONG INK.** 143 g8: the census put
   dark red `#b1271a` 573px on the boy's crown and the pass named Huey; the review
   found the cap "mostly green but in error there is a touch of red" and named Louie.
