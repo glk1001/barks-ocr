@@ -76,8 +76,12 @@ SCOPED_ENTRY_FIELDS = 3  # volume, page, and the lettering itself
 NEAR_MATCH_RATIO = 0.85
 MIN_NEAR_MATCH_LEN = 4
 
-# title, volume, fanta_page, lettering, engines that grouped it (empty = neither)
-Finding = tuple[str, int, str, str, list[OcrTypes]]
+# title, volume, fanta_page, the RAW lettering, the display line, engines that
+# grouped it (empty = neither). The raw lettering is carried separately from the
+# display line because `classify` annotates the line -- `[quoted aloud, not
+# boxed]`, `[N in the art, M grouped]` -- and an ignore entry has to match what
+# the page actually prints, not the annotation.
+Finding = tuple[str, int, str, str, str, list[OcrTypes]]
 # ... and the grouped text it nearly matches, for the near-miss class
 NearMiss = tuple[str, int, str, str, str]
 
@@ -146,16 +150,16 @@ def load_ignores() -> set[tuple[int | None, str | None, str]]:
         parts = line.split(maxsplit=2)
         scoped = len(parts) == SCOPED_ENTRY_FIELDS and parts[0].isdigit() and parts[1].isdigit()
         if scoped:
-            entries.add((int(parts[0]), parts[1], normalize(parts[2])))
+            entries.add((int(parts[0]), parts[1], comparable(parts[2])))
         else:
-            entries.add((None, None, normalize(line)))
+            entries.add((None, None, comparable(line)))
     return {e for e in entries if e[2]}
 
 
 def ignored(entries: set[tuple[int | None, str | None, str]], finding: Finding) -> bool:
     """Whether the ignore list covers this finding."""
-    _, volume, page, item, _ = finding
-    needle = normalize(item)
+    _, volume, page, item, _, _ = finding
+    needle = comparable(item)
     return any(
         needle == text and (vol is None or (vol == volume and pg == page))
         for vol, pg, text in entries
@@ -355,7 +359,7 @@ def audit_title(
             elif verdict == "near":
                 near_misses.append((title_str, volume, page, item, line))
             elif verdict != "covered":
-                findings.append((title_str, volume, page, line, engines))
+                findings.append((title_str, volume, page, item, line, engines))
 
     return findings, near_misses, pages_checked, suppressed
 
@@ -368,8 +372,8 @@ def report(
     ignores: int,
 ) -> None:
     """Print the sweep result, worst class first."""
-    neither = [f for f in findings if not f[4]]
-    one_only = [f for f in findings if f[4]]
+    neither = [f for f in findings if not f[5]]
+    one_only = [f for f in findings if f[5]]
 
     print(f"Swept {pages} vision-passed page(s) carrying {VISIBLE_TEXT_KEY}.")
     print(f"Suppressed {suppressed} story-logo echo(es) on pages that carry no logo.")
@@ -378,13 +382,13 @@ def report(
     print(f"Ignored {ignores} finding(s) listed in {IGNORE_FILE.name}.\n")
 
     print(f"=== grouped by NEITHER engine: {len(neither)} ===")
-    for title_str, volume, page, item, _ in neither:
-        print(f"  vol {volume:<3} {page}  {item!r:<42} {title_str}")
+    for title_str, volume, page, _item, line, _ in neither:
+        print(f"  vol {volume:<3} {page}  {line!r:<42} {title_str}")
 
     print(f"\n=== grouped by only ONE engine: {len(one_only)} ===")
-    for title_str, volume, page, item, have in one_only:
+    for title_str, volume, page, _item, line, have in one_only:
         engines = ", ".join(str(engine) for engine in have)
-        print(f"  vol {volume:<3} {page}  {item!r:<42} {title_str}  (only {engines})")
+        print(f"  vol {volume:<3} {page}  {line!r:<42} {title_str}  (only {engines})")
 
     print(f"\n=== nearly a grouped text -- check the transcription: {len(near_misses)} ===")
     for title_str, volume, page, item, close in near_misses:
@@ -392,7 +396,7 @@ def report(
 
     if neither:
         by_volume: dict[int, int] = defaultdict(int)
-        for _, volume, _, _, _ in neither:
+        for _, volume, _, _, _, _ in neither:
             by_volume[volume] += 1
         print("\n=== missing-from-both, by volume ===")
         for volume, count in sorted(by_volume.items(), key=lambda kv: -kv[1]):
@@ -404,9 +408,9 @@ def write_csv(findings: list[Finding], dest: Path) -> None:
     with dest.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
         writer.writerow(("title", "volume", "page", "lettering", "grouped_by"))
-        for title_str, volume, page, item, have in findings:
+        for title_str, volume, page, _item, line, have in findings:
             grouped = "|".join(str(engine) for engine in have) or "neither"
-            writer.writerow((title_str, volume, page, item, grouped))
+            writer.writerow((title_str, volume, page, line, grouped))
     print(f"\nwrote {dest}")
 
 
