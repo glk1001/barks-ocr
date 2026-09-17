@@ -9776,3 +9776,46 @@ and Vol. 16 in `[b]`. 1,184 groups across 16 volumes were rewritten by
 `scripts/vision/normalize_emphasis.py` (214 face groups kept `[i]`), the roster
 now states the rule, and `vision_apply` refuses `[i]` emphasis at dry run. An old
 out-dir holding `[i]` results will be refused if re-applied; that is intended.
+
+### Findings to paste into the next run (2026-09-17, sixty-third batch, BOTH REVIEWED)
+
+**523 groups, 27 speaker corrections (5.2%).** *Land of the Pygmy Indians*
+came back with 21 in 343 (6.1%), **19 of them in the nephew domain (21.1% of
+90)**; *The Fantastic River Race*, which has no nephews, came back with 6 in
+180 -- four of those are the review's own added lettering groups moving from
+the editor's default `unknown` to `none`, so the pass itself had 2. By the
+confidence the pass wrote: high 15/466 (3.2%), **medium 10/50 (20.0%)**. All
+27 type corrections were confirmed. Mirrored clean on both, no stragglers after
+one (167 g9). 76 images over 47 pages, 1.62 per page.
+
+- **A CENSUS ZERO ON A THIN RIM IS STILL NOT A BARE HEAD. TEN COLLECTIVES WERE
+  NAMED.** *Pygmy*'s boys wear black caps with a rim a few dozen pixels wide,
+  and every one of the ten under-namings rested on the scan: `the census puts no
+  cap ink on his head` (167 g7, 182 g1/g2, 183 g1/g8), a level teal the channel
+  test calls unreadable (168 g3, 183 g6), or a grey crown probe (164 g12). The
+  review named all ten, and none of the ten had a crop of the crown. This is the
+  2026-08-31 *New Toys* finding again: on a rim construction, `no ink` means
+  crop the crown, never write `nephews`.
+- **THE LONG-SHOT DONALD DEFAULT IS WRONG WHEN SOMEBODY ELSE IS RUNNING THE
+  EXPEDITION.** Six of *Pygmy*'s 21 were the default: 173 g7/g8 and 185 g8 went to
+  Scrooge, 174 g1/g5 and 180 g4 to the boys. On a Scrooge story the planning and
+  order-giving lines in a long shot are his; the default only holds where Donald
+  is the lead. Read who is steering the plot before reaching for it.
+- **A GAP TIP IS NOT A RULE ON ITS OWN.** 161 g19 (`Huey` -> `Dewey`) was a tip in
+  the gap sent one head left while the tail visibly leaned right, and 179 g3
+  (`Dewey` -> `Louie`) was an elimination built on a gap tip. Where the lean and
+  the gap disagree, crop the tail; do not let the gap rule outvote the drawing.
+- **MEDIUM IS STILL WHERE THE ERROR IS.** 20.0% against 3.2% for high. Nine of
+  *Pygmy*'s 40 mediums were overturned.
+- **ADULT-ONLY FLASHBACK TITLES ARE CHEAP AND CLEAN.** *River Race* named every
+  speaker from an address (`CAP'N McDUCK`, `RATCHET`, `PAPPY`, `BOYS`) or a sole
+  figure and cost 1.35 images per page -- six of its 27 images went on sweater
+  badges and a bottle label, two on a label that stayed half-read. Crop lettering
+  once; if it does not read at 4x, record the best reading and let the audit hand
+  it to the reviewer.
+- **THE REVIEW COINED `other:Peeweegahs` BESIDE `other:the Peeweegahs`.** Caught
+  on the reviewed data and normalised. Keep listing the distinct `other:` values
+  after the review, not only after the pass.
+- **Captions set wholly in the slanted face were left untagged**, matching the
+  earlier Vol. 16 titles (0 of 64 narrator groups carry `[i]`); the review did
+  not change that.
