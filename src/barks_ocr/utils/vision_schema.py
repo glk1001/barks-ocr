@@ -12,8 +12,6 @@ import re
 from collections.abc import Iterable, Mapping
 from enum import StrEnum
 
-from barks_fantagraphics.speech_markup import EMPHASIS_TAGS
-
 # Ordered, because the editor lays the roster out in this order. Free-form
 # speakers are allowed only behind ``OTHER_PREFIX``, so a typo in a main-cast
 # name is caught rather than silently becoming a new character.
@@ -155,7 +153,8 @@ IDENTIFIED_BY_NOTES: dict[str, str] = {
 
 # Emphasis is written inline, as `[b]WORD[/b]`, into the group's `ai_text`
 # itself; `EMPHASIS_TAGS` in `barks_fantagraphics.speech_markup` is the
-# vocabulary and the only definition of it. It used to be a separate
+# vocabulary and the only definition of it, and `barks_ocr.utils.emphasis`
+# says which of its two tags emphasis takes. It used to be a separate
 # `emphasis_spans` field of character offsets, which drifted the moment anything
 # else edited the text -- see that module for the full argument.
 EMPHASIS_MARKUP_KEY = "emphasis_markup"
@@ -1133,9 +1132,18 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
         "  thirds of them dialogue against thought, and neither engine is reliably",
         "  the right one -- so read the balloon, do not prefer a side.",
         (
-            f"{EMPHASIS_MARKUP_KEY} — the group's ai_text with emphasis marked"
-            f" inline: {', '.join(f'[{t}]WORD[/{t}]' for t in EMPHASIS_TAGS)}."
+            f"{EMPHASIS_MARKUP_KEY} — the group's ai_text with emphasis marked inline"
+            " as [b]WORD[/b]."
         ),
+        "  EMPHASIS IS ALWAYS [b], however the lettering slants. [i] is not an",
+        "  emphasis tag: it marks a SLANTED FACE, and is allowed only when it covers",
+        "  the WHOLE group -- a caption or balloon set entirely in italic. Emphasis",
+        "  inside such a face is still [b]: [i]AN [b]ENGINE[/b] CHUFFING ALONG[/i].",
+        "  A balloon lettered wholly slanted as a voice effect, with a few words in",
+        "  heavier weight, takes [b] on those words and no [i] at all.",
+        "  Measured 2026-09-17: whole batches had written emphasis as [i] while their",
+        "  neighbours wrote [b] -- 1,692 runs across 16 volumes, rewritten that day.",
+        "  An [i] that does not cover the whole group is now refused at apply time.",
         "  Copy the ai_text exactly and add only the tags; it is checked against",
         "  the stored text and the run is refused if anything else changed.",
         "  A literal [ ] or & in the lettering must be written &bl; &br; &amp;.",

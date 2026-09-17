@@ -59,6 +59,7 @@ from loguru import logger
 
 from barks_ocr.tools.vision_mirror import MirrorReport, mirror_title
 from barks_ocr.tools.vision_prep import CROP_PAD_PX
+from barks_ocr.utils.emphasis import italic_emphasis_problem
 from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
     ADDED_AI_TEXT_KEY,
@@ -230,6 +231,12 @@ def _check_emphasis(markup: Any, ai_text: str, where: str, errors: list[str]) ->
         return
 
     errors.extend(f"{where}: {problem}." for problem in validate_markup(markup))
+
+    # Emphasis is [b]. The roster once offered [i] as an equal option and whole
+    # batches drifted into it; [i] now survives only where it covers the group's
+    # entire lettering, a caption or balloon set in a slanted face.
+    if problem := italic_emphasis_problem(markup):
+        errors.append(f"{where}: {problem}.")
 
     # Both sides stripped: on a re-run the stored ai_text already carries the
     # previous pass's tags, and it is the words that have to match, not the
