@@ -9222,6 +9222,36 @@ corrections, 1 missed-text item in the batch.
 
 ## Per-volume cap palette
 
+Vol. 18 and Vol. 20, four titles read 2026-09-17 (sixty-fifth batch; none reviewed).
+30 pages, 51 images, **1.70 per page**; per title 1.33 / 2.20 / 1.50 / 1.50.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Gyro's Imagination Invention* (18) | 141 p3 (three caps knocked into the air) and 141 p4 (red, blue, green rims in a row) | `#e51a20`-`#e71c20` (138 p4, 141 p4); shaded `#bd251d` (141 p6), `#db1b20`/`#90191a` (141 p3), `#cd2431` (140 p7) | `#009e45`-`#009f45` H146 (140 p7, 141 p4, 141 p6); `#009c64` H160 (139 p3); `#0b8d69` H163 sliver (138 p3); `#266e3e` H140 (144 p4); **teal `#05a1a1` H180 on the boy 142 g2 names LOUIE**, and dull teal `#21847e` H176 / `#3f797a` H181 (141 p7, 143 p7) | `#00a4bd` H188 (140 p7), `#00a3af` H184 ranked blue beside a `#266e3e` green (144 p4), `#01a5d6`/`#0fa7d0` H193 (141 p4, 146 p5) | black cap with a thin rim or quarter; bare-headed indoors in Gyro's workshop (140 p2-p6); night panels print every cap the same dark `#0079b0` (147 p7-p8) |
+| *Red Apple Sap* (18) | 148 p1 (three quartered caps) and 151 p8 (red, blue, green from behind) | `#e71c20` 60-1,869px; dim `#933e25` H14 (153 p7), `#a0361e` (157 p8), `#cb2623` (150 p6) | `#67ac40` H98 (148 p1), `#4da43d` H111 (152 p3), `#4ea43e` (157 p6), `#49944b` H122 (153 p7) -- only 2 named groups | `#00a5d5` 21-1,213px throughout | quartered black caps outdoors all through; one naming line, 157 g7 `WHERE'S HUEY?` |
+| *Picnic*, *The Sure-Fire Gold Finder* (20) | none -- no nephews | -- | -- | -- | Gyro solo stories with his Helper (and a mouse, lizards, a horned toad, rattlesnakes). No cap key at all |
+
+- **TEAL IN *IMAGINATION INVENTION* SPLITS BY BRIGHTNESS, NOT HUE.** The bright cyans
+  `#00a4bd`/`#00a3af` (H184-188) sit beside a clean green and are Dewey's; the teal on
+  the boy Donald names LOUIE (142 g2) is `#05a1a1` H180, and the dull teals
+  `#21847e`/`#3f797a` are on boys drawn in Louie's pose. 143 g13 was named Louie on
+  that dull teal at medium -- the least certain cap call in the batch.
+- **THE OVERVIEW LIED ABOUT COLOUR ON 146.** The Betelgeuse page looks green-tinted
+  in `page.png`, Donald's cap included; the pixels are the roster `#00a5d5`. Sample,
+  do not read colour off the page image.
+- The workshop machine in *Imagination Invention* is teal `#01a08c`/`#007a6b`, and it
+  sits behind every boy's head on 139 p6-p8 -- the census lays it on their crowns.
+  *Red Apple Sap*'s bushes print `#74a83c` H89 at head height beside the green caps.
+- Donald's cap is the roster blue in both; Gladstone is blue-coated. The apple expert
+  and Grandma Duck appear in *Red Apple Sap*.
+- Type corrections: 28 proposed (Picnic 4, Imagination 2, Red Apple Sap 7, Gold
+  Finder 15), and 20 of them are `dialogue -> thought` on bubble-trailed balloons,
+  16 in the two Gyro stories. Snores (149 g1, 155 g11) and the
+  gopher's HIC (155 g12) went to dialogue, following the 58-to-24 split in the
+  reviewed corpus.
+- Added lettering groups: *Gold Finder* 164 the lizard's `?`, 165 the LAMP BLACK pot
+  label (LA under a paint drip).
+
 Vol. 18, four titles read 2026-09-17 (sixty-fourth batch; none reviewed):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
