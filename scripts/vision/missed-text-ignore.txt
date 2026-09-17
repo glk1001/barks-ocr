@@ -400,3 +400,17 @@ HELP KEEP AMERICA STRONG
 # cereal boxes piled beside Donald and the boys (Faulty Fortune 066 p1). Real
 # lettering, but a repeated product label the dialogue already names.
 16 066 CANNY BRANNIES
+
+# Counting artefact, confirmed by the reviewer 2026-09-17: the four drawn dollar
+# signs in Scrooge's thought clouds (Land of the Pygmy Indians 169 p5) are all in
+# one existing group, `$ $ / $ $`, which the audit counts as one.
+16 169 $
+
+# Judged not worth a group by the reviewer, 2026-09-17 (The Fantastic River Race):
+# a boat name board the audit still counts on 189, the tiny doorway Beagle Boy's badge
+# on 202 p4 (the running one on p1 is grouped), and the partly hidden pilothouse
+# boards of both steamers on 203.
+16 189 DOLLAR
+16 202 176-167
+16 203 RIVER WITCH
+16 203 DOLLAR
