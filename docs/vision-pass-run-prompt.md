@@ -9633,3 +9633,66 @@ run should treat this section as provisional.
   in the note but no traced tail, and per the roster a balloon's x-span is not a
   tail. The next review will show whether 1.11 images per page under-bought this
   title; that is the number to watch.
+
+### CORRECTION to the sixty-second batch, 2026-09-17 -- the ACB nephew domain was under-read
+
+The provisional findings above stand except for the last bullet, which called
+*A Cold Bargain*'s ~60 collectives "a cost decision to declare". It was not a
+defensible cost decision. It was a reading failure, and the review caught it at
+page 140 with **every nephew name being filled in by hand**.
+
+**The numbers, measured against the pass commit.** Three of the four titles came
+back with **0 speaker corrections in 187 groups**. *A Cold Bargain* came back
+with 30 in 386, **23 of them `nephews` -> a name**, 30.5% of its nephew domain --
+and every one of those 23 arrived with a `cap_colour` the reviewer filled in,
+which is the tell: **the caps were readable and I had not read them.**
+
+**The mechanism, and it is not the one the findings above describe.** I measured
+the confounders correctly -- the ship's railing really is `#e61b1f` H358.8, one
+degree off Huey's cap panel -- and then made exactly the wrong inference from
+them. `capwide` and the head census reported the RAILING on all three crowns of
+139 p3 because it passes behind their heads at y265, and I wrote *"which boy is
+which cannot be settled here"* three times **without ever opening the panel**.
+One crop at 2.6x shows red, green and blue side panels, unmistakably, in the
+order the review later corrected them to. The whole title cost 1.11 images per
+page against a budget of 3.
+
+- **A PANEL-LEVEL CONFOUNDER IS NOT A HEAD-LEVEL VETO.** Same-ink scenery means
+  the SCAN cannot separate cap from background. It says nothing about whether the
+  ART can. The roster already says a zero is a fact about the scan; this is the
+  same rule one step on -- **an ambiguous scan is an instruction to crop, not a
+  licence to decline**. When a band and a confounder share a hue, that panel has
+  just become MORE worth an image, not less.
+- **THE QUIZ SHOW IS THE CONTROL, AND IT IS IN THIS SAME BATCH.** There I had the
+  identical problem -- 13 red and 4 green blobs, one of them 3018px directly above
+  a head -- and I spent one crop. The boys were bare-headed, the scan was junk,
+  and the title came back **0 corrections in 86 groups**. Same batch, same reader,
+  same tools; the only difference is whether a panel was opened.
+- **SPENDING UNDER BUDGET IS NOT A RESULT.** 1.11 images per page was reported as
+  a good number in the close-out. It was the worst number in the batch. The budget
+  is 3; the cheapest title in the ledger is not automatically the best one, and a
+  page of small figures in a cap-keyed title is precisely where the images belong.
+  **Report images/page next to the correction rate, and treat a low rate on a
+  cap-dense title as a flag to re-check, not as a saving.**
+- **A COLLECTIVE WHOSE NOTE RECORDS THE CAP INK IS THE WORST OF BOTH.** Several
+  notes read "6091px of #4fa43c H109 at x164-280 ... the inks are recorded and not
+  used". That costs the reviewer the same keystroke as a wrong name AND throws
+  away the measurement. If the ink is good enough to write down, crop it and use
+  it.
+
+**Fixed 2026-09-17**: the 66 unreviewed nephew-domain groups on 140-155 were
+re-read against crops showing balloon and cap together, and re-applied. 43 are
+now named, 14 remain genuinely collective (figures 20-40px, or a tail tip in a
+gap between two boys), and 9 moved out of the domain to Donald or Scrooge --
+including two lines the first pass had given to **Scrooge** whose tails run to a
+boy (144 g3, 145 g4). `vision_apply` left all 156 already-reviewed groups
+untouched, as designed. `cap_mismatch.py` reports **zero** cap/name
+disagreements from the title.
+
+**The Antarctic parka key held and is worth keeping.** 148's dialogue chain names
+the marching file, and the outfits recur unchanged through 147-155: red
+ruff/blue trousers Donald, yellow/green Dewey, blue/orange Louie, orange/green
+Huey. Confirmed panel by panel on 147 p2/p5/p8, 148 p7, 149 p5/p6, 150 p3/p7,
+152 p8, 154 p1/p6/p7 and 155 p2/p3/p4. A costume key does not travel by
+default -- but one the dialogue anchors, on characters wearing the same clothes
+in the same sequence, does.
