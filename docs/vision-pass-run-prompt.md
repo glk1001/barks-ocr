@@ -9696,3 +9696,59 @@ Huey. Confirmed panel by panel on 147 p2/p5/p8, 148 p7, 149 p5/p6, 150 p3/p7,
 152 p8, 154 p1/p6/p7 and 155 p2/p3/p4. A costume key does not travel by
 default -- but one the dialogue anchors, on characters wearing the same clothes
 in the same sequence, does.
+
+### Findings to paste into the next run (2026-09-17, sixty-second batch, ALL FOUR REVIEWED)
+
+**541 groups, 48 speaker corrections (8.9%), and all 48 are in one title.**
+*The Colossalest Surprise Quiz Show* (86), *Forecasting Follies* (51) and
+*Fishing Mystery* (50) came back with **0 speaker corrections in 187 groups**.
+*A Cold Bargain* came back with 48 in 355 (12.4%), **44 of them in the nephew
+domain (55.0%)**. By the confidence the pass wrote: high 47/353 (13.3%),
+medium 1/2. All 12 type corrections were confirmed and the whole corpus now
+reports nothing outstanding across 460 titles. Mirrored clean on all four:
+group count, reviewed count, `identified_by` and every distribution match, no
+stragglers. 73 images over 41 pages, 1.78 per page.
+
+**The split is the entire lesson, and it is not about difficulty.** All three
+clean titles had a cap question in them; in each the pass opened the panel. The
+one dirty title had the same kind of question on nearly every page and the pass
+answered it from colour scans alone. See the 2026-09-17 correction section above
+for the mechanism -- a panel-level confounder taken as a head-level veto -- which
+is the single most expensive habit in this batch and the one to carry forward.
+
+- **AFTER BEING TOLD YOU UNDER-NAMED, YOU WILL OVER-NAME. WATCH FOR IT.** The
+  49 groups the re-read rewrote scored 10.2% corrected against 14.1% for the rest
+  of the title, so the re-read was worth doing -- but **two of its five misses
+  were over-naming** (141 g7 `Louie` -> `nephews`, 144 g8 `Huey` -> `nephews`,
+  the latter with `cap red` -> `None`), which is the opposite error from the one
+  being fixed. A cap you can see in a crop still has to be ON the speaker: 144 g8
+  is one balloon over a row of three and the red cap belonged to a boy the tail
+  did not reach. Cropping tells you what is printed; it does not excuse you from
+  tracing the tail.
+- **DONALD AGAINST SCROOGE IS THIS TITLE'S SECOND ERROR CLASS, AND IT IS NOT A
+  CAP PROBLEM.** Nine corrections are `Scrooge` -> `Donald` (8) or the reverse
+  (1), on 135, 136, 145, 149, 150, 152 and 155 -- two adults, no cap key between
+  them, and the pass repeatedly gave the money-owner's register to Scrooge where
+  the tail ran to Donald. Seven more are `nephews` -> `Donald`. **Sixteen of the
+  48 corrections are Donald being missed.** In the Antarctic he is the RED hood;
+  aboard ship he is the blue sailor cap and the red bow tie. Check for him before
+  writing either `Scrooge` or `nephews`.
+- **A DIALOGUE-ANCHORED COSTUME KEY IS WORTH ITS CROP AND IT TRAVELS.** 148's
+  marching chain names the file front to back and keys the parkas -- Donald red
+  ruff/blue trousers, Dewey yellow/green, Louie blue/orange, Huey orange/green --
+  and the key held from 147 to 155 across ten pages. Of the 21 re-read calls made
+  on it, 20 survived review. The standing rule that a costume key does not travel
+  is about keys inferred from a prop; one the dialogue states, on characters
+  wearing the same clothes through one continuous sequence, is evidence.
+- **THE REVIEW WILL COIN A SECOND LABEL FOR A CHARACTER YOU ALREADY NAMED.**
+  151 g1 and g2 are the same man one panel apart and came back as
+  `other:the helicopter pilot` and `other:the pilot`. Nothing checks free-text
+  speakers, so **list the distinct `other:` values at close-out on the REVIEWED
+  data, not just on the pass's** -- the drift can enter at either end. Now
+  reconciled; the batch ends on 24 distinct values.
+- **WHAT THE CLEAN TITLES SHARE.** Both Gyro four-pagers and the Quiz Show
+  resolved every speaker from an address (`UNCA SCROOGE`, `MR. McDUCK`, `BOYS`,
+  `NEPHEW`, `SKIPPER`, `PILOT`, `SONNY`), from a sole figure in frame, or from one
+  crop. None of them needed a colour scan to name anybody. The scans earn their
+  place on cap-keyed nephew pages and almost nowhere else; on an adult-only title
+  they are close to pure cost.
