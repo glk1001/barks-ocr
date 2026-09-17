@@ -14,6 +14,20 @@
 # Do not "fix" a finding by editing a page's visible_text instead. That field
 # records what is actually printed on the page and is true as it stands; an
 # ignore belongs here, where it carries a reason.
+#
+# 2026-09-17: THE ENTRIES BELOW THAT SAY THEY "CANNOT FIRE" WERE WRONG ABOUT WHY.
+# Four of them -- 2 009 OP, 13 131 LA, 15 140 DON and 15 140 DU -- were being
+# raised by the audit the whole time and the ignore simply could not match them.
+# `classify` annotates a finding before it is stored (`[quoted aloud, not boxed]`,
+# `[N in the art, M grouped]`) and `ignored()` was normalising that annotated
+# string, so no entry could ever equal it. A bare device entry had a second
+# problem: `load_ignores` keyed on `normalize`, which reduces `?` to the empty
+# string, and then discarded the entry. Both are fixed -- the finding now carries
+# the raw lettering alongside its display line, and both sides key on
+# `comparable`, which falls back to `device_key`. The containment reasoning in
+# those blocks still holds for the `covered` verdict; it was never what stopped
+# the ignores working. Measured over 2296 pages: 9 findings moved from reported
+# to ignored, none moved the other way.
 
 # Wartime public-service filler, printed in the margins rather than drawn into
 # a story panel. Real lettering, but not story content and not worth a box.
@@ -371,3 +385,34 @@ HELP KEEP AMERICA STRONG
 # cereal boxes piled beside Donald and the boys (Faulty Fortune 066 p1). Real
 # lettering, but a repeated product label the dialogue already names.
 16 066 CANNY BRANNIES
+
+# Judged not worth a group by GLK, 2026-09-17, sixty-second batch. Three
+# NARRATION CAPTION BOXES that the audit reports only because the pass listed
+# them in visible_text. Each is already a group on both engines, typed
+# `narration` -- but `classify` matches a visible_text item against the subset
+# of groups typed as lettering the ART carries, and a caption is not in that
+# set, so a grouped caption can only ever come back as "quoted aloud, not
+# boxed". Nothing is missing from the corpus; the entries are the pass's own
+# mistake about what belongs in visible_text.
+#
+# The rule this came from, for anyone reading back: visible_text is for signs,
+# labels, sound effects and UNGROUPED drawn devices. Caption boxes and anything
+# already typed narration or thought do not belong in it.
+20 149 SOON!
+20 151 AND THEN COMES THE AWFUL TRUTH!
+16 147 SOON THE DUCKS SET OUT AFOOT!
+
+# The same 2026-09-17 ruling, for the two DRAWN QUESTION MARKS in the same
+# batch. Both are already groups on both engines, typed `thought`, because a
+# device hanging over one figure names that figure -- Gyro on Forecasting
+# Follies 150 panel 3, Donald on A Cold Bargain 136 panel 2. As with the caption
+# boxes above, a grouped `thought` is not in the set `classify` matches against,
+# so it can only come back as "quoted aloud, not boxed".
+#
+# These two entries only became expressible when `ignored()` was fixed on
+# 2026-09-17 to key on `comparable()` rather than `normalize()`: a bare `?` has
+# no letters, so it reduced to the empty string and `load_ignores` discarded the
+# entry silently. Devices now match through `device_key`, the same way the
+# finding side has always reached them.
+20 150 ?
+16 136 ?
