@@ -9861,9 +9861,16 @@ where the review added a group.
   times, all Louie). This is the sixty-third batch's first finding again, and
   quoting a zero count did not protect against it: on a thin-rim construction a
   0.45-0.8x crop and a capwide zero are both too coarse. **Crop the crown at 3x+
-  before writing `nephews` on a lone or named-candidate boy.** Reviewer to confirm:
-  crown probes of the six Losing Face boys (124 p5, p6; 125 p2; 126 p1) still show
-  no green, so the WHY of those six is not established from the numbers.
+  before writing `nephews` on a lone or named-candidate boy.** Confirmed by the
+  reviewer for *Losing Face*: all five cap-named Louies (123 g16, 124 g10, 124 g13,
+  125 g4, 126 g1) have "a bit of green in the cap" -- a sliver that the pass's
+  whole-panel capwide AND its after-the-fact crown probes both missed. A probe
+  box guessed from a census span can sit off the ink; crop, do not probe.
+- **A BOY KEEPS HIS NAME ACROSS A SCENE.** *Losing Face* 124 g14 (`IT DID!`, two
+  tiny figures on the cliff) was named Louie with no cap readable, because Louie
+  was the boy beside Donald on the nose in the panels just before. Where a wide
+  shot is too small for a cap, carry the name from the panels that showed who is
+  there.
 - **TWO NAMED LEAVES THE THIRD -- STILL MISSED.** Dyed 137 g11: a turbaned
   silhouette beside a red-turbaned and a blue-turbaned boy was left `nephews`; the
   review wrote `Not Huey or Dewey` and named Louie. When the other two are placed,
