@@ -7343,6 +7343,49 @@ every single one held.** 45 images, 1.55 per page.
 
 ## Per-volume cap palette
 
+Vol. 18 and Vol. 19, four titles read 2026-09-18 (sixty-sixth batch; none reviewed).
+56 pages, 78 images, **1.39 per page**; per title 2.00 / 1.60 / 1.15 / 1.20.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Special Delivery* (18) | 158 p2 (green, teal and red boys at the counter) and 159 p2 (red, blue, green in a row) | `#e71c20`-`#e61a20` 57-3,106px throughout; dim `#de1d20` (158 p5), `#cb2b29` (161 p1), `#e01f21` (170 p5) | `#59a451` H114 (158 p2), `#4ea43e`-`#4fa43e` H110 (159, 160, 166), `#5ca06d` H135 S0.42 (158 p5), `#50a53f` (162 p6), `#4e8477` H166 S0.41 (161 p1, ranked green against a clean blue) | `#00a5d5`/`#01a4d5` H193 throughout; teal `#1ca49d` H177 ranked blue against a clean leafgrn green (158 p2); `#03a7dd` (161 p1); dull `#429db5` S0.63 declined (161 p5) | a quartered or rimmed black cap, worn throughout -- this is a street-and-garden story with no indoor stretch. Donald's own cap is the roster blue and prints 2,000-4,000px, which is what most of the blue in a band count is |
+| *The Code of Duckburg* (18) | 169 p2 (red, green and blue boys round Gladstone) and 170 p5 | `#e61a1f`-`#e71c20` 87-1,245px; dim `#cb2b29` (171 p1), `#d12624` (171 p7), `#e01f21` | `#4fa43e`-`#50a33e` H110 (169 p2, 170 p5, 171 p7); `#4e8477` H166 S0.41 (171 p1); dull `#559f6e` H140 S0.47 declined (170 p8) | `#00a4d4`-`#01a4d5`; teal `#1ca3a3` H180 ranked blue with no green in the panel (168 p3); `#1aa5bf` H190 (171 p1); dull `#429db5` S0.63 declined (171 p5) | rim or quarter on a black cap OUTDOORS only. **Bare-headed indoors for five straight pages (172-176)**, which is most of the title -- and then 176 p7 and 177 put the boys in RED, BLUE and GREEN PYJAMAS (`#e71c20` 2,955px, `#00a5d5` 8,035px, `#4fa43e` 2,032px), which is a costume key and names three groups. Gladstone wears the roster blue hat; Donald's cap is blue |
+| *Forbidden Valley* (19) | 027 p3 (red, blue and green boys at the cannery) and 029 p8 | `#e61a1f`-`#e8181f` 37-3,106px; dim `#cc2119` (057 p4), `#b12a1a` (167-style, 042 p5), `#eb191c` (029 p3) | `#50a33e` H110 (027 p2), `#56953b` (027 p3), `#009e46`-`#009f50` H147-150 (052-style), `#35a671` H166 ranked green beside a clean blue and red (029 p8), `#4e8477`-style dull greens | `#00a4d7` H194 throughout -- a slightly warmer blue than Vol. 18's `#00a5d5`; `#01a5d6`, `#03a4d6`; `#0aa5c2` (026 p3) | **caps only on 025-043.** From 032 every duck wears a brown PITH HELMET, so two thirds of the title has no cap key at all and the collective rate is high by construction. The foliage fills `green` and `leafgrn` on nearly every outdoor panel (`#009e47`-`#009e49` H147) |
+| *Sagmore Springs Hotel* (19) | 052 p8 (green, blue and Donald's blue) and 060 p7 (red, blue, green in a row) | `#e71a1f`-`#e8171f` 37-434px, small throughout; `#c9261c` (059 p6) | `#009f50` H150 (052 p8), `#009e47`/`#028945` (058, 060); teal `#017f7b` H178 S0.99 declined with nothing to rank it against (053 p6), `#00a5a4` (058 p4), `#0ba26f` (057 p6), `#009a7a` (060 p7) | `#00a4d7`-`#04a4d6`; `#02a5d7` (052 p7); `#00a6bc` H189 (060 p6); Scrooge's derby in disguise is a darker `#0381b9` | the boys are barely in the story -- Donald plays every hotel role himself and Scrooge is the disguised guest. Caps appear outdoors on 052 and 060; indoors and in the kitchen the boys are bare-headed or in chef's hats. Donald's cap prints blue 700-4,900px and is most of each panel's blue |
+
+- **A TEAL WITH NOTHING TO RANK IT AGAINST NAMES NOBODY, AND THAT IS MOST OF THIS
+  BATCH'S DECLINES.** `#1ca49d` H177 (Special Delivery 158 p2) sits beside a clean
+  leafgrn green and is Dewey's; `#1ca3a3` H180 (Code of Duckburg 168 p3) has no green
+  in the panel and was taken as blue only because the other two boys print red and
+  nothing; `#017f7b` H178 S0.99 (Sagmore 053 p6) is a lone boy in a room and was
+  declined outright. The rule that held: rank inside the panel, and where the panel
+  has one cool cap and no rival, decline the colour rather than guess the drift.
+- **THE COOL-BAND SATURATION FLOOR EARNED ITS KEEP TWICE.** `#429db5` S0.63 on
+  *Special Delivery* 161 p5 and *Code of Duckburg* 171 p5 is a dull blue-grey with no
+  clean cool cap beside it; both went to `nephews`. `docs/cap-scanning.md`'s S0.75 rule
+  is what stopped two guesses.
+- **A COLOURIST CLASH CAN BE TITLE-WIDE AND STILL NOT BE A PERMUTED PALETTE.**
+  *Forbidden Valley* names a RED-capped boy DEWEY (025 g7, a direct address to a lone
+  boy) and puts the box knocked from LOUIE's hand in the BLUE-capped boy's hand
+  (029 g2). GLK's instruction for this batch was **convention, flagged**: name red
+  Huey and blue Dewey everywhere the dialogue does not pin a boy, record the printed
+  ink, and put the clash in `vision_note` on every red/blue call so the reviewer sees
+  it on the group in hand. That is the back-propagation
+  `project_per_story_cap_palette` asks for, done at write time rather than after.
+- **A STORY THAT PUTS EVERYONE IN THE SAME HAT COSTS NOTHING TO READ AND NAMES
+  NOBODY.** *Forbidden Valley*'s pith helmets from 032 on, and *Sagmore*'s Donald
+  playing bellboy, clerk, driver and doorman, mean the speaker question is
+  Donald-against-a-boy, settled by SIZE AND BEAK rather than by any cap. 1.15 and 1.20
+  images per page, the two cheapest titles in the batch.
+- Devices ungrouped by both engines are the batch's whole added-group tally: `ZOW`
+  (Special Delivery 162, speed lettering up a pole), `?` over the boys (166), `!` over
+  the boy in red pyjamas (Code of Duckburg 177), `?` over Donald (Forbidden Valley 032,
+  Sagmore 052) and two `ZIP!`s (Sagmore 054). Seven in 56 pages.
+- Type corrections, 22 in all: 5 in *Special Delivery*, 0 in *Code of Duckburg*, 14 in
+  *Forbidden Valley* and 3 in *Sagmore*. The recurring ones are a character's cry or an
+  animal's roar stored as `sound_effect` (OW, OWOOCH, YEEK, RAWR, SNORT, WAK) and a
+  caption box stored as `dialogue` or `background` (`So-`, `Top Floor!`, the story logo).
+
 Vol. 16, Vol. 18 and Vol. 20, four titles read 2026-09-16 (sixtieth batch;
 all four reviewed; the Vol. 18 row is CORRECTED against its review):
 
