@@ -9841,3 +9841,51 @@ one (167 g9). 76 images over 47 pages, 1.62 per page.
 - **Captions set wholly in the slanted face were left untagged**, matching the
   earlier Vol. 16 titles (0 of 64 narrator groups carry `[i]`); the review did
   not change that.
+
+### Findings to paste into the next run (2026-09-17, sixty-fourth batch, ALL FOUR REVIEWED)
+
+**577 groups the pass wrote, 33 speaker corrections (5.7%)**, 32 of them in the
+nephew domain (21.9% of 146). By title: *In Kakimaw Country* 10/157, *The Lost Peg
+Leg Mine* 12/157, *Losing Face* 6/139, *The Day Duckburg Got Dyed* 5/124 (the two
+`unknown ->` rows the tool prints are the review's own added groups). By the
+confidence the pass wrote: **high 29/550 (5.3%), medium 5/27 (18.5%)**. All 8
+type proposals confirmed; no text corrections. 74 images over 40 pages, 1.85 per
+page. Peg Leg and Losing Face mirrored clean at full review; Kakimaw (112 g18) and
+Dyed (136 g13) each came back one straggler short, both the last group on a page
+where the review added a group.
+
+- **UNDER-NAMING WAS 19 OF THE 33, AND EVERY ONE RESTED ON AN ABSENCE CLAIM.**
+  `plain black caps with no rim` in a 0.8x crop (Kakimaw 116 g4/g5 -> Huey, Dewey),
+  `bare-headed in swimsuits` (108 g10, 109 g11, 109 g13), `census NO INK ON CROWN`
+  on tiny boys never cropped (Dyed 132 g8/g9), `no roster ink` (Losing Face, six
+  times, all Louie). This is the sixty-third batch's first finding again, and
+  quoting a zero count did not protect against it: on a thin-rim construction a
+  0.45-0.8x crop and a capwide zero are both too coarse. **Crop the crown at 3x+
+  before writing `nephews` on a lone or named-candidate boy.** Reviewer to confirm:
+  crown probes of the six Losing Face boys (124 p5, p6; 125 p2; 126 p1) still show
+  no green, so the WHY of those six is not established from the numbers.
+- **TWO NAMED LEAVES THE THIRD -- STILL MISSED.** Dyed 137 g11: a turbaned
+  silhouette beside a red-turbaned and a blue-turbaned boy was left `nephews`; the
+  review wrote `Not Huey or Dewey` and named Louie. When the other two are placed,
+  the silhouette is the third.
+- **A TEAL RIM IS NOT A COLOUR JUDGEMENT TO DISMISS.** Peg Leg 010 g16: `#0d6d88`
+  38px was written off as "dark teal, not a roster ink", in the same title where
+  the pass itself established teal as Louie's ink. The review named Louie. Apply a
+  title finding back to every note already written (back-propagate), not only
+  forward.
+- **ADULT-VS-BOY IS THE SECOND CLASS: 10 CORRECTIONS.** Donald -> a boy (Kakimaw 111
+  g2 Louie, 117 g7, Peg Leg 010 g1 Louie, 012 g6, Dyed 128 g9), Scrooge -> Louie (Peg Leg
+  016 g10, 017 g3), a boy -> Donald (Kakimaw 108 g9, Peg Leg 017 g12), Scrooge ->
+  Donald (Kakimaw 117 g8). Every one was a tail read off the montage with no crop,
+  the balloon assigned to the adult nearest it. **Peg Leg 012 g6 was named on
+  `UNCLE SCROOGE is Donald's form` -- register is not evidence where a tail is
+  drawn.** Crop the tail when an adult and a boy are both within reach.
+- **A GAP TIP WITH A NAMED ALTERNATIVE: TAKE THE ALTERNATIVE THE GAP RULE GIVES.**
+  Peg Leg 008 g1 went Huey (tip at the middle boy's crown edge) -> Dewey, which the
+  note named as the one-head-left alternative. Over-naming twice where the call was
+  a thin margin plus a ranked teal (008 g13, 014 g7 -> `nephews`).
+- **LETTERING THE CAPTURE NEVER LISTED STAYS INVISIBLE TO THE AUDIT.** The review
+  added Kakimaw 112 p6's `313` plate and Dyed 136 p8's `?` over Donald; neither was
+  in `visible_text`. Every licence plate and drawn device, every page.
+- **MEDIUM IS STILL WHERE THE ERROR IS** (18.5% vs 5.3%), but the absence claims
+  above were all written at high.
