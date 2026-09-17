@@ -288,6 +288,11 @@ def classify(needle: str, item: str, wanted: int, index: PageIndex) -> tuple[str
     it tests as covered while never having been boxed. And a sign the art shows
     more often than the engines grouped it -- three peanut sacks, one group --
     needs a count, not a membership test.
+
+    The read-aloud case turns on CONTAINMENT, not on type. A group whose own text
+    is the lettering has boxed it however it is typed, so the exact match is
+    tested first; only lettering that no group carries in its own right, and that
+    merely sits inside a speech group, comes back as quoted aloud.
     """
     have = [engine for engine, texts in index.per_engine.items() if covers(needle, texts)]
     if not have:
@@ -295,7 +300,15 @@ def classify(needle: str, item: str, wanted: int, index: PageIndex) -> tuple[str
             return "suppressed", item, []
         close = near_match(needle, index.every_text)
         return ("near", close, []) if close else ("missing", item, [])
-    if not any(covers(needle, index.lettering[engine]) for engine in have):
+    # A group whose OWN text is this lettering has boxed it, whatever type it
+    # carries. The read-aloud case this check exists for is the CONTAINMENT one --
+    # a sign with no group of its own whose words sit inside a character's balloon
+    # -- so an exact match ends the question before type is consulted. Without
+    # this, every caption box, every drawn device typed `thought`, and every
+    # character noise typed `dialogue` reported for ever, because `SPEECH_TYPES`
+    # puts all three outside `lettering`: 920 of 1296 findings on 2026-09-17.
+    boxed = any(needle in index.per_engine[engine] for engine in have)
+    if not boxed and not any(covers(needle, index.lettering[engine]) for engine in have):
         return "missing", f"{item}  [quoted aloud, not boxed]", []
     short = [engine for engine in have if index.counts[engine].get(needle, 0) < wanted]
     if short:
