@@ -9222,6 +9222,20 @@ corrections, 1 missed-text item in the batch.
 
 ## Per-volume cap palette
 
+Vol. 16, two titles read 2026-09-17 (sixty-third batch; none reviewed):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Land of the Pygmy Indians* | 179 p1 and 184 p5, three boys side by side with red, blue and green rims | `#df1d21`-`#e61b1f` 128-1,057px; dimmed `#842b1c` H8.7 (164 p8), `#b6281c` H4.7 (177 p8), `#c33225` (168 p2), `#cd282a` (181 p5) | `#4da33e`-`#50a440` H110-117, 170-1,195px -- the `leafgrn` band; shaded `#579b65` H132 (164 p8), `#62a35f` H117 S0.42 (183 p4), dark `#37886d` (183 p3), `#3aa276` (172 p1) | `#00a5d7`-`#08a6d4` 130-1,650px; teal `#42a3aa` H184 (180 p7), `#21a4a0` H178 ranked blue against a clean green beside it (185 p2) | a thin coloured rim on a black cap; several boys print no rim at all (164 p7 right boy, 167 p5, 179 p3, 183 p2) or a level teal the channel test calls unreadable (168 p2, 183 p4) |
+| *The Fantastic River Race* | none -- no nephews | -- | -- | -- | a flashback told to Grandma Duck: Scrooge, Ratchet Gearloose, Blackheart Beagle, the Beagle Boys, a banker. No cap key at all |
+
+- *Pygmy Indians*: the `green` band is the forest `#016c62`/`#2f9d44` on every
+  outdoor panel, and it reaches the boys' crowns in the census (165 p1's green
+  segment probes as `#016c62`, the pines behind it). Scrooge's coat `#a04453` fills
+  the red column wherever he stands. The small Indian painted blue on 183 p7 is
+  `#07a4d4`, the roster blue, at head height beside two black-capped boys.
+- Donald wears his blue sailor cap throughout; Scrooge his blue-banded top hat.
+
 Vol. 18 and Vol. 16, three titles read 2026-09-16 (sixty-first batch; none reviewed):
 
 | title | reference | red | green | blue | construction |
