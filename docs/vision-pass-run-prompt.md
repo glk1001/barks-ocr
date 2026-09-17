@@ -9752,3 +9752,13 @@ is the single most expensive habit in this batch and the one to carry forward.
   crop. None of them needed a colour scan to name anybody. The scans earn their
   place on cap-keyed nephew pages and almost nowhere else; on an adult-only title
   they are close to pure cost.
+
+### Emphasis is [b] -- ruled 2026-09-17
+
+**Emphasis is always `[b]`; `[i]` only when it covers a whole group set in a
+slanted face** (emphasis inside a face is still `[b]`). The roster had offered
+both tags as equal options, so batches drifted -- this one wrote Vol. 20 in `[i]`
+and Vol. 16 in `[b]`. 1,184 groups across 16 volumes were rewritten by
+`scripts/vision/normalize_emphasis.py` (214 face groups kept `[i]`), the roster
+now states the rule, and `vision_apply` refuses `[i]` emphasis at dry run. An old
+out-dir holding `[i]` results will be refused if re-applied; that is intended.
