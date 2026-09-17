@@ -9222,6 +9222,28 @@ corrections, 1 missed-text item in the batch.
 
 ## Per-volume cap palette
 
+Vol. 18, four titles read 2026-09-17 (sixty-fourth batch; none reviewed):
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *In Kakimaw Country* | 109 p1 (blue, red, green boys in a row) and 113 p4 (green and red rims) | `#e61a1f`-`#e71c20` 273-1,414px (113 p4, 115 p4, 116 p1); dark `#c51e1c` H0.7 (109 p5), `#ce242c` (114 p8), `#d1262e` (115 p2), `#d92227` (112 p7) | `#4ea43e`-`#4fa43e` H110 (109 p1, 113 p4, 115 p4, 116 p5); `#52a33d` H107.6 (114 p5), `#5da543` H104 (110 p4), `#64a951` H107 (115 p2) | `#00a5d5` (109 p1, 114 p6, 115 p8); quartered `#00a4d5` (112 p7); `#01a4c6` H190 (117 p1); `#0ca5bf` (116 p5) | a thin rim on a black cap outdoors; bare-headed in swimsuits on 108 and 109 p6-p7; plain black caps with no rim on 116 p3 |
+| *The Lost Peg Leg Mine* | 009 p4 (red, green, blue patches) and 008 p2 | `#e61a20`-`#e61b20` 165-1,591px; dark `#c2171e` (008 p1), `#c53542` (012 p1), `#cb1b1c` (014 p6), `#dd181f` (016 p7) | `#009d45`-`#009e46` H147 (009 p4, 016 p3); `#019267` (008 p2), `#139f4e` (013 p6), `#00a06a`/`#00a070` H160-162 (014 p4, 015 p5), `#299445` H136 (015 p2), `#3d9470` H155 (016 p4); **TEAL H172-182 IS LOUIE HERE**: `#00a186` (008 p5, beside a `#00a5d5` boy), `#147a70` (014 p6, beside red and a `#00a3c2` blue), then `#12908d` (013 p7), `#00a3a6` (011 p8), `#347b75` (013 p3), `#2d8378` (015 p7) | `#00a5d5`-`#01a4d6` H193 (008 p2, p4; 009 p4; 016 p7); `#00a3c2` H188 (014 p6) | a coloured patch or rim on a black cap, quartered on 009 p2 and 013 p7; plain black caps on 012 p3 and 017 p1; firelit and silhouetted on 012 |
+| *Losing Face* | 118 p5 (three boys from behind, green, red, blue) and 125 p7 (quartered caps) | `#e61a20` 218-2,126px; dark `#b91d1e` (122 p5), `#dd181e` (122 p6) | `#009e46`-`#009e47` H147 (118 p5, 122 p3, 125 p7, 126 p8); `#009f61` H157 (122 p1), `#009e6e` (123 p2), `#009e71` H163 (126 p7), `#0b9c7f` H168 (125 p1, medium); `#16887c` H173 ranked green beside a `#0ea6c3` blue (123 p6) | `#00a4d5`-`#00a5d5` (125 p7, 127 p5); `#0ea6c3` H190 (123 p6); **teal `#02a199` H177 ranked blue beside a `#009f61` green (122 p1)** | a rim or quartered black cap; told in flashback to Daisy, with the quoted captions as Donald's narration; no roster ink on the boy on 124 p5-p6 and 125 p2 |
+| *The Day Duckburg Got Dyed* | 130 p1 (big green and red quartered caps) and 133 p1 (green, teal, red) | `#e61b20`-`#e61c1f` (129 p4, 130 p1, 133 p1); dark `#b51e22` (130 p5) | `#009e46`-`#009e47` H147 (129 p7, 130 p1, p4); `#00a141` H144 (133 p1); a 59px `#009d46` sliver (129 p4, medium) | `#03a4d5` (129 p4); **teal `#02987e` H171 ranked blue beside `#00a141` green (133 p1)** | rim or quartered cap outdoors; bare-headed indoors on 128, 129 p1-p2 and 132; in Timbuktu (137 p5-p8) turbans in the roster red and blue |
+
+- **TEAL IS A PER-TITLE INK, NOT A PER-VOLUME ONE.** In *Peg Leg* a teal rim sits
+  beside a true `#00a5d5` blue twice, so it is Louie's; in *Losing Face* and *Dyed* it
+  sits beside a true green, so it is Dewey's. Earlier Vol. 18 titles ranked teal as
+  blue. Rank it inside the panel, and carry it across a title only where a panel
+  shows it beside the other colour -- and never into the next title.
+- Donald's cap is the roster blue throughout. *Peg Leg*'s Scrooge wears a darker
+  hat band `#0078af`-`#0183b8` (H197-199) and a `#b44a5e` coat; *Kakimaw*'s coat is
+  `#a14554`. *Kakimaw*'s feathered medicine man is Donald in disguise and is named
+  Donald.
+- Added lettering groups: *Kakimaw* 109 AJAX RAIN POWDER, 111 and 112 the farmer's
+  sweater `W` (x4) and the 111 plate `313`; *Peg Leg* 010 plate `313`; *Dyed* 129
+  Gyro's door sign, cut by the panel border.
+
 Vol. 16, two titles read 2026-09-17 (sixty-third batch; none reviewed):
 
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
