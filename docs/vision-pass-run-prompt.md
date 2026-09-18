@@ -7341,6 +7341,73 @@ every single one held.** 45 images, 1.55 per page.
   `REGGIE SLAMMED THE DOOR BEHIND HIM AND IT LOCKED!` is a guest's line, not the
   author's. **A boxed line in the past tense is not automatically narration.**
 
+### Findings to paste into the next run (2026-09-18, sixty-sixth batch, THREE OF FOUR REVIEWED)
+
+**976 groups over 46 reviewed pages, 67 speaker corrections.** By title:
+*Special Delivery* 18/148 (12.2%), *The Code of Duckburg* 14/144 (9.7%),
+*Forbidden Valley* 35/342 (10.2%). *Sagmore Springs Hotel* is still being
+reviewed. By the confidence the pass wrote: **high 60 of 601 (10.0%), medium 7
+of 33 (21.2%)** -- and unlike every batch before it, **the errors are
+overwhelmingly at HIGH confidence**, because they are not cap calls at all.
+All 20 type proposals confirmed; the one text correction confirmed.
+
+- **WHEN EVERY DUCK WEARS THE SAME HAT, SIZE AND BEAK DO NOT SEPARATE DONALD
+  FROM A NEPHEW. THE SHIRT DOES.** *Forbidden Valley* puts all four in brown
+  pith helmets from 032 on, and **32 of its 35 corrections are Donald against
+  the nephew domain, 16 each way** -- a coin toss with a confident note
+  attached. Two panels re-read at 0.62x after the review show what was
+  available for free: **Donald wears the red BOW TIE and the sailor blouse
+  with the white-banded collar and cuffs; the boys wear plain black shirts
+  with no collar.** On 038 p2 the bow-tied duck is second from the LEFT, and
+  the pass's note says "the duck with the bow tie at the right"; on 041 p1 the
+  striped collar is on the left duck and the pass had the two balloons
+  crossed. Read the shirt, then trace each tail -- and note that a 250px
+  montage will not show a collar stripe, so a panel with two ducks and two
+  balloons needs the 0.55-0.62x view the ladder already allows.
+- **A PANEL WITH NO CAP INK IS STILL A PANEL WHERE THE REVIEWER NAMES BOYS.**
+  Under-naming was 15 of 18 in *Special Delivery* and 11 of 14 in *The Code of
+  Duckburg*, and nearly every one of those notes is a correct absence claim --
+  `green 0 / blue 0 / leafgrn 0 blobs total`, `crowns.py lists no head with
+  ink`, silhouettes, boys drawn as specks on a clothes line. The scan was
+  right and the CONCLUSION was wrong: the review named them anyway, from the
+  tail and from who is doing what in the scene. **A clean tail to one boy is a
+  name even when his cap prints nothing.** Quote the zero, then name him
+  anyway if the tail is unambiguous; `nephews` is for a tail you cannot
+  place, not for a cap you cannot read.
+- **BUT A TIP ON THE BOUNDARY IS STILL NOT A NAME.** All three of *Special
+  Delivery*'s over-namings (158 g15, 159 g12, 159 g14) are gap tips the pass
+  resolved with the one-head-left rule against a clean rim; the review made
+  all three `nephews`. So: unreadable cap + clean tail -> name him; readable
+  cap + tip in the gap -> collective. The two rules point opposite ways and
+  the discriminator is the TAIL, not the ink.
+- **MEASURE THE RIM ON THE BOY THE TAIL LANDS ON, NOT ON THE BOY NEXT TO
+  HIM.** *The Code of Duckburg* 168 g3 and 169 g12 both went `Huey`/red ->
+  `Louie`/green: the pass quoted a real red rim and a real pixel margin, and
+  both belonged to the neighbour in a row of three. Where a row is tight, the
+  crop has to contain the tail tip AND the crown being quoted, in one image.
+- **A COLOURIST CLASH GETS SETTLED PANEL BY PANEL, WHICH IS WHAT
+  CONVENTION-FLAGGED BUYS.** *Forbidden Valley*'s dialogue names a red-capped
+  boy Dewey (025) and a blue-capped boy Louie (029). Read on the convention
+  with the clash in every note, the review moved exactly **two** groups (026
+  g3 -- the reviewer's own note reads "GLK decides to make this Dewey" -- and
+  027 g7) and left every other red call as Huey. A title-wide remap would
+  have been wrong about eighteen groups; `project_per_story_cap_palette` holds.
+- **A TEAL WITH NO COOL RIVAL IN THE PANEL: the declines stood.** `#1ca3a3`
+  H180 taken as blue with only red beside it, `#017f7b` H178 declined
+  outright, `#429db5` S0.63 declined under the cool-band floor -- none was
+  corrected. The floor and the rank-inside-the-panel rule are earning their
+  keep.
+- Type corrections confirmed 20 of 20, and they keep coming from the same two
+  places: a character's cry or an animal's roar stored as `sound_effect` (OW,
+  OWOOCH, YEEK, WAK, RAWR, SNORT, ROAR), and a caption box stored as
+  `dialogue` or `background` (`So-`, `Top Floor!`, `SOON!`, the story logo).
+- Outstanding after the review: *The Code of Duckburg* 168 g0 (the story logo)
+  was never signed off on either engine -- one queue line, `queue-straggler.txt`
+  -- and the missed-text findings are unworked: CoD 172's two music notes (a
+  real add) and *Forbidden Valley*'s four (025 HISS!/SNARL! and 030
+  SSFZT!/SNORT!, all four lettered INSIDE an existing group and recommended
+  for `missed-text-ignore.txt`).
+
 ## Per-volume cap palette
 
 Vol. 18 and Vol. 19, four titles read 2026-09-18 (sixty-sixth batch; none reviewed).
