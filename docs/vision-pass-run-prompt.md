@@ -7420,6 +7420,96 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-19, sixty-eighth batch, NONE REVIEWED)
+
+**591 groups over 48 pages, 4 titles, all Vol. 19.** 99 images, **2.06 per page**;
+per title 3.33 / 1.90 / 1.00 / 1.00. **8 type corrections and no text
+corrections.** 11 missed-text findings on two titles. Nothing is reviewed yet,
+so every number below is the pass's own and the correction rates are unknown.
+
+- **A TITLE WHERE THE CAP GREEN AND THE FOLIAGE SHARE A BAND COSTS DOUBLE.**
+  *Tabu Yama* ran 3.33 images per page against 1.00 for the two titles after
+  it, and the whole overrun is one fact: its cap green is leafgrn `#4fa43e`
+  H110-119 and its PALMS print `#50943c` at H106.5, six panels in ten. Hue
+  ranked nothing, so every green blob needed a head under it and the head
+  needed a panel. `docs/cap-scanning.md`'s advice to read the leafgrn column
+  is right and was not enough here. **Check the two hues against each other at
+  prep**, on one outdoor panel, before budgeting the title.
+- **VOL. 19 USES BOTH OF ITS GREENS, AND NOT IN THE SAME TITLE.** *Tabu Yama*
+  is entirely the H110 leafgrn form; *Wishing Stone Island* is entirely the
+  H147 `#009e46`-`#019e48` form with leafgrn at ZERO on nearly every panel.
+  Carrying one title's green band into the next inside this volume will read
+  every cap as absent. The palette table below splits them.
+- **THE REFERENCE PANEL PAID FOR ITSELF TWICE.** *Tabu Yama* 012 panel 1 puts
+  all five in the water in one row with only heads and caps showing, and it is
+  what fixed the title: Scrooge's hat band 783px, Donald's cap 2796px and
+  Dewey's cap 916px are all the SAME `#01a4d6`, differing only in size. That is
+  the sixty-seventh batch's finding confirmed on a third volume -- **size never
+  separates the roster blue** -- and having it measured on page 6 of 18 is why
+  the later blue calls cost nothing.
+- **A TOY HAT IS AN ELIMINATION, NOT AN ABSENCE.** *Wishing Stone Island* has
+  one boy in a WHITE TOY SAILOR HAT with a blue toy telescope for the whole of
+  081 and 082, so his own cap is not in the drawing at all. The other two print
+  blue and green cleanly in the same frames, so he is Huey by elimination --
+  and 082 panel 6, where the hat finally comes off, shows him RED. Ten calls
+  came off that, with `cap_colour` null throughout because nothing was measured
+  on him.
+- **A `0 blob` PANEL CAN STILL BE A NAME.** *Tabu Yama* 013 g1 and 018 g5/g7
+  are boys with a genuine zero on the crown, named from the other two boys
+  printing in the SAME panel. Worth flagging that `identified_by` must NOT then
+  claim `cap-colour`: the apply refuses it when `cap_colour` is null, which it
+  did three times before this batch would validate. The evidence is the other
+  caps, so the list is `balloon-tail` alone.
+- **TWO COLOURIST ODDITIES, RECORDED AS PRINTED.** *Tabu Yama* 014 panel 2 puts
+  TWO of the three haulers in the same green (one wedge and two wedges, both
+  `#4fa456` H124.9) with the third in red -- so the tip there names nobody and
+  the group is a collective with `cap_colour` green. And 017 panel 4's speaker
+  says **LOUIE AND I** while wearing BLUE, with the only other boy in frame in
+  RED. Neither is reconciled; both are in the notes for the reviewer.
+- **THE EXPLAINING CHANGES HANDS MID-SCENE AND THE TAIL SAYS SO.** *Tabu Yama*
+  018: the Junior Woodchucks' Guide Book reader is Dewey, named outright at 017
+  g9/g10 and blue-capped through panels 1-4 -- and then panels 5 and 6 put the
+  same steam argument on a boy whose crown is blank and on one measured at RED
+  `#e8191f` 299px. Both tails were cropped at 5x rather than read at panel
+  scale, and they agree with each other. Recorded as drawn. **A thread is not a
+  tail**, and this is the case where following the thread would have been
+  wrong twice.
+- **A CAP ON THE GRASS IS STILL A CAP.** *Wishing Stone Island* 084 panel 5:
+  three boys sit in the rain, the left one bare-headed with a RED quartered cap
+  lying at his elbow (1853+1851px), the right one still wearing green, the
+  middle bare with nothing beside him. That placed two of them and left the
+  third by elimination. The roster's WHEREVER IT IS rule, paying out.
+- **`YESSIR, UNCA DONALD! YESSIR! YESSIR!` IS A REAL CHORUS.** *The Persistent
+  Postman* 115 g2 and 116 g13 are the same line, three times over, from three
+  identically saluting boys under one tail. So is *Wishing Stone Island* 087 g7,
+  where the single balloon carries THREE separate tails fanning to three
+  cleanly-capped boys. The roster's chorus case is about the tails, and these
+  are it -- against the stacked pairs on 084 panel 3 and 073 panel 2, which are
+  two tails and two speakers.
+- **AN ANIMAL'S NOISE IS DIALOGUE AND THAT IS WHERE THE TYPE WORK WAS.** 6 of
+  the 8 type corrections are this: *Postman* 117 g7/g11 (the eagle's SNIFF),
+  *Tabu Yama* 023 g12 (a lone `!` in a thought bubble over Scrooge, stored
+  sound_effect), *Rocket Race* 088 g6 (Donald's YOWCH!, a cry of pain) and 077
+  g5/g6 (the kookaburras' YEEK! and YAKK!). The corpus measurement holds: these
+  all go sound_effect -> dialogue and none went the other way.
+- **A DONALD-SOLO TITLE NAMES NO NEPHEW AT ALL.** *The Persistent Postman* has
+  144 groups and not one nephew name: the boys appear only from 115, always as
+  a trio, and every red in those panels is Donald's bow tie, the mail car or
+  Rockdust's shirt. 1.00 image per page, 0 groups queued at low confidence. A
+  title with no cap key and no per-boy line is cheap and should be budgeted so.
+- `other:` values written by the pass: `Dick the radio repairman`,
+  `the Tuku medicine man`, `the Tuku chief`, `a Tuku islander`, `the schooner
+  skipper`, `Professor Sliderule`, `Professor Missilebug`, `the airport
+  announcer`, `the television announcer`, `someone in the crowd`, `the
+  kookaburras`, `a French Legionnaire`, `Mr. Rockdust`, `Mr. Birdmind`, `Miss
+  Applecheeks Teengiggle`, `the giant eagle`, `the eaglets`, `a fisherman`, `a
+  rustic wife`, `Mrs. Delore`, `a helicopter salesman`. **One near-duplicate
+  pair to watch**: `the Tuku chief` against `a Tuku islander` -- the chief
+  carries a staff and a green headdress and gives the tribe's ruling, the
+  islanders throw the coconuts, so they are deliberately distinct.
+- Outstanding at close: 8 type corrections unconfirmed, and the missed text
+  below is unworked.
+
 ### Findings to paste into the next run (2026-09-18, sixty-seventh batch, ALL FIVE REVIEWED AND MIRRORED -- batch closed)
 
 ***The Mines of King Solomon*: 37 speaker corrections over 369 groups (10.0%), 27
@@ -7642,6 +7732,30 @@ percentages below are proposals, not corrections.
   the man who rents the burro).
 
 ## Per-volume cap palette
+
+Vol. 19, four titles read 2026-09-19 (sixty-eighth batch; none reviewed).
+48 pages, 99 images, **2.06 per page**; per title 3.33 / 1.90 / 1.00 / 1.00.
+
+**VOL. 19 USES BOTH OF ITS GREENS AND NOT IN THE SAME TITLE** -- carrying one
+title's green band into the next inside this volume reads every cap as absent.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Black Pearls of Tabu Yama* | **012 p1** -- all five swimming in one row, only heads and caps clear of the water | `#e7191f`-`#e61a1f` H358, 60-2299px; dim `#bc161b` 4px and `#d51a20` 15px at long-shot scale (007 p1, 015 p4) | **leafgrn `#4fa43e` H110-119**, 60-4536px; also `#52a765` H133 (008 p3), `#46a568` H142 (010 p3), `#4fa34d` H118.6 (the reference). **THE PALMS PRINT `#50943c` AT H106.5** -- the same band, six panels in ten, which is what made this title cost 3.33 images a page | `#00a4d7`-`#01a4d6` H194 -- **the same ink on Donald's sailor cap, Scrooge's hat band AND Dewey's cap**, 91px to 8536px. The reference panel has all three at once: 783 / 2796 / 916px. Size separates nothing | quartered black cap. At long-shot scale ALL the blues collapse to a desaturated teal -- `#40a486` H162 (007 p1), `#1b9fa0` H180.5 (009 p6) -- so a distant panel names nobody from colour. Donald wears a RED BOW TIE in every close panel and it is the reliable marker that separates him from a blue-capped boy. 011 p3 is flat monochrome blue, every figure filled with `#02a4d6` |
+| *Wishing Stone Island* | **084 p4** and **084 p7** -- the three in a row, red/blue/green cleanly | `#e61b1f`-`#e91927` H358, 120-1853px | **the H147 form, `#009e46`-`#019e48`**, 125-1100px; `#01a14f`-`#02a450` H149 on 090. **leafgrn is ZERO on nearly every panel of this title** | `#00a4d7`-`#04aad7` H193-194, 119-2459px | quartered black cap -- **except that one boy wears a WHITE TOY SAILOR HAT and carries a blue toy telescope through all of 081 and 082**, so his own cap is not in the drawing; the other two print cleanly in the same frames and 082 p6 shows him RED once the hat is off. 084 p5 has a red cap lying on the GRASS beside its bare-headed owner. 084 p6 and 085 p3 are silhouette or cropped so close that no cap exists to read |
+| *Rocket Race Around the World* | 073 p4, 074 p4, 080 p3 | `#e51b20`-`#e61b1f`, 153-1213px | `#009e49` H147.7, 154-646px | `#00a4d7`-`#05a6d7`, 134-2827px | quartered black cap, read cleanly in the cockpit close-ups and not at all in the long shots -- most of this title is the rocket at a distance with the crew only heads in a canopy. Cast is Donald, the boys, **Gyro Gearloose** (the DUCK in the yellow straw boater, named by his toolbox at 071 p4), **Professor Sliderule** (the bald bearded HUMAN, black coat and green trousers, top hat outdoors), **Professor Missilebug** (wild hair, orange trousers) and **Gladstone** (tan hat, blue jacket) |
+| *The Persistent Postman* | none usable | -- | -- | -- | **NO NEPHEW IS NAMED ANYWHERE IN THIS TITLE.** The boys appear only from 115, always as a trio, and every red in those panels is Donald's bow tie, the mail car or Rockdust's shirt rather than a crown. Donald works solo as a rural mailman; the cast is otherwise Mr. Rockdust, Mr. Birdmind, Miss Applecheeks Teengiggle and a family of giant eagles. 1.00 image per page |
+
+- **Donald's sailor cap is the roster blue in all four titles**, and so is
+  Scrooge's hat band in the two he appears in. His RED BOW TIE, 250-1500px of
+  the cap red at his neck, is what actually separates him from a blue-capped
+  boy in a close panel -- it is present in every close drawing of him across
+  the batch and absent from every nephew.
+- *Tabu Yama*'s palms and *Wishing Stone Island*'s sea are both in the green
+  bands and neither is a cap: `#50943c` H106.5 and `#329670` H157 respectively.
+  The banknotes on *Wishing Stone Island* 090 p7 print `#01a250` H149 -- the
+  cap-green hex exactly -- across the whole panel.
+
 
 Vol. 19 and Vol. 20, five titles read 2026-09-18 (sixty-seventh batch; **the Mines row is
 CORRECTED against its review**, the other four are not yet reviewed).
