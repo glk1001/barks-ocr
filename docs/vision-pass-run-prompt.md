@@ -7420,7 +7420,7 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
-### Findings to paste into the next run (2026-09-18, sixty-seventh batch, MINES AND TENDERFOOT REVIEWED AND MIRRORED)
+### Findings to paste into the next run (2026-09-18, sixty-seventh batch, ALL FIVE REVIEWED AND MIRRORED -- batch closed)
 
 ***The Mines of King Solomon*: 37 speaker corrections over 369 groups (10.0%), 27
 of them in the nephew domain (24.8%).** By the confidence the pass wrote: **high
@@ -7432,10 +7432,15 @@ at high because the title has no mediums; a further 4 are the added groups
 arriving as `unknown`. 4 of the 16 nephew-domain groups corrected (25.0%). Five
 type corrections, one of them a miss the pass never proposed.
 
-Both mirrored clean -- Mines 365 groups / 365 reviewed / 354 identified_by,
-Tenderfoot 125 / 124 / 110, with the speaker, cap_colour and confidence
-distributions equal on both engines in each. The three Vol. 20 one-pagers are
-not yet reviewed.
+**The three one-pagers: 2 speaker corrections between them over 153 groups**, both
+in *September Scrimmage* and both an adult role; *Gyro Builds a Better House* and
+*August Accident* came back at zero.
+
+**Batch totals: 643 groups, 50 speaker corrections (7.8%)** -- 41 of them real,
+the other 9 being added groups arriving as `unknown` -- **and 34 type corrections,
+every one confirmed.** 31 of the 137 nephew-domain groups corrected (22.6%). All
+five mirrored clean on group count, reviewed count, identified_by count and the
+speaker, cap_colour and confidence distributions.
 
 - **A NEPHEW'S CAP IN THIS TITLE PRINTS THOUSANDS OF PIXELS, AND I USED SIZE TO
   CALL IT DONALD'S. SIX TIMES.** `Donald -> the nephew domain` is 7 of the 37 and
@@ -7520,15 +7525,44 @@ not yet reviewed.
   `other:Donald and Scrooge`. Between this title and Mines, **8 of the batch's 48
   reviewed corrections are an adult role misread** -- as large a class as the
   nephew attribution swaps and much less looked at.
+- **THE TWO GYRO SOLO ONE-PAGERS CAME BACK AT ZERO SPEAKER CORRECTIONS AND 25 OF
+  25 TYPE CORRECTIONS CONFIRMED.** That is the sixty-fifth batch's "a Gyro solo
+  story is free accuracy" rule holding for a second batch -- but it is only free
+  on SPEAKERS. The balloon-drawing question cost 3.25 and 2.75 images per page,
+  the two most expensive titles in the batch, and every one of those images was
+  earned: all 25 thought/dialogue calls held. **Budget a Gyro one-pager as an
+  expensive title with a cheap cast, not as a cheap title.**
+- **SEPTEMBER SCRIMMAGE'S 8 NAMED NEPHEWS ALL HELD, WITH `cap_colour` NULL ON
+  EVERY ONE.** The title dresses all three boys in identical red football helmets,
+  so the names came from the dialogue (`ROUGH, DEWEY!`, the `LOUIE GRABS THE BALL`
+  caption) and from scene continuity, and the cap field was left empty rather than
+  filled in from the name. **A title with no cap key is not a title where nephews
+  cannot be named** -- it is one where the colour field stays null and the
+  dialogue does the work.
+- **ADULT ROLES ARE THE BATCH'S SECOND-LARGEST ERROR CLASS: 10 of the 50.** Both
+  of *September Scrimmage*'s corrections are one (037 g12 `Scrooge` ->
+  `other:a spectator`, 040 g8 `other:the referee` -> `other:Jocko`), and with
+  Mines' five and Tenderfoot's three that is a fifth of everything the reviews
+  moved. Every one is a figure I placed by role or by position rather than by the
+  drawing: an official in a striped shirt who is the gorilla, a man at a bar rail
+  who is the contest judge, a villager who is Scrooge answering. **Read the figure
+  the tail lands on before reading the role the line implies.**
+- **`other:` NEAR-DUPLICATE TO WATCH.** The corpus now carries both
+  `other:an old prospector` (1) and `other:old prospectors` (1) in
+  *The Tenderfoot Trap* -- the review split a huddle answering together off the
+  singular I had written. They are genuinely different groups, but the pair is
+  exactly the free-text drift the close-out is supposed to catch, so it is
+  recorded here rather than silently left.
 - **THE COLOURIST CLASH HELD.** After review the title still carries **8**
   name/colour disagreements -- Louie/red 5, Dewey/green 2, Huey/blue 1 -- so the
   convention-flagged reading was kept and the title was NOT remapped.
   `project_per_story_cap_palette` holds for a second batch running.
-- Outstanding at close: *Mines* is fully reviewed (365 of 365) and *Tenderfoot*
-  is 124 of 125 -- **061 g0, the story logo, is the one group never
-  speaker_reviewed on either engine**. **Mines 019's ungrouped foreign-language
-  symbols are still unworked**, the only missed-text finding of the batch not
-  resolved; *Tenderfoot*'s four were all added and its audit is clean.
+- Outstanding at close: four of the five titles are fully reviewed with no
+  stragglers; *Tenderfoot* is 124 of 125, **061 g0, the story logo, being the one
+  group never speaker_reviewed on either engine**. **Mines 019's ungrouped
+  foreign-language symbols are still unworked**, the only missed-text finding of
+  the batch not resolved; the other four were added and every title's audit is
+  clean.
 
 ### Findings to paste into the next run (2026-09-18, sixty-seventh batch, NONE REVIEWED)
 
