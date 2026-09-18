@@ -7420,21 +7420,29 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
-### Findings to paste into the next run (2026-09-18, sixty-seventh batch, MINES REVIEWED AND MIRRORED)
+### Findings to paste into the next run (2026-09-18, sixty-seventh batch, MINES AND TENDERFOOT REVIEWED AND MIRRORED)
 
-***The Mines of King Solomon*: 35 speaker corrections over 365 groups (9.5%), 26
-of them in the nephew domain (24.1%).** By the confidence the pass wrote: **high
-28 of 345 (8.1%), medium 5 of 15 (33.3%)** -- medium is the worse bet for the
+***The Mines of King Solomon*: 37 speaker corrections over 369 groups (10.0%), 27
+of them in the nephew domain (24.8%).** By the confidence the pass wrote: **high
+29 of 345 (8.4%), medium 5 of 15 (33.3%)** -- medium is the worse bet for the
 seventh batch running. All 4 type corrections and the 1 text correction confirmed.
-Mirrored clean: 365 groups, 360 reviewed, 354 identified_by and the speaker,
-cap_colour and confidence distributions equal on both engines. The other four
-titles of the batch are not yet reviewed.
+
+***The Tenderfoot Trap*: 7 real speaker corrections over 121 groups (5.8%)**, all
+at high because the title has no mediums; a further 4 are the added groups
+arriving as `unknown`. 4 of the 16 nephew-domain groups corrected (25.0%). Five
+type corrections, one of them a miss the pass never proposed.
+
+Both mirrored clean -- Mines 365 groups / 365 reviewed / 354 identified_by,
+Tenderfoot 125 / 124 / 110, with the speaker, cap_colour and confidence
+distributions equal on both engines in each. The three Vol. 20 one-pagers are
+not yet reviewed.
 
 - **A NEPHEW'S CAP IN THIS TITLE PRINTS THOUSANDS OF PIXELS, AND I USED SIZE TO
-  CALL IT DONALD'S. SIX TIMES.** `Donald -> the nephew domain` is 6 of the 35 and
+  CALL IT DONALD'S. SIX TIMES.** `Donald -> the nephew domain` is 7 of the 37 and
   every one of those notes says *"the duck in the blue sailor cap"* with a big
   number attached -- 014 g8 quotes **5686px of `#00a5d5`** and went to Louie; 016
-  g0 (also a large blue) went to Dewey; 025 g4 and 025 g9 went to Louie. The
+  g0 (also a large blue) went to Dewey; 025 g4, 025 g9 and 015 g16 went to Louie
+  and Dewey. The
   palette row I wrote at close of pass says a boy's band is 60-400px against
   Donald's 2,900-9,300px and **that is wrong** -- it was measured off the panels
   where Donald happened to be the only capped duck. **A blue blob of any size has
@@ -7480,15 +7488,47 @@ titles of the batch are not yet reviewed.
   -> `other:El Jackal`. On 030 g0 my note says *"both balloons in this panel carry
   tails down-right to the duck"* -- I traced two tails to one figure and gave him
   both lines instead of reading the first as the other man's.
+- **THE ONE I WROTE THE NAME INTO THE NOTE AND DECLINED ANYWAY.** *Tenderfoot*
+  070 g8: one clean tail, tip at panel x416, landing on the MIDDLE boy of three on
+  the fence. The note says so, says the middle boy is the blue-capped one in all
+  four readable panels of the title, and then writes `nephews` because the line is
+  `WE DON'T KNOW A THING!`. The review made it **Dewey/blue** -- exactly the name
+  the note had spelled out. **A plural pronoun is not a chorus; the TAIL COUNT is.
+  One tail is one speaker however many the words claim.** The roster's CASH THE
+  NOTE rule caught this and I argued myself out of it in the note itself.
+- **TWO CAPS PRINTING THE SAME COLOUR DOES NOT MAKE BOTH UNREADABLE.**
+  *Tenderfoot* 063 g1 was declined on `two boys printing the same colour name
+  neither` -- both rear boys showed blue specks, one 86px and one under the 25px
+  floor. The review named **Louie/green**, i.e. the boy's cap was readable and I
+  had lumped him in with his neighbour. Judge each cap on its own, which the
+  roster already says; the rule about two matching caps is about two caps that
+  actually match, not about one readable cap beside an unreadable one.
+- **A TIP INSIDE A HEAD SPAN CAN STILL BE THE WRONG HEAD IF THE SPAN IS WRONG.**
+  *Tenderfoot* 069 g4 went `Dewey`/blue -> **`Huey`/red**. The note quotes a tip
+  at panel x283 and the middle boy's head span as x242-361 -- the tip was real and
+  the span was one boy too wide. On a row of three, fix each head's span from the
+  drawing BEFORE measuring the tip, and quote both numbers.
+- **THE STORY LOGO IS `title`, NOT `background`, AND THE PASS LEFT IT ALONE.**
+  *Tenderfoot* 061 g0 came back `background -> title` -- a type correction the pass
+  never proposed. Gemini stores the logo either way across the corpus; check the
+  splash panel's logo group on every title.
+- **THREE ADULT ROLES AGAIN, AND ONE IS A COLLECTIVE.** *Tenderfoot* 062 g4
+  `other:an old prospector` -> **`other:old prospectors`** (a huddle answering
+  together -- an `other:` role can be plural, and the tail fanned into the group),
+  062 g7 `other:an old prospector` -> `other:the contest judge` (the man slumped
+  over the bar rail is the judge, not one of the crowd), and 070 g13 `Donald` ->
+  `other:Donald and Scrooge`. Between this title and Mines, **8 of the batch's 48
+  reviewed corrections are an adult role misread** -- as large a class as the
+  nephew attribution swaps and much less looked at.
 - **THE COLOURIST CLASH HELD.** After review the title still carries **8**
   name/colour disagreements -- Louie/red 5, Dewey/green 2, Huey/blue 1 -- so the
   convention-flagged reading was kept and the title was NOT remapped.
   `project_per_story_cap_palette` holds for a second batch running.
-- Outstanding at close: **5 groups never speaker_reviewed on either engine** --
-  014 g4, 015 g16, 016 g12, 024 g3, 029 g1 (`queue-straggler.txt`). Four of the
-  five sit immediately after an added group on their page, which is the renumber
-  the roster warns about; 029 g1 is a plain miss. **019's ungrouped
-  foreign-language symbols are still unworked.**
+- Outstanding at close: *Mines* is fully reviewed (365 of 365) and *Tenderfoot*
+  is 124 of 125 -- **061 g0, the story logo, is the one group never
+  speaker_reviewed on either engine**. **Mines 019's ungrouped foreign-language
+  symbols are still unworked**, the only missed-text finding of the batch not
+  resolved; *Tenderfoot*'s four were all added and its audit is clean.
 
 ### Findings to paste into the next run (2026-09-18, sixty-seventh batch, NONE REVIEWED)
 
@@ -7576,7 +7616,7 @@ CORRECTED against its review**, the other four are not yet reviewed).
 | title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
 |---|---|---|---|---|---|
 | *The Tenderfoot Trap* (19) | **061 p2** (three boys in the car, caps cleanly quartered red/blue/green) and **069 p5** (the same three in a row, larger) | `#e61b1f` H358.8 154-2554px; dim `#ad3416` H11.9 133px (070 p5), `#e21c20`/`#e31a20` slivers 41-475px (065 p8, 067 p5) | `#009e46` H146.6 851-2002px (061 p2, 065 p8, 069 p5); `#048a55`/`#028946` H151-156 slivers under 25px (068 p3) | `#01a4d6`-`#03a4d7` H194 -- **the SAME blue as Donald's sailor cap**, which prints 1,600-3,800px in most panels against a boy's 27-936px; `#00a2d0` H193.3 100px (068 p3) | a quartered black cap worn throughout; the coloured quarter turns away from the reader on several panels (063 p1 boys 2-3, 009-style) and then prints 0-86px. Donald's cap and Scrooge's hat band are both the roster blue |
-| *The Mines of King Solomon* (20) | **009 p6** (green, red and blue in a row), **011 p2** and **011 p8** | `#e41a20`-`#e61a20` H358 90-5377px; dim `#d81f20`/`#c6251d`/`#a52118` 130-250px; **Donald's BOW TIE is the same ink** ~600-1700px, and the red band is also full of brickwork at `#e9595c` S0.6 inside the temple | `#4da33f`-`#4ea240` **H111.6, the leafgrn band, not `green`**, 400-3724px; shaded `#61a361` H120 S0.40 (024 p1); `#55a04e` S0.51 (016 p7) | `#00a5d5`-`#02a4d4` H193.5 -- the same ink on Donald's cap, Scrooge's hat band AND a nephew's. **SIZE DOES NOT SEPARATE THEM AND THIS ROW SAID IT DID: the review turned six of my `the duck in the blue sailor cap` calls into nephews, including 014 g8 on 5686px and 016 g0.** A nephew's band runs 60px to at least 5,700px here. Put the blob on a head and read the head. Teal `#1fa399` H175.5 S0.81 ranked blue against a clean green and red in the same panel (011 p2) -- that one held | a thin rim or side patch on a black cap, 60-400px when it prints at all. **COLOURIST CLASH: the dialogue names the RED-capped boy LOUIE four times (026 g8, 027 g5, 028 p5 caption, 031 g16) and a GREEN-capped boy DEWEY once (009 g2).** Read convention-flagged. Long stretches are unreadable by construction -- silhouette panels (010 p4, 011 p4, 014 p4/p6, 025 p4, 026 p4, 029 p5, 031 p6), flat-blue monochrome (023 p1, 032 p4, 033 p1), torch-lit tunnels, and one panel that is three pairs of eyes on black (028 p7, 031 p5) |
+| *The Mines of King Solomon* (20) | **009 p6** (green, red and blue in a row), **011 p2** and **011 p8** | `#e41a20`-`#e61a20` H358 90-5377px; dim `#d81f20`/`#c6251d`/`#a52118` 130-250px; **Donald's BOW TIE is the same ink** ~600-1700px, and the red band is also full of brickwork at `#e9595c` S0.6 inside the temple | `#4da33f`-`#4ea240` **H111.6, the leafgrn band, not `green`**, 400-3724px; shaded `#61a361` H120 S0.40 (024 p1); `#55a04e` S0.51 (016 p7) | `#00a5d5`-`#02a4d4` H193.5 -- the same ink on Donald's cap, Scrooge's hat band AND a nephew's. **SIZE DOES NOT SEPARATE THEM AND THIS ROW SAID IT DID: the review turned seven of my `the duck in the blue sailor cap` calls into nephews, including 014 g8 on 5686px and 016 g0.** A nephew's band runs 60px to at least 5,700px here. Put the blob on a head and read the head. Teal `#1fa399` H175.5 S0.81 ranked blue against a clean green and red in the same panel (011 p2) -- that one held | a thin rim or side patch on a black cap, 60-400px when it prints at all. **COLOURIST CLASH: the dialogue names the RED-capped boy LOUIE four times (026 g8, 027 g5, 028 p5 caption, 031 g16) and a GREEN-capped boy DEWEY once (009 g2).** Read convention-flagged. Long stretches are unreadable by construction -- silhouette panels (010 p4, 011 p4, 014 p4/p6, 025 p4, 026 p4, 029 p5, 031 p6), flat-blue monochrome (023 p1, 032 p4, 033 p1), torch-lit tunnels, and one panel that is three pairs of eyes on black (028 p7, 031 p5) |
 | *September Scrimmage* (20) | none usable | -- | -- | -- | the boys play for the Duckburg Quackers in **identical red football helmets** (`#e41a20`, the cap red) with black jerseys; the Dogdale Barkers wear green (`#009e49`). No cap key at all, and the census red on 037-040 is mostly helmets and Donald's bow tie. Two boys are named from dialogue instead: 037 g5 `ROUGH, DEWEY!` pins the bandaged boy in the stands, and the 037 p8 caption names Louie |
 | *Gyro Builds a Better House*, *August Accident* (20) | none -- no nephews | -- | -- | -- | Gyro solo stories with his Helper, a black mouse, a pig customer and his wife, a neighbour and a cabbage farmer. No cap key. **Every Gyro-alone balloon is a thought cloud with a bubble trail**, which is where 25 of the batch's 29 type corrections come from |
 
