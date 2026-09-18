@@ -91,6 +91,7 @@ ndimage
 neighbour
 neighbours
 normalise
+normalised
 norp
 numpad
 ocrc
@@ -138,6 +139,7 @@ visstat
 vscodium
 whof
 whoi
+worktree
 xlat
 Yehooty
 ylat

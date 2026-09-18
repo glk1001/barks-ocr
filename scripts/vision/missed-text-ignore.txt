@@ -435,3 +435,22 @@ HELP KEEP AMERICA STRONG
 # A drawn device with no letters, and the page's capture records it as prose
 # because nothing has boxed it -- which is the state the audit reports on.
 18 172 two music notes
+
+# Judged not worth a group by the reviewer, 2026-09-19: The Persistent Postman
+# records seven DRAWN DEVICES in its pages' visible_text. Donald sings his
+# mailman's round through the first two pages and each song balloon carries
+# music notes inside it; the fight with the giant eagle throws red impact stars
+# round the bird's head and round the rotor. A device with no letters, recorded
+# so the audit can see it and then suppressed here -- the same case as the
+# Watching the Watchman, Wired and Code of Duckburg 172 entries above.
+# The entries are the descriptions as written into visible_text, matched exactly.
+#
+# NOT ignored, and still outstanding: 111's "313", the licence plate on the mail
+# car. That is real lettering and is waiting in the title's queue-missed.txt.
+19 111 a music note drawn inside Donald's song balloon in panel 1
+19 111 a music note drawn inside Donald's song balloon in panel 2
+19 111 a music note and a pair of music notes drawn inside Donald's song balloon in panel 4
+19 111 a music note drawn inside Donald's song balloon in panel 5
+19 112 a music note drawn inside Donald's song balloon in panel 7
+19 118 red stars drawn round the eagle's head in panels 5 and 7
+19 120 red stars drawn round the rotor in panels 3 and 4

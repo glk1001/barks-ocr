@@ -7420,12 +7420,54 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
-### Findings to paste into the next run (2026-09-19, sixty-eighth batch, NONE REVIEWED)
+### Findings to paste into the next run (2026-09-19, sixty-eighth batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
-**591 groups over 48 pages, 4 titles, all Vol. 19.** 99 images, **2.06 per page**;
-per title 3.33 / 1.90 / 1.00 / 1.00. **8 type corrections and no text
-corrections.** 11 missed-text findings on two titles. Nothing is reviewed yet,
-so every number below is the pass's own and the correction rates are unknown.
+**597 groups over 48 pages, 4 titles, all Vol. 19.** 99 images, **2.06 per
+page**; per title 3.33 / 1.90 / 1.00 / 1.00. **48 speaker corrections (8.1%)**,
+38 of them in the nephew domain. By the confidence the pass wrote: **high 16 of
+492 (3.3%), medium 29 of 99 (29.3%)** -- medium is the worse bet for the EIGHTH
+batch running, and on *The Persistent Postman* it was 5 of 6. All 8 type
+corrections confirmed, plus 3 the pass never proposed; no text corrections. The
+review ADDED five groups. By title: *Tabu Yama* 14/172, *Wishing Stone Island*
+11/129, *Rocket Race* 14/149, *The Persistent Postman* 9/146.
+
+- **I WROTE A TITLE-WIDE ABSENCE AND IT WAS WRONG SEVEN TIMES OUT OF SEVEN.**
+  Every one of *The Persistent Postman*'s corrections is `nephews -> a name`
+  with a cap colour the reviewer read off the art -- 116 g10/g15/g16, 119 g7/g9,
+  120 g13/g14, three reds, three blues and a green. The pass's capture says in
+  as many words that **no nephew is named anywhere in this title** and that
+  "every red in those panels is Donald's bow tie, the mail car or Rockdust's
+  shirt". That sentence went into the notes of every boy on the page and was
+  false in all of them. This is the roster's A CAP FACT IS A PER-PANEL FACT
+  rule, broken in the most expensive way available: **never write a title-wide
+  cap claim into a capture.** It cost seven names and it is the single largest
+  finding of the batch.
+- **UNDER-NAMING IS THE LARGEST CLASS FOR THE THIRD BATCH RUNNING: 19 of 48.**
+  Postman's seven, *Rocket Race* six (073 g4/g5, 075 g11, 076 g13, 079 g3/g4 --
+  all "capscan finds NO cap ink on any of the three" written against boys the
+  reviewer could see), *Tabu Yama* five, *Wishing Stone Island* one. The scan
+  was right every time and the conclusion was wrong every time, which is now
+  confirmed across four consecutive batches. Quote the zero, then name him
+  anyway if the tail is unambiguous.
+- **A PLAIN CAPTION BOX CAN BE DIALOGUE, AND I READ TWO AS NARRATION.**
+  *Rocket Race* 072 g0 and g4 are square boxes across the top of the panel with
+  no tail, and the pass called both `narrator` with the type left alone. The
+  review made both **`other:Professor Sliderule` speaking**, and corrected the
+  type `narration -> dialogue` on each -- two of the three type corrections the
+  pass never proposed. The workshop conversation runs straight through them.
+  **A box with no tail is not automatically the author's voice**; check whether
+  the panel's dialogue continues into it.
+- **I SWAPPED A CROWD VOICE AND AN ANNOUNCER.** *Rocket Race* 073 g11 went
+  `other:someone in the crowd` -> **Donald** and 073 g13 went Donald ->
+  `other:the announcer`, in the same two panels. The pass gave the jagged
+  loudspeaker balloon to the public-address voice and the plain one to the
+  crowd, and had them the wrong way round. Trace which balloon carries the
+  jagged edge before assigning either.
+- **THE PASS'S OWN MEDIUMS WERE RIGHT ABOUT WHAT WAS UNCERTAIN.** 29 of 99
+  mediums corrected against 16 of 492 highs -- a 9x gap, the widest recorded.
+  Nine of the 13 medium corrections on *Tabu Yama* carry a note that already
+  names the alternative the review took. CASH THE NOTE remains the cheapest
+  rule in the roster and the pass is still not obeying it.
 
 - **A TITLE WHERE THE CAP GREEN AND THE FOLIAGE SHARE A BAND COSTS DOUBLE.**
   *Tabu Yama* ran 3.33 images per page against 1.00 for the two titles after
@@ -7460,12 +7502,20 @@ so every number below is the pass's own and the correction rates are unknown.
   claim `cap-colour`: the apply refuses it when `cap_colour` is null, which it
   did three times before this batch would validate. The evidence is the other
   caps, so the list is `balloon-tail` alone.
-- **TWO COLOURIST ODDITIES, RECORDED AS PRINTED.** *Tabu Yama* 014 panel 2 puts
+- **BOTH COLOURIST ODDITIES WERE READ THE OTHER WAY.** *Tabu Yama* 008 g3
+  went Huey/red -> **Louie/green** and 024 g5 Dewey/blue -> **Louie/green**, so
+  the two-green panel and the LOUIE AND I panel were both the pass mis-placing
+  a tail rather than the colourist slipping. Recorded here because the pass
+  reported them as printing oddities when they were reading errors.
+- **THE ORIGINAL NOTE ON THE TWO ODDITIES, KEPT FOR THE RECORD.** *Tabu Yama* 014 panel 2 puts
   TWO of the three haulers in the same green (one wedge and two wedges, both
   `#4fa456` H124.9) with the third in red -- so the tip there names nobody and
   the group is a collective with `cap_colour` green. And 017 panel 4's speaker
   says **LOUIE AND I** while wearing BLUE, with the only other boy in frame in
   RED. Neither is reconciled; both are in the notes for the reviewer.
+- **THE HANDS-CHANGING READING HELD.** *Tabu Yama* 018 g5 and g7 were not
+  corrected, so following the two cropped tails against the Guide-Book thread
+  was right. The original note:
 - **THE EXPLAINING CHANGES HANDS MID-SCENE AND THE TAIL SAYS SO.** *Tabu Yama*
   018: the Junior Woodchucks' Guide Book reader is Dewey, named outright at 017
   g9/g10 and blue-capped through panels 1-4 -- and then panels 5 and 6 put the
@@ -7497,6 +7547,21 @@ so every number below is the pass's own and the correction rates are unknown.
   a trio, and every red in those panels is Donald's bow tie, the mail car or
   Rockdust's shirt. 1.00 image per page, 0 groups queued at low confidence. A
   title with no cap key and no per-boy line is cheap and should be budgeted so.
+- **FOUR `other:` NEAR-DUPLICATE PAIRS OPENED AND WERE CLOSED BY HAND.** The
+  review wrote `other:the announcer`, `other:the radio repairman` and
+  `other:a Tuku Tiva villager` where the pass had already used a longer or
+  shorter spelling for the same person, and the added `?` group arrived as
+  `other:the Tuku Tiva medicine man` against the pass's `other:the Tuku medicine
+  man`. Eight records were normalised to the spelling already used most in the
+  same title. **Free-text names get no closed-set check** and four pairs in one
+  batch is the most yet -- list them at close-out every time.
+- **THE REVIEW ADDED FIVE GROUPS, FOUR OF THEM DRAWN DEVICES THE PASS HAD ONLY
+  DESCRIBED.** The lone `!` on *Wishing Stone Island* 085, the lone `?` on 086,
+  the row of `$` signs round Donald's head on 089, `SPUT` on *Postman* 118 and
+  the `313` licence plate on 111. The `$` row is the sixty-seventh batch's
+  finding repeated verbatim -- **a `$` row is lettering** -- and the pass put it
+  in `objects` again. The devices the reviewer judged not worth a group (music
+  notes, red impact stars) are now in `missed-text-ignore.txt`.
 - `other:` values written by the pass: `Dick the radio repairman`,
   `the Tuku medicine man`, `the Tuku chief`, `a Tuku islander`, `the schooner
   skipper`, `Professor Sliderule`, `Professor Missilebug`, `the airport
@@ -7507,8 +7572,24 @@ so every number below is the pass's own and the correction rates are unknown.
   pair to watch**: `the Tuku chief` against `a Tuku islander` -- the chief
   carries a staff and a green headdress and gives the tribe's ruling, the
   islanders throw the coconuts, so they are deliberately distinct.
-- Outstanding at close: 8 type corrections unconfirmed, and the missed text
-  below is unworked.
+- **A STRAGGLER HID BEHIND THE QUEUE TOOL AND THEN BEHIND A SECOND CHECKOUT.**
+  *Wishing Stone Island* 085 g16 was unreviewed on BOTH engines and the
+  speaker-queue tool reported only the easyocr half -- it writes one entry per
+  group, so the second engine is invisible in it. **Check the reviewed COUNT per
+  engine, not the queue's length.** The first attempt to clear it then landed in
+  the `Prelim-wt` worktree, which sits on a branch predating the batch: that
+  copy of 085 has 16 groups and no g16 at all, so the id pointed at a different
+  group and the edit went to g0. Group ids move under you, and a second checkout
+  on an older branch moves them further -- **confirm the group by its TEXT
+  before signing it off, and confirm which checkout you are in.**
+- **Outstanding at close: nothing.** 085 g16 was signed off with the pass's
+  Huey/red kept (`speaker_was` null, so a confirmation not a correction), which
+  closes the batch. Everything else is clean:
+  nothing outstanding in corrections across all 460 titles, every missed-text
+  audit at zero in all three classes, and all four titles matching on group
+  count, reviewed count, identified_by count and the speaker, cap_colour and
+  confidence distributions. The mirror wrote 0 pages -- the review was done on
+  both engines, so they never diverged.
 
 ### Findings to paste into the next run (2026-09-18, sixty-seventh batch, ALL FIVE REVIEWED AND MIRRORED -- batch closed)
 
@@ -7733,8 +7814,14 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 19, four titles read 2026-09-19 (sixty-eighth batch; none reviewed).
-48 pages, 99 images, **2.06 per page**; per title 3.33 / 1.90 / 1.00 / 1.00.
+Vol. 19, four titles read 2026-09-19 (sixty-eighth batch; **ALL FOUR REVIEWED**,
+so the rows below are corrected against the review). 48 pages, 99 images,
+**2.06 per page**; per title 3.33 / 1.90 / 1.00 / 1.00.
+
+**THE PERSISTENT POSTMAN ROW IS CORRECTED AND WAS THE BATCH'S WORST CLAIM:**
+the pass wrote that no nephew is nameable anywhere in the title and the review
+named seven, in red, blue and green. A title with no usable REFERENCE panel is
+not a title with no cap key.
 
 **VOL. 19 USES BOTH OF ITS GREENS AND NOT IN THE SAME TITLE** -- carrying one
 title's green band into the next inside this volume reads every cap as absent.
@@ -7744,7 +7831,7 @@ title's green band into the next inside this volume reads every cap as absent.
 | *The Black Pearls of Tabu Yama* | **012 p1** -- all five swimming in one row, only heads and caps clear of the water | `#e7191f`-`#e61a1f` H358, 60-2299px; dim `#bc161b` 4px and `#d51a20` 15px at long-shot scale (007 p1, 015 p4) | **leafgrn `#4fa43e` H110-119**, 60-4536px; also `#52a765` H133 (008 p3), `#46a568` H142 (010 p3), `#4fa34d` H118.6 (the reference). **THE PALMS PRINT `#50943c` AT H106.5** -- the same band, six panels in ten, which is what made this title cost 3.33 images a page | `#00a4d7`-`#01a4d6` H194 -- **the same ink on Donald's sailor cap, Scrooge's hat band AND Dewey's cap**, 91px to 8536px. The reference panel has all three at once: 783 / 2796 / 916px. Size separates nothing | quartered black cap. At long-shot scale ALL the blues collapse to a desaturated teal -- `#40a486` H162 (007 p1), `#1b9fa0` H180.5 (009 p6) -- so a distant panel names nobody from colour. Donald wears a RED BOW TIE in every close panel and it is the reliable marker that separates him from a blue-capped boy. 011 p3 is flat monochrome blue, every figure filled with `#02a4d6` |
 | *Wishing Stone Island* | **084 p4** and **084 p7** -- the three in a row, red/blue/green cleanly | `#e61b1f`-`#e91927` H358, 120-1853px | **the H147 form, `#009e46`-`#019e48`**, 125-1100px; `#01a14f`-`#02a450` H149 on 090. **leafgrn is ZERO on nearly every panel of this title** | `#00a4d7`-`#04aad7` H193-194, 119-2459px | quartered black cap -- **except that one boy wears a WHITE TOY SAILOR HAT and carries a blue toy telescope through all of 081 and 082**, so his own cap is not in the drawing; the other two print cleanly in the same frames and 082 p6 shows him RED once the hat is off. 084 p5 has a red cap lying on the GRASS beside its bare-headed owner. 084 p6 and 085 p3 are silhouette or cropped so close that no cap exists to read |
 | *Rocket Race Around the World* | 073 p4, 074 p4, 080 p3 | `#e51b20`-`#e61b1f`, 153-1213px | `#009e49` H147.7, 154-646px | `#00a4d7`-`#05a6d7`, 134-2827px | quartered black cap, read cleanly in the cockpit close-ups and not at all in the long shots -- most of this title is the rocket at a distance with the crew only heads in a canopy. Cast is Donald, the boys, **Gyro Gearloose** (the DUCK in the yellow straw boater, named by his toolbox at 071 p4), **Professor Sliderule** (the bald bearded HUMAN, black coat and green trousers, top hat outdoors), **Professor Missilebug** (wild hair, orange trousers) and **Gladstone** (tan hat, blue jacket) |
-| *The Persistent Postman* | none usable | -- | -- | -- | **NO NEPHEW IS NAMED ANYWHERE IN THIS TITLE.** The boys appear only from 115, always as a trio, and every red in those panels is Donald's bow tie, the mail car or Rockdust's shirt rather than a crown. Donald works solo as a rural mailman; the cast is otherwise Mr. Rockdust, Mr. Birdmind, Miss Applecheeks Teengiggle and a family of giant eagles. 1.00 image per page |
+| *The Persistent Postman* | **no single clean row, but the caps ARE readable panel by panel** -- 116 p6, 119 p6 and 120 p7 each name a boy | read by the review on 116 g10/g16, 119 g9, 120 g13 | read on 120 g14 | read on 116 g15, 119 g7, 120 g13 | **THE PASS'S CLAIM THAT NO NEPHEW IS NAMEABLE HERE IS WRONG -- seven were named at review.** The boys appear only from 115 and always as a trio, and Donald's bow tie, the mail car and Rockdust's shirt do fill the red band, which is what the pass mistook for an absence. Donald works solo as a rural mailman; the cast is otherwise Mr. Rockdust, Mr. Birdmind, Miss Applecheeks Teengiggle and a family of giant eagles. 1.00 image per page |
 
 - **Donald's sailor cap is the roster blue in all four titles**, and so is
   Scrooge's hat band in the two he appears in. His RED BOW TIE, 250-1500px of
