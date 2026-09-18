@@ -7341,15 +7341,17 @@ every single one held.** 45 images, 1.55 per page.
   `REGGIE SLAMMED THE DOOR BEHIND HIM AND IT LOCKED!` is a guest's line, not the
   author's. **A boxed line in the past tense is not automatically narration.**
 
-### Findings to paste into the next run (2026-09-18, sixty-sixth batch, THREE OF FOUR REVIEWED)
+### Findings to paste into the next run (2026-09-18, sixty-sixth batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
-**976 groups over 46 reviewed pages, 67 speaker corrections.** By title:
+**1,122 groups over 56 pages, 74 speaker corrections (6.6%).** By title:
 *Special Delivery* 18/148 (12.2%), *The Code of Duckburg* 14/144 (9.7%),
-*Forbidden Valley* 35/342 (10.2%). *Sagmore Springs Hotel* is still being
-reviewed. By the confidence the pass wrote: **high 60 of 601 (10.0%), medium 7
-of 33 (21.2%)** -- and unlike every batch before it, **the errors are
+*Forbidden Valley* 35/342 (10.2%), *Sagmore Springs Hotel* 7/146 (4.8%, plus 4
+`unknown -> none` on groups the review itself added). By the confidence the
+pass wrote: **high 68 of 743 (9.2%), medium 7 of 33 (21.2%)** -- and unlike every batch before it, **the errors are
 overwhelmingly at HIGH confidence**, because they are not cap calls at all.
-All 20 type proposals confirmed; the one text correction confirmed.
+All 23 type proposals confirmed; the one text correction confirmed. All four
+mirrored clean: group, reviewed and identified_by counts and the speaker /
+cap_colour / confidence distributions equal on both engines.
 
 - **WHEN EVERY DUCK WEARS THE SAME HAT, SIZE AND BEAK DO NOT SEPARATE DONALD
   FROM A NEPHEW. THE SHIRT DOES.** *Forbidden Valley* puts all four in brown
@@ -7365,8 +7367,9 @@ All 20 type proposals confirmed; the one text correction confirmed.
   montage will not show a collar stripe, so a panel with two ducks and two
   balloons needs the 0.55-0.62x view the ladder already allows.
 - **A PANEL WITH NO CAP INK IS STILL A PANEL WHERE THE REVIEWER NAMES BOYS.**
-  Under-naming was 15 of 18 in *Special Delivery* and 11 of 14 in *The Code of
-  Duckburg*, and nearly every one of those notes is a correct absence claim --
+  Under-naming was 15 of 18 in *Special Delivery*, 11 of 14 in *The Code of
+  Duckburg* and 5 of 7 in *Sagmore Springs Hotel*, and nearly every one of those
+  notes is a correct absence claim --
   `green 0 / blue 0 / leafgrn 0 blobs total`, `crowns.py lists no head with
   ink`, silhouettes, boys drawn as specks on a clothes line. The scan was
   right and the CONCLUSION was wrong: the review named them anyway, from the
@@ -7401,12 +7404,21 @@ All 20 type proposals confirmed; the one text correction confirmed.
   places: a character's cry or an animal's roar stored as `sound_effect` (OW,
   OWOOCH, YEEK, WAK, RAWR, SNORT, ROAR), and a caption box stored as
   `dialogue` or `background` (`So-`, `Top Floor!`, `SOON!`, the story logo).
-- Outstanding after the review: *The Code of Duckburg* 168 g0 (the story logo)
-  was never signed off on either engine -- one queue line, `queue-straggler.txt`
-  -- and the missed-text findings are unworked: CoD 172's two music notes (a
-  real add) and *Forbidden Valley*'s four (025 HISS!/SNARL! and 030
-  SSFZT!/SNORT!, all four lettered INSIDE an existing group and recommended
-  for `missed-text-ignore.txt`).
+- **THE PAGE CAPTURE IS THE AUDIT'S ONLY EYES, AND IT MISSED FOUR SIGNS.** The
+  *Sagmore* review ADDED four background groups the pass had never seen -- 052
+  `FOR SALE` and `MAP`, 055 `BANK of DUCKBURG`, 060 `HOTEL` -- and the
+  missed-text audit was silent on every one, because none of them was in any
+  page's `visible_text`. The audit cannot find what the capture never wrote
+  down: sweep the EDGES of each panel and every prop carrying letters, not just
+  the obvious shop fronts. The adds were otherwise clean -- background/none, no
+  Copy In residue -- but 060's landed at g4 and renumbered the page, which is
+  why a stored result.json is only good until the first add.
+- Outstanding at close: *Sagmore* 055 g11 and 060 g16 are unreviewed on both
+  engines (both Donald, high, unchanged) -- `queue-straggler.txt`, two lines.
+  The missed-text findings are unworked: CoD 172's two music notes (a real add)
+  and *Forbidden Valley*'s four (025 HISS!/SNARL! and 030 SSFZT!/SNORT!, all
+  four lettered INSIDE an existing group and recommended for
+  `missed-text-ignore.txt`).
 
 ## Per-volume cap palette
 
