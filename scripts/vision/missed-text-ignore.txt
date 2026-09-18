@@ -429,3 +429,9 @@ HELP KEEP AMERICA STRONG
 19 025 SNARL!
 19 030 SSFZT!
 19 030 SNORT!
+
+# Judged not worth a group by the reviewer, 2026-09-18: the two music notes
+# drawn beside Donald as he walks off humming (The Code of Duckburg 172 p1).
+# A drawn device with no letters, and the page's capture records it as prose
+# because nothing has boxed it -- which is the state the audit reports on.
+18 172 two music notes
