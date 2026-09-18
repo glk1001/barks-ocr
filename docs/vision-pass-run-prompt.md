@@ -7420,7 +7420,104 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-18, sixty-seventh batch, NONE REVIEWED)
+
+**634 groups over 49 pages, 5 titles.** 88 images, **1.80 per page**; per title
+1.80 / 1.41 / 3.25 / 2.75 / 2.00. 29 type corrections and 1 text correction
+proposed; 4 missed-text findings covering 5 groups to add. Nephew calls: 25
+named (23 high, 2 medium), 34 collective. Written by the pass, so the
+percentages below are proposals, not corrections.
+
+- **A COLOURIST CLASH CAN BE PINNED BY THE DIALOGUE FOUR TIMES AND STILL BE
+  HANDLED AS CONVENTION-FLAGGED.** *The Mines of King Solomon* names a
+  RED-capped boy LOUIE four independent times -- Scrooge addresses him at 026 g8
+  and 027 g5, the 028 p5 caption names him, and 031 g16 greets him by name as he
+  steps out of the tunnel drawn in colour with a red cap -- and the ink is clean
+  roster red every time (976px `#e31a20` on 026 p6, 754px on 026 p8, 316px on
+  027 p3, 1470px `#e51a1f` on 027 p5). Separately Donald calls a GREEN-capped boy
+  DEWEY on 009 g2, on 2588px of `#4da33f`. Read on the sixty-sixth batch's
+  standing instruction: name from the dialogue inside its own scene, name by
+  convention everywhere else, record the printed ink, flag it on the group.
+  **This is a stronger clash than *Forbidden Valley*'s and the reviewer may want
+  to remap the title; if so, it is one line -- red is Louie, green is Dewey, blue
+  is Huey by elimination.**
+- **A GYRO SOLO STORY IS FREE ACCURACY ON SPEAKERS AND EXPENSIVE ON TYPE.** The
+  sixty-fifth batch's rule held for speakers -- 0 nephew calls, no ambiguity --
+  but the two one-pagers cost 3.25 and 2.75 images per page, the most in the
+  batch, and produced 25 of its 29 type corrections. The reason is one drawing
+  habit: **every Gyro-alone balloon in both titles is a thought cloud with a
+  trail of separate bubbles, and Gemini stored a third of them as `dialogue`.**
+  The trail is 2-3 circles about 15px across and does not survive page scale, so
+  each one needs a 2x crop of the balloon's lower edge. Stack them: two stacks of
+  4-5 crops settled ten balloons at a time. Do not take the first panel as the
+  title's answer -- *August Accident* 173 p5 has a real POINTED tail on the
+  countdown shout in the middle of six thought clouds.
+- **WHEN THE STORY PUTS EVERY BOY IN THE SAME HELMET, THE CENSUS RED IS DONALD'S
+  BOW TIE.** *September Scrimmage* dresses all the Quackers in identical red
+  football helmets, so `title_bands` reports red on almost every panel and none
+  of it names anybody. Three separate panels' largest red blobs (037 p8 1354px,
+  065-style pairs at 008 p5/p7/p8) are Donald's bow tie, which prints the SAME
+  `#e41a20` as a nephew's cap band and sits ~100px below the crown. Place every
+  red blob against the head box before reading it as a cap; cap_colour stayed
+  null for the whole title.
+- **DONALD'S SAILOR CAP IS THE ROSTER BLUE IN BOTH VOLUMES AND IT IS THE LARGEST
+  BLUE BLOB IN NEARLY EVERY PANEL.** Vol. 19 `#03a4d7`, Vol. 20 `#00a5d5` --
+  identical to Dewey's. Scrooge's top-hat band is the same blue again. In *The
+  Mines of King Solomon* the two of them account for 2,000-9,000px of blue in
+  panel after panel while a boy's band is 60-400px, so a blue count alone is
+  worthless; the discriminator is size and position, not hue.
+- **THE COUNTED-INSTANCE CLASS OF MISSED TEXT IS WORTH THE TRANSCRIPTION EFFORT.**
+  Listing the OATS sack once per panel in `visible_text` -- six times on
+  *Tenderfoot Trap* 066, three on 067 -- is what made the audit report `6 in the
+  art, 5 grouped` and `3 in the art, 1 grouped`. Written once per page it would
+  have read as fully covered. The 313 licence plate on 061 p1 is the same class
+  as Kakimaw 112 and In Old California! 139: a plate on Donald's car, never
+  grouped by either engine, and it only reaches the audit because the capture
+  wrote it down.
+- **A SCAN THAT REPORTS EVERY BAND AT ZERO IS SOMETIMES JUST TRUE.**
+  *Tenderfoot Trap* 015-style panels aside, seven of this batch's collectives
+  rest on a whole-panel `red 0 / green 0 / blue 0 / leafgrn 0 blob(s) total` --
+  061 p1's car interior, 013 p7's aircraft cabin, 015 p7, 022 p3, 023 p7. Where
+  that happens the boys are lit by a torch or a cave and nothing chromatic
+  survives at all; the tail is then the only evidence and it was usually enough
+  to say `nephews` and no more.
+- **EMPHASIS BY SLANT WITH NO WEIGHT STEP IS STILL EMPHASIS, AND IT TAKES [b].**
+  Three groups this batch are set with a slanted run inside upright lettering and
+  measure 0.94-1.02x on the distance transform: *Mines* 011 g14 and 012 g4
+  (`CHUG-GLUK`), 016 g10 and 024 g0 (a whole quoted inscription). `[i]` is
+  refused for a partial run at apply time -- it cost one validation round-trip on
+  031 g11 -- so mark the slanted run `[b]` and say in the note that it is slant,
+  not stroke.
+- `other:` values written by the pass: `the customer`, `the customer's wife`,
+  `Gyro's Helper`, `the mouse`, `the next-door neighbor`, `the cabbage farmer`,
+  `the referee`, `Jocko`, `a spectator`, `the contest judge`, `an old
+  prospector`, `a prospector`, `the wild burros`, `the burro`, `a clerk`, `the
+  glassworks manager`, `a villager`, `the cannery foreman`, `the chauffeur`, `El
+  Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
+  two prospector values are deliberately distinct (the Pizen Valley crowd against
+  the man who rents the burro).
+
 ## Per-volume cap palette
+
+Vol. 19 and Vol. 20, five titles read 2026-09-18 (sixty-seventh batch; none reviewed).
+49 pages, 88 images, **1.80 per page**; per title 1.80 / 1.41 / 3.25 / 2.75 / 2.00.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Tenderfoot Trap* (19) | **061 p2** (three boys in the car, caps cleanly quartered red/blue/green) and **069 p5** (the same three in a row, larger) | `#e61b1f` H358.8 154-2554px; dim `#ad3416` H11.9 133px (070 p5), `#e21c20`/`#e31a20` slivers 41-475px (065 p8, 067 p5) | `#009e46` H146.6 851-2002px (061 p2, 065 p8, 069 p5); `#048a55`/`#028946` H151-156 slivers under 25px (068 p3) | `#01a4d6`-`#03a4d7` H194 -- **the SAME blue as Donald's sailor cap**, which prints 1,600-3,800px in most panels against a boy's 27-936px; `#00a2d0` H193.3 100px (068 p3) | a quartered black cap worn throughout; the coloured quarter turns away from the reader on several panels (063 p1 boys 2-3, 009-style) and then prints 0-86px. Donald's cap and Scrooge's hat band are both the roster blue |
+| *The Mines of King Solomon* (20) | **009 p6** (green, red and blue in a row), **011 p2** and **011 p8** | `#e41a20`-`#e61a20` H358 90-5377px; dim `#d81f20`/`#c6251d`/`#a52118` 130-250px; **Donald's BOW TIE is the same ink** ~600-1700px, and the red band is also full of brickwork at `#e9595c` S0.6 inside the temple | `#4da33f`-`#4ea240` **H111.6, the leafgrn band, not `green`**, 400-3724px; shaded `#61a361` H120 S0.40 (024 p1); `#55a04e` S0.51 (016 p7) | `#00a5d5`-`#02a4d4` H193.5 -- again the same as Donald's cap (2,900-9,300px) and Scrooge's hat band (700-4,200px); teal `#1fa399` H175.5 S0.81 ranked blue against a clean green and red in the same panel (011 p2) | a thin rim or side patch on a black cap, 60-400px when it prints at all. **COLOURIST CLASH: the dialogue names the RED-capped boy LOUIE four times (026 g8, 027 g5, 028 p5 caption, 031 g16) and a GREEN-capped boy DEWEY once (009 g2).** Read convention-flagged. Long stretches are unreadable by construction -- silhouette panels (010 p4, 011 p4, 014 p4/p6, 025 p4, 026 p4, 029 p5, 031 p6), flat-blue monochrome (023 p1, 032 p4, 033 p1), torch-lit tunnels, and one panel that is three pairs of eyes on black (028 p7, 031 p5) |
+| *September Scrimmage* (20) | none usable | -- | -- | -- | the boys play for the Duckburg Quackers in **identical red football helmets** (`#e41a20`, the cap red) with black jerseys; the Dogdale Barkers wear green (`#009e49`). No cap key at all, and the census red on 037-040 is mostly helmets and Donald's bow tie. Two boys are named from dialogue instead: 037 g5 `ROUGH, DEWEY!` pins the bandaged boy in the stands, and the 037 p8 caption names Louie |
+| *Gyro Builds a Better House*, *August Accident* (20) | none -- no nephews | -- | -- | -- | Gyro solo stories with his Helper, a black mouse, a pig customer and his wife, a neighbour and a cabbage farmer. No cap key. **Every Gyro-alone balloon is a thought cloud with a bubble trail**, which is where 25 of the batch's 29 type corrections come from |
+
+- **Donald's sailor cap is the roster blue in both volumes** (`#03a4d7` in Vol. 19,
+  `#00a5d5` in Vol. 20) and so is Scrooge's top-hat band. Between them they are
+  the largest blue blob in most panels of both feature titles.
+- *The Tenderfoot Trap*'s desert greens are `#009e46`/`#008943` H146-150 at S1.0 --
+  the SAME hex as the cap green -- so a green blob has to be placed on a head
+  before it means anything. The cactus at 065 p8 is 8 blobs of it.
+- *The Mines of King Solomon*'s cap green sits in **leafgrn** at H111.6, while the
+  `green` band on its outdoor pages is foliage at H146-162 and its temple interior
+  fills the red band with `#e9595c` brick at S0.6. Filter by saturation, not hue.
 
 Vol. 18 and Vol. 19, four titles read 2026-09-18 (sixty-sixth batch; none reviewed).
 56 pages, 78 images, **1.39 per page**; per title 2.00 / 1.60 / 1.15 / 1.20.
