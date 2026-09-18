@@ -414,3 +414,18 @@ HELP KEEP AMERICA STRONG
 16 202 176-167
 16 203 RIVER WITCH
 16 203 DOLLAR
+
+# Confirmed by the reviewer 2026-09-18 (Forbidden Valley): all four ARE grouped,
+# and both fail the audit's "boxed in its own right" gates for reasons that are
+# about the gates, not the page. 025's HISS!/SNARL! are lettered inside the
+# splash caption and both engines grouped them with it, as one `narration` group
+# -- containment inside a speech type, which is the read-aloud case the gate
+# exists for. 030's SSFZT!/SNORT! ARE their own group (030 g6), but the capture
+# lists the two lines separately so neither equals the group's whole text, and
+# the pass retyped the group sound_effect -> dialogue (an animal's snort is a
+# voice, confirmed at review), which moves it out of the non-speech `lettering`
+# set the containment check reads.
+19 025 HISS!
+19 025 SNARL!
+19 030 SSFZT!
+19 030 SNORT!
