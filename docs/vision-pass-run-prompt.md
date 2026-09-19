@@ -7420,6 +7420,81 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-19, seventy-first batch, THREE OF FOUR REVIEWED AND MIRRORED)
+
+**411 groups reviewed across *The Milkman*, *Mocking Bird Ridge* and *Dramatic
+Donald*; 33 speaker corrections.** All 44 type corrections held. *Old Froggie
+Catapult* is 138/140 and is not mirrored. By title: *Milkman* 2/129 (1.6%, and
+one of those is a group the review added), *Mocking Bird Ridge* **24/136
+(17.6%)**, *Dramatic Donald* 7/146 (4.8%). **By the confidence the pass wrote:
+*Mocking Bird Ridge* high 17/122 (13.9%) against medium 6/12 (50.0%);
+*Dramatic Donald* high 5/140 (3.6%) against medium 2/6 (33.3%).** Medium is the
+worse bet in both, and by a wide margin.
+
+- **I QUOTED THE CENSUS ZERO AND DECLINED, WHICH IS THE SEVENTIETH BATCH'S
+  FINDING VERBATIM, IN A BATCH WHERE I HAD READ IT.** *Mocking Bird Ridge* 158
+  g0, g1 and g12 carry the pass note `capscan 8-40000 over panel 1 finds no
+  cap-sized roster ink on any of the three crowns`; the review named Dewey,
+  Louie and Dewey and **set a cap colour on all three**. Same shape on 154 g8
+  and g9, where my note quoted `blue 0 blob(s) total` and the review read green
+  on both. That is 5 of the 8 under-namings. **The previous batch's rule -- crop
+  the crown at 3x+ before declining, every time -- is not optional and quoting
+  the header is not compliance with it.** A panel-wide scan and a crown are
+  different measurements.
+- **AND TWICE I MEASURED THE INK, THEN GAVE IT TO THE WRONG HEAD.** 153 g1's
+  note reads `two 93/82px blue slivers at panel x496-540, which sit on the boy
+  BEHIND the shouter, not on him` -- the review made the shouter Dewey on that
+  very blue. 152 g12 is the same: Donald's cap position was measured, the boy's
+  was not, and he came back Dewey. This is the *use the evidence you already
+  wrote* class, and here the evidence was in the note being used to decline.
+- **THE OVERLAPPING CLOSE-UP INVERTED A PAIR.** *Mocking Bird Ridge* 158 g2/g3
+  are two balloons over two heads drawn on top of each other; I traced g2 to the
+  red cap and g3 to the blue, and the review swapped both. All three attribution
+  swaps in the batch (155 g2 as well) are red-against-blue on a crowded panel.
+  The roster says crop at 6-10x when heads overlap; I cropped at 2.1x.
+- **ECHOES ARE A ROLE, NOT A COLLECTIVE.** Five groups went `nephews` ->
+  **`other:the echoes`** on *Mocking Bird Ridge* (153 g3, 156 g9, 157 g2, 157
+  g4, 157 g10). The pass had split the same class inconsistently between
+  `nephews` and `off-panel` reasoning. Where a balloon IS the returning echo and
+  no figure is under it, the corpus value is now `other:the echoes`.
+- **A DEVICE OVER A SILHOUETTE ROW IS NOT AUTOMATICALLY THE BOYS.** 160 g8, the
+  drawn `?` over the watching figures, went `nephews` -> `other:Donald and
+  Gladstone`. I read a row of small silhouettes as the nephews; they are the two
+  adults at long-shot scale. Count the figures before assigning a device.
+- **DO NOT COIN AN `other:` FOR A CHARACTER ALREADY ON THE ROSTER.** *Dramatic
+  Donald* 032 g14 and 036 g7 were my `other:a drama club member` for the crowned
+  figure playing Princess Morningstar; **she is DAISY**, who is a roster name and
+  was in the title from 028. Two of the seven corrections are that one mistake.
+  Check the roster list before inventing a role.
+- **A TWO-HANDED EXCHANGE CAN BE ONE SPEAKER VALUE.** *Dramatic Donald* 029 g1
+  and g4, the mutual insults while the two shove each other, both went to
+  `other:Donald and Gladstone` -- the same value the *Mocking Bird Ridge* review
+  used on 160 g8 and g13. Worth reaching for when a balloon covers a scuffling
+  pair rather than picking one of them.
+- **THE ONE OVER-NAMING IN *THE MILKMAN* WAS A TAIL I HAD ALREADY DOUBTED.** 149
+  g3 (`Dewey`, cap blue) went back to `nephews`; my own note recorded a possible
+  SECOND tail dipping toward the red-capped boy and then applied the
+  leftmost-tail rule anyway. Where a balloon may carry two tails, the collective
+  is the honest answer, not the rule's tie-break.
+- **`other:` drift to reconcile:** *Dramatic Donald* now carries both
+  `other:a drama club member` (3) and `other:another club member` (1, at 030
+  g8). Everything else is clean: *Milkman* `the sleeper`, `the night boss`,
+  `a dairy worker`; *Mocking Bird Ridge* `the echoes`, `the professor`,
+  `Donald and Gladstone`; *Dramatic Donald* `the drama club director` (16),
+  `the farmwife actress`, `the theatre orchestra`, `Donald and Gladstone`.
+- **Both missed-text findings were real and both were added.** *Milkman* 141 g14
+  is the clipped crate stack at the right edge of panel 5 -- lettering the pass
+  saw and left out of `visible_text` as too cut off, which is the wrong call:
+  transcribe it and let the audit decide. *Mocking Bird Ridge* 160 g13 is the
+  drawn `!`, and 160 g0 splits the opening caption out of the merged box the
+  pass had flagged in its note rather than fixed.
+- **Outstanding:** *Old Froggie Catapult* at 138/140 -- 168 g12 and 170 g11 --
+  not mirrored, not committed. And *The Milkman* 141 still raises two
+  missed-text lines that are an audit artefact, not lettering: a group holding
+  three copies of one sign never counts toward the single-instance tally, so
+  `DAISY DAIRY CO.` reads as 6 in the art against 4 grouped even though every
+  copy is boxed. Awaiting a ruling for `missed-text-ignore.txt`.
+
 ### Findings to paste into the next run (2026-09-19, seventy-first batch, NONE REVIEWED)
 
 **548 groups over 40 pages, 4 titles: *The Milkman*, *Mocking Bird Ridge*,
@@ -8261,9 +8336,22 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 19 and Vol. 21, four titles read 2026-09-19 (seventy-first batch; **NONE
-REVIEWED**). 40 pages, 59 images, **1.48 per page**; per title 2.20 / 1.40 /
-1.30 / 1.00.
+Vol. 19 and Vol. 21, four titles read 2026-09-19 (seventy-first batch; **THREE
+OF FOUR REVIEWED AND MIRRORED** -- *Old Froggie Catapult* is 138/140 and still
+open, so its row is uncorrected). 40 pages, 59 images, **1.48 per page**; per
+title 2.20 / 1.40 / 1.30 / 1.00.
+
+**THE ROW THE REVIEW CORRECTED IS *MOCKING BIRD RIDGE*, AND IT IS THE ABSENCE
+CLAIM AGAIN.** The row below says the boys are bare-headed indoors on 151 and
+cap up outdoors from 154. The first half holds; the second is too late and too
+weak. The review named boys on **152 g12 and 153 g1**, and on **158 panel 1**,
+where the pass note says no cap-sized roster ink sits on any of the three
+crowns, it set blue, green and blue. Read the caps as readable from 152 onward,
+and treat every `no ink on the crown` line in that row as a panel-scale scan
+that was never followed by a crown crop.
+
+**AND THE CROWNED FIGURE IN *DRAMATIC DONALD* IS DAISY**, not an unnamed club
+member -- she plays Princess Morningstar from 032.
 
 **THE CAPS COME OFF INDOORS IN THREE OF THESE FOUR TITLES**, and an absence
 claim written off a domestic panel is wrong about the outdoor half of the same
