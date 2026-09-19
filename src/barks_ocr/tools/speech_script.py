@@ -32,7 +32,6 @@ from comic_utils.common_typer_options import TitleArg, VolumesArg
 from loguru import logger
 
 from barks_ocr.utils.title_selection import resolve_titles
-from barks_ocr.utils.vision_schema import SPEAKER_KEY
 
 app = typer.Typer()
 
@@ -55,8 +54,9 @@ NON_SPEECH_TYPES = frozenset({"sound_effect", "background"})
 
 # Written when the vision pass has attributed some of a page's groups but not
 # this one, so a partially-attributed story does not read as if the blanks were
-# deliberate silences.
-NO_SPEAKER = "-"
+# deliberate silences. Not the roster's `none` (nobody speaks it): this marks a
+# group nobody has attributed yet.
+UNATTRIBUTED_MARK = "-"
 
 TEXT_FORMAT = "text"
 JSON_FORMAT = "json"
@@ -107,11 +107,7 @@ def _page_lines(page_group: SpeechPageGroup) -> list[Line]:
         The page's lines, ordered by panel, then top-to-bottom, then left-to-right.
 
     """
-    speakers = {
-        group_id: group.get(SPEAKER_KEY)
-        for group_id, group in page_group.speech_page_json.get("groups", {}).items()
-    }
-    any_speaker = any(speakers.values())
+    any_speaker = any(speech.speaker for speech in page_group.speech_groups.values())
 
     def sort_key(speech: SpeechText) -> tuple[int, float, float]:
         # An unplaced group has no panel to sort within, so it goes after every
@@ -127,12 +123,17 @@ def _page_lines(page_group: SpeechPageGroup) -> list[Line]:
             fanta_page=page_group.fanta_page,
             panel_num=speech.panel_num,
             group_id=speech.group_id,
-            speaker=(speakers.get(speech.group_id) or NO_SPEAKER) if any_speaker else "",
+            speaker=_line_speaker(speech) if any_speaker else "",
             type=speech.type or "",
             text=speech.ai_text,
         )
         for speech in ordered
     ]
+
+
+def _line_speaker(speech: SpeechText) -> str:
+    """Return the stored speaker value, or the unattributed mark where a page has gaps."""
+    return speech.speaker.speaker if speech.speaker else UNATTRIBUTED_MARK
 
 
 def _title_lines(

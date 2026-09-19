@@ -23,6 +23,7 @@ from barks_fantagraphics.speech_groupers import (
     get_speech_page_group,
 )
 from barks_fantagraphics.speech_markup import has_markup, strip_markup
+from barks_fantagraphics.speech_speakers import speaker_call_from_group
 from comic_utils.common_typer_options import LogLevelArg
 from comic_utils.pil_image_utils import load_pil_image_for_reading
 from comic_utils.screen_utils import get_centred_position_on_primary_monitor
@@ -2388,6 +2389,8 @@ class EditorApp(App):
             stored_text=new_group.get("ai_text", ""),
             type_=new_group.get("type", "dialogue"),
             text_box=new_group.get("text_box", []),
+            # The seed set `unknown`/`low` on the JSON; the dataclass must agree.
+            speaker=speaker_call_from_group(new_group),
         )
 
         # Rebuild both dicts with the new entry inserted after the target's current group.
