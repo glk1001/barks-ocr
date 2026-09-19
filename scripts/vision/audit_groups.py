@@ -62,10 +62,10 @@ from typing import Any
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.speech_groupers import SpeechGroups
+from barks_fantagraphics.speech_speakers import OTHER_PREFIX
 
 from barks_ocr.utils.title_selection import resolve_titles
 
-OTHER_PREFIX = "other:"
 ARTICLE_RE = re.compile(r"^(?:the|a|an)\s+")
 
 MIN_DUPLICATE_LEN = 2  # a one-character duplicate says nothing either way

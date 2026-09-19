@@ -12,6 +12,25 @@ import re
 from collections.abc import Iterable, Mapping
 from enum import StrEnum
 
+# The speaker vocabulary is defined reader-side, in `barks_fantagraphics.speech_speakers`:
+# the reader renders these values, so the definition lives where they are consumed
+# last, and this module re-exports them under the names the rest of barks-ocr uses.
+from barks_fantagraphics.speech_speakers import (
+    CAP_COLOUR_KEY,
+    CAP_COLOUR_OPTIONS,
+    CONFIDENCE_OPTIONS,
+    IDENTIFIED_BY_KEY,
+    IDENTIFIED_BY_OPTIONS,
+    NEPHEW_NAMES,
+    NO_SPEAKER,  # noqa: F401  # re-exported for the editor
+    OTHER_PREFIX,
+    ROSTER,
+    SPEAKER_CONFIDENCE_KEY,
+    SPEAKER_KEY,
+    SPEAKER_OPTIONS,
+    UNKNOWN_SPEAKER,
+)
+
 # Ordered, because the editor lays the roster out in this order. Free-form
 # speakers are allowed only behind ``OTHER_PREFIX``, so a typo in a main-cast
 # name is caught rather than silently becoming a new character.
@@ -32,22 +51,8 @@ from enum import StrEnum
 # blue-and-green where the back matter reprints that same page as 232. So read
 # every cap on its own and let the unreadable ones be collective; do not
 # discount a whole story.
-SPEAKER_OPTIONS: tuple[str, ...] = (
-    "Donald",
-    "Huey",
-    "Dewey",
-    "Louie",
-    "nephews",
-    "Daisy",
-    "Gladstone",
-    "Scrooge",
-    "Gyro",
-    "narrator",
-    "none",
-    "unknown",
-)
-ROSTER: frozenset[str] = frozenset(SPEAKER_OPTIONS)
-OTHER_PREFIX = "other:"
+#
+# `SPEAKER_OPTIONS`, `ROSTER` and `OTHER_PREFIX` are imported above.
 
 # Database character tags that name somebody the roster already carries, under a
 # fuller form. Mapped rather than offered alongside: a closed set holding both
@@ -74,11 +79,9 @@ SPEAKER_NOTES: dict[str, str] = {
     "unknown": "the speaker could not be placed at all",
 }
 
-CONFIDENCE_OPTIONS: tuple[str, ...] = ("high", "medium", "low")
 CONFIDENCES: frozenset[str] = frozenset(CONFIDENCE_OPTIONS)
 
-# The three nephews by name, as distinct from the `nephews` collective.
-NEPHEW_NAMES: frozenset[str] = frozenset({"Huey", "Dewey", "Louie"})
+# `NEPHEW_NAMES` (the three by name, as distinct from the collective) is imported above.
 
 # Naming an individual nephew rests entirely on the cap-colour convention, so
 # being unsure *which* nephew is exactly the case `nephews` exists for. The
@@ -108,7 +111,6 @@ def nephew_needs_collective(speaker: str, confidence: str) -> bool:
     return speaker in NEPHEW_NAMES and confidence == NEPHEW_GUESS_CONFIDENCE
 
 
-CAP_COLOUR_OPTIONS: tuple[str, ...] = ("red", "blue", "green")
 CAP_COLOUR_SET: frozenset[str] = frozenset(CAP_COLOUR_OPTIONS)
 
 # What the speaker call actually rests on. `cap_colour` records the evidence
@@ -128,16 +130,6 @@ CAP_COLOUR_SET: frozenset[str] = frozenset(CAP_COLOUR_OPTIONS)
 # one thing -- a tail that lands on a figure *and* the cap that figure wears --
 # and separating them is what lets a later check ask whether two calls in one
 # panel disagree about the same evidence.
-IDENTIFIED_BY_OPTIONS: tuple[str, ...] = (
-    "balloon-tail",
-    "cap-colour",
-    "costume",
-    "hat",
-    "sole-figure",
-    "dialogue",
-    "caption",
-    "off-panel",
-)
 IDENTIFIED_BY_SET: frozenset[str] = frozenset(IDENTIFIED_BY_OPTIONS)
 
 IDENTIFIED_BY_NOTES: dict[str, str] = {
@@ -185,10 +177,7 @@ TIME_OF_DAY_OPTIONS: tuple[str, ...] = ("day", "night", "dusk-or-dawn", "indoors
 TIMES_OF_DAY: frozenset[str] = frozenset(TIME_OF_DAY_OPTIONS)
 
 # Keys written onto a prelim group by `vision_apply` and read back by the editor.
-SPEAKER_KEY = "speaker"
-SPEAKER_CONFIDENCE_KEY = "speaker_confidence"
-CAP_COLOUR_KEY = "cap_colour"
-IDENTIFIED_BY_KEY = "identified_by"
+# The four speaker keys are imported above.
 VISION_NOTE_KEY = "vision_note"
 VISION_TEXT_OK_KEY = "vision_text_ok"
 VISION_CORRECTED_TEXT_KEY = "vision_corrected_text"
@@ -425,14 +414,13 @@ DEFAULT_GROUP_STYLE = "normal"
 # inherited `speaker_reviewed` used to. `unknown` is honest, it is in the roster
 # already, and at `low` it is caught by a plain `--unreviewed` sweep and by
 # `--confidence low,medium` alike.
-UNPLACED_SPEAKER = "unknown"
+UNPLACED_SPEAKER = UNKNOWN_SPEAKER
 
 # The one speaker that needs no ``identified_by``: nobody said it, so there is
 # no call to have rested on anything. Every other value -- ``unknown`` included
 # -- requires evidence, which is what ``vision_apply._check_identified_by``
 # enforces and what the corpus already does (30 of 32 ``unknown`` groups carry
-# evidence; none of the 2,334 ``none`` groups do).
-NO_SPEAKER = "none"
+# evidence; none of the 2,334 ``none`` groups do). `NO_SPEAKER` is imported above.
 UNPLACED_CONFIDENCE = "low"
 
 # Above this overlap with a group the page already has, an addition is a
