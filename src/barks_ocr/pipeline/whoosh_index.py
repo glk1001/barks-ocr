@@ -383,6 +383,13 @@ def main(  # noqa: PLR0913
         default=False,
         help="Run spaCy tagging and save entity JSONs only (no index build)",
     ),
+    skip_missing_pages: bool = typer.Option(
+        default=False,
+        help=(
+            "Leave out pages with no prelim OCR file instead of failing the build."
+            " Every skipped page is listed first; the titles stay absent from search."
+        ),
+    ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     init_logging(APP_LOGGING_NAME, "make-whoosh-index-from-gemini-ai-groups.log", log_level_str)
@@ -395,20 +402,49 @@ def main(  # noqa: PLR0913
 
     if do_checks:
         check_index_integrity(comics_database, volumes, checks_output, volumes_index_dir)
-    elif tag or tag_only:
+        return
+
+    if tag or tag_only:
         _tag_volumes(comics_database, volumes, OCR_TYPE_DICT[ocr_index], volumes_index_dir)
-        if not tag_only:
-            entity_provider = get_merged_entity_provider(volumes_index_dir, volumes)
-            whoosh_search = SearchEngineCreator(
-                comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
-            )
-            whoosh_search.index_volumes(volumes, entity_provider=entity_provider)
+        if tag_only:
+            return
+
+    if skip_missing_pages:
+        _report_missing_prelim_pages(comics_database, volumes)
+
+    entity_provider = get_merged_entity_provider(volumes_index_dir, volumes)
+    whoosh_search = SearchEngineCreator(
+        comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
+    )
+    whoosh_search.index_volumes(
+        volumes, entity_provider=entity_provider, skip_missing_pages=skip_missing_pages
+    )
+
+
+def _report_missing_prelim_pages(comics_database: ComicsDatabase, volumes: list[int]) -> None:
+    """Print every page the build is about to leave out, so a hole is never silent.
+
+    A build that skips pages must say so up front, title by title: the whole
+    reason the default refuses gaps is that an index with a story quietly
+    missing looks exactly like a complete one.
+    """
+    all_speech_groups = SpeechGroups(comics_database)
+    titles = comics_database.get_configured_titles_in_fantagraphics_volumes(
+        volumes, exclude_non_comics=True
+    )
+    total = 0
+    print("Pages with no prelim OCR file (skipped):")
+    for title_str, fanta_info in titles:
+        missing = all_speech_groups.get_missing_prelim_pages(fanta_info.comic_book_info.title)
+        if not missing:
+            continue
+        pages = sorted({m.fanta_page for m in missing})
+        total += len(missing)
+        print(f'    "{title_str}": pages {", ".join(pages)}')
+    if not total:
+        print("    none")
     else:
-        entity_provider = get_merged_entity_provider(volumes_index_dir, volumes)
-        whoosh_search = SearchEngineCreator(
-            comics_database, volumes_index_dir, OCR_TYPE_DICT[ocr_index]
-        )
-        whoosh_search.index_volumes(volumes, entity_provider=entity_provider)
+        logger.warning(f"Skipping {total} missing prelim page/engine file(s); see the list above.")
 
 
 def _discover_entities(
