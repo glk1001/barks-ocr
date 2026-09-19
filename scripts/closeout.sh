@@ -215,16 +215,19 @@ done
 # so this prints and never gates; --fail-on-findings is for once one is cleared.
 echo "-> group audit"
 if capture group-audit uv run python scripts/vision/audit_groups.py "$TITLE"; then
-    lopsided=$(num group-audit 's/^=== hand-added groups present on only one engine: \([0-9]*\) page(s) ===$/\1/p')
+    # The heading changed on 2026-09-19 when the check moved from comparing
+    # per-engine COUNTS of added groups to asking whether each one has a
+    # counterpart the mirror can pair with. See audit_groups.py's docstring.
+    orphans=$(num group-audit 's/^=== hand-added groups with no counterpart on the other engine: \([0-9]*\) page(s) ===$/\1/p')
     drift=$(num group-audit 's/^=== other: speakers that differ only by case or an article: \([0-9]*\) ===$/\1/p')
-    if [[ -z "$lopsided" || -z "$drift" ]]; then
+    if [[ -z "$orphans" || -z "$drift" ]]; then
         row FAIL "group audit" "could not parse output -- read the log"
-    elif ((lopsided > 0)); then
-        row WARN "group audit" "$lopsided page(s) add a group on one engine only"
+    elif ((orphans > 0)); then
+        row WARN "group audit" "$orphans page(s) add a group the mirror cannot pair"
     elif ((drift > 0)); then
         row WARN "group audit" "$drift other: speaker(s) differ only by an article"
     else
-        row OK "group audit" "no speaker drift or one-engine adds"
+        row OK "group audit" "no speaker drift or unpairable adds"
     fi
 else
     row FAIL "group audit" "command failed -- read the log"

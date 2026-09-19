@@ -52,21 +52,69 @@ Against those, two checks earn their place:
     them three against zero. That is the one-engine add: the pass, the mirror
     and `speaker-queue` all read easyocr, so a group added only to paddleocr
     reaches no queue and is never reviewed. This is the unambiguous one.
+
+**2026-09-19: THE SECOND CHECK COUNTED, AND COUNTING IS NOT THE QUESTION.**
+Comparing how many `vision_added` groups each engine carries reported 87 pages
+over the 5,358 page-pairs then stored, and the seventieth batch's review showed
+what most of them are. *The Money Well* 082 came back `easyocr=4 paddleocr=3`
+with nothing wrong: both engines carry the `SOON!` caption and both have it
+reviewed, but paddleocr's copy was FOUND by the engine while easyocr's was added
+by hand, so only one of them carries the flag. A provenance asymmetry, not a
+missing group -- and neither side can be "corrected" without falsifying it,
+since `vision_added` records who put the group there.
+
+What actually costs a group is having no COUNTERPART: `vision_mirror` pairs the
+two engines on `_match_key`, the markup-stripped whitespace-insensitive text, and
+a group it cannot pair is one it silently skips -- the review state never
+crosses and the group stays unreviewed on one side. That is the fault the
+paragraph above was reaching for, so the check now asks it directly, using the
+mirror's own key so the two agree by construction.
+
+Measured the day it changed, over 5,358 page-pairs: **87 pages under the count
+comparison, 0 under the counterpart test.** Zero is the true answer today --
+every hand-added group in the corpus does have a counterpart -- and it is worth
+saying out loud that a check reporting nothing is not the same as a broken one.
+This one fires the moment a group is added to one engine whose text matches
+nothing on the other, which is exactly when the mirror will leave it behind.
+
+Note what it does NOT cover: a PRE-EXISTING group whose two texts drift apart is
+skipped by the mirror for the same reason and is invisible here, because the
+population is `vision_added` only. The seventieth batch hit one (*The Money Well*
+085 g16, easyocr truncated to `176-617 BEAGLE`) and the mirror's own WARNING is
+what catches that -- read it.
 """
 
 import re
 import sys
 from collections import Counter, defaultdict
+from dataclasses import dataclass, field
 from typing import Any
 
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.speech_groupers import SpeechGroups
+from barks_fantagraphics.speech_markup import strip_markup
 from barks_fantagraphics.speech_speakers import OTHER_PREFIX
 
 from barks_ocr.utils.title_selection import resolve_titles
 
 ARTICLE_RE = re.compile(r"^(?:the|a|an)\s+")
+
+
+@dataclass
+class PageTexts:
+    """One engine's view of a page, reduced to what the counterpart test needs.
+
+    Attributes:
+        all_keys: `match_key` for every group on the page, for the other engine
+            to look its own added groups up in.
+        added: group id -> `match_key`, for the `vision_added` groups only.
+
+    """
+
+    all_keys: set[str] = field(default_factory=set)
+    added: dict[str, str] = field(default_factory=dict)
+
 
 MIN_DUPLICATE_LEN = 2  # a one-character duplicate says nothing either way
 PAIR = 2  # it takes two groups to be a duplicate
@@ -93,6 +141,23 @@ def _overlaps(a: tuple[float, ...], b: tuple[float, ...]) -> bool:
 def added_groups(groups: dict[str, dict]) -> dict[str, dict]:
     """Return only the groups carrying `vision_added`, by id."""
     return {gid: g for gid, g in groups.items() if g.get("vision_added")}
+
+
+def match_key(ai_text: str | None) -> str:
+    """Return the key `vision_mirror` pairs two engines' groups on.
+
+    Deliberately the same rule as `vision_mirror._match_key` -- markup stripped
+    and whitespace collapsed -- so that "the audit says this group has a
+    counterpart" and "the mirror can pair this group" cannot drift apart.
+
+    Args:
+        ai_text: a group's stored text, or None.
+
+    Returns:
+        The pairing key, empty for a group with no text.
+
+    """
+    return " ".join(strip_markup(ai_text or "").split())
 
 
 def residue_on_page(groups: dict[str, dict]) -> list[tuple[str, str]]:
@@ -130,7 +195,7 @@ def main() -> None:  # noqa: C901 -- three independent reports, printed in order
     others: Counter[str] = Counter()
     no_evidence: Counter[str] = Counter()
     residue: list[str] = []
-    added_by_page: dict[tuple[str, str], dict[str, int]] = defaultdict(dict)
+    page_texts: dict[tuple[str, str], dict[str, PageTexts]] = defaultdict(dict)
     skipped: list[str] = []
     pages = 0
 
@@ -159,7 +224,11 @@ def main() -> None:  # noqa: C901 -- three independent reports, printed in order
                 if speaker != "none" and "identified_by" not in group:
                     no_evidence[title_str] += 1
 
-            added_by_page[(title_str, page)][str(engine)] = len(added_groups(groups))
+            texts = PageTexts(
+                all_keys={match_key(g.get("ai_text")) for g in groups.values()},
+                added={gid: match_key(g.get("ai_text")) for gid, g in added_groups(groups).items()},
+            )
+            page_texts[(title_str, page)][str(engine)] = texts
 
             for gid, text in residue_on_page(groups):
                 snippet = text[:40].replace("\n", "\\n")
@@ -168,7 +237,7 @@ def main() -> None:  # noqa: C901 -- three independent reports, printed in order
     _report_drift(others)
     _report_evidence(no_evidence)
     _report_residue(residue)
-    lopsided = _report_lopsided(added_by_page)
+    orphan_adds = _report_orphan_adds(page_texts)
 
     if skipped:
         print(f"\n!! {len(skipped)} title(s) NOT checked -- stale panel-segments mtime:")
@@ -176,35 +245,56 @@ def main() -> None:  # noqa: C901 -- three independent reports, printed in order
             print(f"     {line}")
 
     print(f"\nSwept {pages} page-engine(s) across {len(titles)} title(s).")
-    if strict and (others or no_evidence or residue or lopsided):
+    if strict and (others or no_evidence or residue or orphan_adds):
         raise SystemExit(1)
 
 
-def _report_lopsided(added_by_page: dict[tuple[str, str], dict[str, int]]) -> int:
-    """Print pages whose hand-added group count differs between the two engines.
+def _report_orphan_adds(page_texts: dict[tuple[str, str], dict[str, PageTexts]]) -> int:
+    """Print hand-added groups the mirror could not pair with the other engine.
+
+    A `vision_added` group whose `match_key` appears nowhere in the other
+    engine's groups is one `vision_mirror` will skip: nothing is copied across,
+    so the group keeps whatever review state it happens to have on its own side.
+    Counting added groups per engine does NOT detect this -- the counts differ
+    whenever the two engines merely disagree about WHO added a group they both
+    carry, which is provenance rather than a fault.
+
+    A page seen on only one engine is reported too: an added group there has no
+    counterpart because there is nothing to pair against.
 
     Args:
-        added_by_page: (title, page) -> engine -> number of `vision_added` groups.
+        page_texts: (title, page) -> engine -> that engine's keys for the page.
 
     Returns:
         How many pages were reported.
 
     """
-    lopsided = {
-        where: counts
-        for where, counts in added_by_page.items()
-        if len(set(counts.values())) > 1 or (len(counts) == 1 and next(iter(counts.values())))
-    }
-    print(f"\n=== hand-added groups present on only one engine: {len(lopsided)} page(s) ===")
-    for (title_str, page), counts in sorted(lopsided.items())[:MAX_LISTED]:
-        shown = " ".join(f"{engine}={n}" for engine, n in sorted(counts.items()))
-        print(f"     {title_str} {page}  {shown}")
-    if len(lopsided) > MAX_LISTED:
-        print(f"     ... and {len(lopsided) - MAX_LISTED} more")
-    if lopsided:
-        print("  The pass, the mirror and speaker-queue all read easyocr, so a group")
-        print("  added only to paddleocr reaches no queue and is never reviewed.")
-    return len(lopsided)
+    orphans: dict[tuple[str, str], list[str]] = {}
+    for where, engines in page_texts.items():
+        found: list[str] = []
+        for engine, texts in sorted(engines.items()):
+            others = {k for e, t in engines.items() if e != engine for k in t.all_keys}
+            found += [
+                f"{engine} g{gid} {key!r}"
+                for gid, key in sorted(texts.added.items())
+                if key not in others
+            ]
+        if found:
+            orphans[where] = found
+
+    print(
+        "\n=== hand-added groups with no counterpart on the other engine: "
+        f"{len(orphans)} page(s) ==="
+    )
+    for (title_str, page), found in sorted(orphans.items())[:MAX_LISTED]:
+        for line in found:
+            print(f"     {title_str} {page}  {line}")
+    if len(orphans) > MAX_LISTED:
+        print(f"     ... and {len(orphans) - MAX_LISTED} more")
+    if orphans:
+        print("  vision_mirror pairs the engines on the group text, so it cannot copy")
+        print("  onto these -- the review state never crosses and one side stays stale.")
+    return len(orphans)
 
 
 def _report_drift(others: Counter[str]) -> None:

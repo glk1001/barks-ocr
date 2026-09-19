@@ -199,7 +199,19 @@ groups to the 133 carrying `vision_added`.
 
 None of these is a code change:
 
-- **11 pages** where a hand-added group exists on one engine only.
+- ~~**11 pages** where a hand-added group exists on one engine only.~~ **Closed
+  2026-09-19: the check was counting, and the count was not the question.**
+  Comparing how many `vision_added` groups each engine carries had grown to 87
+  pages, and the seventieth batch's review showed what they mostly are — both
+  engines carry the group and both have it reviewed, but only one of them added
+  it by hand, so only one carries the flag. That is provenance, and neither side
+  can be "corrected" without falsifying it. What actually strands a group is
+  having no COUNTERPART: `vision_mirror` pairs the engines on the group text and
+  silently skips what it cannot pair. The check now asks that, using the
+  mirror's own `_match_key`. **87 pages under the count comparison, 0 under the
+  counterpart test**, over 5,358 page-pairs. It is stricter, not merely quieter:
+  equal counts with DIFFERENT added groups passed the old check and fail this
+  one.
 - **9 `other:` speaker pairs** differing by an article — pick one, retire the other.
 - **1,503 groups** with a speaker and no `identified_by`, mostly an old cohort.
 - **34 groups files** off-format (an uppercase `\u00AD`, one three-space indent);
