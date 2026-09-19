@@ -186,7 +186,7 @@ These three are not part of the 116. They should pass before and after, unchange
 
 | # | Query | Layer | Expected | Why |
 |---|---|---|---|---|
-| C1 | an exact line of remembered dialogue | `speech` | wherever it is | The Whoosh index's core job; must be unaffected |
+| C1 | an exact line of remembered dialogue | `speech` | wherever it is | The Whoosh index's core job; must be unaffected. The speaker filter is additive: an unfiltered query is the old query |
 | C2 | every line a named speaker says in one story | `speech` | the speaker pass output | Verifies attribution survives the schema change |
 | C3 | a distinctive word appearing in only one story | `speech` | one title | Precision check — a single-hit query that must stay single-hit |
 

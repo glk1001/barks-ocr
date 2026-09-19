@@ -583,6 +583,17 @@ Four guards keep it honest:
    heard of emphasis is correct by doing the obvious thing. `SearchEngine`'s
    `SpeechInfo` has the same split. The raw-dict readers an accessor cannot
    reach — `ocr_check`, `group_checks` — strip explicitly.
+
+   The speaker call travels the same road. `SpeechText.speaker` carries it
+   (a `SpeakerCall`, or `None` where the pass has not been), the index stores
+   the raw `speaker` value on every document and writes a `speakers.json`
+   sidecar of counts, `SpeechInfo.speaker` hands it back, and
+   `find_words(words, speaker=...)` filters on it. The vocabulary itself —
+   roster, sentinels, the `other:` prefix, the key names — is now defined
+   reader-side in `barks_fantagraphics.speech_speakers` and re-exported by
+   `vision_schema`, since the reader is where the values are finally rendered.
+   `barks-ocr-whoosh-index main --do-checks` verifies the sidecar, the values
+   and the filter on a built index.
 2. **Escape on write.** `[`, `]` and `&` in the lettering become `&bl;`, `&br;`,
    `&amp;`. Not hypothetical: 31 corpus groups hold brackets, including Gemini's
    own `[Illegible Comic Covers]` annotations, and 59 hold an ampersand, from
