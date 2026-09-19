@@ -7420,6 +7420,95 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-20, seventy-second batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+**406 groups reviewed across all three titles; 39 speaker corrections (9.6%).**
+By title: *Water Ski Race* **0 of 57 (0.0%)**, *The Golden River* **39 of 304
+(12.8%)**, *The Know-It-All Machine* **0 of 44 (0.0%)**. All four type overrules
+held. Four groups were added by the review, all clean, and two of them were the
+pass's own missed-text findings. **By the confidence the pass wrote, on the one
+title that was corrected: high 38 of 272 (14.0%) against medium 5 of 32
+(15.6%)** -- a ratio of 1.1, against 3.6x to 9.3x last batch. **The mediums were
+not the problem this time; the confident declines were.**
+
+- **I SUBSTITUTED A HEAD-FILTERED CENSUS FOR A PANEL SCAN AND IT COST 27 OF THE
+  39 CORRECTIONS.** Every one of them is a boy left collective under a note
+  saying `capscan finds no roster ink anywhere in the panel` or `no band in
+  view`, where the review cropped the crown and named him -- four each on 115,
+  118 and 121. **The sentence was not true and I never ran capscan to support
+  it.** What I actually read was a helper over `title_heads`, and `title_heads`
+  only prints CAP-INK when a blob attaches to a white head region it found.
+  Worked example, 115 p1: the census lists four beaks and **no cap-ink at all**,
+  while `capscan <panel> 15 40000` on the same file returns **109px, 77px and
+  73px of clean `#dc1e22` H358.7** at x630-662 and **59px of `#489582` H165** at
+  x156-171 -- the two caps the review then named Huey and Louie. The ink sits
+  ABOVE the white region the census found, which is exactly where a cap is.
+  **A head census answers `is there ink on a head I detected`. It cannot answer
+  `is there ink in this panel`, and quoting it as if it could is the same
+  filtered-view error the roster already names, in a new dress.**
+- **AND EVEN THE RIGHT SCAN WOULD NOT HAVE SETTLED HALF OF THEM.** On 118 p6,
+  where the review named Dewey and Louie, a direct capscan at a 15px floor finds
+  the blue band **0 in window on 70 blobs** and the green only as **57px and 23px
+  of `#51a1a2` at H180.7** -- an off-roster teal, below any usable floor and 70
+  degrees from the title's cap green. Nothing a panel scan can do reads that.
+  **The seventy-first batch's rule was right and I replaced it with a cheaper
+  tool: crop the crown at 3-6x before declining, and treat a scan -- any scan --
+  as unable to license an absence on a small cap.**
+- **THE SCALLOPED-UNDERSIDE CALL WAS RIGHT, AND I FLAGGED IT CORRECTLY.** The
+  three groups I declined because one balloon over a row of boys showed several
+  downward points fanning across two or three heads -- 102 g0, 103 g4, 105 g4 --
+  **all three held**. The hand-back named them as the first thing to check and
+  the check came back clean. A scalloped bottom edge really is not a fan of
+  tails.
+- **BUT A BALLOON WITH NO DRAWN TAIL AT ALL IS NOT A REASON TO DECLINE.** 098
+  g10, where I cropped both ends and the middle and reported that the outline
+  closes without a spur, came back **Louie**. Four images went into proving an
+  absence that did not license anything. When the tail is not drawn, place the
+  balloon against the heads and take the nearest -- do not spend crops proving a
+  negative.
+- **BOTH GAP-TIP NAMES WERE REVERSED, AND NOTHING WAS LOST BY THE CHORUS RULE.**
+  098 g8 and 103 g2 both went `Dewey` -> `nephews`; both rested on a tip landing
+  in a gap and the one-head-left rule. On this title the gap rule over-named
+  twice and never under-named. **Drop a gap tip to `nephews` rather than to the
+  head on its left when the gap is wider than about a quarter of a head.**
+- **DONALD AGAINST A BOY WENT WRONG THREE TIMES, IN BOTH DIRECTIONS, AND TWO OF
+  THE THREE HAD NO FIGURE DRAWN.** 100 g1 `nephews` -> **Donald**; 106 g2 and 120
+  g5 `Donald` -> **nephews**. 120 g5 is a balloon over bare soap suds with nobody
+  in frame, where I gave it to Donald because MEN! is his form of address for the
+  boys -- and register lost to the reviewer's reading of who was buried where.
+  **A voice with no figure under it is `nephews` unless the words name their own
+  speaker.**
+- **A CAPTION BOX INSIDE A READ-ALOUD SCENE IS THE READER'S VOICE.** 108 g0, the
+  box narrating the storybook over the wide panel, went `narrator` -> **Dewey**
+  with the type corrected narration -> dialogue: it is the boy reading the tale
+  out loud, not the author. 120 g0, `AND BLOW THEY DID!`, went the same way to
+  `nephews`. **Two of the eight narrator calls in the title were wrong, and both
+  sit next to a character who has been reading or talking for pages.**
+- **THE SILHOUETTE I READ AS A CROW IS A NEPHEW IMITATING ONE.** 121 g9
+  `CROWK! CROWK!` went `other:a crow` -> **Dewey**, with the reviewer's own note
+  `Not Huey or Louie`. The type overrule survived -- it IS dialogue -- but the
+  black shape between the two boys is a boy. **Before coining an animal `other:`,
+  count the ducks in the panel.**
+- **THE FORM-OF-ADDRESS TEST WENT 3 FOR 3 ON DUCK-VERSUS-DUCK AND 0 FOR 1 ON
+  WHICH BOY.** UNCA / UNCLE / OH, DONALD settled 172 g4 to Daisy, 114 g7 to a
+  boy and 121 g1 to a boy, and all three held as to *whether* it was a nephew.
+  121 g1 was still corrected `Huey` -> `Louie`: the test says a boy is speaking,
+  never which one. Keep using it, and never let it carry a name.
+- **THE TEXT CORRECTION WAS DECLINED AND THAT IS WORTH KNOWING.** 116 g7's
+  `WIERD` was adjudicated and `ai_text` keeps the normalised WEIRD, so the
+  emphasis markup keyed to the stored text still round trips and needed no
+  rework. The precaution paid: had the markup been written against the corrected
+  spelling it would have had to be undone.
+- **Outstanding: five missed-text findings on *The Golden River*** -- 098 p6's
+  circled `$` under the McDUCK BLDG plate, 098 p8's notes inside g11's balloon,
+  102 p1's `$` sun inside a framed painting, 104 p1 and p2's notes off the barrel
+  organ, and 119 p8's drawn `?` over a boy's head. The review added the other
+  three (097's two gauge scales, 105's bin shield) and 184's GLUE pail label.
+  **The queue the audit generates gives the page and the glyph but NOT the panel,
+  and parks every line on group 0** -- which is unreadable at the editor. Write
+  the panel and the position after the `kind` field, where the parser ignores
+  them, or the hand-back cannot be worked.
+
 ### Findings to paste into the next run (2026-09-20, seventy-second batch, NONE REVIEWED)
 
 **405 groups over 37 pages, 3 titles: *Water Ski Race* (Vol. 19, 6pp, 57),
@@ -8446,9 +8535,20 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 19 and Vol. 20, three titles read 2026-09-20 (seventy-second batch; **NONE
-REVIEWED**, so every row below is the pass's own reading and uncorrected). 37
-pages, 80 images, **2.16 per page**; per title 3.33 / 2.07 / 1.00.
+Vol. 19 and Vol. 20, three titles read 2026-09-20 (seventy-second batch; **ALL
+THREE REVIEWED AND MIRRORED**, so the rows below are corrected against the
+review). 37 pages, 80 images, **2.16 per page**; per title 3.33 / 2.07 / 1.00.
+
+**THE ROW THE REVIEW CORRECTED IS *THE GOLDEN RIVER*, AND IT IS THE ABSENCE
+CLAIM AGAIN -- 27 OF ITS 39 CORRECTIONS.** The inks below are right; what is
+wrong is every sentence in that pass reading that said a panel carried no
+roster ink. Those came from a head-filtered census, not from capscan, and on
+115 p1 a direct scan at a 15px floor returns 109px of `#dc1e22` H358.7 and 59px
+of `#489582` H165 where the census returned nothing. **Read this row as: the
+bands are these, the caps are readable on far more panels than the pass
+allowed, and no absence in it was ever established.** *Water Ski Race* and *The
+Know-It-All Machine* came back with zero corrections and their rows stand as
+written.
 
 **THE REFERENCE PANEL FOR VOL. 20 IS *THE GOLDEN RIVER* 103 p3** and it is the
 cleanest in the volume: three boys running left to right with one band each on
