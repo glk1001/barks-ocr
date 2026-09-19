@@ -7420,6 +7420,83 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-19, seventieth batch, NONE REVIEWED)
+
+**712 groups over 46 pages, 3 titles.** 85 images, **1.85 per page**; per title
+3.10 / 1.80 / 1.38. 31 nephew names against 77 collectives. **17 of 712 written
+at medium (2.4%)**, the rest high. 7 type corrections, 5 added groups, 2 missed-text
+findings left for the reviewer. No text corrections anywhere in the batch.
+
+- **THE SPLASH PAGE COST 6 IMAGES AND THE SECOND PAGE 7, AND THAT IS THE WHOLE
+  OVERSPEND.** *The Half-Baked Baker* ran 3.10 images a page against 1.80 and
+  1.38 for the other two, and 13 of its 31 images went on pages 121 and 122. The
+  cause was ITERATION, not difficulty: montage, then a stack, then a re-crop of
+  the same panel, then a re-crop of the re-crop. From page 123 the method was one
+  montage plus ONE stack built to answer every open question on the page at
+  once, and the rate fell to 2.0 and then below 1.5 without a single call
+  getting worse. **Build the stack after listing the page's questions, not
+  before.**
+- **A GAP TIP AT MONTAGE SCALE REVERSED AT 4x.** Baker 121 g10 read as a tip
+  leaning at Dewey from the 250px montage; the 4x crop put it at panel (545,231),
+  INSIDE Louie's head+beak span x528-663, with Dewey's head ending 64px away.
+  The montage is not a measurement of a tip -- it is only the cue to go and
+  measure one.
+- **A PART CROP MADE ONE BOY OUT OF TWO.** Baker 127 g11: a crop that started at
+  panel x400 showed a red-capped boy under the balloon and the note named Huey.
+  The whole panel shows TWO boys -- the speaker is bare-headed at x230-490 and
+  the 4,154px red cap belongs to a second boy bent double behind him. The name
+  came from the dialogue instead (129 g1: DEWEY JUST CAME IN WITH AN ORDER).
+  **Crop the whole panel before naming, or crop from the balloon down.**
+- **A CAP FACT IS A PER-PANEL FACT AND THE PASS BROKE THE RULE ONCE.** On *The
+  Money Well* 072 the note first read "the nephews in this title are drawn
+  BARE-HEADED", off two indoor panels. Page 74 draws them in clean red and blue
+  outdoors. The note was corrected in place to the per-panel form before apply,
+  but the error is the one the roster names: two panels are not a title.
+- **RED IS NOT A NEPHEW IN A BEAGLE BOYS STORY.** *The Money Well*'s red band is
+  full of the BEAGLE BOYS' red caps, and 074's own census puts clean #e61b1f on
+  masked adults. Before reading a red blob as Huey in a Beagle title, check
+  whether the head under it is a duck child's.
+- **A NAMING LINE BEAT A CLEAN CAP: A CONFIRMED COLOURIST ERROR.** *Money Well*
+  080 p5 -- the boy asks a question and Scrooge's reply in the SAME PANEL is
+  THAT'S WHERE YOU'RE WRONG, DEWEY!, while the boy is drawn from behind in a
+  clean red cap (772px of #e21b20, confirmed at 2.2x). Recorded as the
+  disagreement the roster asks for: speaker Dewey, cap_colour red, neither
+  corrected to match the other.
+- **THE THREE TITLES' OWN KEYS, WORTH CARRYING FORWARD.** *Baker*: `UNCA DONALD`
+  on every page and 129's HUEY AND LOUIE, GO RENT... , which with a two-tailed
+  balloon named both. *Daisy*: the boys are BARE-HEADED indoors on 131-132 and
+  put the caps back on outdoors from 133, and 134 p8 loses them again in the
+  pond -- the blue band is empty over half the title for that reason alone.
+  *Money Well*: `UNCLE SCROOGE` is Donald and `UNCA SCROOGE` a nephew, holding
+  over all 26 pages.
+- **TWO TAILS ON ONE BALLOON, MEASURED, ARE TWO SPEAKERS.** *Baker* 129 g6: one
+  balloon, tails tipping at panel (588,288) and (683,289), inside the red-capped
+  and green-capped boys' head spans, after Donald's previous balloon says HUEY
+  AND LOUIE. Recorded as `other:Huey and Louie`. `cap_colour` had to be left
+  null and `cap-colour` dropped from `identified_by`, because the field holds
+  one colour and the group takes two boys -- **the apply refuses the
+  combination, so put the hexes in the note.**
+- **AN OFFSET FAN THAT NAMES NOBODY.** *Baker* 122 p1: two balloons, two tails,
+  and at 3x BOTH tips land over the same green-capped boy, 42px apart against
+  boys 120px apart. Flagged as a set rather than mapped in order.
+- **A RECURRING TEAL IN VOL. 19 THAT IS NOT A ROSTER INK.** Measured four times
+  across the two Vol. 19 titles on real crowns: #00a69b H176 (Baker 121 p5),
+  #27a5ac H183 (Daisy 133 p8), #41a085 H163 (Baker 129 p6), #07a27d H166 (Daisy
+  136 p2), all 15-25 degrees off both the cap green H147.7 and the cap blue
+  H194. Every one was left as a collective. **A reviewer ruling on this ink
+  would convert several collectives at a stroke.**
+- **THE AUDIT FLAGGED ELEVEN ITEMS THAT WERE THE PASS'S OWN FORMATTING.** Writing
+  `visible_text` as separate tokens for a sound effect the ENGINES hold as one
+  group -- WHAM / BAM / BONG / BAM against a single `WHAM\nBAM\nBONG\nBAM` --
+  makes the audit report every token as ungrouped. **One `visible_text` entry per
+  GROUP as the art draws it, not per word.** Ten of the batch's twelve findings
+  evaporated on that fix; the two that survived are real.
+- **AN ADD RENUMBERS THE PAGE AND INVALIDATES THE STORED result.json.** Three
+  titles, three re-applies, three times the same repair: after `added_groups`
+  lands, the out-dir's `result.json` must be re-keyed to the NEW ids before it
+  can be applied again. The roster says this about the editor; it is just as
+  true of the pass's own adds.
+
 ### Findings to paste into the next run (2026-09-19, sixty-ninth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 **561 groups over 50 pages, 3 titles.** 87 images, **1.74 per page**; per title
@@ -8025,6 +8102,25 @@ percentages below are proposals, not corrections.
   the man who rents the burro).
 
 ## Per-volume cap palette
+
+Vol. 19 and Vol. 20, three titles read 2026-09-19 (seventieth batch; none
+reviewed). 46 pages, 85 images, **1.85 per page**; per title 3.10 / 1.80 / 1.38.
+
+**THE BEAGLE BOYS WEAR RED CAPS.** In *The Money Well* the red band is theirs,
+not Huey's, on nearly every panel they appear in -- clean #e61b1f on masked
+adult heads. Check the head under a red blob before reading it as a nephew in
+any Beagle title.
+
+**VOL. 19 PRINTS A TEAL THAT IS NEITHER INK**, on real crowns, four times across
+these two titles: #00a69b H176, #27a5ac H183, #41a085 H163, #07a27d H166. It is
+15-25 degrees off both roster bands and every boy carrying it was left a
+collective.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Half-Baked Baker* (19) | **121 p3** -- the three boys in a row against the wall, red / blue / green left to right, and 122 p2 shows the same three from behind | `#e81b1f`-`#e61b1f` H358.8, 125-1,900px; dimmed to `#c12719` H5.0 (122 p5) and browned to `#89402e` H11.9 S0.66, 125px, in the smoke panels (122 p3) | `#009e49` H147.7, 100-900px -- the H147 form, NOT leafgrn, which is 0 on nearly every panel. `#019e59` H153.6 on 121 p4, where TWO boys carry it and the colour names neither | `#00a5d5`-`#03a5d6` H193.5, 120-800px. On 121 p1 the wedge is ~800px but breaks into sub-min-area fragments, so the blob list reports nothing and the pixels have to be counted directly | black cap with a coloured wedge at the front-left of the crown. The judges at the Duckburg Cooking Fair wear RED BOW TIES, 150-1,200px, which is what fills the red band on 128 and reads as caps in the census |
+| *Dodging Miss Daisy* (19) | **133 p3** -- Donald and all three boys running in a row, blue / red / green, with Donald's own sailor cap in the same frame | `#e3191e`-`#e51a20` H358, 150-1,400px; dimmed to `#b32c15` H8.7 (139 p4) | **the LEAFGRN form, `#42a940`/`#4fa447` H115-123**, 130-690px -- this title's cap green is the leafgrn one and `#009e47` H147 in it is foliage. Washed to `#4e9d7f` H157 S0.50, 86px (135 p6) | `#01a4d7`-`#04a5d7` H194, 115-1,000px | quartered black cap. **THE BOYS ARE BARE-HEADED INDOORS** on 131 and 132 -- clean white crowns, no cap at all -- and put them on outdoors from 133; 134 p8 loses them again in the pond. Donald wears the roster blue on his sailor cap and a red bow tie. Daisy is `#a0476a` H336 S0.53 throughout, and General Snozzie is canonical, not an `other:` |
+| *The Money Well* (20) | **075 p4** and **087 p1** -- all three boys in close-up, red / blue / third by elimination, and 087 p1 prints red, green and blue together | `#e41b20`-`#e51a1f` H358, 130-1,300px | almost never printed: `#439b6d` H149 on 087 p1 (65px) is the only clean cap green in 26 pages | `#00a4d4`-`#04a2d1` H194, 60-780px -- and the same ink is SCROOGE'S TOP-HAT BAND, 200-2,500px, and Donald's sailor cap | quartered black cap, small. Scrooge's maroon coat is `#a04554` H350 S0.57 and fills the red band on most panels; the BEAGLE BOYS' red caps fill the rest. Cast is Scrooge, Donald, the boys, the Beagle Boys (78 groups), **Grandpa Beagle** (10), a tunnel contractor and a policeman |
 
 Vol. 20 and Vol. 19, three titles read 2026-09-19 (sixty-ninth batch; **ALL
 THREE REVIEWED**, so the rows below are corrected against the review). 50 pages,
