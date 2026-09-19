@@ -7420,6 +7420,111 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-19, sixty-ninth batch, NONE REVIEWED)
+
+**557 groups over 50 pages, 3 titles** -- *City of Golden Roofs* (Vol. 20, 26pp,
+349 groups), *Getting Thor* (Vol. 20, 4pp, 37), *The Titanic Ants!* (Vol. 19,
+20pp, 171). **87 images, 1.74 per page**; per title 1.88 / 1.50 / 1.60. 21 type
+corrections, **0 text corrections**. The pass added **4 groups** itself. Written
+at high on 537 of 557 and medium on 20.
+
+- **THE CAP IS A PATCH ON A BLACK CROWN IN BOTH VOLUMES, AND IT IS SMALL.**
+  Neither title wears the full coloured crown. *City of Golden Roofs*: a black
+  cap with a wedge at the front-left, 8px to 900px -- the smallest that named a
+  boy was **8px** (058 p8) and the next **39px** (098-style). *The Titanic Ants!*:
+  a quartered cap whose coloured segment is 100-700px. **`title_heads`' default
+  floor misses these entirely**: on 056 p1, 056 p6 and 098 p2 the census showed
+  NOTHING and `capscan <panel> 8 40000` showed the wedge each time. On a
+  patch-cap title, re-run capscan at an 8px floor before writing any absence.
+- **AND THE COLOUR IS DULLED AT THAT SIZE.** The wedges that named boys came in
+  at `#ca221f` H1.1 (056 p6), `#b93d28` H8.7 S0.78 (098 p2), `#3b96ae` H190
+  S0.66 (058 p6), `#2c9f7c` H161.7 (055 p2) and `#d2181d` 8px (058 p8) -- every
+  one off the clean band by 5-15 degrees or below the saturation floor, because
+  a 2-3px edge is mostly antialiasing. Ranked inside its own panel against a
+  clean rival each time. **Do not apply the S0.75 cool-band floor to a wedge of
+  under 200px**; apply it to a broad patch with nothing to rank against.
+- **A KNOCKED-OFF CAP NAMED A BOY THE CENSUS CALLED BARE-HEADED.** *Titanic Ants*
+  102 p2: the boy is drawn bare, and 5214px of `#e61a1f` hangs in the air beside
+  him -- his own cap, mid-flight. The scan reported it as an unplaced red blob
+  and the head as empty. The roster's WHEREVER IT IS rule, paying out on the
+  clearest case yet: **a large red blob beside a bare crown is the cap, not
+  scenery**.
+- **TWO BOYS IN ONE PANEL PRINTED THE SAME RED AND I DECLINED BOTH.** *Titanic
+  Ants* 098 p4: the middle boy carries 174px of `#e8181f` and the far-right boy
+  195px of `#e61a1f`, with the third in leafgrn. The tail places the speaker
+  cleanly on the middle boy, and the roster's *two nephews printed the same
+  colour tells you nothing about either* makes the colour useless, so it went
+  `nephews` with `cap_colour: red`. **Flagged for the reviewer: if this is a
+  colourist slip rather than a reading error, one of those two is Dewey and the
+  call is nameable.** Same shape on the added `?` group in that panel.
+- **THE BIGGEST BLUE ON A HEAD IS SCROOGE'S HAT BAND, NOT A CAP.** *City of
+  Golden Roofs* puts 1,500-6,700px of `#01a4d5` on Scrooge's top hat in nearly
+  every panel, and Donald's sailor cap another 2,000-4,000px -- against a boy's
+  100-1,000px wedge. Blue on a head means nothing in this title until the blob
+  is placed. Same in Vol. 19: `#01a4d6` H194 on Scrooge's band and Donald's cap.
+- **THE DOMINANT RED IN BOTH TITLES IS SCROOGE'S COAT.** `#a04554` H350 S0.57 is
+  731 blobs in *City of Golden Roofs* and 355 in *Titanic Ants* -- more than
+  every other ink combined. It is a coat, and its saturation is what separates
+  it from the cap red at S0.88.
+- **THE `UNCLE`/`UNCA` SPLIT IS A CLEAN DISCRIMINATOR IN BOTH TITLES.** Donald
+  says UNCLE SCROOGE, the boys say UNCA SCROOGE and UNCA DONALD, without
+  exception across 46 pages. It settled *Titanic Ants* 097 p6 (two black
+  silhouettes, no cap readable, one speaker each) and 101 g5, and it is worth
+  checking at prep on any Vol. 19-20 title.
+- **A MACHINE PLAYING A RECORD IS DIALOGUE, AND THAT IS WHERE MOST OF THE TYPE
+  WORK WAS.** 13 of *City of Golden Roofs*' 14 type corrections are the hi-fi
+  playing Shoeless Pashly's bongo record -- `BOM BOM`, `BOMMITY BOM`, `BOPPITY
+  BONGO BONG` and the rest -- all stored `sound_effect` / implied none, all moved
+  to `dialogue` with `other:Shoeless Pashly` at medium and `off-panel`. This is
+  the juke-box branch of the machine rule, not the motorised-instrument branch.
+  The crows' `CAW` and `WAWK` in *Getting Thor* are the same call for the animal
+  reason, and *Titanic Ants* 107 p1's `EEK` is a human scream.
+- **A CHARACTER DRUMMING ON AN OBJECT KEEPS `sound_effect` AND TAKES THE PLAYER.**
+  *City of Golden Roofs* 058 p5: a villager taps his dough in time with the
+  music, music notes drawn beside him. Speaker is the man, type unchanged. The
+  split against the group above is *reproducing a performance* vs *making a
+  noise*.
+- **THE PASS ADDED FOUR GROUPS RATHER THAN HANDING THEM OVER.** `ZOW` on *Getting
+  Thor* 182 p1 (checked against BOTH prelim files first -- 10 groups each, no
+  ZOW) and three drawn `?` marks on *Titanic Ants* 098 p4. Both titles then
+  audited at **zero in all three classes**. Worth doing: `added_groups` costs one
+  result.json edit and saves the reviewer an add plus a renumber.
+- **AND THE AUDIT WILL NOT MATCH PROSE AGAINST A GROUPED GLYPH.** *Titanic Ants*
+  102 p4's `?` IS grouped, and writing `a drawn ? over the ant in panel 4` into
+  `visible_text` made the audit report it as missing from both engines. Write the
+  **exact glyph** for a device that is grouped and prose only for one that is
+  not.
+- **`crop.py` TAKES FULL-PAGE COORDINATES, NOT PANEL ONES.** Every blob box from
+  `capscan` and every span from `title_heads` is in PANEL pixels, so a crop needs
+  `origin + panel_xy`, and the origin is `(panel.x0 - pad, panel.y0 - pad)` out
+  of the boxes JSON. Getting this wrong returns an empty or displaced crop
+  silently; it cost two calls on 048 before the convention was checked.
+- **Outstanding at close, and it is the first thing to work:** *City of Golden
+  Roofs* has **5 missed-text findings, all drawn music notes** (055 p5, 058 p5,
+  058 p8, 059 p3, 059 p6) -- `queue-missed.txt` in the out-dir, parked on
+  neighbouring groups. Every one is the class the sixty-eighth batch's reviewer
+  put in `missed-text-ignore.txt`; the recommendation is the ignore list, but it
+  needs their word. The other two titles are at zero.
+- **A DUPLICATE GROUP TO DELETE.** *Titanic Ants* 091 g1 and g2 are the same CAFE
+  sign, boxes `x1527-1785 y173-271` and `x1528-1785 y170-271`. g1 was stored
+  `dialogue` and has been corrected to `background`; one of the two should go.
+- `other:` values written by the pass. *City of Golden Roofs*: `the King of
+  Tangkor Wat` (16), `Shoeless Pashly` (13), `the Gung Ho villager` (10), `a
+  Tangkor Wat villager` (10), `the hiring agent` (8), `a hunter` (7), `the
+  factory manager` (4), `a Tangkor Wat elder` (4), `an employer` (3), `the boy in
+  the gold hat` (3), `a man in the job line` (2), `the royal dance master` (2),
+  `the man at the sales office window`, `the man in the air pipe`, `the dock
+  porter`. *Getting Thor*: `the crows` (3), `a crow` (2). *Titanic Ants*: `Doctor
+  Thinknoble` (23), `a picnic guest` (19), `the householder` (3), `the picnic
+  steward` (2), `a giant ant`, `Mrs. Goldwad`. **Four pairs to watch, all
+  deliberate**: `a crow` against `the crows` (one bird against the flock); `a
+  Tangkor Wat elder` against `a Tangkor Wat villager` (the official who
+  proclaims against the townspeople); `an employer` / `the hiring agent` / `the
+  factory manager` (three separate hiring scenes in one title); and `the
+  householder` against `a giant ant` -- the householder is the unseen voice on
+  094-095 that sends Annie to the door, and the review may want it renamed once
+  the ant household is on the page.
+
 ### Findings to paste into the next run (2026-09-19, sixty-eighth batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
 **597 groups over 48 pages, 4 titles, all Vol. 19.** 99 images, **2.06 per
@@ -7813,6 +7918,30 @@ percentages below are proposals, not corrections.
   the man who rents the burro).
 
 ## Per-volume cap palette
+
+Vol. 20 and Vol. 19, three titles read 2026-09-19 (sixty-ninth batch; none
+reviewed). 50 pages, 87 images, **1.74 per page**; per title 1.88 / 1.50 / 1.60.
+
+**THE CAP IS A PATCH ON A BLACK CROWN IN BOTH OF THESE TITLES, 8px TO 900px**,
+and the census's default floor does not see it. Re-run `capscan <panel> 8 40000`
+before writing any absence, and expect the hue to be 5-15 degrees off the clean
+band at that size.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *City of Golden Roofs* (20) | **048 p1** and **048 p3** -- the three boys in a row at the quayside, green / blue / red cleanly, and 048 p6 again | `#e41a20`-`#e61b1f` H358.5, 90-900px; dimmed at a turned crown to `#ca221f` H1.1 (056 p6, 57px+33px), `#d2181d` 8px (058 p8) and `#b93d28` H8.7 S0.78 (098-style) | **`#3cab41`/`#49a347` H118-123, S0.56-0.66 -- the LEAFGRN band**, 95-900px; and `#4ea041`/`#4da33f` H117 (060 p4, 849px). Shaded to `#2c9f7c` H161.7, 43px (055 p2). **The H147 `#009e49` in this title is NOT a cap**: it is a plant or a garment, 4,000-8,000px | `#00a5d5`-`#01a4d5` H193.5, but a BOY's wedge is only 100-500px -- `#01a3d0` 409px (056 p1), `#3b96ae` H190 S0.66 167px (058 p6), `#01a2b8` 212px | black cap with a coloured wedge at the front-left of the crown, turned away in half the panels. **The dominant ink in the whole title is Scrooge's maroon coat, `#a04554` H350 S0.57, 731 blobs** -- more than every other ink combined -- and the biggest blue on any head is his TOP-HAT BAND at 1,500-6,700px, with Donald's sailor cap next at 2,000-4,000px. The scenery green is `#008c5b`-`#008e5c` H158.9 in 8,000-65,000px fills |
+| *The Titanic Ants!* (19) | **091 p3** -- the three boys in a row on the street, green / red / blue; **109 p3** shows the same caps from BEHIND, which is the clearest view of the construction in the title | `#e61a1f`-`#e71a1f` H358.5, 150-2,000px; dulled to `#b62518` H4.9 at the reference (272px) and `#e6191f` 704px on a turned crown (108 p4) | `#62a560` H118.3 **S0.42** at the reference (286px) and `#4fa43e` H110 elsewhere (2,664px on 109 p3, 917px on 108 p5). The `#009e49` H147.7 and `#018345` H151 in this title are scenery and clothing, 2,000-27,000px | `#01a2b8` H187.2 at the reference (212px), `#02a5d6`/`#06a5d2` H194 elsewhere -- 221px (109 p3), 142px (105 p5), 1,073px (097 p5), 1,858px (102 p4) | a QUARTERED black cap with one coloured segment. Scrooge's coat is again `#a04453` H350 S0.57, 355 blobs. Cast is Donald, Scrooge, the boys, **Doctor Thinknoble** (a bald human in a green jacket, 23 groups), **Mrs. Goldwad**, a picnic steward in a blue suit, and a crowd of human picnic guests who carry 19 groups between them |
+| *Getting Thor* (20) | none -- no nephews | -- | -- | -- | a Gyro solo story with his Helper, crows and two scarecrows. No cap key at all. Every one of Gyro's 14 groups is `sole-figure`; the only other voices are the crows |
+
+- **`UNCLE SCROOGE` IS DONALD AND `UNCA SCROOGE` IS A NEPHEW**, without exception
+  across all 46 pages of the two feature titles. It named the speakers on two
+  all-silhouette panels where no cap existed to read.
+- *City of Golden Roofs* prints a **second green at H158.9** (`#008e5c`) in huge
+  fills -- jungle, temple, river -- and *The Titanic Ants!* prints **H147.7 and
+  H151** the same way. In both titles the cap green is the LEAFGRN one and the
+  saturated H147-159 green is scenery, which is the opposite of the
+  sixty-eighth batch's *Wishing Stone Island*. Check the two against each other
+  at prep on every Vol. 19-20 title.
 
 Vol. 19, four titles read 2026-09-19 (sixty-eighth batch; **ALL FOUR REVIEWED**,
 so the rows below are corrected against the review). 48 pages, 99 images,
