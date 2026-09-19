@@ -7420,6 +7420,80 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-19, seventy-first batch, NONE REVIEWED)
+
+**548 groups over 40 pages, 4 titles: *The Milkman*, *Mocking Bird Ridge*,
+*Old Froggie Catapult* (all Vol. 19) and *Dramatic Donald* (Vol. 21).**
+44 type corrections and NO text corrections. 59 images over 40 pages, **1.48 per
+page**; per title 2.20 / 1.40 / 1.30 / 1.00. Nothing else was outstanding
+corpus-wide before this batch -- a no-`--title` run of `vision-corrections`
+returned exactly these 44 across 460 titles.
+
+- **THE INDOOR/OUTDOOR CAP SPLIT DECIDED THREE OF THE FOUR TITLES, AND I GOT IT
+  WRONG ONCE BEFORE CATCHING IT.** On *Mocking Bird Ridge* I ran capscan over
+  151 panel 2 -- three boys at a kitchen sink -- got `red 0, green 0, blue 0,
+  leafgrn 0 blob(s) total` at window 8-40000, and was about to write a
+  title-wide absence. The bush panels from 154 print red, leafgrn and clean blue
+  on the same three crowns. **An indoor zero is a fact about the room.** The
+  roster already says to check an indoor panel and an outdoor one; this batch is
+  what that sentence is for. Same split in *Old Froggie Catapult* (bare-headed
+  at home on 161-164 and 170, capped outdoors from 165) and in *Dramatic Donald*
+  (bare-headed everywhere, which IS the whole-title answer there).
+- **THE BIGGEST BLOB IN THE BLUE BAND WAS FURNITURE OR WEATHER IN THREE TITLES
+  OUT OF FOUR.** *Dramatic Donald* 027-028 carry 1,600-4,800px of clean
+  `#00a5d5` and every one of them is the LIVING-ROOM SOFA. *The Milkman* fills
+  the blue band with a night wash -- `#2b7399`/`#337397`/`#277299` H201 S0.66,
+  **123 blobs across the title** -- and the clean roster blue `#00a4d7` prints
+  on only three panels in ten pages. *Mocking Bird Ridge* puts the roster blue
+  on DONALD's cap in nearly every panel at 1,000-3,400px against a nephew's
+  60-460px. Put the blob on a head before it means anything, and use Donald's
+  RED BOW TIE to say which head is his.
+- **A COLOURIST CLASH WORTH THE FLAG: *Old Froggie Catapult*.** 165 g14 is
+  Donald saying `GET DOWN THERE, LOUIE, WITH THE HAMBURGER` to the only boy in
+  the panel, and a 4x crop puts red `#e61b1f` 120+134px on that boy's crown. The
+  same red-capped boy carries the hamburger, lights the fire and writes the
+  S.O.S. across 166, 167, 168 and 169. Recorded as the disagreement on all nine
+  groups: named Louie, `cap_colour` red. The second contest boy wears the clean
+  roster blue and is Dewey, so only one of the three inks is displaced.
+- **THE NAME-GREP MISSED BOTH DIALOGUE ANCHORS IN THIS BATCH.** *Mocking Bird
+  Ridge* 154 g7/g9 spell out `HUEY, DEWEY, AND LOUIE` and *Dramatic Donald* 036
+  g12 is `NO, LOUIE! IT'LL BE HUEY'S TURN!`; neither appeared in
+  `barks-ocr-name-grep`, because the three names are in the dictionary. The
+  scan is still worth running for the spellings, but **read the group text for
+  addresses yourself** -- 036 g12 is the only individual nephew name in a
+  146-group title and it is worth more than every scan put together.
+- **A TITLE WITH NO CAP KEY IS NOT A TITLE WITH NO WORK.** *Dramatic Donald*
+  came out 146 groups with every nephew collective, and all the effort went on
+  telling five adults apart: Donald, Gladstone, Daisy, a human director in a
+  blue dress, and the club members. Donald's red bow tie and Gladstone's green
+  jacket did it in every panel where both are in costume.
+- **THE STROKE-WIDTH SCREEN'S LAST BLOB ON A `!` LINE IS AN ARTEFACT.** Across
+  the four titles, every hit of 1.5-2.2 sitting on the final blob of a line the
+  screen marked `!` was the balloon outline, and a crop showed the plain weight
+  each time (*The Milkman* 142 g4 `DREAMS!` at 1.83, 146 g4 at 2.21). The
+  reliable hits are mid-line on `=` lines. Conversely a **baseline above about
+  3.2 means the WHOLE group is in the heavy slanted face** -- that is what
+  caught *Mocking Bird Ridge* 154 g7, 157 g5 and 159 g4, which take a
+  whole-group `[i]`, and it is a cheaper test than looking.
+- **CAPTION BOXES IN THESE FOUR TITLES ARE ALL SET IN A SLANTED FACE** with a
+  drop capital, so narration takes a whole-group `[i]`. Two exceptions, both
+  plain white upright boxes: *Old Froggie Catapult* 168 g11 and 170 g10.
+- `other:` values across the batch, listed so the next run can reuse rather than
+  coin: *The Milkman* `the sleeper`, `the night boss`, `a dairy worker`;
+  *Mocking Bird Ridge* `the professor`; *Old Froggie Catapult* `Catapult`,
+  `Comet Tail`, `Comet Tail's owner`, `the contest announcer`, `a rival frog
+  owner`, `a Duckburg townsman`, `a Duckburg townswoman`, `the barge crowd`,
+  `the tug captain`, `the gar`; *Dramatic Donald* `the drama club director`,
+  `a drama club member`, `the farmwife actress`, `the theatre orchestra`. No
+  near-duplicates within a title; `a Duckburg townsman` and `the barge crowd`
+  are the singular and the mass and are used deliberately.
+- **Outstanding at hand-back:** three missed-text items, all on Vol. 19 --
+  *The Milkman* 141 g13 (one box over three crate stencils, a boxing question
+  rather than missing lettering) and *Mocking Bird Ridge* 160 p5's drawn `!`
+  over the watching ducks, grouped by neither engine. Both are in
+  `queue-missed.txt` in their out-dirs. *Old Froggie Catapult* and *Dramatic
+  Donald* audited clean.
+
 ### Findings to paste into the next run (2026-09-19, seventieth batch, ALL THREE REVIEWED AND MIRRORED)
 
 **712 groups over 46 pages, 3 titles. 57 speaker corrections (8.0%)**, 38 of
@@ -8186,6 +8260,30 @@ percentages below are proposals, not corrections.
   the man who rents the burro).
 
 ## Per-volume cap palette
+
+Vol. 19 and Vol. 21, four titles read 2026-09-19 (seventy-first batch; **NONE
+REVIEWED**). 40 pages, 59 images, **1.48 per page**; per title 2.20 / 1.40 /
+1.30 / 1.00.
+
+**THE CAPS COME OFF INDOORS IN THREE OF THESE FOUR TITLES**, and an absence
+claim written off a domestic panel is wrong about the outdoor half of the same
+story. Quote the panel, not the title.
+
+**AND THE BLUE BAND'S BIGGEST BLOB IS NOT A CAP IN ANY OF THEM** -- it is a
+night wash, a sofa, or Donald's own cap. His red bow tie is the marker that
+separates him, exactly as the sixty-ninth batch found.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Milkman* (19) | **148 p2** -- leafgrn, red and clean blue on three crowns in one frame, and the cleanest key in the title; 147 p5 is the same three with the green degraded | `#e61a1f`-`#e71a1f` H358.5 S0.89, 300-1,300px; `#da1c1f` 258+238px at 147 p5 | leafgrn `#4fa43e`/`#51a53f` **H109-110** S0.62, 250-1,200px | clean `#04a5d5`/`#079ecd` **H193.8 S0.98**, 350-850px -- and it prints on only THREE panels in the title | **A NIGHT STORY.** A dark slate wash `#2b7399`/`#337397`/`#277299` H201 S0.66 fills the blue band on **123 blobs** and is the street, the walls and the shadows. A THIRD ink, `#30a77d`/`#2ba87f` **H158-160 S0.71-0.74**, sits on real crowns and is the Vol. 19 teal that is neither roster colour -- it was Louie once (147 p5) and Dewey once (148 p1), each time resolved by elimination against the two clean caps in the same panel. Donald wears a SALMON milkman's cap, not the roster blue, plus his red bow tie. Cast is Donald, the boys, **Mr. McSwine** (the pig in 505, named at 150 g2), a night boss and a dairy worker |
+| *Mocking Bird Ridge* (19) | **157 p6** -- the three boys over a hedge, blue / red / green left to right, measured off a 2.3x crop; **156 p1** keys the same three in the bushes | `#e71a1f`/`#d0231e` H358-1.7, 270-570px on a crown | leafgrn `#60a355` H111.5 **S0.48**, 220-460px, and `#589f54` H116.8 S0.47 on 152 p7 | `#05a6ce`/`#02a8db` H192-194 S0.98, **60-280px on a boy** | **THE BOYS ARE BARE-HEADED INDOORS on 151** -- panel 2 reports red 0, green 0, blue 0, leafgrn 0 blob(s) total over three of them at a sink -- and wear the caps outdoors from 154. **DONALD'S OWN CAP IS THE ROSTER BLUE**, `#00a4d7`-`#04a5d6`, **1,000-3,400px**, in nearly every panel, with his red bow-tie pair 300-1,300px directly below it; a nephew's blue is 5-20x smaller. Gladstone is `#5d76aa` H220 **S0.45** (below the cool-band floor) with an orange-red hat `#bc2a19`; Scrooge is `#a04453` H350 S0.57. Scenery green is `#1f9e67`-`#2e9e6c` H153-165 in huge fills |
+| *Old Froggie Catapult* (19) | **169 p4** -- a clean red band and a clean roster blue on two boys side by side, with Donald's bow tie between them | `#e61b1f`-`#e51b1f` H358-359 -- **and it is LOUIE's, see below**, 120-1,900px | not printed on any crown in the title | `#00a4d7`/`#03a5d6` H194, on the second contest boy at 400-1,200px | **COLOURIST CLASH, FLAGGED ON NINE GROUPS.** 165 g14 is Donald saying GET DOWN THERE, **LOUIE**, WITH THE HAMBURGER to the only boy in the panel, and that boy wears RED from 165 to 169 -- named from the dialogue, `cap_colour` red as printed. The other contest boy wears the roster blue and is Dewey. All three are bare-headed at home on 161-164 and 170. Donald's cap is the roster blue 650-3,300px plus the bow tie. Big reds in the band are display lettering (161 p4's ROAR, 157-style GONGs) and the fire. Cast adds **Grandma Duck** (tagged, 170 p5-p6), Catapult the bullfrog, a contest announcer, Comet Tail's owner and a bargeload of townsfolk |
+| *Dramatic Donald* (21) | **none -- and that is the finding** | -- | -- | -- | **FIRST TITLE READ FROM VOL. 21, AND IT HAS NO CAP KEY AT ALL.** The nephews are bare-headed in every panel, at home and at the theatre, so all 30-odd nephew groups are collective. **THE TRAP IS THE SOFA**: 027 and 028 carry 1,600-4,800px of clean `#00a5d5` H194 and every blob of it is the living-room furniture; the `#00b3d7` H190 from 034 is the prince costume and the stage curtain. The one individual name in 146 groups is 036 g12, `NO, LOUIE! IT'LL BE HUEY'S TURN!`. Cast is Donald (red bow tie), **Gladstone** (green jacket, curly hair), **Daisy** (red hair-bow), a human drama-club director in a blue dress with a black bun, and assorted club members |
+
+- **Vol. 21 is opened but not characterised.** One title is not a volume: all
+  that is established is that *Dramatic Donald* prints no nephew cap and that
+  its roster-blue objects are furniture and costume. The next Vol. 21 title
+  should derive its own reference panel rather than carry this row over.
 
 Vol. 19 and Vol. 20, three titles read 2026-09-19 (seventieth batch; **ALL
 THREE REVIEWED AND MIRRORED**, so the rows below are corrected against the
