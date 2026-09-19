@@ -474,3 +474,25 @@ HELP KEEP AMERICA STRONG
 20 058 three music notes drawn beside the tape machine in panel 8
 20 059 music notes drawn beside the tape machine in panel 3
 20 059 music notes drawn at the right of panel 6
+
+# Judged not worth a group by the reviewer, 2026-09-19 (the seventieth batch).
+# Two findings, both real lettering rather than drawn devices, so the standing
+# 2026-09-07 device ruling does not cover either.
+#
+# The Half-Baked Baker 128 p4: the FOURTH judge's yellow ribbon. The other three
+# are grouped -- the pass added them on p2, p3 and p5 after reading them at 2.5x
+# -- but on p4 the panel's bottom edge cuts this one after two characters,
+# leaving JU of JUDGE. The same reasoning as Worm Weary 131's LA and Too Safe
+# Safe 140's DON / DU: a truncation carries no readable content and there is
+# nothing for a searchable box to hold. It stays in 128's visible_text, which is
+# a true record of what is printed.
+19 128 JU
+#
+# Dodging Miss Daisy 131 p1: the wall calendar in the splash, a five-row grid of
+# the numerals 1 to 31 with the 9 ringed in red. The ring is the page's plot
+# point -- Donald asks the boys why he circled the date -- but the numerals
+# themselves are a prop grid, not text anyone reads or would search for, and a
+# box holding thirty-one digits is worth nothing to the index. Nearest precedent
+# is the Great Ski Race 124 refreshment-stand price plates. The grid stays in
+# 131's visible_text as a true record of what is drawn.
+19 131 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
