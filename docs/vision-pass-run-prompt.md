@@ -7420,6 +7420,92 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-20, seventy-second batch, NONE REVIEWED)
+
+**405 groups over 37 pages, 3 titles: *Water Ski Race* (Vol. 19, 6pp, 57),
+*The Golden River* (Vol. 20, 27pp, 304) and *The Know-It-All Machine* (Vol. 20,
+4pp, 44).** 80 images, **2.16 per page**. 32 groups at low or medium against 373
+at high; 1 text correction, 4 type overrules, 11 missed-text findings.
+
+- **THE FORM OF ADDRESS IS A HARD SPEAKER TEST IN BOTH VOLUMES, AND IT BROKE
+  THREE NEAR-TIE TIPS.** The boys say **UNCA** Donald / **UNCA** Scrooge; Donald
+  says **UNCLE** Scrooge; Daisy says **OH, DONALD** and never UNCA. On *Water Ski
+  Race* 172 g4 the tail tips 9px past Daisy's bow and 21px inside a nephew's head
+  -- a coin toss on nearness -- and OH, DONALD settles it for her. On *The Golden
+  River* 114 g7 the tip lands exactly between Donald and a boy, 30px either way,
+  and UNCA SCROOGE takes it to the boy; 121 g1 is the same shape. **Grep the
+  title for UNCA before page 1 and the count is free** -- 28 hits on *The Golden
+  River*, and every one of them excludes Donald.
+- **A TITLE CAN PRINT NO NEPHEW CAP INK AT ALL, AND ONE PANEL SETTLES IT.**
+  *Water Ski Race* puts the boys in swim gear under plain WHITE sailor caps for
+  all six pages. `title_bands` shows blue at 0-138 blobs per panel and every
+  clean ink in the title is the boat hull (#00a4d7 H194), Donald's own cap or the
+  flying ski (#e61b1f H358). One panel read at source resolution proved it and
+  all 12 nephew groups are collectives -- which is the *cheap* version of an
+  absence claim, because the scan and the drawing agree.
+- **A SCALLOPED BALLOON UNDERSIDE IS NOT A FAN OF TAILS, AND I CALLED FOUR
+  GROUPS COLLECTIVE ON THAT BASIS.** *The Golden River* 102 g0, 103 g4 and 105
+  g3 each put ONE balloon over a row of three boys with THREE downward points
+  along its lower edge, spread across two or three heads. The roster's chorus
+  rule covers exactly that shape, so all three went `nephews`. **If the review
+  names them, the finding is that the leftmost point is the tail and the others
+  are the balloon's own edge** -- and the leftmost-tail tie-break should be
+  applied instead. This is the single biggest block of declines in the batch and
+  it is worth checking first.
+- **THE 098 ESTABLISHING PAGE COST 9 IMAGES AND FOUR WERE SPENT ON A TAIL THAT
+  IS NOT DRAWN.** 098 g10's balloon spans the whole panel over four figures; I
+  cropped the left end, then a wider left view, then the right end, before
+  accepting that the outline closes without a spur at either. **Crop one wide
+  view of a wide balloon's whole underside first.** The rest of that title ran at
+  1.8 images per page, so the page is a third of its own overspend.
+- **THE COLOURIST CLASH IN *THE GOLDEN RIVER* RUNS OPPOSITE TO LAST BATCH'S.**
+  122 g2 and g4 have Scrooge call the firewood boy **LOUIE** twice while the boy
+  wears a clean 413px `#e31b20`; six panels later 122 g8's boy, also in clean
+  red, is called **DEWEY**. Both are recorded as the disagreement -- name from
+  the dialogue, `cap_colour` red as printed. Unlike *Old Froggie Catapult*, the
+  naming does NOT hold for a run of pages: 123 g1 and g2 have a clean green and a
+  clean red side by side and were read by the convention.
+- **VOL. 20 PRINTS A THIRD BAND ON REAL CROWNS THAT IS NEITHER ROSTER INK.**
+  `#468173` H165.8 S0.46 (101 p5), `#18a2a5` H182 (110 p6), `#0aa4c5` H190 (111
+  p3, 101 p8). It is 55 degrees off this title's cap green (`#4da240` H111) and
+  10-15 off its cap blue. Every boy carrying it was named by **elimination
+  against the two clean caps in the same panel**, at medium, with `cap_colour`
+  left **null** rather than written in from the name.
+- **THE CAPS COME OFF INTO THEIR HANDS THREE TIMES, AND THE SCAN STILL FINDS
+  THEM.** *The Golden River* 102 p3, 103 p1 and 105 p3 all read as bare crowns
+  and put the red, green and blue at chest or hip height (y460-586 on 105 p3)
+  where the boys are carrying them. `capsum`-style output at 40-3000px makes this
+  obvious in one line: ink low on the panel with white crowns above it is a HELD
+  cap, not scenery. It named four groups that a crown-only read would have
+  declined.
+- **A MACHINE AND AN ANIMAL BOTH TAKE `other:`, AND THE TYPE FOLLOWS THE
+  THROAT.** Four type overrules, all sound_effect -> dialogue except one: 121 g9
+  `CROWK! CROWK!` (a crow), 186 g1 `WHEEK!` (the bird), 186 g7 `TWEET! TWEET!`
+  (Gyro singing) -- and 185 g2 `GLUE`, which is the word lettered on the paint
+  pail and is **background**, not a noise. The talking machines in *The Know-It-
+  All Machine* are told apart by their tails: the purple answer machine and the
+  green thought-reading machine both speak on a **lightning-bolt tail**, and 186
+  g5 is the GREEN one relaying the bird's mind while 186 g10 is the purple one.
+- **THE ONE TEXT CORRECTION IS A MISSPELLING THE OCR SILENTLY FIXED.** 116 g7's
+  art reads **WIERD** at 5x; the stored text had normalised it to WEIRD. Two
+  things follow. Barks's own misspellings belong in the searchable text, so it is
+  a real correction -- and **`emphasis_markup` is checked against the STORED
+  text**, so the markup on that group had to be written with WEIRD and will need
+  re-applying once the correction is taken. Expect that whenever a text
+  correction and emphasis land on the same group.
+- **Missed text, 11 items, none of them a sign the pass overlooked.** Two gauge
+  numbers (097 `98`/`97`), four `$` devices (a building plate, a framed painting,
+  the bin's shield), three sets of drawn music notes, one drawn `?` (119 p8), and
+  the `GLUE` pail label quoted aloud in 184 g8's balloon. The page captures found
+  every one of them; the audit's job here was to prove the capture was complete
+  rather than to catch an omission.
+- **`other:` values written by the pass:** *Water Ski Race* -- `the festival
+  announcer`, `a spectator`, `the Queen`. *The Golden River* -- `a McDuck clerk`,
+  `Mr. Clerkmore`, `Tony`, `Jocko`, `the doctor`, `a crow`, `a passer-by`, `the
+  Money Bin clerks`. *The Know-It-All Machine* -- `the know-it-all machine`, `the
+  thought-reading machine`, `the bird`, `a passer-by`. No near-duplicates within
+  a title; `a passer-by` is deliberately shared across two titles.
+
 ### Findings to paste into the next run (2026-09-19, seventy-first batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
 **551 groups reviewed across all four titles; 41 speaker corrections (7.4%).**
@@ -8359,6 +8445,38 @@ percentages below are proposals, not corrections.
   the man who rents the burro).
 
 ## Per-volume cap palette
+
+Vol. 19 and Vol. 20, three titles read 2026-09-20 (seventy-second batch; **NONE
+REVIEWED**, so every row below is the pass's own reading and uncorrected). 37
+pages, 80 images, **2.16 per page**; per title 3.33 / 2.07 / 1.00.
+
+**THE REFERENCE PANEL FOR VOL. 20 IS *THE GOLDEN RIVER* 103 p3** and it is the
+cleanest in the volume: three boys running left to right with one band each on
+its own crown, GREEN `#4da240` H111 S0.61, RED `#e41a20` H358, BLUE `#03a4d3`
+H194, on the quartered black cap with a coloured front band -- the same
+construction *The Money Well* uses. The bands are SMALL, 130-650px on a crown,
+so a 25px floor is fine but a 60px one is not.
+
+**THE GREEN THAT IS NOT A CAP IN VOL. 20 IS `#5d963c` AT H98-99**, which fills
+whole hillsides and the dollar-patterned wallpaper. It sits 12 degrees BELOW the
+cap green rather than above it, which is the opposite side from the Vol. 7 trap,
+so ranking hues without checking the area will pick it every time.
+
+**AND THE BIG BLUE BLOB IS NEVER A NEPHEW IN EITHER TITLE.** In *The Golden
+River* it is Scrooge's TOP-HAT BAND (700-3,100px) or Donald's sailor cap
+(800-3,500px); a nephew's blue is 60-420px, 5-20x smaller. In *Water Ski Race*
+it is the boat hull, up to 37,000px.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *Water Ski Race* (19) | **none -- and that is the finding** | -- | -- | -- | **NO NEPHEW CAP INK IN THE TITLE.** The boys are in swim gear under plain WHITE sailor caps on all six pages, so all 12 nephew groups are collectives. `title_bands` gives blue 0-138 blobs per panel; every clean ink is the boat hull `#00a4d7` H194 S1.00 (up to 37,771px), Donald's own sailor cap, the flying ski `#e61b1f` H358 or shoreline foliage `#4fb04f` H120. Donald is bare-headed in swim trunks with TWO BLUE STRIPES, which is what separates him from a boy in a close-up (173 p4). Daisy carries the maroon `#a0466a`-`#a1476b` H336-340 S0.53 of the Vol. 19 row throughout. Cast adds the festival announcer, a spectator and the Queen of the Water Festival |
+| *The Golden River* (20) | **103 p3** -- three boys in a row, green / red / blue, one clean band each; 111 p3 and 101 p5 repeat it | `#e41a20`-`#e61b1f` H358, **130-1,900px on a crown**; dimmed to `#bc2f36` H357 (109 p3) and `#9c2d18` H6 (119 p4) in shadow, and `#ac3a45` S0.66 at 130px (122 p2) | `#4da240`/`#4da33f`/`#4ca33f` **H111 S0.61**, 130-936px -- and the H98 `#5d963c` is scenery, never a cap | `#03a4d3`-`#00a5d5` **H194**, 60-420px on a boy; `#0aa4c5` H190 is the same cap dimmed | quartered black cap with a small coloured front band. **THREE TIMES THE CAPS ARE OFF AND HELD** (102 p3, 103 p1, 105 p3): the crowns read bare and the ink sits at chest or hip height. **A THIRD BAND ON REAL CROWNS IS NEITHER INK** -- `#468173` H166, `#18a2a5` H182 -- and those boys are named by elimination with `cap_colour` null. **COLOURIST CLASH ON 122**: Scrooge names a RED-capped boy Louie twice and another RED-capped boy Dewey. Scrooge's maroon coat `#a04554` H350 S0.57 fills the red band on most panels and his top-hat band is the roster blue. Cast adds **Mr. Clerkmore** (named at 101 g8), **Tony** the organ grinder and **Jocko** his monkey, a doctor, a crow and two passers-by |
+| *The Know-It-All Machine* (20) | **n/a -- no nephews in the title** | -- | -- | -- | A Gyro one-pager set, 183-186. No ducks but Gyro and two human passers-by, so no cap question arises at all and every page cost one image. **THE TWO MACHINES BOTH TALK AND BOTH USE A LIGHTNING-BOLT TAIL**: the PURPLE answer machine (183 g5/g7/g10, 184 g6, 185 g6, 186 g10) and the GREEN thought-reading machine (186 g5, relaying the bird's mind). Tell them apart by the colour of the cabinet the bolt runs back to. Gyro's helper lamp is in nearly every panel and never speaks |
+
+- **Vol. 20 is now well characterised** across *The Money Well*, *City of Golden
+  Roofs*, *Getting Thor* and *The Golden River*: the same quartered black cap,
+  the same three inks at H358 / H111 / H194, and the same two decoys, Scrooge's
+  top-hat band and the H98 scenery green.
 
 Vol. 19 and Vol. 21, four titles read 2026-09-19 (seventy-first batch; **THREE
 OF FOUR REVIEWED AND MIRRORED** -- *Old Froggie Catapult* is 138/140 and still
