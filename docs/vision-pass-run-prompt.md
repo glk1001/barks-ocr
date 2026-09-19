@@ -7420,6 +7420,112 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-19, sixty-ninth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+**561 groups over 50 pages, 3 titles.** 87 images, **1.74 per page**; per title
+1.88 / 1.50 / 1.60. **24 speaker corrections (4.3%)**, 16 of them in the
+54-group nephew domain (29.6%). By title: *City of Golden Roofs* 9/351 (2.5%),
+*Getting Thor* 3/37 (8.1%), *The Titanic Ants!* 12/173 (6.9%). **20 of the 21
+type corrections held**, and the review proposed none the pass had missed. No
+text corrections in the whole batch. The review added **4 groups**, on top of
+the 4 the pass added itself.
+
+- **MEDIUM WAS 0 FOR 20, AND HIGH WAS 20 OF 537 (3.7%).** The first batch in
+  nine where medium is not the worse bet -- *every* medium the pass wrote
+  survived review, on all three titles (17, 0 and 3). **Do not read this as
+  medium being safe**: 20 is a small sample and the pass only reached for it
+  where it had already written the alternative into the note. What it does say
+  is that CASH THE NOTE worked -- the mediums were honest, and the errors were
+  all in calls written at high.
+- **SIZE STILL DOES NOT SEPARATE THE ROSTER BLUE, AND IT COST 5 OF THE 24.**
+  *City* 049 g6 and 060 g5, *Ants* 108 g6 and 109 g1 all went **Donald ->
+  Dewey**, and *Ants* 108 g5 went **Huey -> Donald** the other way. On 060 g5
+  the note gives the blob size AS the reason -- *"2632px of #01a4d5 -- Donald's
+  sailor cap, much the biggest blue in the panel"* -- and it was a nephew's.
+  This is the sixty-seventh and sixty-eighth batches' finding landing a THIRD
+  time, now across three volumes. **Stop using blue area to tell Donald from a
+  boy. The reliable marker in Vols. 19-20 is the RED BOW TIE**, 250-1,700px at
+  his neck, present in every close drawing of him and absent from every nephew.
+- **UNDER-NAMING IS THE LARGEST SINGLE CLASS FOR THE FOURTH BATCH RUNNING: 7 OF
+  24.** *City* 050 g14 (-> Louie) and 058 g11 (-> Dewey); *Ants* 091 g7 (->
+  Dewey), 098 g5 (-> Huey), 098 g8 and g10 (-> Dewey), 102 g2 (-> Huey). 058
+  g11 is the sharpest: the note quotes **`RED: 0 blob(s) total`** and every
+  green in the panel as jungle fill, then declines -- and the reviewer named him
+  Dewey off a blue the whole-panel scan never reported. The scan was right about
+  the scan and wrong about the boy, again.
+- **THE REVIEWER'S OWN CORRECTION CAN CREATE A DUPLICATE NAME, AND NOTHING
+  CHECKS FOR IT.** *Ants* 098 p4 came back with **two Louies**: g7 (the
+  crouching boy, leafgrn `#4ea53d` 272px+169px) unchanged, and g8 (the
+  right-hand boy, `#e61a1f` 195px+74px) corrected `nephews -> Louie` with the
+  note *"Colorist error: this should be a green cap and therefore Louie"*.
+  Raised before mirroring and settled as **Dewey by elimination**, with the
+  printed red kept. **Add to the close-out: count the distinct nephew names per
+  panel after a review and before the mirror**, because the mirror copies the
+  clash onto the second engine.
+- **THAT PANEL ALSO SETTLED THE TWO-REDS QUESTION, AND THE PASS'S CAUTION WAS
+  WRONG.** The pass wrote `nephews` on 098 g5 and g8 citing the roster's *two
+  nephews printed the same colour tells you nothing about either*. The reviewer
+  named both, annotating **"Colorist error: two red caps"**. So the rule is
+  narrower than it reads: **two boys in the same roster colour makes the COLOUR
+  useless, not the panel** -- the tail still places each speaker, and the third
+  boy's clean cap plus elimination still names them all.
+- **A ROW OF `$` SIGNS IS LETTERING -- THIRD BATCH RUNNING, AND THE PASS PUT IT
+  IN `objects` AGAIN.** The review added both: *Ants* **101 p2** (three signs)
+  and **110 p6** (four), each `thought` / Scrooge. Verified against the art at
+  1.7x before mirroring; the counts match. This was the sixty-seventh batch's
+  finding and the sixty-eighth's, verbatim. **Write them as `added_groups` at
+  read time** -- the pass proved on this batch that it can (4 of its own).
+- **LIST A REPEATED SIGN ONCE PER INSTANCE, OR THE AUDIT CANNOT SEE IT.** Both
+  *City* adds -- 054 p2 and 056 p3 -- are a SECOND and THIRD `HI-FI` crate
+  stencil in frames where the pass listed the stencil once in `visible_text`.
+  The audit therefore reported the pages as covered. The roster says this in as
+  many words and the pass did not do it; 056's is half-hidden behind a boy's
+  leg, which is presumably why neither engine grouped it either.
+- **A LONE ANIMAL IN A STORY THAT NAMES ITS ANIMAL IS THAT ANIMAL.** *Getting
+  Thor* 181 g0 and 182 g1 both went `other:a crow` -> **`other:Old Blackie`**.
+  The pass flagged `a crow` against `the crows` as a deliberate singular/plural
+  pair; the real answer is that the singular is never anonymous in a title whose
+  dialogue names the bird three times. Two of Thor's three corrections are this.
+- **A COLLECTIVE `other:` IS A LEGITIMATE VALUE.** *City* 053 g2 went
+  `other:the Gung Ho villager` -> **`other:Donald and the Gung Ho villager`** --
+  the `SHOELESS PASHLY!` greeting is the two of them shouting it together. The
+  pass placed the balloon on the villager's head and never considered that both
+  figures carry it, exactly as `other:Donald and the nephews` is used elsewhere.
+- **THE ONE TYPE CALL THAT REVERSED WAS READ OFF A MONTAGE.** *Ants* 095 g1,
+  the single-word `ANT!`, was moved `dialogue -> thought` on the strength of
+  *"a cloud edge and a trail of separate bubbles"* seen at 250px; the review put
+  it back. **A balloon-shape call is a drawing test and the montage is not the
+  drawing** -- either open the panel or leave the stored type alone. Every other
+  type move held, including all 13 machine-playing-a-record moves on *City*.
+- **TWO MORE ON ADULT-AGAINST-ADULT AND LONG SHOTS.** *City* 048 g4 went
+  `Scrooge -> nephews` (the pass reasoned *"the balloon sits over a shape that
+  carries no head; the nearest speaker to its left is Scrooge"* -- nearest is
+  not a tail), and 050 g9 went `nephews -> Donald` on the wide river panel where
+  heads.py finds no beaks at all. Both are calls made from geometry after the
+  art ran out; both would have been better as the collective and the name
+  respectively.
+- `other:` values at close. *City of Golden Roofs*: `the King of Tangkor Wat`
+  (16), `Shoeless Pashly` (13), `a Tangkor Wat villager` (10), `the Gung Ho
+  villager` (9), `the hiring agent` (8), `a hunter` (7), `a Tangkor Wat elder`
+  (4), `the factory manager` (4), `an employer` (3), `the boy in the gold hat`
+  (3), `a man in the job line` (2), `the royal dance master` (2), `Donald and
+  the Gung Ho villager`, `the dock porter`, `the man at the sales office
+  window`, `the man in the air pipe`. *Getting Thor*: `the crows` (3), `Old
+  Blackie` (2). *Ants*: `Doctor Thinknoble` (23), `a picnic guest` (19), `the
+  householder` (3), `the picnic steward` (2), `a giant ant`, `Mrs. Goldwad`.
+  **The one near-duplicate pair the pass flagged was resolved by renaming, not
+  by keeping both** -- `a crow` is gone. `the householder` survived review
+  unchanged.
+- **Outstanding at close, and they are the only two things:** *City* **056 g5**
+  is the single group never `speaker_reviewed` on either engine (Scrooge,
+  unchanged, so the pass's call stands) -- `queue-straggler.txt`, one line. And
+  *City*'s **five drawn music notes** (055 p5, 058 p5, 058 p8, 059 p3, 059 p6)
+  are still awaiting an add-or-ignore decision; the recommendation remains the
+  ignore list. Everything else is clean: nothing outstanding in corrections
+  across all 460 titles, missed-text at zero in all three classes on *Thor* and
+  *Ants*, and all three titles matching on group count, reviewed count,
+  identified_by count and the speaker, cap_colour and confidence distributions.
+
 ### Findings to paste into the next run (2026-09-19, sixty-ninth batch, NONE REVIEWED)
 
 **557 groups over 50 pages, 3 titles** -- *City of Golden Roofs* (Vol. 20, 26pp,
@@ -7919,8 +8025,20 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 20 and Vol. 19, three titles read 2026-09-19 (sixty-ninth batch; none
-reviewed). 50 pages, 87 images, **1.74 per page**; per title 1.88 / 1.50 / 1.60.
+Vol. 20 and Vol. 19, three titles read 2026-09-19 (sixty-ninth batch; **ALL
+THREE REVIEWED**, so the rows below are corrected against the review). 50 pages,
+87 images, **1.74 per page**; per title 1.88 / 1.50 / 1.60.
+
+**THE ROW BELOW THAT THE REVIEW CORRECTED IS THE BLUE ONE, IN BOTH TITLES.**
+Five of the batch's 24 speaker corrections are Donald against a nephew decided
+on how BIG the blue was. A nephew's wedge in these titles runs 100-2,600px and
+Donald's cap 1,300-6,700px, and the ranges overlap -- so the blue column names
+nobody on its own. His RED BOW TIE does.
+
+**AND 098 p4 OF *THE TITANIC ANTS!* IS A CONFIRMED COLOURIST ERROR**: two boys
+in one frame print the roster red, annotated as such by the reviewer. The middle
+boy is Huey, the crouching one Louie on leafgrn, and the right-hand one Dewey by
+elimination with the red kept on the group.
 
 **THE CAP IS A PATCH ON A BLACK CROWN IN BOTH OF THESE TITLES, 8px TO 900px**,
 and the census's default floor does not see it. Re-run `capscan <panel> 8 40000`
