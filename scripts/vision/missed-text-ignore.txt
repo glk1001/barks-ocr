@@ -454,3 +454,23 @@ HELP KEEP AMERICA STRONG
 19 112 a music note drawn inside Donald's song balloon in panel 7
 19 118 red stars drawn round the eagle's head in panels 5 and 7
 19 120 red stars drawn round the rotor in panels 3 and 4
+
+# Judged not worth a group by the reviewer, 2026-09-19: City of Golden Roofs
+# records five sets of DRAWN MUSIC NOTES in its pages' visible_text. The whole
+# story turns on a bongo tape playing out of Donald's midget hi-fi, so the notes
+# hang in the air beside the machine or beside whoever is keeping time with it --
+# 055 p5 by the boat's mast, 058 p5 beside the man kneading dough, 058 p8 and
+# 059 p3 beside the tape machine, 059 p6 at the frame's edge. Devices with no
+# letters, recorded so the audit can see them and then suppressed here, the same
+# case as the Persistent Postman and Code of Duckburg 172 entries above.
+# The entries are the descriptions as written into visible_text, matched exactly.
+#
+# The bongo lettering itself -- BOM BOM, BOMMITY BOM, BOPPITY BONGO BONG and the
+# rest -- is NOT in here: every instance is a real group, and the pass moved all
+# thirteen from sound_effect to dialogue with the drummer on the record as
+# speaker. Only the wordless notes are suppressed.
+20 055 three music notes drawn in the air beside the mast of Donald's boat in panel 5
+20 058 two music notes drawn beside the man kneading dough in panel 5
+20 058 three music notes drawn beside the tape machine in panel 8
+20 059 music notes drawn beside the tape machine in panel 3
+20 059 music notes drawn at the right of panel 6

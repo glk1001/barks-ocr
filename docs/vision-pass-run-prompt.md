@@ -7516,15 +7516,16 @@ the 4 the pass added itself.
   **The one near-duplicate pair the pass flagged was resolved by renaming, not
   by keeping both** -- `a crow` is gone. `the householder` survived review
   unchanged.
-- **Outstanding at close, and they are the only two things:** *City* **056 g5**
-  is the single group never `speaker_reviewed` on either engine (Scrooge,
-  unchanged, so the pass's call stands) -- `queue-straggler.txt`, one line. And
-  *City*'s **five drawn music notes** (055 p5, 058 p5, 058 p8, 059 p3, 059 p6)
-  are still awaiting an add-or-ignore decision; the recommendation remains the
-  ignore list. Everything else is clean: nothing outstanding in corrections
-  across all 460 titles, missed-text at zero in all three classes on *Thor* and
-  *Ants*, and all three titles matching on group count, reviewed count,
-  identified_by count and the speaker, cap_colour and confidence distributions.
+- **Outstanding at close: nothing.** *City* 056 g5, the one group that had never
+  been `speaker_reviewed`, was signed off with the pass's call kept (Scrooge,
+  `speaker_was` null, so a confirmation and not a correction) and mirrored,
+  taking the title to **351/351 on both engines**. *City*'s five drawn music
+  notes went to `missed-text-ignore.txt` on the reviewer's ruling -- the bongo
+  LETTERING is all real groups and stays, only the wordless notes are
+  suppressed -- so all three titles now audit at zero in all three classes.
+  Nothing outstanding in corrections across all 460 titles, and all three
+  titles match on group count, reviewed count, identified_by count and the
+  speaker, cap_colour and confidence distributions.
 
 ### Findings to paste into the next run (2026-09-19, sixty-ninth batch, NONE REVIEWED)
 
