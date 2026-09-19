@@ -7420,6 +7420,80 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-19, seventieth batch, ALL THREE REVIEWED AND MIRRORED)
+
+**712 groups over 46 pages, 3 titles. 57 speaker corrections (8.0%)**, 38 of
+them in the 134-group nephew domain (28.4%). By title: *The Half-Baked Baker*
+15/160 (9.4%), *Dodging Miss Daisy* 12/122 (9.8%), *The Money Well* 30/442
+(6.4%). **By the confidence the pass wrote: high 40 of 678 (5.9%), medium 6 of
+33 (18.2%)** -- medium is the worse bet again, after one batch where it was not.
+7 type corrections, of which 6 held. The review ADDED 13 groups and lengthened
+20 more texts the pass had transcribed short.
+
+- **UNDER-NAMING IS THE LARGEST CLASS FOR THE FIFTH BATCH RUNNING: 27 OF 57**,
+  and this time it is not close -- 10 of 15 on *Baker*, 10 of 12 on *Daisy*, 7
+  of 30 on *Money Well*. **AND THE REVIEWER SET A CAP COLOUR ON ALMOST EVERY
+  ONE.** That is the finding. The pass declined those boys having quoted the
+  census's own `N blob(s) total` zero -- *Baker* 122 g6 (`red 0 blob(s) total,
+  green 0, blue 0`), 123 g6/g7, 128 g0/g1, *Daisy* 137 g1, 138 g7/g8, 140 g9,
+  *Money Well* 081 g8/g10 -- and the reviewer then read red, blue or green on
+  the same crowns. **A capscan zero over a WHOLE PANEL does not mean a zero on
+  the crown: crop the crown at 3x+ before declining, every time.** Quoting the
+  header protected the honesty of the note and not the accuracy of the call.
+- **A MEASURED TIP IS STILL WORTH LESS THAN A CAP.** Both of *Baker*'s
+  attribution swaps were tips the pass had measured at 4x and written into the
+  note: 121 g10 (`tip at panel (545,231), INSIDE the right boy's head+beak span
+  x528-663`) went Louie -> Dewey, and 124 g7 (`tip at panel (331,164)`) went
+  Dewey -> Huey. Same on *Money Well* 075 g6, whose tip was `INSIDE the
+  blue-capped boy's head span` and which went Dewey -> Louie. **Where a tip and a
+  cap disagree, the cap won every time in this batch -- 5 of 6 attribution
+  swaps.**
+- **THE PASS'S TWO BIGGEST DECLINES WERE BOTH RIGHT TO BE FLAGGED AND BOTH
+  NAMEABLE.** *Baker* 122 p1's offset fan, flagged as a set because two tails
+  landed 42px apart over one boy, came back Huey and Dewey. *Daisy* 133 p8's
+  wire-cart pile-up, declined because the heads overlap, came back Louie and
+  Dewey. In both the pass wrote the geometry into the note and stopped one step
+  short.
+- **`unknown` IS NOT A VALUE THE PASS SHOULD EVER LEAVE**: 13 of the 57
+  corrections are `unknown -> none` or `unknown -> narrator` on groups the pass
+  never wrote at all -- background lettering the REVIEW added, which arrives
+  with no speaker. Not the pass's error, but it inflates the correction count;
+  read it as 44 real speaker corrections, 6.2%.
+- **THE PASS TRANSCRIBED THE BEAGLE BOYS' SHIRT PLATES SHORT, TWENTY TIMES.**
+  `176-716 BEAGLE BOYS` for `176-716 BEAGLE BOYS INC.`, and once `176-61` for
+  `176-617`. The plates are read at montage scale and the last line falls off
+  the bottom of the shirt. **A numbered plate needs its own crop like a cap
+  does** -- and because the same short text went into `visible_text`, the audit
+  reported 14 phantom missed-text items until the captures were corrected.
+- **THIRTEEN ADDS THE PASS NEVER SAW, AND ELEVEN ARE SHIRT PLATES OR DRAWN
+  DEVICES.** *Daisy* 140 p7 `GUARD` (the lettering on General Snozzie's own
+  cap), *Money Well* 069 p1 `$` and 071 p5 `$` (both drawn devices the pass put
+  in `objects` instead of `visible_text`), 082 p5 `SOON!`, and eight more
+  plates. Every one arrived clean -- background/none, no Copy In residue -- but
+  **a prop the pass lists in `objects` is invisible to the audit; if it carries
+  letters it belongs in `visible_text`.**
+- **AN ADD RENUMBERS THE PAGE AND STRANDS THE LAST QUEUE ENTRY.** All three
+  stragglers are the same shape: *Daisy* 140 g11 and *Money Well* 088 g13 are
+  the last group on a page that gained one, and *Money Well* 074 g15 is the
+  OUCH! type correction whose id moved out from under the queue file, so it is
+  still unconfirmed. Regenerate the queues after the reviewer's adds, not
+  before.
+- `other:` values at close. *Baker*: `a cooking fair judge` (6), `the biscuit
+  customer` (3), `the lady customer` (1), `Huey and Louie` (1). *Daisy*: none --
+  General Snozzie is canonical. *Money Well*: `a Beagle Boy` (78), `Grandpa
+  Beagle` (10), `the tunnel contractor` (2), `a policeman` (1), plus the
+  canonical `The Beagle Boys` (1). No near-duplicates; the singular/plural
+  Beagle pair is one free-text value against one canonical one.
+- **Outstanding at close.** Three groups never `speaker_reviewed` (*Daisy* 140
+  g11, *Money Well* 069 g3 and 088 g13), all uncontentious pass calls in
+  `queue-straggler.txt`. One type correction unconfirmed, *Money Well* 074 g15
+  `OUCH!`. One text correction: *Money Well* 085 g16's easyocr text is the
+  truncated `176-617 BEAGLE` where paddleocr and a 3x crop both read `176-617
+  BEAGLE BOYS INC.`, which is why the mirror left that one group alone and
+  paddleocr shows 439 reviewed against easyocr's 440. Two missed-text findings
+  the reviewer has not ruled on: *Baker* 128's cut-off `JU` ribbon and *Daisy*
+  131's calendar grid.
+
 ### Findings to paste into the next run (2026-09-19, seventieth batch, NONE REVIEWED)
 
 **712 groups over 46 pages, 3 titles.** 85 images, **1.85 per page**; per title
@@ -8103,8 +8177,15 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 19 and Vol. 20, three titles read 2026-09-19 (seventieth batch; none
-reviewed). 46 pages, 85 images, **1.85 per page**; per title 3.10 / 1.80 / 1.38.
+Vol. 19 and Vol. 20, three titles read 2026-09-19 (seventieth batch; **ALL
+THREE REVIEWED AND MIRRORED**, so the rows below are corrected against the
+review).
+
+**THE ROW THE REVIEW CORRECTED IS EVERY 'no ink on the crown' CLAIM.** 27 of
+the batch's 57 speaker corrections are boys the pass left collective after
+quoting a whole-panel capscan zero, and the reviewer set red, blue or green on
+almost all of them. The bands below are right about the inks and were read at
+the wrong scale: crop the crown, do not scan the panel. 46 pages, 85 images, **1.85 per page**; per title 3.10 / 1.80 / 1.38.
 
 **THE BEAGLE BOYS WEAR RED CAPS.** In *The Money Well* the red band is theirs,
 not Huey's, on nearly every panel they appear in -- clean #e61b1f on masked
