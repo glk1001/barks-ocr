@@ -509,3 +509,30 @@ HELP KEEP AMERICA STRONG
 # as it is -- it is a true record of what is printed.
 19 141 DAISY DAIRY CO.
 19 141 DAISY
+
+# 2026-09-20, the seventy-second batch. GLK ruled these six ignorable after
+# working the queue, having added groups for the two that were real: The Golden
+# River 119 p8's drawn `?` over a nephew's head, and The Know-It-All Machine
+# 184 p7's GLUE pail label.
+#
+# The Golden River 098 p6 and 102 p1, the dollar signs. 098's is the roundel
+# under the McDUCK BLDG wall plate -- part of the building's device rather than
+# a sign carrying words, unlike the 105 p1 bin shield, which WAS added at
+# review. 102's is drawn as the sun inside a framed landscape hanging on the
+# office wall: a picture inside a picture, with no searchable text in it.
+20 098 $
+20 102 $
+#
+# Music notes, four instances over two titles: The Golden River 098 p8 (inside
+# the HI, UNCLE SCROOGE! balloon, so already within g11's box) and 104 p1-p2
+# (off Tony's barrel organ, then over Scrooge's desk); The Know-It-All Machine
+# 183 p4 and p8 (beside the red bird on the branch) and 186 p6 (beside Gyro's
+# TWEET! TWEET!). Every one of them is a drawn device carrying no characters --
+# they mark that something is being played or sung, and the singing itself is
+# already grouped as dialogue next to them. Nothing here would ever be found by
+# a text search. CoD 172's notes were added because they were the ONLY record of
+# a sound on that page; these are not.
+20 098 ♪ ♪ ♪
+20 104 ♪ ♪ ♪
+20 183 ♪ ♪ ♪
+20 186 ♪ ♪

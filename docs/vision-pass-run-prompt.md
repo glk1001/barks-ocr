@@ -7499,15 +7499,29 @@ not the problem this time; the confident declines were.**
   emphasis markup keyed to the stored text still round trips and needed no
   rework. The precaution paid: had the markup been written against the corrected
   spelling it would have had to be undone.
-- **Outstanding: five missed-text findings on *The Golden River*** -- 098 p6's
-  circled `$` under the McDUCK BLDG plate, 098 p8's notes inside g11's balloon,
-  102 p1's `$` sun inside a framed painting, 104 p1 and p2's notes off the barrel
-  organ, and 119 p8's drawn `?` over a boy's head. The review added the other
-  three (097's two gauge scales, 105's bin shield) and 184's GLUE pail label.
-  **The queue the audit generates gives the page and the glyph but NOT the panel,
-  and parks every line on group 0** -- which is unreadable at the editor. Write
-  the panel and the position after the `kind` field, where the parser ignores
-  them, or the hand-back cannot be worked.
+- **Outstanding: NOTHING. All three titles audit 0 ungrouped.** The review added
+  six groups in all: 097's two gauge scales, 105's bin shield, 184 p7's GLUE pail
+  label, and -- once the hand-back was readable -- 119 p8's drawn `?` over a
+  nephew's head. GLK then ruled the remaining six ignorable and they carry their
+  reasons in `missed-text-ignore.txt`: two `$` devices (098's roundel under the
+  McDUCK BLDG plate and 102's sun inside a framed painting) and four sets of
+  music notes, every one of them a drawn device beside lettering that IS grouped.
+- **THE AUDIT'S OWN QUEUE IS UNREADABLE AND THAT COST A ROUND TRIP.**
+  `missed_text_queue.py` writes the page and the glyph and parks every line on
+  group 0, so the hand-back read `20 102 easyocr 0 missed-text $` and the
+  reviewer could not tell what or where it was. **Write the panel and the
+  position after the `kind` field** -- `$ | panel 1 | the sun in the framed
+  painting | ignore` -- where the parser ignores them, and put the same list in
+  the message as a table. The five open items were worked in one pass once they
+  were legible.
+- **AND ONE OF THE ELEVEN FINDINGS WAS THE PASS INVENTING LETTERING.** 184's
+  capture listed `GLUE` twice, for the pail in p7 and again for the one in p8;
+  p8's pail is plain yellow with nothing on it. The label was carried over from
+  the previous panel on an assumption, and the audit reported it as `2 in the
+  art, 1 grouped` for two days. **A capture entry is a claim about the ink on
+  the page: do not repeat a label across panels without looking at the second
+  one.** That one is removed from the capture rather than ignored, because the
+  ignore list is for lettering that is real and not worth a group.
 
 ### Findings to paste into the next run (2026-09-20, seventy-second batch, NONE REVIEWED)
 
