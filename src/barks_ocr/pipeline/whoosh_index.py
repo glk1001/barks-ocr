@@ -5,11 +5,13 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import typer
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comic_book_info import NON_COMIC_TITLES
 from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.entity_types import EntityType
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT, OcrTypes, SpeechGroups
+from barks_fantagraphics.speech_speakers import is_character_speaker
 from barks_fantagraphics.whoosh_barks_terms import (
     ALL_CAPS,
     BARKSIAN_ENTITY_TYPE_MAP,
@@ -26,14 +28,46 @@ from loguru import logger
 from barks_ocr.cli_setup import init_logging
 from barks_ocr.pipeline.entity_store import get_merged_entity_provider, save_auto_entities
 from barks_ocr.pipeline.entity_tagger import EntityTagger
+from barks_ocr.utils.story_cast import story_characters
+from barks_ocr.utils.vision_schema import is_valid_speaker
 
 APP_LOGGING_NAME = "whoi"
 
+# The last volume the vision pass has finished attributing speakers for. Below
+# this an index without speakers is a broken build; above it, absent speakers
+# are simply work not yet done.
+LAST_SPEAKER_VOLUME = 18
+# Known gaps: a few pages in the finished volumes were never attributed, so the
+# finished band is held to "nearly all" rather than "all".
+SPEAKER_COVERAGE_WARN_PCT = 95.0
+# Whose lines the filter check runs on: the most-spoken characters in the index.
+SPEAKER_FILTER_SAMPLE = 3
+SPEAKER_FILTER_TERM = "money"
+
+
+def get_volumes_index_dir(ocr_index: int) -> Path:
+    """Return the reader's index dir for an engine.
+
+    The paddleocr index is the one the reader ships, so it is plain ``Indexes``;
+    the easyocr index sits beside it.
+
+    Args:
+        ocr_index: A key of ``OCR_TYPE_DICT``.
+
+    Returns:
+        The index directory under the reader files.
+
+    """
+    indexes_dirname = "Indexes" if ocr_index == 1 else "Indexes-easyocr"
+    return BARKS_ROOT_DIR / ("Compleat Barks Disney Reader/Reader Files/" + indexes_dirname)
+
 
 def check_index_integrity(
-    comics_database: ComicsDatabase, volumes: list[int], checks_output: Path | None
+    comics_database: ComicsDatabase,
+    volumes: list[int],
+    checks_output: Path | None,
+    volumes_index_dir: Path,
 ) -> None:
-    volumes_index_dir = BARKS_ROOT_DIR / "Compleat Barks Disney Reader/Reader Files/Indexes"
     search_engine = SearchEngine(volumes_index_dir)
 
     print("Checking CAPITALIZATION_MAP...")
@@ -53,6 +87,9 @@ def check_index_integrity(
 
     print("Checking cleaned terms...")
     check_cleaned_terms(search_engine, checks_output)
+
+    print("Checking speakers...")
+    check_speakers(search_engine, volumes)
 
     print()
 
@@ -156,6 +193,111 @@ def check_cleaned_terms(search_engine: SearchEngine, checks_output: Path | None)
         _write_queue_file(all_issues, checks_output)
 
 
+def check_speakers(search_engine: SearchEngine, volumes: list[int]) -> None:
+    """Check the index's speaker field and its ``speakers.json`` sidecar agree and make sense.
+
+    Four things, in the order they would fail on a bad build: the sidecar exists
+    where finished volumes are indexed; its counts match what the documents hold;
+    every stored value is one ``vision_apply`` would have accepted for that story;
+    and a speaker-filtered search is a subset of the unfiltered one. Coverage per
+    volume is printed, and warned about where a finished volume falls short.
+
+    Args:
+        search_engine: The engine over the index under test.
+        volumes: The volumes the index was asked to hold.
+
+    Raises:
+        ValueError: On a missing sidecar, a count mismatch, an invalid speaker, or
+            a filtered result that is not a subset.
+
+    """
+    sidecar = search_engine.get_speakers()
+    if not sidecar and any(v <= LAST_SPEAKER_VOLUME for v in volumes):
+        msg = "speakers.json is missing or empty, but finished volumes are indexed."
+        raise ValueError(msg)
+
+    counted: Counter[str] = Counter()
+    per_volume: dict[int, list[int]] = defaultdict(lambda: [0, 0])  # [groups, with speaker]
+    per_title: dict[str, set[str]] = defaultdict(set)
+    for fields in search_engine.iter_all_stored_fields():
+        vol = int(fields["fanta_vol"])
+        per_volume[vol][0] += 1
+        speaker = fields.get("speaker")
+        if speaker:
+            per_volume[vol][1] += 1
+            counted[speaker] += 1
+            per_title[fields["title"]].add(speaker)
+
+    if dict(counted) != sidecar:
+        only_docs = set(counted) - set(sidecar)
+        only_sidecar = set(sidecar) - set(counted)
+        differing = sum(1 for s in counted if s in sidecar and counted[s] != sidecar[s])
+        msg = (
+            f"speakers.json disagrees with the documents:"
+            f" {len(only_docs)} only in documents, {len(only_sidecar)} only in sidecar,"
+            f" {differing} counts differ."
+        )
+        raise ValueError(msg)
+
+    invalid = [
+        (title, speaker)
+        for title, speakers in sorted(per_title.items())
+        for speaker in sorted(speakers)
+        if not is_valid_speaker(speaker, story_characters(STR_TITLE_TO_ENUM[title]))
+    ]
+    if invalid:
+        for title, speaker in invalid:
+            print(f'    invalid speaker "{speaker}" in "{title}"')
+        msg = f"{len(invalid)} speaker value(s) the vision pass would have rejected."
+        raise ValueError(msg)
+
+    print("    vol  groups  with speaker")
+    for vol in sorted(per_volume):
+        groups, with_speaker = per_volume[vol]
+        pct = 100.0 * with_speaker / groups if groups else 0.0
+        print(f"    {vol:3d}  {groups:6d}  {with_speaker:6d}  {pct:5.1f}%")
+        if vol <= LAST_SPEAKER_VOLUME and pct < SPEAKER_COVERAGE_WARN_PCT:
+            logger.warning(f"Volume {vol} has speakers on only {pct:.1f}% of its groups.")
+
+    _check_speaker_filter(search_engine, sidecar)
+
+
+def _check_speaker_filter(search_engine: SearchEngine, sidecar: dict[str, int]) -> None:
+    """Check a filtered search is a subset of the unfiltered one, all by that speaker."""
+
+    def hit_keys(found: TitleDict) -> set[tuple[str, str, str]]:
+        return {
+            (title, page, speech.group_id)
+            for title, title_info in found.items()
+            for page, page_info in title_info.fanta_pages.items()
+            for speech in page_info.speech_info_list
+        }
+
+    everyone = search_engine.find_words(SPEAKER_FILTER_TERM)
+    all_keys = hit_keys(everyone)
+    sample = [s for s in sidecar if is_character_speaker(s)][:SPEAKER_FILTER_SAMPLE]
+    for speaker in sample:
+        found = search_engine.find_words(SPEAKER_FILTER_TERM, speaker=speaker)
+        keys = hit_keys(found)
+        if not keys <= all_keys:
+            msg = (
+                f'Filtering "{SPEAKER_FILTER_TERM}" by "{speaker}"'
+                " returned hits not in the unfiltered result."
+            )
+            raise ValueError(msg)
+        others = {
+            speech.speaker
+            for title_info in found.values()
+            for page_info in title_info.fanta_pages.values()
+            for speech in page_info.speech_info_list
+            if speech.speaker != speaker
+        }
+        if others:
+            msg = f'Filtering by "{speaker}" returned lines by {sorted(str(o) for o in others)}.'
+            raise ValueError(msg)
+        print(f'    "{SPEAKER_FILTER_TERM}" by {speaker}: {len(keys)} of {len(all_keys)} groups')
+
+
 def _write_queue_file(all_issues: list[tuple[str, TitleDict]], output_file: Path) -> None:
     """Write de-duplicated queue file: one entry per unique (vol, page, engine, group_id)."""
     seen: set[tuple[int, str, str, str]] = set()
@@ -164,13 +306,16 @@ def _write_queue_file(all_issues: list[tuple[str, TitleDict]], output_file: Path
         for item in issue.values():
             for fanta_page, page_info in item.fanta_pages.items():
                 for speech_info in page_info.speech_info_list:
-                    key = item.fanta_vol, fanta_page, speech_info.group_id, speech_info.group_id
+                    # The engine is the constant written on the line below; `SpeechInfo`
+                    # does not carry one.
+                    engine = OcrTypes.PADDLEOCR.value
+                    key = item.fanta_vol, fanta_page, engine, speech_info.group_id
                     if key not in seen:
                         seen.add(key)
                         queue_lines.append(
                             f"{item.fanta_vol}"
                             f" {int(fanta_page)}"
-                            f" {OcrTypes.PADDLEOCR.value}"
+                            f" {engine}"
                             f" {speech_info.group_id}"
                             f" hyphen"
                             f' "{term}"'
@@ -246,13 +391,10 @@ def main(  # noqa: PLR0913
     comics_database = ComicsDatabase()
     assert ocr_index in OCR_TYPE_DICT
 
-    indexes_dirname = "Indexes" if ocr_index == 1 else "Indexes-easyocr"
-    volumes_index_dir = BARKS_ROOT_DIR / (
-        "Compleat Barks Disney Reader/Reader Files/" + indexes_dirname
-    )
+    volumes_index_dir = get_volumes_index_dir(ocr_index)
 
     if do_checks:
-        check_index_integrity(comics_database, volumes, checks_output)
+        check_index_integrity(comics_database, volumes, checks_output, volumes_index_dir)
     elif tag or tag_only:
         _tag_volumes(comics_database, volumes, OCR_TYPE_DICT[ocr_index], volumes_index_dir)
         if not tag_only:

@@ -4,12 +4,13 @@ from pathlib import Path
 
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
-from barks_fantagraphics.comics_consts import BARKS_ROOT_DIR
 from barks_fantagraphics.speech_groupers import OCR_TYPE_DICT
+from barks_fantagraphics.speech_speakers import speaker_display_name
 from barks_fantagraphics.whoosh_search_engine import ENTITY_TYPES, SearchEngine
 from comic_utils.common_typer_options import LogLevelArg
 
 from barks_ocr.cli_setup import init_logging
+from barks_ocr.pipeline.whoosh_index import get_volumes_index_dir
 from barks_ocr.utils.paragraph_wrap import ParagraphWrapper
 
 APP_LOGGING_NAME = "whof"
@@ -18,7 +19,7 @@ app = typer.Typer()
 
 
 @app.command(help="Find words in the Whoosh index")
-def main(
+def main(  # noqa: PLR0913
     words: str = "",
     ocr_index: int = 1,
     entity_type: str | None = typer.Option(
@@ -31,20 +32,24 @@ def main(
         "--add-to-queue",
         help="Append found items to queue file (format: volume fanta_page engine group_id)",
     ),
+    speaker: str | None = typer.Option(
+        None,
+        "--speaker",
+        help='Only lines by this stored speaker value ("Scrooge", "nephews", "other:Witch Hazel")',
+    ),
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
     init_logging(APP_LOGGING_NAME, "whoosh-find.log", log_level_str)
 
     assert ocr_index in OCR_TYPE_DICT
 
-    indexes_dirname = "Indexes" if ocr_index == 1 else "Indexes-easyocr"
-    volumes_index_dir = BARKS_ROOT_DIR / (
-        "Compleat Barks Disney Reader/Reader Files/" + indexes_dirname
-    )
-    whoosh_search = SearchEngine(volumes_index_dir)
+    whoosh_search = SearchEngine(get_volumes_index_dir(ocr_index))
 
     if entity_type is not None and entity_type not in ENTITY_TYPES:
         print(f"Invalid entity type '{entity_type}'. Must be one of: {', '.join(ENTITY_TYPES)}")
+        raise typer.Exit(code=1)
+    if entity_type is not None and speaker is not None:
+        print("--speaker filters a word search; it cannot be combined with --entity-type.")
         raise typer.Exit(code=1)
 
     engine = OCR_TYPE_DICT[ocr_index]
@@ -52,7 +57,7 @@ def main(
     if entity_type is not None:
         found_text = whoosh_search.find_entities(entity_type, words)
     else:
-        found_text = whoosh_search.find_words(words)
+        found_text = whoosh_search.find_words(words, speaker=speaker)
     with add_to_queue.open("a") if add_to_queue else contextlib.nullcontext() as queue_file:
         for comic_title, title_info in found_text.items():
             print(f'"{comic_title}"')
@@ -72,8 +77,12 @@ def main(
                         if speech_info.entity_types
                         else ""
                     )
+                    # Absent from an index built before speakers existed, and for
+                    # a `none` speaker (a sound effect, a sign); shown otherwise.
+                    who = speaker_display_name(speech_info.speaker) if speech_info.speaker else None
+                    speaker_prefix = f" {who}" if who else ""
                     indented_text = text_indenter.fill(
-                        f'"{sp_id} ({panel}){entity_suffix}": {text_lines}'
+                        f'"{sp_id} ({panel}){speaker_prefix}{entity_suffix}": {text_lines}'
                     )
                     print(indented_text)
                     print()
