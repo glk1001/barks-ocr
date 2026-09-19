@@ -496,3 +496,16 @@ HELP KEEP AMERICA STRONG
 # is the Great Ski Race 124 refreshment-stand price plates. The grid stays in
 # 131's visible_text as a true record of what is drawn.
 19 131 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+
+# The Milkman 141 panel 4-5: the Daisy Dairy crate stencils. Every copy printed
+# on the page IS boxed -- g6 on the building, g9/g10/g11 on three crates, g13
+# over the left stack of three and g14, added at review, over the clipped stack
+# at the right edge of panel 5. The audit still reports 6 in the art against 4
+# grouped because it matches whole normalised group texts, and a box holding
+# two or three copies of one sign never counts toward the single-instance
+# tally. This is the audit's counting model meeting a multi-instance box, not
+# lettering anyone missed; GLK ruled it ignorable on 2026-09-19 after the g14
+# add settled the part that was genuinely ungrouped. 141's visible_text stays
+# as it is -- it is a true record of what is printed.
+19 141 DAISY DAIRY CO.
+19 141 DAISY

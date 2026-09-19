@@ -7420,16 +7420,17 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
-### Findings to paste into the next run (2026-09-19, seventy-first batch, THREE OF FOUR REVIEWED AND MIRRORED)
+### Findings to paste into the next run (2026-09-19, seventy-first batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
-**411 groups reviewed across *The Milkman*, *Mocking Bird Ridge* and *Dramatic
-Donald*; 33 speaker corrections.** All 44 type corrections held. *Old Froggie
-Catapult* is 138/140 and is not mirrored. By title: *Milkman* 2/129 (1.6%, and
-one of those is a group the review added), *Mocking Bird Ridge* **24/136
-(17.6%)**, *Dramatic Donald* 7/146 (4.8%). **By the confidence the pass wrote:
+**551 groups reviewed across all four titles; 41 speaker corrections (7.4%).**
+All 44 type corrections held, and nothing is outstanding. By title: *Milkman*
+2/129 (1.6%, and one of those is a group the review added), *Mocking Bird
+Ridge* **24/136 (17.6%)**, *Old Froggie Catapult* 8/140 (5.7%), *Dramatic
+Donald* 7/146 (4.8%). **By the confidence the pass wrote:
 *Mocking Bird Ridge* high 17/122 (13.9%) against medium 6/12 (50.0%);
+*Old Froggie Catapult* high 6/130 (4.6%) against medium 2/10 (20.0%);
 *Dramatic Donald* high 5/140 (3.6%) against medium 2/6 (33.3%).** Medium is the
-worse bet in both, and by a wide margin.
+worse bet in all three, by 3.6x, 4.3x and 9.3x.
 
 - **I QUOTED THE CENSUS ZERO AND DECLINED, WHICH IS THE SEVENTIETH BATCH'S
   FINDING VERBATIM, IN A BATCH WHERE I HAD READ IT.** *Mocking Bird Ridge* 158
@@ -7476,6 +7477,24 @@ worse bet in both, and by a wide margin.
   SECOND tail dipping toward the red-capped boy and then applied the
   leftmost-tail rule anyway. Where a balloon may carry two tails, the collective
   is the honest answer, not the rule's tie-break.
+- **A COLOURIST CLASH DOES NOT TRAVEL ACROSS A CAST CHANGE, AND THAT COST SIX
+  NAMES.** *Old Froggie Catapult*: the pass established at 165 g14 that the boy
+  Donald sends down -- `GET DOWN THERE, LOUIE, WITH THE HAMBURGER` -- wears a
+  RED cap, and then carried `Louie` onto every red cap for the rest of the
+  title. The review **kept it on 165 g6/g10 and 166 g0/g5** and **changed 167
+  g9/g11, 168 g0/g2 and 169 g4/g5 to Huey**. The break is exactly where the
+  story moves from the local frog jump to the state championship at Cattail
+  Slough **and a second boy joins the cast**. One boy in frame at 165-166 means
+  the address pins him; two boys from 167 means the red cap reverts to the
+  convention. **A dialogue naming binds the boy in that scene, not the ink for
+  the rest of the title** -- the same shape as the costume and instrument keys
+  that do not travel. All six of the pass's blue-cap Dewey calls held.
+- **A PLAIN WHITE UPRIGHT BOX IS NOT AUTOMATICALLY NARRATION.** *Old Froggie
+  Catapult* 168 g11 went `narrator` -> `other:the barge crowd` and 170 g10 went
+  `narrator` -> `Donald`. The pass reasoned from the box style -- this title
+  sets its captions in a slanted face with a drop capital, so it read the two
+  upright white boxes as a different kind of caption. They are characters
+  speaking. Read what the words claim to be before reading the box.
 - **`other:` drift to reconcile:** *Dramatic Donald* now carries both
   `other:a drama club member` (3) and `other:another club member` (1, at 030
   g8). Everything else is clean: *Milkman* `the sleeper`, `the night boss`,
@@ -7488,12 +7507,17 @@ worse bet in both, and by a wide margin.
   transcribe it and let the audit decide. *Mocking Bird Ridge* 160 g13 is the
   drawn `!`, and 160 g0 splits the opening caption out of the merged box the
   pass had flagged in its note rather than fixed.
-- **Outstanding:** *Old Froggie Catapult* at 138/140 -- 168 g12 and 170 g11 --
-  not mirrored, not committed. And *The Milkman* 141 still raises two
-  missed-text lines that are an audit artefact, not lettering: a group holding
-  three copies of one sign never counts toward the single-instance tally, so
-  `DAISY DAIRY CO.` reads as 6 in the art against 4 grouped even though every
-  copy is boxed. Awaiting a ruling for `missed-text-ignore.txt`.
+- **Outstanding: NOTHING.** All four titles are 100% reviewed on both engines
+  and match on group count, reviewed count, identified_by count and the
+  speaker, cap_colour and confidence distributions. Every type correction is
+  confirmed and no text corrections were ever raised. Two loose ends closed on
+  GLK's ruling: *The Milkman* 141's `DAISY DAIRY CO.` lines went to
+  `missed-text-ignore.txt` -- every copy on the page IS boxed, and the audit
+  reports 6 against 4 only because a group holding three copies of one sign
+  never counts toward the single-instance tally -- and *Dramatic Donald* 030
+  g8's `other:another club member` was normalised to `other:a drama club
+  member`, which the review had introduced against the three groups already
+  carrying it.
 
 ### Findings to paste into the next run (2026-09-19, seventy-first batch, NONE REVIEWED)
 
