@@ -7484,15 +7484,25 @@ them in the 134-group nephew domain (28.4%). By title: *The Half-Baked Baker*
   Beagle` (10), `the tunnel contractor` (2), `a policeman` (1), plus the
   canonical `The Beagle Boys` (1). No near-duplicates; the singular/plural
   Beagle pair is one free-text value against one canonical one.
-- **Outstanding at close.** Three groups never `speaker_reviewed` (*Daisy* 140
-  g11, *Money Well* 069 g3 and 088 g13), all uncontentious pass calls in
-  `queue-straggler.txt`. One type correction unconfirmed, *Money Well* 074 g15
-  `OUCH!`. One text correction: *Money Well* 085 g16's easyocr text is the
-  truncated `176-617 BEAGLE` where paddleocr and a 3x crop both read `176-617
-  BEAGLE BOYS INC.`, which is why the mirror left that one group alone and
-  paddleocr shows 439 reviewed against easyocr's 440. Two missed-text findings
-  the reviewer has not ruled on: *Baker* 128's cut-off `JU` ribbon and *Daisy*
-  131's calendar grid.
+- **Outstanding at close: NOTHING.** All three titles are 100% reviewed on both
+  engines -- 160/160, 122/122, 442/442 -- and match on group count,
+  identified_by count and the speaker, cap_colour and confidence distributions.
+  The last five items all closed: the three stragglers (*Daisy* 140 g11,
+  *Money Well* 069 g3 and 088 g13), the unconfirmed `OUCH!` type correction
+  (*Money Well* 074 g15), and the one text correction -- *Money Well* 085 g16's
+  easyocr text was the truncated `176-617 BEAGLE` where paddleocr and a 3x crop
+  both read `176-617 BEAGLE BOYS INC.`, and until it was lengthened the mirror
+  had no counterpart to copy onto, which is why paddleocr sat at 439 against
+  easyocr's 440. **The lesson is that a one-group text disagreement silently
+  costs you a mirrored group**, and the mirror says so in a WARNING that is easy
+  to read past. The two missed-text findings went to `missed-text-ignore.txt` on
+  the reviewer's ruling: *Baker* 128's cut-off `JU` ribbon and *Daisy* 131's
+  calendar grid. Corpus-wide, nothing outstanding across 460 titles.
+- **THE ONE ASYMMETRY LEFT IS A FLAG, NOT A GROUP.** *Money Well* 082 reports
+  `easyocr=4 paddleocr=3` hand-added groups: both engines carry the `SOON!`
+  caption, but paddleocr had already grouped it, so only easyocr's copy is
+  flagged `vision_added`. Group counts and every distribution match. Read that
+  audit line as provenance, not as a missing box.
 
 ### Findings to paste into the next run (2026-09-19, seventieth batch, NONE REVIEWED)
 
