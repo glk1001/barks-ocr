@@ -7420,6 +7420,105 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-20, seventy-third batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+**438 groups reviewed across the three titles; 21 speaker corrections (4.8%).**
+By title: *The Strange Shipwrecks* **16 of 326 (4.9%)**, *The Fabulous Tycoon*
+**5 of 72 (6.9%)**, *Gyro Goes for a Dip* **0 of 40 (0.0%)**. In the nephew
+domain, 9 of 71 (12.7%) -- only *Shipwrecks* has nephews. **All 14 of the
+pass's applied type overrules held and not one was reversed.** The review added
+five groups to *Shipwrecks* and corrected one text. **By the confidence the
+pass wrote: high 12 of 387 (3.1%), medium 7 of 31 (22.6%) -- a 7.3x split.**
+
+- **THE RED/GREEN SWAP WAS CONFIRMED, IN THE REVIEWER'S OWN WORDS.** `Colorist
+  error: swap red and green` on 030 and `Continuing colorist error fix: green
+  is Huey and red is Louie` on 042. Naming from the dialogue against a cap that
+  disagreed consistently -- the roster's *Donald's Pet Service* worked example --
+  was the right call, and it was worth the two pages of care it took to
+  establish. **But 030 g11 was written Huey first and rewritten Louie only when
+  042 settled it: do not name a nephew off a cap until the story has had a
+  chance to name one in dialogue.**
+- **AND THE SWAP IS NOW INCONSISTENT ON EXACTLY ONE PAGE, WHICH IS WORTH A
+  SECOND LOOK.** Counting speaker against `cap_colour` over the finished title:
+  **30 groups disagree with red=Huey/blue=Dewey/green=Louie and 12 agree**, but
+  nine of the twelve are Dewey/blue, which the swap does not touch. **The only
+  two groups in the whole title that follow the standard convention are 049 g6
+  (Louie/green) and 049 g9 (Huey/red)** -- and both are corrections the review
+  made against the pass, reversing the swap on that page alone. Either the
+  colourist got 049 right and the error runs everywhere else, or the page was
+  worked the other way round by hand. Whichever it is, the corpus-wide
+  colourist-error query will now return 030-048 and skip 049.
+- **MEDIUM WAS WRONG ALMOST ONE TIME IN FOUR, AND ON *TYCOON* FOUR OF FIVE.**
+  22.6% against high's 3.1%. **Every single one of the Tycoon mediums was a
+  Scrooge-versus-Donald call made from where the balloon SAT rather than from a
+  traced tail** -- 053 g8, 054 g1, 055 g6, 055 g8, and three of the four went
+  the way I had ruled out. A balloon whose box spans two ducks is not a
+  placement; on a two-duck panel either trace the tail at source resolution or
+  write the call at medium and expect to lose it.
+- **THE SAME ERROR COST THE ONE DONALD CALL ON *SHIPWRECKS*.** 042 g9 went
+  `Donald` -> **Huey**: I gave it to Donald because the balloon sat directly
+  over his 1,322px sailor cap, and the speaker was the green-banded boy beside
+  him. Being over a figure's cap is not a tail.
+- **UNDER-NAMING IS STILL THE LARGEST NEPHEW CLASS: 5 of 9.** 030 g9 and g10,
+  044 g0 and g3, 048 g15, all `nephews` sharpened to a name. **030 g9 is the
+  instructive one**: I declined it because the only green in the panel was a
+  17,640px wall panel the boy's head overlapped, so the scan could not separate
+  his band from the scenery, and I cropped the crowns at 4x and still read the
+  cap as plain black. The review named him Huey off that crown. **A band that is
+  contiguous with same-hue scenery is not an absence -- it is a blob the scan
+  cannot split, and the crop has to be tighter than the one that proves the
+  crown is bare.**
+- **A TRACED TAIL IS NOT PROOF EITHER.** 037 g1 went `Louie` -> **Scrooge**. I
+  read the panel at source resolution and described a long spur running
+  down-right to the boy by the barrel; the reviewer put it on Scrooge, who is
+  between the two. The margin I quoted was against the boy's figure, not against
+  a measured head span, which is the roster's standing warning in a new dress.
+- **THE ENGINES STORE CAPTION BOXES AND ASIDES WRONGLY AND THE REVIEW AGREED
+  EVERY TIME.** All 14 type overrules held: two `SO —` caption boxes stored as
+  `dialogue` (034, 044), a story logo stored as `background` (052), five thought
+  clouds stored as `dialogue` (037, 054 x3, 056), a thought stored as
+  `narration` (047), and five animal or human cries stored as `sound_effect`.
+  **The test that predicted every one of the thought clouds: an aside about a
+  character who is standing in the panel has to be a thought.** 056 g4 is the
+  control -- same joke, drawn pointed tail, Scrooge absent -- and its stored
+  `dialogue` was correctly left alone.
+- **AN EDITOR ADD CAN DUPLICATE A LOCKED GROUP.** 034 panel 5 ended the review
+  with TWO identical `SO —` groups 2px apart on both engines: the pre-existing
+  `vision_added` one, locked at speaker `none` by a 2026-08-28 review, and a new
+  narration/narrator one added because the locked field could not be changed.
+  `vision_apply` refuses an add overlapping an existing box by more than 20%,
+  but the editor's own add path does not. Removed here by hand, keeper moved
+  into the vacated slot so no other id shifted.
+- **`vision_apply` DROPS A TYPE OVERRULE ON AN ALREADY-REVIEWED GROUP WITHOUT
+  COUNTING IT.** `_apply_type` returns before it even sets `type_adjudicated`
+  when `type_reviewed` is set, so nothing is recorded and the summary line
+  reports only what it did change. Three collided this batch. **Check for the
+  collision before applying** -- the arithmetic is the tell: 16 overrules
+  proposed, 14 reported. One survives the batch: *Gyro* 169 g10's `ROWF!` stays
+  `sound_effect` while the same dog's identical `ROWF!` on 170 is `dialogue`.
+- **THE MISSED-TEXT AUDIT'S "ONE GROUP, SEVERAL SIGNS" REPORTS ARE REAL AFTER
+  ALL.** I called 041's three plate findings false positives because the plates
+  *were* grouped, just bundled two and three to a box. **The reviewer split
+  them, which is what the audit was asking for.** A group whose box swallows
+  several identical signs is a grouping defect, not an audit artefact.
+- **ONE CAPTURE ENTRY WAS MY OWN MISREADING.** 050 panel 3's leftmost plate does
+  carry `176-716` above the lettering; I read it at montage scale and wrote
+  three plain `BEAGLE BOYS INC.` The capture is corrected -- that is not
+  suppressing a finding, it is making the record true, and it is the difference
+  between an ignore-list entry and a fix.
+- **A GYRO SOLO STORY IS FREE ACCURACY, THIRD TIME RUNNING.** 40 groups, 0
+  speaker corrections, 1.75 images per page.
+- **Outstanding at close:** *Shipwrecks* 030 still has one of its two `$`
+  devices ungrouped (panel 1, the small one on the bin door; the wall one was
+  added). Five groups are unreviewed on both engines -- 034 g6, 037 g2, 041 g25,
+  041 g26, 050 g8, the last three being plates split out during the review. And
+  050's corrected plate text reached easyocr only, because `ai_text` is not
+  mirrored, so paddleocr still reads `BEAGLE BOYS INC.` without the number.
+- `other:` values after review: the pass's list stands, with one addition the
+  review made -- **`other:coastguard captain` on 049 g11, which is a near-
+  duplicate of the pass's `other:the coast guard captain`** used three times on
+  the same page-range. Collapse one way or the other.
+
 ### Findings to paste into the next run (2026-09-20, seventy-third batch, NONE REVIEWED)
 
 **Vol. 22, first time read: *The Strange Shipwrecks* (21pp, 302 groups), *The
@@ -8643,8 +8742,8 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 22, three titles read 2026-09-20 (seventy-third batch; **NONE REVIEWED**,
-so every row below is the pass's own reading). 30 pages, 78 images, **2.60 per
+Vol. 22, three titles read 2026-09-20 (seventy-third batch; **ALL THREE
+REVIEWED AND MIRRORED**, so the rows below are corrected against the review). 30 pages, 78 images, **2.60 per
 page**; per title 2.76 / 2.60 / 1.75.
 
 **VOL. 22'S CAP GREEN IS IN capscan's `green` BAND, NOT `leafgrn`.** Every panel
@@ -8662,7 +8761,7 @@ image.
 
 | title | reference | red | green | blue | construction |
 |---|---|---|---|---|---|
-| *The Strange Shipwrecks* (22) | **034 panel 5** -- the whole party on the airfield tarmac, one band each: red apart at left, green and blue saluting beside Donald; 030 panel 1's splash repeats it blue/green/red left to right | `#e61b1f`-`#e61a20` H358.8 S0.88, **80-900px on a crown**; dimmed to `#e6191f` and `#e71920` indoors, and `#d94f41` at 152px on 049 p3 | `#009e46`/`#009f48`/`#00a87a` **H147-165**, 45-900px -- and the `#00a96e` H159 at 17,000-22,000px is a WALL or the sea, never a cap | `#00a4d5`-`#00a5d5` **H194**, 45-750px on a boy; `#00a4b4` H187 is the same band dimmed | black sailor cap carrying small coloured flashes, usually two per crown. **RED AND GREEN ARE SWAPPED FOR THE WHOLE TITLE**: 034 g6/g11 and g13 and 044 g21 send LOUIE with Scrooge and HUEY with Donald by name, while the art gives Scrooge's boy red on every page 034-042 and Donald's two green and blue. Named from the dialogue, ink recorded as printed. **The caps also come OFF**: the boys are bare-headed indoors at the Money Bin (033 panels 4 and 8, cropped at 3x) and one loses his cap in the brawl (041 p1). Sea decoys: `#349bc4` H200 and `#00a7a8` H180 (water), `#4d998d` H170 S0.50 and `#3fb17e` H153 S0.64 (the Beagle Boys' green jerseys). Cast adds **Saltwind McSpray** and his bearded helpers -- all Beagle Boys under false beards -- **Captain Stalwart**, Scrooge's detective, a chief clerk, an office nurse, and the Moneytubs' and coast guard crews |
+| *The Strange Shipwrecks* (22) | **034 panel 5** -- the whole party on the airfield tarmac, one band each: red apart at left, green and blue saluting beside Donald; 030 panel 1's splash repeats it blue/green/red left to right | `#e61b1f`-`#e61a20` H358.8 S0.88, **80-900px on a crown**; dimmed to `#e6191f` and `#e71920` indoors, and `#d94f41` at 152px on 049 p3 | `#009e46`/`#009f48`/`#00a87a` **H147-165**, 45-900px -- and the `#00a96e` H159 at 17,000-22,000px is a WALL or the sea, never a cap | `#00a4d5`-`#00a5d5` **H194**, 45-750px on a boy; `#00a4b4` H187 is the same band dimmed | black sailor cap carrying small coloured flashes, usually two per crown. **RED AND GREEN ARE SWAPPED FOR THE WHOLE TITLE -- CONFIRMED BY THE REVIEW** (`Colorist error: swap red and green`), except on page 049, where the review applied the standard convention instead and which is the one page to re-check: 034 g6/g11 and g13 and 044 g21 send LOUIE with Scrooge and HUEY with Donald by name, while the art gives Scrooge's boy red on every page 034-042 and Donald's two green and blue. Named from the dialogue, ink recorded as printed. **The caps also come OFF**: the boys are bare-headed indoors at the Money Bin (033 panels 4 and 8, cropped at 3x) and one loses his cap in the brawl (041 p1). Sea decoys: `#349bc4` H200 and `#00a7a8` H180 (water), `#4d998d` H170 S0.50 and `#3fb17e` H153 S0.64 (the Beagle Boys' green jerseys). Cast adds **Saltwind McSpray** and his bearded helpers -- all Beagle Boys under false beards -- **Captain Stalwart**, Scrooge's detective, a chief clerk, an office nurse, and the Moneytubs' and coast guard crews |
 | *The Fabulous Tycoon* (22) | **n/a -- no nephews in the title** | -- | -- | -- | Scrooge and Donald only, so the cap question is entirely Scrooge's top-hat band against Donald's sailor cap, both `#00a4d5`; the stripe-versus-blob shape test settles every panel. Cast adds **Longhorn Tallgrass**, a rancher in a green shirt and orange hat who says PODNER and GENTS. **Five thought clouds are stored as `dialogue`** (054 g5/g11/g12, 056 g1) and one genuine speech balloon of the same joke shape is not (056 g4) -- the discriminator is whether Scrooge is standing in the panel |
 | *Gyro Goes for a Dip* (22) | **n/a -- no nephews in the title** | -- | -- | -- | Gyro solo. **TWO DIFFERENT DOGS**: a small BLACK one (168 p7, 169 p5 and p6 -- `YIKE!`, `YAP!`, `KI-YI!`) and a big BROWN one in a blue collar (169 p8 through 170 -- `ROWF!`, `KI-YOWL`). They are recorded as separate `other:` values. The helper lamp is in nearly every panel and never speaks. 169 g10's `ROWF!` carries an earlier `type_reviewed` as `sound_effect`, so the title ends up labelling the same animal's bark both ways |
 
