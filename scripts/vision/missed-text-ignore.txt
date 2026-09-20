@@ -536,3 +536,11 @@ HELP KEEP AMERICA STRONG
 20 104 ♪ ♪ ♪
 20 183 ♪ ♪ ♪
 20 186 ♪ ♪
+
+# 2026-09-20, seventy-fourth batch. The Forbidium Money Bin 059 panel 6: a large
+# $ sign-painted on the frosted glass of the teller's window behind Scrooge.
+# Reviewer ruled to skip it. It is decoration on the set rather than a sign that
+# says anything -- nothing would ever find the page by searching for it, and the
+# panel's own lettering is already grouped. The ROAR on 062 panel 5, reported in
+# the same audit, WAS a real miss and has been added as a group.
+22 059 $
