@@ -7420,6 +7420,92 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-20, seventy-fourth batch, *The Twenty-four Carat Moon* REVIEWED AND MIRRORED)
+
+**269 groups on both engines, every one reviewed; 19 speaker corrections (7.1%),
+11 of them in the nephew domain (24.4%). By the confidence the pass wrote, high
+12 of 250 (4.8%) against medium 4 of 16 (25.0%) -- a 5.2x split.** The review
+added three groups and reversed no cap colour. The pass's one type overrule and
+its one text correction both held.
+
+- **THE TAIL WAS RIGHT AND I VOTED AGAINST IT, IN WRITING, AND IT COST SEVEN
+  IMAGES.** 011 g15 `START THE COUNT DOWN!` went `Scrooge` -> **`other:rocket
+  control`**. I traced that tail at 5x, established it runs into the open
+  hatchway and lands on empty cream with Scrooge drawn at the far left with his
+  own balloon, wrote **`ART AND SENSE DISAGREE HERE AND I HAVE GONE WITH
+  SENSE`** into the note -- and then handed the line to the duck in frame. The
+  reviewer named exactly the off-panel voice the tail pointed at. **A POINTED
+  TAIL RUNNING INTO A DOORWAY, HATCH OR WINDOW AND ENDING ON NOTHING IS AN
+  OFF-PANEL SPEAKER. Name the role -- ground crew, rocket control, the next room
+  -- rather than giving the line to whoever is standing there.** The same group
+  is why pages 011 and 012 cost 7 and 6 images against a ceiling of 5: the
+  measurement was finished after two crops and the other five went on arguing
+  with it.
+- **CAPTIONS ARE CHARACTERS FAR MORE OFTEN THAN I ALLOWED: THREE OF THE FIVE
+  `other:` CORRECTIONS ARE `narrator` -> A NAMED VOICE.** 010 g19 -> `other:the
+  TV newscaster`, 012 g8 -> `other:a reporter`, 022 g10 -> `other:Muchkale`.
+  Every one is a caption box whose CONTENT is a particular character's knowledge:
+  022 g10 explains that on an airless moon only thoughts carry, which is
+  Muchkale's own explanation, and 012 g8's `(COUGH! CHOKE!)` aside is a watcher
+  at the launch. **Before writing `narrator`, ask whose knowledge the caption
+  carries.** The roster's rule that the field records the BOX is about the TYPE;
+  it does not make the speaker the author. On a story with a broadcast, a press
+  frame or a talking alien, the boxes are worth reading twice.
+- **THE ADULT/BOY CALL UNDER A BUBBLE HELMET FAILED IN BOTH DIRECTIONS -- 8 OF
+  THE 19 CORRECTIONS.** Donald -> Scrooge three times (014 g7, 015 g9, 015 g10),
+  Scrooge -> Donald twice (016 g13, 022 g8), nephews -> Donald twice (026 g1,
+  026 g4), Donald -> nephews once (021 g8). **Every one of those notes quotes the
+  same test** -- `the wide adult beak and no whisker fringe`, `small round beak,
+  no whiskers` -- read off a crop at 1.2x to 1.6x. Inside a cream helmet at that
+  scale the test does not work: the helmet flattens the silhouette and the
+  whisker fringe reads as helmet hatching. **Crop a helmeted head at 2.5x or
+  better before naming the duck inside it, or name him from something else --
+  the pressure-suit colours did this perfectly on *The Forbidium Money Bin*
+  (Scrooge yellow, Gyro green) and cost nothing.**
+- **015 g9/g10 IS THE INSTRUCTIVE PAIR.** I reasoned that panel 7's close-up was
+  the same duck as panel 6's because the binoculars are drawn flying out of his
+  hands, cropped the head at 2x, read `no side-whiskers, wide beak, tongue out`
+  and wrote Donald into both. Both are Scrooge. The continuity argument was
+  sound and the identification inside it was wrong, which is the dangerous
+  shape: **a correct chain of reasoning resting on one bad pixel read carries
+  the error to every group downstream of it.**
+- **THE CAPS WERE NEVER THE RISK ON THIS TITLE.** Both names held --
+  011 g8 Huey/red and 012 g2 Dewey/blue, each on a measured tip plus a clean
+  flash -- and **there is not one `cap_colour_was` entry in the whole title.**
+  11 nephew-domain groups were corrected and not one of them was a cap read;
+  they were all adult/boy confusions. Where the ink is readable, reading it is
+  safe; it is the ducks that need the crop.
+- **A MEDIUM CALLED FROM REGISTER ALONE LOST AGAIN.** 016 g0 `Scrooge` ->
+  **`other:the Rajah of Eyesore`**. The panel is two ships fighting and the
+  balloon comes off one of them; I wrote `every other exchange on this page is
+  his against a nephew's` and never traced which hull the tail touched. **On a
+  panel with two vehicles and no figures, the tail still picks the ship. Trace
+  it -- it is one crop.**
+- **THE REVIEW ADDED THREE DRAWN `$` DEVICES AND I HAD FOUND ONLY ONE.** 024
+  panel 8 I reported; **025 panels 3 and 4 I never wrote into the capture at
+  all**, so the audit was blind to them -- the seventy-third batch's finding
+  about the capture being the audit's only eyes, repeating exactly. The tell was
+  available: both panels are somebody rejoicing over money, which is where Barks
+  puts the device. **Sweep for drawn devices on every panel where a character is
+  delighted or dismayed about money, not only where the art looks unusual.** The
+  two captures are now reconciled to the added groups.
+- **THE GROUP AUDIT CAUGHT AN `other:` DRIFT THE REVIEW INTRODUCED, AND IT WOULD
+  HAVE MIRRORED.** One group came back `other:the tv newscaster` against
+  fourteen `other:the TV newscaster`. **Run `audit_groups.py` BEFORE the mirror,
+  not after** -- the closeout does it, and the fix is one keystroke at that
+  point and a corpus-wide grep later. `other:` values after review, once
+  normalised: `Muchkale` 31, `the Rajah of Eyesore` 9, `the TV newscaster` 8,
+  `the Texas cattle king` 8, `the radio newscaster` 4, `the rocket designer` 2,
+  `a rocket workman` 2, `rocket control` 1, `the launch announcer` 1, `a
+  reporter` 1. The three announcer values stay distinct and are correct: a TV
+  set, a pad loudspeaker and a cabin radio.
+- **STILL OUTSTANDING AND AWAITING A RULING, NOT A DEFECT:** the missed-text
+  audit reports 22 on this title and every one is a capture-listing question --
+  16 Beagle Boy placard bundles (the pinned number and the sweater legend share
+  one box), 5 instances of Muchkale's tunic `V` (grouped on 023 only), and the
+  two drawn music notes inside 020's `LUNA, THE MOONA` balloon. Split, group per
+  page, or ignore-list; it wants deciding once for the volume.
+
 ### Findings to paste into the next run (2026-09-20, seventy-fourth batch, NONE REVIEWED)
 
 **Vol. 22, three titles: *The Twenty-four Carat Moon* (20pp, 266 groups), *The
