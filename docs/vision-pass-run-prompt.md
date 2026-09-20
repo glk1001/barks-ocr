@@ -7420,6 +7420,128 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-20, seventy-fourth batch, NONE REVIEWED)
+
+**Vol. 22, three titles: *The Twenty-four Carat Moon* (20pp, 266 groups), *The
+House on Cyclone Hill* (4pp, 31) and *The Forbidium Money Bin* (16pp, 143).**
+40 pages, 440 groups, **96 images, 2.40 per page**; per title 3.45 / 1.75 /
+1.25. 2 type corrections, 1 text correction, 3 missed-text items. Nothing
+reviewed yet, so everything below is the pass's own account.
+
+- **THE CAPS VANISH AT PAGE 013 AND NEVER COME BACK.** *The Twenty-four Carat
+  Moon* has the three nephews in 15 of its 20 pages, but from 013 onward the
+  whole crew is in bubble space helmets and `crowns.py` returns `NO INK ON
+  CROWN` for **every head on every page from 013 to 027**. So the only pages
+  where a cap can name anybody are 008-012, and only 011 and 012 actually print
+  one. Every nephew call after 012 is a collective or comes from the dialogue.
+  This is worth knowing at prep on any space or diving story: run
+  `crowns.py <census> <pages>` over the whole title first and see where the
+  readable window is, instead of scanning for ink page by page.
+- **I NAMED TWO BOYS AND BOTH RESTED ON A MEASURED TIP PLUS A CLEAN FLASH.**
+  011 g8 Huey (#e61b1f 1143px on the crown at the top of the ladder, one tail)
+  and 012 g2 Dewey (tip at panel x648, 32px short of the blue boy's beak against
+  122px to the red boy's). Everything else in the domain is `nephews`, and
+  **five of those are genuine choruses** -- one balloon carrying two or three
+  tails to two or three boys (011 g7 three tails, 012 g3 and g5 two each, 015 g8
+  two, 021 g5/g6 across a row of three). Counting the tails before reaching for
+  a name is what made those safe.
+- **SCROOGE'S RED COAT IS THE ROSTER RED AT A HUNDRED TIMES THE AREA.** In this
+  title his coat is `#e61b1f` -- *the exact cap red* -- at 5,000 to 25,000px,
+  against a nephew band of 20 to 1,143px; his top-hat band and Donald's sailor
+  cap are both `#00a4d5` at 1,300-3,500px against a boy's blue flash of 84-423px.
+  The Vol. 22 area rule from the last batch holds exactly, and the cap
+  CONSTRUCTION here is a black cap with a small coloured WEDGE at the front of
+  the crown, not a band across it.
+- **THE ONE GROUP THAT COST SEVEN IMAGES WAS A TAIL POINTING AT NOBODY.** 011
+  g15 `START THE COUNT DOWN!`: traced at 5x, its ordinary pointed tail runs into
+  the open hatchway and lands on empty cream, with Scrooge drawn at the far left
+  with his own balloon. Page 011 ended at 7 images and 012 at 6 -- both over the
+  ceiling -- for that one call, which I finally wrote `Scrooge` at medium with
+  the disagreement spelled out. **A tail that lands on nothing is not worth more
+  than two crops: write the conflict in the note and move on.** That single
+  group is most of the gap between this title's 3.45 and the other two's 1.75
+  and 1.25.
+- **allbold RUNS LOW ON ALL THREE TITLES AND IS BLIND ON A WHOLLY-BOLD
+  BALLOON.** Real emphasis came back at 1.10x-1.20x again and again (016 g2's
+  GO BACK at 1.11x, 016 g12's STOP at 1.19x, 064 g0's CEILING at 1.10x, 068 g8's
+  PURSE at 1.11x), every one confirmed by crop. And where the WHOLE balloon is
+  set heavy it reports no hits at all, because the baseline rises with it --
+  019 g2 (3.72), 024 g12 (4.05), 026 g6 (4.01). **The tell is the baseline: when
+  a group's base is half a point above its neighbours', the balloon is bold and
+  the ratios mean nothing.** Treat 1.10x as worth a crop on this volume.
+- **TWO TYPE OVERRULES, BOTH THE SAME SHAPE THE SEVENTY-THIRD BATCH FOUND.**
+  24-Carat 013 g7 `narration -> dialogue`: read at 1.15x it is a rounded balloon
+  with a spiky BROADCAST tail running to the cabin radio, finishing the bulletin
+  the previous panel broke off at a dash -- not a caption box. Forbidium 061 g1
+  `dialogue -> narration`: the pink `SO!` box with a drop capital, which is
+  literally the `SO —` caption the last batch reported twice. **Both directions
+  are live; read the box's outline before trusting the stored label.**
+- **THE JAGGED TAIL IS THIS BATCH'S MOST USEFUL DISCRIMINATOR.** A spiky or
+  zigzag tail means a machine's voice and the speaker is off-panel: the TV on
+  24-Carat 009 g3/g4, the launch PA loudspeaker on 012 g7, the cabin radio on
+  013 g6/g7 and 018 g6/g7. A POINTED tail on the same page means a duck. It
+  settled seven groups for one crop each.
+- **ONE TEXT CORRECTION, AND IT WAS A DIGIT SWAP BETWEEN TWO SIGNS IN THE SAME
+  PANEL.** 24-Carat 016 g4 is `176-761`, not `176-671` -- and `176-671` is the
+  OTHER Beagle Boy's placard two feet away. The Beagle Boys wear six different
+  numbers across this title (176-716, 176-671, 176-761, 176-617, 176-176,
+  176-16?) and the engines transpose them. **Crop every placard; do not read one
+  off a montage.** 017 g11's is genuinely unverifiable -- only `176-16` is drawn
+  and his own arm covers the rest, so the stored last digit is a reconstruction.
+- **THREE MISSED-TEXT ITEMS, ALL OF THEM DRAWN THINGS THE ENGINES CANNOT SEE.**
+  24-Carat 024 panel 8: six drawn `$` discs orbiting Scrooge's head, ungrouped --
+  and the IDENTICAL device on 010 panel 2 *is* grouped, as one `thought` group
+  reading `$ $ $ $ $ $`, which is the model for the add. Forbidium 059 panel 6:
+  a big `$` sign-painted on the frosted teller's window. Forbidium 062 panel 5:
+  a display `ROAR` across the blast-off that no group covers at all. **The `ROAR`
+  is the one to notice -- a full-size sound effect, the sort of thing the engines
+  normally catch, simply missing.**
+- **THE PLACARD FINDINGS ARE A BUNDLING ARTEFACT AND NEED THE REVIEWER'S WORD.**
+  Sixteen of the audit's 23 hits on *The Twenty-four Carat Moon* are the same
+  shape: each Beagle Boy's pinned NUMBER and the BEAGLE BOYS INC. legend on his
+  sweater are two separate pieces of lettering that the engines put in one box,
+  so listing them per instance (as the roster requires) reports them as
+  ungrouped. Either split them, as the last review did with the *Shipwrecks*
+  plates, or ignore-list the lot -- but it should be decided once.
+- **MUCHKALE'S `V` IS GROUPED ON EXACTLY ONE PAGE OF FIVE.** The letter on his
+  tunic is drawn on 021, 022, 023, 024, 025 and 026 and is a `background` group
+  only on 023. Same call needed: one group a page, or the ignore list.
+- **NAMING A SIGNALLING MACHINE IS A JUDGEMENT I MADE TWICE AND WOULD LIKE
+  RULED.** *The House on Cyclone Hill*'s warning bell (5 groups) and *The
+  Forbidium Money Bin*'s mineral detector (1) both get `other:the ... bell` as
+  the speaker of their own `sound_effect`, on the grounds that a bell deliberately
+  signalling has a maker in the way an impact does not; drills, engines, slams
+  and explosions all stayed `none`. The bell also SPEAKS on *Cyclone Hill* 175
+  g2 -- `ALL CLEAR!` in words, off a device Barks draws with a face -- which is
+  `dialogue` for the same reason. **If the ruling is that machine noise is always
+  `none`, six groups across two titles come out together.**
+- **A GYRO STORY IS STILL FREE ACCURACY, AND A TWO-HANDER NEARLY SO.** *Cyclone
+  Hill* is Gyro alone (plus the Helper and a turtle) across 4 pages and 31
+  groups, every call high, 1.75 images per page. *Forbidium* is Scrooge and Gyro
+  and almost nothing else: the pressure suits (Scrooge YELLOW, Gyro GREEN) make
+  every moon panel a one-glance call, and it came in at 1.25 images per page --
+  **the cheapest title of the batch by a wide margin, and the longest.**
+- **SEVEN MEDIUMS ACROSS 143 GROUPS ON *FORBIDIUM* AND 16 ACROSS 266 ON
+  *24-CARAT*.** Almost all of them are the same case: a balloon coming off a
+  rocket hull with nobody drawn, where the register or the address is the only
+  evidence. 061 g3 is the exception and the one to check first -- a traced tail
+  that lands past Gyro on Scrooge's hat while the LINE reads as the engineer's.
+- `other:` values written this batch. *24-Carat*: `the TV newscaster`, `the
+  radio newscaster`, `the launch announcer`, `the Rajah of Eyesore`, `the Texas
+  cattle king`, `the rocket designer`, `a rocket workman`, `Muchkale`. **The
+  first three are near-duplicates by eye and are NOT the same voice** -- a TV set
+  on 008-009, a loudspeaker on the launch pad on 012, a cabin radio on 013 and
+  018 -- but they are the exact kind of drift that free text hides, so they want
+  a look. *Cyclone Hill*: `Gyro's Helper`, `the turtle`, `the cyclone warning
+  bell`. *Forbidium*: `the tattooist`, `a reporter` (used on both 062 and 073),
+  `a passer-by`, `the mineral detector bell`, `Gyro's Helper`.
+- **A FRAMING DEVICE OPENS AND CLOSES *THE FORBIDIUM MONEY BIN* AND THE CAPTURE
+  RECORDS IT.** 058 g1 is the title's only QUOTED caption -- `"WELL, IT ALL
+  STARTED WHEN UNCLE SCROOGE..."` -- and 073 panel 4 has a PRESS reporter asking
+  what smashed the bin, answered in panel 6 with `WELL, I CAN TELL YOU ONE
+  THING!`. The whole story is Scrooge telling it. The box still takes `narrator`,
+  per the roster, but the frame is in both notes so the last page reads right.
+
 ### Findings to paste into the next run (2026-09-20, seventy-third batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 **438 groups reviewed across the three titles; 21 speaker corrections (4.8%).**
@@ -8746,6 +8868,38 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 22, three titles read 2026-09-20 (seventy-fourth batch; **none reviewed**).
+40 pages, 96 images, **2.40 per page**; per title 3.45 / 1.75 / 1.25.
+
+**THE READABLE WINDOW IS PAGES 008-012 AND THAT IS THE WHOLE STORY.** Only *The
+Twenty-four Carat Moon* has nephews in this batch, and from 013 onward the crew
+wear bubble space helmets: `crowns.py` returns `NO INK ON CROWN` for **every
+head on every page from 013 to 027**, and the helmets are cream, not a roster
+colour. Run `crowns.py` over the title at prep and find the window before
+reading; on this title fifteen of the twenty pages carry nephews and only two of
+them can name one from a cap.
+
+**THE CONSTRUCTION IS A WEDGE, NOT A BAND.** The cap is black with a small
+coloured FLASH at the front-left of the crown, 84-450px on a boy at cabin
+distance and 1,143px in the one close view (011 p4). It is not the banded cap of
+Vols. 5-9 and it does not survive a 60px floor.
+
+**THE DECOYS ARE THE ROSTER INKS AT TEN TO A HUNDRED TIMES THE AREA, AND THE RED
+ONE IS EXACT.** Scrooge wears a RED COAT in `#e61b1f` -- the cap red itself --
+at 5,000-25,000px; his top-hat band and Donald's sailor cap are both `#00a4d5`
+at 1,295-3,521px; the armchairs are `#349bc4` H200 and the boarding ladder
+`#3fb07d` H153 S0.64, both close enough to matter. The rocket hull is `#008ab9`
+H195, which fills whole panels. **Area is the entire discriminator and a hue
+match proves nothing here.**
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *The Twenty-four Carat Moon* (22) | **012 panel 2** -- two boys at the right of the cabin, blue flash on the near crown and red on the far one, with Scrooge's top-hat band in the same blue at the left for scale; **011 panel 3** is the three-boy check, blue at panel x415-455 and red at x538-580 | `#e61b1f` H358.8 S0.88, **190-1,143px on a crown** (011 p4 top of the ladder 693+450px; 011 p3 445px; 012 p2 1,226px). Decoy: Scrooge's coat, the SAME ink at 5,000-25,000px | `#258e79` **H165 S0.74**, only 111px and only once, on 012 p4's right-hand boy -- the green is nearly absent in this title. Decoy: the boarding ladder `#3fb07d` H153 S0.64 at 1,300-3,200px in tall thin boxes | `#00a4d5` **H194**, 84-423px on a boy (012 p2 84+93px, 011 p3 248+175px). Decoys: Scrooge's top-hat band 1,295px and Donald's sailor cap 2,590px, both the identical ink; the armchairs `#349bc4` H200 | Black cap with a small coloured WEDGE at the front of the crown. **Caps only readable on 011 and 012** -- bare-headed in the living room on 008 and 009, space helmets from 013. Cast adds **Muchkale**, the green Venusian in a blue V tunic, and the TV, radio and public-address voices, all of which carry a JAGGED broadcast tail where a duck gets a pointed one |
+| *The House on Cyclone Hill* (22) | **n/a -- Gyro solo** | -- | -- | -- | Gyro, his Helper and a turtle, 4 pages. Thought balloons (cloud edge plus a trail of separate bubbles) against speech (a long pointed tail) is the only thing to read, and both appear on the same page: 172 g1/g2/g3/g5 are clouds and g4/g7 are balloons, all of them Gyro alone. The cyclone warning bell is drawn with a FACE and speaks `ALL CLEAR!` in words on 175 |
+| *The Forbidium Money Bin* (22) | **n/a -- no nephews** | -- | -- | -- | Scrooge and Gyro throughout. On earth: Scrooge's black top hat and maroon or red coat against Gyro's green vest, white shirt and yellow hat. **On the moon it is the pressure suits -- Scrooge YELLOW, Gyro GREEN with a yellow-banded helmet** -- which makes 067 and 068 one-glance pages. Cast adds a tattooist, a reporter with a PRESS card, and a passer-by. The story is framed: 058's quoted caption and 073's press question are the same conversation |
 
 ## Per-volume cap palette
 
