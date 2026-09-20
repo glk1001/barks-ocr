@@ -544,3 +544,26 @@ HELP KEEP AMERICA STRONG
 # panel's own lettering is already grouped. The ROAR on 062 panel 5, reported in
 # the same audit, WAS a real miss and has been added as a group.
 22 059 $
+
+# 2026-09-20, seventy-fourth batch, The Twenty-four Carat Moon.
+#
+# 020: the beamed pair and single note drawn under the last line of the LUNA,
+# THE MOONA balloon on panel 3. They mark that the line is sung and the sung
+# line is already grouped as dialogue around them -- the same case as the Vol.
+# 20 notes above. The page capture said "two drawn music notes" in prose; it now
+# records the glyphs, so this entry can match them.
+22 020 ♫ ♪
+#
+# 021-026: the letter on the front of Muchkale's blue tunic. It is a garment
+# mark, not a sign: he wears it in every panel he faces the reader, which is
+# roughly 25-30 panels across the six pages -- five on 022 alone, where the page
+# capture lists one. Grouping it per instance would mean thirty single-letter
+# background groups carrying one letter of a costume, and nothing would ever
+# find a page by searching for V. One instance IS grouped, 023 g14 on panel 7,
+# added by an earlier pass; it is left alone as the single representative, which
+# is why 023 has no entry here -- the audit never raises that page.
+22 021 V
+22 022 V
+22 024 V
+22 025 V
+22 026 V
