@@ -7494,8 +7494,9 @@ pass wrote: high 12 of 387 (3.1%), medium 7 of 31 (22.6%) -- a 7.3x split.**
   when `type_reviewed` is set, so nothing is recorded and the summary line
   reports only what it did change. Three collided this batch. **Check for the
   collision before applying** -- the arithmetic is the tell: 16 overrules
-  proposed, 14 reported. One survives the batch: *Gyro* 169 g10's `ROWF!` stays
-  `sound_effect` while the same dog's identical `ROWF!` on 170 is `dialogue`.
+  proposed, 14 reported. The three that collided were all resolved by hand
+  afterwards, but only because the hand-back named them: the summary line never
+  would have.
 - **THE MISSED-TEXT AUDIT'S "ONE GROUP, SEVERAL SIGNS" REPORTS ARE REAL AFTER
   ALL.** I called 041's three plate findings false positives because the plates
   *were* grouped, just bundled two and three to a box. **The reviewer split
@@ -7508,16 +7509,22 @@ pass wrote: high 12 of 387 (3.1%), medium 7 of 31 (22.6%) -- a 7.3x split.**
   between an ignore-list entry and a fix.
 - **A GYRO SOLO STORY IS FREE ACCURACY, THIRD TIME RUNNING.** 40 groups, 0
   speaker corrections, 1.75 images per page.
-- **Outstanding at close:** *Shipwrecks* 030 still has one of its two `$`
-  devices ungrouped (panel 1, the small one on the bin door; the wall one was
-  added). Five groups are unreviewed on both engines -- 034 g6, 037 g2, 041 g25,
-  041 g26, 050 g8, the last three being plates split out during the review. And
-  050's corrected plate text reached easyocr only, because `ai_text` is not
-  mirrored, so paddleocr still reads `BEAGLE BOYS INC.` without the number.
-- `other:` values after review: the pass's list stands, with one addition the
-  review made -- **`other:coastguard captain` on 049 g11, which is a near-
-  duplicate of the pass's `other:the coast guard captain`** used three times on
-  the same page-range. Collapse one way or the other.
+- **NOTHING OUTSTANDING. All three titles close with every gating check clean**
+  -- missed-text audit 0 in neither and 0 in one only, engine diff clean, no
+  text or type corrections open, and every group speaker_reviewed on both
+  engines (312 / 72 / 40). Four items reported at first hand-back were worked
+  afterwards: 030's second `$` device, 050's plate text carried across to
+  paddleocr by hand (`ai_text` is not mirrored, so a text fix never travels on
+  its own), *Gyro* 169 g10's `ROWF!`, and the five stragglers -- 034 g6, 037 g2,
+  041 g25, 041 g26, 050 g8, the last three being plates split out of bundles
+  during the review. **The one thing left as the review made it** is the 049
+  swap exception in the bullet above.
+- `other:` values after review: the pass's list stands. The review briefly
+  introduced **`other:coastguard captain` on 049 g11**, a near-duplicate of the
+  pass's own `other:the coast guard captain` used three times in the same
+  page-range; it was folded back in at close. Free-text speaker values get no
+  closed-set check, so the only thing that catches one is listing the distinct
+  values at hand-back and reading them side by side.
 
 ### Findings to paste into the next run (2026-09-20, seventy-third batch, NONE REVIEWED)
 
