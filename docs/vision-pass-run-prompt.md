@@ -7420,6 +7420,97 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-20, seventy-fourth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+**443 groups reviewed across the three titles; 21 speaker corrections (4.7%).**
+By title: *The Twenty-four Carat Moon* **19 of 269 (7.1%)**, *The Forbidium
+Money Bin* **2 of 143 (1.4%)**, *The House on Cyclone Hill* **0 of 31 (0.0%)**.
+Only *24-Carat* has nephews: 11 of 45 in that domain (24.4%). **By the
+confidence the pass wrote, high 13 of 417 (3.1%) against medium 5 of 23
+(21.7%) -- a 7x split, and the sixth batch running that medium is the worse
+bet.** Both of the pass's type overrules held, its one text correction held,
+and no cap colour was reversed anywhere in the batch.
+
+- **THE ERROR IS ALMOST ENTIRELY IN ONE TITLE AND ONE SKILL.** *Forbidium* at
+  1.4% and *Cyclone Hill* at 0.0% are two-hander and solo stories where costume
+  settles everything -- Scrooge's top hat against Gyro's green vest on earth,
+  the YELLOW against GREEN pressure suits on the moon. *24-Carat* is 7.1%
+  because it puts four ducks in identical cream bubble helmets for fifteen
+  pages. **A story that uniforms its cast is the expensive one, and the cost
+  lands on adult-versus-boy, not on caps.**
+- **CROPS AT 1.2x-1.6x ARE NOT ENOUGH TO NAME A HELMETED DUCK: 8 OF THE 21
+  CORRECTIONS.** Donald -> Scrooge x3, Scrooge -> Donald x2, nephews -> Donald
+  x2, Donald -> nephews x1, all on *24-Carat*, and every note quotes the same
+  test -- `the wide adult beak and no whisker fringe`, `small round beak, no
+  whiskers`. Inside a cream helmet at that scale the helmet flattens the
+  silhouette and the whisker fringe reads as hatching. **2.5x or better, or
+  name him from something that is not his face.**
+- **A TRACED TAIL THAT ENDS ON NOTHING IS AN OFF-PANEL SPEAKER, AND I WROTE THE
+  MEASUREMENT DOWN AND THEN OVERRULED IT.** *24-Carat* 011 g15 -> `other:rocket
+  control`. The note says, in capitals, `ART AND SENSE DISAGREE HERE AND I HAVE
+  GONE WITH SENSE`, having established at 5x that the tail runs into the open
+  hatchway and lands on empty cream. **Name the off-panel role.** It also cost
+  seven images on that page and six on the next, against a ceiling of five --
+  the measurement was finished after two crops and the rest went on arguing.
+- **CAPTIONS CARRY A CHARACTER'S KNOWLEDGE MORE OFTEN THAN THEY CARRY THE
+  AUTHOR'S: 3 of the 5 `other:` corrections are `narrator` -> a named voice**
+  (010 g19 the TV newscaster, 012 g8 a reporter, 022 g10 Muchkale). The roster's
+  rule that the field records the BOX governs the TYPE, not the speaker. **Ask
+  whose knowledge the caption carries** -- 022 g10 explains that on an airless
+  moon only thoughts carry, which is Muchkale's own explanation of his own world.
+- **NAMING A SIGNALLING MACHINE IS NOW SETTLED, IN BOTH DIRECTIONS.** The five
+  `other:the cyclone warning bell` groups on *Cyclone Hill* and the one
+  `other:the mineral detector bell` on *Forbidium* all held, as did the bell
+  SPEAKING words (`ALL CLEAR!`, `dialogue`) off a device Barks draws with a
+  face. Impacts, drills, engines, slams and explosions stayed `none` and none of
+  those was touched either. **A machine that deliberately signals takes its
+  maker as speaker; a machine that merely runs does not.**
+- **WHERE THE INK IS READABLE, READING IT IS SAFE.** *24-Carat*'s two names --
+  011 g8 Huey/red, 012 g2 Dewey/blue, each on a measured tip plus a clean flash
+  -- both held, and **there is not one `cap_colour_was` entry in the whole
+  batch.** 11 nephew-domain corrections and not one of them a cap read.
+- **TWO MEDIUMS CALLED FROM REGISTER ALONE BOTH LOST.** *24-Carat* 016 g0
+  `Scrooge` -> `other:the Rajah of Eyesore` (two ships fighting, no figures, and
+  I never traced which hull the tail touched) and *Forbidium* 069 g6 `Scrooge`
+  -> `Gyro` (`GREAT ASTEROIDS!`, which I grouped with his SUFFERIN' SATURN and
+  HOWLING HOTRODS). **The alliterative oath is not a Scrooge tag in Vol. 22** --
+  YE CATS went to Gyro on *Forbidium* 067 g2 and to a nephew on *24-Carat* 014
+  g6. Stop using register to break a two-adult tie; trace the hull.
+- **A COSTUME READ THAT STOPS AT THE COLOUR UNDER-NAMES.** *Forbidium* 072 g2
+  `other:a passer-by` -> **`other:a policeman`**. My note says `the man in the
+  blue coat and hat at the bottom left` -- the blue coat AND hat together are a
+  uniform, and I described them without reading them. **If a background figure's
+  clothes are consistent enough to describe, they are consistent enough to
+  name.**
+- **THE REVIEW ADDED THREE DRAWN `$` DEVICES AND THE PASS HAD FOUND ONE.**
+  *24-Carat* 024 panel 8 was reported; **025 panels 3 and 4 never reached the
+  capture at all**, so the audit was blind to them -- the seventy-third batch's
+  "the capture is the audit's only eyes" repeating verbatim. Both panels are
+  somebody rejoicing over money, which is exactly where Barks puts the device.
+  **Sweep for drawn devices on every panel where a character is delighted or
+  dismayed about money.** The two captures are reconciled to the adds.
+- **RUN `audit_groups.py` BEFORE THE MIRROR.** It caught one `other:the tv
+  newscaster` against fourteen `other:the TV newscaster` that the review had
+  introduced; at that point the fix is one keystroke, and after the mirror it is
+  a corpus-wide grep. The closeout does this at `--stage review`.
+- **OUTSTANDING AT CLOSE, AND IT IS ALL ONE QUESTION.** *Forbidium*'s two
+  missed-text items are unworked -- **059 panel 6's `$` painted on the frosted
+  teller's window and 062 panel 5's display `ROAR`**, both grouped by neither
+  engine, both real. And *24-Carat*'s audit still reports 22 capture-listing
+  items awaiting a ruling: 16 Beagle Boy placard bundles (the pinned number and
+  the sweater legend share one box), 5 instances of Muchkale's tunic `V`
+  (grouped on 023 only), and 020's two drawn music notes. **Everything else in
+  the batch is clean**: both engines match on every field in all three titles,
+  no corrections outstanding, *Cyclone Hill* audits clean, and the prelim tree
+  is empty.
+- `other:` values after review. *24-Carat*: `Muchkale` 31, `the Rajah of
+  Eyesore` 9, `the TV newscaster` 8, `the Texas cattle king` 8, `the radio
+  newscaster` 4, `the rocket designer` 2, `a rocket workman` 2, `rocket control`
+  1, `the launch announcer` 1, `a reporter` 1. *Forbidium*: `the tattooist` 2,
+  `a reporter` 2, `the mineral detector bell` 1, `a policeman` 1. *Cyclone
+  Hill*: `the cyclone warning bell` 5. The three announcer values on *24-Carat*
+  look like drift and are not -- a TV set, a pad loudspeaker and a cabin radio.
+
 ### Findings to paste into the next run (2026-09-20, seventy-fourth batch, *The Twenty-four Carat Moon* REVIEWED AND MIRRORED)
 
 **269 groups on both engines, every one reviewed; 19 speaker corrections (7.1%),
