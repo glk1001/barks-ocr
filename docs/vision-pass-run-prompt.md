@@ -7420,6 +7420,100 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-20, seventy-third batch, NONE REVIEWED)
+
+**Vol. 22, first time read: *The Strange Shipwrecks* (21pp, 302 groups), *The
+Fabulous Tycoon* (5pp, 72) and *Gyro Goes for a Dip* (4pp, 40).** 30 pages, 78
+images, **2.60 per page**; per title 2.76 / 2.60 / 1.75. 14 type corrections, 4
+groups added, no text corrections, no missed text on the two short titles and
+five findings on *Shipwrecks*. Nothing reviewed yet, so everything below is the
+pass's own account and the next review should be read against it.
+
+- **THIS TITLE SWAPS RED AND GREEN, AND I HAVE NAMED FROM THE DIALOGUE
+  THROUGHOUT.** *The Strange Shipwrecks* splits the cast on 034: g6 sends
+  Donald north with HUEY AND DEWEY, g11 sends LOUIE with Scrooge, and g13 then
+  addresses Scrooge's companion by name -- `THERE'S RAIDER NICK'S REEF
+  LIGHTHOUSE, LOUIE!`. 044 g21 confirms it from the other side (`LOUIE WAS
+  SUPPOSED TO SIGNAL US`). But that boy's cap prints RED on every page from 034
+  to 042 -- 034 p8 four flashes of `#e61b1f`, 035 p4 and p5, 036 p1 605px, 042
+  p2 four more -- and Donald's two print GREEN and BLUE (042 p8: `#009e56`
+  270px and `#00a4d5` 264px). So green must be Huey here. Recorded as the
+  roster's worked example prescribes: **dialogue names the boy, `cap_colour`
+  records the ink**, red=Louie / green=Huey / blue=Dewey for the whole title.
+  **030 g11 was written Huey first and rewritten Louie when 042 settled it** --
+  which is the cost of naming from the cap before the dialogue has spoken.
+- **`leafgrn` IS EMPTY IN VOL. 22 AND THE CAP GREEN IS IN `green`.** Every one
+  of the batch's 229 panels reports `leafgrn=0`; the nephew band lives at
+  H147-165 (`#009e46`, `#009f48`, `#00a87a`, `#00ab7c`), which is inside
+  capscan's `green` window. The roster's standing warning -- that `green` holds
+  almost nothing and the cap green lives in `leafgrn` -- is **backwards for this
+  volume**. Read the `green` column.
+- **THE BAND IS 20-900px AND THREE DECOYS ARE THE SAME INKS, BIGGER.** Scrooge's
+  coat is `#e61b1f`, the exact roster red, at 4,000-10,000px; his top-hat band
+  is the roster blue `#00a4d5` at 1,300-2,200px; Donald's sailor cap is that
+  same blue at 1,300-3,500px. **Area is the whole discriminator**, and a thin
+  horizontal blue stripe is a hat band where a rounded blue blob is a sailor
+  cap -- that one distinction placed Scrooge against Donald on eight panels of
+  *Tycoon* without opening an image.
+- **THE HEAD CENSUS MISSED A BAND THAT WAS SITTING INSIDE THE SKULL BOX.** 030
+  p4: the right-hand boy carries 88px and 84px of `#e61b1f` at (441,311) and
+  (472,290), but `title_heads` reports **no CAP-INK on him at all**, because
+  both blobs fall INSIDE the white region rather than above it. The seventy-
+  second batch's finding was that the census misses ink ABOVE the skull; this is
+  the same tool failing at the other edge. Neither absence is the census's to
+  certify.
+- **AND I MADE THE FILTERED-VIEW ERROR MYSELF, IN ONE COMMAND.** On 038 I ran
+  capscan and grepped for `e61b1f|e61a1f`; it returned nothing and I was about
+  to write the caps off. The census then showed `#e6191f` 203px sitting on his
+  crown -- **one digit outside my own grep**. The ink was in the output the
+  whole time. Quote the scan's own header, never a grep over it.
+- **FOUR TYPE CORRECTIONS CAME OFF THE BUBBLE TRAIL, AND ALL FOUR WERE STORED AS
+  `dialogue` BY BOTH ENGINES.** 037 g5, 054 g5, 054 g11, 054 g12 and 056 g1 all
+  have a cloud edge and a run of separate bubbles. The test that predicted them:
+  **an aside about a character who is standing in the panel has to be a
+  thought.** 056 g4 is the control -- the same joke, a drawn pointed tail, and
+  Scrooge not in the panel -- and its stored `dialogue` was left alone.
+- **TWO CAPTION BOXES WERE STORED AS SPEECH.** 034 g5 and 044 g2, both the
+  yellow `SO —` box with a drop capital, both `dialogue`; the identical device is
+  stored `narration` on 034 g12, 044 g5 and 044 g18 of the same title. A third,
+  on 050 panel 3, was grouped by neither engine and is added.
+- **A BARE `?` IS ROUTINELY UNGROUPED, AND TWO OF THEM SAT IN ONE SPREAD.** 033
+  panel 1 has a `?` cloud over a bare-headed nephew and panel 2 has a PAIR
+  flanking Scrooge's head of which the engines grouped only the left one. Both
+  added. When a panel shows one drawn device, look for its twin.
+- **THREE PROPOSALS COLLIDE WITH AN EARLIER HUMAN REVIEW AND WERE DROPPED
+  SILENTLY BY `vision_apply`.** `_apply_type` returns before it even sets
+  `type_adjudicated` when `type_reviewed` is present, so nothing at all is
+  recorded and only the note survives. They are *Shipwrecks* 046 g7 (`ZOW`,
+  reviewed `background` 2026-09-15, read here as a motion streak crossing the
+  hull's own lettering), *Gyro* 169 g10 (`ROWF!`, reviewed `sound_effect`
+  2026-09-15, where the same dog's `YAP!` and `KI-YI!` on the same page are both
+  stored `dialogue`), and *Shipwrecks* 034 g5, whose SPEAKER was reviewed `none`
+  2026-08-28 against the pass's `narrator` -- so that group will come out
+  `narration`/`none` while every other caption box in the batch is
+  `narration`/`narrator`. **Check for this before applying, not after: the
+  summary line counts the corrections it made, not the ones it refused.**
+- **THE MISSED-TEXT AUDIT HAS A FALSE-POSITIVE CLASS: ONE GROUP COVERING SEVERAL
+  IDENTICAL SIGNS.** Three of *Shipwrecks*' five findings are Beagle Boy chest
+  plates on 041 that ARE grouped -- g2 covers two plates in one box and g10
+  covers three -- so the roster's one-entry-per-instance rule in `visible_text`
+  cannot match them and they report as `0 grouped`. Only two of the five are
+  real: 030's two `$` devices and 038's third `CHOCOLATE` bar.
+- **A GYRO SOLO STORY IS FREE ACCURACY AGAIN** -- 40 groups, 1.75 images per
+  page, every speaker either Gyro or one of two dogs, and the helper lamp in
+  nearly every panel never speaking. The only work was telling the small black
+  dog of 168-169 from the big brown one of 169-170.
+- `other:` values written by the pass: `Saltwind McSpray`, `a lighthouse
+  helper`, `the lighthouse helpers`, `the detective and Captain Stalwart`,
+  `Scrooge's detective`, `Captain Stalwart`, `the chief clerk`, `the office
+  nurse`, `the bearded sailor`, `a Moneytubs crewman`, `the Moneytubs' crew`,
+  `the Moneytubs' captain`, `a coast guard crewman`, `the coast guard captain`,
+  `Longhorn Tallgrass`, `the black dog`, `the brown dog`. **Four
+  singular/collective pairs are deliberate and near-duplicate by eye** -- `a
+  lighthouse helper` against `the lighthouse helpers`, `a Moneytubs crewman`
+  against `the Moneytubs' crew`, and the two dogs -- and want a reviewer's word
+  on whether the pairs should be collapsed.
+
 ### Findings to paste into the next run (2026-09-20, seventy-second batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 **406 groups reviewed across all three titles; 39 speaker corrections (9.6%).**
@@ -8546,6 +8640,31 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 22, three titles read 2026-09-20 (seventy-third batch; **NONE REVIEWED**,
+so every row below is the pass's own reading). 30 pages, 78 images, **2.60 per
+page**; per title 2.76 / 2.60 / 1.75.
+
+**VOL. 22'S CAP GREEN IS IN capscan's `green` BAND, NOT `leafgrn`.** Every panel
+of the batch reports `leafgrn=0`. The nephew green runs H147-165 -- `#009e46`,
+`#009f48`, `#009e56`, `#00a87a`, `#00ab7c` -- and the roster's usual warning
+that `green` holds almost nothing is backwards here.
+
+**THE THREE DECOYS ARE THE ROSTER'S OWN INKS AT TEN TIMES THE AREA.** Scrooge's
+coat is `#e61b1f` at 4,000-10,000px against a red band of 80-900px; his top-hat
+band is `#00a4d5` at 1,300-2,200px and Donald's sailor cap the same ink at
+1,300-3,500px against a blue band of 45-750px. A hat band is a thin horizontal
+stripe, often broken into two or three stacked strips; a sailor cap is one
+rounded blob. That shape test alone separates Scrooge from Donald without an
+image.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *The Strange Shipwrecks* (22) | **034 panel 5** -- the whole party on the airfield tarmac, one band each: red apart at left, green and blue saluting beside Donald; 030 panel 1's splash repeats it blue/green/red left to right | `#e61b1f`-`#e61a20` H358.8 S0.88, **80-900px on a crown**; dimmed to `#e6191f` and `#e71920` indoors, and `#d94f41` at 152px on 049 p3 | `#009e46`/`#009f48`/`#00a87a` **H147-165**, 45-900px -- and the `#00a96e` H159 at 17,000-22,000px is a WALL or the sea, never a cap | `#00a4d5`-`#00a5d5` **H194**, 45-750px on a boy; `#00a4b4` H187 is the same band dimmed | black sailor cap carrying small coloured flashes, usually two per crown. **RED AND GREEN ARE SWAPPED FOR THE WHOLE TITLE**: 034 g6/g11 and g13 and 044 g21 send LOUIE with Scrooge and HUEY with Donald by name, while the art gives Scrooge's boy red on every page 034-042 and Donald's two green and blue. Named from the dialogue, ink recorded as printed. **The caps also come OFF**: the boys are bare-headed indoors at the Money Bin (033 panels 4 and 8, cropped at 3x) and one loses his cap in the brawl (041 p1). Sea decoys: `#349bc4` H200 and `#00a7a8` H180 (water), `#4d998d` H170 S0.50 and `#3fb17e` H153 S0.64 (the Beagle Boys' green jerseys). Cast adds **Saltwind McSpray** and his bearded helpers -- all Beagle Boys under false beards -- **Captain Stalwart**, Scrooge's detective, a chief clerk, an office nurse, and the Moneytubs' and coast guard crews |
+| *The Fabulous Tycoon* (22) | **n/a -- no nephews in the title** | -- | -- | -- | Scrooge and Donald only, so the cap question is entirely Scrooge's top-hat band against Donald's sailor cap, both `#00a4d5`; the stripe-versus-blob shape test settles every panel. Cast adds **Longhorn Tallgrass**, a rancher in a green shirt and orange hat who says PODNER and GENTS. **Five thought clouds are stored as `dialogue`** (054 g5/g11/g12, 056 g1) and one genuine speech balloon of the same joke shape is not (056 g4) -- the discriminator is whether Scrooge is standing in the panel |
+| *Gyro Goes for a Dip* (22) | **n/a -- no nephews in the title** | -- | -- | -- | Gyro solo. **TWO DIFFERENT DOGS**: a small BLACK one (168 p7, 169 p5 and p6 -- `YIKE!`, `YAP!`, `KI-YI!`) and a big BROWN one in a blue collar (169 p8 through 170 -- `ROWF!`, `KI-YOWL`). They are recorded as separate `other:` values. The helper lamp is in nearly every panel and never speaks. 169 g10's `ROWF!` carries an earlier `type_reviewed` as `sound_effect`, so the title ends up labelling the same animal's bark both ways |
 
 ## Per-volume cap palette
 
