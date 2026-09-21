@@ -13,12 +13,25 @@ casts, which is looser and lets the pass name someone from the wrong story.
 ``--volume`` with ``--pages`` still works for a deliberate page range, and warns
 when the range crosses titles.
 
-Every emitted image is quantized to a 256-colour palette.  This is not cosmetic:
-Claude Code's Read tool re-encodes any image over ~500KB as reduced-quality JPEG,
-which destroys the fine lettering that bold detection depends on.  Barks line art
-is flat colour, so a 256-colour palette is visually lossless and keeps almost every
-panel comfortably under the threshold.  Plain ``save("PNG")`` is NOT safe -- it
-exceeds 500KB on roughly a third of the panels in the larger volumes.
+Every emitted image is kept under ~500KB, because Claude Code's Read tool
+re-encodes anything larger as reduced-quality JPEG and that destroys the fine
+lettering bold detection depends on.  Panels are written in **full colour** and
+quantized to a 256-colour palette only when RGB will not fit; see ``_save_image``.
+
+Quantizing everything was the rule until 2026-09-21 and it was costing cap reads.
+A 256-colour palette is NOT visually lossless on this material: the quantizer
+allocates entries by pixel volume, so a cap segment of a few hundred pixels in a
+panel of several hundred thousand is folded into its nearest neighbour and the ink
+disappears.  On "Tracking Sandy" 048 panel 8 the restored source carries green
+279px at H148.9, blue 233px at H193.5 and red 269px at H358.3 on the three
+nephews' crowns; the quantized crop carried green 371px and *nothing else*, with
+both outer crowns reading as one ink at the midpoint of the two.  Measured over
+the seventy-fifth batch, 53 of the 407 panel-bands carrying a roster ink (13%)
+lost it outright, and changing the palette method does not help -- MAXCOVERAGE
+loses 65 and FASTOCTREE 72 of the same 407.
+
+Full RGB costs disk and almost nothing else: over the same 155 panels the median
+is 237KB and only 3 (1.9%) exceed the threshold and fall back to the palette.
 
 The few panels too big even quantized are **tiled**, not shrunk: a splash panel is
 split into overlapping full-resolution tiles.  Shrinking would cost the 36px
@@ -106,9 +119,41 @@ GROUP_FIELDS = ("ai_text", "text_box", "type", "panel_num")
 
 
 def _save_quantized(image: Image.Image, out_file: Path) -> int:
-    """Save ``image`` as a 256-colour PNG; return its size in bytes."""
+    """Save ``image`` as a 256-colour PNG; return its size in bytes.
+
+    The fallback for images too big to keep in full colour. Measured over the
+    seventy-fifth batch, this drops a roster ink outright on 13% of the
+    panel-bands that carry one, so it is used only when RGB will not fit --
+    see ``_save_image``.
+
+    Args:
+        image: the panel, tile or overview to write.
+        out_file: where to write it.
+
+    Returns:
+        The size of the written file in bytes.
+
+    """
     image.convert("RGB").quantize(colors=PALETTE_SIZE).save(out_file, "PNG", optimize=True)
     return out_file.stat().st_size
+
+
+def _save_image(image: Image.Image, out_file: Path) -> int:
+    """Save ``image`` in full colour, falling back to a palette if it will not fit.
+
+    Args:
+        image: the panel, tile or overview to write.
+        out_file: where to write it.
+
+    Returns:
+        The size of the written file in bytes.
+
+    """
+    image.convert("RGB").save(out_file, "PNG", optimize=True)
+    size = out_file.stat().st_size
+    if size <= MAX_IMAGE_BYTES:
+        return size
+    return _save_quantized(image, out_file)
 
 
 def _crop_panel(page_image: Image.Image, box: Any, pad: int) -> Image.Image:  # noqa: ANN401
@@ -147,7 +192,7 @@ def _write_panel(panel: Image.Image, page_dir: Path, panel_num: int) -> tuple[li
     can report a panel that is still oversized at the tile cap.
     """
     name = f"panel-{panel_num:02d}.png"
-    size = _save_quantized(panel, page_dir / name)
+    size = _save_image(panel, page_dir / name)
     if size <= MAX_IMAGE_BYTES:
         return [name], size
 
@@ -155,7 +200,7 @@ def _write_panel(panel: Image.Image, page_dir: Path, panel_num: int) -> tuple[li
         tiles = _tile_images(panel, count)
         names = [f"panel-{panel_num:02d}{chr(ord('a') + i)}.png" for i in range(count)]
         sizes = [
-            _save_quantized(tile, page_dir / tile_name)
+            _save_image(tile, page_dir / tile_name)
             for tile, tile_name in zip(tiles, names, strict=True)
         ]
         if max(sizes) <= MAX_IMAGE_BYTES:
@@ -188,7 +233,7 @@ def _write_overview(page_image: Image.Image, out_file: Path) -> int:
     for long_edge in OVERVIEW_LONG_EDGES:
         overview = page_image.copy()
         overview.thumbnail((long_edge, long_edge), Image.Resampling.LANCZOS)
-        size = _save_quantized(overview, out_file)
+        size = _save_image(overview, out_file)
         if size <= MAX_IMAGE_BYTES:
             return size
     return size  # Still too big at the smallest size; the caller reports it.

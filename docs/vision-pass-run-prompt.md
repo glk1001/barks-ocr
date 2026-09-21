@@ -7444,11 +7444,15 @@ nephew domain -- 51.8% of 168.** Per title: *The Magic Ink* 1 of 79 (1.3%),
   the source has (Tracking Sandy 53, Chicken Thief 23, Magic Ink 12), many of
   them total losses of 200-500px.
   **The docstring's claim that a 256-colour palette is `visually lossless` on
-  flat line art is false for exactly the ink the pass depends on.** Tested on the
-  same panel: MEDIANCUT green 371 / blue 0 / red 0; **MAXCOVERAGE 229/408/213;
-  FASTOCTREE 208/205/187** against a source of 279/233/218, and FASTOCTREE is
-  also the smallest file (71KB against 96KB). **A one-line change to
-  `method=Image.Quantize.FASTOCTREE` restores all three inks.**
+  flat line art is false for exactly the ink the pass depends on** -- and
+  changing the palette METHOD does not fix it. Over the same 407 panel-bands the
+  default loses 53 (13.0%), MAXCOVERAGE 65 (16.0%) and FASTOCTREE 72 (17.7%), so
+  the default is the best of the three and a one-panel test of any of them is
+  worthless. **FIXED 2026-09-21 by not quantizing unless the file has to be**:
+  panels are written in full RGB and fall back to the palette only over the
+  500KB budget. Measured over the same 155 panels that is 0.5% of bands lost
+  against 13.0%, the fallback fires on 3 panels (1.9%), and the largest file is
+  343KB. Disk goes from 12.9MB to 34.9MB, which is the whole cost.
 - **BUT IT IS NOT THE REASON THE PASS DECLINED.** Of the 45 groups the review
   moved from `nephews` to a name, **only 6 sit on a panel whose crop had lost
   that ink**; the other 39 had the colour present in the image the pass read.
@@ -7512,9 +7516,10 @@ nephew domain -- 51.8% of 168.** Per title: *The Magic Ink* 1 of 79 (1.3%),
   `dialogue -> thought` (a character musing alone), and 062 g7. **A balloon over
   a character alone in the panel is worth opening before the stored type is left
   to stand.**
-- **STILL OUTSTANDING, NOT A DEFECT:** *Chicken Thief* 057 g12 (`RRARR!`, the
-  coyote) is unreviewed on both engines, unchanged from the pass --
-  `queue-straggler.txt`, one line.
+- **NOTHING OUTSTANDING.** *Chicken Thief* 057 g12 (`RRARR!`, the coyote) came
+  back unchanged, so all four titles close at every group reviewed on both
+  engines, and the corpus-wide corrections queue is down to one -- vol 23 *The
+  Librarian* 118 g19, which predates this batch.
 
 ### Findings to paste into the next run (2026-09-21, seventy-fifth batch, *Tracking Sandy* REVIEWED AND MIRRORED)
 
