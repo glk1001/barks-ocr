@@ -639,6 +639,39 @@ ls <scratchpad>/*.png | wc -l          # generated
 Images read has to be counted from the session transcript; the census script
 used to build the table above is worth keeping if this needs auditing again.
 
+### The other axis, and the bigger one
+
+Images per page is what this file governs, and it is **not** what dominates the
+bill. Censused over 52 sessions and 18,235 API calls of this project's own
+transcripts on 2026-09-21:
+
+```
+cache read     7692.5M raw   65.0%    <- re-sending the conversation each turn
+cache write     246.8M raw   26.1%
+output           21.2M raw    8.9%    <- the actual reading and writing
+
+context re-reading                    91.1% of consumption
+average context carried per call      422K
+```
+
+Cost is roughly `calls x average context`, so anything that lands in context is
+paid for again on every later call. Two consequences the image budget above does
+not capture:
+
+- **An image read early costs far more than the same image read late.** At ~1.5K
+  tokens, one image read at the midpoint of a 450-call session is re-sent ~225
+  times: ~340K cache-read tokens, not 1.5K. Establishing a cap construction on
+  the splash page is the most expensive placement there is — which is an
+  argument for establishing it *once and cheaply*, not for skipping it.
+- **Session length is itself a cost.** Average context climbs with call count —
+  ~195K over 116 calls, ~476K over 441 — and plateaus near 500K where
+  auto-compaction holds it. Splitting a batch whose titles share no cap
+  construction is worth more than shaving an image off a page.
+
+`bash scripts/closeout.sh` prints the figures as its last row, and
+`scripts/vision/usage_census.py --detail` gives the per-session table. Record
+`calls` and `avg_ctx` in the ledger next to the image count.
+
 ## Related
 
 - `vision-pass` skill — the procedure and its traps

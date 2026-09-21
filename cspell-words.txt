@@ -33,6 +33,7 @@ colourist
 colours
 coords
 cscsv
+ctx
 denoise
 denoising
 desaturated
@@ -116,6 +117,7 @@ rowname
 sapg
 scancode
 scrollview
+sidechain
 socr
 spkr
 sput

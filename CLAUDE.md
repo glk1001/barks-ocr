@@ -58,10 +58,12 @@ batch and 17 in another.
 **Close-out is scripted.** `bash scripts/closeout.sh [--stage apply|review]
 "<title>"` runs the read-only checks in one go — missed-text audit, engine diff,
 outstanding text/type corrections, unreviewed speakers on *both* engines, mirror
-dry run, and `git status` in this repo and the prelim repo — and exits non-zero
-if any gating check is dirty. It writes nothing and commits nothing. Use it
-instead of re-typing the sequence; read the WARN rows, which are advisory by
-design. `UV_OFFLINE=1` when there is no network.
+dry run, `git status` in this repo and the prelim repo, and a session cost
+census (`scripts/vision/usage_census.py`: context re-reading is ~91% of token
+consumption, so average context per API call is the figure to record) — and
+exits non-zero if any gating check is dirty. It writes nothing and commits
+nothing. Use it instead of re-typing the sequence; read the WARN rows, which
+are advisory by design. `UV_OFFLINE=1` when there is no network.
 
 **The prelim JSON is its own git repo** at `Fantagraphics-restored-ocr/Prelim`,
 not the parent. Stage explicit file paths — never a directory, never a glob: a

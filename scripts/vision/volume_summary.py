@@ -26,9 +26,15 @@ WHERE EACH NUMBER COMES FROM.
   other: when the review changes its speaker, that is a real correction (*Good
   Canoes* 058 g10, *The Custard Gun* 093 g6). The hand tallies in the findings
   doc counted review adds as corrections, so their per-title totals run higher.
-- **Cost** is images read, from `docs/vision-cost-ledger.csv`. Nothing in the
-  corpus records it, so a title missing from the ledger shows `--`, and a
-  ledger row covering several titles is shown as shared.
+- **Cost** has two axes, both from `docs/vision-cost-ledger.csv`. Nothing in
+  the corpus records either, so a title missing from the ledger shows `--`, and
+  a ledger row covering several titles is shown as shared.
+  `Img/pg` is images read, the axis `docs/vision-pass-cost.md` governs.
+  `Ctx/call` is the mean context each API call re-sent and the call count, from
+  `scripts/vision/usage_census.py` -- context re-reading is ~91% of token
+  consumption, so it moves the bill in a way images/page does not. It is blank
+  for every row recorded before 2026-09-21, when the census was written, and
+  has no total: an average over sessions cannot be summed across titles.
 
 A passed but unreviewed title has no `speaker_was` yet, so its rate reads 0%.
 The `reviewed` column is coloured when it is short of the group count, so that a
@@ -64,6 +70,10 @@ from barks_ocr.utils.vision_schema import (
 )
 
 LEDGER = Path(__file__).resolve().parents[2] / "docs" / "vision-cost-ledger.csv"
+
+# Kept in step with scripts/vision/usage_census.py by hand: these are standalone
+# scripts, not a package, so there is nothing to import it from.
+HOT_AVG_CONTEXT = 450_000
 TITLE_SEP = " | "
 COLLECTIVE = "nephews"
 TITLE_WIDTH = 26
@@ -110,6 +120,8 @@ class CostUnit:
     titles: tuple[str, ...]
     pages: int
     images: int
+    calls: int | None = None
+    avg_ctx: int | None = None
 
 
 @dataclass(frozen=True)
@@ -155,9 +167,24 @@ def load_ledger(path: Path) -> list[CostUnit]:
             titles=tuple(t.strip() for t in row["titles"].split(TITLE_SEP)),
             pages=int(row["pages"]),
             images=int(row["images"]),
+            calls=optional_int(row.get("calls")),
+            avg_ctx=optional_int(row.get("avg_ctx")),
         )
         for row in csv.DictReader(lines)
     ]
+
+
+def optional_int(value: str | None) -> int | None:
+    """Read a ledger cell that is blank on every row predating the census.
+
+    Args:
+        value: The raw cell, or None when the column is absent altogether.
+
+    Returns:
+        The integer, or None when the cell is missing or empty.
+
+    """
+    return int(value) if value else None
 
 
 def in_nephew_domain(speaker: object) -> bool:
@@ -264,6 +291,26 @@ def cost_cell(title: str, units: list[CostUnit]) -> str:
     return rate if len(unit.titles) == 1 else f"{rate}[dim]*[/]"
 
 
+def context_cell(title: str, units: list[CostUnit]) -> str:
+    """Describe what the ledger records about one title's context cost.
+
+    Args:
+        title: The title.
+        units: Every ledger unit.
+
+    Returns:
+        Average context per API call and the call count, or a dim dash when the
+        row predates the census or the title is not in the ledger at all.
+
+    """
+    unit = next((u for u in units if title in u.titles), None)
+    if unit is None or unit.avg_ctx is None:
+        return "[dim]--[/]"
+    calls = f"[dim]/{unit.calls}[/]" if unit.calls else ""
+    hot = "bold yellow" if unit.avg_ctx * 1000 > HOT_AVG_CONTEXT else "bold"
+    return f"[{hot}]{unit.avg_ctx}K[/]{calls}"
+
+
 def cost_rate(images: int, pages: int) -> str:
     """Return images per page, or a dim note when nothing is costed.
 
@@ -303,6 +350,7 @@ def volume_table(volume: int, caption: str) -> Table:
     table.add_column("Corr", justify="right")
     table.add_column("Rate", justify="right")
     table.add_column("Img/pg", justify="right")
+    table.add_column("Ctx/call", justify="right")
     return table
 
 
@@ -360,6 +408,7 @@ def report_volume(
             str(tally.corrections),
             rate_cell(tally.corrections, tally.groups),
             cost_cell(stat.title, units),
+            context_cell(stat.title, units),
         )
     table.add_section()
     table.add_row(
@@ -370,6 +419,7 @@ def report_volume(
         f"[bold]{total.corrections}[/]",
         rate_cell(total.corrections, total.groups),
         cost_rate(images, costed_pages),
+        "",
     )
     _console.print()
     _console.print(table)

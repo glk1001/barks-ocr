@@ -4,84 +4,93 @@
 # A unit is normally one title; several titles joined with " | " share one row
 # when the pass only recorded their cost together. `recorded` is the date of the
 # findings section the figure comes from. Lines starting with # are skipped.
-volume,titles,pages,images,recorded,note
-17,Secret of Hondorica,24,45,2026-09-10,forty-seventh batch
-17,Dogcatcher Duck,6,6,2026-09-10,forty-seventh batch; page views only
-17,Donald's Raucous Role,10,10,2026-09-10,forty-eighth batch; page views only (the batch's nine crops were all on another title)
-17,Good Canoes and Bad Canoes,10,10,2026-09-10,forty-eighth batch; page views only (the batch's nine crops were all on another title)
-17,Trouble Indemnity | The Chickadee Challenge | The Unorthodox Ox,30,44,2026-09-10,forty-ninth batch; costed only as a batch
-17,The Custard Gun,10,20,2026-09-11,fiftieth batch
-17,Three Un-Ducks,10,15,2026-09-11,fifty-second batch
-17,Secret Resolutions,10,13,2026-09-14,fifty-third batch
-17,The Ice Taxis,10,16,2026-09-14,fifty-fourth batch
-17,Searching for a Successor,10,15,2026-09-14,fifty-fourth batch
-17,Gopher Goof-Ups,10,20,2026-09-14,fifty-fifth batch
-17,The Olympic Hopeful | In the Swim,20,33,2026-09-14,fifty-fifth batch; 18 and 15 recorded without saying which title was which
-16,Land Beneath the Ground!,29,48,2026-09-14,fifty-sixth batch
-17,Camping Confusion,10,14,2026-09-14,fifty-sixth batch
-18,The Master,10,19,2026-09-15,fifty-seventh batch
-18,A Whale of a Story,10,16,2026-09-15,fifty-seventh batch
-18,Smoke Writer in the Sky,10,15,2026-09-15,fifty-seventh batch
-16,The Lost Crown of Genghis Khan!,20,34,2026-09-15,fifty-eighth batch
-16,Faulty Fortune,8,17,2026-09-15,fifty-eighth batch
-18,The Runaway Train,10,11,2026-09-15,fifty-eighth batch
-18,Statues of Limitations,10,19,2026-09-15,fifty-eighth batch
-18,Borderline Hero,10,18,2026-09-16,fifty-ninth batch
-16,The Second-Richest Duck,20,33,2026-09-16,fifty-ninth batch
-16,Migrating Millions,7,12,2026-09-16,sixtieth batch
-20,The Cat Box,4,5,2026-09-16,sixtieth batch
-20,Grandma's Present,8,12,2026-09-16,sixtieth batch
-18,Knight in Shining Armor,10,16,2026-09-16,sixtieth batch
-18,Fearsome Flowers,10,29,2026-09-16,sixty-first batch
-18,Donald's Pet Service,10,14,2026-09-16,sixty-first batch
-16,Back to Long Ago!,21,26,2026-09-16,sixty-first batch
-20,Forecasting Follies,4,11,2026-09-16,sixty-second batch
-20,Fishing Mystery,4,7,2026-09-16,sixty-second batch
-16,The Colossalest Surprise Quiz Show,6,11,2026-09-16,sixty-second batch
-16,A Cold Bargain,27,44,2026-09-16,sixty-second batch (30 on the pass + 14 on the 2026-09-17 nephew re-read)
-16,Land of the Pygmy Indians,27,49,2026-09-17,sixty-third batch
-16,The Fantastic River Race,20,27,2026-09-17,sixty-third batch (6 of the 27 on sweater badges and a bottle label)
-18,In Kakimaw Country,10,22,2026-09-17,sixty-fourth batch
-18,The Lost Peg Leg Mine,10,20,2026-09-17,sixty-fourth batch
-18,Losing Face,10,16,2026-09-17,sixty-fourth batch
-18,The Day Duckburg Got Dyed,10,16,2026-09-17,sixty-fourth batch
-20,Picnic,6,8,2026-09-17,sixty-fifth batch (Gyro solo; no nephews)
-18,Gyro's Imagination Invention,10,22,2026-09-17,sixty-fifth batch
-18,Red Apple Sap,10,15,2026-09-17,sixty-fifth batch
-20,The Sure-Fire Gold Finder,4,6,2026-09-17,sixty-fifth batch (Gyro solo; no nephews)
-18,Special Delivery,10,20,2026-09-18,sixty-sixth batch
-18,The Code of Duckburg,10,16,2026-09-18,sixty-sixth batch
-19,Forbidden Valley,26,30,2026-09-18,sixty-sixth batch (helmets from 032; caps only 025-043)
-19,Sagmore Springs Hotel,10,12,2026-09-18,sixty-sixth batch (Scrooge disguised; few nephew calls)
-19,The Tenderfoot Trap,10,18,2026-09-18,sixty-seventh batch
-20,The Mines of King Solomon,27,38,2026-09-18,sixty-seventh batch (colourist clash: dialogue names a red-capped boy Louie)
-20,Gyro Builds a Better House,4,13,2026-09-18,sixty-seventh batch (Gyro solo; the balloon-drawing test cost the images)
-20,August Accident,4,11,2026-09-18,sixty-seventh batch (Gyro solo; same balloon-drawing test)
-20,September Scrimmage,4,8,2026-09-18,sixty-seventh batch (football helmets; no cap key)
-19,The Black Pearls of Tabu Yama,18,60,2026-09-19,sixty-eighth batch (OVER BUDGET at 3.33/page: cap green and palm foliage share the H106-119 band, so every green needed a head)
-19,Wishing Stone Island,10,19,2026-09-19,sixty-eighth batch (a boy wears a toy sailor hat for two pages; named by elimination)
-19,Rocket Race Around the World,10,10,2026-09-19,sixty-eighth batch (Gyro/Sliderule/Gladstone cast; page view alone settled every panel)
-19,The Persistent Postman,10,10,2026-09-19,sixty-eighth batch (Donald solo mailman; no nephew is named anywhere in the title)
-20,City of Golden Roofs,26,49,2026-09-19,sixty-ninth batch (cap wedge is a PATCH on a black crown; 6 images on 048 alone to fix the construction, 1.88/page over the title)
-20,Getting Thor,4,6,2026-09-19,sixty-ninth batch (Gyro solo with crows; no nephews, no cap key)
-19,The Titanic Ants!,20,32,2026-09-19,sixty-ninth batch (quartered cap, wedges 100-700px; picnic guests and a scientist carry a third of the dialogue)
-19,The Half-Baked Baker,10,31,2026-09-19,seventieth batch (3.10/page -- 13 of the 31 went on the splash and page 122 through re-cropping the same panels; the JUDGE ribbons cost 2 of their own)
-19,Dodging Miss Daisy,10,18,2026-09-19,seventieth batch (boys bare-headed indoors and capped outdoors; one montage plus one stack per page)
-20,The Money Well,26,36,2026-09-19,seventieth batch (Scrooge/Beagle Boys book, only 19 nephew calls in 26 pages; 25 montages and 11 follow-ups)
-19,The Milkman,10,22,2026-09-19,seventy-first batch (a NIGHT story: a dark slate wash fills the blue band on 123 blobs and the clean roster blue prints on three panels only, so every nephew call needed a crown crop)
-19,Mocking Bird Ridge,10,14,2026-09-19,seventy-first batch (boys bare-headed indoors on 151 and capped outdoors from 154; Donald's own cap is the roster blue at 5-20x a nephew's)
-19,Old Froggie Catapult,10,13,2026-09-19,seventy-first batch (colourist clash: the dialogue names Louie and the boy wears red for five pages)
-21,Dramatic Donald,10,10,2026-09-19,seventy-first batch (first title read from Vol. 21; no cap key at all, and the panels' roster blue is the sofa)
-19,Water Ski Race,6,20,2026-09-20,seventy-second batch (NO nephew cap ink in the title -- plain white sailor caps in swim gear -- so the images went on tails and on telling Daisy from a boy)
-20,The Golden River,27,56,2026-09-20,seventy-second batch (27pp Scrooge book with ~90 nephew groups; the 098 establishing page alone cost 9 images and the other 26 averaged 1.8)
-20,The Know-It-All Machine,4,4,2026-09-20,seventy-second batch (Gyro one-pager set: no nephews at all, one page.png each and nothing else)
-22,The Strange Shipwrecks,21,58,2026-09-20,seventy-third batch (first Vol. 22 title; the palette and the red/green swap cost the front third -- pages 030-034 took 25 of the 58 and the remaining 16 pages averaged 2.1)
-22,The Fabulous Tycoon,5,13,2026-09-20,seventy-third batch (no nephews; the images went on Scrooge-versus-Donald and on four thought clouds the engines had stored as dialogue)
-22,Gyro Goes for a Dip,4,7,2026-09-20,seventy-third batch (Gyro solo plus two dogs; four montages and three panels settled the whole title)
-22,The Twenty-four Carat Moon,20,69,2026-09-20,seventy-fourth batch (the caps are only readable on 011-012 and the crew is helmeted from 013; 011 alone took 7 images and 012 took 6 on one balloon whose tail lands on an empty hatchway -- the other eighteen pages averaged 3.1)
-22,The House on Cyclone Hill,4,7,2026-09-20,seventy-fourth batch (Gyro solo plus a Helper and a turtle; two montages settled the cloud-against-tail question for the whole title)
-22,The Forbidium Money Bin,16,20,2026-09-20,seventy-fourth batch (Scrooge and Gyro only, and the yellow-against-green pressure suits make every moon panel a one-glance call -- the cheapest title of the batch and the longest)
-21,Noble Porpoises,10,34,2026-09-21,seventy-fifth batch (the dearest of the four: the first Vol. 21 title with a readable cap key, so the splash and 037-039 took 14 images establishing that the construction is a thin coloured RIM and that the roster blue in this story is the sea -- the last seven pages averaged 2.6)
-22,The Magic Ink,6,10,2026-09-21,seventy-fifth batch (the nephews are bare-headed in every panel, so every nephew call was forced; the images went on the pages, the two office signs and one SPLOOK the audit queried)
-21,Tracking Sandy,10,20,2026-09-21,seventy-fifth batch (ten montages plus nine stacked crops; one 1.7x crop of 051 p3 settled the title-wide cap mapping and is the best-spent image of the batch)
-21,The Littlest Chicken Thief,10,15,2026-09-21,seventy-fifth batch (the cheapest: the construction was already known from Tracking Sandy, so ten montages and five stacks covered the whole title)
+#
+# `calls` and `avg_ctx` are the OTHER cost axis, from
+# scripts/vision/usage_census.py: API calls made, and the mean context each
+# one re-sent, in thousands of tokens. Context re-reading is ~91% of token
+# consumption, so avg_ctx moves the bill in a way images/page does not.
+# Blank on every row recorded before 2026-09-21, when the census was written.
+#
+# `note` may contain commas and is always LAST for that reason. Never add a
+# column after it.
+volume,titles,pages,images,calls,avg_ctx,recorded,note
+17,Secret of Hondorica,24,45,,,2026-09-10,forty-seventh batch
+17,Dogcatcher Duck,6,6,,,2026-09-10,forty-seventh batch; page views only
+17,Donald's Raucous Role,10,10,,,2026-09-10,forty-eighth batch; page views only (the batch's nine crops were all on another title)
+17,Good Canoes and Bad Canoes,10,10,,,2026-09-10,forty-eighth batch; page views only (the batch's nine crops were all on another title)
+17,Trouble Indemnity | The Chickadee Challenge | The Unorthodox Ox,30,44,,,2026-09-10,forty-ninth batch; costed only as a batch
+17,The Custard Gun,10,20,,,2026-09-11,fiftieth batch
+17,Three Un-Ducks,10,15,,,2026-09-11,fifty-second batch
+17,Secret Resolutions,10,13,,,2026-09-14,fifty-third batch
+17,The Ice Taxis,10,16,,,2026-09-14,fifty-fourth batch
+17,Searching for a Successor,10,15,,,2026-09-14,fifty-fourth batch
+17,Gopher Goof-Ups,10,20,,,2026-09-14,fifty-fifth batch
+17,The Olympic Hopeful | In the Swim,20,33,,,2026-09-14,fifty-fifth batch; 18 and 15 recorded without saying which title was which
+16,Land Beneath the Ground!,29,48,,,2026-09-14,fifty-sixth batch
+17,Camping Confusion,10,14,,,2026-09-14,fifty-sixth batch
+18,The Master,10,19,,,2026-09-15,fifty-seventh batch
+18,A Whale of a Story,10,16,,,2026-09-15,fifty-seventh batch
+18,Smoke Writer in the Sky,10,15,,,2026-09-15,fifty-seventh batch
+16,The Lost Crown of Genghis Khan!,20,34,,,2026-09-15,fifty-eighth batch
+16,Faulty Fortune,8,17,,,2026-09-15,fifty-eighth batch
+18,The Runaway Train,10,11,,,2026-09-15,fifty-eighth batch
+18,Statues of Limitations,10,19,,,2026-09-15,fifty-eighth batch
+18,Borderline Hero,10,18,,,2026-09-16,fifty-ninth batch
+16,The Second-Richest Duck,20,33,,,2026-09-16,fifty-ninth batch
+16,Migrating Millions,7,12,,,2026-09-16,sixtieth batch
+20,The Cat Box,4,5,,,2026-09-16,sixtieth batch
+20,Grandma's Present,8,12,,,2026-09-16,sixtieth batch
+18,Knight in Shining Armor,10,16,,,2026-09-16,sixtieth batch
+18,Fearsome Flowers,10,29,,,2026-09-16,sixty-first batch
+18,Donald's Pet Service,10,14,,,2026-09-16,sixty-first batch
+16,Back to Long Ago!,21,26,,,2026-09-16,sixty-first batch
+20,Forecasting Follies,4,11,,,2026-09-16,sixty-second batch
+20,Fishing Mystery,4,7,,,2026-09-16,sixty-second batch
+16,The Colossalest Surprise Quiz Show,6,11,,,2026-09-16,sixty-second batch
+16,A Cold Bargain,27,44,,,2026-09-16,sixty-second batch (30 on the pass + 14 on the 2026-09-17 nephew re-read)
+16,Land of the Pygmy Indians,27,49,,,2026-09-17,sixty-third batch
+16,The Fantastic River Race,20,27,,,2026-09-17,sixty-third batch (6 of the 27 on sweater badges and a bottle label)
+18,In Kakimaw Country,10,22,,,2026-09-17,sixty-fourth batch
+18,The Lost Peg Leg Mine,10,20,,,2026-09-17,sixty-fourth batch
+18,Losing Face,10,16,,,2026-09-17,sixty-fourth batch
+18,The Day Duckburg Got Dyed,10,16,,,2026-09-17,sixty-fourth batch
+20,Picnic,6,8,,,2026-09-17,sixty-fifth batch (Gyro solo; no nephews)
+18,Gyro's Imagination Invention,10,22,,,2026-09-17,sixty-fifth batch
+18,Red Apple Sap,10,15,,,2026-09-17,sixty-fifth batch
+20,The Sure-Fire Gold Finder,4,6,,,2026-09-17,sixty-fifth batch (Gyro solo; no nephews)
+18,Special Delivery,10,20,,,2026-09-18,sixty-sixth batch
+18,The Code of Duckburg,10,16,,,2026-09-18,sixty-sixth batch
+19,Forbidden Valley,26,30,,,2026-09-18,sixty-sixth batch (helmets from 032; caps only 025-043)
+19,Sagmore Springs Hotel,10,12,,,2026-09-18,sixty-sixth batch (Scrooge disguised; few nephew calls)
+19,The Tenderfoot Trap,10,18,,,2026-09-18,sixty-seventh batch
+20,The Mines of King Solomon,27,38,,,2026-09-18,sixty-seventh batch (colourist clash: dialogue names a red-capped boy Louie)
+20,Gyro Builds a Better House,4,13,,,2026-09-18,sixty-seventh batch (Gyro solo; the balloon-drawing test cost the images)
+20,August Accident,4,11,,,2026-09-18,sixty-seventh batch (Gyro solo; same balloon-drawing test)
+20,September Scrimmage,4,8,,,2026-09-18,sixty-seventh batch (football helmets; no cap key)
+19,The Black Pearls of Tabu Yama,18,60,,,2026-09-19,sixty-eighth batch (OVER BUDGET at 3.33/page: cap green and palm foliage share the H106-119 band, so every green needed a head)
+19,Wishing Stone Island,10,19,,,2026-09-19,sixty-eighth batch (a boy wears a toy sailor hat for two pages; named by elimination)
+19,Rocket Race Around the World,10,10,,,2026-09-19,sixty-eighth batch (Gyro/Sliderule/Gladstone cast; page view alone settled every panel)
+19,The Persistent Postman,10,10,,,2026-09-19,sixty-eighth batch (Donald solo mailman; no nephew is named anywhere in the title)
+20,City of Golden Roofs,26,49,,,2026-09-19,sixty-ninth batch (cap wedge is a PATCH on a black crown; 6 images on 048 alone to fix the construction, 1.88/page over the title)
+20,Getting Thor,4,6,,,2026-09-19,sixty-ninth batch (Gyro solo with crows; no nephews, no cap key)
+19,The Titanic Ants!,20,32,,,2026-09-19,sixty-ninth batch (quartered cap, wedges 100-700px; picnic guests and a scientist carry a third of the dialogue)
+19,The Half-Baked Baker,10,31,,,2026-09-19,seventieth batch (3.10/page -- 13 of the 31 went on the splash and page 122 through re-cropping the same panels; the JUDGE ribbons cost 2 of their own)
+19,Dodging Miss Daisy,10,18,,,2026-09-19,seventieth batch (boys bare-headed indoors and capped outdoors; one montage plus one stack per page)
+20,The Money Well,26,36,,,2026-09-19,seventieth batch (Scrooge/Beagle Boys book, only 19 nephew calls in 26 pages; 25 montages and 11 follow-ups)
+19,The Milkman,10,22,,,2026-09-19,seventy-first batch (a NIGHT story: a dark slate wash fills the blue band on 123 blobs and the clean roster blue prints on three panels only, so every nephew call needed a crown crop)
+19,Mocking Bird Ridge,10,14,,,2026-09-19,seventy-first batch (boys bare-headed indoors on 151 and capped outdoors from 154; Donald's own cap is the roster blue at 5-20x a nephew's)
+19,Old Froggie Catapult,10,13,,,2026-09-19,seventy-first batch (colourist clash: the dialogue names Louie and the boy wears red for five pages)
+21,Dramatic Donald,10,10,,,2026-09-19,seventy-first batch (first title read from Vol. 21; no cap key at all, and the panels' roster blue is the sofa)
+19,Water Ski Race,6,20,,,2026-09-20,seventy-second batch (NO nephew cap ink in the title -- plain white sailor caps in swim gear -- so the images went on tails and on telling Daisy from a boy)
+20,The Golden River,27,56,,,2026-09-20,seventy-second batch (27pp Scrooge book with ~90 nephew groups; the 098 establishing page alone cost 9 images and the other 26 averaged 1.8)
+20,The Know-It-All Machine,4,4,,,2026-09-20,seventy-second batch (Gyro one-pager set: no nephews at all, one page.png each and nothing else)
+22,The Strange Shipwrecks,21,58,,,2026-09-20,seventy-third batch (first Vol. 22 title; the palette and the red/green swap cost the front third -- pages 030-034 took 25 of the 58 and the remaining 16 pages averaged 2.1)
+22,The Fabulous Tycoon,5,13,,,2026-09-20,seventy-third batch (no nephews; the images went on Scrooge-versus-Donald and on four thought clouds the engines had stored as dialogue)
+22,Gyro Goes for a Dip,4,7,,,2026-09-20,seventy-third batch (Gyro solo plus two dogs; four montages and three panels settled the whole title)
+22,The Twenty-four Carat Moon,20,69,,,2026-09-20,seventy-fourth batch (the caps are only readable on 011-012 and the crew is helmeted from 013; 011 alone took 7 images and 012 took 6 on one balloon whose tail lands on an empty hatchway -- the other eighteen pages averaged 3.1)
+22,The House on Cyclone Hill,4,7,,,2026-09-20,seventy-fourth batch (Gyro solo plus a Helper and a turtle; two montages settled the cloud-against-tail question for the whole title)
+22,The Forbidium Money Bin,16,20,,,2026-09-20,seventy-fourth batch (Scrooge and Gyro only, and the yellow-against-green pressure suits make every moon panel a one-glance call -- the cheapest title of the batch and the longest)
+21,Noble Porpoises,10,34,,,2026-09-21,seventy-fifth batch (the dearest of the four: the first Vol. 21 title with a readable cap key, so the splash and 037-039 took 14 images establishing that the construction is a thin coloured RIM and that the roster blue in this story is the sea -- the last seven pages averaged 2.6)
+22,The Magic Ink,6,10,,,2026-09-21,seventy-fifth batch (the nephews are bare-headed in every panel, so every nephew call was forced; the images went on the pages, the two office signs and one SPLOOK the audit queried)
+21,Tracking Sandy,10,20,,,2026-09-21,seventy-fifth batch (ten montages plus nine stacked crops; one 1.7x crop of 051 p3 settled the title-wide cap mapping and is the best-spent image of the batch)
+21,The Littlest Chicken Thief,10,15,,,2026-09-21,seventy-fifth batch (the cheapest: the construction was already known from Tracking Sandy, so ten montages and five stacks covered the whole title)

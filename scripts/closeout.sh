@@ -6,8 +6,9 @@
 #
 # Folds the close-out sequence from the vision-pass skill into one command:
 # the missed-text audit, the engine diff, outstanding text/type corrections,
-# unreviewed speaker stragglers on BOTH engines, the mirror dry run, and
-# `git status` in every repo the pass touches.
+# unreviewed speaker stragglers on BOTH engines, the mirror dry run,
+# `git status` in every repo the pass touches, and a census of what the day's
+# reading cost in Claude Code tokens.
 #
 # It WRITES NOTHING and COMMITS NOTHING. Every command it runs is a report; the
 # mirror is invoked without --write. Safe to run at any point.
@@ -274,6 +275,32 @@ for repo in "$REPO_DIR" "$PRELIM_DIR"; do
     fi
 done
 [[ -n "$PRELIM_DIR" ]] || row FAIL "git (prelim)" "could not resolve OCR_PRELIM_DIR"
+
+# --- 7. session cost: what today's reading actually consumed -----------------
+# Advisory, always. The ledger records images per page, which is the axis
+# docs/vision-pass-cost.md governs; this is the other one. Context re-reading is
+# ~91% of token consumption, so `avg context` -- what every API call re-sends --
+# is the number that moves the bill, and nothing else records it. Read it into
+# the close-out next to the image count.
+echo "-> session cost census"
+if capture usage uv run python scripts/vision/usage_census.py; then
+    sessions=$(num usage 's/^=== sessions: \([0-9]*\) ===$/\1/p')
+    calls=$(num usage 's/^=== api calls: \([0-9]*\) ===$/\1/p')
+    avg_ctx=$(num usage 's/^=== avg context per call: \([0-9]*\) ===$/\1/p')
+    hot=$(num usage 's/^=== sessions over [0-9]*K avg context: \([0-9]*\) ===$/\1/p')
+    if [[ -z "$sessions" || -z "$avg_ctx" ]]; then
+        row WARN "session cost" "could not parse output -- read the log"
+    elif ((sessions == 0)); then
+        row INFO "session cost" "no session transcript for today -- nothing to report"
+    elif ((hot > 0)); then
+        row WARN "session cost" \
+            "$avg_ctx""K avg context over $calls call(s) -- $hot session(s) running hot"
+    else
+        row OK "session cost" "$avg_ctx""K avg context over $calls call(s) in $sessions session(s)"
+    fi
+else
+    row WARN "session cost" "census failed -- read the log"
+fi
 
 # --- summary -----------------------------------------------------------------
 echo
