@@ -7420,6 +7420,57 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-21, seventy-sixth batch, *The Beachcombers' Picnic* REVIEWED AND MIRRORED -- 120/120)
+
+**5 speaker corrections out of 120 groups (4.2%), 4 of them in the nephew
+domain (12.1% of 33).** By the confidence the pass wrote: **high 4 of 115
+(3.5%), medium 1 of 5 (20.0%)** -- the split points the right way on a small
+sample. Mirror clean on every axis; no text or type corrections; the review
+added no groups and made exactly one paddleocr edit, a text_box nudge on 076
+g11 (`WINK`).
+
+- **THE ERROR CLASS HERE IS THE OPPOSITE OF THE LAST TWO BATCHES: THIS PASS
+  OVER-NAMED DONALD.** Three of the five are `Donald ->` something (071 g3 and
+  074 g7 to `nephews`, 074 g5 to `Dewey`) against one collective sharpened to a
+  name. Declining was not the problem on this title; putting the adult in a
+  seat he was not in was.
+- **AND ALL THREE OF 074'S CORRECTIONS COME FROM ONE MISREAD BLOB. A RED PATCH
+  ABOVE THE WHITE SKULL IS A CAP; DONALD'S BOW TIE SITS BELOW HIS. CHECK THE
+  Y.** 074 panel 3 puts four ducks in a kayak -- blue, red, green caps and then
+  DONALD ASTERN. capwide gives red 237+178+159px `#e71a20` at **x505-551
+  y297-356** and blue 728px `#00a6d5` at x673-709. The red is at CAP height,
+  above the white heads; it is Huey's cap. The pass read it as Donald's bow tie,
+  which moved Donald from the stern into the middle of the boat and shifted
+  every speaker on the page. The rule is already in the notes as *ink above the
+  white skull is the cap* -- it just was not applied to a RED blob, because red
+  on Donald is habitually the tie.
+- **IN A BOAT IN THIS TITLE DONALD SITS AT THE STERN, BEHIND ALL THREE BOYS**
+  (074 p1 and p3 both). So the rightmost duck is the adult and the cap-coloured
+  head next to him is a boy, not him. Where a panel seats a row of ducks, count
+  from the far end before assigning.
+- **"MEN!" DOES NOT MAKE THE SPEAKER AN ADULT.** 074 g7 `TO THE RESCUE, MEN!`
+  was given to Donald on exactly that reasoning -- the line addresses the
+  nephews, so the speaker must be the one in charge -- and went to `nephews`.
+  This is the seventy-fifth batch's explaining-adult default wearing a
+  different hat: **a form of address tells you who is being spoken TO and
+  nothing about who is speaking.**
+- **A CHARACTER IN FRAME BEATS AN OFF-PANEL CONTINUATION.** 067 g8 continues the
+  picnic announcer's run of rules from panels 2 and 3 word for word, and panel 4
+  draws only Daisy and Donald, so the pass made it off-panel. The review gave it
+  to **Daisy**. Where a line could be an off-panel voice continuing or a drawn
+  character starting, take the drawn one; the pass's own note already recorded
+  that no tail placed it, which is the tell.
+- **THE ONE COLLECTIVE THE REVIEW NAMED WAS NAMED WITH NO INK TO MEASURE.** 074
+  g10 went `nephews -> Dewey`/blue on the full-page splash, where capwide over
+  the whole kayak region (x950-1400, y200-800) at a **3px floor** returns no
+  red, green or blue blob at all -- the only chromatic thing there is the sea at
+  `#39b18d` H162 S0.68. Dewey had just been named two panels earlier in the same
+  boat, so this is **scene continuity overriding a measured zero**. A clean 0
+  blobs closes the question about the INK, not about the BOY: if the same boy
+  was placed a panel or two before and the scene has not changed, carry him.
+- Nothing outstanding: 120/120 reviewed on both engines, corrections sweep clean
+  for this title, missed-text audit clean, engine diff clean.
+
 ### Findings to paste into the next run (2026-09-21, seventy-sixth batch, NONE REVIEWED)
 
 *The Beachcombers' Picnic* (21, 10pp), *Christmas in Duckburg* (21, 20pp) and
