@@ -7420,6 +7420,69 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-21, seventy-sixth batch, *Christmas in Duckburg* REVIEWED AND MIRRORED -- 286/287)
+
+**5 speaker corrections out of 287 groups (1.7%), all five in the nephew domain
+(10.6% of 47)** -- the lowest rate of the batch and of the last several. By the
+confidence the pass wrote: **high 2 of 268 (0.7%), medium 3 of 19 (15.8%) -- a
+23x split**, the widest yet recorded. All four type corrections confirmed, none
+reversed; the group the pass added (020 g7, the `?` over the blue-capped boy)
+came back unchanged.
+
+- **THE MEDIUM FLAG EARNED ITS KEEP AT 23x, AND THREE OF THE FIVE CORRECTIONS
+  WERE MEDIUMS THE PASS HAD ALREADY DOUBTED.** 19 mediums out of 287 and they
+  held three of the five errors. This is what the field is for: where the panel
+  was small, flat or gap-tipped, the pass said so, and that is exactly where the
+  reviewer went. **Keep writing medium on a tip in a gap and on any figure under
+  ~40px; do not round it up to high to look decisive.**
+- **THE GAP-TIP-GOES-ONE-HEAD-LEFT RULE LOST TO THE DRAWING -- AND THE PASS'S
+  OWN NOTE NAMED THE WINNER.** 017 g9 `Louie -> Huey`. The tip measured at panel
+  (704,497), in the 33px gap between the green cap (x674-691) and the red
+  (x724-734); the pass took green on the Vols. 10/14 gap rule and wrote *"the
+  red-capped boy, drawn mid-leap to the right, is the alternative a reviewer
+  should weigh"* into the note. The reviewer took red. Two things pointed that
+  way and were not weighed: **the tail's own direction was down-RIGHT**, and the
+  red boy is the one drawn leaping off to fetch the very tape line the line is
+  about. **Where the gap rule and the drawing disagree, follow the drawing** --
+  and the gap rule is a tie-breaker for when nothing else speaks, not an
+  override.
+- **BLUE MITTENS ARE UNIVERSAL IN THE NORTHERN SCENES, SO A BLUE BLOB BESIDE A
+  HAND IDENTIFIES NOBODY.** 015 g9 `Dewey -> Huey`. The pass named the
+  blue-capped boy because he was *"the one pointing a blue mitten at the camp"*
+  -- but every duck in the Canadian half wears the same `#00a5d5` mittens,
+  Donald included, and the figure actually pointing was the RED-capped one.
+  **Only ink sitting on a crown is a cap read**; the mitten, like Donald's bow
+  tie, is furniture in the same band.
+- **TWO OF THE FIVE PUT A NEPHEW WHERE DONALD WAS, AND BOTH ARE
+  LOW-RESOLUTION PANELS.** 020 g2 `Louie -> Donald` (a ~25px cluster in the wide
+  shot down the logging road, where the tails stop 110px short of the heads over
+  cream snow) and 021 g1 `nephews -> Donald` (a flat black silhouette night
+  panel where size is the only cue). Set against *The Beachcombers' Picnic*,
+  where three corrections ran the other way, **the adult/boy boundary is where
+  this whole batch's errors live, and it fails in BOTH directions the moment the
+  panel goes small or flat.** In a wide shot or a silhouette, count the figures
+  and place the adult FIRST, then assign what is left.
+- **A BALLOON'S X-SPAN IS STILL NOT A TAIL.** 022 g1 `Donald -> Dewey`. Both
+  balloons on that panel sit at x335-908, well right of the two boys at x60-268,
+  so the pass gave both to Donald without measuring either tail. The first is
+  Dewey's. **Where two balloons sit over one figure, that is a reason to crop,
+  not a reason to assign both.**
+- **THE H111-113 CAP GREEN HELD.** Two corrections removed a green
+  `cap_colour`, but neither was about the hue -- both were placement errors, and
+  no correction anywhere reversed the palette. Reading Louie's cap at
+  `#4ca33e` H111-113 while `#009e49` H148 is the Christmas tree was right, and
+  it is now confirmed twice in Vol. 21.
+- **THE REVIEWER REFINED SIX PADDLEOCR TEXTS AND THE MIRROR PRESERVED ALL SIX.**
+  Line-break fixes on 011, 014 and 022 and one real content fix -- 018 g10
+  `TELEGRAPH CABLE` -> `TELEGRAPH & CABLE`. Because markup is written INTO
+  `ai_text`, a mirror can clobber exactly this kind of edit, so it was snapshotted
+  before `--write` and diffed after. **Do that check every time a review has
+  touched the other engine's text.**
+- **ONE STRAGGLER: 018 g11**, the `WIRE HOME TODAY` poster -- `background`,
+  speaker `none`, high, unchanged by the pass, never ticked on EITHER engine.
+  `queue-straggler.txt` holds the easyocr line; ticking it and re-running
+  `vision-mirror --write` closes the title at 287/287.
+
 ### Findings to paste into the next run (2026-09-21, seventy-sixth batch, *The Beachcombers' Picnic* REVIEWED AND MIRRORED -- 120/120)
 
 **5 speaker corrections out of 120 groups (4.2%), 4 of them in the nephew
