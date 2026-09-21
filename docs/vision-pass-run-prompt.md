@@ -7420,6 +7420,108 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-21, seventy-sixth batch, NONE REVIEWED)
+
+*The Beachcombers' Picnic* (21, 10pp), *Christmas in Duckburg* (21, 20pp) and
+*Rocket-Roasted Christmas Turkey* (21, 10pp). **537 groups on both engines
+across 40 pages, 96 images, 2.40 per page** (3.50 / 2.10 / 1.90). 2 groups
+added for ungrouped lettering, 5 type corrections proposed, no text
+corrections, and the missed-text audit clean on all three.
+
+- **THE ROSTER GREEN IS THE DECOY IN *CHRISTMAS IN DUCKBURG*, AND THE CAP GREEN
+  IS THE ONE THAT LOOKS WRONG.** Louie's cap there is `#4ca33e`/`#4da33f`
+  **H111-113 S0.62-0.69**, and `#009e46`-`#009e49` **H146-149 S1.00** -- which
+  is the roster green everywhere else in this volume -- is the CHRISTMAS TREE,
+  in 15,000-49,000px blocks in nearly every panel. Reading it the usual way
+  round would have put a tree on every crown in the story. *Noble Porpoises*
+  had already put Louie at H112 in the seventy-fifth batch, so **Vol. 21's
+  green runs H111-124 as often as H146**; rank the crown against the panel, not
+  against a remembered hue.
+- **ALL THREE TITLES TAKE THE CAPS OFF INDOORS, AND ALL THREE PUT THEM BACK ON
+  TO GO OUT.** *Christmas in Duckburg* 008 and 009 p1-p4 are bare-headed at the
+  tree; 009 p5, the panel where the boys leave to tell their friends, is the
+  first cap read in the story. *Rocket-Roasted* is bare-headed at the tree
+  (087-088) and at the dinner table (096) and capped in the garage and yard
+  (089 p6 onward). **A bare-headed sentence was written into 087-088's notes as
+  "throughout this story" and had to be narrowed after 089 showed all three
+  inks at once** -- the per-panel rule caught it, but only because the next
+  page was scanned before the close-out.
+- **TWO TAILS ON ONE BALLOON CAME UP FIVE TIMES IN FORTY PAGES**, and every one
+  is a chorus rather than a name: *Beachcombers'* 076 g3, *Christmas in
+  Duckburg* 016 g2 and 020 g3, *Rocket-Roasted* 089 g8 and 090 g8. The tell is
+  a balloon whose bottom edge carries two separate points; at page scale they
+  read as one wide tail. **Count the points on the edge before measuring a
+  tip** -- on 089 g8 the two tips fell on two different boys 88px apart, and
+  either one alone would have produced a confident wrong name.
+- **`cap-colour` IN `identified_by` IS FOR NEPHEWS ONLY, AND 23 GROUPS WERE
+  REFUSED FOR IT.** Donald's cap identifies him in most of these panels, and
+  claiming `cap-colour` with `cap_colour` null aborts the apply with
+  "identified_by claims cap-colour but cap_colour is null" on every such group.
+  The roster's field for an adult's headgear is **`hat`**. Cheap to fix, but it
+  is 23 lines of validation output after all the reading is done.
+- **AN ADDED GROUP RENUMBERS THE PAGE AND KILLS THE STORED result.json.**
+  *Christmas in Duckburg* 020's `?` landed at g7 and pushed the old g7-g12 to
+  g8-g13 in the corpus, while the out-dir's `groups.json` still holds the
+  pre-add ids. Two pages then needed a capture fix, and a blanket re-apply
+  would have written 020's annotations onto the wrong six groups. **After an
+  add, re-apply page by page or not at all** -- the fix was to move the other
+  eighteen `result.json` aside and run the two.
+- **THE AUDIT'S "NEARLY A GROUPED TEXT" ROW EARNED ITS KEEP.** It caught the
+  burnt telegram on *Christmas in Duckburg* 019 read into `visible_text` as
+  `TO NEED DUCKBURG` where the stored group says `WEED`; at 4x the W survives
+  the burn and the GROUP is right. **The capture was the wrong one, not the
+  group** -- which is the third of the three classes and the one easiest to act
+  on backwards. Its other two rows were mine too: `SPUT`/`SZZT` and
+  `HONK`/`HONK` listed as separate `visible_text` entries where one group holds
+  both words. **List a multi-word sound effect the way the group holds it.**
+- **THE NAME-GREP MISSED EVERY NEPHEW NAME AGAIN -- AND THE ONE THAT MATTERED
+  RULES A BOY OUT RATHER THAN IN.** `barks-ocr-name-grep` reported zero on all
+  three titles; a hand grep of stored `ai_text` for `HUEY|DEWEY|LOUIE` found
+  *Rocket-Roasted* 087 g10, `GRANDMA GAVE DEWEY A CHEMISTRY SET!`. Third
+  person, so the SPEAKER is not Dewey -- which narrows three candidates to two
+  and still leaves a collective. **Run the grep at prep every time; it costs
+  one command.** Its two other hits were Gemini boilerplate (`Spoken by Huey,
+  Dewey, or Louie.` in a `notes` field), so grep `ai_text`, not the file.
+- **QUOTED FRAMING CAPTIONS: the seventy-fifth batch's ruling held, and there
+  was no plain one to test it against.** Seven caption boxes across the two
+  Christmas stories are the narrator's under it. Two of them -- *Rocket-Roasted*
+  089 g5 and 093 g8 -- carry printed quote marks the stored text omits, which
+  is quote style and not a word-level correction, so they were noted rather
+  than corrected. 089 g5 is also a **pink caption box stored as `dialogue`**,
+  the one type correction on that title.
+- **DONALD'S DISCRIMINATOR CHANGES MID-TITLE IN *CHRISTMAS IN DUCKBURG*.** In
+  Duckburg he wears the roster blue as a sailor cap, so the shape test applies;
+  in the northern half he wears a **non-roster ORANGE winter cap** and is the
+  only figure in the panel carrying no roster ink at all. That inverts the
+  usual trap -- there, a blue crown is a BOY.
+- **NAMED AGAINST COLLECTIVE: 54 of 101 nephew groups named (53%).** By title
+  22/30 (73%), 22/48 (45%), 10/23 (43%). The collectives are nearly all forced
+  rather than declined: bare heads indoors, whole panels in flat silhouette
+  (*Christmas in Duckburg* 021 p1-p5, *Rocket-Roasted* 091 p5 and 096 p8), and
+  wide shots where the boys are 25px across and capwide returns 0 blobs at a
+  5px floor. Where a cap was drawn at all, it was read.
+- **IMAGE BUDGET: 2.40 per page over the batch, but three pages went over the
+  ceiling** -- *Beachcombers'* 071 at 8, *Christmas in Duckburg* 017 and 020 at
+  6. All three were the same shape: a page with four or more nephew balloons
+  whose tails land in gaps between heads, so each name cost its own crop. The
+  two cheap titles (1.90 and 2.10) were cheap because their casts are adults.
+- `other:` values, none near-duplicate. *Beachcombers'*: `the picnic
+  announcer`, `a beachcomber in a blue hat`, `a beachcomber in a top hat`, `a
+  beachcomber in a white shirt`. *Christmas in Duckburg*: `Ollie Eiderduck`,
+  `a Beagle Boy`, `the Duckburg crowd`, `the party crowd`, `the logging
+  foreman`, `the train engineer`, `a telegraph clerk`, `a telegram messenger`,
+  `a crane workman`, `a Mountie`, `a judge`, `the crane operator`.
+  *Rocket-Roasted*: `the general`, `the major`, `an army officer`, `a senator`,
+  `a sentry`. **`the Duckburg crowd` and `the party crowd` are deliberately
+  distinct** -- the first is the present-day town square, the second the
+  flashback banquet.
+- **OUTSTANDING AT CLOSE:** the 10 type corrections (5 groups x 2 engines) are
+  in `queue-corrections.txt` for the two Christmas titles and are the only
+  thing the corrections sweep reports for Vol. 21. A corpus-wide run returns
+  11, the eleventh being vol 23 *The Librarian* 118 g19, which predates this
+  batch. Speaker queues: 5 / 19 / 5 low-and-medium, 120 / 287 / 130 full.
+  **Session cost census: 800 API calls at 413K average context.**
+
 ### Findings to paste into the next run (2026-09-21, seventy-fifth batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
 **468 groups over 36 pages; 91 speaker corrections (19.4%), 87 of them in the
