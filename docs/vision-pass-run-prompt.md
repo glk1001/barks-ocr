@@ -7489,11 +7489,14 @@ of them. Confidence written: 5 / 3 / 29 at low-or-medium against 144 / 108 /
   a watching boy, and *The Flying Dutchman* 082 g3 (`COME AND GO FISHING WITH
   US, UNCLE SCROOGE!`, with three boys in the same panel) traces to Donald. In
   both the tail was a three-second check and the plausible reading was wrong.
-- `other:` values across the three titles, none near-duplicate: `the mynah bird`
-  31, `the game warden` 14, `a naval officer` 7, `the naturalist` 7, `the moving
-  customer` 4, `the ape` 4, `the mountain goat` 4, `an eagle` 4, `the diamond
-  dealer` 3, `the bear` 1, `a new customer` 1, `the drawbridge operator` 1, `the
-  newsboy` 1.
+- `other:` values across the three titles, counted off the corpus and none
+  near-duplicate: `the mynah bird` 28, `the game warden` 15, `the naturalist` 8,
+  `a naval officer` 7, `the mountain goat` 5, `an eagle` 5, `the moving customer`
+  4, `the ape` 4, `the diamond dealer` 3, `the bear` 1, `a new customer` 1, `the
+  drawbridge operator` 1, `the newsboy` 1. The one pair worth a second look is
+  *The Master Mover*'s `the moving customer` (bald, moustached, red skullcap,
+  077-078) against `a new customer` (ginger-haired, hatless, 086 p7) -- drawn
+  differently, but they play the same part at the two ends of the story.
 - **HANDED BACK:** nothing missed, nothing textual. Nine type corrections sit in
   the three `queue-corrections.txt` files (14 / 2 / 2 entries, two engines each),
   and they are the only outstanding items in the batch.
