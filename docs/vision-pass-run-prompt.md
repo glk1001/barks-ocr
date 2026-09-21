@@ -7420,6 +7420,98 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-21, seventy-sixth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+**538 groups over 40 pages, 17 speaker corrections (3.2%), 13 of them in the
+nephew domain (12.7% of 102).** Per title: *Christmas in Duckburg* 5 of 287
+(1.7%), *The Beachcombers' Picnic* 5 of 120 (4.2%), *Rocket-Roasted Christmas
+Turkey* 7 of 131 (5.3%). 96 images, 2.40 per page. **By the confidence the pass
+wrote: high 10 of 508 (2.0%), medium 6 of 29 (20.7%) -- a 10x split**, and the
+29 mediums held more than a third of the errors while being 5% of the groups.
+All six type corrections confirmed, none reversed. Both groups the pass added
+came back unchanged; the review added one of its own.
+
+- **THE ADULT/BOY BOUNDARY IS THE ERROR SITE OF THE WHOLE BATCH -- 8 OF THE 17
+  -- AND WHICH WAY IT FAILS IS DECIDED BY THE PANEL, NOT BY THE PASS.** In
+  ordinary panels the pass put DONALD where a boy was (*Beachcombers'* 071 g3,
+  074 g5, 074 g7). In wide shots and flat silhouettes it put a BOY where Donald
+  was (*Christmas in Duckburg* 020 g2 and 021 g1, *Rocket-Roasted* 096 g9 --
+  three for three, every silhouette or far-wide panel in the batch). **Rule:
+  when a panel is silhouetted or the figures are under ~40px, place the ADULT
+  first -- he is the largest shape -- and assign the remainder. When the panel
+  is drawn normally, do not let an adult's habitual prop stand in for a
+  measurement.**
+- **AND THE SINGLE MOST EXPENSIVE MISREAD WAS A RED BLOB AT THE WRONG HEIGHT.**
+  *Beachcombers'* 074 panel 3 seats Dewey, Huey, Louie, then DONALD ASTERN. The
+  red at **x505-551 y297-356** sits ABOVE the white skulls -- it is Huey's cap.
+  The pass read it as Donald's bow tie, which moved Donald into the middle of
+  the kayak and cost all three of that page's corrections. **Donald's tie sits
+  BELOW his skull; a red patch above one is a cap. Check the y before calling
+  red a tie.**
+- **A `text_ok: true` THE PASS NEVER CHECKED, AND THE ENGINE DIFF COULD NOT
+  CATCH IT.** *Rocket-Roasted* 090 g12 is the car's FRONT number plate reading
+  `313`. Both engines had grouped it as `RR-RR`, the pass marked `text_ok` true
+  without cropping it, and the reviewer corrected the text. **Two engines
+  agreeing is not a check** -- they share the same Gemini labelling, so the
+  engine diff reported clean precisely because both were wrong the same way.
+  The only thing that would have caught it is a crop, and it was a 62x44px box
+  in a panel already being read.
+- **LISTING A REPEATED SIGN ONCE MAKES ITS DUPLICATES INVISIBLE TO THE AUDIT,
+  AND IT COST A REVIEWER-SIDE ADD.** The `313` plate appears three times on
+  *Rocket-Roasted* 090 and the capture listed it once, so the audit counted one
+  against one and reported clean. The reviewer added the second instance (090
+  g15, panel 6) by hand. The roster already says *list a repeated sign once per
+  instance*; this is what ignoring it looks like from the other end.
+- **TWO NEAR-IDENTICAL UNIFORMED HUMANS NEED A NAMED RANK, NOT A FEATURE.** The
+  pass built a general/major discriminator from one panel -- older, moustache,
+  gold braid -- and applied it across *Rocket-Roasted*; 093 g5 and 094 g3 both
+  went to the major. The only call that stood on its own was 093 g6, anchored by
+  the speaker naming his listener (`TRY IT, MAJOR!`). **Where two officers wear
+  the same uniform, the dialogue that names a rank is the only anchor; every
+  other panel is a medium at best.** Same class as a per-character costume key,
+  which the corpus already knows does not travel.
+- **THE TWO-TAIL CHORUS RULE HELD 4 TIMES IN 5.** Five balloons across the batch
+  carried two points on the bottom edge and were recorded as choruses;
+  *Beachcombers'* 076 g3, *Christmas in Duckburg* 016 g2 and 020 g3 and
+  *Rocket-Roasted* 090 g8 all stood, and only 089 g8 was named (`nephews ->
+  Dewey`), its second point sitting at the very edge of the balloon. **Count the
+  points, but satisfy yourself each one is a drawn TAIL and not a notch in the
+  outline** -- a false second tail turns a name into a collective.
+- **SMALL NUMBERS STAYED WRONG, AND THE PASS'S OWN MEDIUMS FOUND THEM.**
+  *Rocket-Roasted* 091 g1 was named Louie off **84px** of green at x883-896 and
+  is Dewey; *Christmas in Duckburg* 017 g9 was a 33px gap tip. Both were written
+  medium and both were corrected. **Under about 100px on a crown, or a tip in a
+  gap narrower than a head, write medium and expect to be wrong about one time
+  in five.**
+- **THE VOL. 21 PALETTE IS NOW SETTLED OVER SEVEN TITLES.** Red `#e51a1f`-`#e8181f`
+  H358-359, blue `#00a5d5`-`#01a5d7` H193-194, and a green that runs **H111-124
+  as often as H146-149** -- Louie is `#4ca33e` H111 in *Christmas in Duckburg*
+  and `#009e46` H146 in the other two. No correction in this batch reversed a
+  hue call. The decoys are the ones to carry forward: **the Christmas tree at
+  `#009e49` H148 in 15,000-49,000px blocks, blue mittens on every duck in the
+  northern scenes, Donald's orange winter cap, and his bow tie.**
+- **CONSTRUCTION IS STILL PER TITLE, NOW OVER SEVEN.** A thin coloured RIM
+  (*Noble Porpoises*), a QUARTERED beanie (*Tracking Sandy*, *Chicken Thief*,
+  *Christmas in Duckburg*), a coloured FRONT PATCH (*Beachcombers'*), a knitted
+  winter cap (*Christmas in Duckburg*'s Canadian half), and nothing at all
+  (*Dramatic Donald*, and both Christmas stories indoors). **Derive it from the
+  title's own reference panel every time; six titles in, carrying one over has
+  never once been safe.**
+- `other:` values surviving review, none near-duplicate: `a Beagle Boy` 30,
+  `Ollie Eiderduck` 27, `the general` 13, `the major` 8, `the Duckburg crowd` 6,
+  `the logging foreman` 5, `an army officer` 4, `the picnic announcer` 2, `the
+  party crowd` 2, `a telegraph clerk` 2, `a senator` 2, and singletons for `a
+  beachcomber in a blue hat`, `a beachcomber in a top hat`, `a beachcomber in a
+  white shirt`, `the train engineer`, `a telegram messenger`, `a crane workman`,
+  `a Mountie`, `a judge`, `the crane operator`, `a sentry`.
+- **OUTSTANDING AT CLOSE: one straggler and one type.** *Rocket-Roasted* 090 g13
+  (`AND AWAY I GO!`, Donald, dialogue, unchanged) is unticked on both engines --
+  `queue-straggler.txt`. And **090 g12 still carries `sound_effect` now that its
+  text is `313`**; it wants `background`, like g6 and g15. *Beachcombers'* closes
+  at 120/120 and *Christmas in Duckburg* at 287/287, both clean on every
+  close-out check. Corpus-wide corrections are down to the one that predates
+  this batch, vol 23 *The Librarian* 118 g19.
+
 ### Findings to paste into the next run (2026-09-21, seventy-sixth batch, *Christmas in Duckburg* REVIEWED AND MIRRORED -- 286/287)
 
 **5 speaker corrections out of 287 groups (1.7%), all five in the nephew domain
