@@ -7420,6 +7420,84 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-21, seventy-seventh batch, NONE REVIEWED)
+
+**509 groups over 41 pages, 79 images, 1.93 per page.** *The Master Mover*
+(Vol. 21, 10pp, 144 groups, 2.80/page), *Spring Fever* (Vol. 21, 10pp, 108
+groups, 1.50/page), *The Flying Dutchman* (Vol. 22, 21pp, 257 groups,
+1.71/page). Nine type corrections, no text corrections, and no missed text in
+any of the three -- the audit came back `grouped by NEITHER engine: 0` on all
+of them. Confidence written: 5 / 3 / 29 at low-or-medium against 144 / 108 /
+257 total, so the medium-against-high split will be worth reading off
+`review_findings.py --since 378c4ef4` (Vol. 21) and `--since 4c50585d` (Vol. 22).
+
+- **THE FIRST PANEL IS WORTH FIVE IMAGES AND THE REST OF THE TITLE IS WORTH
+  TWO.** *The Master Mover* cost 2.80 per page because 077 alone took five --
+  montage, head row, two tail crops and the whole panel -- to fix that the
+  construction is a quartered black beanie and that red sits at x1318-1393 on
+  the LEFT boy. Everything after it ran at 2.3. *Spring Fever* cost 1.50
+  because one 2.6x crop of 099 p6 did the same job in one image. **Hunt the
+  reference panel with `title_bands` and `crowns.py` BEFORE opening anything**:
+  in *Spring Fever* the panel that carried all three inks (099 p6, red 590px /
+  green 1,080px / blue 123px) was findable from the census alone.
+- **A CLOSE-UP NEPHEW CAP REACHES 2,500px, SO AREA ALONE WOULD HAVE CALLED IT
+  DONALD.** *The Master Mover* 083 p1: the duck holding the prunes carries
+  1,844+684px of `#00a4d6`, above the 43-1,200px the Vol. 21 palette note gives
+  a boy and inside Donald's 1,400-6,800px. It is a NEPHEW -- the test that works
+  is the CONSTRUCTION (a quartered beanie, two blobs on one crown) against
+  Donald's single rounded sailor cap. Area is a per-distance figure, not a
+  per-character one.
+- **THE SAME RED ON TWO CROWNS NAMES NEITHER, AND THAT IS A FINDING AND NOT A
+  FAILURE.** *The Flying Dutchman* 095 p8 puts a red band on both boys at the
+  rail. The roster's rule -- two nephews printed the same colour tell you
+  nothing about either -- is the whole answer, and writing `nephews` twice there
+  took one scan rather than a crop.
+- **A RED HORIZONTAL STRIP AT NECK HEIGHT IS THE BOAT'S RAIL.** Three panels of
+  *The Flying Dutchman* (095 p8, 097 p6, 098 p7) hang 1,600-3,700px of `#e61b1f`
+  on a head that `crowns.py` then reports as CAP-INK, because the rail runs
+  across the panel just above the skulls. Check the blob's SHAPE: a cap band is
+  20-40px tall and 30-120px wide, a rail is 20px tall and 500px wide.
+- **"UNCA SCROOGE" NAMES A NEPHEW; "UNCLE SCROOGE" NAMES NOBODY.** Over the
+  whole of *The Flying Dutchman* every traced `UNCA SCROOGE` is a boy, and
+  Donald says `UNCLE SCROOGE` at 089 g0, 093 g11, 094 g2 and 095 g1 -- but a
+  nephew says UNCLE too at 089 g8, which is traced to a 180px blue band. So the
+  address is a one-way test: it rules Scrooge and usually Donald out, and it
+  never rules a nephew in. It carried eight otherwise-unplaceable balloons on
+  far-wides and silhouettes.
+- **A SCROOGE STORY PUTS THE IMAGES WHERE THREE BOYS SHARE A PANEL.** 21 pages
+  at 1.71 because most panels are two adults, either of whom is identifiable at
+  montage scale from the coat, the whiskers and the top hat. Two panels earned
+  six names between them: 092 p4 (three balloons, three boys, three tails each
+  landing 5-25px LEFT of its own boy in step -- the offset is what makes the set
+  readable rather than a guess from reading order) and 093 p1 (a red boy, a
+  green boy, and a third drawn with both hands cupped round his beak, which is
+  the identification for the shouted balloon).
+- **AN ANIMAL'S VOICE IS `dialogue`, AND SEVEN OF THE NINE TYPE CORRECTIONS ARE
+  THAT.** *The Master Mover* stores the bear's `RAR!`, the goat's three `BAA`
+  groups and two eagle `GRAAK`s as `sound_effect` while storing the identical
+  goat bleat at 081 g14 and the identical eagle cry at 085 g3/g6 as `dialogue`.
+  The mynah's `CHOMP! CHOMP!` stays `sound_effect` with the bird named -- chewing
+  is made by the animal but not by its voice. The other two corrections are
+  story logos stored as `background` and `narration` and moved to `title`.
+- **A RECURRING ADULT IS A HAT INK, AND CHECKING IT REVERSED SIX SPEAKERS.** The
+  naturalist of *The Master Mover* wears `#c35349` H4.9 S0.63 in a wide brim;
+  the customer of 077-078 wears `#c32328` H358 S0.82 in a small skullcap and is
+  bald and moustached where the other is bearded. They read as the same man at
+  montage scale and are not. One stacked image of three heads settled it.
+- **ROLE REASONING LOST TWICE MORE.** *The Master Mover* 082 g0 (`HEY! THE GOAT
+  IS GETTING STUBBORN!`, with Donald wrestling the goat two feet away) traces to
+  a watching boy, and *The Flying Dutchman* 082 g3 (`COME AND GO FISHING WITH
+  US, UNCLE SCROOGE!`, with three boys in the same panel) traces to Donald. In
+  both the tail was a three-second check and the plausible reading was wrong.
+- `other:` values across the three titles, none near-duplicate: `the mynah bird`
+  31, `the game warden` 14, `a naval officer` 7, `the naturalist` 7, `the moving
+  customer` 4, `the ape` 4, `the mountain goat` 4, `an eagle` 4, `the diamond
+  dealer` 3, `the bear` 1, `a new customer` 1, `the drawbridge operator` 1, `the
+  newsboy` 1.
+- **HANDED BACK:** nothing missed, nothing textual. Nine type corrections sit in
+  the three `queue-corrections.txt` files (14 / 2 / 2 entries, two engines each),
+  and they are the only outstanding items in the batch.
+
 ### Findings to paste into the next run (2026-09-21, seventy-sixth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 **538 groups over 40 pages, 17 speaker corrections (3.2%), 13 of them in the
@@ -9756,6 +9834,41 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 21 and Vol. 22, three titles read 2026-09-21 (seventy-seventh batch;
+**none reviewed**). 41 pages, 79 images, **1.93 per page**; per title 2.80 /
+1.50 / 1.71.
+
+**THE THREE INKS ARE THE VOLUME'S, AND THE CONSTRUCTION IS THE TITLE'S -- NOW
+OVER TEN TITLES.** Red `#e51b1f`-`#e61b20` H358-359 S0.88, green
+`#009a5a`-`#009f47` H146-155 S1.00, blue `#00a5d5`-`#00a7d8` H193-194 S1.00, in
+all three titles across both volumes. What changed again is the shape: *The
+Master Mover* and *Spring Fever* print a QUARTERED beanie (the *Tracking
+Sandy* / *Littlest Chicken Thief* construction), and *The Flying Dutchman*
+prints a BAND across the front of a black cap, which is neither the Vol. 22
+wedge of *The Twenty-four Carat Moon* nor the quartered cap of its own volume
+neighbours.
+
+**AREA IS A PER-DISTANCE FIGURE AND NOT A PER-CHARACTER ONE.** A nephew's cap
+ran 43-1,200px over the last two batches; in a close-up it reaches **2,528px**
+(*The Master Mover* 083 p1) and **2,869px** (*Spring Fever* 101 p2), squarely
+inside Donald's range. Read the construction: two blobs on one crown, or a band
+20-40px tall, against Donald's single rounded sailor cap.
+
+**AND THE DECOYS ARE STILL THE ADULTS, PLUS ONE NEW ONE.** Donald's bow tie is
+the cap red at 400-1,500px and sits BELOW the skull; Scrooge's coat is the same
+ink at 5,000-25,000px; his top-hat band and his sea-going peaked cap are the cap
+blue at 1,200-5,600px. New in *The Flying Dutchman*: the **South African naval
+officers wear `#00a5d5` uniforms**, so the census hangs cap-blue on every head
+in the 090 arrest panels.
+
+| title | reference | red (Huey) | green (Louie) | blue (Dewey) | construction |
+|---|---|---|---|---|---|
+| *The Master Mover* (21) | **077 panel 1** -- the three boys in a row under the billboard, red at x1318-1393, a thin blue sliver at x1532-1550, green at x1642-1687 | `#e61b1f` H358.8 S0.88, **145-800px on a crown** seen small, **2,064px** in the 082 p3 close-up. Decoy: Donald's bow tie, the same ink at 220-660px, always below the skull | `#009a5a` H155 at the reference panel, `#009d45`-`#009e47` H146-147 elsewhere, **56-3,142px** (082 p6 is the biggest). Decoys: the moving van's `#01986d` H163 at 47,241px and the grass at `#4faf41` H112 | `#00a5d5`/`#00a6d6` H193-194, **133-2,528px**. Decoys: Donald's sailor cap at 951-4,324px, the SKY at `#2ba8be` H190 in 8,000-9,000px fills on the splash, and the birdcage at `#0081b8` H198 | **QUARTERED BLACK BEANIE**, colour showing as a wedge at the front-right. Unreadable on every far-wide (080 p1 and 084 p8 return no roster ink at any floor) and on the whole of 081 p1, a full silhouette at `red: 0 / green: 0 / blue: 0`. Cast adds **`other:the mynah bird`** (31 groups -- it speaks goat, ape and eagle and is the story's real antagonist), **`other:the naturalist`**, **`other:the moving customer`**, **`other:the bear`**, **`other:the mountain goat`**, **`other:the ape`**, **`other:an eagle`**, **`other:the diamond dealer`**, **`other:a new customer`** |
+| *Spring Fever* (21) | **099 panel 6** -- the three boys in the doorway with their kites, red 590px at x100-127, green 1,080px at x237-296, blue 123px at x439-451 | `#e51b20`-`#e61b1f` H358-359, **265-2,869px**; 101 p2 and 104 p1 are the clean reads. Decoy: Donald's bow tie at 130-660px | `#009e46`-`#009f47` H146-147, **116-2,869px** (104 p1's foreground boy is 2,463px across three blobs). Decoys: the trees at `#6fb43d` H95 and the creek bank | `#00a5d5`-`#00a7d8` H193-194, **123-455px on a boy**. Decoys: Donald's sailor cap at 460-2,738px in EVERY panel of the story, and the living-room rug at `#00aeb7` H183 in 7,000px fills | **QUARTERED BLACK BEANIE** as above. Indoors on 097-098 no cap reads at all: capwide returns `red: 2-6 / green: 0-7 / blue: 0-3` with nothing on a crown across five panels, which is why the first two pages are all collectives. Cast adds **`other:the game warden`** (14 groups, grey-green uniform and a badge, hatless from 102 p5 after Donald hooks his hat) and **`other:the drawbridge operator`**. 103 p5 NAMES Louie, and his green cap is measured one panel earlier at 103 p2 |
+| *The Flying Dutchman* (22) | **082 panel 2** -- the whole cast on the pier, red / blue / green left to right with Donald at the right for scale | `#e61b1f` H358.8 S0.88, **133-1,000px on a crown**. Decoys: Scrooge's coat at 5,000-34,000px of the IDENTICAL ink, and a red deck rail that runs 500px wide at neck height through 095 p8, 097 p6 and 098 p7 | `#009e45`-`#009f47` H146-147, **120-2,476px** (093 p1's 1,687px is the clearest). Rare: the boys' green cap appears on only eight pages | `#00a4d5`-`#00a5d7` H193-194, **72-678px on a boy**. Decoys: Donald's sailor cap at 1,400-3,500px, Scrooge's top-hat band and his sea-going peaked cap at 1,200-5,600px, and the naval officers' uniforms at the same hue | Black cap with a coloured **BAND across the front**. Readable on about half the pages; the storm, fog and silhouette pages (090 p6-p7, 094 p4/p8, 096 p1/p4/p7, 098 p1, 099 p1) carry no readable cap at all, and there the ADDRESS is the tool: `UNCA SCROOGE` is always a boy, `UNCLE SCROOGE` names nobody. Cast adds **`other:a naval officer`** (7, human, blue uniform and peaked cap -- their `PREPOSTEROUS!` and `EVERYONE ELSE LOOKS FOR IT UP!` is the story's hinge) and **`other:the newsboy`** on the 140 one-pager |
 
 ## Per-volume cap palette
 
