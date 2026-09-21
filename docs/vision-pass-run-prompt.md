@@ -7504,13 +7504,14 @@ came back unchanged; the review added one of its own.
   beachcomber in a blue hat`, `a beachcomber in a top hat`, `a beachcomber in a
   white shirt`, `the train engineer`, `a telegram messenger`, `a crane workman`,
   `a Mountie`, `a judge`, `the crane operator`, `a sentry`.
-- **OUTSTANDING AT CLOSE: one straggler and one type.** *Rocket-Roasted* 090 g13
-  (`AND AWAY I GO!`, Donald, dialogue, unchanged) is unticked on both engines --
-  `queue-straggler.txt`. And **090 g12 still carries `sound_effect` now that its
-  text is `313`**; it wants `background`, like g6 and g15. *Beachcombers'* closes
-  at 120/120 and *Christmas in Duckburg* at 287/287, both clean on every
-  close-out check. Corpus-wide corrections are down to the one that predates
-  this batch, vol 23 *The Librarian* 118 g19.
+- **NOTHING OUTSTANDING.** All three titles close on every group reviewed on
+  both engines -- *Beachcombers'* 120/120, *Christmas in Duckburg* 287/287,
+  *Rocket-Roasted* 131/131 -- with every close-out check clean. The two items
+  the pass handed back were both worked: 090 g13 (`AND AWAY I GO!`) was ticked
+  and mirrored, and **090 g12's type went to `background`** once its text was
+  corrected from `RR-RR` to `313`, which is the type the other two plates on
+  that page already carried. Corpus-wide corrections are down to the single one
+  that predates this batch, vol 23 *The Librarian* 118 g19.
 
 ### Findings to paste into the next run (2026-09-21, seventy-sixth batch, *Christmas in Duckburg* REVIEWED AND MIRRORED -- 286/287)
 
