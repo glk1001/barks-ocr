@@ -7420,9 +7420,9 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
-### Findings to paste into the next run (2026-09-21, seventy-fifth batch, *Noble Porpoises* REVIEWED AND MIRRORED)
+### Findings to paste into the next run (2026-09-21, seventy-fifth batch, *Noble Porpoises* REVIEWED AND MIRRORED -- 118/118)
 
-**118 groups on both engines, 116 reviewed; 10 speaker corrections (8.5%), all
+**118 groups on both engines, every one reviewed; 10 speaker corrections (8.5%), all
 ten of them in the nephew domain (22.7% of 44).** By the confidence the pass
 wrote, **high 8 of 113 (7.1%) against medium 2 of 5 (40.0%)**, a 5.6x split. The
 review also made two text corrections and two type corrections the pass had not
@@ -7505,9 +7505,10 @@ proposed, and added and deleted no groups. 34 images, 3.40 per page.
   roster says so -- but they are worth a `note`, and neither of these got one.**
 - **`other:` values after review: `the aquarium keeper` 5, unchanged and the
   only one in the title.** No drift.
-- **STILL OUTSTANDING, NOT A DEFECT:** 038 g4 (`SOON!`, narrator) and 040 g7
-  (`GLUG! BLUB!`, Donald) are unreviewed on both engines, both unchanged from
-  the pass -- `queue-straggler.txt`, two lines.
+- **THE TWO STRAGGLERS CAME BACK UNCHANGED, WHICH IS THE POINT.** 038 g4
+  (`SOON!`, narrator) and 040 g7 (`GLUG! BLUB!`, Donald) were signed off with no
+  change to either speaker, so the title closes at **118 of 118 reviewed on both
+  engines** and the ten corrections above are the whole of it.
 
 ### Findings to paste into the next run (2026-09-21, seventy-fifth batch, NONE REVIEWED)
 
