@@ -7420,6 +7420,95 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-21, seventy-fifth batch, *Noble Porpoises* REVIEWED AND MIRRORED)
+
+**118 groups on both engines, 116 reviewed; 10 speaker corrections (8.5%), all
+ten of them in the nephew domain (22.7% of 44).** By the confidence the pass
+wrote, **high 8 of 113 (7.1%) against medium 2 of 5 (40.0%)**, a 5.6x split. The
+review also made two text corrections and two type corrections the pass had not
+proposed, and added and deleted no groups. 34 images, 3.40 per page.
+
+- **THE TAIL IS THE ERROR, NOT THE CAP. NINE OF THE TEN CORRECTIONS CITE
+  `balloon-tail`, AND NOT ONE `sole-figure` CALL WAS WRONG.** By the evidence
+  the pass listed: `sole-figure` **0 of 19**, `off-panel` 0 of 2, no-evidence
+  (sound effects and signs) 0 of 15 -- against `balloon-tail` 9 of 72 (12.5%),
+  `caption` 1 of 6, `dialogue` 1 of 6. Where one figure could possibly be
+  speaking the pass was perfect over nineteen groups. **Every image spent on a
+  panel with a single candidate is wasted; every one spent separating two tails
+  is not.**
+- **ALL THREE WRONG-BOY CALLS HAD THE TIP WITHIN 30px OF A HEAD BOUNDARY AND I
+  SETTLED THEM WITH A MARGIN RULE INSTEAD OF A CROP.**
+  037 g4: tip at panel x670 in the gap between heads ending 642 and beginning
+  695; I applied one-head-LEFT and the answer is the RIGHT head (`Dewey`/blue ->
+  `Louie`/green). 045 g7: tip at 616, four pixels inside a span ending 620, and
+  the answer is the next head right at 640 (`Louie`/green -> `Huey`/red).
+  039 g3: tip at 332, four pixels left of a head beginning 336; I took that head
+  and the answer is the MIDDLE one (`Louie` -> `Dewey`/blue).
+  **Two went right and one went left, so no margin rule would have got all
+  three.** A tip inside half a head-width of a boundary is a 4-6x crop or a
+  collective; it is not arithmetic.
+- **AND `a gap tip goes one head LEFT` DOES NOT HOLD IN VOL. 21.** That rule was
+  measured on Vols. 10 and 14 (nearness 0 for 2, direction 0 for 6). The one
+  clean gap tip in this title went the other way, and quoting the rule is what
+  made 037 g4 a `high`. **Treat it as a Vol. 10/14 finding until another volume
+  reproduces it.**
+- **BOTH UNDER-NAMINGS ARE EVIDENCE THE NOTE ALREADY RECORDED AND THEN VOTED
+  AGAINST.** 037 g6 -> `Huey`/red: the note says the boy's crown probes with no
+  chromatic ink, having also recorded a **43px `#e7191e` at S0.89 on his head's
+  left edge** and called it inconclusive. 041 g13 -> `Louie`/green: the note
+  quotes capwide at a **5px floor** returning `red: 0 blob(s), green: 0 blob(s)`
+  across the whole panel -- and the reviewer found green on a crown inside it.
+  **A whole-panel zero, at any floor, is a statement about the panel. Probe the
+  crown.** This is the seventieth batch's finding arriving for the third time.
+- **BOTH OVER-NAMINGS ARE MARGINS THE NOTE QUOTED AND THEN TRUSTED.** 040 g10
+  -> `nephews`: named from a 435px `#3da252` H132.5 probe **with the tail never
+  traced**, and the note says so. 044 g8 -> `nephews`: tip 12px off the head.
+  **A name needs a readable cap AND a tail that lands on that boy. Either one
+  alone is the collective** -- the pass got 26 of its 31 names right and every
+  one of the five failures is missing one half of that pair.
+- **BOTH MEDIUMS WERE WRONG AND BOTH NOTES NAMED THE ALTERNATIVE.** 046 g0 ->
+  `nephews`: the note reads `Flagged as medium: it could be a nephew's`. 039 g3
+  -> `Dewey`: named by elimination against two boys the pass had already
+  mis-keyed. **A `medium` whose note spells out the other answer is the other
+  answer.** 2 of 5 against 8 of 113 is the whole argument for cashing it.
+- **A CAPTION BOX WAS A CHARACTER'S BALLOON, ONE BATCH AFTER THE LAST TIME.**
+  040 g4 `IT WASN'T SAFE! BOAT HIT A REEF!` went `narrator` -> **`Donald`** and
+  `narration` -> **`dialogue`**. The seventy-fourth batch's rule was `ask whose
+  knowledge the caption carries`; this one does not even need that, because the
+  panel draws the balloon. **Look at the box before typing `narrator`** -- the
+  pass wrote `Caption box.` as its entire note and never opened the panel.
+- **041 g2 WENT `Donald` -> `Dewey` ON REGISTER.** `(PUFF! PANT!) NOW WE'VE GOT
+  TO PULL THE BIG BOAT OFF THE REEF!` is a work order in a bossy voice, which is
+  why it read as Donald; the tail is over the dinghy. **Register is not evidence
+  when the art is readable**, and the note cited `balloon-tail` for a tail it had
+  not measured.
+- **THE PALETTE HELD AND THE H160-180 TEAL DID NOT.** Three of the four
+  `cap_colour` moves are rims the pass recorded in that band -- `#15a89d` H175
+  (037 g4, blue -> green), `#457769` H163 (038 g9, blue -> green) and `#13a9a8`
+  H179 (044 g8, withdrawn). **Every clean `#00a5d5`-`#01a5d7` H190-194 read
+  held.** The founding read on 037 panel 2 called the middle boy's `#15a89d`
+  `Dewey's shaded blue` and that assumption then travelled the whole title. **In
+  this title H160-180 is unreadable, not Dewey.** After review the ink and the
+  name disagree on exactly **one group in thirty-two** -- 038 g9, which keeps
+  `Dewey` with a green cap -- so red/blue/green is otherwise intact here.
+- **AND THE MONEY DID NOT GO WHERE THE ERRORS WERE.** 14 of the 34 images went
+  on 037-039 establishing the construction, and **three of the ten corrections
+  are on those same three pages**. What that spend bought was the palette, which
+  held; what it did not buy was a single separated tail. **On a title whose caps
+  are legible, budget the images for the two-boy panels, not for the reference
+  panel.**
+- **TWO TEXT AND TWO TYPE CORRECTIONS, NONE OF THEM PROPOSED BY THE PASS.**
+  039 g1 `OVER-` to a soft hyphen and 046 g4 `AND SO-` to `AND SO —`, both
+  applied by hand to both engines; 040 g4 `narration -> dialogue` and 040 g7
+  `dialogue -> thought` (`GLUG! BLUB!` under water is a thought balloon).
+  **Punctuation glyphs are not `corrected_text` territory for the pass -- the
+  roster says so -- but they are worth a `note`, and neither of these got one.**
+- **`other:` values after review: `the aquarium keeper` 5, unchanged and the
+  only one in the title.** No drift.
+- **STILL OUTSTANDING, NOT A DEFECT:** 038 g4 (`SOON!`, narrator) and 040 g7
+  (`GLUG! BLUB!`, Donald) are unreviewed on both engines, both unchanged from
+  the pass -- `queue-straggler.txt`, two lines.
+
 ### Findings to paste into the next run (2026-09-21, seventy-fifth batch, NONE REVIEWED)
 
 *Noble Porpoises* (21, 10pp), *The Magic Ink* (22, 6pp), *Tracking Sandy* (21,
@@ -9172,9 +9261,17 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 21 and Vol. 22, four titles read 2026-09-21 (seventy-fifth batch; **none
-reviewed**). 36 pages, 79 images, **2.19 per page**; per title 3.40 / 1.67 /
-2.00 / 1.50.
+Vol. 21 and Vol. 22, four titles read 2026-09-21 (seventy-fifth batch; ***Noble
+Porpoises* REVIEWED AND MIRRORED**, so its row below is corrected against the
+review; the other three are uncorrected). 36 pages, 79 images, **2.19 per
+page**; per title 3.40 / 1.67 / 2.00 / 1.50.
+
+**THE ROW THE REVIEW CORRECTED IS *NOBLE PORPOISES*, AND IT IS THE TEAL.** The
+clean `#00a5d5`-`#01a5d7` H190-194 reads all held; every rim the pass recorded
+in the **H160-180** band was wrong about the boy or withdrawn -- `#15a89d` H175,
+`#457769` H163 and `#13a9a8` H179. Read that band as UNREADABLE in this title,
+not as Dewey's shaded blue. After review the ink disagrees with the name on
+exactly one group in thirty-two.
 
 **VOL. 21 DOES NOT HAVE ONE CAP CONSTRUCTION -- IT HAS ONE PER TITLE.** *Noble
 Porpoises* prints a thin coloured RIM on a black cap; *Tracking Sandy* and *The
@@ -9195,7 +9292,7 @@ same red in the thousands.
 
 | title | reference | red (Huey) | green | blue | construction |
 |---|---|---|---|---|---|
-| *Noble Porpoises* (21) | **037 panel 2** -- the three boys on the beach, red / teal / green rims left to right at head x213-341, x522-642, x724-855; **039 panel 2** repeats it with the third boy's cap turned away | `#e51a1f`-`#e61b1f` H358-359 S0.88-0.89, **130-700px on a rim** (037 p2 144+189px; 039 p7 379+260+95px; 045 p6 264+185+157px). Decoy: Donald's bow tie at 1,000-1,500px | **Louie**, `#4ba33d` H112 / `#47a543` H117.5 / `#3aac41` H124 / `#44a275` H151 S0.58 when shaded, 125-620px. Decoys: the foliage and the living-room wall on 037 p4 at `#3bac40` H123, **12,098px of the exact cap ink** -- a green sliver on any crown in that panel proves nothing | **Dewey**, and it spans H160-194: `#00a5d5`/`#01a5d7` H194 lit (43-600px), `#15a89d` H175 / `#1ea176` H160 / `#13a9a8` H179 shaded. Decoys: **the sea and sky are the roster blue** in huge fills, Donald's sailor cap is 1,400-4,500px, and the dinghy is `#1ab08b` H165 at 13,700px | Black cap with a thin coloured RIM, a crescent at the back-left of the crown. Readable on nearly every page. Cast adds **`other:the aquarium keeper`**, a human in a blue uniform and peaked cap |
+| *Noble Porpoises* (21) | **037 panel 2** -- the three boys on the beach, red / teal / green rims left to right at head x213-341, x522-642, x724-855; **039 panel 2** repeats it with the third boy's cap turned away | `#e51a1f`-`#e61b1f` H358-359 S0.88-0.89, **130-700px on a rim** (037 p2 144+189px; 039 p7 379+260+95px; 045 p6 264+185+157px). Decoy: Donald's bow tie at 1,000-1,500px | **Louie**, `#4ba33d` H112 / `#47a543` H117.5 / `#3aac41` H124 / `#44a275` H151 S0.58 when shaded, 125-620px. Decoys: the foliage and the living-room wall on 037 p4 at `#3bac40` H123, **12,098px of the exact cap ink** -- a green sliver on any crown in that panel proves nothing | **Dewey**, and it spans H160-194: `#00a5d5`/`#01a5d7` H194 lit (43-600px), `#15a89d` H175 / `#1ea176` H160 / `#13a9a8` H179 shaded -- **and the review says that second set is not blue at all**: three of its four cap moves are rims in the H160-180 band, two of them re-read as GREEN, so treat H160-180 as unreadable here. Decoys: **the sea and sky are the roster blue** in huge fills, Donald's sailor cap is 1,400-4,500px, and the dinghy is `#1ab08b` H165 at 13,700px | Black cap with a thin coloured RIM, a crescent at the back-left of the crown. Readable on nearly every page. Cast adds **`other:the aquarium keeper`**, a human in a blue uniform and peaked cap |
 | *The Magic Ink* (22) | **none -- and that is the finding** | -- | -- | -- | **NO NEPHEW CAP IS PRINTED ANYWHERE IN THIS TITLE.** The boys are bare-headed in every panel they appear in, indoors and out; capwide returns `green: 0` and `blue: 0` on all of them, so all 16 nephew groups are collectives forced by the art. Scrooge wears a GREEN CHECKED COAT here, not the red one. Cast adds **`other:the ink salesman`** (a human in a black coat, striped tie and orange hat) and **`other:the messenger`**. The visiting `Prof. Umbugg von Pfake` is **Scrooge in a false beard** -- he sets the hoax up by telephone on 077 p3 and gloats on 077 p8 |
 | *Tracking Sandy* (21) | **050 panel 8** -- two boys from behind, BLUE-quartered (995px) and GREEN-quartered (2,107px), the cleanest cap read in the volume; **051 panel 4** puts green and red side by side | `#e61b1f`-`#e51b1f` H358-359, **300-1,400px on a crown** (051 p4 616+805px; 052 p4 621+862px) | `#009e46`/`#009f47` H146-149 S1.00, **200-1,800px** (051 p4 654px; 054 p7 2,592px across four blobs). Decoys: the desert scenery at `#008945` H150 and `#00a96c` H158, both in the thousands | `#00a5d5`-`#00a6d7` H193-194, 400-2,400px, always split across segments | **QUARTERED BLACK BEANIE**, alternating black and colour, readable only from behind or in three-quarter. Front-on the crown is solid black with a 50-150px `#039e89` H172 sliver at the edge that names nobody. **LOUIE WEARS BLUE HERE** -- 051 p3 addresses him by name and panel 4 shows which boy left. Cast adds **`other:Dread Valley Sandy`** (a human in a green shirt, later a sombrero and false moustache) and **`other:James the chauffeur`**. Donald says `UNCLE SCROOGE`, the nephews say `UNCA SCROOGE`, which separates them all through the title |
 | *The Littlest Chicken Thief* (21) | **051 p3 of the title before it** -- this story prints the same construction and the same three inks but names no nephew in its dialogue, so it has no reference of its own | `#e61b1f`/`#d81b1e` H358-359, 272-3,791px (059 p2 is the biggest cap read in the batch) | `#009e46` H147, 325-713px on a crown. Decoys: the shade tree at 1,079-1,864px of the same ink | `#00a5d5`/`#00a6d6` H193-194, 1,051-1,793px across segments | Quartered beanie as above; the edge sliver here prints `#217a69` H168, `#42b3a5` H173 and `#039c57` H158. **The 13 names rest on the corpus convention alone and should be re-checked against *Tracking Sandy*'s swap.** Cast adds **`Grandma Duck`** (a roster value, not an `other:`), **`other:the coyote pup`** and **`other:the chickens`**; the coyote's growls and the hens' squawks are voices and take `dialogue`, while the bare `SNAP` of jaws stays `sound_effect` with the maker named |
