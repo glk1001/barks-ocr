@@ -7420,6 +7420,130 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-21, seventy-fifth batch, NONE REVIEWED)
+
+*Noble Porpoises* (21, 10pp), *The Magic Ink* (22, 6pp), *Tracking Sandy* (21,
+10pp) and *The Littlest Chicken Thief* (21, 10pp). **424 groups on both engines
+across 36 pages, 79 images, 2.19 per page** (3.40 / 1.67 / 2.00 / 1.50). 4
+groups added for drawn devices, 16 type corrections proposed, no text
+corrections, and the missed-text audit is clean on all four.
+
+- **VOL. 21 HAS TWO CAP CONSTRUCTIONS AND THEY CHANGE FROM TITLE TO TITLE.**
+  *Noble Porpoises* prints a **thin coloured RIM** on a black cap, 90-900px, a
+  crescent at the back-left of the crown. *Tracking Sandy* and *The Littlest
+  Chicken Thief*, both later in the same volume, print a **QUARTERED black
+  beanie**, 400-2,100px, alternating black and colour. They are not the same
+  thing to look for and the rim survives angles the quarters do not. **Derive
+  the construction from a reference panel in every Vol. 21 title; carrying one
+  over from the title before it would have cost the whole of this batch.**
+- **A QUARTERED CAP SEEN FRONT-ON NAMES NOBODY, AND ITS EDGE SLIVER IS A TRAP.**
+  Face-on the crown reads solid black and 40-160px of colour shows at the very
+  edge -- and that sliver prints `#039e89` H172, `#00a171` H162, `#039c57` H158,
+  all in the band BETWEEN this volume's green (H147) and blue (H194). Two boys
+  in one row can both return it. **A sliver at a head's outer edge is an
+  antialiasing artefact of the black outline, not a cap read.** It is why 48 of
+  *Tracking Sandy*'s 66 nephew groups and 33 of *Chicken Thief*'s 46 are
+  collectives forced by the art.
+- **THE NAME-GREP MISSES `LOUIE` AND IT MATTERED TWICE.** `barks-ocr-name-grep`
+  reported zero nephew names on all four titles. Both *Noble Porpoises* 042 g0
+  (`WHAT ARE YOU TRYING TO TELL ME, LOUIE?`) and *Tracking Sandy* 051 g4 (`RUN
+  AND GET UNCA DONALD, LOUIE!`) address him by name, and the second one settles
+  a title-wide mapping. LOUIE is a dictionary word and so is invisible to the
+  non-dictionary list. **Grep the stored `ai_text` for HUEY|DEWEY|LOUIE yourself
+  at prep; it costs one command and the tool will not do it for you.**
+- **TRACKING SANDY PUTS LOUIE IN THE BLUE CAP.** 051 panel 3 has all three boys
+  in one frame: the GREEN-capped one says `RUN AND GET UNCA DONALD, LOUIE!`
+  (tail tip at panel x200, on his own head), the RED-capped one says `WE'LL
+  FOLLOW THAT DUDE!` (tip at x496, on his), and the BLUE-capped one -- the only
+  one who says nothing -- is gone from panel 4, which draws only the green and
+  red boys. Recorded as printed: blue Louie, red kept as Huey because nothing in
+  the title contradicts it, green taken as Dewey by elimination. **One address
+  is thin evidence for a title-wide mapping and this one is worth the reviewer's
+  eye first.**
+- **AND THE NEXT TITLE IN THE SAME VOLUME HAS NO TEST AT ALL.** *The Littlest
+  Chicken Thief* runs 057-066, immediately after *Tracking Sandy*'s 047-056,
+  with the same construction and the same three inks -- and names no nephew
+  anywhere in its dialogue. Its 13 names were set on the corpus convention (red
+  Huey, blue Dewey, green Louie) and every one of them carries that reasoning in
+  its note. **If the reviewer confirms the swap on *Tracking Sandy*, this title
+  is the one to re-check, and it is a one-line grep.**
+- **CAPWIDE MISSED THREE RIMS THAT `probe.py` FOUND, AND THE NAMES CAME FROM THE
+  PROBE.** *Noble Porpoises* 044 panel 7: capwide at a **3px** floor returns
+  `blue: 0 blob(s)` and nothing in green but the sea, because the sea is
+  `#23b08d` H165 at 24,000px and swallows the band. Probing each crown on its
+  own gave 98px of red at S0.88 on the left boy, 137px at H170.0 on the middle
+  one and 154px at H149.2 on the right -- three names on a panel the census
+  called empty. **When a title's water or foliage shares the cap hue, the
+  whole-panel scan is the wrong tool and `probe.py` on each crown is the right
+  one. Rank the heads against each other, never against a floor.**
+- **THE ROSTER BLUE IS THE SEA IN NOBLE PORPOISES.** `#00a5d5` H194 fills whole
+  panels as water and sky, Donald wears it as a sailor cap at 1,400-4,500px, and
+  Dewey's rim is the same ink at 43-600px when lit -- and `#15a89d` H175 /
+  `#1ea176` H160 when shaded. **The cool rim in that title spans H160-194 and
+  area is the only discriminator.** The dinghy is `#1ab08b` H165 at 13,700px and
+  sits in the middle of that span.
+- **DONALD'S SAILOR CAP AGAINST A NEPHEW'S BLUE QUARTER IS A SHAPE TEST, NOT A
+  HUE TEST.** Identical `#00a5d5` in both Vol. 21 titles. His is ONE solid
+  rounded blob of 2,000-6,800px; a boy's is 400-1,200px split across two or more
+  segments, and the census prints them as separate blobs on one crown. That
+  alone settled *Tracking Sandy* 052 panel 1, where the second figure has no bow
+  tie, a 100px head against Donald's 160px, and two blue blobs.
+- **A BARE-HEADED TITLE IS STILL A TITLE-WIDE CLAIM AND NEEDS THE WHOLE SWEEP.**
+  *The Magic Ink* prints no nephew cap on any panel: capwide returns green 0 and
+  blue 0 on every one of the boys' panels, indoors and out, and all 16 nephew
+  groups are collectives forced by the art. That took one loop over the title,
+  not two panels.
+- **SIXTEEN TYPE CORRECTIONS, FIFTEEN OF THEM ONE CLASS.** *Chicken Thief* has a
+  coyote, a henhouse and a hypnotised Donald, and the engines stored every
+  growl, squawk, `OW!` and `BAA!` as `sound_effect`. They are a character's
+  voice, so they go to `dialogue` with the animal named -- `other:the coyote
+  pup`, `other:the chickens`. **The bare `SNAP` of jaws closing stays
+  `sound_effect` and takes the maker as its speaker**; that is the line between
+  the two. The sixteenth is *The Magic Ink* 076 g0, the story logo stored as
+  `background` rather than `title`, which *Tracking Sandy* 047 g0 repeats.
+- **FOUR DRAWN DEVICES ADDED, AND THREE OF THEM SIT WHERE THE LAST BATCH SAID TO
+  LOOK.** *Noble Porpoises* 037 panel 5 (a cluster of four `$` round Donald's
+  head as he grabs the fish) and 046 panels 5 and 6 (a `$` on each money bag);
+  *The Magic Ink* 081 panel 9 (two `?` over the ink-splashed salesman); *Chicken
+  Thief* 062 panel 4 (a `?` over the coyote being hypnotised). Sweeping every
+  panel where somebody is delighted or dismayed about money found all three of
+  the `$` on the first pass. The corpus convention for a cluster is ONE group
+  with the signs space-separated, `"$ $ $ $"`, type `thought` for a bare device
+  over one figure and `background` for a label painted on an object.
+- **A `$` CLUSTER CAN OVERLAP THE BALLOON'S BOUNDING BOX AND BE REFUSED.** 037
+  panel 5's four signs span x573-733 y32-168 and the balloon's box reaches
+  x613 y143: the tight cluster box scores 20.4% against a 20% ceiling. Measure
+  the glyphs with a dark-blob pass before choosing the box -- widening it to
+  x578-740 y28-172 drops the overlap to 17% and still covers all four.
+- **AND AN ADD RENUMBERS THE PAGE, SO A RE-APPLY REJECTS ITS OWN ADDITION.**
+  Re-applying *The Magic Ink* after the SPLOOK fix was refused with `added_groups
+  [0] overlaps existing group 13 by 100%`. Drop the `added_groups` key before any
+  re-apply, and remember that the new group takes an id in READING ORDER (the
+  `?` on *Chicken Thief* 062 became g6, not g13), so a stored `result.json`
+  written before the add no longer maps onto the page.
+- **THE AUDIT CAUGHT ONE TRANSCRIPTION ERROR AND IT WAS MINE, NOT THE ENGINE'S.**
+  *The Magic Ink* 081 panel 8 is a tall narrow panel with the word drawn
+  vertically bottom-to-top; the capture read `SPOOK` and the group has `SPLOOK`,
+  which a 1.4x crop confirms. **`nearly a grouped text` is worth reading as a
+  check on the pass before it is read as a check on the engine.**
+- **`other:` VALUES, all singletons or small and none near-duplicate:**
+  *Noble Porpoises* `the aquarium keeper` 5. *The Magic Ink* `the ink salesman`
+  10, `the messenger` 1 (plus `Scrooge's clerk` and `the delivery men` as
+  depicted-only). *Tracking Sandy* `Dread Valley Sandy` 21, `James the
+  chauffeur` 1. *Chicken Thief* `the coyote pup` 17, `the chickens` 2.
+  **`Grandma Duck` is a roster value, not an `other:`** -- `vision_apply`
+  canonicalised 25 of them silently and said so in one line.
+- **A DISGUISE IS RECORDED AS THE CHARACTER, NOT THE COSTUME.** *The Magic Ink*'s
+  `Prof. Umbugg von Pfake` is Scrooge in a false beard -- he sets the hoax up on
+  the telephone on 077 panel 3 and gloats over it on 077 panel 8, and the name
+  reads as `humbug von fake`. All 11 of the professor's groups are `Scrooge`
+  with `costume` in the evidence. *Tracking Sandy* does the same with Sandy's
+  sombrero and his rabbit-foot shoes.
+- **STILL OUTSTANDING AND NOT FROM THIS BATCH:** a corpus run of
+  `barks-ocr-vision-corrections` with no `--title` reports 35, of which 34 are
+  this batch's own proposals awaiting review. The 35th is **vol 23 *The
+  Librarian* 118 g19, `thought -> dialogue`**, left over from an earlier pass.
+
 ### Findings to paste into the next run (2026-09-20, seventy-fourth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 **443 groups reviewed across the three titles; 21 speaker corrections (4.7%).**
@@ -9045,6 +9169,36 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 21 and Vol. 22, four titles read 2026-09-21 (seventy-fifth batch; **none
+reviewed**). 36 pages, 79 images, **2.19 per page**; per title 3.40 / 1.67 /
+2.00 / 1.50.
+
+**VOL. 21 DOES NOT HAVE ONE CAP CONSTRUCTION -- IT HAS ONE PER TITLE.** *Noble
+Porpoises* prints a thin coloured RIM on a black cap; *Tracking Sandy* and *The
+Littlest Chicken Thief*, later in the same volume, print a QUARTERED black
+beanie. *Dramatic Donald* (seventy-first batch) prints nothing at all. Derive
+the construction in each title from its own reference panel.
+
+**THE THREE INKS ARE STABLE ACROSS THE VOLUME EVEN WHERE THE SHAPE IS NOT:** red
+`#e61b1f` H358-359 S0.88, green `#009e46`-`#009f47` H146-149 S1.00, blue
+`#00a5d5`-`#00a6d7` H193-194 S1.00. What changes is the AREA and whether the
+angle shows any of it.
+
+**AND THE TWO STANDING DECOYS ARE DONALD.** His sailor cap is the same
+`#00a5d5` as a nephew's blue at 1,400-6,800px in ONE solid rounded blob, where a
+boy's is 43-1,200px and, on the quartered cap, split into two or more blobs on
+one crown. His bow tie is the cap red at 1,000-1,500px. Scrooge's coat is the
+same red in the thousands.
+
+| title | reference | red (Huey) | green | blue | construction |
+|---|---|---|---|---|---|
+| *Noble Porpoises* (21) | **037 panel 2** -- the three boys on the beach, red / teal / green rims left to right at head x213-341, x522-642, x724-855; **039 panel 2** repeats it with the third boy's cap turned away | `#e51a1f`-`#e61b1f` H358-359 S0.88-0.89, **130-700px on a rim** (037 p2 144+189px; 039 p7 379+260+95px; 045 p6 264+185+157px). Decoy: Donald's bow tie at 1,000-1,500px | **Louie**, `#4ba33d` H112 / `#47a543` H117.5 / `#3aac41` H124 / `#44a275` H151 S0.58 when shaded, 125-620px. Decoys: the foliage and the living-room wall on 037 p4 at `#3bac40` H123, **12,098px of the exact cap ink** -- a green sliver on any crown in that panel proves nothing | **Dewey**, and it spans H160-194: `#00a5d5`/`#01a5d7` H194 lit (43-600px), `#15a89d` H175 / `#1ea176` H160 / `#13a9a8` H179 shaded. Decoys: **the sea and sky are the roster blue** in huge fills, Donald's sailor cap is 1,400-4,500px, and the dinghy is `#1ab08b` H165 at 13,700px | Black cap with a thin coloured RIM, a crescent at the back-left of the crown. Readable on nearly every page. Cast adds **`other:the aquarium keeper`**, a human in a blue uniform and peaked cap |
+| *The Magic Ink* (22) | **none -- and that is the finding** | -- | -- | -- | **NO NEPHEW CAP IS PRINTED ANYWHERE IN THIS TITLE.** The boys are bare-headed in every panel they appear in, indoors and out; capwide returns `green: 0` and `blue: 0` on all of them, so all 16 nephew groups are collectives forced by the art. Scrooge wears a GREEN CHECKED COAT here, not the red one. Cast adds **`other:the ink salesman`** (a human in a black coat, striped tie and orange hat) and **`other:the messenger`**. The visiting `Prof. Umbugg von Pfake` is **Scrooge in a false beard** -- he sets the hoax up by telephone on 077 p3 and gloats on 077 p8 |
+| *Tracking Sandy* (21) | **050 panel 8** -- two boys from behind, BLUE-quartered (995px) and GREEN-quartered (2,107px), the cleanest cap read in the volume; **051 panel 4** puts green and red side by side | `#e61b1f`-`#e51b1f` H358-359, **300-1,400px on a crown** (051 p4 616+805px; 052 p4 621+862px) | `#009e46`/`#009f47` H146-149 S1.00, **200-1,800px** (051 p4 654px; 054 p7 2,592px across four blobs). Decoys: the desert scenery at `#008945` H150 and `#00a96c` H158, both in the thousands | `#00a5d5`-`#00a6d7` H193-194, 400-2,400px, always split across segments | **QUARTERED BLACK BEANIE**, alternating black and colour, readable only from behind or in three-quarter. Front-on the crown is solid black with a 50-150px `#039e89` H172 sliver at the edge that names nobody. **LOUIE WEARS BLUE HERE** -- 051 p3 addresses him by name and panel 4 shows which boy left. Cast adds **`other:Dread Valley Sandy`** (a human in a green shirt, later a sombrero and false moustache) and **`other:James the chauffeur`**. Donald says `UNCLE SCROOGE`, the nephews say `UNCA SCROOGE`, which separates them all through the title |
+| *The Littlest Chicken Thief* (21) | **051 p3 of the title before it** -- this story prints the same construction and the same three inks but names no nephew in its dialogue, so it has no reference of its own | `#e61b1f`/`#d81b1e` H358-359, 272-3,791px (059 p2 is the biggest cap read in the batch) | `#009e46` H147, 325-713px on a crown. Decoys: the shade tree at 1,079-1,864px of the same ink | `#00a5d5`/`#00a6d6` H193-194, 1,051-1,793px across segments | Quartered beanie as above; the edge sliver here prints `#217a69` H168, `#42b3a5` H173 and `#039c57` H158. **The 13 names rest on the corpus convention alone and should be re-checked against *Tracking Sandy*'s swap.** Cast adds **`Grandma Duck`** (a roster value, not an `other:`), **`other:the coyote pup`** and **`other:the chickens`**; the coyote's growls and the hens' squawks are voices and take `dialogue`, while the bare `SNAP` of jaws stays `sound_effect` with the maker named |
 
 ## Per-volume cap palette
 
