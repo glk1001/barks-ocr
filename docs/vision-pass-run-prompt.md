@@ -7420,6 +7420,66 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-eighth batch, *The Money Champ* REVIEWED AND MIRRORED -- 331/332)
+
+**24 speaker corrections over 327 groups (7.3%), counted by text. No groups
+added, no text corrections, no cap-only changes, and all eight of the pass's own
+type corrections survived.** By the confidence the pass wrote: **high 23 of 324
+(7.1%), medium 1 of 3.** Batch total now 34 corrections over 540 groups (6.3%).
+
+- **I READ A NAME IN A BALLOON AS THE SPEAKER'S OWN. IT IS THE PERSON BEING
+  TALKED ABOUT.** Scrooge asks the boys if they can use a transit and they answer
+  `DEWEY DOES!` / `HUEY DOES!` / `LOUIE DOES!`. I read each balloon as the boy
+  identifying himself, called it the title's naming panel, and derived a
+  title-wide colourist error from it. **Each boy is naming a BROTHER** -- that is
+  the joke -- so the speaker of `DEWEY DOES!` is precisely the one duck it cannot
+  be. After review the title pairs the caps the ordinary way in 18 of its 20
+  capped groups (Dewey/blue 7, Louie/green 7, Huey/red 4), and the two
+  off-convention rows are the naming panel itself. **There is no colourist error
+  in *The Money Champ*, and the docs have been corrected.**
+- **AND THAT ONE MISREADING IS THE ROOT OF MOST OF THE 24.** Having concluded
+  red=Dewey and blue=Huey I applied it across 22 pages, so the corrections come
+  back as a permutation rather than a scatter: `Huey -> Dewey` 5, `Dewey ->
+  Louie` 3, `Dewey -> Huey` 2, `Louie -> Huey` 2, `Louie -> Dewey` 1. **A review
+  whose name-to-name moves form a permutation is not fifteen separate misreadings
+  -- it is one premise applied fifteen times.** Look for the premise first.
+- **THE GENERAL RULE, WHICH IS NOT ABOUT COLOUR AT ALL: A NAME IN A BALLOON IS A
+  VOCATIVE OR AN OBJECT, NEVER A SIGNATURE.** `UNCA SCROOGE` tells you who is
+  being addressed. `DEWEY DOES!` tells you who is being discussed. Neither tells
+  you who is speaking; only the tail does. This batch has both traps on the same
+  title and I got the first right and the second exactly backwards.
+- **THE ONE PLACE THE CONVENTION ACTUALLY EARNED ITS KEEP.** Three collectives
+  became names off the cap alone -- 124 g2 `nephews -> Dewey` (blue), 124 g3
+  `nephews -> Huey` (red), 125 g6 `nephews -> Louie` (green), plus 128 g18 and
+  g19 `nephews -> Louie` (green). Five of the 24 are the review NAMING a boy I
+  had declined to name, on caps I had measured and then not used because the
+  panel was indoors. **The ink was in my own notes; I recorded it and did not
+  cash it.** Under-naming is still the error class.
+- **TWO ADULTS SWAPPED ON ONE PANEL, WHICH IS THE OTHER OLD ONE.** 129 g6 and g7
+  came back `Donald -> Scrooge` and `Scrooge -> Donald` -- a clean transposition
+  in a storm drain where both are drawn small and the only marks are a top hat
+  and a blue cap. Adult-against-adult is as error-prone as boy-against-boy and it
+  happens at high confidence.
+- **THE REVIEW INTRODUCED AN `other:` NEAR-DUPLICATE, WHICH IS WORTH A LOOK.**
+  139 g2 is now `other:the surveyors` (plural) while 138 g9 and 139 g6 remain
+  `other:a surveyor`. Free-text speakers get no closed-set check, so this is
+  exactly the drift the roster warns about; it wants merging one way or the other.
+- **THE STRAGGLER PATTERN CHANGED AGAIN -- AND THIS TIME IT IS A SIGN.** Both
+  remaining stragglers are a `background` group with `speaker: none`:
+  *Krankenstein Gyro* 180 g8 `DRUGS` and *The Money Champ* 139 g3 `CHAMP`. Neither
+  carries a `type_was` or a `speaker_was`. In each title every OTHER sign was
+  reviewed -- 8 of 9 and 47 of 48 -- so it is a plain off-by-one on the group that
+  needs no decision, not a systematic skip. Three batches, three different
+  straggler causes: retyped-then-agreed, stranded by a renumber, and now
+  skipped-because-obvious. **Stop predicting which one it is and just run
+  `--unreviewed` at close.**
+- **WHAT THE PASS GOT RIGHT, FOR THE COST LINE.** *The Money Champ* ran 22 pages
+  on 28 images (1.27 per page) and took 24 corrections; *The Wishing Well* ran 4
+  pages on 5 images and took none. The difference is not the budget -- it is that
+  one title had a five-duck cast with two look-alike adults and a premise I got
+  wrong on page 11, and the other had Gyro on his own. **Cost per page is not the
+  thing to tune; the number of live identity axes per panel is.**
+
 ### Findings to paste into the next run (2026-09-22, seventy-eighth batch, THREE OF FIVE REVIEWED AND MIRRORED)
 
 **213 groups over 16 pages, 10 speaker corrections (4.7%), counted BY TEXT.**
@@ -7534,12 +7594,17 @@ reviewed yet, so every rule below is the pass's own reading and not a verdict.
   too. That is the name-grep blind spot in its purest form, and on this title it
   hid the naming panel for a 22-page story. **When a title has nephews and the
   grep comes back empty, that is not evidence of anything -- read the pages.**
-- **AND THE PANEL IT HID WAS A COLOURIST ERROR.** Cropped at 3x, the boy whose
-  own balloon says DEWEY wears a **RED** sliver, the one who says HUEY wears
-  **BLUE**, and only LOUIE matches the convention with **GREEN**. Red and blue
-  are swapped for the whole title. Recorded as printed per the roster, so
-  *The Money Champ* closes at Dewey/red, Huey/blue, Louie/green and will show up
-  in the standard mismatch query -- that is the point of recording it that way.
+- **AND I READ THE PANEL IT HID BACKWARDS. RETRACTED 2026-09-22 AFTER REVIEW.**
+  I claimed each boy's balloon named HIMSELF, and therefore that red and blue were
+  swapped for the whole title. **They are not. Each boy names a BROTHER** -- that
+  is the gag -- so `DEWEY DOES!` is spoken by the boy who is not Dewey. After
+  review the title pairs the caps the STANDARD way in 18 of its 20 capped groups
+  (Dewey/blue 7, Louie/green 7, Huey/red 4), and the only two off-convention rows
+  are the naming panel itself. **There is no colourist error in *The Money
+  Champ*.** The wrong convention is the single root cause of most of that title's
+  24 speaker corrections. The lesson is not about colour at all: **a balloon that
+  contains a name tells you who is being TALKED ABOUT, and only the tail tells you
+  who is talking.** I had that backwards for a 22-page title.
 - **A TITLE CAN PRINT ITS CAP INK AN ORDER OF MAGNITUDE SMALLER THAN THE
   VOLUME'S.** *Pyramid Scheme* 104 p2 is the reference panel and its three inks
   measure **220px (green), 23px (red) and 27px (blue)** -- against 133-2,869px
@@ -10150,11 +10215,13 @@ Vol. 22, five titles read 2026-09-22 (seventy-eighth batch; **none reviewed**).
 batch), blue `#00a4d5`-`#01a6da` H193.8-194.9. What changes per title is the
 AREA, and this batch is the widest spread yet recorded: 8px to 2,100px.
 
-**NAMES FIRST, INK SECOND -- *THE MONEY CHAMP* SWAPS RED AND BLUE.** 128 panel 2
-has each boy answering in turn with his own balloon over him: DEWEY on the RED
-sliver, HUEY on the BLUE, LOUIE on the GREEN. Recorded as printed. For that
-title read **red = Dewey, blue = Huey, green = Louie**, and expect it to appear
-in the corpus mismatch query, which is what recording it as printed is for.
+**~~NAMES FIRST, INK SECOND -- *THE MONEY CHAMP* SWAPS RED AND BLUE.~~ WRONG,
+RETRACTED 2026-09-22 AFTER REVIEW.** 128 panel 2 has each boy answering in turn,
+but each one names a BROTHER, not himself -- `DEWEY DOES!` is spoken by the boy
+who is not Dewey. **The Vol. 22 convention holds in this title as everywhere
+else: red = Huey, blue = Dewey, green = Louie**, confirmed in 18 of the 20 capped
+groups after review. Read a name in a balloon as the person being talked about
+and trace the tail for the speaker.
 
 **THE DECOYS ARE ON DONALD'S HEAD AND GLOMGOLD'S.** Donald wears a coloured cap
 in three of the five titles and it is the roster blue at 500-2,500px -- bigger
@@ -10170,7 +10237,7 @@ names anybody.
 | *The Wishing Well* (22) | **n/a -- Gyro solo** | -- | -- | -- | Gyro, his Little Helper, a lady customer and a Latin-American revolution. The only thing to read is cloud-against-balloon, and the story turns on it: 178 g6 is a thought cloud and 178 g8 is the same wish shouted with a pointed tail. Cast adds **`other:the lady customer`**, **`other:a rebel soldier`** and **`other:a rebel officer`** |
 | *Return to Pizen Bluff* (22) | **113 panel 2** -- the party filing down the hill, red band at x566-621 and green at x728-812 | `#e61b1f` H358.8, **100-1,000px on a crown** (114 p2's 114px is the smallest, 114 p3's ~1,005px the clearest). Decoys: Scrooge's coat at 2,000-2,400px in nearly every panel and Donald's bow tie at 300-800 | `#009e46`-`#009e47`, **200-600px**; 114 p8's 271+95px and 113 p2's 355+249px are the clean reads. Decoy: the green ROOF on 111 p2 at 2,067px | `#00a4d5`, **100-600px on a boy** -- and this is the title where blue is the dangerous one: **DONALD WEARS A BLUE CAP** through the whole modern half at 700-2,500px, with Scrooge's hat band at another 1,000-2,000 | Black cap with a coloured BAND across the front. The 1890s flashback (110-111) has NO nephews at all -- young Scrooge in a blue hat and red neckerchief -- and the caps only start on 112. Indoors at the dinner table (111 p3-p4) the boys are bare-headed and capscan returns nothing. Cast adds **`other:a townsman`**, **`other:the cafe cook`** and **`other:the ghosts`** |
 | *Krankenstein Gyro* (22) | **n/a -- Gyro solo** | -- | -- | -- | Gyro, his Helper, a druggist and **`other:Cluckery Cluck`**, a red-combed brown hen who speaks eight times. Every Gyro-alone balloon is a cloud with a bubble trail and every hen noise is her voice, so the only type question in the title is one cluck stored as `sound_effect`. 182 p3 puts a SPEECH BALLOON INSIDE A THOUGHT CLOUD -- the imagined creature quacks -- which is recorded as `other:the turtle-shelled turkey duck` |
-| *The Money Champ* (22) | **128 panel 2** -- the three boys answer in turn and NAME THEMSELVES; caps red at x590-595, blue at x673-710, green at x792-836 | `#e61b1f` H358.8, **43px in the naming panel**, 400-800px elsewhere (126 p5's 575px, 131 p4's 815px). **RED IS DEWEY IN THIS TITLE.** Decoy: Scrooge's coat, everywhere, at ten times the area | `#009e46`-`#009e47`, **420-813px**; 126 p4's 762px and 128 p2's 420px are the clean reads. Decoys: GLOMGOLD'S TAM at ~1,600px, the workmen's overalls on 118, and the managers' robes on 123-125 | `#00a4d5`/`#01a5d5`, **44+32px in the naming panel** and 100-400px elsewhere. **BLUE IS HUEY IN THIS TITLE.** Decoys: Donald's blue cap and Scrooge's hat band, both larger than any boy's | Black cap with a small coloured flash. Unreadable INDOORS -- the courtroom rows on 120 p6 and the money-sack rows on 122 p2-p3 return no roster ink at an 8px floor, which is why the early nephew calls are all collectives. Cast adds **Flintheart Glomgold** (55 groups, black coat and a green tam with a red pompom), **`other:the Jivaro medicine man`** (13), **`other:a Duckburg citizen`** (25), **`other:the judge`**, **`other:Manager Coot`**, **`other:the oil field manager`**, **`other:the gold mine manager`** and **`other:a surveyor`** |
+| *The Money Champ* (22) | **128 panel 2** -- the three boys answer in turn and NAME THEMSELVES; caps red at x590-595, blue at x673-710, green at x792-836 | `#e61b1f` H358.8, **43px in the naming panel**, 400-800px elsewhere (126 p5's 575px, 131 p4's 815px). **Red is HUEY here, as everywhere.** Decoy: Scrooge's coat, everywhere, at ten times the area | `#009e46`-`#009e47`, **420-813px**; 126 p4's 762px and 128 p2's 420px are the clean reads. Decoys: GLOMGOLD'S TAM at ~1,600px, the workmen's overalls on 118, and the managers' robes on 123-125 | `#00a4d5`/`#01a5d5`, **44+32px in the naming panel** and 100-400px elsewhere. **Blue is DEWEY here, as everywhere.** Decoys: Donald's blue cap and Scrooge's hat band, both larger than any boy's | Black cap with a small coloured flash. Unreadable INDOORS -- the courtroom rows on 120 p6 and the money-sack rows on 122 p2-p3 return no roster ink at an 8px floor, which is why the early nephew calls are all collectives. Cast adds **Flintheart Glomgold** (55 groups, black coat and a green tam with a red pompom), **`other:the Jivaro medicine man`** (13), **`other:a Duckburg citizen`** (25), **`other:the judge`**, **`other:Manager Coot`**, **`other:the oil field manager`**, **`other:the gold mine manager`** and **`other:a surveyor`** |
 
 ## Per-volume cap palette
 
