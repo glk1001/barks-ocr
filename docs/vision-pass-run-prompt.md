@@ -7420,6 +7420,65 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-ninth batch, THREE OF FOUR REVIEWED AND MIRRORED)
+
+**His Handy Andy 57/57, The Firefly Tracker 56/56, The Prize of Pizarro
+246/246**, every group reviewed on both engines and every cross-engine figure
+identical. *The Lovelorn Fireman* is 16/131 and still being worked. Combined:
+**55 speaker corrections over 359 groups (15.3%)**, and the whole of the damage
+is in one title.
+
+- *His Handy Andy* 3/57 (5.3%), *The Firefly Tracker* 1/56 (1.8%), *The Prize
+  of Pizarro* **51/246 (20.7%), and 35 of its 42 nephew-domain calls (83.3%)**.
+  By the confidence the pass wrote: **high 27 of 190 (14.2%), medium 21 of 53
+  (39.6%)**.
+
+- **THE MID-BATCH RE-READ BARELY WORKED, AND THAT IS THE FINDING.** The review
+  caught the pass at page 156 and the whole unreviewed remainder was re-read
+  with capwide per panel and a crop for every contested tail. Split at that
+  line: pages 146-156, read the first way, came back **20.1% corrected, 75% of
+  the nephew domain**; pages 157-165, re-read carefully first, came back
+  **19.3% corrected, 57% of the nephew domain**. Cropping every contested tail
+  bought 18 points in the nephew domain and nothing overall. **A title where the
+  cast is in identical costume is not fixed by looking harder at the tails.**
+
+- **I REPLACED ONE BIAS WITH ANOTHER AND IT COST FOUR CALLS.** The first read
+  gave unresolvable party lines to Donald; the review moved eight of those to
+  the nephew domain; so on the re-read I adopted "where the art cannot separate,
+  record the collective, because the review moved eight Donalds and none the
+  other way" and wrote that reasoning into the notes. Four of those collectives
+  came back as ADULTS -- 157 g1 and 162 g2 to Scrooge, 158 g7 and 163 g1 to
+  Donald. **Calibrating against the reviewer's last corrections is still a
+  premise applied blind.** The one group I left `unknown` (164 g14) was resolved
+  correctly by the review at no cost. Where the art genuinely cannot separate a
+  speaker, `unknown` beats either bias.
+
+- **A THIRD OF THE RE-READ'S CORRECTIONS WERE `other:` VOCABULARY, NOT ART.**
+  Seven of 21. The four householders on 165 were written `a Duckburg citizen`
+  x3 and `a gold dealer`; the review made all four **`other:a villager`**. And
+  `a mine guard` against `the Royal Guardian` was swapped in both directions
+  (158 g5, 159 g10, 163 g13) -- the Guardian is the one in the feathered
+  headdress and cape and he gives orders; a guard appealing TO him is not him.
+  This is the cheapest class of correction to stop making: **prefer the plainest
+  role word, and re-use a value already in the title rather than inventing a
+  finer one.**
+
+- **THE STRAGGLERS WERE A CAPTION, A GYRO THOUGHT AND A SCROOGE-ALONE LINE**,
+  one per title, all three agreed with the pass. That is a fourth distinct
+  straggler cause in four batches, which confirms the standing advice: stop
+  predicting which one it is and just run `--unreviewed` at close.
+
+- `other:` after review. *Handy Andy*: `a yachtsman` (6), `Lord Taffrail` (2),
+  `Captain Seabug` (2), `the announcer` (2), `Cornwell Mushmore`, `Colonel
+  Rawcuss Yellowpress`, `Commodore Leadpipe J. Cinch`, `a crewman`, `his
+  lordship`, `her ladyship` -- the lordship pair survived review, so they are
+  NOT the Taffrails. *Firefly Tracker*: `a merit judge` (3), `the merit judges`,
+  `a banquet guest` (2), `the toastmaster`. *Pizarro*: `a mine guard` (35), `the
+  Royal Guardian` (11), `a villager` (4), `the mayor` (2), `a city councilman`,
+  `the city councilmen`, `the firemen and policemen`, `the mine guards`,
+  `Donald and the nephews`. The singular/plural pairs are deliberate in both
+  titles and must not be merged.
+
 ### Findings to paste into the next run (2026-09-22, seventy-ninth batch, CORRECTIONS IN REVIEW)
 
 Two things the review caught that the pass had wrong across all four titles.
