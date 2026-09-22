@@ -7420,6 +7420,105 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-ninth batch, NONE REVIEWED)
+
+**Four titles, 38 pages, 487 groups, 56 images = 1.47 per page.** *His Handy
+Andy* (Vol. 22, 4pp, 57 groups, 2.75/page), *The Firefly Tracker* (Vol. 22, 4pp,
+56, 1.75), *The Prize of Pizarro* (Vol. 22, 20pp, 243, 1.30), *The Lovelorn
+Fireman* (Vol. 21, 10pp, 131, 1.20). 7 type corrections, no text corrections,
+1 missed-text finding. Nothing is reviewed yet, so there are no correction
+rates in this section -- these are the reading findings only.
+
+- **A CAP SCAN'S ZERO WAS A FLOOR, AND IT NEARLY COST A WHOLE TITLE'S NAMES.**
+  On *Pizarro* the first montage read said flatly "the nephews are bare-headed
+  in this title". They are not. The Vol. 22 quartered beanie prints a **12-660px
+  sliver** where the cap meets the skull, and `title_heads.py`'s default 25px cap
+  floor hid nearly all of it -- 147 p5 came back with nothing and, re-run at
+  `title_heads.py <out-dir> 300 6`, names all three boys (green x142-283, blue
+  x345-490, red x541-684 = Louie, Dewey, Huey left to right). **On a Vol. 22
+  title, run the head census at a 6px cap floor before writing any absence
+  claim**; the palette table has said "sweep at 6px or the title reads as
+  capless" since *Pyramid Scheme* and I still had to be shown it by a crop.
+- **AND A SCAN'S ZERO CAN BE A BAND EDGE, WHICH IS THE OTHER HALF.** *The
+  Lovelorn Fireman* reports `green 0` in every one of its 77 panels. Louie's cap
+  there prints **`#4ba43f` H112.9 S0.62** -- a leaf green outside capscan's
+  `green` band (H140-182) AND outside the Vol. 21 roster green at H146-155. Only
+  `capwide.py` finds it. **A title-wide green of exactly zero is a reason to run
+  capwide, not a reason to say the boy has no cap.**
+- **THE VOCATIVE SPLIT IS A REAL DISCRIMINATOR AND IT IS FREE.** Across
+  *Pizarro*'s 20 pages Donald says **UNCLE SCROOGE** and the boys say **UNCA
+  SCROOGE**, without exception. I checked it against three independently
+  tail-traced calls (151 g8, 162 g14, 165 g9) and it held on all three, so I
+  then used it on eight more groups that had no other evidence. It is register,
+  which the roster warns about -- but this is a spelling the letterer chose, not
+  a tone I inferred, and it is checkable. Say in the note that it is what the
+  call rests on.
+- **THE SAME JACKET ON TWO DUCKS: THE HAIR CURL IS THE TELL.** *The Lovelorn
+  Fireman* 114 p6 onward draws **Gladstone** in a maroon jacket with a yellow bow
+  tie, and I read the first four of those panels as Donald because Donald had
+  worn a "new Hollywood jacket" earlier in the story. Donald is **bald**;
+  Gladstone has the curl. Getting it wrong would have made the story's central
+  gag unreadable -- the visitor promises "I'LL SAVE YOU, DAISY!", bolts through
+  the door, and comes back only for his record collection. **Where two ducks are
+  dressed alike, find the feature that cannot be swapped (hair, beak, whiskers)
+  before assigning a single balloon.**
+- **AN ADULT'S HAT BAND PRINTS THE ROSTER BLUE AS OFTEN AS A BOY'S CAP DOES.**
+  Three of the four titles have this. Scrooge's blue skipper's cap in *His Handy
+  Andy* runs 2,200-2,740px; his top-hat band in *Pizarro* runs 300-2,500px;
+  Donald's sailor cap runs 600-7,200px. A nephew's sliver in the same volume is
+  12-660px. **Area separates them only at the extremes** -- 151 p1's 1,233px blob
+  was Scrooge's hat band and 148 p3's 661px blob could not be told from a boy's,
+  so I declined to name Dewey there and said why.
+- **A TYPE ALREADY REVIEWED IS NOT A TYPE TO PROPOSE.** *The Firefly Tracker*
+  185 g10 is a red placard the chart marker plants in the ground, which reads to
+  me as scene lettering. A **2026-09-17 type review had already moved it from
+  background to narration**, and `_apply_type` refused my proposal on the
+  `type_reviewed` guard rather than reversing a human. Check the stored group for
+  review flags before writing a type field; the out-dir's `groups.json` does not
+  carry them, so it has to be the prelim JSON.
+- **AN ANIMAL'S CRY IS DIALOGUE, AND SO IS A YELL.** Five of the batch's seven
+  type corrections are this: *Lovelorn Fireman* 107's three cat cries
+  (SCREECH/SQUEECH/YOWL -- the "family" Donald is sent to save), 111 g14's YOW as
+  the sockfoot kick goes through the skylight, and 107 g0, the story logo stored
+  as `background` rather than `title`. The other two are *Pizarro* 152 g4, a
+  scalloped cloud with a bubble trail stored as `dialogue`, and *Firefly Tracker*
+  187 g9, a headline-shaped announcement that is a speech balloon with a tail
+  onto the banquet toastmaster.
+- **THE MISSED-TEXT AUDIT IS ONLY AS HONEST AS `visible_text`, BOTH WAYS.** It
+  found the real thing -- a drawn `?` on *Pizarro* 149 panel 5 that neither engine
+  grouped, queued as `queue-missed.txt`. It also reported two findings on
+  *Lovelorn Fireman* that were **my own transcription slips**: the fire alarm is
+  lettered `SKREEEEEE` (9 characters) on 110 and 115 and I had written eight E's
+  into the capture. **Count the letters in a drawn sound effect against the
+  stored group before filing it as visible_text**, or the audit manufactures work
+  for the reviewer.
+- **WHAT `nephews` IS STILL DOING HERE, AND THE RULE I USED.** *Pizarro* is 20
+  pages with the boys in nearly every panel and I named exactly three of them
+  (164 g1 Dewey, 165 g9 Huey, plus Dewey addressed but silent on 151 p1). The
+  rule I applied, and the reviewer should hold me to it: **name a boy only where
+  a vocative names him, or where a roster sliver sits on the head a traced tail
+  lands on.** Under-naming is the standing error class, so if the review comes
+  back naming a dozen of those collectives, the rule is too tight and the fix is
+  a 2x crop of the crown, not a looser reading of the census.
+- `other:` values, measured off disk after the apply. *His Handy Andy*:
+  `Cornwell Mushmore`, `Colonel Rawcuss Yellowpress`, `Commodore Leadpipe J.
+  Cinch`, `Lord Taffrail`, `a crewman`, `a yachtsman` (5), `Captain Seabug`.
+  *Firefly Tracker*: `Gyro's Helper`, `a merit judge` (4), `the toastmaster`,
+  `a banquet guest` (2). *Pizarro*: `a mine guard` (38), `the Royal Guardian`
+  (9), `the mayor` (3), `the city councilmen`, `the firemen and policemen`,
+  `a Duckburg citizen` (3), `a gold dealer`, `a spectator`, `the announcer` (2).
+  *Lovelorn Fireman*: `Chief Feathergoose` (8), `a magazine photographer` (3),
+  `a cat` (3), `a Duckburg citizen` (3). **Two pairs to look at**: `a crewman`
+  against `a yachtsman` in *Handy Andy* (a hired hand at the rail against the
+  racers, which I believe is a distinction and not drift), and `his lordship` /
+  `her ladyship` on 144 against `Lord Taffrail` on 142 -- the couple in the
+  tropics are NOT drawn as the 142 p6 pair, so I declined to name them, but if
+  the reviewer reads them as the Taffrails those two should be merged.
+- **ONE CORRECTION OUTSTANDING THAT PREDATES THIS BATCH.** A corpus-wide
+  `vision-corrections` run reports 15 outstanding, 14 of which are this batch's
+  seven type corrections across both engines. The fifteenth is **vol 23, *The
+  Librarian*, 118 g19, `thought -> dialogue`**, and it is not mine.
+
 ### Findings to paste into the next run (2026-09-22, seventy-eighth batch, ALL FIVE REVIEWED AND MIRRORED -- batch closed)
 
 **Closed at 599/599 reviewed over 42 pages.** 34 speaker corrections (5.7%),
@@ -10225,6 +10324,35 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 21 and Vol. 22, four titles read 2026-09-22 (seventy-ninth batch; **NONE
+REVIEWED**, so every figure below is the pass's own and none of it has been
+checked). 38 pages, 56 images, **1.47 per page**; per title 2.75 / 1.75 / 1.30 /
+1.20.
+
+**THE THREE INKS ARE STILL THE VOLUMES', BUT ONE TITLE MOVES THE GREEN.** Red
+`#e61b1f` H358.8 S0.88 and blue `#00a4d5`-`#01a6da` H193.6-194.9 hold in all
+four. Green holds at `#009d46`-`#009e48` H146.6-147.5 in the three Vol. 22
+titles -- and in *The Lovelorn Fireman* (Vol. 21) Louie's cap prints **`#4ba43f`
+H112.9 S0.62**, which is outside capscan's `green` band AND outside the Vol. 21
+roster green, so that title reports `green 0` in all 77 panels and only
+`capwide.py` finds the cap at all.
+
+**THE AREA STORY IS THE OPPOSITE OF THE USUAL ONE: THE ADULTS HAVE THE BIG INK.**
+Every one of these titles puts a roster hue on an adult's head at five to two
+hundred times a nephew's area. Scrooge's blue skipper's cap 2,200-2,740px
+(*Handy Andy*), his top-hat band 300-2,500px (*Pizarro*), Donald's sailor cap
+600-7,200px (*Pizarro*). A Vol. 22 nephew sliver is **12-660px**, and *Pizarro*'s
+census had to be re-run at a 6px floor to see it at all.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *His Handy Andy* (22) | **n/a -- no nephew cap in the title** | Scrooge's coat and a boat hull; no nephew red anywhere | none | `#00a5d5` **2,209-2,740px, and it is SCROOGE'S**: a blue peaked skipper's cap with a gold badge and a black brim, on 142 p5/p7, 143 p2/p3/p7, 144 p2/p8, 145 p2/p6 | **The boys wear no beanie at all.** White sailor caps on 143 p2, white CHEF'S TOQUES on 145 p1, a soft blue crew cap on 145 p2 -- headgear is costume here and names nobody, so the title's one nephew identification is 143 g4's vocative naming **Louie**. Cast is mostly Barks' non-duck citizens: **`other:Lord Taffrail`**, **`other:Cornwell Mushmore`**, **`other:Colonel Rawcuss Yellowpress`**, **`other:Commodore Leadpipe J. Cinch`**, **`other:Captain Seabug`** |
+| *The Firefly Tracker* (22) | **n/a -- Gyro solo** | -- | -- | -- | Gyro, his Little Helper and three merit judges. Every Gyro musing is a scalloped cloud with a bubble trail (184 p8 is the clean one) and the single spoken line, 184 g8, is a plain rounded balloon -- the drawing test carries the page. The trap is 187 p7, where a headline-shaped announcement is a **speech balloon with a tail** onto **`other:the toastmaster`**. Cast adds **`other:a merit judge`** and **`other:a banquet guest`** |
+| *The Prize of Pizarro* (22) | **147 panel 5** -- the three boys facing the reader at the park fence, green at x142-283, blue at x345-490, red at x541-684 | `#e61b1f` H358.8, **38-200px on a crown** (147 p5's 38+89px, 165 p6's 205px). Decoys: Scrooge's coat at 2,000-12,400px and Donald's bow tie at 600-1,200 | `#009d46`-`#009e48`, **30-160px**, and the hardest of the three to separate from foliage -- 147 p5's 639px blob is half tree. Only two clean reads in twenty pages | `#00a4d5`/`#00a5d5`, **12-400px on a boy**. Decoys are everywhere: **Scrooge's TOP-HAT BAND** at 300-2,500px and **Donald's sailor cap** at 600-7,200px, both the same hue | **Quartered black beanie; the colour survives only as a sliver**, 12-660px, under the 25px default floor. Sweep at 6px. Cast adds a whole second company of **`other:a mine guard`** (38 groups, green tunics) and **`other:the Royal Guardian`** (9, feathered headdress and magenta cape), plus **`other:the mayor`**, **`other:the city councilmen`**, **`other:the firemen and policemen`**, **`other:a Duckburg citizen`** and **`other:a gold dealer`** |
+| *The Lovelorn Fireman* (21) | **116 panel 1** -- the three boys at the wall by moonlight, green at x222-276, red at x366-416, blue at x556-601 | `#e61b1f` H358.8, **69-500px**. Decoy: **fire helmets**, the same red at 500-5,000px on Donald's head in half the panels | **`#4ba43f` H112.9 S0.62 -- NOT the roster green.** Invisible to capscan's bands; use `capwide.py`. Seen on 116 p1 only | `#01a5d6` H193.8, **85-480px** (113 p4/p5, 116 p1/p2) | Black cap with a coloured band. The boys are bare-headed INDOORS (113 p1) and capped outdoors. Cast adds **`other:Chief Feathergoose`** (8), **`other:a magazine photographer`** (3), **`other:a cat`** (3) and **`other:a Duckburg citizen`** (3) -- and **Gladstone**, who from 114 p6 wears a maroon jacket and yellow bow tie that read as Donald's until you find the hair curl |
 
 ## Per-volume cap palette
 
