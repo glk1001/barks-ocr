@@ -7420,6 +7420,103 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-eighth batch, NONE REVIEWED)
+
+**Vol. 22, five titles, 42 pages, 596 groups: *Pyramid Scheme* (6pp, 69),
+*The Wishing Well* (4pp, 49), *Return to Pizen Bluff* (6pp, 95),
+*Krankenstein Gyro* (4pp, 51), *The Money Champ* (22pp, 332).** 68 images,
+**1.62 per page**; per title 3.17 / 1.25 / 2.00 / 1.00 / 1.27. No text
+corrections; 6 type corrections; 2 missed-text findings. Nothing here is
+reviewed yet, so every rule below is the pass's own reading and not a verdict.
+
+- **RUN THE NAME SCAN OVER THE ART, NOT ONLY OVER `name-grep`.** *The Money
+  Champ* 128 panel 2 has the three boys answering in turn -- `DEWEY DOES!` /
+  `HUEY DOES!` / `LOUIE DOES!` -- and `barks-ocr-name-grep` reported **none of
+  the three**. Each name occurs once, so it misses the repeated-pair list, and
+  all three are ordinary dictionary words, so they miss the non-dictionary list
+  too. That is the name-grep blind spot in its purest form, and on this title it
+  hid the naming panel for a 22-page story. **When a title has nephews and the
+  grep comes back empty, that is not evidence of anything -- read the pages.**
+- **AND THE PANEL IT HID WAS A COLOURIST ERROR.** Cropped at 3x, the boy whose
+  own balloon says DEWEY wears a **RED** sliver, the one who says HUEY wears
+  **BLUE**, and only LOUIE matches the convention with **GREEN**. Red and blue
+  are swapped for the whole title. Recorded as printed per the roster, so
+  *The Money Champ* closes at Dewey/red, Huey/blue, Louie/green and will show up
+  in the standard mismatch query -- that is the point of recording it that way.
+- **A TITLE CAN PRINT ITS CAP INK AN ORDER OF MAGNITUDE SMALLER THAN THE
+  VOLUME'S.** *Pyramid Scheme* 104 p2 is the reference panel and its three inks
+  measure **220px (green), 23px (red) and 27px (blue)** -- against 133-2,869px
+  over the last three batches. `title_bands.py` reported that panel as
+  `red=7 green=6 blue=15` blobs and printed none of the caps, because two of the
+  three are **under capscan's 25px default floor**. A whole-title sweep at a
+  **6px floor** found them in one call and cost no images. **Run the low-floor
+  sweep before deciding a title has no readable caps**; the same sweep is what
+  showed that the boys' caps in *Return to Pizen Bluff* run 100-400px while
+  Donald's blue cap in that story runs 700-2,500.
+- **DONALD WEARS A COLOURED CAP IN THREE OF THESE FIVE TITLES, AND IT IS THE
+  ROSTER BLUE.** *Return to Pizen Bluff* (the whole modern half), *The Money
+  Champ* and *Pyramid Scheme* (a blue tam) all put `#00a4d5` on Donald's head at
+  500-2,500px -- bigger than any nephew band in those titles. Every blue call
+  needed the head span as well as the ink. This is the `donald_wears_deweys_blue`
+  trap arriving three titles in a row, so treat it as the Vol. 22 default rather
+  than a surprise.
+- **AND GLOMGOLD'S TAM IS THE NEPHEW GREEN.** `#009e47` at ~1,600px, in nearly
+  every panel of *The Money Champ*. With the workmen's green overalls (118) and
+  the managers' green robes (123-125) that is three separate green decoys in one
+  title; the boys' green runs 400-800px.
+- **SIX TYPE CORRECTIONS, FIVE OF THEM THE SAME DRAWING.** `dialogue -> thought`
+  on *Return to Pizen Bluff* 110 g2 and *The Money Champ* 119 g0, 133 g12, 133
+  g13 and 136 g12 -- every one a solo balloon with a **scalloped edge and a trail
+  of separate bubbles**, sitting among neighbours already stored as `thought`.
+  The engines get the cloud right most of the time and wrong on the first or last
+  balloon of a run. **Where a character monologues across several panels, check
+  the first and last balloon of the run, not a sample.** The sixth is the
+  reverse: *Krankenstein Gyro* 181 g10, a hen's `CLUCK CLUCK` stored as
+  `sound_effect` while the other seven clucks in the same title are `dialogue`.
+- **TWO MISSED-TEXT FINDINGS, BOTH ON *RETURN TO PIZEN BLUFF*,** and both the
+  kind the audit cannot find unless the capture is complete: `NUGGET CAFE`
+  lettered MIRROR-REVERSED on a cafe window seen from inside (110 p7), and a
+  drawn `?` over each of Donald and a nephew (112 p2, two instances, one row in
+  the audit). `queue-missed-plain.txt` is written. The mirror-reversed sign is
+  worth remembering: it reads as decoration until you turn it round.
+- **A SIGNBOARD IN AN EXOTIC SETTING IS USUALLY NOT LETTERING.** Two signboards
+  in *Return to Pizen Bluff* and one in *Pyramid Scheme* carry pseudo-Arabic
+  squiggles, and the inscriptions all through *Pyramid Scheme* 108-109 are drawn
+  hieroglyphs. Cropped at 4x they are not transcribable, so they stay out of
+  `visible_text` -- but they have to be LOOKED at, because putting a guess in
+  would have produced a phantom audit finding on every one.
+- **`allbold` CAN BE DRIVEN PROGRAMMATICALLY AND SHOULD BE ON A LONG TITLE.**
+  *The Money Champ*'s 173 emphasised groups were built by taking the measured
+  word-matched (`=`) hits above 1.25, dropping any whose x-range touches the
+  group's own `text_box` edge (those are the balloon outline, not lettering) and
+  dropping the first word of a narration box (the drop capital). 43 hand anchors
+  covered the `!` lines where the splitter disagreed with the text. Every result
+  round-trips by construction. On a 332-group title that is minutes rather than
+  an afternoon, and it does not eyeball anything.
+- **A DROP CAPITAL MEASURES 1.5x-2.2x AND IS NEVER EMPHASIS.** `SO` 2.16,
+  `BUT` 2.18, `MERE` 1.83, `AT` 1.72, `WHEN` 1.65 across this batch. Every one is
+  the first word of a caption box. The guard is cheap and it is worth having in
+  any scripted pass.
+- `other:` values written by the pass, no near-duplicates: `a Duckburg citizen`
+  (21 groups), `the Jivaro medicine man` (14), `a workman`, `a townsman` (3),
+  `the ghosts` (2), `the judge` (4), `a surveyor` (3), `the oil field manager`
+  (5), `the gold mine manager` (4), `Manager Coot` (5), `the cafe cook`,
+  `the druggist` (2), `Cluckery Cluck` (8), `the turtle-shelled turkey duck`,
+  `the lady customer` (5), `a rebel soldier` (3), `a rebel officer` (3),
+  `Donald and the nephews` (1, the four-tail chorus on *Pyramid Scheme* 106 p8).
+  The two rebel values are deliberately distinct (the men with epaulettes who
+  hold Gyro's papers against the rank and file) and a reviewer who disagrees can
+  merge them in one pass.
+- **WHAT IS STILL OPEN.** Five groups at medium, all flagged for the queue and
+  all the same shape -- a figure that could be Donald or a boy and no tail that
+  separates them: *Return to Pizen Bluff* 112 g4 and g7 (the car and its
+  occupants drawn at ~100px and in silhouette), 113 g6 (a night panel where both
+  speakers are flat blue silhouettes), 115 g4; *The Money Champ* 119 g9 (a brawl
+  drawn as four overlapping copies of the same two ducks), 123 g1 (off-panel with
+  nobody drawn) and 130 g11 (the tail lands on a 40px figure whose body reads
+  red, i.e. Scrooge, while the line -- the end of a sure thing -- is Glomgold's).
+  That last one is a real art-against-dialogue conflict and is written up as one.
+
 ### Findings to paste into the next run (2026-09-22, seventy-seventh batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 **514 groups over 41 pages, 40 speaker corrections (7.8%), 32 of them in the
@@ -9943,6 +10040,39 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 22, five titles read 2026-09-22 (seventy-eighth batch; **none reviewed**).
+42 pages, 68 images, **1.62 per page**; per title 3.17 / 1.25 / 2.00 / 1.00 / 1.27.
+
+**THE THREE INKS ARE THE VOLUME'S AND HAVE NOT MOVED IN FIFTEEN TITLES.** Red
+`#e61b1f`-`#e7191e` H358.6-358.8 S0.88, green `#009d46`-`#009e49` **H146-148**
+(capscan's `green` band, not `leafgrn` -- `leafgrn` is 0 in every panel of the
+batch), blue `#00a4d5`-`#01a6da` H193.8-194.9. What changes per title is the
+AREA, and this batch is the widest spread yet recorded: 8px to 2,100px.
+
+**NAMES FIRST, INK SECOND -- *THE MONEY CHAMP* SWAPS RED AND BLUE.** 128 panel 2
+has each boy answering in turn with his own balloon over him: DEWEY on the RED
+sliver, HUEY on the BLUE, LOUIE on the GREEN. Recorded as printed. For that
+title read **red = Dewey, blue = Huey, green = Louie**, and expect it to appear
+in the corpus mismatch query, which is what recording it as printed is for.
+
+**THE DECOYS ARE ON DONALD'S HEAD AND GLOMGOLD'S.** Donald wears a coloured cap
+in three of the five titles and it is the roster blue at 500-2,500px -- bigger
+than any nephew band in those stories. Glomgold's tam is `#009e47` at ~1,600px,
+the nephew green. Scrooge's top-hat band is `#00a4d5` at 300-2,000px throughout.
+Add the workmen's green overalls (*The Money Champ* 118) and the managers' green
+robes (123-125) and there is no panel in this volume where a hue match alone
+names anybody.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *Pyramid Scheme* (22) | **104 panel 2** -- the three boys in a row behind Scrooge, green at x378-402, red at x565-572, blue at x613-631 | `#e7191e` H358.6, **23px** in the reference panel and 2,943px where a whole crown faces the reader (104 p5). Decoy: Scrooge's red coat at 4,800-6,600px in the same panels | `#009d46`/`#009d48` H146.8-147.3, **104+116px** in the reference panel, 344-2,714px seen from behind. Decoys: the striped awning at `#00986b` H162 in 3,800px fills, and the `#6fb43c` H112 foliage | `#01a6da` H194.9, **16px+11px** in the reference panel and 39-50px elsewhere -- the smallest nephew ink measured in this project. Decoys: DONALD'S BLUE TAM at 500-2,000px and Scrooge's hat band at 200-450px | **QUARTERED BLACK BEANIE**, the colour surviving only as a sliver where the cap meets the skull. TWO OF THE THREE INKS ARE UNDER CAPSCAN'S 25px DEFAULT FLOOR -- sweep at 6px or the title reads as capless. Readable on 104 and 106 only; 104 p7 is a full silhouette street shot with no ink anywhere. Cast adds nothing; 106 p8 is a FOUR-TAIL chorus of Donald and all three boys |
+| *The Wishing Well* (22) | **n/a -- Gyro solo** | -- | -- | -- | Gyro, his Little Helper, a lady customer and a Latin-American revolution. The only thing to read is cloud-against-balloon, and the story turns on it: 178 g6 is a thought cloud and 178 g8 is the same wish shouted with a pointed tail. Cast adds **`other:the lady customer`**, **`other:a rebel soldier`** and **`other:a rebel officer`** |
+| *Return to Pizen Bluff* (22) | **113 panel 2** -- the party filing down the hill, red band at x566-621 and green at x728-812 | `#e61b1f` H358.8, **100-1,000px on a crown** (114 p2's 114px is the smallest, 114 p3's ~1,005px the clearest). Decoys: Scrooge's coat at 2,000-2,400px in nearly every panel and Donald's bow tie at 300-800 | `#009e46`-`#009e47`, **200-600px**; 114 p8's 271+95px and 113 p2's 355+249px are the clean reads. Decoy: the green ROOF on 111 p2 at 2,067px | `#00a4d5`, **100-600px on a boy** -- and this is the title where blue is the dangerous one: **DONALD WEARS A BLUE CAP** through the whole modern half at 700-2,500px, with Scrooge's hat band at another 1,000-2,000 | Black cap with a coloured BAND across the front. The 1890s flashback (110-111) has NO nephews at all -- young Scrooge in a blue hat and red neckerchief -- and the caps only start on 112. Indoors at the dinner table (111 p3-p4) the boys are bare-headed and capscan returns nothing. Cast adds **`other:a townsman`**, **`other:the cafe cook`** and **`other:the ghosts`** |
+| *Krankenstein Gyro* (22) | **n/a -- Gyro solo** | -- | -- | -- | Gyro, his Helper, a druggist and **`other:Cluckery Cluck`**, a red-combed brown hen who speaks eight times. Every Gyro-alone balloon is a cloud with a bubble trail and every hen noise is her voice, so the only type question in the title is one cluck stored as `sound_effect`. 182 p3 puts a SPEECH BALLOON INSIDE A THOUGHT CLOUD -- the imagined creature quacks -- which is recorded as `other:the turtle-shelled turkey duck` |
+| *The Money Champ* (22) | **128 panel 2** -- the three boys answer in turn and NAME THEMSELVES; caps red at x590-595, blue at x673-710, green at x792-836 | `#e61b1f` H358.8, **43px in the naming panel**, 400-800px elsewhere (126 p5's 575px, 131 p4's 815px). **RED IS DEWEY IN THIS TITLE.** Decoy: Scrooge's coat, everywhere, at ten times the area | `#009e46`-`#009e47`, **420-813px**; 126 p4's 762px and 128 p2's 420px are the clean reads. Decoys: GLOMGOLD'S TAM at ~1,600px, the workmen's overalls on 118, and the managers' robes on 123-125 | `#00a4d5`/`#01a5d5`, **44+32px in the naming panel** and 100-400px elsewhere. **BLUE IS HUEY IN THIS TITLE.** Decoys: Donald's blue cap and Scrooge's hat band, both larger than any boy's | Black cap with a small coloured flash. Unreadable INDOORS -- the courtroom rows on 120 p6 and the money-sack rows on 122 p2-p3 return no roster ink at an 8px floor, which is why the early nephew calls are all collectives. Cast adds **Flintheart Glomgold** (75 groups, black coat and a green tam with a red pompom), **`other:the Jivaro medicine man`** (14), **`other:a Duckburg citizen`** (21), **`other:the judge`**, **`other:Manager Coot`**, **`other:the oil field manager`**, **`other:the gold mine manager`** and **`other:a surveyor`** |
 
 ## Per-volume cap palette
 
