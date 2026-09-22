@@ -7420,6 +7420,105 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-seventh batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+**514 groups over 41 pages, 40 speaker corrections (7.8%), 32 of them in the
+nephew domain.** Per title: *The Master Mover* 9 of 141 (6.4%), *Spring Fever*
+6 of 107 (5.6%), *The Flying Dutchman* 25 of 257 (9.7%). 79 images, 1.93 per
+page. All three mirrored clean at full review -- every engine pair identical on
+groups, reviewed count, `identified_by`, emphasis runs and the speaker /
+cap_colour / confidence / type distributions. Corpus-wide corrections are back
+to the single one that predates the batch, vol 23 *The Librarian* 118 g19.
+
+**By the confidence the pass wrote -- the clearest split yet recorded:**
+
+| title | high | medium |
+|---|---|---|
+| *The Master Mover* | 5 of 136 (3.7%) | **4 of 5 (80.0%)** |
+| *Spring Fever* | 5 of 104 (4.8%) | 1 of 3 (33.3%) |
+| *The Flying Dutchman* | 16 of 228 (7.0%) | 9 of 29 (31.0%) |
+
+Medium ran 6x to 22x worse than high in every title. 37 mediums across the
+batch held 14 of the 40 corrections while being 7% of the groups.
+
+- **COUNT A REVIEW BY TEXT, NOT BY ID -- `review_findings.py` DOES NOT.** The
+  tool compares group ids, so the `ZIP` the review added to *The Flying
+  Dutchman* 090 shifted every later id and it reported 27 speaker corrections
+  and a phantom `thought -> dialogue` on 090 g18. Diffed by text with emphasis
+  markup stripped, the true figures are 25 and none. Strip the markup too, or
+  five of the review's own emphasis edits read as new groups. This is the
+  group-ids-move-under-you rule applied to the tool that reports the review.
+- **A STRAGGLER IS NOT A MISSED GROUP: IT IS A RETYPED GROUP WHOSE SPEAKER WAS
+  AGREED WITH.** All 13 stragglers across the three titles were the same
+  intersection -- `type_reviewed` set with a `type_was`, and no `speaker_was`.
+  Changing a speaker stamps `speaker_reviewed` as a side effect; agreeing needs
+  its own keystroke, and on a group that also wanted a type fix that is the
+  keystroke that gets forgotten. `kivy_editor._confirm_speaker_as_is` says so in
+  its own docstring. There is no `--confirm-all` for speakers. **Expect one
+  straggler per group that takes a type correction, and say what the keystroke
+  is rather than asking for the review to be finished -- it was finished.**
+- **NEVER EDIT THE CAPTURE TO SILENCE THE MISSED-TEXT AUDIT. THREE TIMES IT WAS
+  RIGHT.** The audit reported `ACE DIAMOND SHOP` / `JEWELS` / `GEMS` ungrouped on
+  *The Master Mover* 078 and `DRAWBRIDGE` / `DANGER` on *Spring Fever* 105; the
+  pass decided its own transcription was too granular and merged each into one
+  `visible_text` entry. The review then split both signs into separate boxes,
+  exactly as the audit had said. A third, *Spring Fever* 098's large red `RIP`,
+  was never written into `visible_text` at all, so the audit could not see it and
+  the reviewer found it by eye. **A sign painted on two boards is two pieces of
+  lettering. If the audit and the capture disagree, crop the sign.**
+- **DO NOT BUILD A DIALOGUE THREAD AND THEN SPEND IT.** The single most expensive
+  error of the batch: Donald half-remembering the ship's name in *The Flying
+  Dutchman* looked like a running gag, so the pass gave him 086 g9, 091 g8,
+  091 g10 and 092 g1 -- the pay-off line included -- and cited the earlier calls
+  as evidence for the later ones. All four are nephews. One narrative inference,
+  four corrections, and no tail was traced for any of them.
+- **AT 250px A WHITE DUCK HEAD IN A PORTHOLE IS DONALD BY DEFAULT, AND SCROOGE
+  FOUR TIMES.** 085 g9, 086 g2, 086 g3 and 090 g14. The whiskers are the tell and
+  at montage scale they merge into the cheek. Where a panel is one duck's head
+  filling a porthole or a close-up, that is a 2x crop, not a montage read.
+- **THE DECOY THE PASS NAMED, THE PASS THEN USED AS EVIDENCE.** *The Flying
+  Dutchman* 095 g7/g8: the note says both boys' caps print the same red so
+  neither can be named. They are red and blue, and the broad red band between
+  them is the boat's RAIL -- identified as a rail decoy in three other panels'
+  notes on the same title. A 500px-wide strip at neck height is never a cap band.
+  This is the reverse of under-naming: a false absence-of-discrimination claim.
+- **`dialogue -> thought`: 15 CORRECTIONS THE PASS DID NOT PROPOSE.** Nine on
+  *Spring Fever*, six on *The Flying Dutchman*, on top of 20 adjudicated the same
+  way in earlier rounds. *Spring Fever* closes at 25 `thought` against 54
+  `dialogue`: Donald alone in that story thinks rather than speaks, `WAK!`
+  included. The roster calls thought-vs-speech a DRAWING test, and the pass
+  applied it only where the stored type was already `thought`, taking `dialogue`
+  on trust everywhere else. **"Omit the field unless the stored type is wrong"
+  is not "never check". On any solo balloon, read the outline.**
+- **`allbold` HIDES EMPHASIS IN A SHORT, MOSTLY-BOLD GROUP.** The review added
+  five runs the pass missed (*The Flying Dutchman* 083 g11 `GOLD BULLION!`,
+  084 g12, 085 g3, 085 g7 `GOT`, 085 g9 `WAK!`), every one measured below 1.3.
+  The ratio is against the group's own baseline, so when the emphasised words are
+  most of the group they set that baseline and the ratio collapses toward 1.0.
+  `WAK!` is the limit case: one word, wholly bold, nothing to compare against.
+  **Any single-word group, and any group whose `base` runs high against its
+  neighbours, needs an eye and not a ratio.**
+- **WHAT THE PASS GOT RIGHT, FOR THE COST LINE.** *Spring Fever* at 1.50 images
+  per page took 6 corrections; *The Flying Dutchman* at 1.71 took 25. The
+  difference is not images, it is that a Scrooge story puts five ducks in a cabin
+  and two of them are adults who look alike in a porthole. Where three boys share
+  a panel the pass was strong -- 092 p4 and 093 p1 named six between them and the
+  review reversed none of the six.
+- `other:` values surviving review, none near-duplicate: `the mynah bird` 29,
+  `the game warden` 15, `the naturalist` 8, `a naval officer` 7, `the mountain
+  goat` 5, `an eagle` 5, `the moving customer` 4, `the ape` 4, `the diamond
+  dealer` 3, and singletons for `the bear`, `a new customer`, `the newsboy`. The
+  review removed `other:the drawbridge operator` (*Spring Fever* 105 g0 is
+  Donald) and moved *The Master Mover* 081 g14 and 083 g3 between the goat and
+  the mynah.
+- **TWO STALE `cap_colour` VALUES THE REVIEW LEFT BEHIND**, both where it changed
+  the speaker off a nephew and the pass's colour stayed: *The Master Mover* 083 g0
+  (`other:the mynah bird`, cap `blue`) and *The Flying Dutchman* 083 g4
+  (`Donald`, cap `blue`). Harmless to the text, but each is a false positive for
+  the corpus query that finds colourist errors by a speaker whose name does not
+  match red=Huey / blue=Dewey / green=Louie. Worth a sweep for
+  `cap_colour` on a non-nephew speaker.
+
 ### Findings to paste into the next run (2026-09-21, seventy-seventh batch, NONE REVIEWED)
 
 **509 groups over 41 pages, 79 images, 1.93 per page.** *The Master Mover*
@@ -9841,8 +9940,16 @@ percentages below are proposals, not corrections.
 ## Per-volume cap palette
 
 Vol. 21 and Vol. 22, three titles read 2026-09-21 (seventy-seventh batch;
-**none reviewed**). 41 pages, 79 images, **1.93 per page**; per title 2.80 /
-1.50 / 1.71.
+**ALL THREE REVIEWED AND MIRRORED**, so the corrections below are folded in).
+41 pages, 79 images, **1.93 per page**; per title 2.80 / 1.50 / 1.71.
+
+**THE ROW THE REVIEW CORRECTED IS *THE FLYING DUTCHMAN*, AND IT IS THE RAIL.**
+The three inks all held and no hue call was reversed, but the pass's claim that
+095 p8 prints the same red on both boys is wrong: they are red and BLUE, and the
+broad band between them is the boat's red rail. 100 g13/g14 also came back with
+blue and green swapped. After review the ink disagrees with the name on exactly
+one group in 48, and that one (083 g4) is a stale `blue` left on Donald when the
+review moved the speaker off a nephew.
 
 **THE THREE INKS ARE THE VOLUME'S, AND THE CONSTRUCTION IS THE TITLE'S -- NOW
 OVER TEN TITLES.** Red `#e51b1f`-`#e61b20` H358-359 S0.88, green
