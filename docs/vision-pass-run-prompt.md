@@ -7425,6 +7425,11 @@ cap_colour / confidence distributions equal on both engines.
 Two things the review caught that the pass had wrong across all four titles.
 Both are mine and both are now fixed at source.
 
+- **THE CORPUS IS STILL SHORT AND A BACKFILL IS OWED.** The fix below is at
+  source only. `docs/emphasis-backfill.md` has the evidence, the per-title
+  commands and the three traps; `closeout.sh` prints a TODO row until it is
+  done. Do NOT re-open the low rates in Vols. 1-3 -- those were checked
+  against the art and they are correct.
 - **A THRESHOLD I TOOK FROM A SENTENCE THAT WAS NOT ABOUT DETECTION.**
   `allbold.py` says "confirm anything under about 1.3x with a crop". That is a
   CONFIDENCE line. I used 1.30 as a detection floor and it discarded 115 bold

@@ -302,6 +302,18 @@ else
     row WARN "session cost" "census failed -- read the log"
 fi
 
+# --- standing TODO: the emphasis backfill --------------------------------------
+# docs/emphasis-backfill.md owes a full-corpus re-screen of emphasis_markup.
+# It is not about THIS title, so it is never gating -- but it prints on every
+# close-out so it cannot be quietly forgotten. Flip the Status line in that file
+# when the backfill is done and this row disappears.
+BACKFILL="$REPO_DIR/docs/emphasis-backfill.md"
+if [[ -f "$BACKFILL" ]] && grep -q '^\*\*Status: NOT DONE' "$BACKFILL"; then
+    opened=$(grep -m1 -o 'Opened [0-9-]*' "$BACKFILL" | cut -d' ' -f2)
+    row TODO "emphasis backfill" \
+        "corpus re-screen still owed (opened ${opened:-?}) -- docs/emphasis-backfill.md"
+fi
+
 # --- summary -----------------------------------------------------------------
 echo
 printf '%-6s  %-24s  %s\n' "RESULT" "CHECK" "DETAIL"
@@ -318,4 +330,7 @@ if ((FAILURES > 0)); then
 fi
 echo "closeout: all gating checks clean for \"$TITLE\" at stage $STAGE."
 echo "          WARN/INFO rows above still want reading."
+for r in "${ROWS[@]}"; do
+    [[ "${r%%|*}" == "TODO" ]] && echo "          TODO row: a standing job, not this title's."
+done
 exit 0

@@ -65,6 +65,18 @@ exits non-zero if any gating check is dirty. It writes nothing and commits
 nothing. Use it instead of re-typing the sequence; read the WARN rows, which
 are advisory by design. `UV_OFFLINE=1` when there is no network.
 
+**Outstanding: the emphasis backfill.** `docs/emphasis-backfill.md` owes a
+full-corpus re-screen of `emphasis_markup`, and until it runs the later volumes
+are known to be short of bold runs — measured at roughly 20% on Vol. 16 and 45%
+on Vol. 19. The cause was a fixed 1.30 stroke-width threshold read out of
+`allbold.py`'s "confirm anything under about 1.3x", which is a confidence line
+and not a detection floor; it is fixed at source but the corpus is not. **The
+low rates in Vols. 1–3 are CORRECT and not part of this** — emphasis density
+tracks the volume because Barks' letterer used the bold face more over the
+years, and a title recording zero there has been checked against the art.
+`scripts/closeout.sh` prints a TODO row every run until that file's `Status:`
+line changes.
+
 **The prelim JSON is its own git repo** at `Fantagraphics-restored-ocr/Prelim`,
 not the parent. Stage explicit file paths — never a directory, never a glob: a
 pathspec of `"Carl Barks Vol. 2*"` matches Vol. 20 through Vol. 29, and **Vol. 19
