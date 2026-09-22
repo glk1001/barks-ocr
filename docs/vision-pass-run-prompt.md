@@ -7511,13 +7511,20 @@ batch held 14 of the 40 corrections while being 7% of the groups.
   review removed `other:the drawbridge operator` (*Spring Fever* 105 g0 is
   Donald) and moved *The Master Mover* 081 g14 and 083 g3 between the goat and
   the mynah.
-- **TWO STALE `cap_colour` VALUES THE REVIEW LEFT BEHIND**, both where it changed
-  the speaker off a nephew and the pass's colour stayed: *The Master Mover* 083 g0
-  (`other:the mynah bird`, cap `blue`) and *The Flying Dutchman* 083 g4
-  (`Donald`, cap `blue`). Harmless to the text, but each is a false positive for
-  the corpus query that finds colourist errors by a speaker whose name does not
-  match red=Huey / blue=Dewey / green=Louie. Worth a sweep for
-  `cap_colour` on a non-nephew speaker.
+- **A REVIEW THAT MOVES A SPEAKER OFF A NEPHEW LEAVES THE `cap_colour` BEHIND,
+  AND NOTHING LOOKS FOR IT.** Two here -- *The Master Mover* 083 g0
+  (`other:the mynah bird`, cap `blue`) and *The Flying Dutchman* 083 g4 (`Donald`,
+  cap `blue`) -- and a corpus sweep on 2026-09-22 found six in all, back to Vol. 11
+  (cleared in prelim `5f01924b`). **`cap_mismatch.py` cannot see them**: it opens
+  with `if speaker not in STD or not cap: continue`, so a colour on Donald or on a
+  rabbit is skipped rather than reported. The damage is quiet -- stale evidence on
+  a reviewed group, invisible to the one query that would care -- so it has to be
+  swept for deliberately. The sweep is `cap_colour` set on a speaker not in
+  {Huey, Dewey, Louie}, and it returns 92 rows of which only six are wrong: 70 are
+  a `nephews` collective recording the ink it can see, and the rest are Donald in
+  his own blue or a collective that names the boy whose colour it carries. **Read
+  each group's `vision_note` before nulling anything** -- in all six real cases the
+  note already put the band on a different figure.
 
 ### Findings to paste into the next run (2026-09-21, seventy-seventh batch, NONE REVIEWED)
 
