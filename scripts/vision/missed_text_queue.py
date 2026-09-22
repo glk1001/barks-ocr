@@ -28,6 +28,13 @@ Three files are written, because the classes are three different jobs:
                              inside a character's balloon. Genuine, and the case
                              the read-aloud check was built for.
   queue-missed-plain.txt     neither engine grouped it and nothing contains it.
+
+AND A FOURTH, `queue-missed.txt`, WHICH IS EVERY CLASS IN ONE FILE. That is the
+name the vision-pass skill tells the reviewer to expect, and until 2026-09-22
+nothing wrote it: the per-class files existed, the hand-back named one of them,
+and the reviewer was looking for a file that was never created. The class follows
+the kind field here too, so one queue can be worked start to finish and the
+split files remain for when the classes want handling separately.
 """
 
 import csv
@@ -133,8 +140,43 @@ PREAMBLE = (
 )
 
 
+COMBINED_HEADER = (
+    "# MISSED TEXT -- every class in one queue. This is the file the vision-pass\n"
+    "# skill names; the queue-missed-<class>.txt files beside it hold the same\n"
+    "# entries split by the job each class wants. Work this one unless you have a\n"
+    "# reason to take the classes separately.\n"
+)
+
+
+def write_queue(dest: Path, header: str, entries: list[tuple], *, with_class: bool) -> int:
+    """Write one queue file and return the number of findings it holds.
+
+    Args:
+        dest: the file to write.
+        header: the class-specific comment block that opens it.
+        entries: (volume, page, gid, engine, text, title) or the same with a
+            leading class name when `with_class` is set.
+        with_class: whether each entry carries its class as its first element.
+
+    Returns:
+        The number of findings, which is one per engine pair.
+
+    """
+    entries.sort(key=lambda e: e[1:5] if with_class else e[:4])
+    found = len(entries) // len(ENGINES)
+    summary = f"# {len(entries)} line(s), {found} finding(s), one line per engine.\n#\n"
+    lines = [header, PREAMBLE, summary]
+    for entry in entries:
+        cls = entry[0] if with_class else ""
+        vol, page, gid, engine, text, title = entry[1:] if with_class else entry
+        tail = f"{text}  [{cls}]  ({title})" if cls else f"{text}  ({title})"
+        lines.append(f"{vol} {page:03d} {engine} {gid} missed-text {tail}\n")
+    dest.write_text("".join(lines))
+    return found
+
+
 def main() -> None:
-    """Write the three queue files from an audit CSV."""
+    """Write the per-class queue files and the combined one from an audit CSV."""
     if len(sys.argv) != 3:  # noqa: PLR2004 -- script, argv shape is the usage line
         sys.exit(__doc__)
     rows = list(csv.DictReader(Path(sys.argv[1]).expanduser().open()))
@@ -164,22 +206,17 @@ def main() -> None:
                 (volume, int(page), gid, engine, shown_note, row["title"])
             )
 
+    combined: list[tuple] = []
     for name, entries in sorted(buckets.items()):
-        entries.sort(key=lambda e: (e[0], e[1], e[2], e[3]))
         dest = out_dir / f"queue-missed-{name}.txt"
-        found = len(entries) // len(ENGINES)
-        summary = f"# {len(entries)} line(s), {found} finding(s), one line per engine.\n#\n"
-        lines = [
-            HEADERS[name],
-            PREAMBLE,
-            summary,
-        ]
-        lines += [
-            f"{vol} {page:03d} {engine} {gid} missed-text {text}  ({title})\n"
-            for vol, page, gid, engine, text, title in entries
-        ]
-        dest.write_text("".join(lines))
+        found = write_queue(dest, HEADERS[name], list(entries), with_class=False)
         print(f"wrote {dest}  --  {len(entries)} line(s), {found} finding(s)")
+        combined += [(name, *entry) for entry in entries]
+
+    if combined:
+        dest = out_dir / "queue-missed.txt"
+        found = write_queue(dest, COMBINED_HEADER, combined, with_class=True)
+        print(f"wrote {dest}  --  {len(combined)} line(s), {found} finding(s), all classes")
     if skipped:
         print(f"skipped {skipped} finding(s) with no locatable page or groups")
 

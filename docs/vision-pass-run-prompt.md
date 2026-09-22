@@ -7460,10 +7460,25 @@ type corrections survived.** By the confidence the pass wrote: **high 23 of 324
   in a storm drain where both are drawn small and the only marks are a top hat
   and a blue cap. Adult-against-adult is as error-prone as boy-against-boy and it
   happens at high confidence.
-- **THE REVIEW INTRODUCED AN `other:` NEAR-DUPLICATE, WHICH IS WORTH A LOOK.**
-  139 g2 is now `other:the surveyors` (plural) while 138 g9 and 139 g6 remain
-  `other:a surveyor`. Free-text speakers get no closed-set check, so this is
-  exactly the drift the roster warns about; it wants merging one way or the other.
+- **I CALLED AN `other:` PAIR DRIFT AND IT IS A DISTINCTION. CORRECTED BY THE
+  REVIEWER 2026-09-22.** 139 g2 is `other:the surveyors` while 138 g9 and 139 g6
+  are `other:a surveyor`, and I flagged it for merging. It should not be merged:
+  **139 g2 is several surveyors delivering the verdict together, and the other
+  two are one man speaking.** Singular against plural is a real difference in who
+  is talking, which is the one thing the speaker field exists to record. **A
+  singular/plural pair in the `other:` list is a collective, not a near-duplicate
+  -- check what the panel shows before proposing a merge.** The genuine drift to
+  hunt for is two different WORDINGS for the same speaker, not two numbers of them.
+- **THE MISSED-TEXT QUEUE WAS WRITTEN UNDER A NAME NOBODY WAS LOOKING FOR.** The
+  skill tells the reviewer to expect `<out-dir>/queue-missed.txt`.
+  `missed_text_queue.py` wrote only `queue-missed-<class>.txt`, and the hand-back
+  named one of those, so the reviewer went looking for a file that had never been
+  created. The findings were in the message and the work still reached them, but
+  by a route the procedure does not describe. **Fixed at source on 2026-09-22**:
+  the helper now also writes the combined `queue-missed.txt` the skill names, with
+  the class after the kind field where the parser ignores it, and the per-class
+  files stay for when the three jobs want separating. If a hand-back ever names a
+  queue file, name the one the skill names.
 - **THE STRAGGLER PATTERN CHANGED AGAIN -- AND THIS TIME IT IS A SIGN.** Both
   remaining stragglers are a `background` group with `speaker: none`:
   *Krankenstein Gyro* 180 g8 `DRUGS` and *The Money Champ* 139 g3 `CHAMP`. Neither
