@@ -7420,6 +7420,42 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-ninth batch, CORRECTIONS IN REVIEW)
+
+Two things the review caught that the pass had wrong across all four titles.
+Both are mine and both are now fixed at source.
+
+- **A THRESHOLD I TOOK FROM A SENTENCE THAT WAS NOT ABOUT DETECTION.**
+  `allbold.py` says "confirm anything under about 1.3x with a crop". That is a
+  CONFIDENCE line. I used 1.30 as a detection floor and it discarded 115 bold
+  words across the batch. Measured over 3,261 word ratios the distribution is
+  cleanly bimodal -- plain lettering masses at 0.90-1.10, a trough at 1.10-1.20,
+  bold rises from 1.20 and peaks at **1.30-1.35** -- so the cut sat inside the
+  bold peak. `SHORT!` measures 1.25, `LOSING` 1.22, `TEN FEET` 1.12, and all are
+  plainly bold-italic at 2.4x. **A fixed number cannot work anyway**, because
+  `allbold` reports each word against its OWN GROUP's baseline: a balloon that is
+  mostly bold pulls the baseline up and compresses every ratio in it.
+  `emphasis_candidates.py` now splits each group at the widest gap in its own
+  sorted ratios instead. Emphasis went 216 runs to 329 across the batch.
+- **THE `??` LINES ARE WHERE THE EMPHASIS HIDES, AND THEY HAVE TO BE CROPPED.**
+  `allbold` flags a line whose blob count disagrees with its word count; the
+  generator prints those unmarked and they are easy to skip. I reasoned about
+  twenty of them out by hand and then the assembly script read the auto-only JSON
+  and shipped none of them. Of the 47 such balloons in *Pizarro*, cropping at 2x
+  found **twelve runs missing entirely and four places already marked WRONG**.
+  Budget the crops: 47 balloons is eight stacked images, which is cheap against a
+  reviewer finding them one at a time.
+- **CLEARING A TAG NEEDS THE UNTAGGED TEXT SENT EXPLICITLY.** An absent
+  `emphasis_markup` means "this run said nothing about emphasis", so it KEEPS
+  what is stored -- popping the key does not remove a tag. And `vision_mirror`
+  does not carry a removal to the other engine, so a cleared group needs the
+  paddleocr side done by hand. Both traps hit this batch.
+- **A BLOB ON THE GROUP'S BOX EDGE IS THE BALLOON OUTLINE.** It is the single
+  commonest false positive and it is always high -- 1.63 on *Firefly Tracker*
+  185 g7, 2.04 on *Pizarro* 152 g7. The generator filters it, but only because it
+  reads the PANEL-space boxes out of `<out-dir>/boxes.txt`; without that file the
+  filter silently does nothing.
+
 ### Findings to paste into the next run (2026-09-22, seventy-ninth batch, NONE REVIEWED)
 
 **Four titles, 38 pages, 487 groups, 56 images = 1.47 per page.** *His Handy
