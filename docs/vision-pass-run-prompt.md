@@ -7420,6 +7420,103 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-eighth batch, THREE OF FIVE REVIEWED AND MIRRORED)
+
+**213 groups over 16 pages, 10 speaker corrections (4.7%), counted BY TEXT.**
+Per title: *Pyramid Scheme* 4 of 69 (5.8%), *The Wishing Well* **0 of 49**,
+*Return to Pizen Bluff* 6 of 95 (6.3%). All three mirrored clean -- both engines
+identical on group count, reviewed count, `identified_by` and the speaker /
+cap_colour / confidence / type distributions. *Krankenstein Gyro* and *The Money
+Champ* are still in review and are held out of the commit.
+
+**By the confidence the pass wrote:**
+
+| | high | medium |
+|---|---|---|
+| *Pyramid Scheme* | 4 of 69 (5.8%) | -- (none written) |
+| *The Wishing Well* | 0 of 49 | -- |
+| *Return to Pizen Bluff* | 4 of 91 (4.4%) | **2 of 4 (50.0%)** |
+
+Four mediums in the whole batch and half of them were wrong. That is the same
+story as the last three batches and it is now unarguable: **medium is not a
+hedge, it is a prediction that the call is wrong about half the time.**
+
+- **COUNT THE REVIEW BY TEXT -- AND THIS TIME THE TOOL WAS WRONG BY THREE.**
+  `review_findings.py --since 3a26738c` reported 9 speaker corrections on
+  *Return to Pizen Bluff*; by text with markup stripped it is **6**. The review
+  added two groups to 112 (the two `?` devices), every id after them shifted by
+  two, and the tool -- which compares ids -- counted the two new groups as
+  `unknown -> Donald` and `unknown -> nephews` corrections and mismapped a third.
+  This is the second batch running where an add has corrupted the tool's count.
+  **Diff by `ai_text` with `[b]`/`[i]` stripped, always, and treat the tool's
+  number as an upper bound.**
+- **AN ADD RENUMBERS THE PAGE AND STRANDS EVERY LATER QUEUE ENTRY -- IT HAPPENED
+  HERE.** Both of *Pizen Bluff*'s stragglers are 112 g13 and g14, which are my
+  old g11 and g12 after the +2 shift. They carry no `type_was` and no
+  `speaker_was`: they are simply the two queue lines that pointed at ids which
+  had moved by the time the reviewer reached them. **The missed-text adds must be
+  worked BEFORE the speaker queue is generated, not before it is worked** -- the
+  hand-back said the first and the queue was still built at apply time.
+- **AND THE OTHER THREE STRAGGLERS ARE THE RETYPED-THEN-AGREED PATTERN AGAIN.**
+  *Pyramid Scheme* 107 g8, g11 and g12 all carry `type_reviewed` with a
+  `type_was` and no `speaker_was`. Third batch in a row, and the rule from the
+  seventy-seventh holds exactly: expect one straggler per group that takes a type
+  correction, and say what the keystroke is rather than asking for the review to
+  be finished.
+- **A QUOTED PASSAGE READ OFF A PAGE IS NOT AUTOMATICALLY SPEECH.** The review's
+  own three type corrections are *Pyramid Scheme* 107 g8, g11 and g12, all
+  `dialogue -> thought`: Scrooge reading the archeology book. I typed them
+  dialogue because the quotation marks and the act of reading aloud say voice.
+  They are thought clouds -- he is reading it to himself. **The clue was on the
+  page and I walked past it:** 107 g10, four balloons away in the same run, was
+  ALREADY stored `thought` from an earlier review. A run of balloons on one page
+  where one is thought and three are dialogue is a run to re-read, not a mixed
+  page. My own finding last time was "check the first and last balloon of a run";
+  the correction is **check the whole run whenever one member disagrees with the
+  others**, in both directions.
+- **THE DECOY I DOCUMENTED BECAME THE ERROR. ALL THREE OF 115's REVERSALS ARE
+  ONE MISTAKE.** I wrote into the palette that Donald wears the roster blue in
+  *Return to Pizen Bluff* at 700-2,500px, larger than any nephew band -- and then
+  read every blue cap in the title's last two panels as Donald. 115 g5, g6 and g7
+  all came back `Donald -> Huey/Dewey`. Cropped at 4x after the review:
+  - **115 p3**: my note says the tail touches "the blue cap of the standing
+    figure at the centre of the car -- Donald, with his red bow tie visible
+    below". At 4x that figure is **SCROOGE** -- black top hat with a blue band
+    (`#00a5d5` ~1,300px at x352-464) over a **red coat** (~1,427px at x382-443),
+    which is what I called a cap and a bow tie. The speaker is Huey.
+  - **115 p4**: my note says "holds two figures only: Scrooge and the taller duck
+    in the blue cap". At 4x the left figure is a **NEPHEW** -- small head, short
+    beak, no bow tie, black cap with a blue band -- and he is **smaller** than
+    Scrooge, not taller. Donald is not in the panel at all. The speaker is Dewey.
+  **When a title puts the roster blue on an adult, blue stops being evidence and
+  HEAD SCALE becomes the only discriminator.** I had the rule and stopped
+  applying it the moment the rule itself gave me an answer I liked.
+- **AND THE PANEL THAT COST THREE CORRECTIONS NEVER GOT AN IMAGE.** *Return to
+  Pizen Bluff* took 12 images over 6 pages and **none of them was 115 p4**, which
+  I read off the montage alone. One 4x crop -- the one I took after the review --
+  settles it in a glance. The cheap titles in this batch were cheap because
+  nothing was contested; this one was contested on the page I did not spend on.
+  **Spend the image where the Donald-against-nephew axis is live, not where the
+  cap ink is easy.**
+- **TWO DIRECTIONS IN THE SAME SEQUENCE, WHICH IS THE SIGNATURE OF A BAD FRAME.**
+  On 115 I put Donald where the boys were (g5, g6, g7) *and* the boys and Scrooge
+  where Donald was (g0 `Scrooge -> Donald`, g4 `nephews -> Donald`). When a
+  page's corrections run both ways, the error is not a slip on one tail -- it is
+  that I had the cast of the scene wrong. **Name the figures in the panel before
+  assigning any balloon, and if a page reverses in both directions at review,
+  that is the panel to re-read first.**
+- **WHAT CAME BACK CLEAN, AND WHY IT IS USEFUL.** *The Wishing Well*: 49 groups,
+  0 corrections, on 5 images over 4 pages. Gyro alone for half the story, every
+  balloon either a cloud with a bubble trail or a pointed tail, and a closed cast
+  of four. The batch's cheapest title was also its most accurate -- cost and
+  accuracy did not trade off here, because there was nothing to be uncertain
+  about. All six of the pass's own type corrections survived review, including
+  the hen's cluck on *Krankenstein Gyro* 181 g10 and both Glomgold clouds.
+- **STILL OUTSTANDING AND NOT MINE TO CLOSE.** *Return to Pizen Bluff* 110's
+  `NUGGET CAFE` -- the mirror-reversed cafe window lettering -- was not added and
+  is not in `missed-text-ignore.txt`, so the audit still reports it. The two `?`
+  devices on 112 were added and the audit is otherwise clean.
+
 ### Findings to paste into the next run (2026-09-22, seventy-eighth batch, NONE REVIEWED)
 
 **Vol. 22, five titles, 42 pages, 596 groups: *Pyramid Scheme* (6pp, 69),
