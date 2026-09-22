@@ -7420,6 +7420,69 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-22, seventy-ninth batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
+
+**Closed at 487/487 reviewed over 38 pages, both engines identical on every
+title.** 64 speaker corrections (13.1%), and 44 of the batch's 73 nephew-domain
+calls (60%). By title: *His Handy Andy* 3/57 (5.3%), *The Firefly Tracker* 1/56
+(1.8%), *The Prize of Pizarro* 48/243 (19.8%), *The Lovelorn Fireman* 12/131
+(9.2%).
+
+**90 images over 38 pages, 2.37 per page** -- 56 for the pass at 1.47, then 34
+more re-reading Pizarro's unreviewed half and cropping all 47 of its flagged
+emphasis balloons after the review caught it at page 156. **Pizarro alone cost
+60 images over 20 pages, 3.00, and still came back 19.8% corrected.** That is
+the most expensive title in the ledger and the worst corrected, in the same
+row: past a point, more looking does not buy accuracy on a title whose cast is
+in identical costume.
+
+- **ONE TITLE IS THE WHOLE BATCH.** Pizarro alone is 48 of the 64 corrections
+  and 34 of the 44 nephew-domain ones. The other three run 1.8-9.2%, which is
+  the normal band. **What separates them is not length or cap ink -- it is that
+  from page 155 Pizarro puts the entire five-duck cast in identical
+  conquistador armour.** *The Firefly Tracker*, a Gyro solo, took ONE
+  correction in 56 groups. The cost doc's line holds: the number to watch is
+  live identity axes per panel, not pages or images.
+- **UNDER-NAMING IS STILL THE LARGEST CLASS AND IT IS STILL THE SAME SENTENCE.**
+  19 of the 64 are `nephews -> a name`, and nearly every one has a note saying
+  some version of "no roster ink on this head". *Lovelorn Fireman* 109 g0/g1 and
+  115 g12/g13 and 116 g3 all read that way and came back Louie, Dewey, Louie,
+  Dewey, Huey. **The absence sentence is the most expensive thing in the
+  vocabulary and it is still being written off the wrong tool** -- `title_heads`
+  uses capscan's hard hue bands, and `capwide` spans them.
+- **A CAPTION CAN CARRY A CHARACTER'S VOICE, AND THE REVIEW SAYS SO.**
+  *Lovelorn Fireman* 110 g8 and 110 g11 stay typed `narration` but their
+  speaker is now **Chief Feathergoose** and **Donald** -- caption boxes that
+  complete the sentence a character started in the balloon above. The standing
+  rule is that the speaker field records the BOX, so this is recorded and NOT
+  generalised: ask the reviewer before applying it to a title's captions
+  wholesale.
+- **TWO CORRECTIONS CAME FROM MY OWN CROP BEING READ BACKWARDS.**
+  *Lovelorn Fireman* 113 g6 was traced onto the red-capped boy of two and is the
+  blue one; 115 g1's drawn `?` hangs over Gladstone, not Daisy. Cropping is not
+  the end of the job -- the crop still has to be read left to right against the
+  census, and on 113 the census had already said which head was which.
+- **`other:` VOCABULARY IS A CHEAP CLASS TO STOP LOSING.** Across the batch 14
+  corrections were an `other:` role rather than a face: four householders became
+  `a villager`, `a mine guard` and `the Royal Guardian` were swapped in both
+  directions, and three lines moved onto `Chief Feathergoose`. **Prefer the
+  plainest role word, and re-use a value already in the title rather than
+  inventing a finer one.**
+- `other:` after review, per title. *His Handy Andy*: `a yachtsman` (6),
+  `Lord Taffrail` (2), `Captain Seabug` (2), `the announcer` (2), `Cornwell
+  Mushmore`, `Colonel Rawcuss Yellowpress`, `Commodore Leadpipe J. Cinch`,
+  `a crewman`, `his lordship`, `her ladyship`. *Firefly Tracker*: `a merit
+  judge` (3), `the merit judges`, `a banquet guest` (2), `the toastmaster`.
+  *Pizarro*: `a mine guard` (35), `the Royal Guardian` (11), `a villager` (4),
+  `the mayor` (2), `a city councilman`, `the city councilmen`, `the firemen and
+  policemen`, `the mine guards`, `Donald and the nephews`. *Lovelorn Fireman*:
+  `Chief Feathergoose` (11), `a Duckburg citizen` (3), `a cat` (3), `a magazine
+  photographer` (3). No near-duplicates left; the singular/plural pairs are
+  deliberate.
+- **THE STRAGGLER WAS ONE PER TITLE, FOUR FOR FOUR, AND ALL FOUR AGREED WITH
+  THE PASS.** A caption, a Gyro thought, a Scrooge-alone line and Daisy's
+  `I LIKE THIS!`. Four batches, four different causes. Just run `--unreviewed`.
+
 ### Findings to paste into the next run (2026-09-22, seventy-ninth batch, THREE OF FOUR REVIEWED AND MIRRORED)
 
 **His Handy Andy 57/57, The Firefly Tracker 56/56, The Prize of Pizarro
