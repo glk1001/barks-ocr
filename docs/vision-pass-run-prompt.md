@@ -7420,6 +7420,100 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-23, eightieth batch, NONE REVIEWED)
+
+*The Floating Island* (Vol. 21, 10pp, 142 groups), *The Black Forest Rescue*
+(Vol. 21, 10pp, 143), *The Good Deeds* (Vol. 23, 10pp, 134). **69 images over 30
+pages, 2.30 per page**; per title 2.80 / 1.80 / 2.30. Every figure below is the
+pass's own and none of it has been checked.
+
+- **VOL. 23 IS OPEN, AND ITS CAP IS A SLIVER.** *The Good Deeds* is the first
+  title ever read in the volume. The construction is a BLACK beanie whose ink
+  survives only as a thin wedge at the cap/skull join -- **30 to 600px** --
+  reference panel **027 panel 2**, blue `#00a6d9` x116-125 (Dewey), green
+  `#009d45` x341-363 (Louie), red `#e61b1f` x566-578 (Huey), left to right; 035
+  panel 4 is a second clean row. **Every decoy in the title is an order of
+  magnitude bigger**: Donald's blue cap 400-900px, his red bow tie 600-1,700px,
+  Old Pupp's red sweater 27,000-52,000px, the river 76,116px, and the grass
+  shares the cap green's hue at 8,700-11,400px. A hue match alone names nobody
+  here; the wedge has to be on a crown.
+- **THE THREE TITLES SPLIT 78% / 45% / 15% ON NAMING, AND THE CAUSE IS THE
+  COSTUME, NOT THE EFFORT.** *The Good Deeds* named 28 of 36 nephew-domain
+  calls, *The Floating Island* 10 of 22, *The Black Forest Rescue* 6 of 40 --
+  and Black Forest is the CHEAPEST title of the three at 1.80 images/page.
+  There the boys are in **Junior Woodchuck uniform**, identical grey scout caps,
+  so `cap_colour` is null on all 143 groups and no amount of cropping can help.
+  This is the Pizarro lesson from the seventy-ninth batch arriving from the
+  other side: when the cast is in uniform, stop buying images and write the
+  collective.
+- **A TITLE CAN HAVE A HOUSE HABIT FOR WHERE THE TAIL HANGS, AND IT IS WORTH
+  MEASURING EARLY.** In *The Good Deeds* the tip lands a little to the RIGHT of
+  its owner's head -- 6, 9, 20, 35, 37 and 44px across 027 p2, 036 p7 and 030
+  p7. Establishing that on the reference panel settled five later tips that fell
+  in gaps. Two tips still disagreed with it (030 g14 at 30px LEFT, 032 g10 at
+  1px left of Dewey) and both are recorded medium.
+- **THE VOCATIVE NAMES THE ADDRESSEE, AND IN A UNIFORM TITLE THAT IS THE ONLY
+  KEY LEFT.** All six names in *Black Forest Rescue* come from four vocatives --
+  "GENERAL DEWEY" once, "GENERAL HUEY" three times -- each spoken BY a non-duck
+  Woodchuck TO a nephew. The second key is that the troop is MIXED: the nephews
+  are the ducks and the other Woodchucks are pink-faced pigs and dogs, which
+  separates `nephews` from `other:a Junior Woodchuck` in every panel and is
+  legible at montage scale.
+- **A SCALLOPED BOX WITH A JAGGED TAIL INTO A MACHINE IS NOT A CAPTION.**
+  *Floating Island* 118 g10/g11/g12 were stored `narration` and are broadcast
+  balloons coming out of the television -- the tail enters the screen frame on
+  p7 and the cabinet on p8. Corrected to `dialogue` / `other:the TV announcer`.
+  118 g11 is also lettered entirely in a slanted face and takes `[i]` over the
+  whole group. The title's real narrator captions (118 g3 `AND SO!`, 119 g11
+  `SOON!`) are plain rectangles and were left alone.
+- **I OVERRULED A REVIEW WITHOUT SEEING IT, AND `vision_apply` IS WHAT CAUGHT
+  ME.** In *The Good Deeds* I read the radio's song as Alvis Lessly's relayed
+  singing voice -- 030 g7 names him -- and moved six groups from `sound_effect`
+  to `dialogue`. One of the six, **030 g11, already carried `speaker_reviewed`
+  and `type_reviewed` dated 2026-09-18**, settled by hand as `none` /
+  `sound_effect`. The apply refused that one group and reported "left the
+  speaker call on 2 already-reviewed group(s) alone", which is the only reason
+  the conflict surfaced at all. **Reverted all five siblings to match**
+  (commit c944fff9). Two lessons: read the apply's already-reviewed line as a
+  FINDING, not as noise; and before proposing a type rule that covers a whole
+  class of lettering, grep the title for a group of that class that is already
+  reviewed.
+- **THE SOUND-EFFECT TYPE RULE IS STILL UNSETTLED AND I DID NOT SWEEP IT.**
+  *Black Forest Rescue* is ~15 groups of bugle calls and drum messages. The
+  roster's own test (does a CHARACTER'S VOICE make the sound) keeps an
+  instrument as `sound_effect`, while `project_instrument_noise_names_the_player`
+  in memory says dialogue. I left the types alone and named the maker in the
+  speaker field instead. **This needs a ruling**; it is the same question the
+  Alvis Lessly revert just answered one way.
+- **WHAT I DID CORRECT** in that title: the bloodhound's howls and sneezes (135
+  g2/g4/g6/g9/g12) and the forest animals' cries (133 g4/g6) are voices, and 136
+  g18 `GLUB!` is drawn as a thought cloud with a bubble trail. 135 g7, the same
+  howl, was ALREADY stored as `dialogue`, which is what made the inconsistency
+  visible.
+- **MISSED TEXT: ONE ITEM PER VOL. 21 TITLE, NONE IN VOL. 23.** *Floating
+  Island* 124 p2 and *Black Forest Rescue* 130 p3, both a lone drawn `!`. *The
+  Good Deeds* returns 0 in all three audit classes. Both findings were spotted
+  during the read and the audit then confirmed them, which is the first time the
+  two have agreed exactly.
+- **A STACK IS NOT A SET OF COORDINATES EITHER.** Twice in *The Good Deeds* I
+  computed a panel's head positions from a stacked contact strip and cropped
+  200-300px below the heads, wasting two image reads. The existing rule says a
+  stack is not a MEASUREMENT; it is also not a source of crop boxes, because the
+  per-crop offsets inside the strip have to be subtracted first.
+- `other:` after the pass, per title. *Floating Island*: `a tax collector` (7),
+  `the TV announcer` (3), `the pilot` (2), `the ship's captain`. *Black Forest
+  Rescue*: `a Junior Woodchuck` (24), `the official hound` (7), `the Woodchuck
+  commander` (3), `Joe` (2), `the forest animals` (2). *The Good Deeds*: `the
+  crop-duster pilot` (9), `a picnicker` (6), `the old man` (4), `Old Pupp` (3),
+  `the bull` (3), `the bakery driver` (2), `a motorist` (2), `Gwendolyn`, `the
+  farmer`, `a policeman`. No near-duplicates; `a Junior Woodchuck` deliberately
+  excludes the nephews, who are Junior Woodchucks too but are named `nephews`.
+- Outstanding at hand-back: **11 type corrections** (*Floating Island* 3,
+  *Black Forest Rescue* 8, *The Good Deeds* 0 -- 22 queue entries, since each is
+  listed per engine), **no text corrections at all**, and **417 unreviewed
+  speaker groups** (142 + 143 + 132; *The Good Deeds* carries 2 groups reviewed
+  by hand on 2026-09-18 that the pass left alone).
+
 ### Findings to paste into the next run (2026-09-22, seventy-ninth batch, ALL FOUR REVIEWED AND MIRRORED -- batch closed)
 
 **Closed at 487/487 reviewed over 38 pages, both engines identical on every
@@ -10487,6 +10581,32 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 21 and **Vol. 23**, three titles read 2026-09-23 (eightieth batch; **NONE
+REVIEWED**, so every figure below is the pass's own and none of it has been
+checked). 30 pages, 69 images, **2.30 per page**; per title 2.80 / 1.80 / 2.30.
+
+**VOL. 23 IS NEW AND ITS INK IS THE SMALLEST YET.** Red `#e61b1f` H358.8, green
+`#009d45`-`#009e49` H146-148, blue `#00a5d5`-`#00a6d9` H193-194 -- the same three
+hues as Vol. 21 and 22 -- but the construction is a BLACK beanie with the colour
+surviving only as a wedge at the cap/skull join, **30 to 600px**. Sweep at 25px
+or the title reads as capless: capwide at the default floor found green on a head
+and almost nothing else, and it was a 25px re-run that produced the red and blue.
+
+**IN TWO OF THE THREE TITLES THE DECOYS ARE ON THE ADULTS, AND IN THE THIRD THERE
+IS NO KEY AT ALL.** Donald wears a blue cap in both *The Floating Island* (from
+p120, 1,000-5,100px) and *The Good Deeds* (400-900px) and a red bow tie in all
+three; Scrooge's black top hat carries a blue band at 1,000-2,500px. Against
+nephew ink of 30-720px that is a 5:1 to 170:1 area ratio -- **area, not hue, is
+what separates them in these volumes**.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *The Floating Island* (21) | **122 panel 1** -- the three boys lying along the coral shelf, blue at x80-103, green at x225-262, red at x362-381 | `#e61b1f` H358.8, **400px** on a crown (122 p1), 722px at 123 p6, 662px at 126 p4. Decoy: **DONALD'S BOW TIE** at 400-900px in every panel he is in, and Scrooge's coat at 2,000-34,000px | `#009e46`-`#009e47` H146.6-147.0, **349-723px**. THE TRAP: on beach panels the sea prints `#39b18d` H162.0 and a probe box a few pixels too wide reads the cap as sea and returns a false zero -- 123 p6 did exactly that until the box was tightened to the wedge | `#00a5d5`/`#008cba` H193.5-194.8, **124-454px on a boy**. Decoys: **Donald's blue cap** 1,000-5,119px and **Scrooge's top-hat band** 1,000-2,500px | Quartered black beanie. **Indoors on 117-119 the boys are BARE-HEADED** -- capwide at min_area=100 returns 0 roster blobs on 117 p3/p4/p5 and no roster hit at all on 119 p6 -- and capped from 121 once they land. Cast adds `other:a tax collector` (7, three different men from three island groups), `other:the TV announcer` (3), `other:the pilot` (2), `other:the ship's captain` |
+| *The Black Forest Rescue* (21) | **n/a -- the nephews are in UNIFORM** | -- | -- | -- | **Junior Woodchuck uniform: identical grey scout caps with a white diamond badge.** `cap_colour` is null on all 143 groups and no crop can help. All three roster hues appear and none is a cap: green `#009e49` H147.7 is the GRASS at 7,000-129,000px, blue `#00a5d5` is the creek (130 p1, 201,462px) and DONALD'S cap (1,000-13,867px), red is his bow tie and the drum lettering. The two keys are the **vocative** (four of them, naming the ADDRESSEE) and the **species split** -- nephews are ducks, the other Woodchucks are pink-faced pigs and dogs. Cast adds `other:a Junior Woodchuck` (24), `other:the official hound` (7), `other:the Woodchuck commander` (3), `other:Joe` (2), `other:the forest animals` (2) |
+| *The Good Deeds* (23) | **027 panel 2** -- the three boys facing the reader over the fence, blue at x116-125, green at x341-363, red at x566-578; **035 panel 4** is a second clean row | `#e61a20`-`#e61b1f` H358.2-358.8, **148-573px**. Decoys: **Old Pupp's red sweater** at 27,000-52,000px and Donald's bow tie at 600-1,700px | `#009d45`-`#009f47` H146-148, **53-365px**, the smallest of the three. Decoy: **the grass is the same hue** at 8,700-11,400px, so a blob outside a crown says nothing | `#00a5d5`-`#00a6d9` H193.2-194.1, **108-475px**. Decoys: **Donald's blue cap** 400-900px and the river at 76,116px | **Black beanie, the ink a wedge at the cap/skull join only.** Sweep at 25px. Tails hang a little RIGHT of the speaker's head -- 6, 9, 20, 35, 37 and 44px measured -- which settles the tips that land in gaps. Cast adds `other:the crop-duster pilot` (9), `other:a picnicker` (6), `other:the old man` (4), `other:Old Pupp` (3), `other:the bull` (3), `other:the bakery driver` (2), `other:a motorist` (2), `other:Gwendolyn`, `other:the farmer`, `other:a policeman` |
 
 ## Per-volume cap palette
 
