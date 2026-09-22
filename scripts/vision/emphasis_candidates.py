@@ -41,8 +41,26 @@ import pathlib
 import re
 import sys
 
-THRESH = 1.30  # stroke-width ratio at or above which allbold calls a word heavy
-MIN_BLOB_PX = 30  # narrower than this is a stroke of the balloon, not a word
+# A FIXED THRESHOLD DOES NOT WORK, and this file shipped one for a batch before the
+# review caught it. `allbold` reports each word against its OWN GROUP's baseline, so a
+# balloon that is mostly bold pulls the baseline up and compresses every ratio in it:
+# measured on The Prize of Pizarro, `SHORT!` came back 1.25, `LOSING` 1.22 and
+# `TEN FEET` 1.12, all plainly bold-italic in a 2.4x crop, while a 1.30 cut -- taken
+# from allbold's "confirm anything under about 1.3x", which is a CONFIDENCE line and
+# not a detection floor -- discarded 115 bold words across four titles.
+#
+# Over 3,261 word measurements the distribution is cleanly bimodal: plain lettering
+# masses at 0.90-1.10, there is a trough at 1.10-1.20, and bold rises from 1.20 and
+# peaks at 1.30-1.35. So the group's own SPREAD is the signal. Sort a group's ratios,
+# find the widest gap, and treat everything above it as the heavy set -- which adapts
+# when the baseline is compressed. The two guards below stop a group with no emphasis
+# at all from splitting its own noise.
+MIN_GAP = 0.08  # a split must be at least this wide to be a weight step
+MIN_HEAVY = 1.12  # and the lightest heavy word must still reach this
+MIN_WORDS_TO_SPLIT = 2  # a spread needs two measurements before it has a gap
+THRESH = 1.30  # absolute backstop: always heavy, whatever the spread says
+MIN_BLOB_PX = 14  # narrower than this is a stroke of the balloon, not a word. A two-letter
+# word (UP, GO, ME) runs about 50px at this lettering, so 30 was dropping real emphasis.
 EDGE_PX = 6  # a blob this close to the box edge is the balloon outline
 
 raw, outdir = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2])
@@ -82,11 +100,20 @@ for (page, gid), lines in groups.items():
     text = gj[gid]["ai_text"]
     box = PANEL_BOXES.get((page, gid))
     is_caption = gj[gid]["type"] in ("narration", "title")
+    # Where does this group's heavy set start? Widest gap in its own sorted ratios.
+    spread = sorted(r for _, rs, _ in lines for r, x0, x1 in rs if x1 - x0 >= MIN_BLOB_PX)
+    cut = THRESH
+    if len(spread) >= MIN_WORDS_TO_SPLIT:
+        gaps = [(spread[i + 1] - spread[i], spread[i + 1]) for i in range(len(spread) - 1)]
+        widest, start = max(gaps)
+        if widest >= MIN_GAP and start >= MIN_HEAVY:
+            cut = min(cut, start)
+
     bold, unsure = set(), []
     for li, (kind, ratios, shown) in enumerate(lines):
         words = shown.split()
         for wi, (r, x0, x1) in enumerate(ratios):
-            if r < THRESH:
+            if r < cut:
                 continue
             edge = box is not None and (x1 <= box[0] + EDGE_PX or x0 >= box[1] - EDGE_PX)
             if x1 - x0 < MIN_BLOB_PX or edge:
