@@ -7420,7 +7420,14 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
-### Findings to paste into the next run (2026-09-22, seventy-eighth batch, *The Money Champ* REVIEWED AND MIRRORED -- 331/332)
+### Findings to paste into the next run (2026-09-22, seventy-eighth batch, ALL FIVE REVIEWED AND MIRRORED -- batch closed)
+
+**Closed at 599/599 reviewed over 42 pages.** 34 speaker corrections (5.7%),
+no text corrections, all six of the pass's type corrections accepted, three
+groups added by review. Every engine pair identical on group count, reviewed
+count, `identified_by`, emphasis runs and the speaker / cap_colour /
+confidence / type distributions. Corpus-wide corrections are down to one, in
+vol 23, which predates this batch.
 
 **24 speaker corrections over 327 groups (7.3%), counted by text. No groups
 added, no text corrections, no cap-only changes, and all eight of the pass's own
@@ -10221,7 +10228,9 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 22, five titles read 2026-09-22 (seventy-eighth batch; **none reviewed**).
+Vol. 22, five titles read 2026-09-22 (seventy-eighth batch; **ALL FIVE REVIEWED
+AND MIRRORED**, so the row below is corrected against the review -- in particular
+the colourist error claimed for *The Money Champ* does not exist).
 42 pages, 68 images, **1.62 per page**; per title 3.17 / 1.25 / 2.00 / 1.00 / 1.27.
 
 **THE THREE INKS ARE THE VOLUME'S AND HAVE NOT MOVED IN FIFTEEN TITLES.** Red
