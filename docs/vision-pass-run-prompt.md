@@ -7420,6 +7420,109 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-23, eightieth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+**Closed at 144/144, 144/144 and 134/134 over 30 pages, both engines identical on
+every title.** **26 speaker corrections over 422 groups (6.2%)**, 18 of them in
+the nephew domain. By title: *The Floating Island* 5/144 (3.5%), *The Black
+Forest Rescue* 4/144 (2.8%), *The Good Deeds* 17/134 (12.7%). 69 images, 2.30
+per page.
+
+COUNTING NOTE, worth knowing before reading any of these rates: `review_findings.py`
+reports 7 / 5 / 17, because it counts the review setting a speaker on a group the
+review ITSELF added (`unknown -> ...` on 123 g20, 124 g2, 130 g3) as a correction.
+`volume_summary.py` reports 5 / 4 / 17. The second is the number that measures the
+pass. Net the adds out before comparing a batch against an older one.
+
+- **THE TITLE THAT NAMED MOST WAS CORRECTED MOST, AND THE NAMING RATE PREDICTED
+  IT ALMOST EXACTLY.** *The Good Deeds* named 78% of its nephew domain and came
+  back **12.7% corrected, 38.2% of that domain**; *Black Forest Rescue* named 15%
+  and came back **2.8%**. The seventy-ninth batch's lesson was that more images
+  do not buy accuracy. This is the sharper version: **naming aggressively is what
+  costs, and it costs in proportion.** A 30-600px sliver is enough to READ a cap
+  and not enough to survive being attached to the wrong head.
+- **THE SINGLE BIGGEST ERROR CLASS IS A TIP THAT LANDS INSIDE A HEAD AND BELONGS
+  TO THE HEAD ON ITS LEFT.** Six of *The Good Deeds*' 17 corrections are one
+  nephew swapped for another, and **four of the six are exactly this**:
+  | group | my tip | head it landed in | the answer |
+  |---|---|---|---|
+  | 028 g4 | x640 | Louie 600-700 | **Huey** 440-550 |
+  | 032 g14 | x587 | Dewey 570-670 | **Huey** 480-570 |
+  | 033 g5 | x660 | Louie's sliver 655-715 | **Dewey** 560-660 |
+  | 034 g0 | x282 | Dewey 275-360 | **Louie** 160-250 |
+  I measured the title's house habit correctly -- the tails hang 6-44px RIGHT of
+  their owner, and the three calls I made from it on the reference panel 027 p2
+  all stand -- and then **applied it only to tips that fell in GAPS.** When a tip
+  landed inside a head I simply took that head. **The rule to carry: once a
+  title's tails are measured hanging right, a tip INSIDE a head is evidence for
+  the head to its LEFT.** The one counter-example is 029 g8, where the tip was
+  7px past Louie, I wrote "nearness, right-hang and one-head-left all agree", and
+  it was Huey -- one head RIGHT.
+- **OVER-NAMING IS A REAL CLASS NOW, AND THAT IS NEW.** Four of the 17 are a name
+  reverted to `nephews`, every one with the cap colour cleared -- 027 g1 (the
+  splash), 028 g1, 031 g9, 036 g8 -- against **one** under-naming the whole
+  batch (035 g7 -> Huey/red, where I had written "capwide finds no roster sliver
+  anywhere in it" and there was red ink). For eighty batches under-naming has
+  been the largest class. In a title whose ink is a sliver it inverted. Do not
+  carry "under-naming is the error" into a sliver title as if it were settled.
+- **A NOTE I FLAGGED AND DECLINED TO CASH WAS RIGHT.** *Black Forest Rescue* 135
+  g11: I recorded `narrator` and wrote "FLAGGED: it says 'we lose OUR hound',
+  which is a Woodchuck's voice rather than a neutral narrator, but the standing
+  rule records the BOX". The review made it `nephews`. **When the note names the
+  alternative and the alternative is a speaker, take it** -- the standing
+  caption rule is not a reason to write a call you have already argued against.
+- **TWO SPECIES CALLS MADE AT STACK SCALE WERE WRONG.** *Black Forest* 132 g2 and
+  135 g10 both went `nephews` -> `other:a Junior Woodchuck`: I read a duck where
+  the reviewer read a pig. Both were the calls in that title I made off a
+  0.6-0.7x contact strip rather than a panel crop. Duck-or-pig is legible at
+  montage scale for a figure drawn large; it is NOT at 0.62x for one in a crowd.
+- **THE CAPTURE IS STILL THE AUDIT'S ONLY EYES.** The review added **123 g20
+  `BILL`**, a scrawled word on the tax collector's paper as he hands it to
+  Scrooge. The missed-text audit was silent because page 123's `visible_text`
+  held only its two `MAP` labels. Same failure as *Sagmore*'s four signs in the
+  seventy-eighth batch: **sweep the props that carry letters, not just the shop
+  fronts.** The pass's own two findings (124 g2 and 130 g3, both a drawn `!`)
+  were added and both were typed and assigned exactly as proposed.
+- **THE INSTRUMENT-NOISE QUESTION IS ANSWERED, AND THE ROSTER'S TEST WINS.** I
+  left *Black Forest Rescue*'s ~15 bugle calls and drum messages as
+  `sound_effect` and flagged it for a ruling. The reviewer left every one of
+  them alone **while actively re-typing four other groups in the same title**,
+  and confirmed all eight of my animal-voice corrections (133 g4/g6 the forest
+  animals, 135 g2/g4/g6/g9/g12 the hound). So: **an animal's cry is dialogue; an
+  instrument is not.** `project_instrument_noise_names_the_player` does not
+  extend to bugles and drums.
+- **AND A SNORE IS A VOICE.** *The Good Deeds* 032 g4 `ZZZZZ` went
+  `sound_effect`/`none` -> `dialogue`/`other:the pilot`. I had it as the plain
+  noise of a sleeping man.
+- **THE ALVIS LESSLY REVERT HELD.** 030 g11 stayed `none`/`sound_effect` through
+  the review and none of the five reverted siblings was re-corrected. The
+  2026-09-18 call stands, and the general rule with it: **when a type ruling
+  would cover a whole class of lettering, grep the title for a member of that
+  class that is already reviewed before proposing it.**
+- **A NEAR-DUPLICATE TO WATCH, INTRODUCED BY THE REVIEW.** *The Good Deeds* now
+  carries both `other:the crop-duster pilot` (9) and `other:the pilot` (1), the
+  latter from the 032 g4 correction above. Left as the reviewer set it -- a
+  review outranks the pass -- but it wants merging.
+- **CORRECTION RATE BY THE CONFIDENCE THE PASS WROTE.** *Floating Island* high
+  2.3% (3/130) vs medium 25.0% (3/12); *Good Deeds* high 8.4% (9/107) vs medium
+  29.6% (8/27); *Black Forest* high 3.3% vs medium 4.5% -- flat only because the
+  uniform forced collectives that cannot be wrong. Medium is 3-11x worse wherever
+  the art can actually separate anybody.
+- **THE STRAGGLER WAS ONE PER TITLE, THREE FOR THREE, AND ALL THREE AGREED WITH
+  THE PASS** -- 124 g13 (Scrooge), 132 g13 (Donald), 036 g4 (`other:the farmer`).
+  132 g13 is the known pattern: a type change (dialogue -> thought) that leaves
+  the speaker unticked. **They were also ticked WHILE THE MIRROR WAS RUNNING**,
+  so the first mirror left paddleocr one short on all three titles and had to be
+  re-run (910f01bb corrects 34f6accb). Re-read the reviewed counts off disk
+  immediately before `--write`, not from a count taken earlier in the session.
+- `other:` after review, per title. *Floating Island*: `a tax collector` (7),
+  `the TV announcer` (3), `the pilot` (2), `the ship's captain`. *Black Forest
+  Rescue*: `a Junior Woodchuck` (25), `the official hound` (7), `the Woodchuck
+  commander` (4), `Joe` (2), `the forest animals` (2). *The Good Deeds*: `the
+  crop-duster pilot` (9), `a picnicker` (6), `the old man` (4), `Old Pupp` (3),
+  `the bull` (3), `the bakery driver` (2), `a policeman` (2), `Gwendolyn`, `the
+  pilot`, `a motorist`, `the farmer`.
+
 ### Findings to paste into the next run (2026-09-23, eightieth batch, NONE REVIEWED)
 
 *The Floating Island* (Vol. 21, 10pp, 142 groups), *The Black Forest Rescue*
@@ -10584,9 +10687,18 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 21 and **Vol. 23**, three titles read 2026-09-23 (eightieth batch; **NONE
-REVIEWED**, so every figure below is the pass's own and none of it has been
-checked). 30 pages, 69 images, **2.30 per page**; per title 2.80 / 1.80 / 2.30.
+Vol. 21 and **Vol. 23**, three titles read 2026-09-23 (eightieth batch; **ALL
+THREE REVIEWED AND MIRRORED**, so the inks below are corrected against the
+review). 30 pages, 69 images, **2.30 per page**; per title 2.80 / 1.80 / 2.30.
+
+**THE INKS HELD; THE HEADS THEY WERE PUT ON DID NOT.** Every one of the six
+nephew-for-nephew swaps in *The Good Deeds* kept a readable sliver and moved it
+to a different boy, so the Vol. 23 palette below is confirmed as printed -- what
+failed was the tail-to-head step, which the findings section covers. Two
+corrections DO change the reading of a panel: *The Floating Island* 122 g2 and
+123 g5 came back Huey where the pass had "Donald alone", so a nephew is present
+in two panels the pass read as adult-only -- when a title's boys are capped, a
+panel is not "Donald alone" until the whole frame has been swept for a sliver.
 
 **VOL. 23 IS NEW AND ITS INK IS THE SMALLEST YET.** Red `#e61b1f` H358.8, green
 `#009d45`-`#009e49` H146-148, blue `#00a5d5`-`#00a6d9` H193-194 -- the same three
