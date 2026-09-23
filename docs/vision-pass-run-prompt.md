@@ -7420,6 +7420,50 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-23, eighty-first batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+*The Flying Farmhand* closed at 124/124 on both engines (the review added 157 g7, the
+drawn `?` over Dumbo the pass had listed as missed text). **16 speaker corrections
+over 123 pass groups (13.0%)**, 14 of them in the nephew domain -- the worst title of
+the batch, and it pulls the batch to **33 over 475 (6.9%)**. The two titles closed
+earlier are in the section below.
+
+- **EVERY NEPHEW CORRECTION WAS AN UNDER-NAMING: 14 `nephews` -> a name, and 8 of
+  the 14 went to LOUIE/green.** This is the title whose green prints at H110-112
+  (`#4ea23c`), outside capscan's band. The pass read capwide, found the green on
+  some boys, and on the rest wrote "prints no roster ink" and declined -- 151 g3,
+  153 g14, 154 g6, 154 g8, 155 g2, 155 g5, 155 g12 all came back Louie/green. **In a
+  title with an off-band green, a boy the scans call inkless is most likely the
+  green one: crop his cap before declining.** An absence claim that rests on a
+  band the title's ink sits outside is the 2026-09-07 failure again.
+- **AND 11 OF THE 14 WERE WRITTEN AT HIGH.** High-confidence corrections ran at
+  12.0% (13/108) against 21.4% for medium -- the collective was being written as
+  settled because "no ink" read as settled. `nephews` at high means the art
+  cannot say, not that the scan did not.
+- **A RED "TONGUE" WAS A CAP.** 154 g2 -> Huey/red: the pass had the 82+66px
+  `#c3261d` at mouth height on the tail's boy and called it a tongue. On a
+  quartered cap tipped forward the red quarter sits low; place ink against the
+  head's white span before explaining it away.
+- **GAP TIPS WENT LEFT HERE.** 155 g2 and 155 g5, both tips in a ~20-25px gap,
+  both came back the LEFT boy (Louie). With 147 g1 in *Jungle Hi-Jinks* going
+  RIGHT, there is still no direction rule for Vol. 21 -- the answer was whichever
+  boy wore the ink the scans missed.
+- **157 g14 (the tail running down-right between blue and red) came back
+  Huey/red** -- the direction of the tail, not the nearer head, as in
+  *Jungle* 145 g6.
+- **ONE OVER-READ: 158 g9 `Dewey -> Grandma Duck`**, cap blue left on the group. The
+  pass took the only boy in frame for the speaker; the tail was Grandma's.
+- **A NOISE HAS A MAKER: 152 g13 `SPUT!` `none -> other:Brer Fox`** -- the fox
+  spluttering as the scarecrow lands on him, not an impact.
+- **ALL THE PASS'S TYPE CORRECTIONS STOOD** -- animal cries `sound_effect ->
+  dialogue`, clouds with bubbles `-> thought` -- 12 on disk since the pass.
+- **THE LAST STRAGGLER WAS THE KNOWN TRAP.** 157 g15, retyped by the pass, came back
+  type-confirmed and speaker-unticked, exactly as
+  `feedback_type_change_leaves_the_speaker_unticked` predicts.
+- `other:` after review: `Brer Fox` (20), `Dumbo` (12), `the chickens` (3), `the
+  crows` (2), `a crow`, `the cow`, `the horse`, `the farm animals`; bare `Grandma
+  Duck` (15). No near-duplicates.
+
 ### Findings to paste into the next run (2026-09-23, eighty-first batch, TWO OF THREE REVIEWED AND MIRRORED -- *The Flying Farmhand* still open)
 
 *Jungle Hi-Jinks* closed at 241/241 and *A Honey of a Hen* at 112/112, both engines
@@ -10786,7 +10830,7 @@ percentages below are proposals, not corrections.
 ## Per-volume cap palette
 
 Vol. 21, three titles read 2026-09-23 (eighty-first batch; *Jungle Hi-Jinks* and *A
-Honey of a Hen* REVIEWED AND MIRRORED, *The Flying Farmhand* still open). 29 pages, 43 images, **1.48 per page**; per
+Honey of a Hen* REVIEWED AND MIRRORED, *The Flying Farmhand* too -- batch closed). 29 pages, 43 images, **1.48 per page**; per
 title 1.64 / 1.29 / 1.38.
 
 **ONE OF THE THREE SWAPS RED AND GREEN, AND THE DIALOGUE SAYS SO TWICE.** In
