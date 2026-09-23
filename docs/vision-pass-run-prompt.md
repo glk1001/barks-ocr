@@ -7420,6 +7420,67 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-23, eighty-second batch, NONE REVIEWED)
+
+*The Sheepish Cowboys* (Vol. 21, 7pp, 124 groups), *The Weather Watchers* (Vol. 21, 7pp,
+117), *Black Wednesday* (Vol. 23, 10pp, 151). **43 images over 24 pages, 1.79 per
+page**; per title 2.14 / 2.00 / 1.40. Every figure below is the pass's own and none of
+it has been checked.
+
+- **IN A COWBOY TITLE THE NECKERCHIEF IS THE CAP.** In *The Sheepish Cowboys* all three
+  boys wear the same brown cowboy hat, and the roster inks are on their neckerchiefs:
+  blue `#00a5d5`, green `#009e46`-`#009f47`, red `#e51a1f`-`#e61a1f`, 15 to 3,700px.
+  Recorded in `cap_colour` with `costume` in `identified_by`, per the garment rule.
+  38 of 48 nephew-domain calls were named. **The left-to-right order changes from panel
+  to panel** (173 p1 blue/green/red, 173 p3 red/green/blue, 174 p4 red/blue/green), so
+  every kerchief was read from its own panel's scan. Check whether the review accepts a
+  kerchief as naming the boy -- it is the first title read this way.
+- **ONE PANEL PRINTS TWO TEALS AND NO BLUE.** *Sheepish* 176 p3: the middle kerchief is
+  `#2aab8e` H166.5, the right `#009f64` H157.7, blue 0 blob(s) total. The pass ranked
+  them inside the panel (bluer = Dewey, greener = Louie) at medium and said so in both
+  notes (176 g6, g7). A 9-degree split is within the "noise" the desert-caps note warns
+  about; if the review reverses one, reverse the rule, not just the call.
+- **A HELD OR STOLEN CAP NAMES ITS OWNER, AND A TITLE CAN BE BUILT ON IT.** In *The
+  Weather Watchers* the billy goat steals DEWEY's cap -- blue `#00a5d4`, 572-3,148px in
+  its mouth on 167 p4, 170 p7 and 171 p4 -- and every "MY CAP" line went to Dewey off
+  that cap. On 167-168 the boys swim and their TRUNKS carry the inks (green-striped
+  Louie, red Huey, blue-striped Dewey), which named 167 g9, g11 and 168 g0, g1.
+- **"UNCLE" IS DONALD, "UNCA" IS A BOY, IN *BLACK WEDNESDAY*.** Donald says "UNCLE
+  SCROOGE" throughout and the boys say "UNCA DONALD" / "UNCA SCROOGE". The pass used
+  that to split off-panel and silhouette lines (039 g4, g7; 041 g13; 046 g3). It
+  also flagged the one place it cuts the other way: 045 g3 reads like Donald but its
+  tail is on the blue-capped boy, so it went to Dewey at medium.
+- **TWO CHILLYBOOTS LOOK ALIKE; THE RATTLE SEPARATES THEM.** The bald man in the purple
+  robe with the GREEN totem rattle is `other:the Chillyboot chief` (041 g15, 042 g0-g6,
+  044 g10, 045 g9); `other:Blubber Face` wears blue and carries the YELLOW rattle, in
+  the 040 flashback and again on 045 g4 where he names himself. The pass first wrote the
+  chief as Blubber Face on 042 and corrected it on reaching 045 -- check that no call
+  was missed.
+- **THREE GROUPS WERE ALREADY REVIEWED AND THE PASS DISAGREES WITH TWO.** *Weather
+  Watchers* 171 g5 (a drawn `?` in a cloud over the goat) and *Black Wednesday* 042 g6
+  (`POP`, the chief uncorking the tonic) both carry a reviewed `none`; the pass would
+  have written `other:the billy goat` and `other:the Chillyboot chief`. 171 g16 (the
+  vane's EARTH QUAKE screen) agrees. `vision_apply` left all three alone.
+- **TYPE CORRECTIONS: 19 / 2 / 1.** Animal voices `sound_effect -> dialogue` (every
+  sheep's BAA on *Sheepish* 176-177, Dobbin's WHINNY, the goat's SNORT twice); cloud
+  balloons `dialogue -> thought` (*Sheepish* 173 g9, 177 g4, g11, g12); and two the
+  other way: *Sheepish* 178 g1 `thought -> dialogue` (a pointed tail off the panel
+  edge along the lariat) and *Black Wednesday* 038 g0 `narration -> dialogue` (a
+  round balloon with a tail, not a caption box).
+- **MISSED TEXT: THREE ITEMS, TWO OF THEM LICENCE PLATES.** *Weather Watchers* 166 p1
+  `313` on Donald's car and 166 p2 `K-15` on Gyro's truck; *Black Wednesday* 038 p5,
+  two drawn `♪` by the Money Bin window. `queue-missed.txt` in each out-dir.
+- **NEPHEW MEDIUMS TO LOOK AT FIRST**, since mediums were 3-11x worse last batch.
+  *Sheepish* 173 g13, g14, 174 g8, g11, 176 g6, g7, 178 g1, 179 g15; *Weather*
+  167 g9, g11, 170 g7; *Black Wednesday* 037 g12, g14, 038 g8, 041 g4, 042 g8, 043 g6,
+  045 g3, g6, 046 g4, g5. 178 g1 is a named off-panel speaker: the boy holding the
+  other end of the lariat, named by the next panel.
+- `other:` values. *Sheepish*: `Zeke Wolf` (15), `the sheep` (13), `Dobbin` (3), `Gus
+  Goose` (3). *Weather*: `the billy goat` (7), `Gus Goose` (3). *Black Wednesday*: `a
+  Chillyboot warrior` (19), `the Chillyboot chief` (6), `Blubber Face` (5), `a
+  motorist`, `a policeman`, `a townsman`, `the hyenas`, `the townspeople`. Bare
+  `Grandma Duck` again on both Vol. 21 titles. No near-duplicates.
+
 ### Findings to paste into the next run (2026-09-23, eighty-first batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 *The Flying Farmhand* closed at 124/124 on both engines (the review added 157 g7, the
@@ -10826,6 +10887,17 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 21 and Vol. 23, three titles read 2026-09-23 (eighty-second batch; **NONE
+REVIEWED**). 24 pages, 43 images, **1.79 per page**; per title 2.14 / 2.00 / 1.40.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *The Sheepish Cowboys* (21) | **173 panel 5** -- three boys on Dobbin, blue x286-338, green x444-513, red x579-640 | `#e51a1f`-`#e61a1f` H358, **50-2,700px** on the kerchief. Decoys: the brown fences and gully `#b2635x` H8 S0.51 by the hundred | `#009e46`-`#009f47` H146-147, **15-1,500px**. **176 p3 prints `#2aab8e` H166.5 and `#009f64` H157.7 instead, with no blue at all** | `#00a5d5` H193.5, **230-3,700px**. Decoy: Zeke Wolf's hat and dungarees `#0099cb` H194.8 | **Identical brown cowboy hats; the ink is on the NECKERCHIEF.** Order changes panel to panel. Silhouette panels (173 p4, 176 p1, 178 p4-p5) print nothing. Cast: `other:Zeke Wolf`, `other:the sheep`, `other:Dobbin`, `other:Gus Goose`, bare `Grandma Duck` |
+| *The Weather Watchers* (21) | **167 panel 4** -- the two free caps on the bank, red x164-255 and green x403-499, the blue one in the goat's mouth x309-365 | `#e51b1f` H358.8, 580-590px on the bank; red-striped trunks on 168 | `#009e46`-`#009e47` H146.6-147.0, 230-560px; green-striped trunks 167-168 | `#00a5d4` H193.3, **572-3,148px -- Dewey's cap, in the goat's mouth** | Black quartered beanie; the boys swim bare-headed on 167-168 and the TRUNKS carry the inks. Cast adds `other:the billy goat`, `other:Gus Goose`, Daisy, Gyro |
+| *Black Wednesday* (23) | **046 panel 3** -- three boys holding their caps in their laps: red x121-195, blue x401-474, green x612-666 | `#e61b1f` H358.8, **48-3,200px**. Decoys: Donald's bow tie (200-2,500px), Scrooge's coat | `#009e46` H146.6, **27-1,850px**. Decoy: banknotes `#009e46` at 1,800-2,700px | `#00a5d5` H193.5, **45-3,500px**. Decoy: Donald's cap 1,600-3,600px, Chillyboot robes | **Black beanie with a coloured quarter** (046 p3/p7 show the whole cap). The wedges run small outdoors (27-600px); **bare-headed inside the Money Bin** (039, 046 p2/p4). Cast adds `other:the Chillyboot chief` (green rattle), `other:Blubber Face` (yellow rattle), `other:a Chillyboot warrior` |
 
 ## Per-volume cap palette
 
