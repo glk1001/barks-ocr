@@ -7420,6 +7420,64 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-23, eighty-first batch, TWO OF THREE REVIEWED AND MIRRORED -- *The Flying Farmhand* still open)
+
+*Jungle Hi-Jinks* closed at 241/241 and *A Honey of a Hen* at 112/112, both engines
+identical. **17 speaker corrections over 352 groups (4.8%)**: *Jungle Hi-Jinks*
+11/241 (4.6%, 8.1% of its nephew domain), *A Honey of a Hen* 6/112 (5.4%, 15.4%).
+Net of the review-added *Honey* 162 g14 `ZIP!` (`unknown -> none`) it is 5/111.
+
+- **A COLOURIST SWAP IS RECORDED ONLY WHERE THE DIALOGUE FIXES THE BOY -- RULED
+  2026-09-23.** The pass first named all 26 red/green calls in *Jungle Hi-Jinks* by
+  the swap the dialogue had exposed; the reviewer had 19 cap-only calls put back to
+  red Huey / green Louie before reviewing (ee3b2a6f), because a title-wide swap
+  multiplies the colour corrections. Keep the mismatch only where the dialogue in
+  that scene says which boy it is.
+- **AND IT CARRIES ACROSS THE PANEL THE DIALOGUE FIXES.** The one attribution
+  correction was 138 g12, the RED boy in the same panel as the green boy the
+  dialogue names Huey: `Huey -> Louie`, reviewer's note "Colorist error starts
+  here. red and green caps swap". Once one boy in a panel is fixed as swapped, the
+  other swapped ink in that panel goes with him. The panels before it (138 p5-p6)
+  and the cap-only calls after the camera scene stayed on the convention.
+- **UNDER-NAMING IS BACK AS THE CLASS: 13 OF 17, OVER-NAMING NONE.** The previous
+  batch's over-naming finding did not carry into these titles, whose caps are
+  bands and wedges of 60-900px rather than Vol. 23's 30px slivers. The declines
+  the review named:
+  - **gap and seam tips**: *Jungle* 145 g6 (seam of red and blue -> Huey/red, the
+    side the title's right-hang pointed at), 147 g11 (gap -> Huey/red), *Honey* 165
+    g2 (gap -> Louie/green). In a title with a measured hang, a gap tip goes with
+    the hang.
+  - **a tip inside the green boy's head went to the BLUE boy on his right**
+    (*Jungle* 147 g1 -> Dewey). That is the opposite of the eightieth batch's "a
+    tip inside a head belongs to the head on its left"; neither direction is a
+    rule yet.
+  - **slivers the census could not place**: *Jungle* 150 g0, g5, g11 all -> Huey/red;
+    *Honey* 160 g15 -> Huey/red, where the pass had put the only red on the right
+    boy. When `title_heads` merges the heads into one white region, the ink is
+    still on a boy -- crop rather than decline.
+  - **silhouettes and tiny figures**: *Jungle* 147 g14, 148 g13 and 149 g17 -> Huey,
+    149 g16 -> Dewey/blue; *Honey* 162 g7 -> Huey/red. The review names by who
+    holds the camera and by continuity where the pass wrote "no ink".
+- **TWO MISREADINGS OF WHERE THE INK SITS.** *Honey* 162 g4 `Huey/red ->
+  Louie/green`: the red the pass put on the middle boy was not his cap. *Honey* 160
+  g16 `Grandma Duck -> Dewey/blue`: a tail read as Grandma's belonged to a boy.
+- **CORRECTION RATE BY THE CONFIDENCE THE PASS WROTE.** *Jungle* high 2.7% (6/224)
+  vs medium 29.4% (5/17); *Honey* high 3.9% (4/103) vs medium 12.5% (1/8). Medium
+  is 3-11x worse again.
+- **ALL 17 TYPE CORRECTIONS STOOD** (11 + 6), every animal cry and war-cry
+  `sound_effect -> dialogue` and every cloud-with-bubbles `-> thought`.
+- **MISSED TEXT.** *Jungle* 143 `NEWS` on a newspaper masthead was ruled not worth
+  a group and went into `missed-text-ignore.txt`. *Honey* gained a group the pass
+  never recorded: 162 p5 `ZIP!`, the blur of Scrooge grabbing the quarter.
+  Motion lettering beside a speed blur is lettering too: put it in `visible_text`.
+- **THE STRAGGLERS WERE A RUN, NOT SINGLES.** *Jungle* first came back 232/241: 138
+  g14 plus eight consecutive groups, 145 g7 to 146 g0 -- a skipped stretch. A
+  straggler list that is contiguous is worth saying so in the hand-back.
+- `other:` after review. *Jungle*: `the trail boss` (4), `the TV announcer` (3),
+  `the gorilla` (3), `the photographer`, `the lion`, `the crocodile`, `the ring announcer`. *Honey*:
+  `Eggetha` (3), `Porgie` (2), and bare `Grandma Duck` (34) from the story cast.
+  No near-duplicates.
+
 ### Findings to paste into the next run (2026-09-23, eightieth batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 **Closed at 144/144, 144/144 and 134/134 over 30 pages, both engines identical on
@@ -10727,8 +10785,8 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 21, three titles read 2026-09-23 (eighty-first batch; **NONE REVIEWED**, so
-every figure below is the pass's own). 29 pages, 43 images, **1.48 per page**; per
+Vol. 21, three titles read 2026-09-23 (eighty-first batch; *Jungle Hi-Jinks* and *A
+Honey of a Hen* REVIEWED AND MIRRORED, *The Flying Farmhand* still open). 29 pages, 43 images, **1.48 per page**; per
 title 1.64 / 1.29 / 1.38.
 
 **ONE OF THE THREE SWAPS RED AND GREEN, AND THE DIALOGUE SAYS SO TWICE.** In
