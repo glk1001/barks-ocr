@@ -323,6 +323,27 @@ else
     row WARN "session cost" "census failed -- read the log"
 fi
 
+# --- 8. cost trend: tokens re-read per page, batch by batch ------------------
+# Advisory, always. Reads the LEDGER, not the transcripts, so it only knows this
+# batch once `usage_census.py --by-title --write-ledger` has run -- which this
+# script cannot do for you, because it writes nothing. The row says which batch
+# it compared, so a stale ledger shows as an old date rather than a false OK.
+echo "-> cost trend"
+if capture trend uv run python scripts/vision/usage_census.py --trend; then
+    latest=$(num trend 's/^=== latest Mtok\/page: \([0-9.]*\) ===$/\1/p')
+    baseline=$(num trend 's/^=== baseline Mtok\/page: \([0-9.]*\) .*===$/\1/p')
+    last_day=$(grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2} ' "$LOG_DIR/trend.log" | tail -1 | cut -d' ' -f1)
+    if [[ -z "$latest" || -z "$baseline" ]]; then
+        row WARN "cost trend" "could not parse output -- read the log"
+    elif grep -q '^!!' "$LOG_DIR/trend.log"; then
+        row WARN "cost trend" "$last_day: ${latest}M tokens/page against ${baseline}M -- dearer than recent batches"
+    else
+        row OK "cost trend" "$last_day: ${latest}M tokens/page against ${baseline}M for recent batches"
+    fi
+else
+    row WARN "cost trend" "trend failed -- read the log"
+fi
+
 # --- standing TODO: the emphasis backfill --------------------------------------
 # docs/emphasis-backfill.md owes a full-corpus re-screen of emphasis_markup.
 # It is not about THIS title, so it is never gating -- but it prints on every

@@ -30,11 +30,11 @@ WHERE EACH NUMBER COMES FROM.
   the corpus records either, so a title missing from the ledger shows `--`, and
   a ledger row covering several titles is shown as shared.
   `Img/pg` is images read, the axis `docs/vision-pass-cost.md` governs.
-  `Ctx/call` is the mean context each API call re-sent and the call count, from
-  `scripts/vision/usage_census.py` -- context re-reading is ~91% of token
-  consumption, so it moves the bill in a way images/page does not. It is blank
-  for every row recorded before 2026-09-21, when the census was written, and
-  has no total: an average over sessions cannot be summed across titles.
+  `Calls/pg` and `Mtok/pg` are the API calls and millions of cache-read tokens
+  per page that `scripts/vision/usage_census.py --by-title` credits to the
+  title from the session transcripts -- context re-reading is ~90% of token
+  consumption, so these move the bill in a way images/page does not. Both are
+  per-title sums, so unlike an average context they total per volume.
 
 A passed but unreviewed title has no `speaker_was` yet, so its rate reads 0%.
 The `reviewed` column is coloured when it is short of the group count, so that a
@@ -71,9 +71,9 @@ from barks_ocr.utils.vision_schema import (
 
 LEDGER = Path(__file__).resolve().parents[2] / "docs" / "vision-cost-ledger.csv"
 
-# Kept in step with scripts/vision/usage_census.py by hand: these are standalone
-# scripts, not a package, so there is nothing to import it from.
-HOT_AVG_CONTEXT = 450_000
+# Tokens re-read per page above this are coloured: the batches of 2026-09-14/15
+# ran near 1M a page and those of 2026-09-20/21 near 4M, so 4M marks a dear title.
+HOT_MTOK_PER_PAGE = 4.0
 TITLE_SEP = " | "
 COLLECTIVE = "nephews"
 TITLE_WIDTH = 26
@@ -121,7 +121,7 @@ class CostUnit:
     pages: int
     images: int
     calls: int | None = None
-    avg_ctx: int | None = None
+    tokens_m: float | None = None
 
 
 @dataclass(frozen=True)
@@ -135,6 +135,9 @@ class VolumeReport:
     passed_pages: int
     costed_pages: int
     images: int
+    metered_pages: int
+    calls: int
+    tokens_m: float
 
 
 def parse_volumes(args: list[str]) -> list[int]:
@@ -168,7 +171,7 @@ def load_ledger(path: Path) -> list[CostUnit]:
             pages=int(row["pages"]),
             images=int(row["images"]),
             calls=optional_int(row.get("calls")),
-            avg_ctx=optional_int(row.get("avg_ctx")),
+            tokens_m=float(row["tokens_m"]) if row.get("tokens_m") else None,
         )
         for row in csv.DictReader(lines)
     ]
@@ -291,24 +294,45 @@ def cost_cell(title: str, units: list[CostUnit]) -> str:
     return rate if len(unit.titles) == 1 else f"{rate}[dim]*[/]"
 
 
-def context_cell(title: str, units: list[CostUnit]) -> str:
-    """Describe what the ledger records about one title's context cost.
+def metered_cell(title: str, units: list[CostUnit]) -> tuple[str, str]:
+    """Describe the calls and tokens the ledger credits to one title, per page.
 
     Args:
         title: The title.
         units: Every ledger unit.
 
     Returns:
-        Average context per API call and the call count, or a dim dash when the
-        row predates the census or the title is not in the ledger at all.
+        Calls per page and millions of tokens per page, each marked ``*`` when
+        the row covers several titles, or dim dashes when nothing is recorded.
 
     """
     unit = next((u for u in units if title in u.titles), None)
-    if unit is None or unit.avg_ctx is None:
-        return "[dim]--[/]"
-    calls = f"[dim]/{unit.calls}[/]" if unit.calls else ""
-    hot = "bold yellow" if unit.avg_ctx * 1000 > HOT_AVG_CONTEXT else "bold"
-    return f"[{hot}]{unit.avg_ctx}K[/]{calls}"
+    if unit is None or unit.calls is None or unit.tokens_m is None:
+        return "[dim]--[/]", "[dim]--[/]"
+    return metered_rate(unit.calls, unit.tokens_m, unit.pages, shared=len(unit.titles) > 1)
+
+
+def metered_rate(
+    calls: int, tokens_m: float, pages: int, *, shared: bool = False
+) -> tuple[str, str]:
+    """Return calls per page and millions of tokens per page as cell text.
+
+    Args:
+        calls: API calls credited.
+        tokens_m: Millions of cache-read tokens credited.
+        pages: Pages they cover.
+        shared: Mark both cells as covering several titles.
+
+    Returns:
+        The two cells, or dim notes when no page is metered.
+
+    """
+    if not pages:
+        return "[dim]--[/]", "[dim]--[/]"
+    mark = "[dim]*[/]" if shared else ""
+    per_page = tokens_m / pages
+    style = "bold yellow" if per_page > HOT_MTOK_PER_PAGE else "bold"
+    return f"{calls / pages:.1f}{mark}", f"[{style}]{per_page:.2f}[/]{mark}"
 
 
 def cost_rate(images: int, pages: int) -> str:
@@ -350,7 +374,8 @@ def volume_table(volume: int, caption: str) -> Table:
     table.add_column("Corr", justify="right")
     table.add_column("Rate", justify="right")
     table.add_column("Img/pg", justify="right")
-    table.add_column("Ctx/call", justify="right")
+    table.add_column("Calls/pg", justify="right")
+    table.add_column("Mtok/pg", justify="right")
     return table
 
 
@@ -377,8 +402,18 @@ def report_volume(
     vol_units = [u for u in units if u.volume == volume]
     costed_pages = sum(u.pages for u in vol_units)
     images = sum(u.images for u in vol_units)
+    metered = [u for u in vol_units if u.calls is not None and u.tokens_m is not None]
     report = VolumeReport(
-        volume, len(passed), len(stats), total, passed_pages, costed_pages, images
+        volume,
+        len(passed),
+        len(stats),
+        total,
+        passed_pages,
+        costed_pages,
+        images,
+        sum(u.pages for u in metered),
+        sum(u.calls or 0 for u in metered),
+        sum(u.tokens_m or 0.0 for u in metered),
     )
 
     if not passed:
@@ -408,7 +443,7 @@ def report_volume(
             str(tally.corrections),
             rate_cell(tally.corrections, tally.groups),
             cost_cell(stat.title, units),
-            context_cell(stat.title, units),
+            *metered_cell(stat.title, units),
         )
     table.add_section()
     table.add_row(
@@ -419,7 +454,7 @@ def report_volume(
         f"[bold]{total.corrections}[/]",
         rate_cell(total.corrections, total.groups),
         cost_rate(images, costed_pages),
-        "",
+        *metered_rate(report.calls, report.tokens_m, report.metered_pages),
     )
     _console.print()
     _console.print(table)
@@ -454,10 +489,16 @@ def report_totals(reports: list[VolumeReport]) -> None:
     table.add_column("Corr", justify="right")
     table.add_column("Rate", justify="right")
     table.add_column("Images/page", justify="right")
+    table.add_column("Calls/page", justify="right")
+    table.add_column("Mtok/page", justify="right")
 
     grand = Tally()
-    pages = costed = images = 0
+    pages = costed = images = metered = calls = 0
+    tokens_m = 0.0
     for report in reports:
+        metered += report.metered_pages
+        calls += report.calls
+        tokens_m += report.tokens_m
         grand.add(report.tally)
         pages += report.passed_pages
         costed += report.costed_pages
@@ -471,6 +512,7 @@ def report_totals(reports: list[VolumeReport]) -> None:
             str(report.tally.corrections),
             rate_cell(report.tally.corrections, report.tally.groups),
             cost_rate(report.images, report.costed_pages),
+            *metered_rate(report.calls, report.tokens_m, report.metered_pages),
         )
     table.add_section()
     table.add_row(
@@ -482,6 +524,7 @@ def report_totals(reports: list[VolumeReport]) -> None:
         f"[bold]{grand.corrections}[/]",
         rate_cell(grand.corrections, grand.groups),
         cost_rate(images, costed),
+        *metered_rate(calls, tokens_m, metered),
     )
     _console.print()
     _console.print(table)

@@ -191,11 +191,23 @@ budget held, and going over 5 on a cap-dense title is a thing to say out loud
 rather than absorb.
 
 **And append each title's row to `docs/vision-cost-ledger.csv`** in the same
-close-out commit: `volume,titles,pages,images,recorded,note`. Nothing in the
-corpus records images read, so the ledger is the only place
-`scripts/vision/volume_summary.py` can get the cost from, and a title left out
-shows `--` there. Count per title; join several titles with ` | ` on one row only
-when the images genuinely cannot be split.
+close-out commit: `volume,titles,pages,images,,,recorded,note` -- leave `calls`
+and `tokens_m` empty and let the tool fill them:
+
+```bash
+uv run --offline python scripts/vision/usage_census.py --by-title --write-ledger
+uv run --offline python scripts/vision/usage_census.py --trend
+```
+
+The first credits each API call in the session transcripts to the title being
+worked on and writes calls and tokens re-read per title; the second prints cost
+per page batch by batch, and `closeout.sh` reports the latest batch against the
+previous five. Nothing in the corpus records images read or tokens, so the
+ledger is the only place `scripts/vision/volume_summary.py` can get the cost
+from, and a title left out shows `--` there. Count per title; join several
+titles with ` | ` on one row only when the images genuinely cannot be split.
+Read the calls and tokens PER PAGE: a title's average context mostly says where
+in the session it was read, not what it cost.
 
 Run the **close-out at low effort** — prep, apply, audit, engine diff, queues,
 mirror, commit. That half is procedure with tool output as the check. Keep high

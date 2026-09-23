@@ -5,6 +5,8 @@
     uv run --offline python scripts/vision/usage_census.py            # today
     uv run --offline python scripts/vision/usage_census.py --since 2026-09-18
     uv run --offline python scripts/vision/usage_census.py --all --detail
+    uv run --offline python scripts/vision/usage_census.py --by-title [--write-ledger]
+    uv run --offline python scripts/vision/usage_census.py --trend
 
 `docs/vision-cost-ledger.csv` records images read, which is the axis
 `docs/vision-pass-cost.md` governs. It is not the axis that dominates the bill.
@@ -31,12 +33,46 @@ The cost share weights raw counters into input-token-equivalents at the
 published Opus ratios -- cache read 0.1x, cache write 1.25x, output 5x -- so the
 three are comparable. On a subscription no dollar figure is implied; the shares
 and the trend are the point.
+
+PER TITLE (`--by-title`). A session usually reads a whole batch, so its total
+says nothing about which title was dear. Each API call is credited to the title
+the session was working on at that moment: the one whose out-dir
+(`barks-vision/<slug>`) or `--title "..."` the most recent tool call named. A
+tool call naming several titles (a loop over the batch) shares the calls that
+follow it evenly; calls before a session's first mention are its start-up
+overhead, shared evenly over its titles; calls more than `IDLE_CALLS` after the
+last mention are left uncredited, so tooling work at the end of a session does
+not land on the last title read.
+
+A session counts for a title only if it RAN the pipeline on it --
+`vision-prep`, `vision-apply`, `vision-mirror` or `closeout.sh` -- within
+`SESSION_WINDOW_DAYS` of the ledger row's `recorded` date. Opening an old
+out-dir to copy its format, or a corpus sweep that happens to pass a
+`--title`, then credits nothing. The first version of this without that
+restriction billed 318 calls of a 2026-08-31 cleanup session to a title first
+read on 2026-09-23.
+
+This is an attribution, not a meter. Do NOT read a per-title `avg_ctx` off it:
+context grows through a session, so a title's average context mostly says where
+in the session it was read (measured over 24 batch sessions, median 298K for the
+first title against 535K for the last). Calls per page and tokens re-read per
+page are the per-title measures, and `--trend` sums them by batch, where the
+attribution noise cancels.
+
+`--write-ledger` stores the attribution in the ledger's `calls` and `tokens_m`
+columns (millions of cache-read tokens). A row whose sessions are no longer on
+disk keeps what it has: Claude Code prunes old transcripts, and the ledger is
+the only copy that outlives them. That is also why `--trend` reads the ledger
+and not the transcripts.
 """
 
 import argparse
 import json
+import re
+import statistics
+from collections import defaultdict
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 # Claude Code stores transcripts under a slug of the project's absolute path,
@@ -55,6 +91,26 @@ WEIGHT_OUTPUT = 5.0
 # The observed plateau is 480-515K. A session averaging above this is carrying
 # more context than the long sessions that prompted the check.
 HOT_AVG_CONTEXT = 450_000
+
+LEDGER = REPO_DIR / "docs" / "vision-cost-ledger.csv"
+TITLE_SEP = " | "
+
+# Per-title attribution. A page costs 2-10 calls and every one of them names the
+# out-dir, so 25 calls without a mention means the session has moved on.
+IDLE_CALLS = 25
+# A batch is read and closed out within a day or two; five days keeps a later
+# mirror session while shutting out an unrelated sweep weeks away.
+SESSION_WINDOW_DAYS = 5
+# `--trend` flags the latest batch when its tokens per page exceed the median of
+# the previous TREND_BASELINE batch dates by this factor.
+TREND_BASELINE = 5
+TREND_HOT_FACTOR = 1.25
+
+SLUG_RE = re.compile(r"barks-vision/([A-Za-z0-9-]+)")
+OUT_DIR_RE = re.compile(r"--out-dir[= ]+\S*?barks-vision/([A-Za-z0-9-]+)")
+TITLE_RE = re.compile(r"""--title[= ]+(?:\\?"(.+?)\\?"|'(.+?)')""")
+CLOSEOUT_TITLE_RE = re.compile(r'closeout\.sh(?:\s+--stage\s+\w+)?\s+\\?"(.+?)\\?"')
+WORK_RE = re.compile(r"barks-ocr-vision-(?:prep|apply|mirror)|closeout\.sh")
 
 
 @dataclass
@@ -231,6 +287,294 @@ def report(sessions: list[Session], *, detail: bool) -> int:
     return len(hot)
 
 
+@dataclass
+class LedgerRow:
+    """One cost-ledger row: its leading fields, and its note exactly as written."""
+
+    fields: dict[str, str]
+    raw_note: str
+
+    @property
+    def titles(self) -> list[str]:
+        """The row's titles; several when the images could not be split."""
+        return [t.strip() for t in self.fields["titles"].split(TITLE_SEP)]
+
+    @property
+    def recorded(self) -> date:
+        """The date the row was written, which anchors its session window."""
+        return date.fromisoformat(self.fields["recorded"])
+
+
+@dataclass
+class Credit:
+    """API calls and cache-read tokens credited to one title."""
+
+    calls: float = 0.0
+    cache_read: float = 0.0
+    sessions: set[str] = field(default_factory=set)
+
+
+def read_ledger(path: Path = LEDGER) -> tuple[list[str], list[str], list[LedgerRow]]:
+    """Read the cost ledger in a form that writes back byte for byte.
+
+    The note is the LAST column and by the file's own convention may hold bare
+    commas, so it is not CSV-parsed at all: it is everything after the comma that
+    ends the field before it. No other field ever holds a comma or a quote, which
+    `write_ledger` asserts rather than assumes.
+
+    Args:
+        path: The ledger CSV.
+
+    Returns:
+        The leading comment lines, the column names, and the data rows.
+
+    """
+    lines = path.read_text().splitlines()
+    comments = [line for line in lines if line.startswith("#")]
+    header, *data = [line for line in lines if not line.startswith("#")]
+    columns = header.split(",")
+    leading = len(columns) - 1
+    rows = []
+    for line in data:
+        parts = line.split(",", leading)
+        rows.append(LedgerRow(dict(zip(columns[:-1], parts[:leading], strict=True)), parts[-1]))
+    return comments, columns, rows
+
+
+def write_ledger(path: Path, comments: list[str], columns: list[str], rows: list[LedgerRow]) -> str:
+    """Write the ledger in its own format: comment header, header row, data rows.
+
+    Args:
+        path: Where to write it.
+        comments: The comment lines, verbatim.
+        columns: Column names, in file order; the note is the last.
+        rows: The data rows.
+
+    Returns:
+        The text written.
+
+    Raises:
+        ValueError: A leading field holds a comma or a quote, which would shift
+            every column after it.
+
+    """
+    out = [*comments, ",".join(columns)]
+    for row in rows:
+        leading = [row.fields[c] for c in columns[:-1]]
+        if any("," in f or '"' in f for f in leading):
+            msg = f"ledger field would need quoting: {leading}"
+            raise ValueError(msg)
+        out.append(",".join([*leading, row.raw_note]))
+    text = "\n".join(out) + "\n"
+    path.write_text(text)
+    return text
+
+
+def title_slug(title: str) -> str:
+    """Return a title's out-dir name, by the rule `vision_prep._slug` uses.
+
+    Args:
+        title: The story title.
+
+    Returns:
+        The slug, e.g. ``black-wednesday``.
+
+    """
+    keep = "".join(c.lower() if c.isalnum() else "-" for c in title)
+    return "-".join(filter(None, keep.split("-")))
+
+
+def _tool_inputs(record: dict) -> list[str]:
+    """Return every tool call's input in one assistant record, as JSON text."""
+    content = (record.get("message") or {}).get("content") or []
+    return [
+        json.dumps(block.get("input"), ensure_ascii=False)
+        for block in content
+        if isinstance(block, dict) and block.get("type") == "tool_use"
+    ]
+
+
+def _named(text: str, by_slug: dict[str, str], titles: set[str]) -> list[str]:
+    """Return the ledger titles one tool input names, by out-dir or `--title`."""
+    found = [by_slug[s] for s in SLUG_RE.findall(text) if s in by_slug]
+    found += [a or b for a, b in TITLE_RE.findall(text) if (a or b) in titles]
+    found += [t for t in CLOSEOUT_TITLE_RE.findall(text) if t in titles]
+    return list(dict.fromkeys(found))
+
+
+def _worked_titles(
+    records: list[dict], by_slug: dict[str, str], recorded: dict[str, date]
+) -> set[str]:
+    """Return the titles a session ran the pipeline on inside their window."""
+    worked: set[str] = set()
+    for record in records:
+        day = date.fromisoformat((record.get("timestamp") or "1970-01-01")[:10])
+        for text in _tool_inputs(record):
+            if not WORK_RE.search(text):
+                continue
+            named = {by_slug[s] for s in OUT_DIR_RE.findall(text) if s in by_slug}
+            named |= set(_named(text, {}, set(recorded)))
+            worked |= {t for t in named if abs((day - recorded[t]).days) <= SESSION_WINDOW_DAYS}
+    return worked
+
+
+def _assistant_records(path: Path) -> list[dict]:
+    """Return a transcript's assistant records, skipping lines that do not parse."""
+    records = []
+    for line in path.open(errors="replace"):
+        # Cheap reject first, as in read_session: only assistant records matter.
+        if '"assistant"' not in line:
+            continue
+        try:
+            records.append(json.loads(line))
+        except ValueError:
+            continue
+    return records
+
+
+def _share(
+    ledger_credit: dict[str, Credit], titles: list[str], cache_read: int, session: str
+) -> None:
+    """Split one API call evenly over the titles it is credited to."""
+    for title in titles:
+        ledger_credit[title].calls += 1 / len(titles)
+        ledger_credit[title].cache_read += cache_read / len(titles)
+        ledger_credit[title].sessions.add(session)
+
+
+def credit_session(
+    path: Path,
+    by_slug: dict[str, str],
+    recorded: dict[str, date],
+    ledger_credit: dict[str, Credit],
+) -> None:
+    """Credit one session's API calls to the titles it was working on.
+
+    Args:
+        path: A session JSONL file.
+        by_slug: Ledger title for each out-dir slug.
+        recorded: Each ledger title's `recorded` date.
+        ledger_credit: Running totals per title, updated in place.
+
+    """
+    records = _assistant_records(path)
+    worked = _worked_titles(records, by_slug, recorded)
+    if not worked:
+        return
+    session = path.stem[:8]
+    seen: set[str] = set()
+    active: list[str] = []
+    idle: int | None = None  # None until the session first names a title
+    startup: list[int] = []
+    for record in records:
+        message = record.get("message") or {}
+        usage = message.get("usage") or {}
+        message_id = message.get("id")
+        if usage and message_id and message_id not in seen:
+            seen.add(message_id)
+            cache_read = usage.get("cache_read_input_tokens") or 0
+            if idle is None:
+                startup.append(cache_read)
+            elif (idle := idle + 1) <= IDLE_CALLS:
+                _share(ledger_credit, active, cache_read, session)
+        for text in _tool_inputs(record):
+            named = [t for t in _named(text, by_slug, set(recorded)) if t in worked]
+            if named:
+                active, idle = named, 0
+    for cache_read in startup:
+        _share(ledger_credit, sorted(worked), cache_read, session)
+
+
+def credit_titles(directory: Path, rows: list[LedgerRow]) -> dict[str, Credit]:
+    """Credit every transcript's calls to the ledger's titles.
+
+    Args:
+        directory: The project's transcript directory.
+        rows: The ledger rows, which fix the titles and their dates.
+
+    Returns:
+        Calls and cache-read tokens per title, for titles any session ran on.
+
+    """
+    recorded = {t: row.recorded for row in rows for t in row.titles}
+    by_slug = {title_slug(t): t for t in recorded}
+    ledger_credit: dict[str, Credit] = defaultdict(Credit)
+    for path in sorted(directory.glob("*.jsonl")):
+        credit_session(path, by_slug, recorded, ledger_credit)
+    return ledger_credit
+
+
+def by_title(directory: Path, *, write: bool) -> None:
+    """Print each ledger row's credited cost, and store it when asked.
+
+    Args:
+        directory: The project's transcript directory.
+        write: Store `calls` and `tokens_m` in the ledger.
+
+    """
+    comments, columns, rows = read_ledger()
+    ledger_credit = credit_titles(directory, rows)
+    print(
+        f"{'vol':>3} {'title':42} {'pages':>5} {'calls':>6} {'Mtok':>7} "
+        f"{'calls/pg':>8} {'Mtok/pg':>7}  sessions"
+    )
+    changed = 0
+    for row in rows:
+        mine = [ledger_credit[t] for t in row.titles if t in ledger_credit]
+        calls = sum(c.calls for c in mine)
+        pages = int(row.fields["pages"])
+        label = f"{row.fields['volume']:>3} {row.fields['titles'][:42]:42} {pages:5d}"
+        if calls < 1:
+            print(f"{label} {'--':>6}  (no session on disk; ledger kept)")
+            continue
+        tokens_m = sum(c.cache_read for c in mine) / 1e6
+        sessions = ",".join(sorted({s for c in mine for s in c.sessions}))
+        print(
+            f"{label} {calls:6.0f} {tokens_m:7.1f} "
+            f"{calls / pages:8.1f} {tokens_m / pages:7.2f}  {sessions}"
+        )
+        new = {"calls": str(round(calls)), "tokens_m": f"{tokens_m:.1f}"}
+        if any(row.fields.get(k) != v for k, v in new.items()):
+            row.fields.update(new)
+            changed += 1
+    print(f"\n=== ledger rows changed: {changed} of {len(rows)} ===")
+    if write and changed:
+        write_ledger(LEDGER, comments, columns, rows)
+        print(f"wrote {LEDGER}")
+
+
+def trend() -> None:
+    """Print cost per page by batch date, read from the ledger alone."""
+    _, _, rows = read_ledger()
+    # pages, images, pages with a cost, calls, Mtok -- per recorded date
+    days: dict[str, list[float]] = defaultdict(lambda: [0.0, 0.0, 0.0, 0.0, 0.0])
+    for row in rows:
+        day = days[row.fields["recorded"]]
+        day[0] += int(row.fields["pages"])
+        day[1] += int(row.fields["images"])
+        if row.fields.get("calls") and row.fields.get("tokens_m"):
+            day[2] += int(row.fields["pages"])
+            day[3] += int(row.fields["calls"])
+            day[4] += float(row.fields["tokens_m"])
+    print(f"{'recorded':10} {'pages':>5} {'img/pg':>6} {'calls/pg':>8} {'Mtok/pg':>7}")
+    per_page = []
+    for day, (pages, images, costed, calls, tokens) in sorted(days.items()):
+        cost = f"{calls / costed:8.1f} {tokens / costed:7.2f}" if costed else f"{'--':>8} {'--':>7}"
+        print(f"{day:10} {pages:5.0f} {images / pages:6.2f} {cost}")
+        if costed:
+            per_page.append(tokens / costed)
+    if len(per_page) < 2:  # noqa: PLR2004 -- a latest and at least one to compare it to
+        return
+    latest = per_page[-1]
+    previous = per_page[-1 - TREND_BASELINE : -1]
+    baseline = statistics.median(previous)
+    # Headings in the `=== label: N ===` shape closeout.sh parses with sed.
+    print(f"\n=== latest Mtok/page: {latest:.2f} ===")
+    print(f"=== baseline Mtok/page: {baseline:.2f} (median of {len(previous)}) ===")
+    if latest > baseline * TREND_HOT_FACTOR:
+        print(f"!! the latest batch cost {latest / baseline:.2f}x the baseline per page")
+
+
 def main() -> None:
     """Parse arguments and print the census."""
     parser = argparse.ArgumentParser(
@@ -245,6 +589,15 @@ def main() -> None:
     )
     parser.add_argument("--detail", action="store_true", help="also print the per-session table")
     parser.add_argument(
+        "--by-title", action="store_true", help="credit calls to each ledger title and print them"
+    )
+    parser.add_argument(
+        "--write-ledger", action="store_true", help="with --by-title: store calls and tokens_m"
+    )
+    parser.add_argument(
+        "--trend", action="store_true", help="cost per page by batch date, from the ledger alone"
+    )
+    parser.add_argument(
         "--min-calls", type=int, default=50, help="ignore sessions shorter than this (default 50)"
     )
     parser.add_argument(
@@ -252,6 +605,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    if args.trend:
+        trend()
+        return
     since = None if args.all else (args.since or datetime.now(tz=UTC).strftime("%Y-%m-%d"))
     directory = transcript_dir(args.repo)
     if not directory.is_dir():
@@ -259,6 +615,9 @@ def main() -> None:
         print(f"no transcript directory for {args.repo} (looked in {directory})")
         return
 
+    if args.by_title:
+        by_title(directory, write=args.write_ledger)
+        return
     report(collect(directory, since, args.min_calls), detail=args.detail)
 
 

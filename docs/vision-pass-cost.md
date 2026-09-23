@@ -668,9 +668,14 @@ not capture:
   auto-compaction holds it. Splitting a batch whose titles share no cap
   construction is worth more than shaving an image off a page.
 
-`bash scripts/closeout.sh` prints the figures as its last row, and
-`scripts/vision/usage_census.py --detail` gives the per-session table. Record
-`calls` and `avg_ctx` in the ledger next to the image count.
+`bash scripts/closeout.sh` prints the session figures and the batch trend,
+and `scripts/vision/usage_census.py --detail` gives the per-session table. The
+ledger's `calls` and `tokens_m` columns are filled per title by
+`usage_census.py --by-title --write-ledger`; read them per page, and read the
+direction with `usage_census.py --trend`. Measured 2026-09-23 over Vols. 16-22,
+tokens re-read per page went from ~1.0M (the 2026-09-14/15 batches) to 3-4.7M
+(2026-09-20 onward) while images per page stayed at 1.6-2.4: the growth is in
+API calls per page (2.5 -> 9-10), each of which re-sends the whole context.
 
 ## Related
 
