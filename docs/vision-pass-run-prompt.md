@@ -10727,6 +10727,34 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
+Vol. 21, three titles read 2026-09-23 (eighty-first batch; **NONE REVIEWED**, so
+every figure below is the pass's own). 29 pages, 43 images, **1.48 per page**; per
+title 1.64 / 1.29 / 1.38.
+
+**ONE OF THE THREE SWAPS RED AND GREEN, AND THE DIALOGUE SAYS SO TWICE.** In
+*Jungle Hi-Jinks* the boy who says "I think I know where we can find one" wears
+GREEN on 138 p7 and is answered "WHERE, HUEY?" on 138 p8; the cameraman in the RED
+cap is asked "HOW'S IT LOOK, LOUIE?" on 139 p3 and answers. 139 p2 agrees (the
+blue boy answers to DEWEY, the red boy is made cameraman). So every call in that
+title names **green as Huey and red as Louie**, with `cap_colour` recording the
+ink -- the *Donald's Pet Service* ruling. **The reviewer should confirm the
+ruling applies before working the queue**, because it decides 26 named calls at once (16 Louie/red, 10 Huey/green).
+
+**THE GREEN MOVES AGAIN, AND CAPSCAN CANNOT SEE IT.** Two of the three titles print
+the boys' green at **H110-112 S0.62-0.65** (`#4ea23c`, `#4faf40`) -- the Vol. 21
+H111-124 green -- which is outside capscan's `green` band. Every such panel reports
+`green 0 blob(s) total` and only `capwide.py` finds the cap. *A Honey of a Hen*
+prints BOTH that green (162) and the usual H146 `#009e46` (164, 165), plus an
+H140.6 `#0ca941` on 162 p2.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *Jungle Hi-Jinks* (21) | **138 panel 5** -- three boys in a row, red at x221-237, blue at x409-430, green at x579-594 | `#e7191e` H358, **70-590px**. Worn by **LOUIE** in this title | `#009e45`-`#009e49` H146-148, **50-590px**. Worn by **HUEY** in this title | `#00a5d5` H193.5, **25-270px** | Black beanie with a coloured band. **Bare-headed indoors** (137, 142-143) and after the scare on 141 onward; grass wigs hide the caps in the wild-man scenes. **Tails hang 19-30px RIGHT of their owner** (144 p5, 145 p8, 146 p1/p8), used on gap tips only; tips INSIDE a head were left `nephews` (145 g6, 147 g1). Cast adds `other:the trail boss` (4, named "THE TRAIL BOSS" on 145 p4), `other:the TV announcer` (3), `other:the gorilla` (3), `other:the photographer`, `other:the lion`, `other:the crocodile` |
+| *A Honey of a Hen* (21) | **159 panel 1** -- the splash; blue, green, red left to right | `#e61b1f` H358.8, **58-900px**. Decoy: Scrooge's coat at 2,000-3,400px | **Two hues.** H112 `#4faf40` S0.64 on 162 (capwide only), H146 `#009e46` on 164-165, H140.6 `#0ca941` on 162 p2 | `#00a5d5` H193.5, **43-1,450px**. Decoy: the teal window frames `#00b5c8` H185.7 | Black cap with a coloured wedge; the boys HOLD their caps indoors on 162 p7. Dialogue agrees with the convention (165 p6 "KEEP THAT CHANGE, HUEY!" to the red boy). Cast: **`Grandma Duck` bare** -- the roster's cast block offers it bare and `vision_apply` accepts it, but `speaker-census` lists it as off-roster -- plus `other:Eggetha` (3, the hen) and `other:Porgie` (2, the pig) |
+| *The Flying Farmhand* (21) | **155 panel 5** -- three boys walking off, blue x289-335, red x498-556, green x670-709 | `#e61a1f` H358, **65-650px**; **shaded** `#b6281b`/`#b5351e` H5-9 in the barnyard panels 153 p7 and 156 p7 | **H110-112 `#4ea23c` S0.62-0.65 throughout -- capwide only** | `#00a5d5` H193.5, **127-2,000px**. Decoy: **Dumbo's hat** at 400-2,700px, and his collar | **Quartered black beanie** (154 p7 is the clean back view). Cast adds `other:Brer Fox` (19), `other:Dumbo` (11), and a run of animal cries retyped to dialogue: `other:the chickens`, `other:the crows`, `other:a crow`, `other:the cow`, `other:the horse`, `other:the farm animals` |
+
+## Per-volume cap palette
+
 Vol. 21 and **Vol. 23**, three titles read 2026-09-23 (eightieth batch; **ALL
 THREE REVIEWED AND MIRRORED**, so the inks below are corrected against the
 review). 30 pages, 69 images, **2.30 per page**; per title 2.80 / 1.80 / 2.30.
