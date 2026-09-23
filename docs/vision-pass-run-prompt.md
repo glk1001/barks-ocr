@@ -7420,6 +7420,80 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-23, eighty-third batch, NONE REVIEWED)
+
+*The Watchful Parents* (Vol. 23, 10pp, 140 groups), *The Wax Museum* (Vol. 23, 10pp, 152),
+*The Paul Bunyan Machine* (Vol. 24, 21pp, 316). **58 images over 41 pages, 1.41 per page**;
+per title 1.90 / 1.50 / 1.14. 2.68M tokens per page against 3.65M for the previous five
+batches. Every figure below is the pass's own and none of it has been checked.
+
+- **THESE VOL. 23 CAPS ARE BIG, UNLIKE *BLACK WEDNESDAY*'S.** Both Vol. 23 titles print
+  a quartered black beanie with wedges of 50 to 3,000px, not the 27-600px slivers the
+  last batch found. So far fewer calls rest on a sliver: 29 nephews named of 65 in
+  *Watchful Parents*, 12 of 39 in *Wax Museum*, 20 of 50 in *Paul Bunyan*. **Check
+  whether the named calls hold up at this size** -- if they do, the small-wedge
+  over-reading last batch was about the size of the ink, not about Vol. 23.
+- **SEAM TIPS WENT COLLECTIVE, AS LAST BATCH'S REVIEW RULED.** Every tip that stopped
+  between two boys with readable caps was written `nephews`, even where one head was
+  4px nearer: *Watchful* 022 g1, 023 g5, 025 g13, 026 g5; *Wax* 048 g4, 050 g10;
+  *Paul Bunyan* 012 g0, 012 g13, 013 g1, 016 g8, 020 g3, 022 g17. If the review names
+  any of these, the rule needs a distance at which a near head counts.
+- **TWO ELIMINATIONS WENT IN AT MEDIUM WITH `cap_colour` NULL.** *Watchful* 020 g0
+  (Louie: the tip is over the left boy, the other two print blue and red) and 023 g9
+  (Huey: the middle boy prints blue and the right one green). These are the only
+  named nephew mediums in the batch.
+- **A BALLOON WITH A TAIL TO EACH BOY IS A CHORUS, AND THIS BATCH HAD MANY.** *Wax*
+  048 g2, g6, g9, 049 g2, g4, 050 g21, 056 g15, g16; *Watchful* 019 g10, which is
+  stored as a caption and is really a round balloon with three tails (retyped
+  `narration -> dialogue`).
+- **CLOUD BALLOONS STORED AS SPEECH OR CAPTIONS: 14 OF THE 31 TYPE CORRECTIONS.**
+  Donald and Ike think in clouds with bubble trails right through *The Wax Museum*
+  (051 g4, 052 g12, 054 g8, g10, 055 g0, g2, g8, g10: `dialogue -> thought`), and the
+  Beagle Boy alone in the Money Bin thinks in clouds that are stored as CAPTIONS
+  (*Paul Bunyan* 015 g5, g8 `narration -> thought`; g13, g15 `dialogue -> thought`), as
+  do Scrooge on 011 g0 and Donald on 016 g6.
+  The other way: 010 g9, 014 g13, 016 g12, 024 g7 are pointed-tail speech stored or
+  half-stored as thought or narration.
+- **SNORES WENT TO DIALOGUE.** A sleeper's `Z Z Z` is his voice, so *Watchful* 021 g9
+  and *Wax* 049 g11, g14, 050 g20, 051 g6 are `sound_effect -> dialogue`. The reviewed
+  corpus records Z runs as dialogue 25 times for Donald against 11 as sound_effect, so
+  the pass followed the majority. **Check that the review agrees** before this becomes
+  a rule. Also retyped: the crocodiles' `RANK! RONK` (*Watchful* 025 g10, g12) and a
+  masquerader's `SCREECH!` (*Wax* 056 g3), both voices.
+- **"UNCLE" IS DONALD, "UNCA" IS A BOY, AGAIN.** *Paul Bunyan* uses it to place 016 g1,
+  017 g4, 019 g0, 025 g5 and 026 g11 on Donald. The name grep found no Huey, Dewey or
+  Louie in any of the three titles except *Watchful* 017 g8, where the club member
+  lists all three and 024 g14 addresses LOUIE -- that boy wears the green cap.
+- **THE BEAGLE BOYS ARE `other:a Beagle Boy`, 59 TIMES.** The roster offered the
+  tagged `The Beagle Boys`, but every line here is one Beagle speaking, so the pass
+  used the singular that Vol. 20 and 21 reviews settled on (78 and 30 groups). Say if
+  the tag should be used instead.
+- **FOUR TEXT CORRECTIONS, ALL *PAUL BUNYAN*.** 010 g0 is **truncated** -- the balloon's
+  first line, `I'M TOO MAD TO FEEL MY RHEUMATISM`, is missing on easyocr and present on
+  paddleocr. 011 g6 `BANK` -> `13TH NAT'L BANK`. 022 g8 `176-716 BEAGLE BOYS` -> `BEAGLE
+  BOYS INC.` (no number shows on that sweater). 009 g4 `JET` -> `TEL`: the booth's glass
+  is lettered in MIRROR image from inside, so the reviewer may prefer to leave it.
+- **49 OF 313 PADDLEOCR GROUPS ON *PAUL BUNYAN* CARRY NO ANNOTATION.** The mirror keys on
+  text, and paddleocr's differs there -- mixed case across all of 022, two balloons
+  merged into one (013 g4), signs split or merged. They will surface as
+  paddleocr stragglers after the review, and the mirror cannot fill them.
+- **MISSED TEXT.** *Watchful* 021 and 022: two `♪ ♫` pairs from the raft's radio --
+  recommend the ignore list, as for *Black Wednesday*'s. *Wax* 053 p3: the `BALL` sign
+  over the ballroom door; 054 p6: six drawn `?` round Ike. *Paul Bunyan*: 42 findings,
+  mostly Beagle Boy sweater numbers the engines grouped differently; the real ones are
+  007 p2 `HOCK SHOP` and `CAFE`, 011 p1 `13TH NAT'L BANK` (paddleocr only), 023 p2
+  `CRASH` and `GRIND`, 023 p5 six `CEMENT` barrel labels, and the drawn `$` on money
+  bags and sacks (011, 018, 022, 024, 025, 026). `queue-missed.txt` in each out-dir.
+- **MEDIUMS TO LOOK AT FIRST.** *Watchful* 020 g0, 023 g9, 023 g13, 025 g9 (a
+  silhouette tip between Donald and a boy); *Paul Bunyan* 007 g7, g10 and the one low,
+  g8 (long shot, two tails onto one speck-sized pair), 014 g12, 025 g10.
+- `other:` values. *Watchful*: `a club member` (11), `the señorita` (2), `the
+  crocodiles` (2), `the club chairwoman`, `an Auca warrior`. *Wax*: `a masquerader`
+  (5), `the museum manager` (4), `Ike` (4), `Joe`, `a police dispatcher`, `the baker`,
+  `the violin factory boss`, `the barber`. *Paul Bunyan*: `a Beagle Boy` (59), `the
+  F.B.I. agent` (4), `the sheriff` (3), `the bank cashier` (2), `a clerk`. No
+  near-duplicates.
+
 ### Findings to paste into the next run (2026-09-23, eighty-second batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
 
 All three titles closed at full review on both engines: *The Sheepish Cowboys* 124/124,
@@ -10942,6 +11016,23 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 23 and **Vol. 24**, three titles read 2026-09-23 (eighty-third batch; **NONE
+REVIEWED**, so every figure below is the pass's own). 41 pages, 58 images, **1.41 per
+page**; per title 1.90 / 1.50 / 1.14.
+
+**SAME THREE INKS, BIGGER WEDGES.** Red `#e61b1f` H358.8, green `#009e46` H146-147, blue
+`#00a5d5` H193.5 in all three titles -- the Vol. 21-23 hues -- on a quartered black
+beanie. Where *Black Wednesday* printed 27-600px wedges, these print 50-3,800px, and
+capwide at 25px found every one of them without an image.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *The Watchful Parents* (23) | **024 panel 5** -- three boys striding along the fence, blue x235-293, red x394-452, green x550-608 | `#e61a1f`-`#f01d1e` H358-0.9, **50-1,400px**. Decoys: the pain star on 019 p3 (1,389px), Donald's bow tie, the señorita's skirt, the raft `#e95646` H5.9 | `#009d45`-`#00a352` H146-150, **45-3,000px**. Decoy: the bushes `#00a96e` H159 at 6,000-52,000px | `#00a4d4`-`#00a7d7` H193-194, **49-800px**. Decoys: Donald's cap at 1,300-4,500px (printed green-teal on 023 p7), the river | Quartered black beanie. Silhouette panels 021 p5, 022 p7-p8, 024 p6, 025 p7 print nothing; swimming on 020 p4 only the crowns show and capwide finds red 0, green 0. Cast: `other:a club member` (11), `other:the club chairwoman`, `other:the señorita` (2), `other:an Auca warrior`, `other:the crocodiles` (2) |
+| *The Wax Museum* (23) | **048 panel 1** -- three boys by the hedge, green x544-691, red x725-838, blue x862-970 | `#e61b1f` H358.8, **43-1,800px**. Decoys: Donald's bow tie, the wax devil | `#009e46`-`#009e49` H146-148, **150-3,300px**. Decoys: the alarm clock `#008943` (5,240px, 048 p7), the wheelbarrow handles on 049 p8 | `#00a5d5` H193.5, **80-1,600px**. Decoys: Donald's cap, Ike's Napoleon hat | Quartered black beanie. **Bare-headed at home** (049 p1-p6: bands red 0, green 0) **and in the museum** (050 p1, 056 p6-p7), but they HOLD their caps on 050 p4, which names 050 g11. Inside the Sir Lancelot armour on 054-055, so no cap at all. Cast adds `other:the museum manager` (4), `other:Ike` (4, the man dressed as Napoleon), `other:Joe`, `other:a masquerader` (5), `other:a police dispatcher`, `other:the baker`, `other:the violin factory boss`, `other:the barber` |
+| *The Paul Bunyan Machine* (24) | **013 panel 1** -- three boys facing the reader, green x340-360, red x578-595, blue x729-753; **023 panel 5** is a second clean row, blue, red, green | `#e61b1f` H358.8, **35-1,800px**. Decoys: Scrooge's coat at 5,000-12,000px, Donald's bow tie | `#009e46`-`#00a047` H146-147, **57-3,800px**. Decoy: the forest `#008963`/`#018965` H163-164 by the thousand | `#00a5d5` H193.5, **33-3,000px**. Decoys: Scrooge's hatband and Donald's cap at 1,000-7,000px | Quartered black beanie. They spin and hold their caps on 011 p7-p8 and 012 p1; bare-headed on 013 p8. Silhouette panels 012 p3/p6, 014 p4, 019 p4, 021 p3, 023 p4. Cast: `other:a Beagle Boy` (59), `other:the F.B.I. agent` (4), `other:the sheriff` (3), `other:the bank cashier` (2), `other:a clerk` |
 
 ## Per-volume cap palette
 
