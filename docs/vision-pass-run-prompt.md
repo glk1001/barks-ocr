@@ -7515,13 +7515,53 @@ pass. Net the adds out before comparing a batch against an older one.
   so the first mirror left paddleocr one short on all three titles and had to be
   re-run (910f01bb corrects 34f6accb). Re-read the reviewed counts off disk
   immediately before `--write`, not from a count taken earlier in the session.
+- **`roster.txt` IS PER TITLE AND I READ ONLY THE FIRST ONE.** It carries, under
+  "and, tagged in the database as appearing in THIS story", the cast the comics
+  database already knows the story contains -- and `queue.json` carries the same
+  thing as `story_cast` / `story_things`. *The Floating Island*'s cast section is
+  EMPTY, so having read that one in full I wrote "same roster, I've read it" for
+  the other two. They were not the same:
+  - *The Black Forest Rescue*: **General Snozzie**, **Junior Woodchucks**
+  - *The Good Deeds*: **Neighbor Jones**, and `airplanes` under notable things
+  The skill's "read that file in full before page 1, every time" is not about the
+  fixed vocabulary -- that part genuinely does not change. It is about these four
+  or five lines, which are the only per-title content in the file. **Grep the new
+  roster for the cast block even if nothing else in it can have moved.**
+- **THE STORY'S OWN NAMING WINS OVER THE DATABASE TAG -- RULED 2026-09-23.** Both
+  cases above were put to the reviewer and both were left as free text:
+  - the bloodhound stays **`other:the official hound`**, not `General Snozzie`,
+    even though Vol. 19 carries 11 groups of the same dog under the bare name.
+    *The Black Forest Rescue* never speaks his name; it calls him "the official
+    Junior Woodchuck bloodhound", so that is what the record says.
+  - the neighbour stays **`other:Old Pupp`**, not `Neighbor Jones`, because the
+    dialogue names him MR. PUPP twice on 027 while the tag is only the database's
+    view of which recurring character appears.
+  So the cast block is a **spelling aid for a character the story DOES name**,
+  not an instruction to rename one it names differently or not at all. It stops
+  `other:Magica de Spell` / `other:Magica` drift; it does not overrule the page.
+- **`Junior Woodchucks` AND `other:a Junior Woodchuck` ARE BOTH RIGHT, AND THEY
+  MEAN DIFFERENT THINGS.** The corpus already separates them and the distinction
+  is the same shape as `nephews` against a named boy:
+  - bare **`Junior Woodchucks`** = the troop speaking as ONE. Vol. 19 p130, 6
+    groups: a hall reciting a rhyme, twenty-four singing from inside a pie.
+  - **`other:a Junior Woodchuck`** = ONE unnamed member. Vol. 11 p52 and p63, 6
+    groups, notes reading "the pig-faced club member at the right" and "alone on
+    the porch, reading the flashes".
+  All 25 in *The Black Forest Rescue* are individuals, so they stay. Bare
+  `Junior Woodchucks` would also collide with the title's 33 `nephews` groups,
+  since the nephews ARE Junior Woodchucks in this story.
+- **AND THE NEAR-DUPLICATE THE REVIEW INTRODUCED IS FIXED.** *The Good Deeds* 032
+  g4 came out of review as `other:the pilot` against nine `other:the crop-duster
+  pilot`; normalised to the latter (569435c2). Worth running the `other:` census
+  per title AFTER the review as well as after the pass -- this one did not exist
+  until the review created it.
 - `other:` after review, per title. *Floating Island*: `a tax collector` (7),
   `the TV announcer` (3), `the pilot` (2), `the ship's captain`. *Black Forest
   Rescue*: `a Junior Woodchuck` (25), `the official hound` (7), `the Woodchuck
   commander` (4), `Joe` (2), `the forest animals` (2). *The Good Deeds*: `the
-  crop-duster pilot` (9), `a picnicker` (6), `the old man` (4), `Old Pupp` (3),
-  `the bull` (3), `the bakery driver` (2), `a policeman` (2), `Gwendolyn`, `the
-  pilot`, `a motorist`, `the farmer`.
+  crop-duster pilot` (10), `a picnicker` (6), `the old man` (4), `Old Pupp` (3),
+  `the bull` (3), `the bakery driver` (2), `a policeman` (2), `Gwendolyn`,
+  `a motorist`, `the farmer`. (`the pilot` normalised away -- see above.)
 
 ### Findings to paste into the next run (2026-09-23, eightieth batch, NONE REVIEWED)
 
