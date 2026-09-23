@@ -7420,6 +7420,61 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-23, eighty-second batch, ALL THREE REVIEWED AND MIRRORED -- batch closed)
+
+All three titles closed at full review on both engines: *The Sheepish Cowboys* 124/124,
+*The Weather Watchers* 117/117, *Black Wednesday* 152/152 (the review added 038 g10, the
+`$` on the Money Bin). **8 real speaker corrections over 393 pass groups (2.0%)**: 0 / 2 / 6.
+Excluded as not the pass's: 171 g5, 171 g16 and 042 g6, which were reviewed before it,
+and 038 g10, the review's own add.
+
+- **THE NECKERCHIEF KEY HELD PERFECTLY: 0 CORRECTIONS OVER 124 GROUPS, 38 NAMED OF 48.**
+  In a title where the three boys share one hat, the roster ink on a garment names the
+  boy just as a cap does. That includes both ranked teals on 176 p3 (H166.5 -> Dewey,
+  H157.7 -> Louie), which the review left standing. **Rule: when the hats are identical,
+  scan the kerchief, shirt or trunks before writing `nephews`, and record that ink in
+  `cap_colour` with `costume` as evidence.** The same held for the swim trunks and the
+  goat's stolen blue cap in *The Weather Watchers*: its only nephew-domain change was
+  a silhouette the review gave to Grandma.
+- **VOL. 23'S SMALL WEDGES CAME BACK OVER-READ, NOT UNDER-READ.** *Black Wednesday*'s
+  six corrections were all in the nephew domain (15.4%), and four of the six were at medium:
+  - **Seam tips were named and should not have been:** 038 g8 `Huey -> nephews` (a tip on the
+    seam between two boys, a "WE" line), and 046 g5 `Dewey -> nephews` (one tail over a row of
+    three holding their caps, "WE SUPPOSE"). **A line in the first person plural whose tip is on a
+    seam or a row is a chorus. The Good Deeds' right-hang rule does not rescue it.**
+  - **Wedges of 27-93px landed on the wrong boy twice:** 041 g4 `Louie/green -> Dewey/blue` (a 27px
+    green sliver, while the middle boy's wedge had not printed at all), and 043 g6 `Dewey/blue ->
+    Huey/red` (a 93+43px blue, tail read at page scale only). **A tail read only at page scale onto a
+    wedge under ~100px is not a name: crop it or write `nephews`.**
+  - **The opposite once:** 044 g17 `nephews -> Huey`, where every cap printed black at 20px and the
+    review named the left boy anyway.
+  - 041 g12 `Donald -> nephews` (the pass's one low call, a tail into a distant boat) was the review's
+    to settle.
+- **MEDIUM IS STILL WHERE THE ERRORS ARE.** *Weather Watchers* high 1.8% (2/112)
+  against medium 40.0% (2/5); *Black Wednesday* high 2.3% (3/128), medium 18.2% (4/22),
+  low 1/1. *Sheepish* 0/115 and 0/9.
+- **TWO ADULT CALLS MOVED.** *Weather* 169 g15 `other:Gus Goose -> Gyro` (the tip was
+  nearer Gus's cap, but the line "MAN! MAN! ... THAT SIREN" is Gyro's), and 170 g7
+  `nephews -> Grandma Duck` (the silhouette panel's "HOIST THE HAY" command is Grandma's
+  even though the tail ends over the boys). **In a silhouette panel an order is the
+  adult's, whatever row the tail stops over.**
+- **ALL 22 TYPE CORRECTIONS STOOD** (19 / 2 / 1): animal voices `sound_effect -> dialogue`,
+  clouds `-> thought`, and both reversals (*Sheepish* 178 g1 `thought -> dialogue`,
+  *Black Wednesday* 038 g0 `narration -> dialogue`).
+- **A DRAWN DEVICE IS ONE GROUP, NOT TWO.** The review added a second `?` on *Weather*
+  171 on top of the existing g5 `?`, and named it `other:the goat` against the title's
+  `other:the billy goat`. Ruled 2026-09-23: the add was deleted and g5 renamed `other:the
+  billy goat`, on both engines, before mirroring. Check for a duplicate box before the
+  mirror whenever a page's group count has moved.
+- **MISSED TEXT.** *Black Wednesday* 038's two `♪` went into `missed-text-ignore.txt`,
+  and the review added a group for the `$` on the Money Bin instead -- the pass had not
+  put it in `visible_text`. **The two licence plates on *Weather Watchers* 166, `313` and
+  `K-15`, are still OPEN**: grouped by neither engine, not ignored, left for the editor.
+  `queue-missed.txt` in that out-dir still lists them.
+- `other:` after review: `Zeke Wolf` (15), `the sheep` (13), `Dobbin` (3), `Gus Goose`
+  (3); `the billy goat` (8), `Gus Goose` (2); `a Chillyboot warrior` (19), `the
+  Chillyboot chief` (6), `Blubber Face` (5), and five singletons. No near-duplicates.
+
 ### Findings to paste into the next run (2026-09-23, eighty-second batch, NONE REVIEWED)
 
 *The Sheepish Cowboys* (Vol. 21, 7pp, 124 groups), *The Weather Watchers* (Vol. 21, 7pp,
@@ -10890,8 +10945,8 @@ percentages below are proposals, not corrections.
 
 ## Per-volume cap palette
 
-Vol. 21 and Vol. 23, three titles read 2026-09-23 (eighty-second batch; **NONE
-REVIEWED**). 24 pages, 43 images, **1.79 per page**; per title 2.14 / 2.00 / 1.40.
+Vol. 21 and Vol. 23, three titles read 2026-09-23 (eighty-second batch; **ALL THREE
+REVIEWED AND MIRRORED** -- 8 speaker corrections, none on the kerchief calls). 24 pages, 43 images, **1.79 per page**; per title 2.14 / 2.00 / 1.40.
 
 | title | reference | red | green | blue | construction |
 |---|---|---|---|---|---|
