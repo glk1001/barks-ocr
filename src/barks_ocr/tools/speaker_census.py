@@ -5,8 +5,9 @@
 free-form ``other:`` name is still only text: two spellings of one character
 remain two speakers and nothing downstream reconciles them.  This walks the
 corpus and prints what has actually accumulated — counts per name, spellings
-that differ only in case, and the names recurring often enough to be worth
-promoting into the roster in ``utils/vision_schema.py``.
+that differ only in case, names whose words sit inside another's, and the names
+recurring often enough to be worth promoting into the roster in
+``utils/vision_schema.py``.
 
 Read-only.  It reports what a human should decide about; it changes nothing.
 """
@@ -39,11 +40,16 @@ DEFAULT_PROMOTE_AT = 10
 # How many places to name when listing where a spelling was used.
 MAX_SHOWN_OCCURRENCES = 4
 
+# Dropped from the front of a free-form name before comparing two of them, so
+# that `a policeman` and `the policeman` collapse onto one another.
+LEADING_ARTICLES = frozenset({"a", "an", "the"})
+
 
 @dataclass(frozen=True)
 class Occurrence:
     """Where one speaker value was found."""
 
+    title: str
     volume: int
     fanta_page: str
     engine: str
@@ -68,7 +74,11 @@ def _collect(
                 if isinstance(speaker, str) and speaker:
                     found[speaker].append(
                         Occurrence(
-                            volume, page_group.fanta_page, page_group.ocr_index.value, group_id
+                            title_str,
+                            volume,
+                            page_group.fanta_page,
+                            page_group.ocr_index.value,
+                            group_id,
                         )
                     )
     return found
@@ -109,6 +119,75 @@ def _print_variants(found: dict[str, list[Occurrence]]) -> bool:
                 else ""
             )
             print(f"    {spelling!r:40} {len(places):4d}   {shown}{more}")
+    return True
+
+
+def _content_words(speaker: str) -> frozenset[str]:
+    """Return the free-form name's words, lower-cased, with a leading article dropped.
+
+    The article goes because ``a policeman`` and ``the policeman`` are one
+    character; nothing else is stemmed, so ``a mine guard`` and ``the mine
+    guards`` stay distinct — those singular/plural pairs are usually deliberate
+    and flagging them would be noise.
+
+    Args:
+        speaker: A free-form speaker value, ``other:`` prefix included.
+
+    Returns:
+        The word set used to compare two names for containment.
+
+    """
+    words = speaker[len(OTHER_PREFIX) :].casefold().split()
+    if words and words[0] in LEADING_ARTICLES:
+        words = words[1:]
+    return frozenset(words)
+
+
+def _print_near_duplicates(found: dict[str, list[Occurrence]]) -> bool:
+    """Print free-form names whose words sit inside another's. Returns whether any exist.
+
+    This is the gap :func:`_print_variants` leaves: it keys on case alone, so it
+    reports ``other:Crows`` against ``other:crows`` and says nothing about
+    ``other:the pilot`` sitting beside ``other:the crop-duster pilot``. That pair
+    really happened, in Vol. 23's *The Good Deeds*, and survived a full review.
+
+    Suspects, not errors — the caller must read them. A shorter name can be a
+    genuinely different character.
+
+    Compared WITHIN a title only. One story should call one character one thing;
+    two stories need not, and across the corpus ``a judge`` sits inside ``a
+    merit judge`` and ``the contest judge`` without any of them being a fault.
+    Pairing across titles turned five volumes into nineteen suspects, nearly all
+    of them unrelated people.
+    """
+    free_form = sorted(s for s in found if s.startswith(OTHER_PREFIX))
+    titles_of = {s: {o.title for o in found[s]} for s in free_form}
+    pairs: list[tuple[str, str, str]] = []
+    for short in free_form:
+        short_words = _content_words(short)
+        if not short_words:
+            continue
+        for long in free_form:
+            if long == short:
+                continue
+            shared = titles_of[short] & titles_of[long]
+            if not shared:
+                continue
+            long_words = _content_words(long)
+            # A proper subset is the containment case; equal sets are two
+            # spellings that differ only by an article, which is the same fault.
+            if short_words < long_words or (short_words == long_words and short < long):
+                pairs.append((short, long, min(shared)))
+    if not pairs:
+        return False
+
+    print("\nPossible near-duplicates — within one title, a name whose words sit")
+    print("inside another's. NOT errors: read them. Some singular/plural and role")
+    print("pairs are deliberate.")
+    for short, long, title in pairs:
+        print(f"  {title}")
+        print(f"    {short[len(OTHER_PREFIX) :]!r:32} {len(found[short]):4d}")
+        print(f"      inside {long[len(OTHER_PREFIX) :]!r:25} {len(found[long]):4d}")
     return True
 
 
@@ -161,9 +240,10 @@ def _report(found: dict[str, list[Occurrence]], promote_at: int) -> None:
         print("  Add to SPEAKER_OPTIONS in utils/vision_schema.py; roster.txt regenerates.")
 
     flagged = _print_variants(found)
+    flagged = _print_near_duplicates(found) or flagged
     flagged = _print_anomalies(found) or flagged
     if not flagged:
-        print("\nNo variant spellings and nothing off-roster.")
+        print("\nNo variant spellings, no near-duplicates and nothing off-roster.")
 
 
 @app.command(help="Report the speaker attributions accumulated across the prelim OCR corpus.")

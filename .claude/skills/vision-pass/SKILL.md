@@ -337,6 +337,23 @@ review can be 125/125 on speakers and still leave every text and type correction
 untouched — they are separate review states and the speaker count says nothing
 about them.
 
+**And run the `other:` census AFTER the review, not only after the pass.** A
+near-duplicate can arrive from either side, and the review is the side nobody
+was watching: *The Good Deeds* 032 g4 came out of a finished review as
+`other:the pilot` beside nine `other:the crop-duster pilot`, and every other
+close-out check passed. `scripts/closeout.sh` now carries it as a row at both
+stages, so the plain fix is to run the close-out — but on its own it is
+
+```bash
+barks-ocr-speaker-census --title "…"
+```
+
+which prints the per-title free-form list, case variants, and names whose words
+sit inside another's. That last block is **suspects, not errors**: singular and
+plural pairs like `a mine guard` / `the mine guards` are deliberate and it is
+built not to flag them, but `a Chickadee` / `the Chickadee nest leader` is a
+real pair of different people. Read it; do not merge on the count alone.
+
 **A review can also add groups.** *Good Neighbors* 069 gained a group for a
 `ZOOM` the pass had recorded only as page-level `visible_text`. The editor seeds
 a new group from a neighbour, so it arrives carrying that neighbour's `ai_text`,
@@ -379,4 +396,6 @@ speaker queue, and the one that was missed until after a review.
 Report **per title, not in one lump**. Say whether observed cap colour surfaced
 any tail/cap disagreement, and list the distinct `other:` speaker values so
 near-duplicates get caught — free-text names get no closed-set check and drift
-silently.
+silently. `barks-ocr-speaker-census --title "…"` is that list, and it is worth
+running **twice**: once at the apply close-out and again after the review, since
+a correction can introduce a second spelling the pass never wrote.

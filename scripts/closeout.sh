@@ -6,7 +6,8 @@
 #
 # Folds the close-out sequence from the vision-pass skill into one command:
 # the missed-text audit, the engine diff, outstanding text/type corrections,
-# unreviewed speaker stragglers on BOTH engines, the mirror dry run,
+# unreviewed speaker stragglers on BOTH engines, the other: speaker census,
+# the mirror dry run,
 # `git status` in every repo the pass touches, and a census of what the day's
 # reading cost in Claude Code tokens.
 #
@@ -232,6 +233,26 @@ if capture group-audit uv run python scripts/vision/audit_groups.py "$TITLE"; th
     fi
 else
     row FAIL "group audit" "command failed -- read the log"
+fi
+
+# --- 4c. the other: census ---------------------------------------------------
+# Advisory. Runs at BOTH stages, because a near-duplicate can arrive from either
+# side: the pass writes two names for one character, or the review introduces a
+# second spelling while correcting a speaker. The Good Deeds 032 g4 came out of
+# a finished review as `other:the pilot` beside nine `other:the crop-duster
+# pilot`, and nothing in the close-out looked -- which is why this row exists.
+echo "-> other: speaker census"
+if capture speaker-census uv run barks-ocr-speaker-census --title "$TITLE"; then
+    if grep -q '^Possible near-duplicates' "$LOG_DIR/speaker-census.log"; then
+        suspects=$(grep -c '^      inside ' "$LOG_DIR/speaker-census.log")
+        row WARN "other: census" "$suspects near-duplicate suspect(s) -- read the log"
+    elif grep -q 'No speaker attributions recorded yet' "$LOG_DIR/speaker-census.log"; then
+        row WARN "other: census" "no speaker recorded on this title"
+    else
+        row OK "other: census" "no near-duplicate other: names"
+    fi
+else
+    row FAIL "other: census" "command failed -- read the log"
 fi
 
 # --- 5. mirror dry run -------------------------------------------------------
