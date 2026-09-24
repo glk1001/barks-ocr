@@ -7420,7 +7420,17 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
-### Findings to paste into the next run (2026-09-24, eighty-third batch, TWO OF THREE REVIEWED -- *The Watchful Parents* and *The Wax Museum*)
+### Findings to paste into the next run (2026-09-24, eighty-third batch, TWO OF THREE REVIEWED AND MIRRORED -- *The Watchful Parents* and *The Wax Museum*)
+
+**THE PAUL BUNYAN MACHINE WAS RE-APPLIED ON `glk/prelim-edits`, 2026-09-24.** Vol. 24 was
+being cleaned in the `Prelim-wt` worktree while the pass ran against `main`'s older
+files. The pass commit was reverted on `main` (510733f7) and its results carried onto
+the cleaned ids by text match (7f7f33d8 on the branch): 338 groups, all mirrored --
+the 49-group paddleocr gap below is gone -- and all four proposed text corrections
+were already made by the cleanup. **Review it in the worktree** (`BARKS_OCR_PRELIM_DIR`
+set to `Prelim-wt`), with the queues in `~/barks-vision/the-paul-bunyan-machine-wt/`;
+the old out-dir holds pre-cleanup ids and must not be used. **Before a pass, check
+`git worktree list` in the prelim repo for a branch cleaning the same volume.**
 
 *The Watchful Parents* is closed: 140/140 on both engines, mirrored. *The Wax Museum*
 is closed too, 153/153 and mirrored -- though its first pass left 054 g12 (`CLANK`) and
