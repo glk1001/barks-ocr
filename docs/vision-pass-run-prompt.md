@@ -7427,8 +7427,8 @@ being cleaned in the `Prelim-wt` worktree while the pass ran against `main`'s ol
 files. The pass commit was reverted on `main` (510733f7) and its results carried onto
 the cleaned ids by text match (7f7f33d8 on the branch): 338 groups, all mirrored --
 the 49-group paddleocr gap below is gone -- and all four proposed text corrections
-were already made by the cleanup. **Review it in the worktree** (`BARKS_OCR_PRELIM_DIR`
-set to `Prelim-wt`), with the queues in `~/barks-vision/the-paul-bunyan-machine-wt/`;
+were already made by the cleanup. The branch was then merged into `main` (ca384619),
+so review on `main` as usual, with the queues in `~/barks-vision/the-paul-bunyan-machine-wt/`;
 the old out-dir holds pre-cleanup ids and must not be used. **Before a pass, check
 `git worktree list` in the prelim repo for a branch cleaning the same volume.**
 
