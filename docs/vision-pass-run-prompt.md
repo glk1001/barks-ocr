@@ -7423,10 +7423,10 @@ cap_colour / confidence distributions equal on both engines.
 ### Findings to paste into the next run (2026-09-24, eighty-third batch, TWO OF THREE REVIEWED -- *The Watchful Parents* and *The Wax Museum*)
 
 *The Watchful Parents* is closed: 140/140 on both engines, mirrored. *The Wax Museum*
-is 152/153 and mirrored, with 054 g12 (`CLANK`, none) unreviewed and seven type
-corrections unconfirmed (054 g11 to 056 g12, `queue-corrections-remaining.txt`) -- all
-of them after the review's add on 054, which renumbered the page. *The Paul Bunyan
-Machine* is not reviewed. **12 speaker corrections over 293 groups (4.1%)**: 6 / 6.
+is closed too, 153/153 and mirrored -- though its first pass left 054 g12 (`CLANK`) and
+seven type confirmations (054 g11 to 056 g12) unworked, all of them after the review's
+add on 054, which renumbered the page. **After an add, rebuild the queue before
+carrying on down that page.** *The Paul Bunyan Machine* is not reviewed. **12 speaker corrections over 293 groups (4.1%)**: 6 / 6.
 All 12 were at high; the pass's 4 mediums all stood.
 
 - **THE SEAM-TIP COLLECTIVES CAME BACK NAMED -- ALL SIX.** Every tip the pass left
@@ -7450,7 +7450,7 @@ All 12 were at high; the pass's 4 mediums all stood.
   wedges; this batch, with wedges of 50-3,000px, under-named. Nine of the ten nephew
   corrections were `nephews -> a name`. On caps this size, a tip near two readable
   caps is a name.
-- **ALL 21 TYPE CORRECTIONS THAT WERE WORKED STOOD**, with one change: *Wax* 051 g6
+- **ALL 25 TYPE CORRECTIONS STOOD**, with one change: *Wax* 051 g6
   `ZZZZZZ` went to `thought`, not `dialogue` -- the other three snores (049 g11, g14,
   050 g20) and *Watchful* 021 g9 stayed dialogue. The clouds retyped `dialogue ->
   thought`, the crocodiles' `RANK! RONK`, the logo and title `background -> title`, and
