@@ -7420,6 +7420,51 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-24, eighty-third batch, TWO OF THREE REVIEWED -- *The Watchful Parents* and *The Wax Museum*)
+
+*The Watchful Parents* is closed: 140/140 on both engines, mirrored. *The Wax Museum*
+is 152/153 and mirrored, with 054 g12 (`CLANK`, none) unreviewed and seven type
+corrections unconfirmed (054 g11 to 056 g12, `queue-corrections-remaining.txt`) -- all
+of them after the review's add on 054, which renumbered the page. *The Paul Bunyan
+Machine* is not reviewed. **12 speaker corrections over 293 groups (4.1%)**: 6 / 6.
+All 12 were at high; the pass's 4 mediums all stood.
+
+- **THE SEAM-TIP COLLECTIVES CAME BACK NAMED -- ALL SIX.** Every tip the pass left
+  `nephews` because it stopped between two boys with readable caps was named:
+  *Watchful* 022 g1 `Huey`, 023 g5 `Dewey`, 025 g13 `Huey`, 026 g5 `Huey`; *Wax* 048 g4
+  `Dewey`, 050 g10 `Louie`. Four of those six are first-person-plural lines (US, OUR,
+  US, WE), so the eighty-second batch's rule -- a WE line whose tip is on a seam is a
+  chorus -- did NOT hold in these titles. **Where two boys flank a seam and both caps
+  print, name one of them; `nephews` is for a tip that reaches no boy or a balloon with
+  several tails.** Which of the two the review chose does not follow the tip's lean
+  consistently (025 g13 went against it), so the reviewer should say what decided it.
+- **TWO MORE COLLECTIVES WERE NAMED WHERE THE PASS SAW A SECOND SPUR OR A CAP IT COULD
+  NOT PLACE.** *Wax* 050 g21 (a two-spur balloon the pass called a chorus) -> `Louie`,
+  the green boy the second spur pointed at; 051 g12 (a tip over the Napoleon dummy's
+  hat) -> `Dewey`. *Watchful* 025 g2 -> `Louie`/green: the pass wrote that the right
+  boy's cap printed no roster ink, and the review found green on him.
+- **ONE NAME SWAPPED, AND IT WAS A SOLE-TAIL READ AT HIGH.** *Wax* 048 g7
+  `Dewey`/blue -> `Huey`/red: the tail ran straight down onto the right boy of a pair,
+  who the pass read as the blue one. The pair is 100px apart; the crop was not taken.
+- **SO THE ERROR RAN THE OTHER WAY FROM LAST BATCH.** Last batch over-named small
+  wedges; this batch, with wedges of 50-3,000px, under-named. Nine of the ten nephew
+  corrections were `nephews -> a name`. On caps this size, a tip near two readable
+  caps is a name.
+- **ALL 21 TYPE CORRECTIONS THAT WERE WORKED STOOD**, with one change: *Wax* 051 g6
+  `ZZZZZZ` went to `thought`, not `dialogue` -- the other three snores (049 g11, g14,
+  050 g20) and *Watchful* 021 g9 stayed dialogue. The clouds retyped `dialogue ->
+  thought`, the crocodiles' `RANK! RONK`, the logo and title `background -> title`, and
+  both caption-stored balloons (*Watchful* 019 g10, *Wax* 056 g12) held.
+- **THE REVIEW ADDED ONE GROUP FOR SIX DRAWN `?`** (*Wax* 054 g9, `other:Ike`,
+  thought), one group for the device as ruled last batch. The audit now reports it as
+  `6 in the art, 1 grouped`; it wants an ignore entry. `other:a club member` moved to
+  `other:the club chairwoman` on *Watchful* 017 g3.
+- **MISSED TEXT STILL OPEN.** *Watchful* 021 and 022, the radio's `♪ ♫` pairs (not
+  added; the ignore list needs your word). *Wax* 053 p3 `BALL` sign (not added).
+- `other:` after review: `a club member` (10), `the club chairwoman` (2), `the
+  señorita` (2), `the crocodiles` (2), `an Auca warrior`; `a masquerader` (5), `Ike`
+  (5), `the museum manager` (4), and five singletons. No near-duplicates.
+
 ### Findings to paste into the next run (2026-09-23, eighty-third batch, NONE REVIEWED)
 
 *The Watchful Parents* (Vol. 23, 10pp, 140 groups), *The Wax Museum* (Vol. 23, 10pp, 152),
