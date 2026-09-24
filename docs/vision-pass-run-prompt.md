@@ -7456,11 +7456,10 @@ All 12 were at high; the pass's 4 mediums all stood.
   thought`, the crocodiles' `RANK! RONK`, the logo and title `background -> title`, and
   both caption-stored balloons (*Watchful* 019 g10, *Wax* 056 g12) held.
 - **THE REVIEW ADDED ONE GROUP FOR SIX DRAWN `?`** (*Wax* 054 g9, `other:Ike`,
-  thought), one group for the device as ruled last batch. The audit now reports it as
-  `6 in the art, 1 grouped`; it wants an ignore entry. `other:a club member` moved to
+  thought), one group for the device as ruled last batch. `other:a club member` moved to
   `other:the club chairwoman` on *Watchful* 017 g3.
-- **MISSED TEXT STILL OPEN.** *Watchful* 021 and 022, the radio's `♪ ♫` pairs (not
-  added; the ignore list needs your word). *Wax* 053 p3 `BALL` sign (not added).
+- **MISSED TEXT CLOSED.** The review added *Wax* 053 g12 `BALL` (the ballroom sign),
+  and put *Watchful* 021/022's radio notes and *Wax* 054's six `?` on the ignore list.
 - `other:` after review: `a club member` (10), `the club chairwoman` (2), `the
   señorita` (2), `the crocodiles` (2), `an Auca warrior`; `a masquerader` (5), `Ike`
   (5), `the museum manager` (4), and five singletons. No near-duplicates.

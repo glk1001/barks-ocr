@@ -573,3 +573,12 @@ HELP KEEP AMERICA STRONG
 
 # Black Wednesday: two drawn music notes by the Money Bin window, not worth a group (reviewer, 2026-09-23)
 23 038 ♪
+
+# The Watchful Parents: drawn music notes from the raft's radio, not worth a group (reviewer, 2026-09-24)
+23 021 ♪
+23 021 ♫
+23 022 ♪
+23 022 ♫
+
+# The Wax Museum: six drawn ? round Ike, grouped once as a single device on 054 g9 (reviewer, 2026-09-24)
+23 054 ?
