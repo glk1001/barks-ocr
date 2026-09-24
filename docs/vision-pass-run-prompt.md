@@ -7450,7 +7450,7 @@ All 12 were at high; the pass's 4 mediums all stood.
   wedges; this batch, with wedges of 50-3,000px, under-named. Nine of the ten nephew
   corrections were `nephews -> a name`. On caps this size, a tip near two readable
   caps is a name.
-- **ALL 25 TYPE CORRECTIONS STOOD**, with one change: *Wax* 051 g6
+- **ALL 21 TYPE CORRECTIONS STOOD** (4 + 17), with one change: *Wax* 051 g6
   `ZZZZZZ` went to `thought`, not `dialogue` -- the other three snores (049 g11, g14,
   050 g20) and *Watchful* 021 g9 stayed dialogue. The clouds retyped `dialogue ->
   thought`, the crocodiles' `RANK! RONK`, the logo and title `background -> title`, and
