@@ -604,3 +604,14 @@ HELP KEEP AMERICA STRONG
 24 178 $
 24 183 $
 24 184 $
+
+# Fun? What's That?: partly hidden signs whose groups keep the full text for search --
+# the reviewer turned down the pass's print-only corrections (reviewer, 2026-09-26)
+24 028 CKER
+24 028 CTOR IS N
+24 029 DOCTOR IS
+# the prescription scrawl, and two bits of lettering a balloon on the same page
+# already quotes: the DO door-sign fragment and BOWLING on the bowler's shirt
+24 029 ℞
+24 030 DO
+24 032 BOWLING

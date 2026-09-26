@@ -7420,6 +7420,35 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-26, eighty-fourth batch, TWO OF THIRTEEN REVIEWED AND MIRRORED -- *Fun? What's That?*)
+
+*Fun? What's That?* closed at 151/151 on both engines. **4 real speaker corrections over
+148 pass groups (2.7%)**; the three `unknown -> none` rows are the reviewer's adds. By the
+confidence the pass wrote: high 2 of 136 (1.5%), medium 0 of 8, **low 2 of 4 (50%)**.
+
+- **SPECK RIDERS NAMED BY ANALOGY ARE A COIN TOSS.** The four lows were the two riders of
+  Gyro's flying craft in two long shots, named from which side each sat on in an earlier
+  panel. 032 g14/g15 came back as a swapped pair (Gyro and Scrooge reversed); 031
+  g10/g11 stood. When the riders are specks, a low is the honest confidence, and the
+  pair should be flagged as a set, not trusted as a mapping.
+- **A DRAWN `?` IN A THOUGHT CLOUD IS THE HELPER'S, NOT THE ANIMAL'S BESIDE IT** (036
+  g6, `other:the bear` -> `other:Little Helper`). The same call as *Pied Piper* 184 g17:
+  a drawn `?` over the Helper is its `thought`.
+- **A LINE SAID BY TWO IS AN `other:` CHORUS** (034 g6, `Gyro` -> `other:Gyro and
+  Scrooge`), though the tail runs to one of them.
+- **PARTLY HIDDEN SIGNS KEEP THEIR FULL TEXT.** The reviewer turned down the three
+  print-only text corrections (028 g16 `DR. QUACKER`, 028 g17 and 029 g11 `DOCTOR IS IN`)
+  -- stored text is for search, so a sign that other panels show whole is stored whole
+  -- and the three matching audit rows went on the ignore list. Do not propose a
+  print-only correction for a sign the story shows in full elsewhere.
+- **MISSED TEXT CLOSED:** the reviewer added the third `DOCTOR IS IN` card (028 g14) and
+  the lane numbers `1` and `2` (031 g14/g15); `℞` (029), the `DO` fragment (030) and
+  `BOWLING` (032) went on the ignore list. 031 g13 `BOING`, whose box the review
+  tightened, was left without `speaker_reviewed` and was stamped at close-out.
+- The helper rename landed here too: 22 groups, 11 per engine, `other:Little Helper`.
+- Both type corrections the review made agree with the lane-1 findings: a cloud balloon
+  to `thought` (028 g2) and the bear's howl to `dialogue` (036 g14).
+
 ### Findings to paste into the next run (2026-09-26, eighty-fourth batch, ONE OF THIRTEEN REVIEWED AND MIRRORED -- *The Pied Piper of Duckburg*)
 
 *The Pied Piper of Duckburg* closed at 133/133 on both engines (prelim `6b4a4217`).
