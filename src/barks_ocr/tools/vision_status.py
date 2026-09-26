@@ -341,12 +341,20 @@ def _scan_titles(
     return sorted(stats, key=lambda s: s.order)
 
 
-def _unread(stats: list[TitleStat]) -> list[TitleStat]:
+def unread_titles(stats: list[TitleStat]) -> list[TitleStat]:
     """Titles still to read, oldest first, skipping those that can never count.
 
     The single answer to "what is next", used by both `--next` and the footer of
     `--titles`.  They asked it separately before, so fixing one left the other
-    still naming a finished story.  See `_ALWAYS_DONE`.
+    still naming a finished story.  See `_ALWAYS_DONE`.  Public because the lane
+    planner (`scripts/vision/lane_plan.py`) splits exactly this list.
+
+    Args:
+        stats: Every story, as `scan_titles` returns them.
+
+    Returns:
+        The stories with pages still unread, in the same order.
+
     """
     return [s for s in stats if s.read < s.pages and s.title not in _ALWAYS_DONE]
 
@@ -356,7 +364,7 @@ def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only:
     # `--todo` asks the same question as `--next` and the footer, through the same
     # function. It used to test `s.read` on its own, so a story one page into a
     # thirty-page read vanished from the work list while `--next` still offered it.
-    unread = {s.title for s in _unread(stats)}
+    unread = {s.title for s in unread_titles(stats)}
     shown = [s for s in stats if not (todo_only and s.title not in unread)]
     window = shown[start : start + limit] if limit else shown[start:]
 
@@ -365,7 +373,7 @@ def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only:
         note = f"  [{', '.join(s.versions)}]" if s.versions else ""
         print(f"{i:>5} {s.year:>6}  {s.title[:44]:<44}{s.volume:>4}{s.pages:>6}  {s.state}{note}")
 
-    left = _unread(stats)
+    left = unread_titles(stats)
     # Counted as done rather than dropped, so the two figures still sum to the
     # corpus and the outstanding page count stops including pages nothing will
     # ever read.
@@ -417,7 +425,7 @@ def main(  # noqa: PLR0913
     if next_only:
         assert next_only > 0
         # Bare title on stdout, so a shell can use it directly.
-        remaining = _unread(stats)
+        remaining = unread_titles(stats)
         if not remaining:
             raise typer.Exit(code=1)
         print(", ".join([f'"{t.title}"' for t in remaining[0:next_only]]))

@@ -1,6 +1,6 @@
 ---
 name: vision-pass
-description: "Run a Claude Code vision pass over one or more Barks comic titles — prep, read the pages, apply, build review queues, commit; and later mirror a finished review onto the second engine. Use whenever the ask is to read/vision-pass a title, work through --todo or --next, or when the reviewer says a title's review is done. Covers only the procedure and its hazards; the reading rules live in the generated roster.txt."
+description: "Run a Claude Code vision pass over one or more Barks comic titles — prep, read the pages, apply, build review queues, commit; and later mirror a finished review onto the second engine. Use whenever the ask is to read/vision-pass a title, work through --todo or --next, or when the reviewer says a title's review is done. Also runs concurrent lanes (`/vision-pass lanes`, `lane <N>`, `merge-lanes`), each in its own prelim worktree. Covers only the procedure and its hazards; the reading rules live in the generated roster.txt."
 ---
 
 # Vision pass — the run procedure
@@ -75,6 +75,82 @@ of mediums corrected against 6.0% of highs; *Lost in the Andes!* 31.0% against
 Read the output, state the rules, and have the reviewer check them: a rule
 inferred from a correction can misread **why** it was made, and that is the only
 part of this loop a person is still needed for.
+
+## Running in lanes — concurrent passes
+
+Two (or more) sessions each read about 40 pages at once, each in its own prelim
+worktree on its own branch. Three kinds of invocation:
+
+| invocation | where | does |
+|---|---|---|
+| `/vision-pass lanes` | coordinator: `BARKS_OCR_PRELIM_DIR` **unset** | plans the round, creates or resets the worktrees |
+| `/vision-pass lane <N>` | lane session started with the lane's `BARKS_OCR_PRELIM_DIR` | the ordinary pass over lane N's titles, committed on lane N's branch |
+| `/vision-pass merge-lanes` | coordinator | merges the lanes into `main` and folds their close-outs into the docs |
+
+**The one rule that makes lanes safe: lanes never share a volume.** The planner
+deals a volume to exactly one lane per round, and `lanes.sh merge` refuses a lane
+whose commits touch any other. Two lines of work on one volume's pages is what forced
+*The Paul Bunyan Machine* to be re-applied on 2026-09-24.
+
+### Coordinator, before a round (`/vision-pass lanes`)
+
+```bash
+bash scripts/vision/lanes.sh status        # the last round must be merged
+uv run --offline python scripts/vision/lane_plan.py --lanes 2 --pages 40
+bash scripts/vision/lanes.sh setup         # Prelim-laneN on branch laneN, at main
+```
+
+Give the reviewer the start line the planner prints for each lane -- a new terminal,
+`cd` to barks-ocr, `BARKS_OCR_PRELIM_DIR='<worktree>' claude`, then
+`/vision-pass lane <N>`. The variable must be set when the session STARTS: shell state
+does not persist between Bash calls, so exporting it inside a session does nothing.
+
+### Lane session (`/vision-pass lane <N>`)
+
+1. **Prove the session is in its lane before anything else**, and stop if not:
+   ```bash
+   echo "$BARKS_OCR_PRELIM_DIR"                                  # = the plan's worktree
+   git -C "$BARKS_OCR_PRELIM_DIR" branch --show-current          # = laneN
+   python3 -m json.tool ~/barks-vision/lanes/lane-<N>.json       # the titles
+   ```
+   A lane run against the main checkout writes into the tree the other lane and the
+   reviewer are using.
+2. **The titles come from `lane-<N>.json`, not from `--todo`**, which still lists the
+   other lane's titles. Say the title block back as usual.
+3. Read the latest findings section and the volume palette as usual, then run the
+   whole ordinary sequence -- name-grep, prep, the three sweeps, reading, dry-run,
+   apply with `--capture-model` and `--queue-out`, the audit, the queues,
+   `scripts/closeout.sh --stage apply`. Every `barks-ocr-*` command and every
+   repo script follows the variable, so nothing else changes.
+4. **Commit the prelim JSON in the worktree**, explicit paths and the same asserts, on
+   the lane branch. Never commit in the main checkout; never merge.
+5. **Touch nothing in barks-ocr** -- not the run prompt, the ledger, the ignore list or
+   this skill. Two lanes editing the same docs is the conflict lanes exist to avoid.
+   Write instead to `~/barks-vision/lanes/lane-<N>-closeout.md`:
+   - the findings section, under the usual heading, marked `(lane N)`;
+   - the per-volume palette rows, in the usual table format;
+   - images read per title;
+   - the ledger rows in a fenced `csv` block, `volume,title,pages,images,,,date,note`.
+6. Hand back as usual -- missed text first, then the per-title table -- and end by
+   saying the lane is ready to merge.
+
+### Coordinator, after the lanes report (`/vision-pass merge-lanes`)
+
+```bash
+bash scripts/vision/lanes.sh status
+LANE_COMMIT_TRAILER='Co-Authored-By: <the session trailer>' bash scripts/vision/lanes.sh merge
+```
+
+`merge` checks every lane before merging any: no uncommitted files, no volume outside
+the plan. It then merges each lane into `main` with `--no-ff` and fast-forwards every
+lane branch to `main`, so the next `setup` starts clean. Then:
+
+- Fold each `lane-<N>-closeout.md` into `docs/vision-pass-run-prompt.md` as ONE batch
+  section and one palette section, keeping the lane marks; append the ledger rows;
+  run `usage_census.py --by-title --write-ledger` and `--trend`; commit barks-ocr once.
+- The lanes' queues stay valid after the merge: the volumes are disjoint, so a lane's
+  group ids are `main`'s. **Review only after the merge**, on `main`, as usual.
+- Mirroring and the post-review close-out are unchanged.
 
 ## The sequence, per title
 
