@@ -7438,10 +7438,11 @@ three that are the rules below (cloud balloon to `thought`, the `KEEP OUT!` post
   except *Fun? What's That?*, whose 21 wait for its review to be committed.
 - The `Hi!` note held up by the helper (179 g10) kept its speaker: a note a figure holds
   up is named for the figure, as the pass had it at medium.
-- **Missed text closed:** of the six findings the reviewer added three as groups -- 183
-  g22 the bee's `?` (`thought`, `other:a bee`), 184 g16 a drawn `?` (`background`), 185
-  g15 the Money Bin `$` -- and put the money-bag `$` on 178 and 183 and 184's bin emblem
-  on the ignore list. The close-out is clean at 136/136.
+- **Missed text closed:** the reviewer added four groups -- 183 g22 the bee's `?`
+  (`thought`, `other:a bee`), 184 g17 the Helper's `?` (`thought`, `other:Little
+  Helper`), and the Money Bin `$` emblems at 184 g16 and 185 g15 -- and put the money-bag
+  `$` on 178 and 183 and 184's banknotes on the ignore list. A drawn `?` over a head is a
+  `thought` for its owner, both times. The close-out is clean at 137/137.
 
 ### Findings to paste into the next run (2026-09-26, eighty-fourth batch, NONE REVIEWED -- the first lane round: lane 1 Vol. 24, lane 2 Vol. 23)
 
