@@ -45,6 +45,7 @@ from barks_ocr.utils.vision_schema import (
     SPEAKER_KEY,
     VISION_NOTE_KEY,
 )
+from barks_ocr.utils.volume_holds import held_volumes
 
 APP_LOGGING_NAME = "visstat"
 
@@ -352,11 +353,21 @@ def unread_titles(stats: list[TitleStat]) -> list[TitleStat]:
     Args:
         stats: Every story, as `scan_titles` returns them.
 
+    A story in a volume listed in `scripts/vision/volume-holds.txt` is not
+    offered either: the reviewer is still cleaning it, and a pass would be read
+    against files that are about to change. `--titles` still lists it, marked
+    `held`.
+
     Returns:
-        The stories with pages still unread, in the same order.
+        The stories with pages still unread and not on hold, in the same order.
 
     """
-    return [s for s in stats if s.read < s.pages and s.title not in _ALWAYS_DONE]
+    holds = held_volumes()
+    return [
+        s
+        for s in stats
+        if s.read < s.pages and s.title not in _ALWAYS_DONE and s.volume not in holds
+    ]
 
 
 def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only: bool) -> None:
@@ -365,22 +376,35 @@ def _report_titles(stats: list[TitleStat], *, start: int, limit: int, todo_only:
     # function. It used to test `s.read` on its own, so a story one page into a
     # thirty-page read vanished from the work list while `--next` still offered it.
     unread = {s.title for s in unread_titles(stats)}
-    shown = [s for s in stats if not (todo_only and s.title not in unread)]
+    # A held title is not "to do" yet, but hiding it outright would make a whole
+    # volume drop off the work list with no word of why -- so `--todo` keeps it,
+    # marked `held`, and `--next` (through `unread_titles`) skips it.
+    holds = held_volumes()
+    held = {s.title for s in stats if s.volume in holds and s.read < s.pages}
+    shown = [s for s in stats if not (todo_only and s.title not in unread | held)]
     window = shown[start : start + limit] if limit else shown[start:]
 
     print(f"{'#':>5} {'year':>6}  {'title':<44}{'vol':>4}{'pages':>6}  state")
     for i, s in enumerate(window, start=start + 1):
         note = f"  [{', '.join(s.versions)}]" if s.versions else ""
-        print(f"{i:>5} {s.year:>6}  {s.title[:44]:<44}{s.volume:>4}{s.pages:>6}  {s.state}{note}")
+        state = f"held ({s.state})" if s.title in held else s.state
+        print(f"{i:>5} {s.year:>6}  {s.title[:44]:<44}{s.volume:>4}{s.pages:>6}  {state}{note}")
 
     left = unread_titles(stats)
     # Counted as done rather than dropped, so the two figures still sum to the
     # corpus and the outstanding page count stops including pages nothing will
     # ever read.
-    done = len(stats) - len(left)
+    # Held titles are neither: counted apart, so a hold never reads as progress.
+    on_hold = [s for s in stats if s.title in held]
+    done = len(stats) - len(left) - len(on_hold)
+    held_note = (
+        f"; {len(on_hold)} held, {sum(s.pages - s.read for s in on_hold)} page(s)"
+        if on_hold
+        else ""
+    )
     print(
         f"\n{done} of {len(stats)} title(s) done; "
-        f"{len(left)} left, {sum(s.pages - s.read for s in left)} page(s)."
+        f"{len(left)} left, {sum(s.pages - s.read for s in left)} page(s){held_note}."
     )
     if left:
         nxt = left[0]

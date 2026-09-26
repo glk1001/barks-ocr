@@ -43,6 +43,7 @@ from barks_fantagraphics.speech_groupers import SpeechGroups
 from loguru import logger
 
 from barks_ocr.tools.vision_status import scan_titles, unread_titles
+from barks_ocr.utils.volume_holds import held_volumes
 
 LANES_DIR = Path.home() / "barks-vision" / "lanes"
 PRELIM_OVERRIDE_ENV = "BARKS_OCR_PRELIM_DIR"
@@ -169,6 +170,9 @@ def main() -> int:
     logger.disable("barks_ocr")
     comics_database = ComicsDatabase()
     todo = unread_titles(scan_titles(comics_database, SpeechGroups(comics_database)))
+    if holds := held_volumes():
+        # `unread_titles` already drops them; said here so the plan shows why.
+        print(f"held, not dealt: Vol. {', '.join(map(str, sorted(holds)))}\n")
     logger.enable("barks_ocr")
     lanes = deal(todo, args.lanes, args.pages, args.slack)
 

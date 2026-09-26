@@ -461,6 +461,10 @@ commit that is really 140/141 is bad provenance. `--unreviewed` with no
 
 ## Traps
 
+- **A volume on hold is not read.** `scripts/vision/volume-holds.txt` lists volumes
+  the reviewer is still cleaning; `vision-prep` refuses them, `--todo` marks them
+  `held` and `--next` and the lane planner skip them. Lift a hold only when the
+  reviewer says that volume's cleanup is done -- delete its line and commit.
 - **Review marks made while cleaning a volume do not outrank the pass.** On a page
   the pass reads for the first time, `vision_apply` clears `speaker_reviewed` and
   its date and `speaker_was` (editor residue, ruled 2026-09-26), keeps

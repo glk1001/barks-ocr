@@ -74,6 +74,7 @@ from barks_ocr.utils.vision_schema import (
     VISIBLE_TEXT_KEY,
     roster_text,
 )
+from barks_ocr.utils.volume_holds import HOLDS_FILE, held_volumes
 
 app = typer.Typer()
 
@@ -481,7 +482,7 @@ def _cast_for(entries: list[dict]) -> tuple[list[str], list[str], list[str]]:
 
 
 @app.command(help="Crop comic pages into per-panel images for a Claude Code vision pass.")
-def main(
+def main(  # noqa: PLR0913
     title_str: Annotated[
         str, typer.Option("--title", "-t", help="Story title. The unit the pass is built around.")
     ] = "",
@@ -503,6 +504,13 @@ def main(
     engine: Annotated[
         OcrTypes, typer.Option("--engine", "-e", help="Which OCR pass to annotate.")
     ] = OcrTypes.EASYOCR,
+    ignore_hold: Annotated[
+        bool,
+        typer.Option(
+            "--ignore-hold",
+            help="Prep a volume listed in scripts/vision/volume-holds.txt anyway.",
+        ),
+    ] = False,
 ) -> None:
     if bool(title_str) == bool(volume is not None or pages_str):
         msg = "Give either --title, or --volume with --pages."
@@ -522,6 +530,16 @@ def main(
             raise typer.BadParameter(msg)
         pages = _parse_pages(pages_str)
         out_dir = out_dir or _default_out_dir(volume, pages)
+
+    # A held volume is being cleaned in the editor; a pass prepped now would be
+    # carried across by hand once the cleanup moves its group ids.
+    holds = held_volumes()
+    if volume in holds and not ignore_hold:
+        msg = (
+            f"Vol. {volume} is on hold ({holds[volume] or 'no reason given'}) --"
+            f" see {HOLDS_FILE}. Pass --ignore-hold to prep it anyway."
+        )
+        raise typer.BadParameter(msg)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     entries = [

@@ -1,0 +1,18 @@
+# Volumes the vision pass must not read yet.
+#
+# One volume per line, optionally with a reason after it. Blank lines and # are
+# skipped. Read by `barks_ocr.utils.volume_holds`: `vision-prep` refuses a title
+# in a held volume, `vision-status --todo`/`--next` skip it and mark it `held`,
+# and `scripts/vision/lane_plan.py` never deals it to a lane.
+#
+# WHY. A volume being cleaned in the editor changes under a pass: group ids move
+# and texts are rewritten, and a pass prepped against the old files has to be
+# carried across by hand -- *The Paul Bunyan Machine*, 2026-09-24. Delete a line
+# when the reviewer says that volume's cleanup is done.
+
+25  still being cleaned by the reviewer (2026-09-26)
+26  still being cleaned by the reviewer (2026-09-26)
+27  still being cleaned by the reviewer (2026-09-26)
+28  still being cleaned by the reviewer (2026-09-26)
+29  still being cleaned by the reviewer (2026-09-26)
+30  still being cleaned by the reviewer (2026-09-26)
