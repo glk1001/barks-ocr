@@ -596,3 +596,10 @@ HELP KEEP AMERICA STRONG
 24 021 BOYS INC
 24 025 176-
 24 023 CEMENT
+
+# The Pied Piper of Duckburg: drawn $ the reviewer did not add (reviewer, 2026-09-26);
+# the 183 bee's ?, the 184 ? and the 185 Money Bin $ were added as groups instead
+# drawn $ on Scrooge's money bags (178 p8, 183 p5) and the Money Bin emblem (184 p1)
+24 178 $
+24 183 $
+24 184 $
