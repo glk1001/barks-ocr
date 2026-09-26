@@ -97,11 +97,14 @@ from barks_ocr.utils.vision_schema import (
     SETTING_KEY,
     SPEAKER_CONFIDENCE_KEY,
     SPEAKER_KEY,
+    SPEAKER_REVIEWED_DATE_KEY,
     SPEAKER_REVIEWED_KEY,
+    SPEAKER_WAS_KEY,
     TIME_OF_DAY_KEY,
     TIMES_OF_DAY,
     TYPE_ADJUDICATED_KEY,
     TYPE_KEY,
+    TYPE_REVIEWED_DATE_KEY,
     TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
     VISIBLE_TEXT_KEY,
@@ -912,6 +915,8 @@ class ApplyTally:
     preserved: int = 0
     captures_unchanged: int = 0
     pages_unchanged: int = 0
+    early_speaker_marks: int = 0
+    early_type_marks: int = 0
 
     def __add__(self, other: "ApplyTally") -> "ApplyTally":
         """Return the two tallies summed field by field, for accumulating pages."""
@@ -921,6 +926,8 @@ class ApplyTally:
             self.preserved + other.preserved,
             self.captures_unchanged + other.captures_unchanged,
             self.pages_unchanged + other.pages_unchanged,
+            self.early_speaker_marks + other.early_speaker_marks,
+            self.early_type_marks + other.early_type_marks,
         )
 
 
@@ -996,7 +1003,7 @@ def _groups_written(page_group: Any, ocr_file: Path, before: str) -> bool:  # no
     return True
 
 
-def _apply_type(group: dict, entry: dict) -> int:
+def _apply_type(group: dict, entry: dict, *, pre_pass: bool = False) -> tuple[int, int]:
     """Apply the pass's ruling on one group's ``type``. Returns 1 if it overruled the grouper.
 
     ``type`` is deliberately not in ``APPLIED_KEYS``, which blanket-writes every
@@ -1018,25 +1025,44 @@ def _apply_type(group: dict, entry: dict) -> int:
     case, and it is what the mirror gates on, so without this marker the
     adjudication would be made and then dropped.
 
+    EXCEPT ON A PAGE THE PASS IS READING FOR THE FIRST TIME. There a
+    ``type_reviewed`` predates the pass -- set while cleaning a volume in the
+    editor, sometimes deliberately (a logo retyped ``title``) and sometimes as
+    residue. Ruled 2026-09-26: such a type stands where the pass agrees or says
+    nothing, but where the pass reads the balloon differently the pass's type is
+    written, the mark is cleared, and ``type_was`` takes the value it overrode,
+    so the group reaches the corrections queue as "<cleanup's type> -> <pass's>"
+    instead of the pass being silently ignored.
+
     Args:
         group: The stored group, modified in place.
         entry: The result entry for this group.
+        pre_pass: True when no group on this page carried the pass's note before
+            this run, i.e. any review mark on it predates the pass.
 
     Returns:
-        1 when the stored type was overruled, 0 otherwise.
+        (1 when the stored type was overruled, 1 when that overruled a pre-pass
+        review mark) -- each 0 otherwise.
 
     """
     new_type = entry.get(TYPE_KEY)
-    if new_type is None or group.get(TYPE_REVIEWED_KEY):
-        return 0
+    if new_type is None:
+        return 0, 0
+    overrides_mark = False
+    if group.get(TYPE_REVIEWED_KEY):
+        if not pre_pass or new_type == group.get(TYPE_KEY):
+            return 0, 0
+        overrides_mark = True
+        group.pop(TYPE_REVIEWED_KEY, None)
+        group.pop(TYPE_REVIEWED_DATE_KEY, None)
 
     group[TYPE_ADJUDICATED_KEY] = True
     if new_type == group.get(TYPE_KEY):
-        return 0
+        return 0, 0
 
     group[TYPE_WAS_KEY] = group.get(TYPE_KEY)
     group[TYPE_KEY] = new_type
-    return 1
+    return 1, int(overrides_mark)
 
 
 def _panel_bounds(page_boxes: Any, panel_num: int) -> tuple[int, int, int, int] | None:  # noqa: ANN401
@@ -1276,6 +1302,14 @@ def _apply_page(
     changed = 0
     retyped = 0
     preserved = 0
+    early_speaker_marks = 0
+    early_type_marks = 0
+    # A page no group of which carries the pass's note has never been read, so
+    # any review mark on it was made while cleaning the volume in the editor --
+    # often residue, and never a judgement on what the pass says. Ruled
+    # 2026-09-26: those marks do not outrank the pass. Same test as
+    # `vision_status._read_by_the_pass`.
+    pre_pass = not any(VISION_NOTE_KEY in g for g in json_groups.values())
     # Serialized exactly as `save_json` will write it, so comparing against the
     # same serialization afterwards answers precisely "would the file bytes
     # differ" -- see `_groups_written`.
@@ -1287,6 +1321,12 @@ def _apply_page(
         # Skipping the keys rather than the whole group keeps the pass's own
         # reasoning and its text-correction proposal current -- see
         # SPEAKER_REVIEW_OWNED_KEYS.
+        if pre_pass and group.get(SPEAKER_REVIEWED_KEY):
+            # Cleared, not honoured: the group goes to the reviewer with the
+            # pass's call like any other. `vision_added` is provenance, and stays.
+            for key in (SPEAKER_REVIEWED_KEY, SPEAKER_REVIEWED_DATE_KEY, SPEAKER_WAS_KEY):
+                group.pop(key, None)
+            early_speaker_marks += 1
         reviewed = bool(group.get(SPEAKER_REVIEWED_KEY))
         if reviewed:
             preserved += 1
@@ -1297,7 +1337,9 @@ def _apply_page(
             group[stored_key] = entry.get(result_key)
         _expire_text_review(group, proposed_before)
 
-        retyped += _apply_type(group, entry)
+        overruled, overrode_mark = _apply_type(group, entry, pre_pass=pre_pass)
+        retyped += overruled
+        early_type_marks += overrode_mark
 
         # Emphasis goes into `ai_text` itself. Validation has already checked
         # that this strips back to the stored words, so the only thing changing
@@ -1313,7 +1355,7 @@ def _apply_page(
         changed += 1
 
     if dry_run:
-        return ApplyTally(changed, retyped, preserved)
+        return ApplyTally(changed, retyped, preserved, 0, 0, early_speaker_marks, early_type_marks)
 
     ocr_file = page_group.ocr_prelim_groups_json_file
     groups_written = _groups_written(page_group, ocr_file, before)
@@ -1326,7 +1368,15 @@ def _apply_page(
         capture_file = ocr_file.parent / (page + CAPTURE_FILE_SUFFIX)
         unchanged = int(not _write_capture(capture_file, capture, capture_model))
 
-    return ApplyTally(changed, retyped, preserved, unchanged, int(not groups_written))
+    return ApplyTally(
+        changed,
+        retyped,
+        preserved,
+        unchanged,
+        int(not groups_written),
+        early_speaker_marks,
+        early_type_marks,
+    )
 
 
 def _print_summary(  # noqa: PLR0913
@@ -1384,6 +1434,21 @@ def _print_summary(  # noqa: PLR0913
         print(
             f"{preserved_verb} the speaker call on {tally.preserved} already-reviewed"
             f" group(s) alone; a review outranks the pass."
+        )
+    # Said out loud because these are review marks the run removed: a cleanup
+    # left them on pages the pass had never read, and they would otherwise have
+    # kept the pass's call off the reviewer's queue.
+    if tally.early_speaker_marks:
+        cleared_verb = "Would clear" if dry_run else "Cleared"
+        print(
+            f"{cleared_verb} {tally.early_speaker_marks} speaker review mark(s) that predate"
+            f" the pass; those groups go to the reviewer with the pass's call."
+        )
+    if tally.early_type_marks:
+        type_verb = "Would override" if dry_run else "Overrode"
+        print(
+            f"{type_verb} {tally.early_type_marks} pre-pass type mark(s) where the pass"
+            f" reads the balloon differently; they are in the corrections queue."
         )
     if dry_run:
         print(f"{len(set(text_lines))} group(s) have proposed text corrections.")

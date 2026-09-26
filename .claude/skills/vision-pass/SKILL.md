@@ -461,6 +461,13 @@ commit that is really 140/141 is bad provenance. `--unreviewed` with no
 
 ## Traps
 
+- **Review marks made while cleaning a volume do not outrank the pass.** On a page
+  the pass reads for the first time, `vision_apply` clears `speaker_reviewed` and
+  its date and `speaker_was` (editor residue, ruled 2026-09-26), keeps
+  `vision_added`, and honours a pre-pass `type_reviewed` only where the pass agrees
+  or is silent -- a disagreement is written, with `type_was` holding the cleanup's
+  value, and lands in the corrections queue. It says so in two summary lines.
+  On a page the pass has already read, a review still outranks it.
 - **Kivy tools need a bare `--`**: `uv run barks-ocr-kivy-editor -- --queue-file …`.
   Kivy parses argv itself. Non-Kivy commands take bare flags.
 - **`Panels segments info file … is older than srce image file`** is an mtime
