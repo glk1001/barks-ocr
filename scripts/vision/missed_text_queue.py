@@ -44,7 +44,12 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-PRELIM = Path("/home/greg/Books/Carl Barks/Fantagraphics-restored-ocr/Prelim")
+from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
+
+# The prelim root, honouring `BARKS_OCR_PRELIM_DIR` like every `barks-ocr-*` command.
+# It was hardcoded to the main checkout until 2026-09-26, so a lane session parked its
+# entries against main's groups -- harmless only while no lane added a group.
+PRELIM = Path(OCR_PRELIM_DIR)
 ENGINES = ("easyocr", "paddleocr")
 ANNOTATION = re.compile(r"\s\s\[(?:quoted aloud, not boxed|\d+ in the art, \d+ grouped)\]$")
 COUNTED = re.compile(r"\[(\d+) in the art, (\d+) grouped\]$")
