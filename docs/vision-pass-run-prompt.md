@@ -7420,6 +7420,30 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-26, eighty-fourth batch, FIVE OF THIRTEEN REVIEWED AND MIRRORED -- *The Witching Stick*)
+
+*The Witching Stick* closed at 60/60 on both engines (prelim `86cb85f0`). **2 speaker corrections over 60 pass groups (3.3%), both in the nephew domain (2 of
+5)**, and **both were mediums: 2 of 3 mediums corrected, 0 of 57 highs.** No adds, two
+boxes tightened on 042, the one type correction (042 g5 `thought -> dialogue`) confirmed.
+
+- **THE SEAM RULE FAILED ON A 5px MARGIN WHEN THE LINE ADDRESSES SOMEONE.** 039 g7 `UNCA
+  DONALD, YOU'RE ASKING FOR TROUBLE!` -- the tip ended 5px inside the left boy's head span
+  and at the edge of the red-capped boy's, so the pass named the left boy Dewey (blue) and
+  wrote in its own note that if the boy FACING DONALD was the speaker, it was Huey. The
+  review took Huey. **A tip within a few pixels of the boundary is not "inside" either
+  head; when the line addresses a figure, the boy facing that figure is the speaker.** The
+  seam rule is now 13 of 14 across two batches, and the one miss is this: on small wedges
+  (100-300px) a seam tip needs a second key before it names anyone.
+- **042 g4 STOOD** -- a tip in the gap with the nearer head, the lean and gap-tip-goes-left
+  all agreeing on the red boy. Three agreeing keys is what makes a seam call safe.
+- **A LONG-SHOT TIP THAT MISSES DONALD'S HEAD IS NOT DONALD'S.** 038 g7 `OR DO YOU JUST
+  DRILL HOLES EVERYWHERE!` -- the pass measured the tip ~30px right of Donald's head and
+  named him anyway, the tall figure behind the boys; the review gave it to the boys. A tip
+  that ends clear of a head goes to whoever it is nearer, and the long-shot Donald default
+  is for lone figures only.
+- Medium is still not a hedge: 2 of 3 wrong here, as on *Pixilated Parrot* and *Lost in
+  the Andes!*.
+
 ### Findings to paste into the next run (2026-09-26, eighty-fourth batch, FOUR OF THIRTEEN REVIEWED AND MIRRORED -- *The Gab-Muffer*)
 
 *The Gab-Muffer* closed at 139/139 on both engines (prelim `d41e3d46`, `133` add in the
