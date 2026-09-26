@@ -7452,8 +7452,15 @@ corrections over 631 pass groups (4.0%)**, 21 of them nephews.
 - **THE REVIEW'S ADDS RENUMBERED SEVEN PAGES AND STRANDED 15 GROUPS AND 4 TYPE
   CONFIRMATIONS**, worked from a rebuilt queue. Two added sweaters had kept a
   neighbour's `dialogue` type from the editor's seeding (013 g17, 018 g22) and were
-  set to `background` before the mirror. **Page 007 now carries `HOCK SHOP` twice**
-  (g4 and g5, the same box) -- open at close, awaiting the reviewer's word.
+  set to `background` before the mirror. The review's duplicate `HOCK SHOP` on 007 was
+  removed (eb366306).
+- **MISSED TEXT CLOSED.** The pass's page captures had drifted from the reviewed
+  grouping (one entry for two sweaters, partial `176-` numbers), which kept 26
+  findings on the audit; aligning the captures to the reviewed groups left 9, all
+  put on the ignore list at the reviewer's word -- `$` on sacks and bags, a mirrored
+  `TEL`, a package scrawl, a cut-off sweater number, two hidden barrel labels.
+  **After a review regroups lettering, align the captures before handing back the
+  audit**, or the reviewer is shown findings that are only transcription drift.
 - `other:` after review: `a Beagle Boy` (61), `the F.B.I. agent` (4), `the sheriff`
   (3), `the bank cashier` (2), `a clerk`. No near-duplicates.
 

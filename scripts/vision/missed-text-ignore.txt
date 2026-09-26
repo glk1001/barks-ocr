@@ -582,3 +582,17 @@ HELP KEEP AMERICA STRONG
 
 # The Wax Museum: six drawn ? round Ike, grouped once as a single device on 054 g9 (reviewer, 2026-09-24)
 23 054 ?
+
+# The Paul Bunyan Machine: props and partial lettering not worth a group (reviewer, 2026-09-26)
+# 009 mirror-image TEL on the booth glass and 014's 176 package scrawl: their groups were removed in the Vol. 24 cleanup
+24 009 TEL
+24 014 176
+# drawn $ on money bags and sacks
+24 011 $
+24 024 $
+24 025 $
+24 026 $
+# a sweater and a cut-off sweater number, and two partly hidden CEMENT barrel labels
+24 021 BOYS INC
+24 025 176-
+24 023 CEMENT
