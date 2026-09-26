@@ -7420,6 +7420,28 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, SIX OF THIRTEEN REVIEWED AND MIRRORED -- *On the Dream Planet*; lane 1 closed)
+
+*On the Dream Planet* closed at 119/119 on both engines (prelim `02dc980d`): the pass's
+118 groups and one add, Gyro's drawn `? ?` on 128 (g22, `thought`). **0 speaker
+corrections**, the one type correction (128 g10, the miner's off-panel `HI-HO-HI-HO!`
+to `dialogue`) confirmed, two boxes tightened, and the drawn notes on 128 to the ignore
+list. The equidistant tip on 124 g10 (named by MY DREAM PLANET) and the tail over the
+reading on 124 g11 (Gus, not the sceptic Gyro) both stood.
+
+**LANE 1 (Vol. 24) CLOSED: 7 speaker corrections over 641 pass groups (1.1%).** By the
+confidence the pass wrote: **high 2 of 600 (0.3%), medium 3 of 36 (8.3%), low 2 of 4
+(50%).** Per title *Pied Piper* 0, *Fun* 4, *Inventors' Contest* 0, *Gab-Muffer* 1,
+*Witching Stick* 2, *Dream Planet* 0. The two highs were both `other:` calls on *Fun*
+(a chorus, and the Helper's `?`); every name-for-name error was a medium or a low, and
+all four were a tail read at the edge of a head -- the speck riders and the seam tip.
+Every one of the cloud-balloon `thought` retypes was confirmed on every title.
+
+- *Fun*'s `review_findings` table reads high 3 of 136: the third is 028 g14, the
+  review's add, which took an id a pass group held at `e1bc0e15` because it was
+  inserted mid-page. The real count is 2. Rates keyed on ids overcount after a mid-page
+  add -- read the correction list, not only the rate table.
+
 ### Findings to paste into the next run (2026-09-26, eighty-fourth batch, FIVE OF THIRTEEN REVIEWED AND MIRRORED -- *The Witching Stick*)
 
 *The Witching Stick* closed at 60/60 on both engines (prelim `86cb85f0`). **2 speaker corrections over 60 pass groups (3.3%), both in the nephew domain (2 of
