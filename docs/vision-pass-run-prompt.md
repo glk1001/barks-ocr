@@ -7420,6 +7420,38 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, SEVEN OF THIRTEEN REVIEWED AND MIRRORED -- *Mastering the Matterhorn*)
+
+*Mastering the Matterhorn* closed at 143/143 on both engines. **4 speaker corrections, all
+in the nephew domain (4 of 58, 6.9%), and all four were highs**; the five mediums the pass
+wrote all stood. The five `unknown -> none` rows are sweater groups added in review. Six
+type corrections confirmed -- the goat's SNORTs to `dialogue`, one bubble-trail balloon to
+`thought`.
+
+- **UNDER-NAMING, TWICE.** 061 g13 `THANKS TO OUR PAL, BIG HORN!` -- the pass left it
+  `nephews` because neither remaining boy's feather printed (red 0, green 0 at an 8px
+  floor); the review named Louie and recorded `green`. A zero at 8px on a feather is
+  about the scan. 063 g8 `HEY, UNCA DONALD! ...` -- the review named Louie by elimination
+  ("Not Huey or Dewey"); the pass had the boy's tail and no feather, and did not
+  eliminate.
+- **OVER-NAMING ON THE DIAMOND, TWICE, AT HIGH.** 062 g4 `A BIG DIAMOND!` -- the tip was
+  "just past" the left boy's 78px red feather and 46px from the boy holding the diamond;
+  064 g5 `IT HAS A STOLEN DIAMOND INSIDE! SEE?` -- tail to the left boy holding it, red
+  953px. Both `Huey` went to `nephews`; the review left no note saying why. On the
+  evidence: a tip "just past" a hat is a tip in a gap, not a named head, and it is not
+  `high`.
+- **BEAGLE BOY SWEATERS ARE STORED AT FULL TEXT**, `176-NNN BEAGLE BOYS INC.`, even where
+  the art cuts them -- the same ruling as *Fun*'s partly hidden signs. The review added
+  four and rewrote the pass's partial ones to the full form. The pass should do the same:
+  record the full sweater in the group, the printed fragment in `visible_text`, and expect
+  the audit to need an ignore entry (twelve went on the list here).
+- **REVIEW LEFT THREE GROUPS HALF-DONE ON ONE ENGINE**, all on the pages where sweaters
+  were added: 060 g22 added on easyocr only and left `unknown`, 061 g19's new full text
+  typed on easyocr only, and 060 g20 unticked. The mirror refused both unpaired groups by
+  name. Finished at close-out: 060 g22 set `none`, given its paddleocr twin; 061 g19's
+  text copied across; all three stamped. **After a review that adds on one engine, read
+  the mirror's "no counterpart" lines before anything else.**
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, SIX OF THIRTEEN REVIEWED AND MIRRORED -- *On the Dream Planet*; lane 1 closed)
 
 *On the Dream Planet* closed at 119/119 on both engines (prelim `02dc980d`): the pass's

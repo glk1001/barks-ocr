@@ -629,3 +629,20 @@ HELP KEEP AMERICA STRONG
 
 # On the Dream Planet: drawn music notes beside the miner's HI-HO-HI-HO! (reviewer, 2026-09-27)
 24 128 ♫ ♪
+
+# Mastering the Matterhorn (reviewer, 2026-09-27): Beagle Boy sweaters. The review stores
+# each sweater at its full text, 176-NNN BEAGLE BOYS INC., so the partial lettering the
+# pass recorded no longer matches; the left Beagle's cut-off 176- on 061 p1 is not worth
+# a group
+23 060 176-
+23 060 BEA
+23 060 176-617 BEAGLE
+23 061 176-
+23 061 617
+23 061 BEAGLE BOYS
+23 061 BEAGLE
+23 061 176-617
+23 061 BEAGLE BOYS INC.
+23 061 176-617 BEAGLE
+23 061 176-761 BEAGLE BOYS
+23 061 76-671 BEAGLE BOYS
