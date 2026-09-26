@@ -7420,6 +7420,43 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-26, eighty-third batch, ALL THREE REVIEWED AND MIRRORED -- *The Paul Bunyan Machine* closes it)
+
+*The Paul Bunyan Machine* closed at 348/348 on both engines (ada012a0), reviewed on
+`main` after the Vol. 24 cleanup merge. **13 real speaker corrections over 338 pass
+groups (3.8%)**, 11 of them in the nephew domain (22% of 50). The 20 `unknown ->
+none` rows are groups added in the editor, not pass errors. Batch total: **25
+corrections over 631 pass groups (4.0%)**, 21 of them nephews.
+
+- **SEAM TIPS: TWELVE OF TWELVE NAMED ACROSS THE BATCH.** Six more here -- 012 g0
+  `Louie`, 012 g12 `Dewey` (the reviewer's note: "Not Huey or Louie"), 012 g13 `Huey`,
+  013 g1 `Huey`, 016 g8 `Louie`, 022 g19 `Huey`. The rule in the section below stands
+  and is now measured on 12 cases: **on caps this size, a tip between two boys is a
+  name, never `nephews`.** The reviewer picks by reading the art, and the pass should
+  cash its own note and name the nearer head rather than decline.
+- **A CROWNS.PY `NO INK ON CROWN` WAS WRONG TWICE.** 014 g6 (`Dewey`/blue) and 017 g5
+  (`Louie`/green): the pass took the zero and wrote `nephews`, and the review found the
+  wedge. At 300-400px heads, probe the crown before accepting a zero.
+- **ONE NAME SWAPPED FROM A TIP READ AT A DISTANCE.** 013 g2 `Huey`/red -> `Dewey`/blue:
+  the tip stopped 50px above the running row and the pass gave it to the middle boy.
+  A 50px gap over a row is the case to crop.
+- **A LONG-SHOT PAIR WAS SPLIT THE WRONG WAY.** 007 g13 `Scrooge -> Donald` ("OHO!
+  THERE ARE TWO TALL DOORS", a medium): the pass read it and the next balloon ("AND A
+  TINY WINDOW ... MY MONEY BIN") as Scrooge's two halves. The review gave the first to
+  Donald. Continuation words are not evidence of one speaker across two balloons.
+- **013 g5 WAS NAMED `Huey`** -- the second balloon to the trio in the doorway, which
+  the pass left collective at 60px figures.
+- **ALL 9 TYPE CORRECTIONS STOOD**, including both `$` rings typed `thought` with a Beagle
+  Boy as speaker (018 g11, 022 g10) and the Money Bin Beagle's clouds stored as
+  captions (015).
+- **THE REVIEW'S ADDS RENUMBERED SEVEN PAGES AND STRANDED 15 GROUPS AND 4 TYPE
+  CONFIRMATIONS**, worked from a rebuilt queue. Two added sweaters had kept a
+  neighbour's `dialogue` type from the editor's seeding (013 g17, 018 g22) and were
+  set to `background` before the mirror. **Page 007 now carries `HOCK SHOP` twice**
+  (g4 and g5, the same box) -- open at close, awaiting the reviewer's word.
+- `other:` after review: `a Beagle Boy` (61), `the F.B.I. agent` (4), `the sheriff`
+  (3), `the bank cashier` (2), `a clerk`. No near-duplicates.
+
 ### Findings to paste into the next run (2026-09-24, eighty-third batch, TWO OF THREE REVIEWED AND MIRRORED -- *The Watchful Parents* and *The Wax Museum*)
 
 **THE PAUL BUNYAN MACHINE WAS RE-APPLIED ON `glk/prelim-edits`, 2026-09-24.** Vol. 24 was
