@@ -7420,6 +7420,16 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-26, eighty-fourth batch, THREE OF THIRTEEN REVIEWED AND MIRRORED -- *The Inventors' Contest*)
+
+*The Inventors' Contest* closed at 43/43 on both engines. **0 speaker corrections over 43
+pass groups** (39 high, 4 medium), and both of the pass's type corrections confirmed --
+the cloud balloon on 162 g1 to `thought`, and 164 g6, a balloon with a tail to the judge
+stored as `narration`, to `dialogue`. The review only tightened one box (165 g7 `ZOW`).
+The drawn `♫ ♪` on 163 went on the ignore list. With *Pied Piper* and *Fun* that is three
+Gyro stories and 4 speaker corrections over 324 groups: this cast, without the nephews,
+reads cleanly, and the errors that remain are long shots of specks.
+
 ### Findings to paste into the next run (2026-09-26, eighty-fourth batch, TWO OF THIRTEEN REVIEWED AND MIRRORED -- *Fun? What's That?*)
 
 *Fun? What's That?* closed at 151/151 on both engines. **4 real speaker corrections over
