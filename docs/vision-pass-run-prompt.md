@@ -7420,6 +7420,27 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-26, eighty-fourth batch, ONE OF THIRTEEN REVIEWED AND MIRRORED -- *The Pied Piper of Duckburg*)
+
+*The Pied Piper of Duckburg* closed at 133/133 on both engines (prelim `6b4a4217`).
+**0 speaker corrections over 133 pass groups**, 131 of them high; there is no nephew
+domain in it. All seven of the pass's type corrections were confirmed, including the
+three that are the rules below (cloud balloon to `thought`, the `KEEP OUT!` post to
+`background`, the scream and Scrooge's `WAK!` to `dialogue`).
+
+- **RULING, 2026-09-26: THE HELPER IS THE LITTLE HELPER, NEVER `Gyro's Helper`.** Write
+  `other:Little Helper` -- or bare `Little Helper` where the story's cast in `roster.txt`
+  carries the tag (36 titles do, among them *The Inventors' Contest*, *The Gab-Muffer*,
+  *The Wishing Well*, *Black Wednesday*), because `normalize_speaker` unwraps the `other:`
+  form there and would store it bare anyway. Applied the same day to every
+  `other:Gyro's Helper` in the corpus -- *Pied Piper* 179 g10, *Inventors' Contest* and
+  *Gab-Muffer* (26 groups, bare), *The Sure-Fire Gold Finder* (Vol. 20, 4 groups) --
+  except *Fun? What's That?*, whose 21 wait for its review to be committed.
+- The `Hi!` note held up by the helper (179 g10) kept its speaker: a note a figure holds
+  up is named for the figure, as the pass had it at medium.
+- **MISSED TEXT UNWORKED:** the six drawn `$` and `?` findings on 178, 183, 184 and 185
+  are neither grouped nor on the ignore list, so the close-out's audit row still FAILs.
+
 ### Findings to paste into the next run (2026-09-26, eighty-fourth batch, NONE REVIEWED -- the first lane round: lane 1 Vol. 24, lane 2 Vol. 23)
 
 Thirteen titles read concurrently in two lanes, each in its own prelim worktree, and
