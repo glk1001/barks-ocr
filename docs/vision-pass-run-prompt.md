@@ -7420,6 +7420,274 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-26, eighty-fourth batch, NONE REVIEWED -- the first lane round: lane 1 Vol. 24, lane 2 Vol. 23)
+
+Thirteen titles read concurrently in two lanes, each in its own prelim worktree, and
+merged into the prelim `main` as `33f5bd9d` (lane 1) and `af51e509` (lane 2). **112
+images over 87 pages, 1.29 per page** (lane 1 1.27, lane 2 1.30), and **0.91M tokens per
+page** against a 3.65M median for the previous five batches -- each lane session carried
+only its own half of the batch in context. The lanes never shared
+a volume, so each lane's group ids are `main`'s and its queues stand. Every figure below
+is the pass's own and none of it has been checked.
+
+#### Lane 1 -- Vol. 24
+
+*The Pied Piper of Duckburg* (Vol. 24, 8pp, 133 groups), *Fun? What's That?* (10pp, 148),
+*The Witching Stick* (5pp, 60), *The Inventors' Contest* (4pp, 43), *On the Dream Planet*
+(6pp, 118), *The Gab-Muffer* (11pp incl. the 043 frontispiece, 139). **56 images over 44
+pages, 1.27 per page**; per title 1.50 / 1.30 / 1.60 / 1.00 / 1.17 / 1.09. Every figure
+below is the pass's own and none of it has been checked.
+
+- **FIVE OF SIX ARE GYRO STORIES, SO THE NEPHEW DOMAIN IS TINY.** Only *The Witching Stick*
+  and *The Gab-Muffer* have the boys. Two names in the whole lane, both SEAM TIPS named
+  per the eighty-third batch's rule rather than left collective: *Witching Stick* 039 g7
+  `Dewey`/blue at **medium** (tip ~5px inside the left boy's head span; the red-capped
+  boy beside him faces Donald -- if the review reads him as the speaker it is Huey), and
+  042 g4 `Huey`/red at high (tip 12px from the left boy against 22px from the middle,
+  tail leaning left, so nearer head, lean and gap-tip-goes-left all agree). **Check
+  whether the seam rule holds on these small 100-300px wedges** -- last batch's twelve
+  were on 50-3,800px caps.
+- **THE GAB-MUFFER BOYS WEAR ORANGE PLAY HATS, NOT THEIR BEANIES** (shako, fez, pith
+  helmet, 132-139), and capscan puts `green: 0 blob(s) total` on every panel checked
+  (132 p8, 133 p7-p8, 136 p5/p7); the red there is the fire extinguisher and the one
+  dark blue blob per boy (`#0089bb` V0.73) is his sword hilt. So all 29 of that title's
+  nephew calls are forced collectives, one tail per boy or not. The quote is in every note.
+- **CLOUDS STORED AS SPEECH: 9 OF THE 20 TYPE CORRECTIONS.** Balloons with a cloud edge
+  and a bubble trail stored as `dialogue`: *Pied Piper* 181 g10; *Fun* 028 g2; *Gab-Muffer*
+  130 g7, 132 g2, 134 g8, 135 g2, g4 (checked on a crop), g6, 136 g6. The other way, two
+  pointed-tail balloons stored as `thought`: *Pied Piper* 183 g5 (a WAVY outline, not a
+  cloud -- scalloped is not a thought balloon) and *Witching Stick* 042 g5.
+- **SIGNS AND CAPTIONS MIS-TYPED.** The Money Bin hill's `KEEP OUT!` post is stored
+  `narration` on 182 g13 and `sound_effect` on 184 g7 -> `background` (paddleocr already
+  had it right, so each is one queue entry). *Inventors' Contest* 164 g6 is a balloon with
+  a tail to the judge stored as `narration` -> `dialogue`.
+- **VOICES RETYPED TO DIALOGUE**, per the roster: *Pied Piper* 183 g13 `SCREECH!`
+  (Miss Quackfaster's off-panel scream, medium) and 183 g18 Scrooge's `WAK!`; *Fun* 036
+  g14 the bear's howl; *Dream Planet* 128 g10 a miner singing `HI-HO-HI-HO!` off-panel;
+  *Gab-Muffer* 132 g15 the bugle `TARA TARA` (an instrument names its player) and 133 g2
+  `BANGITY BOOM! BOING!`, which are drawn in balloons with tails.
+- **THE LITTLE HELPER IS `other:Gyro's Helper`**, the majority form in the captures (40),
+  although *Inventors' Contest* and *Gab-Muffer* tag `Little Helper` in the roster. Say if
+  the tag should be used. It is also named as the maker of its own noises (the buzzing
+  under the stethoscope, its bulb flashing, the `JUMP` of its checkers, the bell it
+  rings) and, at medium, as the "speaker" of the two things it writes: the `Hi!` note in
+  the question box (*Pied Piper* 179 g10) and the closing `AND SO SHOULD CHECKER PLAYERS`
+  sign (*Gab-Muffer* 139 g13). Say if a note held up by a figure should stay `none`.
+- **THREE TEXT CORRECTIONS, ALL PARTLY HIDDEN SIGNS** (*Fun* 028 g15 `DR. QUACKER` ->
+  `CKER`, 028 g16 `DOCTOR IS IN` -> `CTOR IS N`, 029 g11 -> `DOCTOR IS`). The stored text
+  restores the whole sign from other panels; the pass proposed what prints. If the review
+  prefers the full sign for search, reject them and put the matching audit rows on the
+  ignore list.
+- **LOWS AND MEDIUMS TO LOOK AT FIRST.** Four lows, all long shots of Gyro's craft whose
+  riders are specks, named only by analogy with an earlier panel: *Fun* 031 g10/g11,
+  032 g14/g15. Mediums: *Fun* 030 g7/g8, 031 g0/g1, 032 g12/g13, 036 g10/g11 (silhouette
+  scuffle); *Witching Stick* 038 g7 (Donald in a long shot), 039 g7, 041 g5 (silhouette);
+  *Dream Planet* 124 g10 (tip equidistant, named by MY DREAM PLANET); *Inventors' Contest*
+  162 g7 (`WHOA!`, a zigzag tail to the Helper driving the mouse cart).
+- **TAILS OVERRULED THE OBVIOUS READING TWICE.** *Pied Piper* 185 g6 `ONE WAY OR ANOTHER!`
+  reads as Gyro continuing his own line; its tail runs to Scrooge. *Dream Planet* 124 g11
+  `INCREDIBLE! ... LIKE A DREAM COME TRUE!` reads as the sceptic Gyro; its tip is on Gus
+  with his arms up. Both checked on a crop.
+- **A PRE-PASS `type_was` IS IN THE CORRECTIONS QUEUE.** *Pied Piper* 182 easyocr g4 has
+  carried `type_was: thought` since the Vol. 24 cleanup commit `63dd234e` and was never
+  confirmed. The art supports the stored `dialogue` (a pointed tail to the policeman).
+- **EMPHASIS CANDIDATES PICKED THE WRONG WORD THREE TIMES**: *Pied Piper* 178 g8 (the bold
+  `SIR` is the second one), *Fun* 028 g4 (`HAVE TO`, not `WILL`), *Fun* 036 g9 (`BEAR`, not
+  `A`). The art was used.
+- **TOOLING GAP: `scripts/vision/missed_text_queue.py` hardcodes `PRELIM = .../Prelim`**
+  and does not follow `BARKS_OCR_PRELIM_DIR`. Harmless in this lane, since the pass added
+  and renumbered nothing, so main's ids and texts match; it would park entries on the wrong
+  groups for a lane that adds groups.
+- `other:` values, no near-duplicates by the census. *Pied Piper*: `the policeman` (6),
+  `Miss Quackfaster` (3), `the radio announcer` (2), `Gyro's Helper`, `a clerk`, `an
+  office worker`. *Fun*: `Gyro's Helper` (10), `Dr. Quacker` (4), `the bear` (4), `the
+  bowling alley man`, `Yogi Wisenik`. *Inventors' Contest*: `the judge` (8), `Gyro's Helper`
+  (5), `a bystander`; `Black Pete` (3) as the tagged name. *Dream Planet*: `a dream planet
+  native` (44), `Gus Goose` (29, the corpus form), `Googie` (3), and one each for the
+  inventor parodies the dialogue names, `Ben`, `Tom`, `Orville`, `Von Brawn`. *Gab-Muffer*:
+  `Gyro's Helper` (8), `the grouch` (4), `a blackbird` (2), `a dog` (2).
+
+**Missed text (lane 1) -- the reviewer adds these first.**
+
+Queues are `<out-dir>/queue-missed.txt`, one line per engine, parked on a group on the
+same page.
+
+- *The Pied Piper of Duckburg* (6): 178 p8 `$` on Scrooge's money bag (the audit counts
+  it as `$ $ $ $ $ $  [2 in the art, 1 grouped]`); 183 p5 `$` on the money bag; 183 p7
+  `?` over the bee; 184 p1 `$` emblem on the Money Bin (and `$` on the banknotes in p2);
+  184 p2 `?` over the Helper; 185 p5 `$` emblem on the bin.
+- *Fun? What's That?* (8 + 1 by hand): 028 p6 `CKER` and `CTOR IS N` and 029 p8 `DOCTOR IS`
+  (these clear if the three text corrections are accepted); 029 p8 `℞` prescription scrawl;
+  030 p1 `DO` fragment of the door sign; 031 p7 lane numbers `1` and `2`; 032 p1 `BOWLING`
+  on the bowler's shirt. **By hand:** 028 p5 a third `DOCTOR IS IN` door card, ungrouped,
+  which the audit cannot see while 028 g16 stores the full sign.
+- *The Witching Stick*: none.
+- *The Inventors' Contest* (1): 163 `♫ ♪` drawn notes (p4 cloud, p8 by Gyro's head).
+- *On the Dream Planet* (1): 128 p4 `♫ ♪` beside `HI-HO-HI-HO!`.
+- *The Gab-Muffer* (3): 131 p7 `?` over the Helper; 132 p1 `♫ ♪` beside Gyro's song;
+  133 p8 `?` round the boys (`7 in the art, 4 grouped`).
+
+**Queue counts (lane 1).**
+
+| title | speakers low/med | speakers unreviewed | text | type | missed |
+|---|---|---|---|---|---|
+| *The Pied Piper of Duckburg* | 2 | 133 | 0 | 6 (+1 pre-pass) | 6 |
+| *Fun? What's That?* | 12 | 148 | 3 | 2 | 8 + 1 by hand |
+| *The Witching Stick* | 3 | 60 | 0 | 1 | 0 |
+| *The Inventors' Contest* | 4 | 43 | 0 | 1 | 1 |
+| *On the Dream Planet* | 6 | 118 | 0 | 1 | 1 |
+| *The Gab-Muffer* | 13 | 139 | 0 | 9 | 3 |
+
+Speaker queues count groups. Corrections queue files count one line per engine that
+still differs, which is why *Pied Piper*'s file holds 11 lines.
+
+**Images read (lane 1).**
+
+| title | pages | images | per page | what they were |
+|---|---|---|---|---|
+| *The Pied Piper of Duckburg* | 8 | 12 | 1.50 | page.png ×8, four tail/type crops (181 p5, 182 p6, 183 p2+p5, 185 p2+p4) |
+| *Fun? What's That?* | 10 | 13 | 1.30 | page.png ×10, three tail stacks (030, 031, 034) |
+| *The Witching Stick* | 5 | 8 | 1.60 | page.png ×5, three tail crops (038, 039 p5, 042 p3) |
+| *The Inventors' Contest* | 4 | 4 | 1.00 | page.png ×4 |
+| *On the Dream Planet* | 6 | 7 | 1.17 | page.png ×6, one cockpit crop (124 p5) |
+| *The Gab-Muffer* | 11 | 12 | 1.09 | page.png ×11, one type crop (135 p3) |
+| **lane total** | **44** | **56** | **1.27** | |
+
+#### Lane 2 -- Vol. 23
+
+*Mastering the Matterhorn* (Vol. 23, 8pp, 135 groups + 4 added), *Trail Tycoon* (6pp, 97),
+*The Librarian* (6pp, 104), *The Double Date* (5pp, 87), *The TV Babysitter* (6pp, 95),
+*The Beauty Queen* (7pp, 109), *The Master Glasser* (5pp, 80). Every figure below is the
+pass's own and none of it has been checked.
+
+- **FOUR OF THE SEVEN ARE DAISY DUCK'S DIARY, AND THEIR CAPTIONS ARE SCRIPT.** *The
+  Librarian*, *The Double Date*, *The TV Babysitter* and *The Beauty Queen* carry a diary
+  caption on nearly every page, hand-lettered in slanted script. They are `narrator` with
+  the whole group in `[i]` -- no Diary title had been through the pass before, so there was
+  no precedent; **say if `[i]` on script is wanted**, because it is 56 groups. The
+  flashback captions in quotation marks on *Librarian* 120 are narrator too (the field
+  records the box).
+- **DAISY THINKS IN SMOOTH BALLOONS WITH A BUBBLE TRAIL, AND GEMINI STORED THEM AS SPEECH.**
+  12 of the batch's 29 type corrections are retypes to `thought` (11 from `dialogue`, one
+  SOB! from `sound_effect`) on a balloon with a plain edge and a trail of separate bubbles -- the same drawing as the neighbouring
+  groups already stored as thought (*Beauty Queen* 135 g2/g13/g15, 137 g0, 141 g2; *TV
+  Babysitter* 133 g14/g17/g20; *Trail Tycoon* 153 g2; *Matterhorn* 058 g7; *Master
+  Glasser* 066 g9/g11). **Check that the review agrees** that a bubble trail on a smooth
+  balloon is a thought.
+- **ANIMAL VOICES WENT TO DIALOGUE, MOUTH AND HAND NOISES STAYED `sound_effect`.** The
+  goat's SNORT (*Matterhorn* 058 g13, 059 g3, 060 g2/g11, 064 g7), the lion's ROAR,
+  GRUMP and PURRR (*Librarian* 120-121, 7 groups), Scrooge's roar down the phone (117
+  g13) and Poopsie the goldfish's CHIRKLE (*Master Glasser* 066 g8) are `sound_effect ->
+  dialogue`. SLURP (a lick), SMACK (Donald's kisses) and PAT PAT (Scrooge patting the
+  lion) kept `sound_effect` with the maker named; SLAP, WAP and the crampons' CLANG are
+  impacts with `none`.
+- **IN *MATTERHORN* THE INK IS ON A SWISS-HAT FEATHER, AND IT READ ON EVERY SIZED HEAD.**
+  The boys hold their quartered beanies on 057 p1, then wear green Swiss hats whose
+  FEATHER prints blue, red or green; `cap_colour` records the feather. capscan at 25px
+  found every feather from 120px to 1,400px; on the long shots it took an 8-10px floor
+  (062 p7 16px blue, 064 p1 41px blue, 061 p7 269px blue). 38 of the 58 nephew groups
+  are named (per engine); the 20 collectives are silhouettes, hats cut by the border or a
+  balloon, and three two-tail choruses.
+- **ELIMINATION WAS USED FIVE TIMES, ALWAYS AT MEDIUM WITH `cap_colour` NULL**:
+  *Matterhorn* 058 g1 (Louie), 062 g3 (Dewey); *TV Babysitter* 134 g8 (Louie, the
+  bare-headed middle boy between red and blue); *Master Glasser* 065 g3 (Louie: the line
+  says HUEY had bad luck, so the speaker is not Huey, and the only cap that prints is the
+  blue boy's). If the review withdraws these, elimination needs more than a tail.
+- **ART AGAINST DIALOGUE, FLAGGED NOT RESOLVED: *Master Glasser* 065 g5.** The speaker
+  prints a clean red cap (621px) and says HE hit a home run into the greenhouse,
+  continuing the previous line about HUEY -- so the speaker is not Huey, and the boy with
+  the bat wears blue. Left `nephews` with `red` recorded. **Say which the review takes**:
+  if the dialogue, this is a colourist swap on one panel.
+- **THE TV BABYSITTER'S BOYS ARE BARE-HEADED IN IDENTICAL PYJAMAS FOR MOST OF IT.** 19 of
+  its 28 nephew groups are collective for that reason. Names came from the caps where
+  they print (131 p2-p3 at the window, 134 p5 at the bowling alley) and from the 132
+  caption (`asking HUEY to let me in`), which names the lone boy of 132 p1 at high and,
+  by scene continuity, the same boy in p2-p3 at medium (132 g2, g5).
+- **A DRAWN DEVICE ON A TV SCREEN IS NOT A HEAD.** The boys on the closed-circuit screen
+  (*TV Babysitter* 130, 132) and the jagged broadcast tails out of a set (132 g8-g10, 134
+  g17, *Master Glasser* 068 g5) were given to the figures on the screen.
+- **TWO TEXT CORRECTIONS, BOTH *MASTER GLASSER* 066**, both read at 1.2x: g6 `MASTER
+  GLASS CRAFTSMAN` -> `MASTER GRASS CRAFTSMAN` (her slip is the joke Donald corrects in
+  g7), g8 `CHINKLE!` -> `CHIRKLE!`.
+- **ONE PRE-PASS `type_was`**: *Librarian* 118 g19 (easyocr) carried `type_was: thought`
+  from the Vol. 23 cleanup before the pass read it; the stored `dialogue` agrees with the
+  pass, so it only needs confirming. *Beauty Queen* 135 g0's retype to `title` is on
+  easyocr only -- paddleocr already had it.
+- **MEDIUMS TO LOOK AT FIRST.** *Matterhorn* 058 g1, g2 (a 25px shaded red sliver), 062
+  g3, g16 (16px), 064 g2 (41px); *Trail Tycoon* 151 g6, 155 g2 (a brave in brown, not
+  Brave Eagle's orange); *Double Date* 124 g6, 125 g5, g18, 127 g4; *TV Babysitter* 131
+  g5, g6, 132 g2, g5, 134 g8; *Beauty Queen* 139 g4 (the one low: WAIT! off-panel), 140
+  g6, 141 g13; *Master Glasser* 065 g3, 066 g8.
+- **THE BEAGLE BOYS ARE `other:a Beagle Boy` AGAIN (26 groups per engine)**, as the
+  eighty-third batch settled. Three legible sweaters on *Matterhorn* 061 p7 and the ZIP on
+  062 p7 were added as groups by the pass; the partial sweater numbers elsewhere are in
+  the missed-text queue.
+- `other:` values. *Matterhorn*: `a Beagle Boy` (26), `the mountain goat` (7). *Trail
+  Tycoon*: `a pioneer` (11), `Brave Eagle` (9), `an Indian brave` (4), `a pioneer woman`,
+  `the lead wagon driver`, `the pioneers` -- `a pioneer` / `a pioneer woman` are different
+  people. *Librarian*: `the lion` (7), `Miss De Wak` (6), `a Money Bin guard` (6), `the
+  guard captain` (3), `the movie director`. *Double Date*: `Rockhead Rooster` (16), `Clara
+  Cluck` (12), `the bandleader` (5, the brown-haired man, per the 126 caption), `a band
+  member` (2). *TV Babysitter*: `the TV announcer` (3), `Donald's teammates`. *Beauty
+  Queen*: `Sam Buckwheat` (11), `Silas Shoat` (8), `Gus Goose` (2), `a celebration guest`.
+  *Master Glasser*: `Mrs. Snootmore` (7), `the motorist` (6), `a TV viewer` (4),
+  `Poopsie`, `a spectator`, `a townsperson`, `the TV cameraman`. Bare `Grandma Duck` in
+  *Trail Tycoon* (19) and *Beauty Queen* (12), which `speaker-census` lists as off-roster,
+  as before. No near-duplicates.
+
+**Missed text (lane 2) -- the reviewer adds these first.**
+
+Queues are `<out-dir>/queue-missed.txt`, one line per engine, parked on a group on the page.
+
+- ***Mastering the Matterhorn*** -- Beagle Boy sweaters the engines never grouped: **060
+  p9** left Beagle `176-` / `BEA` (cut off) and right Beagle `176-617` / `BEAGLE`; **061
+  p1** left Beagle `176-` (partial) and the `617` above the grouped `BEAGLE BOYS` (g2);
+  **061 p3** `176` / `BEAGLE` on the rocket-toboggan Beagle; **061 p5** `617`; **061 p6**
+  `176-617` / `BEAGLE BOYS INC.` (the audit files this one as a near-miss of p1's
+  `BEAGLEBOYS`, but it is its own ungrouped sweater). The three legible p7 sweaters and
+  062 p7 `ZIP` were already added by the pass.
+- ***The Double Date*** -- **126 p1** the dancers' contest numbers `8`, `8`, `3`, `3`, and
+  **127 p1** `7`, **127 p3** `3` (the card Rockhead mistook for an 8 -- the plot's
+  turn): real lettering, groups to add. The drawn `♪ ♫` on 124 p5, 125 p3, 126 p1 and
+  127 p1: recommend the ignore list.
+- ***The TV Babysitter*** -- **134 p5** the `2` lane sign beside the grouped `TEAM 1`;
+  **133 p4** a third `DUCKBURG DUCKS` jacket cut by the panel edge (recommend ignore).
+- ***Trail Tycoon*** (152, 154, 155, 156) and ***The Librarian*** (118-121) -- drawn `$`
+  on money bags and on the Money Bin guards' cap badges: recommend the ignore list, as for
+  *The Paul Bunyan Machine*.
+- ***The Beauty Queen*** -- 140 p3 drawn `♪ ♫` at the square dance: recommend ignore.
+- ***The Master Glasser*** -- no missed text. Its one audit near-miss (066 `CHIRKLE!`) is
+  the pending text correction on g8.
+
+**Queue counts (lane 2).**
+
+| title | speakers low/med | speakers unreviewed | text | type | missed |
+|---|---|---|---|---|---|
+| *Mastering the Matterhorn* | 5 | 138 | 0 | 6 | 7 (+1 near-miss) |
+| *Trail Tycoon* | 2 | 97 | 0 | 1 | 4 (`$`) |
+| *The Librarian* | 0 | 104 | 0 | 9 (+1 pre-pass) | 4 (`$`) |
+| *The Double Date* | 4 | 87 | 0 | 0 | 10 |
+| *The TV Babysitter* | 5 | 95 | 0 | 3 | 2 |
+| *The Beauty Queen* | 3 | 109 | 0 | 6 (one on easyocr only) | 1 |
+| *The Master Glasser* | 2 | 80 | 2 | 4 | 0 |
+
+`scripts/closeout.sh --stage apply` on each: FAIL only on missed text and outstanding
+corrections, as expected before review; engine diff, group audit, mirror and both git
+trees clean.
+
+**Images read (lane 2).**
+
+| title | pages | images | per page | what they were |
+|---|---|---|---|---|
+| *Mastering the Matterhorn* | 8 | 17 | 2.13 | page.png ×8, eight tail/feather stacks, one sweater stack for the capture |
+| *Trail Tycoon* | 6 | 6 | 1.00 | page.png ×6 |
+| *The Librarian* | 6 | 6 | 1.00 | page.png ×6 |
+| *The Double Date* | 5 | 5 | 1.00 | page.png ×5 |
+| *The TV Babysitter* | 6 | 8 | 1.33 | page.png ×6, window tails (131), bowling-alley tails (134) |
+| *The Beauty Queen* | 7 | 7 | 1.00 | page.png ×7 |
+| *The Master Glasser* | 5 | 7 | 1.40 | page.png ×5, one tail crop (065 p1), one lettering crop (066) |
+| **lane total** | **43** | **56** | **1.30** | |
+
 ### Findings to paste into the next run (2026-09-26, eighty-third batch, ALL THREE REVIEWED AND MIRRORED -- *The Paul Bunyan Machine* closes it)
 
 *The Paul Bunyan Machine* closed at 348/348 on both engines (ada012a0), reviewed on
@@ -11114,6 +11382,27 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 24 (lane 1) and Vol. 23 (lane 2), thirteen titles read 2026-09-26 (eighty-fourth
+batch; **NONE REVIEWED**, so every figure below is the pass's own). 87 pages, 112 images,
+**1.29 per page**.
+
+**THE SAME THREE INKS AGAIN** -- red `#e61b1f` H358.8, green `#009e46`-`#009e49`
+H146-148, blue `#00a5d5` H193.5 -- wherever a cap prints. Two titles carry the ink
+somewhere else: *Mastering the Matterhorn* on a Swiss-hat FEATHER, and *The Gab-Muffer*
+nowhere at all (orange play hats). Eight of the thirteen have no speaking nephews.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *The Witching Stick* (24, lane 1) | **042 panel 3** -- three boys in a row facing Scrooge, red x624-669, green x745-812, blue x881-928 | `#e61b1f` H358.8, **~170-2,560px** (the back of a cap on 039 p5 prints ~2,560px). Decoys: Scrooge's coat, Donald's bow tie | `#009e49` H147.7, **~300px** | `#00a5d4`-`#00a6d8` H193.5, **~150-200px**. Decoy: Donald's cap at ~2,700px | Quartered black beanie with small wedges; the colour sits on the back of the cap, so a boy facing the reader shows a sliver. Silhouettes on 038 p3, 039 p2/p6, 041 p5. Cast: Scrooge, Donald, the boys |
+| *The Gab-Muffer* (24, lane 1) | none -- no cap prints | -- | -- | -- | The boys wear orange play hats (shako, fez, pith helmet) on 132-139; capscan `green: 0 blob(s) total` on 132 p8, 133 p7-p8, 136 p5/p7. Every nephew call is collective |
+| *The Pied Piper of Duckburg*, *Fun? What's That?*, *The Inventors' Contest*, *On the Dream Planet* (24, lane 1) | -- | -- | -- | -- | No nephews. Gyro, with Scrooge, Black Pete or Gus Goose |
+| *Mastering the Matterhorn* (23, lane 2) | **057 panel 4** -- three roped boys in Swiss hats, feathers blue x194-240, red x410-444, green x586-603 | `#e61b1f` H358.8 on the feather, **25-1,000px** (058 p1 a 25px shaded `#be1f1a`). Decoys: Donald's bow tie, the SNORT lettering, the goat's tongue `#ee9084` S0.44 | `#009e46`-`#009f47` H146-147, **47-2,000px** | `#00a5d5` H193.5, **16-1,700px** (`#02a4d0` on 058). Decoys: Donald's cap 1,300-3,800px, the ice `#6cc4dc` S0.51 | Quartered black beanies HELD on 057 p1, then **green Swiss hats whose feather carries the ink**. Feathers hidden by the border or a balloon on 059 p3-p4, 060 p7; silhouettes 058 p8, 059 p6, 063 p2. Cast: `other:a Beagle Boy` (26), `other:the mountain goat` (Big Horn) |
+| *The TV Babysitter* (23, lane 2) | **131 panel 2** -- three boys at the window, blue head x359-464, green x485-591, red x608-716 | `#e6191f` H358, **145-920px**. Decoy: Daisy's pink `#e85790` everywhere | `#009e47` H146.8, **137-870px**. Decoy: the ball-return rack on 134 p5 | `#00a4d6`/`#00b1d7` H193-195, **210-1,090px** | Black beanie with a coloured band, worn only on 131 and 134 p5. **Bare-headed in identical green pyjamas** on 130 and 132-133, and on the TV screen |
+| *The Master Glasser* (23, lane 2) | **067 panels 4-6** -- the boy relaying phone calls, red each time; **065 panel 2** red and blue side by side | `#e61a1f`-`#e61b1f` H358, **174-700px**. Decoys: the glass truck and Donald's bow tie | `#009e47` H147, 354px on 067 p8 only | `#00a5d5` H193.5, **143-370px**. Decoy: Donald's cap | Black beanie with a coloured quarter; many caps print no ink at all (065 p1 middle and left). Bare-headed indoors on 069. **065 g5: a red cap on a boy whose own line says he is not Huey** |
+| *Trail Tycoon*, *The Librarian*, *The Double Date*, *The Beauty Queen* (23, lane 2) | -- | -- | -- | -- | No nephews speak (they appear once, silent, on *Double Date* 127 with Daisy's nieces). Scrooge and Grandma Duck; Daisy's Diary |
 
 ## Per-volume cap palette
 
