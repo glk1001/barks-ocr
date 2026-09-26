@@ -7420,6 +7420,32 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-26, eighty-fourth batch, FOUR OF THIRTEEN REVIEWED AND MIRRORED -- *The Gab-Muffer*)
+
+*The Gab-Muffer* closed at 139/139 on both engines (prelim `d41e3d46`, `133` add in the
+next commit). **1 speaker correction over 139 pass groups (0.7%)** -- medium 1 of 13, high
+0 of 125 -- and **none in the nephew domain.**
+
+- **THE 29 FORCED COLLECTIVES ALL STOOD.** With the boys in orange play hats and capscan
+  `green: 0 blob(s) total` on every checked panel, every nephew call was `nephews`, one
+  tail per boy or not, and the review took all of them. When no cap prints, collective is
+  the right answer, not a hedge -- quote the census and move on.
+- **ALL NINE TYPE CORRECTIONS CONFIRMED**, seven of them cloud balloons stored as
+  `dialogue` -> `thought`, plus the bugle's `TARA TARA` and `BANGITY BOOM! BOING!` to
+  `dialogue`. The cloud-with-bubble-trail retype is now confirmed on every title reviewed
+  in this batch.
+- **THE ONE CORRECTION IS A NOISE'S MAKER:** 131 g10, a multiple `JUMP` the pass gave the
+  blackbird "as g8", went to the Little Helper. "As gN" is momentum; name each noise from
+  its own panel.
+- **A DRAWN `?` IS NOT ALWAYS THE HELPER'S.** The pass's 131 p7 `?` "over the Helper" was
+  added by the review as the blackbird's (131 g14, `thought`). Place a drawn device on
+  the head it actually sits over.
+- **MISSED TEXT CLOSED:** a fifth drawn `?` round the boys added on 133 (g22, `thought`,
+  `nephews`); the capture's count of 7 is on the ignore list, with 132's music notes and
+  138's `BANG`. The review merged 138's two `BANG` groups into one (g3 `BANG BANG`), which
+  the audit then reads as `2 in the art, 0 grouped` -- a merge of repeated lettering
+  always wants an ignore entry.
+
 ### Findings to paste into the next run (2026-09-26, eighty-fourth batch, THREE OF THIRTEEN REVIEWED AND MIRRORED -- *The Inventors' Contest*)
 
 *The Inventors' Contest* closed at 43/43 on both engines. **0 speaker corrections over 43

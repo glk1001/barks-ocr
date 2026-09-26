@@ -618,3 +618,11 @@ HELP KEEP AMERICA STRONG
 
 # The Inventors' Contest: drawn music notes, not lettering (reviewer, 2026-09-26)
 24 163 ♫ ♪
+
+# The Gab-Muffer (reviewer, 2026-09-26): drawn music notes beside Gyro's song, and 138's
+# two BANGs, which the review merged into one group (g3 BANG BANG) the audit cannot match
+24 132 ♫ ♪
+24 138 BANG
+# 133 p8: the review grouped 5 drawn ? round the boys (one added, g22); the capture
+# counted 7, and the rest are the pass's count, not lettering to add
+24 133 ?
