@@ -7420,6 +7420,24 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, TEN OF THIRTEEN REVIEWED AND MIRRORED -- *The Double Date*)
+
+*The Double Date* closed at 87/87 on both engines. **4 speaker corrections over 87 pass
+groups (4.6%)** -- high 3 of 83, medium 1 of 4 -- **and all four were a line said by two,
+named for one.** No type corrections, no adds; the contest numbers and the music notes
+went on the ignore list.
+
+- **A BALLOON WITH ONE TAIL CAN STILL BE A CHORUS.** 124 g7 `Donald` -> `other:Donald and
+  Rockhead Rooster`; 125 g5 `other:Clara Cluck` and 125 g8 `Daisy` -> `other:Daisy and
+  Clara Cluck`; 125 g17 `other:a band member` -> `other:the bandleader and a band member`.
+  The pass traced one tail each time and named its end. On a double date the couples
+  answer together: when the line fits both of a pair standing side by side, ask whether
+  it is a chorus before naming the tail's end. Same lesson as *Fun* 034 g6.
+- **A CHORUS SPELLS ITS MEMBERS THE WAY THE TITLE DOES.** The review wrote `the band leader
+  and a band member` beside ten `the bandleader`; aligned at close-out. The census could
+  not see it -- it matches words inside words, and `band leader` is not `bandleader` --
+  so a chorus written in review wants its names checked against the title's list by eye.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, NINE OF THIRTEEN REVIEWED AND MIRRORED -- *The Librarian*)
 
 *The Librarian* closed at 106/106 on both engines (prelim `e1a40d49`). **0 speaker

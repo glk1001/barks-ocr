@@ -659,3 +659,16 @@ HELP KEEP AMERICA STRONG
 23 119 $
 23 120 $
 23 121 $
+
+# The Double Date (reviewer, 2026-09-27): the dancers' contest numbers on 126-127, and
+# drawn music notes at the dance
+23 126 8
+23 126 3
+23 127 7
+23 127 3
+23 124 ♪ ♫
+23 125 ♪
+23 125 ♪ ♫
+23 126 ♪ ♫
+23 126 ♪
+23 127 ♪ ♫
