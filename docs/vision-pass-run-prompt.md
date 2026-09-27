@@ -7420,6 +7420,27 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, ELEVEN OF THIRTEEN REVIEWED AND MIRRORED -- *The TV Babysitter*)
+
+*The TV Babysitter* closed at 96/96 on both engines (prelim `a5d248a4`). **1 speaker
+correction over 95 pass groups**, in the nephew domain (1 of 28) and a medium (1 of 5;
+highs 0 of 90). Three bubble-trail balloons to `thought` confirmed (133 g14, g17, g20).
+The review added the `TEAM 2` lane sign (134 g19) and fixed line breaks in three groups.
+
+- **THE SECOND NARROW-MARGIN SEAM MISS, AND IT WENT LEFT.** 131 g5 `IT'S WEIRD!` -- the tip
+  was 11px inside the MIDDLE boy's span and 17px from the LEFT boy's; the pass named the
+  middle boy Louie (green) at medium, the review took the left boy, Dewey (blue). With
+  *Witching Stick* 039 g7 that is two misses in the batch, both on a tip within ~15px of
+  a head boundary on small caps. **The standing "gap tip goes one head left" rule reaches
+  a tip that is only just inside the right-hand head, too: under ~15px of margin on caps
+  this size, treat it as a gap tip.**
+- The caption-named boy on 132 (`asking HUEY to let me in`, g2 and g5 by continuity) and
+  the elimination on 134 g8 (Louie, the bare-headed middle boy) all stood, as did the 19
+  pyjama collectives.
+- The drawn `2` the audit records is grouped as `TEAM 2`; like *Gab-Muffer*'s merged
+  `BANG BANG`, a group that carries more than the capture's fragment needs an ignore
+  entry. The cut third `DUCKBURG DUCKS` jacket on 133 went on the list too.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, TEN OF THIRTEEN REVIEWED AND MIRRORED -- *The Double Date*)
 
 *The Double Date* closed at 87/87 on both engines. **4 speaker corrections over 87 pass

@@ -672,3 +672,9 @@ HELP KEEP AMERICA STRONG
 23 126 ♪ ♫
 23 126 ♪
 23 127 ♪ ♫
+
+# The TV Babysitter (reviewer, 2026-09-27): a third DUCKBURG DUCKS jacket cut by the panel
+# edge, and the lane sign the review grouped as TEAM 2 (134 g19), which the audit's bare 2
+# cannot match
+23 133 DUCKBURG DUCKS
+23 134 2
