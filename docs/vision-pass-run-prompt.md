@@ -7420,6 +7420,25 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, THREE OF TWELVE REVIEWED AND MIRRORED -- *The Stubborn Stork* and *The Bird Camera*)
+
+*The Stubborn Stork* and its back-matter gag *The Bird Camera* (087) closed together at
+111/111 on both engines. **3 speaker corrections over 102 pass groups, all one call**; *The
+Bird Camera* had none. The review added `ZIP` on 141 (g13). *The Bird Camera*'s close-out
+FAILs "title not read" by design: its page has no non-speech lettering.
+
+- **A JUNIOR WOODCHUCK TROOP'S DUCK BOYS ARE THE NEPHEWS.** Lane 1 asked; the review
+  answered. On 146 the bird-watchers in grey coonskin caps are the nephews -- g4, g6, g7
+  `Junior Woodchucks` -> `nephews` -- while g8, whose tail goes to the bear cub, stays
+  `Junior Woodchucks`. No roster ink, so the collective: a troop of duck boys in a
+  Barks story is Huey, Dewey and Louie until the art says otherwise.
+- **`visible_text` HOLDS LETTERING, AND LANE 1 WROTE PROSE.** 25 entries on 11 Vol. 24 pages
+  read like `ZIP! (vertical, beside Gyro zipping up the wall, panel 4)` or `musical notes
+  from the hi-fi (panel 5)`. The audit can never match those, so 141's grouped `ZIP` still
+  showed as missed. Cleaned the same day (prelim `10565f6a`): the description stripped to
+  the lettering, each music-note entry made a drawn `♪`; 049's is covered by its ignore
+  entry. **Put the panel and position in the result's notes, never in `visible_text`.**
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, ONE OF TWELVE REVIEWED AND MIRRORED -- *Island in the Sky*)
 
 *Island in the Sky* closed at 287/287 on both engines (prelim `14a9db36`). **17 speaker

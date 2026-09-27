@@ -687,3 +687,8 @@ HELP KEEP AMERICA STRONG
 # merged by the review into one group (g3 BANG BANG) the audit cannot match
 24 049 A (badge on the attendant's spacesuit, panel 3)
 24 055 BANG
+
+# The Stubborn Stork (reviewer, 2026-09-27): a partly hidden $ on the poster behind Gyro,
+# and drawn music notes in and after the song balloon
+24 140 $
+24 140 ♪
