@@ -18,6 +18,13 @@
 # whole or not at all. After merging it fast-forwards every lane branch to main, so
 # the next `setup` starts from the merged tree.
 #
+# WHY setup ARCHIVES THE CLOSE-OUTS. A lane session writes its findings to
+# ~/barks-vision/lanes/lane-<N>-closeout.md, and the coordinator folds them into the
+# docs AFTER `merge` -- so `merge` must leave them alone. Nothing else removed them,
+# and a new round's lane session writes to the same path, where a stale file gets
+# appended to or folded twice. So once every lane has passed its checks, `setup`
+# moves the last round's close-outs to ~/barks-vision/lanes/done/<date-time>/.
+#
 # Set LANE_COMMIT_TRAILER to append a trailer line (e.g. Co-Authored-By) to the
 # merge commits.
 
@@ -64,6 +71,18 @@ cmd_setup() {
             echo "created $wt ($branch) at main"
         fi
     done
+    archive_closeouts
+}
+
+archive_closeouts() {  # the last round's close-outs, now folded into the docs
+    local files=("$LANES_DIR"/lane-*-closeout.md) dest
+    ((${#files[@]})) || return 0
+    dest="$LANES_DIR/done/$(date -r "${files[0]}" +%F-%H%M%S)"
+    mkdir -p "$dest"
+    mv -n -- "${files[@]}" "$dest"/
+    local left=("$LANES_DIR"/lane-*-closeout.md)
+    ((${#left[@]} == 0)) || { echo "could not archive ${left[*]} -- $dest already has it" >&2; exit 1; }
+    echo "archived ${#files[@]} close-out(s) to $dest"
 }
 
 cmd_status() {
