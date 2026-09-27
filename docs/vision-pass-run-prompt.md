@@ -7434,7 +7434,7 @@ and left 049 g13 unticked until a straggler queue.
   MONTHS WE MAY BE GONE` ("Scrooge sets the trip's length") -> `nephews`; 061 g9 the radio
   report ("the pilot radioing in has been Donald's job") -> Scrooge; 048 g4 `ROCKET FUEL, BOY!`
   ("addressed BOY by an adult") -> Louie; 048 g10, 060 g7 Donald -> `nephews`; 051 g7
-  `nephews` -> Donald. Six of the lane's line-named rocket voices went the other way. **With
+  `nephews` -> Donald. Six such lines, five from inside the rocket, went the other way. **With
   nobody drawn and no address word, write `low` and the collective or the best guess -- not a
   role argument at medium.** Same lesson as `feedback_role_reasoning_loses_on_wide_shots`.
 - **UNDER-NAMING, SIX TIMES, WHERE THE TAIL WAS HIDDEN OR THE INK DID NOT PRINT.** 047 g2/g3,
