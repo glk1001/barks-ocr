@@ -7420,6 +7420,28 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, EIGHT OF TWELVE REVIEWED AND MIRRORED -- *Free Ski Spree*)
+
+*Free Ski Spree* closed at 95/95 on both engines (prelim `ed3725da`). **5 speaker corrections
+over 95 pass groups, all in the nephew domain (5 of 30)**; high 4 of 91, medium 1 of 4. The
+one type correction (164 g18, Scrooge's ERNK, to `dialogue`) confirmed; no adds; the drawn
+`$` on 166 and 168 to the ignore list.
+
+- **EVERY GAP TIP THE PASS LEFT COLLECTIVE WENT ONE HEAD LEFT.** Lane 2 declined to name a
+  tip whose slant and nearness pointed the other way from the rule. The review named all
+  three, and each time the LEFT boy: 163 g2 (tip 70px above and between blue-left and
+  red-right) -> Dewey; 165 g5 (tip **nearer the red boy's crown on the right**) -> Dewey,
+  the blue boy on the left; 165 g8 (tip on the seam, red-left and blue-right) -> Huey.
+  **Proposed rule, pending *Touche Toupee*: a tip in the gap or on the seam between two
+  boys names the LEFT one, whatever nearness or slant says** -- `feedback_gap_tip_goes_one
+  _head_left` again. Lane 2's ten gap tips on *Touche Toupee* test it next, above all 162
+  g11, where only the rule said left. If they hold, it goes into `roster.txt`.
+- **A LONG SHOT OF THREE SMALL BOYS IS STILL NAMEABLE:** 166 g11 went `nephews` -> Huey.
+- **ONE NAME BACK TO THE COLLECTIVE:** 165 g13 `OKAY! OKAY! JUST DON'T KEEP US FROM ...`
+  (Dewey at medium, the tip above the awake middle boy and near the sleeper) -> `nephews`.
+  No review note; the `US` may make it the pair's line.
+- The winter cap-and-scarf palette produced no colour corrections.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, SEVEN OF TWELVE REVIEWED AND MIRRORED -- *Milktime Melodies* and *The Odd Order*; lane 1 closed)
 
 *Milktime Melodies* and its back-matter gag *The Odd Order* (097) closed together at

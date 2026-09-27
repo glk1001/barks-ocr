@@ -708,3 +708,7 @@ HELP KEEP AMERICA STRONG
 24 157 ♪
 24 159 ♪
 24 161 ♪
+
+# Free Ski Spree (reviewer, 2026-09-27): drawn $ on Scrooge's air-car door and money bags
+23 166 $
+23 168 $
