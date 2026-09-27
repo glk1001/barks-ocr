@@ -7420,6 +7420,42 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, ONE OF TWELVE REVIEWED AND MIRRORED -- *Island in the Sky*)
+
+*Island in the Sky* closed at 287/287 on both engines (prelim `14a9db36`). **17 speaker
+corrections over 286 pass groups (5.9%), 15 in the nephew domain (of 82).** By the confidence
+the pass wrote: high 5 of 227 (2.2%), **medium 10 of 46 (21.7%)**, low 2 of 12. All nine type
+corrections confirmed, including Donald's tour on 044 (`narration -> dialogue`). The review
+added `OM` (049 g21, the attendant's badge) and `JAB JAB` (052 g13), merged 055's two `BANG`s,
+and left 049 g13 unticked until a straggler queue.
+
+- **ROLE REASONING LOST EVERY TIME IT DECIDED A LINE.** Off-panel lines from inside the rocket
+  and lines whose tail ran off the edge were named from who "would" say them: 048 g1 `TWO
+  MONTHS WE MAY BE GONE` ("Scrooge sets the trip's length") -> `nephews`; 061 g9 the radio
+  report ("the pilot radioing in has been Donald's job") -> Scrooge; 048 g4 `ROCKET FUEL, BOY!`
+  ("addressed BOY by an adult") -> Louie; 048 g10, 060 g7 Donald -> `nephews`; 051 g7
+  `nephews` -> Donald. Six of the lane's line-named rocket voices went the other way. **With
+  nobody drawn and no address word, write `low` and the collective or the best guess -- not a
+  role argument at medium.** Same lesson as `feedback_role_reasoning_loses_on_wide_shots`.
+- **UNDER-NAMING, SIX TIMES, WHERE THE TAIL WAS HIDDEN OR THE INK DID NOT PRINT.** 047 g2/g3,
+  057 g6 (tails behind another balloon), 058 g11, 059 g1, 059 g4 (long shot between two
+  small boys) -- the review named all six (Huey, Dewey, Louie by cap). A hidden tail is not
+  an unreadable one: the boys' order in the panel and the next line usually settle it.
+- **THE FLAGGED SEAM TIP WAS THE ONE THAT WENT.** Of lane 1's five seam/gap calls, only 057
+  g7 was corrected -- Dewey -> Louie, the green boy holding the book the line quotes (`KEY TO
+  FOREIGN LINGOES -- CHAPTER 3, PAGE 78!`), exactly the doubt the pass wrote. 051 g11, 054 g4,
+  055 g8 and 059 g12 stood. **A second key that points elsewhere -- here, who holds the thing
+  the line reads from -- beats a 12px tip.**
+- **TWO LONG-SHOT DONALD DEFAULTS WENT TO THE BOYS** (046 g15, 058 g8 `THE COAST IS CLEAR!`):
+  the default is for a lone figure, not a tiny party.
+- **ONE UNEXPLAINED:** 052 g6 `OKAY, UNCA SCROOGE! IT'S HOME TO DUCKBURG!` -- the pass traced
+  the tail to the right-edge boy's clean blue cap (2,848px); the review named Huey, the front
+  boy with the melons (red 248px). No review note; worth the reviewer saying why.
+- **A CAPTURE MUST HOLD LETTERING, NOT PROSE.** The pass wrote `A (badge on the attendant's
+  spacesuit, panel 3)` into 049's `visible_text`; the review grouped the badge as `OM`. A
+  description in `visible_text` becomes a missed-text finding nothing can ever match.
+- The space-suit and jungle-green warnings produced no corrections.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, NONE REVIEWED -- the second lane round: lane 1 Vol. 24, lane 2 Vol. 23)
 
 Twelve titles read concurrently in two lanes and merged into the prelim `main` as `3e2d6a19`

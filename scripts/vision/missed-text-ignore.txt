@@ -681,3 +681,9 @@ HELP KEEP AMERICA STRONG
 
 # The Beauty Queen: drawn music notes at the square dance (reviewer, 2026-09-27)
 23 140 ♪ ♫
+
+# Island in the Sky (reviewer, 2026-09-27): the pass wrote a description into 049's capture
+# for the attendant's badge, which the review grouped as OM (g21); and 055's two BANGs,
+# merged by the review into one group (g3 BANG BANG) the audit cannot match
+24 049 A (badge on the attendant's spacesuit, panel 3)
+24 055 BANG
