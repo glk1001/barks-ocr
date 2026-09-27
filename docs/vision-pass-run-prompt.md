@@ -7420,6 +7420,26 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, SEVEN OF TWELVE REVIEWED AND MIRRORED -- *Milktime Melodies* and *The Odd Order*; lane 1 closed)
+
+*Milktime Melodies* and its back-matter gag *The Odd Order* (097) closed together at
+109/109 on both engines (prelim `836d84d4`). **0 speaker corrections over 109 pass groups.**
+All eleven of *Milktime*'s type corrections confirmed. No adds; the drawn notes on five
+pages to the ignore list. Lane 1's two questions were answered by the review leaving the
+pass's call standing:
+
+- **`UMPA UMPA CHOO-CHOO CHA!` (157 g0) IS THE HI-FI'S MUSIC, `sound_effect`**, the one
+  retype that went against the corpus direction. Bare lettering drifting with music notes
+  from a machine is the machine, not a singer.
+- **THE HELPER'S FIRST-PERSON THOUGHTS IN CAPTION BOXES STAY `narrator`** (159 g3, g5, g6):
+  the field records the box, as `feedback_caption_box_is_narrator` has it.
+
+**LANE 1 (Vol. 24) CLOSED: 20 speaker corrections over 638 pass groups (3.1%)** -- *Island
+in the Sky* 17 of 286, *The Stubborn Stork* 3 of 102 (one call: the troop's duck boys),
+and 0 on *Milktime*, *Lost Rabbit Foot*, *Oodles* and both gags. The four Gyro stories and
+the gags read clean; every error is in the one nephew title, and most of those are role
+reasoning on off-panel lines and under-naming where a tail hid.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, FIVE OF TWELVE REVIEWED AND MIRRORED -- *Oodles of Oomph*)
 
 *Oodles of Oomph* closed at 52/52 on both engines. **0 speaker corrections over 50 pass
