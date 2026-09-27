@@ -712,3 +712,16 @@ HELP KEEP AMERICA STRONG
 # Free Ski Spree (reviewer, 2026-09-27): drawn $ on Scrooge's air-car door and money bags
 23 166 $
 23 168 $
+
+# The Christmas Cha Cha (reviewer, 2026-09-27): the N on the play-war baseball cap, music
+# notes at the dance, the $ round Scrooge and on his door plates beyond the groups the
+# review added, the boys' ! beyond the one ! ! ! group, and the punch-bowl poster
+23 101 N
+23 101 ♫
+23 112 ♫
+23 116 ♪
+23 105 $
+23 108 $
+23 113 !
+23 102 CONTEST
+23 102 FIRST PRIZE

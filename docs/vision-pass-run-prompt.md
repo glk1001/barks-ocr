@@ -7420,6 +7420,28 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, ELEVEN OF TWELVE REVIEWED AND MIRRORED -- *The Christmas Cha Cha*)
+
+*The Christmas Cha Cha* closed at 297/297 on both engines. **3 speaker corrections over 290
+pass groups (1.0%)**; the other seven rows are the review's adds (the door-plate `$` on 104
+and 105, Scrooge's `$ $ $ $ $` swirl on 108 as his `thought`, the boys' `! ! !` on 113, the
+second `AJAX` envelopes on 107 and 113, a second `MERRY CHRISTMAS` card on 114). All twelve
+type corrections confirmed -- **including 105 g12, where the pass's `thought` overruled the
+Vol. 23 cleanup's `dialogue`: the review took the pass.** 114 g8's signature accepted as
+`Sue Van Kow` (Mrs. Van Kow of 111). 113 g17 was left unticked by the add that renumbered
+its page and was stamped at close-out; nine decorative or covered rows and the 102 poster
+went on the ignore list.
+
+- **ANOTHER NARROW-MARGIN TIP WENT LEFT.** 114 g0 `LOOK! THAT PITIFUL FIGURE ...` -- tip 12px
+  inside the middle boy's span (blue) and 12px clear of the left boy (green); named Dewey,
+  the review took Louie on the left. 109 g4, a 6px near-gap tip already named for the left
+  boy, stood. With *TV Babysitter* 131 g5 that is the same shape three times: **a tip only
+  just inside the right-hand head goes to the left one.** It does not rescue the full gap
+  rule -- *Touche Toupee*'s 157 g8 and 158 g13 still went right.
+- **A LINE WHOSE TAIL RUNS OFF THE PANEL, NAMED BY WHO "WOULD" SHOUT IT, LOST AGAIN:** 110 g3
+  `YOU DOUGHHEAD! DON'T TAKE YOUR HANDS OFF` -- Donald (he was on the roof) -> `nephews`.
+- **UNDER-NAMING ONCE:** 114 g5, small dark caps on three pointing boys, named Huey (left).
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, TEN OF TWELVE REVIEWED AND MIRRORED -- *Under the Polar Ice*)
 
 *Under the Polar Ice* closed at 148/148 on both engines (prelim `f3464277`, `POP CRACK` in the
