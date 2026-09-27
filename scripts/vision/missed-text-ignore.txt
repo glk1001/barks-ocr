@@ -728,3 +728,10 @@ HELP KEEP AMERICA STRONG
 
 # Donald's Party (reviewer, 2026-09-27): the second PRESS card in the photographer's hat
 23 149 PRESS
+
+# Hound of the Whiskervilles (reviewer, 2026-09-27): a sign cut by 063 p6's right edge,
+# the MC scratched on the castle wall beside Donald (065 p7), and 066 p6's three drawn
+# surprise marks, which g12's `! ! !` already carries
+24 063 TE
+24 065 MC
+24 066 !

@@ -7420,6 +7420,37 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-sixth batch, ONE OF EIGHT REVIEWED AND MIRRORED -- *Hound of the Whiskervilles*)
+
+*Hound of the Whiskervilles* closed at 136/136 on both engines (prelim `e1f7e0dc`). **5
+speaker corrections over 136 groups (3.7%), 3 in the nephew domain (of 34).** By the
+confidence the pass wrote: high 2 of 110 (1.8%), **medium 3 of 23 (13.0%)**, low 0 of 3.
+The four pass retypes confirmed (062 g2, the hound's howls 066 g15 and 067 g8, 068 g12).
+The three missed-text findings (063 `TE`, 065 `MC`, 066 `!`) went to the ignore list on the
+reviewer's word; the pass's own `CRASH` (067 g13) stood.
+
+- **ROLE REASONING LOST AGAIN, BOTH TIMES IT DECIDED A LINE.** 063 g16 `RED, GREEN, YELLOW,
+  BLACK --` ("he is reading off the McGoose tartan", with two boys flanking him) -> Dewey;
+  067 g7 `IT'S NO USE CLIMBING TOWERS` in a silhouette panel ("he knows the legend") ->
+  Donald. The *Island in the Sky* rule holds: **who would know or say a line is not a
+  tail**. Name from the tail, or write `low`.
+- **ONE OF THE TWO EDGE TIPS NAMED LEFT WENT RIGHT.** 069 g7, a tip "at the right edge of the
+  LEFT boy's head", was Donald's, not Louie's; 063 g14, the same kind of tip, stood as Dewey.
+  One title settles nothing: *Pipeline*'s seven gap tips decide whether gap-goes-left goes in
+  the roster.
+- **A CORRECTION FROM A BOY TO AN ADULT LEAVES THE BOY'S `cap_colour` BEHIND.** 069 g7 came
+  out of the review as Donald with `cap_colour: green`, the left boy's cap. It was cleared by
+  hand before the mirror. After any nephew -> adult correction, check the field is null.
+- **AN ANIMAL NOISE IS NAMED BY ITS TAIL, NOT BY THE ANIMAL IN THE PANEL.** 068 g14 `ARF!` was
+  `other:McWhisker's dog` ("tail to the floppy-eared brown dog") and is a boy imitating the
+  dog, `nephews`. A dog in the panel is a decoy when the tail reaches the boys.
+- **ONE UNEXPLAINED:** 068 g0 `THE HOUND FELL INTO ONE OF THE ANCIENT PIT TRAPS!` -- the pass
+  measured the tip over the second boy and sampled red 757px on his cap (Huey); the review
+  named Louie, green. No review note.
+- Everything the lane flagged as risky stood: the four sub-100px names (062 g14, g15, 064 g13,
+  067 g10), the three lows (063 g8, 064 g3, 066 g11), and the hound's split into
+  `other:the Hound of the Whiskervilles` (8) and `other:Angus McWhisker` (9).
+
 ### Findings to paste into the next run (2026-09-27, eighty-sixth batch, NONE REVIEWED -- the third lane round: lane 1 Vol. 24, lane 2 Vol. 23)
 
 Eight titles read concurrently in two lanes and merged into the prelim `main` as `dc1ab330`
