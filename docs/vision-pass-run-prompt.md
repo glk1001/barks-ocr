@@ -7420,6 +7420,265 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, NONE REVIEWED -- the second lane round: lane 1 Vol. 24, lane 2 Vol. 23)
+
+Twelve titles read concurrently in two lanes and merged into the prelim `main` as `3e2d6a19`
+(lane 1) and `3dcbb62e` (lane 2): ten from the plan, plus two Vol. 24 one-page gags lane 1
+read because they are filed as back matter of its titles (*The Bird Camera* 087, *The Odd
+Order* 097 -- the merge commit's message lists only the planned five). **128 images over 91
+pages, 1.41 per page** (lane 1 1.24, lane 2 1.58); the census trend reads 1.38M tokens per
+page against a 3.65M baseline. **Cost caveat:** the census found no session to credit for
+four lane-2 titles (*Donald's Party*, *Under the Polar Ice*, *Touche Toupee*, *Free Ski
+Spree*) or the two gags, so their ledger rows carry images only, and *The Christmas Cha
+Cha*'s 158 calls / 43.7M tokens may be lane 2's whole cost. Every figure below is the
+pass's own and none of it has been checked.
+
+#### Lane 1 -- Vol. 24
+
+*The Stubborn Stork* (Vol. 24, 8pp, 102 groups), *Milktime Melodies* (7pp, 96), *The Lost Rabbit
+Foot* (7pp, 83), *Oodles of Oomph* (4pp, 50), *Island in the Sky* (18pp, 286), and the one-pagers
+*The Bird Camera* (087, 8) and *The Odd Order* (097, 13). Every figure below is the pass's own
+and none of it has been checked.
+
+- **ONLY *ISLAND IN THE SKY* HAS THE BOYS, AND ALL THE RISK IS THERE.** The four Gyro stories and
+  the two gags are 352 groups with one medium between them (Milktime 157 g0, a type call).
+  *Island* carries 46 mediums and 12 lows out of 286. The nephew domain is 76 groups: 44
+  names (Huey 20, Dewey 14, Louie 10), 19 of them at medium, and 32 collectives.
+- **SEAM AND GAP TIPS NAMED AT MEDIUM, EACH WITH A SECOND KEY -- REVIEW AS A SET.** Per the
+  eighty-fourth batch (a seam tip on small wedges needs a second key before it names anyone):
+  051 g11 Dewey (tip equidistant in the gap; lean and gap-tip-goes-left agree), 057 g7 Dewey
+  (tip 12px from the blue boy, 30px from the green one -- **but the green boy holds the book
+  the line quotes**, so this one could be Louie), 059 g12 Dewey (a few px inside the blue span,
+  slant left), 055 g8 Huey (tip at the red boy's right edge, slant left). 054 g4 went to Louie
+  at HIGH: a gap tip, gap-goes-left, and his raised hand is the `HOW!` gesture.
+- **THE SMALL WEDGES.** Several names rest on 30-200px of cap ink: 045 g7-g9 (the three `?`
+  devices, 38-195px), 047 g5 (Dewey 34+34px), 047 g11 (Huey 43px), 048 g13 (Dewey 27+26px),
+  060 g13 (Dewey 82+77px), 061 g3 (Huey 166+96px, with an unplaced 149px blue at the same
+  boy's left edge). Each agrees with the order the same boys print big elsewhere on the page
+  or the next panel (045 p7, 047 p6-p7), and none is a colour guess.
+- **SPACE SUITS ARE COLOUR-CODED, AND DONALD WEARS A RED ONE.** On 060-061 the boys' suits print
+  red, blue and green (061 p6 red x282-402, blue x465-542, green x574-628), named by garment
+  (`costume`, medium): 060 g3 Louie, 061 g11 Huey. **Donald's suit is also red** (049 p6-p8, 060
+  p2 and p4), and Scrooge's is blue (049 g20, 050 g4, both off the dialogue): on 060 p2 the
+  red-suited figure is Donald by size and bill on a crop, not Huey. A red suit is not a name
+  until the head under it is a boy's.
+- **THE JUNGLE PRINTS THE CAP GREEN EXACTLY.** Foliage on 052 p1, 052 p4 and 060 p5 is
+  `#009e49` H147.7, the cap-green hex, in blobs up to 27,000px. The melons are the teal
+  `#008b80` H175 and the rocket the darker red `#c32227`. Every green call on those pages is
+  placed on a head, not read off the band count.
+- **DONALD'S TOUR ON 044 IS SPEECH, NOT CAPTIONS.** 044 g4, g7 and g10 are stored `narration`
+  but are rounded balloons with tails, one continuous `AND ...` list begun in g2 whose tail is
+  on Donald; retyped to `dialogue`, named Donald (g7's tail is on him, g4 and g10 point into the
+  scenery). The yellow caption boxes on the same page (g1, g12) stay narration.
+- **OFF-PANEL LINES FROM INSIDE THE ROCKET.** Eleven of the twelve lows and most of the adult
+  mediums are balloons whose tails run into the rocket or its tree with nobody drawn (048
+  g1/g10/g11/g21/g22, 050 g0-g2/g7/g8, 051 g3-g7, 052 g12, 053 g0/g7/g8, 060 g6/g7/g10, 061
+  g0/g1). Named from the line (UNCA = a boy, UNCLE = Donald, BOYS = Scrooge), or left low. The
+  twelfth low is 058 g8, `THE COAST IS CLEAR!` from four tiny heads in a cave mouth, given to
+  Donald. Read them as a set.
+- **BUBBLE TRAILS UNDER SMOOTH BALLOONS: 14 RETYPES TO `thought`.** The test is the trail, not
+  the edge: *Milktime* 156 g1 (scalloped only along the bottom, checked on a crop), 157 g17,
+  158 g1/g2/g12; *Lost Rabbit Foot* 153 g8 (crop), 154 g0/g7; *Oodles* 166 g2, 167 g0;
+  *Island* 053 g6, 057 g0, 058 g1, 060 g0.
+- **VOICES TO `dialogue`:** snores named for the sleeper (*Milktime* 157 g16, 158 g3/g13 -- the
+  reviewed corpus has 67 of 87 snores as named dialogue), the goat's `BAA` (157 g7), the cows'
+  `MOO` (156 g12), the birds' `SQUAWK!` (*Island* 055 g5). Two announcer balloons in *Oodles*
+  (167 g10 stored `narration`, 168 g8 stored `thought`) have the announcer's tail and speak of
+  Gyro in the third person.
+- **ONE MOVE AGAINST THE CORPUS DIRECTION -- CHECK IT.** *Milktime* 157 g0 `UMPA UMPA CHOO-CHOO
+  CHA!` went `dialogue -> sound_effect` at medium: bare lettering drifting with music notes, read
+  as the hi-fi's music (as 156 g8 `UMPA! UMPA! WADDA DA-DA`, stored sound_effect). If it is Gus
+  singing along, it is his and `dialogue`.
+- **THE JUNIOR WOODCHUCK TROOP ON *STUBBORN STORK* 146 IS THE TAG, NOT THE NEPHEWS.** Two duck
+  boys and a bear cub in grey coonskin caps, bird-watching; no roster ink, never named. g4 and
+  g6-g8 are `Junior Woodchucks` (tagged in that title's roster). Say if they should be read as
+  the nephews.
+- **THE LITTLE HELPER'S THOUGHTS IN CAPTION BOXES** (*Milktime* 159 g3/g5/g6: first-person `OH,
+  OH! MAGNETISM CAN BE CATCHING`) are recorded `narrator`, because the box is a caption. Say if
+  they should be `Little Helper`.
+- **THE TWO GAGS ARE ON `one_pager_todo.py`, NOT OFF EVERY LIST.** 087 *The Bird Camera* and 097
+  *The Odd Order* are filed as `BACK_MATTER` of *Stubborn Stork* and *Milktime*, so title prep
+  skipped them. They were read with `--volume 24 --pages 087,097`, and `one_pager_todo.py` now
+  shows both `READ`. *The Bird Camera*'s close-out FAILs "title not read" because its page
+  carries no non-speech lettering at all, so its `visible_text` is correctly empty.
+- **SEVEN PRE-PASS REVIEW MARKS CLEARED** by the apply (Oodles 1, the gags 1, Island 5), per the
+  2026-09-26 ruling; those groups are in the unreviewed queue with the pass's call.
+- `other:` values, no near-duplicates by the census. *Stork*: `the stork`. *Milktime*: `Gus Goose`
+  (5), `the cows`, `the pigs`, `the chickens`, `Billy the goat`. *Oodles*: `the race announcer`
+  (6), `a rival driver` (2). *Island*: `the asteroid natives` (7) / `an asteroid native` (5)
+  (a deliberate plural/singular pair), `the fuel attendant` (2), `the station attendant`, `the
+  space wheel operator`, `the birds`. *Odd Order*: `the waiter` (6), `the chef`. The Helper is
+  bare `Little Helper` wherever it speaks (tagged in all four Gyro rosters).
+
+**Missed text (lane 1) -- the reviewer adds these first.**
+
+Queues are `<out-dir>/queue-missed.txt`, one line per engine, parked on g0 of the page.
+
+- *The Stubborn Stork* (4): 140 p3 a partly hidden `$` on the poster behind Gyro; 140 p5 music
+  notes in the song balloon; 140 p6 a music note after `WE'LL GO`; 141 p4 `ZIP!` lettered
+  vertically beside Gyro zipping up the wall.
+- *Milktime Melodies* (12): all drawn music notes -- 155 p7 (round the farmhouse window); 156
+  p5, p6, p7; 157 p1, p2, p3, p4; 159 p5; 161 p3, p4, p5. Ignore-list candidates, as on the
+  earlier Gyro titles.
+- *The Lost Rabbit Foot* (1): 149 p1 `R S`, the edge of a sign on the shop wall.
+- *Oodles of Oomph* (7): boat numbers `3` (168 p1, p5; 169 p2, p8) and `2` (168 p2, p3), and 169
+  p5 a drawn `?` in a cloud over the goose. 169 p4's `3` is already grouped (g4).
+- *Island in the Sky* (2): 049 p3 `A` badge on the attendant's spacesuit; 052 p1 `JAB JAB` beside
+  the probing stick.
+- *The Bird Camera*, *The Odd Order*: none.
+
+**Queue counts (lane 1).**
+
+| title | speakers low/med | speakers unreviewed | text | type | missed |
+|---|---|---|---|---|---|
+| *The Stubborn Stork* | 0 | 102 | 0 | 0 | 4 |
+| *Milktime Melodies* | 1 | 96 | 0 | 11 | 12 |
+| *The Lost Rabbit Foot* | 0 | 83 | 0 | 3 | 1 |
+| *Oodles of Oomph* | 0 | 50 | 0 | 4 | 7 |
+| *Island in the Sky* | 58 | 286 | 0 | 9 | 2 |
+| *The Bird Camera* | 0 | 8 | 0 | 0 | 0 |
+| *The Odd Order* | 0 | 13 | 0 | 0 | 0 |
+
+Speaker counts are groups. The corrections queue files hold one line per engine (22, 6, 8, 18).
+The gags' queues are `vol24-087-097/queue-full-The-Bird-Camera.txt` and `...-The-Odd-Order.txt`.
+
+**Images read (lane 1).**
+
+| title | pages | images | per page | what they were |
+|---|---|---|---|---|
+| *The Stubborn Stork* | 8 | 8 | 1.00 | page.png ×8 |
+| *Milktime Melodies* | 7 | 9 | 1.29 | page.png ×7, a type crop (156 p1) and a tail crop (160 p8) |
+| *The Lost Rabbit Foot* | 7 | 8 | 1.14 | page.png ×7, a type crop (153 p6) |
+| *Oodles of Oomph* | 4 | 4 | 1.00 | page.png ×4 |
+| *Island in the Sky* | 18 | 26 | 1.44 | page.png ×18, eight crops (046 p5+p6 with 047 p1 as one image, 049 p6+p8, 051 p6, 054 p3, 055 p6, 057 p4, 059 four panels as one, 060 p2) |
+| *The Bird Camera* | 1 | 1 | 1.00 | page.png |
+| *The Odd Order* | 1 | 1 | 1.00 | page.png |
+| **lane total** | **46** | **57** | **1.24** | |
+
+#### Lane 2 -- Vol. 23
+
+*The Christmas Cha Cha* (Vol. 23, 16pp, 290 groups), *Donald's Party* (7pp, 108), *Under
+the Polar Ice* (10pp, 146), *Touche Toupee* (6pp, 95), *Free Ski Spree* (6pp, 95). Every
+figure below is the pass's own and none of it has been checked.
+
+- **TEN NEPHEW NAMES REST ON A GAP OR EDGE TIP, ALL AT MEDIUM -- REVIEW THEM AS A SET.**
+  The last batch's findings disagree about these (*Special Delivery*: gap tip against a
+  clean rim -> `nephews`; *TV Babysitter*: a ~15px-margin tip -> the LEFT boy). The pass
+  named by the one-head-left rule where the tail's slant agreed and wrote the margin into
+  every note: *Cha Cha* 109 g4 (Louie, 6px inside), 114 g0 (Dewey, 12px); *Touche
+  Toupee* 157 g8 (Dewey), 158 g6 (Huey), 158 g7 (Huey, tip on the edge), 158 g13
+  (Dewey), 159 g2 (Dewey), 159 g8 (Huey), 162 g11 (Huey -- here nearness and slant lean
+  RIGHT and only the rule says left), 162 g14 (Louie). Where the slant and nearness
+  pointed the other way from the rule the pass wrote `nephews` instead: *Cha Cha* 109
+  g17, 111 g1; *Free Ski Spree* 163 g2, 165 g5, 165 g8. **Whichever way these go, the
+  rule for a seam tip on these caps needs settling.**
+- **THE WINTER TITLES PUT THE INK ON THE SCARF AS WELL AS THE CAP.** *Touche Toupee* and
+  *Free Ski Spree* dress the boys in a black quartered cap and a matching scarf, both in
+  the roster inks (`#e61b1f`, `#009e46`, `#00a5d5`), so the blob areas quoted are cap +
+  scarf together. Every one agreed with red=Huey, blue=Dewey, green=Louie; no colourist
+  clash in the batch. `cap_colour` records the ink whether it came off the cap or the
+  scarf.
+- **A HAT THAT HIDES THE CAP: FOUR NAMES FROM THE SCARF.** *Touche Toupee* 161 g9, g12,
+  g15, g17 -- the boy wearing Bumpkin's big new hat shows only a green scarf, and the
+  other two boys print red and blue caps in the same panels. Named Louie at medium with
+  `identified_by: costume`. 162 g14 (the boy wearing the toupee) likewise.
+- **UNDER THE POLAR ICE: WOODCHUCK FUR HATS THROUGHOUT, EVERY NEPHEW CALL COLLECTIVE.**
+  57 nephew groups, none named: brown fur hats with a yellow badge on every outdoor and
+  submarine page, bare-headed indoors on 010. Dialogue names all three on 007/008/012
+  only as a group roll-call. The one image per page is the whole cost of that title.
+- **A LINE NAMES A BARE-HEADED BOY: *CHRISTMAS CHA CHA* 116.** `WHAT DID LOUIE WHISPER
+  TO YOU, DAISY?` names the whisperer of g0 and the boy who owns up in g8 (`I WAS ONLY
+  FOOLING`); g9 continues his confession (medium). No cap prints -- they are indoors at
+  the dance -- so `cap_colour` is null on all three.
+- **TYPE CORRECTIONS: 21 over the lane (per engine).** Same two sources as before --
+  smooth balloons with a bubble trail stored as `dialogue` (15 to `thought`: Donald on
+  *Cha Cha* 102 g13/g18, 104 g2/g5, 106 g11 and *Polar Ice* 008 g1; Scrooge 105
+  g11/g12, 112 g2/g4; Daisy's Diary 143 g6/g8/g9, 147 g3; Grandma 157 g6) and a voice
+  stored as `sound_effect` (the boys' panting 109 g16, Daisy's YEEK
+  116 g2, the baby's WAH WAA *Touche* 161 g13, Scrooge's ERNK *Free Ski* 164 g18). One
+  the other way: *Cha Cha* 106 g5 has a pointed tail, `thought -> dialogue`. *Touche*
+  160 g0 `So -` is a caption box stored as dialogue, `-> narration`.
+- **ONE PRE-PASS TYPE MARK OVERRIDDEN: *Cha Cha* 105 g12.** The Vol. 23 cleanup confirmed
+  it `dialogue` on 2026-09-20; the pass reads a bubble trail from Scrooge's head at the
+  window and wrote `thought` (`type_was: dialogue`). It is in the corrections queue on
+  both engines. **Say which the review takes.** One pre-pass SPEAKER mark was cleared as
+  editor residue on *Free Ski* 168 g8 (the car-door `$`, `none` both before and after).
+- **TWO TEXT CORRECTIONS, BOTH *CHA CHA***, read at 1.3-1.5x: 114 g8 signature `Sue Van
+  Kour` -> `Sue Van Kow` (Mrs. Van Kow of 111), 115 g2 `HUFF AND PUFF` -> `CHUFF AND
+  PUFF`. 104 g6 is lettered `YOU FAVORITE` in the art; the stored `YOUR` was left, noted.
+- **DAISY'S DIARY SCRIPT: *Donald's Party* captions wholly `[i]`** per the 2026-09-27
+  ruling (10 captions); the one heavy word inside, 144 g0 `WORST`, is `[b]` inside the
+  `[i]`, and 146 g3's underlined `right` likewise. No other group carries `[i]`.
+- **`Grandma Duck` is bare** (roster-tagged for *Touche Toupee* and *Free Ski Spree*;
+  apply canonicalized the `other:Grandma Duck` the pass wrote on *Touche Toupee* --
+  "32 speaker value(s)" in its summary), so `speaker-census` lists her as
+  off-roster, as before -- 235 corpus groups already store her bare.
+- `other:` values. *Cha Cha*: `a billionaire` (14 per engine), `the master of
+  ceremonies` (8), `the sleepy housewife` (4), `a lady` (3), `Donald and Scrooge` (2,
+  both two-trail/two-tail choruses on 114), `Mrs. Kess`, `Rosita`, `Miss Hawg`, `Mr.
+  Grouch`, `Mrs. De Fox`, `Mrs. Jay`, `Mrs. Van Kow`, `a customer`, `the club chairman`.
+  *Donald's Party*: `Clarabelle Cow` (6), `Cora Crane` (4), `the photographer` (4), `a
+  guest`, `a neighbour`, `the postman`. *Polar Ice*: `a sailor` (10), `a Woodchuck
+  officer` (8), `the submarine captain` (7), `the Marshbird cook` (2) and `the ship's
+  cook` (1) -- different men, the lodge's and the sub's -- `the polar bear`. *Touche*:
+  `Farmer Bumpkin` (20), `the baby`, `the baby's mother`. *Free Ski*: `Billy the goat`
+  (7), `James the chauffeur` (3), `Gus Goose`. No near-duplicates.
+- **MEDIUMS TO LOOK AT FIRST** (besides the ten gap tips): *Cha Cha* 101 g4 (Dewey off a
+  blue baseball cap in a play-war scene), 107 g17, 109 g9/g10, 110 g13 (the one low: an
+  off-panel onlooker), 111 g7, 113 g15, 114 g19, 116 g9; *Donald's Party* 146 g12, 147
+  g7/g11/g12/g16/g17, 148 g3/g12/g13/g15; *Touche* 159 g14, 160 g1, 161 g9/g12/g15/g17;
+  *Free Ski* 164 g9, 165 g7, 165 g13 (tip near the sleeping green boy too), 168 g1
+  (`HUMPH!` given to the blue boy -- reads like Scrooge).
+
+**Missed text (lane 2) -- the reviewer adds these first.**
+
+Queues are `<out-dir>/queue-missed.txt`, one line per engine, parked on a group in the
+same panel.
+
+- ***The Christmas Cha Cha*** -- real adds: **102 p1** `CONTEST` (poster over the punch
+  bowl); **107 p3** `AJAX` on the envelope on the floor; **113 p1** `AJAX` on the
+  envelope and three drawn `!` over the boys; **114 p7** `Merry Christmas` on the card
+  under the prize bowl (a second one is grouped as g21). Recommend the ignore list: 101
+  `N` on the baseball cap, the music notes (101 p1-p2, 112 p8, 116 p3), the drawn `$`
+  (104 door plate, 105 door plates and curtains, 108 round Scrooge's head).
+- ***Donald's Party*** -- real adds: **144 p1** drawn `!` in a thought bubble over Daisy;
+  **148 p1** drawn `? ?` over Donald; **149 p2** `PRESS` card in the photographer's hat
+  (p1's is grouped).
+- ***Under the Polar Ice*** -- real adds: **007 p3** `PROPERTY of JUNIOR WOODCHUCKS` on
+  the trunk (p2's is grouped); **015 p6** `POP CRACK` as the ice breaks.
+- ***Touche Toupee*** -- no missed text.
+- ***Free Ski Spree*** -- recommend the ignore list: 166 p4 `$` on the air-car door, 168
+  p5 `$` on two money bags.
+- One audit near-miss: *Cha Cha* 114 `Sue Van Kow` against the grouped `KOUR` -- the
+  pending text correction on g8.
+
+**Queue counts (lane 2).**
+
+Speaker counts are per group; text, type and missed are lines (one per engine).
+
+| title | speakers low/med | speakers unreviewed | text | type | missed |
+|---|---|---|---|---|---|
+| *The Christmas Cha Cha* | 11 | 290 | 4 | 24 (one overrides a pre-pass mark) | 24 |
+| *Donald's Party* | 11 | 108 | 0 | 8 | 6 |
+| *Under the Polar Ice* | 7 | 146 | 0 | 2 | 4 |
+| *Touche Toupee* | 16 | 95 | 0 | 6 | 0 |
+| *Free Ski Spree* | 4 | 95 | 0 | 2 | 4 |
+
+`scripts/closeout.sh --stage apply` on each: FAIL only on missed text and outstanding
+corrections, as expected before review; engine diff, group audit, `other:` census,
+mirror and both git trees clean.
+
+**Images read (lane 2).**
+
+| title | pages | images | per page | what they were |
+|---|---|---|---|---|
+| *The Christmas Cha Cha* | 16 | 30 | 1.88 | page.png ×16, 11 tail/type crops, three for 114 (tails, ruler, signature) |
+| *Donald's Party* | 7 | 11 | 1.57 | page.png ×7, balloon-base strips on 143, 146 (two), 147 |
+| *Under the Polar Ice* | 10 | 10 | 1.00 | page.png ×10 -- fur hats, nothing to measure |
+| *Touche Toupee* | 6 | 11 | 1.83 | page.png ×6, one ruler composite per nephew page |
+| *Free Ski Spree* | 6 | 9 | 1.50 | page.png ×6, ruler composites on 163-165 |
+| **lane total** | **45** | **71** | **1.58** | |
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, ALL THIRTEEN REVIEWED AND MIRRORED -- *The Master Glasser* closes it)
 
 *The Master Glasser* closed at 80/80 on both engines (prelim `92fbf406`). **1 speaker
@@ -11678,6 +11937,26 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 24 (lane 1) and Vol. 23 (lane 2), twelve titles read 2026-09-27 (eighty-fifth batch;
+**NONE REVIEWED**, so every figure below is the pass's own). 91 pages, 128 images.
+
+**THE SAME THREE INKS, NOW ON SCARVES AND SPACE SUITS TOO.** Red `#e61b1f`, green
+`#009e46`-`#009e49`, blue `#00a5d5`. The winter titles (*Touche Toupee*, *Free Ski Spree*)
+print them on a matching scarf; *Island in the Sky* colour-codes the boys' space suits,
+but Donald's suit is also red. The jungle on *Island* prints the cap green's exact hex.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *Island in the Sky* (24, lane 1) | **045 panel 7** -- three caps knocked into the air, red x328-425 over the left boy, blue x577-668 middle, green x726-810 right | `#e61b1f` H358.8, **43-3,877px** (wedges mostly 100-1,300). Decoys: Scrooge's coat, Donald's bow tie, the Mars dot on 046's map, the rocket `#c32227` | `#009e46`-`#009e49` H147, **38-3,489px**. Decoys: **jungle foliage at the identical `#009e49`** (052, 060 p5), melon teal `#008b80` H175 | `#00a5d5` H193.5, **27-5,164px**. Decoys: Donald's cap 1,900-4,850px, Scrooge's hat band, the natives' feathers `#00a5d5` | Black beanie with one coloured quarter, often a sliver. Bare-headed on 045 p8, 046 p2, 048 p6, 055 p5, 058 p5 (quoted census in each note). **Colour-coded space suits on 060-061** (boys red/blue/green); **Donald's suit is red, Scrooge's blue** |
+| *The Stubborn Stork*, *Milktime Melodies*, *The Lost Rabbit Foot*, *Oodles of Oomph*, *The Bird Camera*, *The Odd Order* (24, lane 1) | -- | -- | -- | -- | No nephews. Gyro with Scrooge, Grandma Duck and Gus, Gladstone, or alone; the Junior Woodchuck troop on *Stork* 146 wears grey coonskins |
+| *The Christmas Cha Cha* (23, lane 2) | **109 panel 2** -- three boys by the car, green middle x345-431, red right x511-579 (blue left, cut) | `#e61b1f` H358.8, **~370-2,500px**. Decoys: everything -- Christmas red in wreaths, the car, Rosita's dress, Scrooge's coat | `#009e46`-`#009e49` H147-148, **~1,100-2,600px**. Decoys: wreaths and trees (green is everywhere at Christmas) | `#00a4d5`-`#00a5d6` H193.5, **~210-1,750px**. Decoys: Donald's cap, the picture frames | Black beanie with a coloured quarter, worn outdoors on 109-111, 114; **play-war hats on 101** (pot helmet, paper hat, a baseball cap printing blue); bare-headed indoors 102-107, 113, 115-116 (`0 blob(s) total` in every band on 115 p1 and p8) |
+| *Touche Toupee* (23, lane 2) | **157 panel 4** -- red x388-508, blue x529-610, green x643-728, big and lit | `#e51a1f`-`#e61a20` H358, **~700-5,000px** cap + scarf. Decoys: barn `#c45449`, apples, Grandma's polka dots | `#009e46` H147, **~450-6,000px** cap + scarf. Decoy: Grandma's green car `#008945` | `#00a5d5` H193.5, **~850-2,900px** cap + scarf. Decoys: Bumpkin's hat `#006ca7`, the bed quilt | Black winter cap with a coloured quarter AND a matching scarf; outdoors on every page; 161 a big hat hides the green boy's cap (scarf only); 162 caps held indoors. Cast: `other:Farmer Bumpkin`, Grandma Duck |
+| *Free Ski Spree* (23, lane 2) | **168 panel 2** -- green x98-323, red x366-561, blue x621-750, one balloon each | `#e61b1f` H358.8, **~700-5,300px** cap + scarf. Decoy: Scrooge's coat (up to 13,600px) | `#009e46`-`#009e47` H147, **~500-8,000px** | `#00a5d5` H193.5, **~1,100-5,600px**. Decoys: Scrooge's top-hat band, the title lettering | The same winter cap-and-scarf as *Touche Toupee*. Cast: Scrooge, Grandma Duck, `other:Billy the goat`, `other:James the chauffeur` |
+| *Under the Polar Ice* (23, lane 2) | none -- no cap prints | -- | -- | -- | **Brown Junior Woodchuck fur hats with a yellow badge** on 007-009 and 011-016; bare-headed indoors on 010. No roster ink on any boy; every nephew call is collective |
+| *Donald's Party* (23, lane 2) | -- | -- | -- | -- | No nephews. Daisy's Diary: Donald, Daisy, Scrooge, Clarabelle Cow, Cora Crane |
 
 ## Per-volume cap palette
 
