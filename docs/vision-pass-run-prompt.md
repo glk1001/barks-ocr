@@ -7420,6 +7420,51 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, ALL THIRTEEN REVIEWED AND MIRRORED -- *The Master Glasser* closes it)
+
+*The Master Glasser* closed at 80/80 on both engines (prelim `92fbf406`). **1 speaker
+correction over 80 pass groups**, in the nephew domain (1 of 13). Both text corrections
+on 066 applied (`MASTER GRASS CRAFTSMAN`, `CHIRKLE!`); four type corrections confirmed,
+066 g8's (Poopsie's CHIRKLE to `dialogue`) stamped at close-out after the review fixed its
+text but left the type unconfirmed.
+
+- **ART OVER A LOOSE DIALOGUE INFERENCE: 065 g5 went to Huey.** The pass saw a clean red
+  cap (621px) but reasoned from the line, continuing talk about HUEY, that the speaker was
+  not Huey, and left it `nephews` with `red` recorded and the conflict flagged. The review
+  named Huey. Flagging worked; the rule it confirms is `project_cap_beats_a_loose_third
+  _person_line` -- an inference about who a line is ABOUT does not overrule a clean cap.
+- The elimination on 065 g3 (Louie, `cap_colour` null) stood.
+
+**RULING, 2026-09-27: THE STANDARD LETTERING'S FORWARD LEAN IS NOT `[i]`.** The reviewer
+asked why *Master Glasser*'s `SOON!` / `SHORTLY!` / `LATER THAT NIGHT!` carried `[i]` when
+other stories' captions do not. Crops settled it: they are the same leaning capitals as
+*The Wax Museum*'s `TIME PASSES!` (stored plain), and only the Diary's joined script is a
+different face. Both lanes had wrapped nearly every caption in the batch. `[i]` removed
+from **38 groups per engine (76)** -- 31 captions and 4 balloons (*Gab-Muffer*'s `FORWARD,
+THE LIGHT BRIGADE!` and `WHY DIDN'T I THINK OF THAT?`, *Pied Piper*'s `PIED PIPER` line and
+radio bulletin) across the nine non-Diary titles, plus *The Librarian*'s three quoted
+flashback captions -- in prelim `4379ce5b` (Vol. 23) and `f54d54ea` (Vol. 24). The 53
+mixed-case Diary script groups keep `[i]`. The rule is now in `roster.txt` (barks-ocr
+`d51ed19`).
+
+**Open, for the reviewer: older volumes carry the same pattern.** A read-only census
+(2026-09-27) of wholly-`[i]` groups found 213 in Vols. 13, 14, 19 and 21, nearly all
+capitals: Vol. 13 *Omelet* 24, *Hobblin' Goblins* 6; Vol. 14 *Riches, Riches, Everywhere!*
+26, *The Great Steamboat Race* 19, *The Lemming with the Locket* 14; Vol. 19 *Old Froggie
+Catapult* 15, *The Black Pearls of Tabu Yama* 9, *The Milkman* 9, *The Persistent Postman*
+8, *Mocking Bird Ridge* 7; Vol. 21 *Christmas in Duckburg* 23, *Dramatic Donald* 8,
+*Rocket-Roasted Christmas Turkey* 7; and a tail of 1-6 elsewhere. Some may be a genuine
+different face (quoted narration, story-length caption text); none has been looked at.
+Nothing changed.
+
+**BATCH CLOSED: 18 speaker corrections over 1,348 pass groups (1.3%)** -- lane 1 7 of 641,
+lane 2 11 of 707 (*Matterhorn* 4, *Double Date* 4, *Trail Tycoon*, *TV Babysitter* and
+*Master Glasser* 1 each, *Librarian* and *Beauty Queen* 0). What recurred: a line said by
+two named for one (five times), a tail at the edge of a head on small caps (the seam and
+speck misses), and a drawn `?` given to the wrong head (three times). What held: every
+bubble-trail `thought` retype, every forced collective where no cap prints, and every
+elimination but one.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, TWELVE OF THIRTEEN REVIEWED AND MIRRORED -- *The Beauty Queen*)
 
 *The Beauty Queen* closed at 109/109 on both engines (prelim `ff3ab032`). **0 speaker
