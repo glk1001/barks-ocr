@@ -7420,6 +7420,244 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-sixth batch, NONE REVIEWED -- the third lane round: lane 1 Vol. 24, lane 2 Vol. 23)
+
+Eight titles read concurrently in two lanes and merged into the prelim `main` as `dc1ab330`
+(lane 1) and `ccf79499` (lane 2), exactly the plan. **139 images over 74 pages, 1.88 per
+page** (lane 1 2.05, lane 2 1.69); *Hound of the Whiskervilles* alone ran over the 3 target
+at 3.1, cap-dense and under the ceiling. The census credits the batch **76.4M tokens
+re-read, 1.03M per page** (lane 1 0.84, lane 2 1.23) against a 3.65M baseline. Every figure
+below is the pass's own and none of it has been checked.
+
+**THE TWO LANES ANSWERED THE OPEN GAP-TIP QUESTION DIFFERENTLY -- REVIEW THEM TOGETHER.** The
+eighty-fifth batch left it open (five left, two right). Lane 1 named the LEFT boy on all
+eight of its gap tips, at medium, with no second key; lane 2 named six by the slant and left
+one straight-down tip `nephews`. Between them the review settles whether gap-goes-left can go
+in the roster, or whether the rule is `nephews` without a second key.
+
+#### Lane 1 -- Vol. 24
+
+*Hound of the Whiskervilles* (Vol. 24, 062-069, 8pp, 135 groups), *Pipeline to Danger*
+(070-086, 17pp, 244), *Yoicks! The Fox!* (088-096, 9pp, 112), *War Paint* (170-173, 4pp, 63).
+
+- **EIGHT GAP TIPS NAMED LEFT AT MEDIUM, WITHOUT A SECOND KEY -- REVIEW AS A SET.** The
+  eighty-fifth batch left this open (five left, two right; "name a gap tip only with a
+  second key, else `nephews`"). This lane named the LEFT boy every time instead, because
+  every gap collective *Free Ski Spree* left was named by the review -- a collective there
+  cost a correction every time, a left name about one time in four. Each note opens
+  `GAP TIP` and quotes both boys' spans and inks: *Pipeline* 070 g3 (Huey), 070 g9 (Huey,
+  nearness said the blue boy), 073 g4 (Huey, nearer the middle boy), 084 g8 (Huey, 27px
+  red), 084 g10 (Louie), 085 g0 (Huey), 085 g10 (Dewey, a pure vertical gap tip, no slant);
+  *Yoicks* 089 g12 (Huey). *Hound* 063 g14 (Dewey) is an edge tip of the same kind. **If
+  the review moves these right, the side does not decide and the rule is `nephews`; if it
+  keeps them, gap-goes-left can go in the roster.**
+- **SCROOGE'S TOP HAT IS THE ROSTER BLUE.** `#00a5d5`, 1,300-2,500px, on every Scrooge
+  panel of *Hound*, *Pipeline* and *Yoicks* -- on top of Donald's cap. Every blue call was
+  placed on a boy's head span first. *Pipeline* adds more decoys: the helicopter prints
+  the cap green `#009e49` exactly (084-085), the fire extinguishers the cap red (077 p8),
+  the ship's stripes the cap blue (070 p1).
+- **A CAP READ OFF `page.png` WAS WRONG; THE SAMPLE WAS RIGHT.** *Pipeline* 084 p8's front
+  boy looked green on the page view and samples blue `#00a4d5`, 2,048px (named Dewey); 084
+  p5's middle boy the same. Colour came from the census on every call, never the eye.
+- **SMALL INK.** Names resting on under 100px: *Hound* 062 g14 (46px), 062 g15 (96px), 064
+  g13 (70px), 067 g10 (49px); *Pipeline* 071 g6 (96px), 084 g8 (27px), 085 g1 (50px),
+  085 g12 (84px); *Yoicks* 089 g12 (35px). All medium, each with the count in the note.
+- **LINES WITH NO TAIL TO A DRAWN FIGURE, AT LOW:** *Hound* 063 g8 `GLASGOW!` (zigzag from
+  the airliner, `other:the stewardess`), 064 g3 `THE HOUND?` (into a silhouetted cab,
+  Donald), 066 g11 (two tiny tower silhouettes, Donald); *Pipeline* 074 g3/g4 (snores from
+  inside tents, `unknown`). Per the eighty-fifth batch, low rather than a role argument.
+  Medium on a line: *Pipeline* 072 g2 and 073 g1/g10 (Scrooge), 071 g18 (Donald, in the
+  cab); *Pipeline* 086 g2 `I SEE UNCA SCROOGE!` (Huey by scene tracking, no tail).
+- **TWO TEXT CORRECTIONS, BOTH READ ON A CROP:** *Pipeline* 082 g3 `PIGMIES` (stored
+  `PYGMIES`); *Yoicks* 091 g10 `GRUFFLED GROUSE` (stored `RUFFLED` -- Scrooge garbling the
+  bird's name, as he does all page).
+- **RETYPES (18).** Bubble trails under smooth balloons to `thought`: *War Paint* 170 g1,
+  g4, g13, 171 g1, g18; *Pipeline* 075 g12; *Yoicks* 090 g11, 095 g6. Tailed balloons stored
+  `narration` to `dialogue`: *Hound* 068 g12 (McWhisker in silhouette), *Pipeline* 086 g13,
+  *Yoicks* 096 g12 (the steward finishing his sentence). Voices stored `sound_effect` to
+  `dialogue`: the hound's howls (*Hound* 066 g15, 067 g8), the camel's `HISS` (*Pipeline*
+  079 g3), a war whoop (*War Paint* 172 g0), the snores (*Pipeline* 074 g3/g4), and the
+  hunting horn (*Yoicks* 090 g5, named `other:the huntsman` as the corpus names instrument
+  noise -- check it against the *Milktime* hi-fi ruling, which went the other way for a
+  machine).
+- **ONE PERSON, TWO NAMES -- SAY WHICH.** *Hound*'s hound is `other:the Hound of the
+  Whiskervilles` for every howl up to 068 g2 and `other:Angus McWhisker` once he speaks
+  from the pit (068 g3 on). *Pipeline*'s sheik is `other:the sheik` throughout although
+  080 g14 names him Hassan Ben Happi; the tribe (Barks's DUCKNIKS, 086) is `other:a scout`
+  and `other:a tribesman`.
+- `other:` values, no near-duplicates by the census. *Hound*: `Angus McWhisker` (9), `the
+  Hound of the Whiskervilles` (8), `a villager` (2), `McWhisker's dog`, `the butler`, `the
+  stewardess`. *Pipeline*: `a tribesman` (23), `a scout` (15), `the sheik` (15), `a
+  dockhand` (3), `a welder` (3), `a camel`, `a workman`, `an Arab laborer`, `the helicopter
+  pilot`. *Yoicks*: `a millionaire` (12), `the hunt steward` (4), `McGonnigle` (3), `the
+  lock installer` (2), `Hummingbird the fox`, `the fox farmer`, `the huntsman`. *War Paint*:
+  `a movie Indian` (14), `Samuel Goldfinch` (12), `a crewman` (4), `the movie Indians` (2),
+  `a cameraman`.
+
+
+**Missed text (lane 1) -- the reviewer adds these first.**
+
+Queues: `hound-of-the-whiskervilles/queue-missed.txt`, `pipeline-to-danger/queue-missed.txt`.
+
+| title | page | panel | lettering | class | suggested |
+|---|---|---|---|---|---|
+| *Hound* | 063 | 6 | `TE` | neither engine | a sign cut by the right edge -- ignore list? |
+| *Hound* | 065 | 7 | `MC` | neither engine | scratched on the castle wall beside Donald -- a group to add |
+| *Hound* | 066 | 6 | `!` x3 | 3 in the art, 1 grouped | g12 `! ! !` already covers all three -- ignore list |
+| *Pipeline* | 084 | 3 | `! !` | neither engine | two drawn surprise marks beside Scrooge -- add, or ignore list |
+
+- ***Yoicks! The Fox!***, ***War Paint*** -- no missed text.
+- The pass ADDED two groups itself (`added_groups`), each on both engines and in the
+  unreviewed queue: *Hound* 067 p7 `CRASH` (sound_effect, the hound's pit), *Yoicks* 090 p2
+  `?` (Scrooge's thought cloud). Check the box on each.
+
+**Queue counts (lane 1).**
+
+| title | speakers low/med | speakers unreviewed | text | type | missed |
+|---|---|---|---|---|---|
+| *Hound of the Whiskervilles* | 26 | 136 | 0 | 6 | 3 |
+| *Pipeline to Danger* | 43 | 244 | 2 | 9 | 1 |
+| *Yoicks! The Fox!* | 10 | 113 | 2 | 8 | 0 |
+| *War Paint* | 8 | 63 | 0 | 12 | 0 |
+
+Text and type are lines, one per engine. One pre-pass review mark on *Hound* was cleared by
+the apply (the 2026-09-26 ruling); that group is in the queue with the pass's call.
+`scripts/closeout.sh --stage apply` FAILs only on missed text and corrections, as expected
+before review.
+
+**Images read (lane 1).**
+
+| title | pages | images | per page | what they were |
+|---|---|---|---|---|
+| *Hound of the Whiskervilles* | 8 | 25 | 3.1 | page.png plus 3 whole panels and 14 tail crops -- over the 3 target |
+| *Pipeline to Danger* | 17 | 36 | 2.1 | page.png plus 19 tail crops |
+| *Yoicks! The Fox!* | 9 | 13 | 1.4 | page.png plus 4 crops |
+| *War Paint* | 4 | 4 | 1.0 | page.png alone |
+| **lane total** | **38** | **78** | **2.05** | |
+
+#### Lane 2 -- Vol. 23
+
+*The Snow Chaser* (Vol. 23, 169-174, 6pp, 88 groups), *Knights of the Flying Sleds* (071-080,
+10pp, 136 + 2 added), *Riding the Pony Express* (081-090, 10pp, 129), *Want to Buy an
+Island?* (091-100, 10pp, 135).
+
+- **KNIGHTS OF THE FLYING SLEDS: THE DIALOGUE AND THE PLUMES DISAGREE ABOUT DEWEY ON
+  071-072 ONLY -- SAY WHICH THE REVIEW TAKES.** The boys wear pot helmets whose plume, and
+  later sled, carries the roster ink, and the costume is consistent per boy: teal pot +
+  GREEN plume + green sled, grey pot + RED plume + red sled, blue-grey visor + BLUE plume +
+  blue sled. From 073 on everything fits red=Huey, blue=Dewey, green=Louie, and 077 g6
+  (the green-plumed boy says `SIR DEWEY, TAKE THE LEFT SIDE!` and the blue-plumed boy
+  answers) confirms it. But on 071 the charging boy whose lance pokes through the fence is
+  GREEN-plumed, and 072 g15 says `IT WAS SIR DEWEY'S LANCE`. Per the colourist ruling the
+  pass named 071 g1 and g2 **Dewey with `cap_colour: green`** (dialogue fixes the boy) and
+  kept the convention everywhere else, including 072 g14 (green -> Louie) and 072 g15
+  (blue -> Dewey, confessing in knightly third person). Four groups hang on this: 071 g1,
+  g2, 072 g14, g15, all at medium. **If the review reads 072 g15 as a brother naming the
+  green boy, the whole title's green is Dewey and ~20 Louie calls flip; if it reads the
+  071 charger as mis-coloured, 071 g1/g2 go to Louie.** The pass thinks the second is
+  likelier, but did not cash it because the ruling says dialogue names.
+- **A PLUME OR A SLED IS A GARMENT FOR `cap_colour`.** *Knights* records the plume ink
+  (`#009e49`, `#e61b1f`/`#e51a1f`, `#00a5d5`) as the cap colour, as *Mastering the
+  Matterhorn*'s feathers did. On 076 p1-p2 and one long shot the plumes do not print at
+  that size, and three names rest on the SLED colour alone (`identified_by: costume`,
+  `cap_colour` null, medium): 076 g0, g1, g2.
+- **THE SNOW CHASER: BARE-HEADED BOYS WITH ROSTER-INK SCARVES.** Grandma Duck's Farm
+  Friends; the boys wear red/blue/green scarves (`#e61b1f`, `#00a4d5`, `#009e46`) with no
+  cap on most pages, and the scarf is the key, recorded in `cap_colour`. The title splash
+  (169 p1) prints the third boy's scarf and rim TEAL `#00a284` H168.9 -- not a roster ink
+  -- so 169 g2 is Dewey by elimination with `cap_colour` null.
+- **RIDING THE PONY EXPRESS: EVERY NEPHEW CALL IS COLLECTIVE (20).** Three identical green
+  cowboy hats `#008945` H150.2 and three red neckerchiefs, then three identical red
+  headbands with green feathers as play Indians. Same ink on every boy, so nothing names
+  one, and no line does either. Quoted in the notes panel by panel (081 p3/p5, 083 p4).
+- **WANT TO BUY AN ISLAND?: DIALOGUE NAMES TWO BOYS, AND THE CAPS AGREE.** 091 g9 names the
+  land seller `DEWEY`; 097 g10 has the RED-capped boy say `I AM LORD FATWALLET`, the
+  top-hatted buyer of 091-092. Indoors at kindergarten nobody wears a cap, so the seller's
+  lines (091 g11, g13; 092 g3) are Dewey at medium with `cap_colour` null, and the
+  buyer's (091 g10, g12; 092 g4) were left `nephews` -- the identification came three
+  pages later. **The review may want to name those three Huey.** From 093 the boys wear
+  black quartered caps; several print only 44-135px (093 p2, 097 p3, 098 p7-p8), so those
+  names are medium.
+- **GAP TIPS, THIS BATCH.** Named, each with the slant pointing the same way as the
+  one-head-left habit: *Island* 095 g7 (Dewey, 25px right of the blue boy and 43px left of
+  the green), 098 g0 (Dewey, on the right edge of the blue boy's cap), 099 g4 (Dewey, 55px
+  left of him with the red boy far below), *Knights* 079 g10 (Louie, over the green boy's
+  beak), 080 g12 (Huey, 14px right), *Snow Chaser* 174 g8 (Dewey, 34px right of blue and
+  44px left of green, slant left). Left `nephews`, a straight-down tail with no second key:
+  *Island* 098 g4 (15px right of red, 30px left of blue).
+- **ROLE REASONING, ONE PLACE.** *Snow Chaser* 174 g8 `YES, SCATTERING THEM INTO A JILLION
+  PEACEFUL PIECES -- SNOWFLAKES!` echoes Gyro's own words from 173 g17, but Gyro is not
+  drawn and the tail comes into the panel at the boys, so the pass named the boy (Dewey,
+  medium). If the review gives it to Gyro, that is a tail overruled by role.
+- **TYPE CORRECTIONS: 12 over the lane (per engine).** Bubble trails stored as `dialogue`
+  -> `thought` (5: *Knights* 075 g0, g12; *Pony* 084 g12 the pilot; *Island* 092 g16 the
+  tramp, 099 g3 Donald). Pointed tails stored as `thought` -> `dialogue` (2: *Knights* 073
+  g6, *Island* 093 g12 `GOSH!`). Voices stored as `sound_effect` -> `dialogue` (3: *Pony*
+  086 g11 `WAHOO!` and g12 `YI YI YI`, *Island* 097 g12 Donald's `GROAN`). Box and balloon
+  swapped (2: *Snow Chaser* 173 g3, a tailed balloon stored `narration`; 174 g1, a tailless
+  corner box stored `dialogue`).
+- **ONE TEXT CORRECTION:** *Pony* 081 g1, the caption reads `WOOLY WEST!` in the art (one
+  L); stored `WOOLLY`. A spelling, not a misread word -- reject it if the corpus prefers
+  the dictionary form. *Island* 091 g7's `[math formulas]` is a bracketed placeholder for
+  the drawn equation and was left as it is.
+- `other:` values. *Snow Chaser*: `Bossy Cow` (8 per engine), `the tow-truck man`.
+  *Knights*: `the girls` (6), `Mr. Growl` (4), `the damsel` (4), `a bystander` (3), `the
+  movie director` (2), `Mrs. Growl`, `the cameraman`, `the zookeeper`. *Pony*: `the lady
+  guest` (11), `a guest` (9), `Chief Brass Eagle` (9), `Chief Scissor Bill` (9), `the
+  pilot` (7), `the foreman` (6), `the girl guest` (4), `the guests` (3), `the commanding
+  officer`, `an airman`. The census flags `a guest` inside `the lady guest` and `the girl
+  guest`: different people, deliberate. The two chiefs are play-Indian names from 086
+  (`ME CHIEF SCISSOR BILL`, `NO FOOL-UM CHIEF BRASS EAGLE`) applied back to 083 by
+  costume; 082 keeps `a guest`. *Island*: `the range observer` (11), `the teacher` (7),
+  `the tramp` (6), `the voice on the radio` (3), `a classmate`.
+- `Grandma Duck` is bare (roster-tagged for *The Snow Chaser*), 21 groups per engine, so
+  the census lists her as off-roster, as before.
+- **MEDIUMS TO LOOK AT FIRST:** *Knights* 071 g1, g2, 072 g14, g15 (the Dewey question);
+  *Snow Chaser* 169 g2, g3 (the title panel's teal scarf), 173 g15 (named by elimination
+  under 42-52px caps); *Pony* 087 g9 (no tail -- the lady by elimination of the throwers);
+  *Island* 091 g3, g4 (hidden tails in the classroom); *Knights* 078 g6 is the lane's one
+  `low` (`other:the movie director`, a tail that reaches nobody).
+
+
+**Missed text (lane 2) -- the reviewer adds these first.**
+
+Queues are `<out-dir>/queue-missed.txt`, one line per engine.
+
+- ***Knights of the Flying Sleds*** 076 panel 8: a drawn `♪` beside the dancing teacher at
+  the piano. Grouped by NEITHER engine; parked on g13 (the CLASS V sign). Probably an
+  ignore-list row, like the drawn notes on *Milktime Melodies*.
+- ***Want to Buy an Island?*** 092: four kindergarten wall cards grouped by NEITHER engine --
+  panel 3 a lowercase `a` card; panel 5 a second `A BIRD` card, a second `A CAT` card, an
+  `a` card and a `B` card (the panel-3 `A BIRD` and `A CAT` are g8/g9). Parked on g9
+  (panel 3) and g12 (panel 5). Decorative; likely ignore-list rows.
+- ***The Snow Chaser***, ***Riding the Pony Express*** -- no missed text.
+- The pass ADDED two groups neither engine had: *Knights* 075 panel 1 `ZOOM`
+  (sound_effect) and 079 panel 1 `ZOO` (the sign on the zoo wall). Both renumbered their
+  page before any queue was built.
+
+**Queue counts (lane 2).**
+
+| title | speakers low/med | speakers unreviewed | text | type | missed |
+|---|---|---|---|---|---|
+| *The Snow Chaser* | 12 | 88 | 0 | 2 | 0 |
+| *Knights of the Flying Sleds* | 24 | 138 | 0 | 3 | 1 (076 `♪`) |
+| *Riding the Pony Express* | 21 | 129 | 1 | 3 | 0 |
+| *Want to Buy an Island?* | 27 | 135 | 0 | 4 | 4 (092 wall cards) |
+
+Text and type are per group here, not per engine. `scripts/closeout.sh --stage apply` on
+each: engine diff, group audit, mirror and both git trees OK; FAIL only on corrections and
+missed text, which wait for the review.
+
+**Images read (lane 2).**
+
+| title | pages | images | per page | what they were |
+|---|---|---|---|---|
+| *The Snow Chaser* | 6 | 16 | 2.67 | 250px montages plus panel views and crops |
+| *Knights of the Flying Sleds* | 10 | 18 | 1.80 | montages/crops on 071-073, then page.png plus a crop where a tip was close |
+| *Riding the Pony Express* | 10 | 11 | 1.10 | page.png alone -- identical hats, every nephew call collective |
+| *Want to Buy an Island?* | 10 | 16 | 1.60 | page.png plus one crop strip on six pages |
+| **lane total** | **36** | **61** | **1.69** | |
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, ALL TWELVE REVIEWED AND MIRRORED -- *Donald's Party* closes it)
 
 *Donald's Party* closed at 110/110 on both engines. **1 speaker correction over 108 pass
@@ -12141,6 +12379,28 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 24 (lane 1) and Vol. 23 (lane 2), eight titles read 2026-09-27 (eighty-sixth batch;
+**NONE REVIEWED**, so every figure below is the pass's own). 74 pages, 139 images.
+
+**THE SAME THREE INKS, ON PLUMES, SLEDS AND SCARVES TOO; SCROOGE'S TOP HAT IS THE BLUE.** Red
+`#e61b1f`, green `#009e46`-`#009e49` H147, blue `#00a5d5` H193.5. In Vol. 24 Scrooge's top
+hat prints the roster blue at 1,300-2,500px on every panel he is in, and *Pipeline*'s
+helicopter the cap green's exact `#009e49`. In Vol. 23 the decoy green `#008945` H150
+(Grandma's car, the *Pony* cowboy hats) and `#00a96c` H158 sit just above the cap green.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *Hound of the Whiskervilles* (24, lane 1) | **066 panel 5** -- three boys in a row, blue x254-304, red x425-488, green x617-671 (heads 598 / 798 / 621px) | `#e61b1f` H358.8, **96-1,500px**. Decoys: Scrooge's coat, Donald's bow tie, the pipers' tartan `#e61251` | `#009e46`-`#009e47` H146-147, **157-700px**. Decoy: moorland foliage in `leafgrn` | `#00a5d5` H193.5, **46-600px**. Decoys: **Scrooge's blue top hat** 1,300-2,500px, Donald's cap, the pipers' `#006ca7` | Black beanie with a small coloured quarter; many caps print a sliver only (062 p6 blue 46px). Silhouette panels 062 p5, 066 p1, 068 p6. Cast: `other:Angus McWhisker` (the hound) |
+| *Pipeline to Danger* (24, lane 1) | **070 panel 5** -- the backs of three heads, red x256-391, blue x564-728, green x804-856 | `#e61b1f` H358.8, **27-3,500px**. Decoys: Scrooge's coat, the fire extinguishers (077 p8), the trucks `#c22226` | `#009e45`-`#009e49` H146-148, **51-1,900px**. Decoys: **the helicopter at the identical `#009e49`**; 070 p1's left boy prints a teal `#009377` H168.6 | `#00a4d5`-`#00a5d6` H193.5, **48-2,700px**. Decoys: **Scrooge's blue top hat**, Donald's cap, the ship's stripes (070 p1) | Black beanie, coloured quarter from slivers to whole backs. The order is red, blue, green left to right in most rows (070 p5, 071 p4, 073 p4, 077 p8, 085 p6) but not all (084 p7 green, blue, red). Bare-headed only on 086 p5 (medals). Cast: the tiny desert tribe |
+| *Yoicks! The Fox!* (24, lane 1) | **089 panel 4** -- three boys, red x81-117, blue x187-257, green x331-397 | `#e61b1f`, 128-300px | `#009e46`-`#009e49`, 51-860px | `#00a5d5`, 83-400px. Decoys: Scrooge's top hat, Donald's cap, the game-farm sign | Boys on 088-089, 091-092 and 094-095 only, small; 094 p6 and 095 p7 silhouettes. Cast: `other:a millionaire`, `other:McGonnigle` |
+| *War Paint* (24, lane 1) | -- | -- | -- | -- | No nephews. Gyro, the Little Helper, `other:Samuel Goldfinch` and the painted movie Indians |
+| *The Snow Chaser* (23, lane 2) | **169 panel 2** -- three boys walking home, scarves red x526-681, blue x677-822, green x808-895 | `#e61b1f` H358.8, **~550-1,800px** scarf. Decoys: the title logo, Gyro's truck | `#009e46`-`#009e47` H147, **~400-3,300px** scarf (+ cap rim). Decoys: Grandma's car `#008945`, the teal `#00a96c` stools | `#00a4d5`-`#00a5d5` H193.5, **~600-3,600px** scarf. | Bare-headed boys in roster-ink scarves; caps only on 169 p1-p2 and 170 p7 (small bands). **169 p1 prints the third boy TEAL `#00a284` H169.** Cast: Grandma Duck, Gyro, Little Helper, `other:Bossy Cow` |
+| *Knights of the Flying Sleds* (23, lane 2) | **071 panel 1** / **072 panel 8** -- plumes green x628-736 (teal pot), red x1510-1586 (grey pot), blue x1737-1797 (visor) | `#e61b1f`/`#e51a1f` H358.5, **~240-4,700px** plume, red sled beyond. Decoys: Growl's glove, the rescue-sled crowd | `#009e49` H147.7, **~230-5,200px** plume, green sled beyond. Decoy: the fence `#4a9a9b` | `#00a5d5` H193.5, **~460-2,800px** plume, blue sled beyond. Decoys: the teal helmet `#006b86`, the visor `#77a6c7` | Pot helmets with one plume each, then a flying sled of the same colour. **071-072 dialogue calls the GREEN-plumed boy Dewey; 077 agrees with the convention.** Plumes vanish in long shots (072 p7, 073 p3, 076 p1-p2) |
+| *Riding the Pony Express* (23, lane 2) | none -- no key prints | `#e51a1f` on ALL THREE neckerchiefs and headbands | `#008945` H150.2 on ALL THREE hats; `#009e47` on all the feathers | -- | Identical green cowboy hats, then identical play-Indian headbands. Every nephew call collective. Cast: `other:the foreman`, the dude-ranch guests, `other:the pilot` |
+| *Want to Buy an Island?* (23, lane 2) | **095 panel 5** -- three boys at the wheel, red x101-173, blue x312-355, green x514-606 | `#e61b1f` H358.8, **62-2,573px**. Decoys: Donald's bow tie (100 p3), the warning buoy, the missile | `#009e45`-`#009e49` H147, **44-4,638px**. Decoy: the hedge `#009e47` on 093 | `#00a4d5`-`#00a5d6` H193.5, **58-3,754px** | Black quartered cap; bare-headed indoors at kindergarten (091-092) and at home (094 p1-p5). Cast: `other:the teacher`, `other:the tramp`, `other:the range observer` |
 
 ## Per-volume cap palette
 
