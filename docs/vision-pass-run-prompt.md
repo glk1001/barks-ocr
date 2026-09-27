@@ -7420,6 +7420,19 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, TWELVE OF THIRTEEN REVIEWED AND MIRRORED -- *The Beauty Queen*)
+
+*The Beauty Queen* closed at 109/109 on both engines (prelim `ff3ab032`). **0 speaker
+corrections over 109 pass groups** -- high 0 of 106, medium 0 of 2, and the one low
+(139 g4, the off-panel `WAIT!`) stood. All six type corrections confirmed: the story
+logo to `title` (135 g0) and five of Daisy's smooth balloons with a bubble trail to
+`thought`. No adds, no text edits; the square-dance notes on 140 to the ignore list.
+
+- **DAISY'S BUBBLE-TRAIL BALLOONS ARE THOUGHTS -- CONFIRMED.** Lane 2 asked the review to
+  check that a smooth balloon with a trail of separate bubbles is a `thought`; across
+  *Trail Tycoon*, *TV Babysitter*, *Beauty Queen* and *Matterhorn* every one of those
+  retypes was accepted. It is the rule, not a Diary quirk.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, ELEVEN OF THIRTEEN REVIEWED AND MIRRORED -- *The TV Babysitter*)
 
 *The TV Babysitter* closed at 96/96 on both engines (prelim `a5d248a4`). **1 speaker

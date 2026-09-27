@@ -678,3 +678,6 @@ HELP KEEP AMERICA STRONG
 # cannot match
 23 133 DUCKBURG DUCKS
 23 134 2
+
+# The Beauty Queen: drawn music notes at the square dance (reviewer, 2026-09-27)
+23 140 ♪ ♫
