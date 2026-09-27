@@ -238,6 +238,50 @@ def _sample(calls: list[Call], per_name: int, per_title: int) -> list[Call]:
     return calls
 
 
+QUEUE_KINDS = ("named one-off", "unnamed role", "collective", "animal", "roster")
+
+
+def _queue_lines(
+    selected: list[Call], engine: str, *, by_kind: bool
+) -> tuple[list[str], Counter[str]]:
+    """Return the queue's entry lines and a per-kind speaker tally.
+
+    Page order by default: a title's review walks its pages, and a queue grouped
+    by kind opened mid-story -- lane 2's *Free Ski Spree* on 164, not 163 -- and
+    left every session to re-sort it by hand (2026-09-27). ``by_kind`` restores
+    the grouping by risk class, under ``# --- kind ---`` separators, for a SAMPLED
+    cross-title queue, where stopping half way should still finish whole classes.
+
+    Args:
+        selected: The calls to queue.
+        engine: The engine name written into each line.
+        by_kind: Group by risk class instead of page order.
+
+    Returns:
+        The lines (no header) and a ``"kind: speaker"`` tally for the summary.
+
+    """
+    grouped: dict[str, list[Call]] = defaultdict(list)
+    for call in selected:
+        name = call.speaker[len(OTHER_PREFIX) :] if call.speaker.startswith(OTHER_PREFIX) else ""
+        grouped[_kind(name) if name else "roster"].append(call)
+
+    def page_order(c: Call) -> tuple[int, str, int]:
+        return c.volume, c.fanta_page, int(c.group_id)
+
+    tally: Counter[str] = Counter()
+    for kind in QUEUE_KINDS:
+        tally.update(f"{kind}: {call.speaker}" for call in grouped.get(kind, []))
+    if not by_kind:
+        return [call.line(engine) for call in sorted(selected, key=page_order)], tally
+    lines: list[str] = []
+    for kind in QUEUE_KINDS:
+        if rows := grouped.get(kind, []):
+            lines.append(f"# --- {kind} ---")
+            lines += [call.line(engine) for call in sorted(rows, key=page_order)]
+    return lines, tally
+
+
 def _write_queue(out: Path, lines: list[str], *, entries: int) -> None:
     """Write the speaker-review queue, or remove it when there is nothing to review.
 
@@ -313,6 +357,14 @@ def main(  # noqa: PLR0913
         bool,
         typer.Option("--missing-evidence", help=f"Only calls with no {IDENTIFIED_BY_KEY}."),
     ] = False,
+    by_kind: Annotated[
+        bool,
+        typer.Option(
+            "--by-kind",
+            help="Group the queue by risk class instead of page order -- for a sampled"
+            " cross-title queue, where stopping half way should finish whole classes.",
+        ),
+    ] = False,
 ) -> None:
     comics_database = ComicsDatabase()
     speech_groups = SpeechGroups(comics_database)
@@ -351,23 +403,9 @@ def main(  # noqa: PLR0913
 
     selected = _sample(calls, per_name, per_title)
 
-    # Grouped by risk class, so stopping half way still leaves a complete answer
-    # for the kinds already walked rather than a random half of everything.
-    by_kind: dict[str, list[Call]] = defaultdict(list)
-    for call in selected:
-        name = call.speaker[len(OTHER_PREFIX) :] if call.speaker.startswith(OTHER_PREFIX) else ""
-        by_kind[_kind(name) if name else "roster"].append(call)
-
+    body, tally = _queue_lines(selected, engine.value, by_kind=by_kind)
     lines = [f"# vision-check speaker review -- {annotated} annotated, {len(selected)} queued"]
-    tally: Counter[str] = Counter()
-    for kind in ("named one-off", "unnamed role", "collective", "animal", "roster"):
-        rows = by_kind.get(kind, [])
-        if not rows:
-            continue
-        lines.append(f"# --- {kind} ---")
-        for call in sorted(rows, key=lambda c: (c.volume, c.fanta_page, int(c.group_id))):
-            lines.append(call.line(engine.value))
-            tally[f"{kind}: {call.speaker}"] += 1
+    lines += body
 
     _write_queue(out, lines, entries=len(selected))
 
