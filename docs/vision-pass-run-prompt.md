@@ -7420,6 +7420,16 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, FIVE OF TWELVE REVIEWED AND MIRRORED -- *Oodles of Oomph*)
+
+*Oodles of Oomph* closed at 52/52 on both engines. **0 speaker corrections over 50 pass
+groups**; `review_findings` shows "high 2 of 50", but both rows are the review's own
+mid-page adds (168 g5 a boat-number `3`, 169 g6 a bird's `?` in a tailed balloon, typed
+`dialogue` on purpose). All five type corrections confirmed, including both race
+announcer balloons (167 g10 from `narration`, 168 g9 from `thought`) to `dialogue`. The
+race poster (166 g1) was left unticked and stamped at close-out; the other boat numbers
+went on the ignore list.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, FOUR OF TWELVE REVIEWED AND MIRRORED -- *The Lost Rabbit Foot*)
 
 *The Lost Rabbit Foot* closed at 83/83 on both engines (prelim `095736ea`). **0 speaker

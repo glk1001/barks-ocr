@@ -695,3 +695,9 @@ HELP KEEP AMERICA STRONG
 
 # The Lost Rabbit Foot (reviewer, 2026-09-27): the edge of a sign on the shop wall
 24 149 R S
+
+# Oodles of Oomph (reviewer, 2026-09-27): the boat numbers the review did not add (it added
+# 168 g5); 169's `?` over the goose was added as g6
+24 168 3
+24 168 2
+24 169 3
