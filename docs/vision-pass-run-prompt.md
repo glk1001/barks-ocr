@@ -7420,6 +7420,21 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, TEN OF TWELVE REVIEWED AND MIRRORED -- *Under the Polar Ice*)
+
+*Under the Polar Ice* closed at 148/148 on both engines (prelim `f3464277`, `POP CRACK` in the
+next commit). **1 speaker correction over 146 pass groups**: 011 g11 `other:a sailor` ->
+`other:the sailors`, a line the crew at the controls says together. The one type correction
+(008 g1 to `thought`) confirmed. The review added the trunk's `PROPERTY of JUNIOR WOODCHUCKS`
+(007 g10) and 015's `POP CRACK` (g15); nothing went to the ignore list.
+
+- **ALL 57 FUR-HAT COLLECTIVES STOOD.** Brown Junior Woodchuck hats with no roster ink on any
+  boy, and the review named none of them -- as on *The Gab-Muffer*. Where nothing prints and
+  no line names a boy, the collective is right.
+- **A LINE A GROUP SAYS TOGETHER IS PLURAL** (`the sailors`), the sixth chorus correction in
+  two batches. Read a crowd's line as the crowd's before giving it to the one the tail
+  touches.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, NINE OF TWELVE REVIEWED AND MIRRORED -- *Touche Toupee*)
 
 *Touche Toupee* closed at 95/95 on both engines (prelim `45082059`). **8 speaker corrections
