@@ -7463,7 +7463,8 @@ lane 2 11 of 707 (*Matterhorn* 4, *Double Date* 4, *Trail Tycoon*, *TV Babysitte
 two named for one (five times), a tail at the edge of a head on small caps (the seam and
 speck misses), and a drawn `?` given to the wrong head (three times). What held: every
 bubble-trail `thought` retype, every forced collective where no cap prints, and every
-elimination but one.
+elimination the pass made (four) -- the one elimination correction, *Matterhorn* 063 g8,
+was the review eliminating where the pass had not.
 
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, TWELVE OF THIRTEEN REVIEWED AND MIRRORED -- *The Beauty Queen*)
 
