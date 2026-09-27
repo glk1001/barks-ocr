@@ -7420,6 +7420,31 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, NINE OF TWELVE REVIEWED AND MIRRORED -- *Touche Toupee*)
+
+*Touche Toupee* closed at 95/95 on both engines (prelim `45082059`). **8 speaker corrections
+over 95 pass groups, all in the nephew domain (8 of 37)**; high 5 of 79, medium 3 of 16.
+Three type corrections confirmed (157 g6 to `thought`, 160 g0 `So -` to `narration`, the
+baby's `WAH! WAA!` to `dialogue`). No adds, no missed text; the scarf-named Louie calls on
+161 (g9, g12, g15, g17) and 162 g14 all stood.
+
+- **THE PROPOSED SEAM RULE DID NOT HOLD -- DO NOT PUT IT IN THE ROSTER.** *Free Ski Spree*
+  sent all three undecided gap tips LEFT, and here 162 g11 -- where only the rule said left,
+  against slant and nearness -- stood, and 158 g7 (tip on the middle boy's left edge) went
+  one further LEFT, to the green boy. But **157 g8 and 158 g13 were gap tips the rule put on
+  the left boy (Dewey both times), and the review named the RIGHT boy** (Louie, Huey). Over
+  the two titles: six gap/edge tips went left, two went right. **A tip between two boys on
+  these caps does not decide the speaker by position.** Something else decided the two that
+  went right -- the reviewer is asked which key it was, and that key, not the side, is the
+  rule to write. Until then: name a gap tip only with a second key (address, the object the
+  line is about, who faces whom), else `nephews`.
+- **UNDER-NAMING, FOUR TIMES, ON TAILS THAT STOP SHORT.** 157 g12 (tail stops 130px above the
+  heads), 159 g15, 159 g16, 160 g7 (a long tail stopping far above the toboggan) -- all named
+  by the review. A tail that stops short still points: follow its line to the head below.
+- **ONE NAME BACK TO THE COLLECTIVE, FROM INSIDE A HEAD SPAN:** 162 g13 `WELL, HE'S GONE ALL
+  THE WAY WITH DISCARDING TOP-PIECES!` -- tip inside the left boy's span, under the red cap he
+  is tossing -- `Huey` -> `nephews`. No review note; likely a line the boys share.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, EIGHT OF TWELVE REVIEWED AND MIRRORED -- *Free Ski Spree*)
 
 *Free Ski Spree* closed at 95/95 on both engines (prelim `ed3725da`). **5 speaker corrections
