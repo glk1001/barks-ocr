@@ -7426,11 +7426,11 @@ Twelve titles read concurrently in two lanes and merged into the prelim `main` a
 (lane 1) and `3dcbb62e` (lane 2): ten from the plan, plus two Vol. 24 one-page gags lane 1
 read because they are filed as back matter of its titles (*The Bird Camera* 087, *The Odd
 Order* 097 -- the merge commit's message lists only the planned five). **128 images over 91
-pages, 1.41 per page** (lane 1 1.24, lane 2 1.58); the census trend reads 1.38M tokens per
-page against a 3.65M baseline. **Cost caveat:** the census found no session to credit for
-four lane-2 titles (*Donald's Party*, *Under the Polar Ice*, *Touche Toupee*, *Free Ski
-Spree*) or the two gags, so their ledger rows carry images only, and *The Christmas Cha
-Cha*'s 158 calls / 43.7M tokens may be lane 2's whole cost. Every figure below is the
+pages, 1.41 per page** (lane 1 1.24, lane 2 1.58); the census trend reads **0.96M tokens per
+page** against a 3.65M baseline. The two gags carry images only: they were read by
+`--volume 24 --pages 087,097` and no title was named, so no call can be credited to them.
+(A first census missed four lane-2 titles whose commands held the title in a shell
+variable, and put lane 2's whole cost on *Cha Cha*; fixed the same day.) Every figure below is the
 pass's own and none of it has been checked.
 
 #### Lane 1 -- Vol. 24
