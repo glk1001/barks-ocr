@@ -7420,6 +7420,19 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, EIGHT OF THIRTEEN REVIEWED AND MIRRORED -- *Trail Tycoon*)
+
+*Trail Tycoon* closed at 97/97 on both engines (prelim `3f35e804`). **1 speaker correction
+over 97 pass groups** (high 1 of 95, medium 0 of 2); no nephews speak. No adds, only
+tightened boxes; the one type correction (153 g2, a bubble-trail balloon to `thought`)
+confirmed; the four drawn `$` on money bags to the ignore list.
+
+- **A DRAWN `?` IN A THOUGHT CLOUD GOES TO THE NAMED CHARACTER IT RISES FROM, NOT A
+  GENERIC ROLE.** 156 g12 -- the pass traced the bubble trail to "the silhouetted woman
+  at right" and wrote `other:a pioneer woman`; the review named Grandma Duck. A silhouette
+  in a scene where a named character is present is that character until something says
+  otherwise. Third drawn-`?` correction in the batch (*Pied Piper* 184, *Fun* 036).
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, SEVEN OF THIRTEEN REVIEWED AND MIRRORED -- *Mastering the Matterhorn*)
 
 *Mastering the Matterhorn* closed at 143/143 on both engines. **4 speaker corrections, all
