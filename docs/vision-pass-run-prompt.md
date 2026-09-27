@@ -7420,6 +7420,39 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-sixth batch, TWO OF EIGHT REVIEWED AND MIRRORED -- *Pipeline to Danger*)
+
+*Pipeline to Danger* closed at 245/245 on both engines (prelim `9c545981`). **8 speaker
+corrections over 244 pass groups (3.3%), 7 in the nephew domain (of 43, 16.3%).** By the
+confidence the pass wrote: high 2 of 201 (1.0%), **medium 5 of 41 (12.2%)**, low 0 of 2.
+The five pass retypes and the `PIGMIES` text correction (082 g3) confirmed. The one
+missed-text finding (084 `!`, which g14 `! ! !` carries) went to the ignore list, and
+g14's `ai_text` lost a trailing newline the editor had left on it.
+
+- **GAP TIPS: NAME THE LEFT BOY, UNLESS THE TIP IS MEASURABLY NEARER THE OTHER -- RULED BY THE
+  REVIEWER 2026-09-27.** Six of the seven gap tips named left stood (070 g3, 073 g4, 084 g8,
+  084 g10, 085 g0, 085 g10). The one that went, 070 g9 Huey -> Dewey, is the one whose own
+  note said "nearness says the blue boy" and named left anyway. With *Hound* (063 g14 stood;
+  069 g7, an edge tip, went to Donald) that is 7 of 9. *Yoicks* 089 g12 and lane 2's
+  slant-named set are still to be reviewed; the rule is not yet in the roster.
+- **THREE MEASURED TIPS SLID ONE HEAD, IN BOTH DIRECTIONS.** 071 g6 (tip over the middle boy
+  -> the right boy, Louie), 078 g4 (edge tip on the last boy -> the magnifier boy to his
+  left, Dewey), 085 g6 (the left boy -> the middle one, Huey). No side to lean to; on a row of
+  small heads, a single tip crop is a medium and should say which neighbour it could be.
+- **A SALUTING CHORUS IS COLLECTIVE, EVEN WITH A MEASURED TIP.** 071 g5 `YESSIR, YESSIR!` and
+  g8 `YESSIR, LITTLE OPERATOR! YESSIR!` were named Huey and Louie from tips over one of three
+  identical saluting boys; the review made both `nephews`. Call-and-response lines from a row
+  of boys doing the same thing are the row's.
+- **"NO TAIL FOUND ON THE CROP" IS NOT "NO TAIL".** 072 g13 `LIKE TINY HOUSES IN A TINY
+  VILLAGE!` sat over the blue and green boys and was left `nephews`; the review found a
+  hidden tail to the green boy (Louie). Same lesson as *Island in the Sky*'s under-naming:
+  look again before declining.
+- **A DRAWN DEVICE BELONGS TO WHOEVER IS SURPRISED.** 084 g14 `! ! !` over the tiny tribe went
+  from `unknown` to `other:the tribesmen`.
+- The small-ink names mostly stood: 084 g8 (27px), 085 g1 (50px), 085 g12 (84px) kept; only
+  071 g6 (96px) moved. The decoy warnings (Scrooge's blue top hat, the green helicopter, the
+  red extinguishers) produced no corrections.
+
 ### Findings to paste into the next run (2026-09-27, eighty-sixth batch, ONE OF EIGHT REVIEWED AND MIRRORED -- *Hound of the Whiskervilles*)
 
 *Hound of the Whiskervilles* closed at 136/136 on both engines (prelim `e1f7e0dc`). **5
