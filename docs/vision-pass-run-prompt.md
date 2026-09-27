@@ -7455,7 +7455,11 @@ Catapult* 15, *The Black Pearls of Tabu Yama* 9, *The Milkman* 9, *The Persisten
 8, *Mocking Bird Ridge* 7; Vol. 21 *Christmas in Duckburg* 23, *Dramatic Donald* 8,
 *Rocket-Roasted Christmas Turkey* 7; and a tail of 1-6 elsewhere. Some may be a genuine
 different face (quoted narration, story-length caption text); none has been looked at.
-Nothing changed.
+Nothing changed. **ON HOLD (2026-09-27) while passes continue.** Crop strips for the
+look are built -- `~/barks-vision/italics-triage/vol{13,14,19,21}-italics.png`, two
+labelled samples per title, 45 crops over 25 titles, not yet read. Next: judge each
+title standard lean or different face, the reviewer confirms by title, then a dry run
+and one commit per volume.
 
 **BATCH CLOSED: 18 speaker corrections over 1,348 pass groups (1.3%)** -- lane 1 7 of 641,
 lane 2 11 of 707 (*Matterhorn* 4, *Double Date* 4, *Trail Tycoon*, *TV Babysitter* and
