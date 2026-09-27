@@ -692,3 +692,6 @@ HELP KEEP AMERICA STRONG
 # and drawn music notes in and after the song balloon
 24 140 $
 24 140 ♪
+
+# The Lost Rabbit Foot (reviewer, 2026-09-27): the edge of a sign on the shop wall
+24 149 R S

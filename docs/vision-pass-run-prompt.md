@@ -7420,6 +7420,13 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, FOUR OF TWELVE REVIEWED AND MIRRORED -- *The Lost Rabbit Foot*)
+
+*The Lost Rabbit Foot* closed at 83/83 on both engines (prelim `095736ea`). **0 speaker
+corrections over 83 pass groups**, all high; the three bubble-trail retypes to `thought`
+confirmed (153 g8, 154 g0, g7). No adds, one box tightened; 149's `R S` sign edge to the
+ignore list. Nothing new to learn: a Gyro-and-Gladstone story with no nephews reads clean.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, THREE OF TWELVE REVIEWED AND MIRRORED -- *The Stubborn Stork* and *The Bird Camera*)
 
 *The Stubborn Stork* and its back-matter gag *The Bird Camera* (087) closed together at
