@@ -7420,6 +7420,34 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fifth batch, ALL TWELVE REVIEWED AND MIRRORED -- *Donald's Party* closes it)
+
+*Donald's Party* closed at 110/110 on both engines. **1 speaker correction over 108 pass
+groups**: 148 g4 `other:Clarabelle Cow` -> Scrooge, where the pass traced the tail "toward
+Clarabelle ... right of Scrooge". All 11 mediums stood; the four bubble-trail retypes to
+`thought` confirmed; the Diary captions kept `[i]`. The review added Daisy's `!` (144 g2)
+and Donald's `? ?` (148 g2) as their thoughts; 148 g17's mailbox name was left unticked by
+the add that renumbered its page and was stamped; 149's second `PRESS` card went on the
+ignore list.
+
+- **AN ADD MID-PAGE LEAVES THE PAGE'S LAST GROUP UNTICKED -- FOUR TIMES THIS BATCH.** *Island*
+  049 g13, *Cha Cha* 113 g17, *Donald's Party* 148 g17, and *Oodles*' poster: each on a page
+  where the review inserted a group, each the group the insertion pushed. Check the last
+  group of every page an add touched before calling a review done.
+
+**BATCH CLOSED: 38 speaker corrections over 1,372 pass groups (2.8%)** -- lane 1 20 of 638,
+lane 2 18 of 734 (*Touche Toupee* 8, *Free Ski Spree* 5, *Christmas Cha Cha* 3, *Donald's
+Party* and *Under the Polar Ice* 1 each). What recurred: under-naming where a tail stopped
+short or hid (fifteen, three of them *Free Ski*'s gap tips), role reasoning on off-panel or
+off-edge lines (seven, every one lost), and gap tips, which went left six times and right
+twice -- position alone does not decide them. A tip only just inside the right-hand head
+went left twice (*TV Babysitter* 131 g5, *Cha Cha* 114 g0), but *Witching Stick* 039 g7
+(5px inside the left head) went right, so that is not a rule either.
+What held: every forced collective where no cap prints (*Gab-Muffer*'s kind, *Polar Ice*'s
+57), every bubble-trail `thought`, the Diary `[i]`, and the Junior Woodchuck ruling.
+Review-side lessons: an add copies its seed's `type` (three sound effects arrived as
+`background`), and lane 1 wrote prose into `visible_text` -- both now fixed or ruled.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fifth batch, ELEVEN OF TWELVE REVIEWED AND MIRRORED -- *The Christmas Cha Cha*)
 
 *The Christmas Cha Cha* closed at 297/297 on both engines. **3 speaker corrections over 290
@@ -7435,8 +7463,8 @@ went on the ignore list.
 - **ANOTHER NARROW-MARGIN TIP WENT LEFT.** 114 g0 `LOOK! THAT PITIFUL FIGURE ...` -- tip 12px
   inside the middle boy's span (blue) and 12px clear of the left boy (green); named Dewey,
   the review took Louie on the left. 109 g4, a 6px near-gap tip already named for the left
-  boy, stood. With *TV Babysitter* 131 g5 that is the same shape three times: **a tip only
-  just inside the right-hand head goes to the left one.** It does not rescue the full gap
+  boy, stood. With *TV Babysitter* 131 g5 that is the same shape twice: **a tip only just
+  inside the right-hand head went to the left one** (but *Witching Stick* 039 g7 went right). It does not rescue the full gap
   rule -- *Touche Toupee*'s 157 g8 and 158 g13 still went right.
 - **A LINE WHOSE TAIL RUNS OFF THE PANEL, NAMED BY WHO "WOULD" SHOUT IT, LOST AGAIN:** 110 g3
   `YOU DOUGHHEAD! DON'T TAKE YOUR HANDS OFF` -- Donald (he was on the roof) -> `nephews`.
@@ -7470,7 +7498,7 @@ baby's `WAH! WAA!` to `dialogue`). No adds, no missed text; the scarf-named Loui
   against slant and nearness -- stood, and 158 g7 (tip on the middle boy's left edge) went
   one further LEFT, to the green boy. But **157 g8 and 158 g13 were gap tips the rule put on
   the left boy (Dewey both times), and the review named the RIGHT boy** (Louie, Huey). Over
-  the two titles: six gap/edge tips went left, two went right. **A tip between two boys on
+  the two titles: five gap/edge tips went left, two went right. **A tip between two boys on
   these caps does not decide the speaker by position.** Something else decided the two that
   went right -- the reviewer is asked which key it was, and that key, not the side, is the
   rule to write. Until then: name a gap tip only with a second key (address, the object the

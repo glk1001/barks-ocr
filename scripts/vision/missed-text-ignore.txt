@@ -725,3 +725,6 @@ HELP KEEP AMERICA STRONG
 23 113 !
 23 102 CONTEST
 23 102 FIRST PRIZE
+
+# Donald's Party (reviewer, 2026-09-27): the second PRESS card in the photographer's hat
+23 149 PRESS
