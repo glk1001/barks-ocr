@@ -44,9 +44,13 @@ overhead, shared evenly over its titles; calls more than `IDLE_CALLS` after the
 last mention are left uncredited, so tooling work at the end of a session does
 not land on the last title read.
 
-A session counts for a title only if it RAN the pipeline on it --
-`vision-prep`, `vision-apply`, `vision-mirror` or `closeout.sh` -- within
-`SESSION_WINDOW_DAYS` of the ledger row's `recorded` date. Opening an old
+A session counts for a title only if it RAN the pass on it -- `vision-prep`,
+`vision-apply` or `closeout.sh` at the apply stage -- within
+`SESSION_WINDOW_DAYS` of the ledger row's `recorded` date. The review's close-out
+(`vision-mirror`, `closeout.sh --stage review`) is not pass work: counting it
+billed a day of reviews to rows already written (2026-09-27). A title or out-dir
+held in a shell variable in the same command (`T="..."; --title "$T"`) is
+expanded before matching. Opening an old
 out-dir to copy its format, or a corpus sweep that happens to pass a
 `--title`, then credits nothing. The first version of this without that
 restriction billed 318 calls of a 2026-08-31 cleanup session to a title first
@@ -60,8 +64,10 @@ page are the per-title measures, and `--trend` sums them by batch, where the
 attribution noise cancels.
 
 `--write-ledger` stores the attribution in the ledger's `calls` and `tokens_m`
-columns (millions of cache-read tokens). A row whose sessions are no longer on
-disk keeps what it has: Claude Code prunes old transcripts, and the ledger is
+columns (millions of cache-read tokens), filling BLANK rows only: a batch's cost
+is written once, at its close-out, and later sessions that touch its titles
+cannot move it. `--refill` overwrites on purpose. A row whose sessions are no
+longer on disk keeps what it has: Claude Code prunes old transcripts, and the ledger is
 the only copy that outlives them. That is also why `--trend` reads the ledger
 and not the transcripts.
 """
@@ -110,7 +116,12 @@ SLUG_RE = re.compile(r"barks-vision/([A-Za-z0-9-]+)")
 OUT_DIR_RE = re.compile(r"--out-dir[= ]+\S*?barks-vision/([A-Za-z0-9-]+)")
 TITLE_RE = re.compile(r"""--title[= ]+(?:\\?"(.+?)\\?"|'(.+?)')""")
 CLOSEOUT_TITLE_RE = re.compile(r'closeout\.sh(?:\s+--stage\s+\w+)?\s+\\?"(.+?)\\?"')
-WORK_RE = re.compile(r"barks-ocr-vision-(?:prep|apply|mirror)|closeout\.sh")
+# PASS work only. `vision-mirror` and `closeout.sh --stage review` are the review's
+# close-out, and crediting them billed a day of reviews to rows already written.
+WORK_RE = re.compile(r"barks-ocr-vision-(?:prep|apply)\b|closeout\.sh(?!\s+--stage[= ]+review)")
+# A shell assignment in the same command: `T="Touche Toupee"; ... --title "$T"`. The
+# quotes arrive JSON-escaped. The lookbehind skips `--title=...` and `$X=`.
+ASSIGN_RE = re.compile(r"""(?<![\w$-])([A-Za-z_]\w*)=(?:\\"(.*?)\\"|'(.*?)'|([^\s;&|'"\\]+))""")
 
 
 @dataclass
@@ -384,11 +395,26 @@ def title_slug(title: str) -> str:
     return "-".join(filter(None, keep.split("-")))
 
 
+def _expand_vars(text: str) -> str:
+    """Substitute a command's own shell assignments into its `$NAME` and `${NAME}`.
+
+    A lane session wrote `T="Touche Toupee"; O=~/barks-vision/touche-toupee; ...
+    --title "$T" --out-dir $O`, and matching the literal text credited nothing to
+    four titles. Only assignments made in the same tool call are used.
+    """
+    values = {}
+    for m in ASSIGN_RE.finditer(text):
+        values[m[1]] = next(v for v in m.groups()[1:] if v is not None)
+    for name, value in values.items():
+        text = re.sub(rf"\$(?:{name}\b|\{{{name}\}})", lambda _m, v=value: v, text)
+    return text
+
+
 def _tool_inputs(record: dict) -> list[str]:
     """Return every tool call's input in one assistant record, as JSON text."""
     content = (record.get("message") or {}).get("content") or []
     return [
-        json.dumps(block.get("input"), ensure_ascii=False)
+        _expand_vars(json.dumps(block.get("input"), ensure_ascii=False))
         for block in content
         if isinstance(block, dict) and block.get("type") == "tool_use"
     ]
@@ -504,12 +530,14 @@ def credit_titles(directory: Path, rows: list[LedgerRow]) -> dict[str, Credit]:
     return ledger_credit
 
 
-def by_title(directory: Path, *, write: bool) -> None:
+def by_title(directory: Path, *, write: bool, refill: bool = False) -> None:
     """Print each ledger row's credited cost, and store it when asked.
 
     Args:
         directory: The project's transcript directory.
         write: Store `calls` and `tokens_m` in the ledger.
+        refill: Overwrite rows that already carry figures; by default only blank
+            rows are filled, so a closed batch's cost is never rewritten.
 
     """
     comments, columns, rows = read_ledger()
@@ -534,6 +562,9 @@ def by_title(directory: Path, *, write: bool) -> None:
             f"{calls / pages:8.1f} {tokens_m / pages:7.2f}  {sessions}"
         )
         new = {"calls": str(round(calls)), "tokens_m": f"{tokens_m:.1f}"}
+        filled = row.fields.get("calls") or row.fields.get("tokens_m")
+        if filled and not refill:
+            continue
         if any(row.fields.get(k) != v for k, v in new.items()):
             row.fields.update(new)
             changed += 1
@@ -595,6 +626,11 @@ def main() -> None:
         "--write-ledger", action="store_true", help="with --by-title: store calls and tokens_m"
     )
     parser.add_argument(
+        "--refill",
+        action="store_true",
+        help="with --write-ledger: overwrite rows already filled (default: blank rows only)",
+    )
+    parser.add_argument(
         "--trend", action="store_true", help="cost per page by batch date, from the ledger alone"
     )
     parser.add_argument(
@@ -616,7 +652,7 @@ def main() -> None:
         return
 
     if args.by_title:
-        by_title(directory, write=args.write_ledger)
+        by_title(directory, write=args.write_ledger, refill=args.refill)
         return
     report(collect(directory, since, args.min_calls), detail=args.detail)
 
