@@ -7420,6 +7420,20 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-27, eighty-fourth batch, NINE OF THIRTEEN REVIEWED AND MIRRORED -- *The Librarian*)
+
+*The Librarian* closed at 106/106 on both engines (prelim `e1a40d49`). **0 speaker
+corrections over 104 pass groups**; the two `unknown -> none` rows are drawn `$` the
+review added on 118. All nine type corrections confirmed -- the lion's ROAR, GRUMP and
+PURRR and Scrooge's roar down the phone to `dialogue` -- and the pre-pass `type_was` on
+118 g19 confirmed as `dialogue`. The remaining drawn `$` on 118-121 went on the ignore list.
+
+- **RULING, 2026-09-27: A DAISY'S DIARY SCRIPT CAPTION IS WHOLLY `[i]`.** The lane asked
+  whether the slanted hand-lettered captions should carry `[i]`; the review kept it on all
+  13 here, and the reviewer confirmed it as the rule for the Diary titles. `narrator`,
+  whole group in `[i]`, as lane 2 wrote them. The flashback captions in quotation marks
+  (120) are narrator too.
+
 ### Findings to paste into the next run (2026-09-27, eighty-fourth batch, EIGHT OF THIRTEEN REVIEWED AND MIRRORED -- *Trail Tycoon*)
 
 *Trail Tycoon* closed at 97/97 on both engines (prelim `3f35e804`). **1 speaker correction

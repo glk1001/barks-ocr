@@ -652,3 +652,10 @@ HELP KEEP AMERICA STRONG
 23 154 $
 23 155 $
 23 156 $
+
+# The Librarian (reviewer, 2026-09-27): drawn $ on the Money Bin guards' cap badges and on
+# money bags; the review added two on 118 (g21, g22) and left the rest
+23 118 $
+23 119 $
+23 120 $
+23 121 $
