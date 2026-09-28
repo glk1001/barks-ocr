@@ -7420,6 +7420,120 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-seventh batch, NONE REVIEWED -- the fourth lane round: lane 1 Vol. 24, lane 2 empty)
+
+Three titles read in one lane and merged into the prelim `main` as `e27aa80c` (lane 1:
+`38d64862`, `d229e5ad`, `75c02463`); the planner dealt lane 2 nothing. **49 images over 30
+pages, 1.63 per page**, inside the 3 target on every title. The census credits the batch
+**116 calls and 30.8M tokens re-read, 1.03M per page**. Every figure below is the pass's own
+and none of it has been checked.
+
+#### Lane 1 -- Vol. 24
+
+*All at Sea* (Vol. 24, 098-114, 17pp, 272 groups), *Fishy Warden* (174-177, 4pp, 50 + 1
+added), *Two-Way Luck* (115-123, 9pp, 131).
+
+- **THE GAP-TIP RULE, APPLIED -- CHECK EACH.** Left boy at medium unless measurably nearer
+  the other: *All at Sea* 101 g8 (Dewey, the middle boy on the middle/right edge, named by
+  elimination -- his own ink under 8px), 103 g9 (Louie, 7px right of him, 23px short of the
+  middle boy). Measurably nearer the RIGHT boy: 103 g8 (Huey, 6px vs 32px), 106 g2 (Dewey,
+  25px vs 50px). Each note quotes both spans.
+- **FLOATING TIPS FOLLOWED DOWN.** ~100px above the heads, named from the tail's line:
+  *Two-Way* 120 g1 (Dewey), 122 g6 (Donald). 80-85px, treated as ended: *All at Sea* 100
+  g2 (Huey), 101 g8, 103 g9. Last batch's finding says a trail 60px above a boy did not
+  reach him -- if these move to `nephews`, the float floor is lower than 90px.
+- **HELD CAPS, THE RISKIEST CALLS.** *Two-Way* 115 g3 and g8: bare-headed boys indoors,
+  each holding a black-and-red object at the waist (865+653px, 1,166+807px `#e61b1f`),
+  read as a held cap and named Huey at medium. If that red is something else, both go to
+  `nephews`.
+- **COSTUME, NAMED AT MEDIUM, AGAINST A COSTUME CONFLICT.** *All at Sea* 106 g14 and g17:
+  the gnome's pointed hat prints the exact cap green (725+368px, 272+925+135px) -> Louie. In
+  the same panel the bowler's band is blue and Dewey is in the pink bow from 103, so the
+  disguise colours are not the cap convention; say whether a garment in the roster ink
+  names a boy here.
+- **DEWEY IN THE PINK BOW (103-110), NAMED BY CONTINUITY.** Scrooge says `DEWEY, COME WITH
+  ME` (103 g5), Donald puts the bow on `DEWEY` (103 g10), and the one boy in the bow is
+  named Dewey through 103 g6/g11/g14, 104 g13, 105 g2/g3. Only one boy goes ashore, which
+  is why the costume key is used here and nowhere else.
+- **ART AGAINST DIALOGUE, FLAGGED.** *Two-Way* 121 g6 `...WATCH FOR THE TWO STARS, BOYS! I
+  WISH I KNEW WHICH TWO!`: the long tail ends on the first boy's head, but the line is the
+  legend-teller's and the boys answer it next panel. Named Scrooge at medium from the
+  dialogue; the note says so.
+- **LOW CALLS (3), NO READABLE FIGURE:** *All at Sea* 103 g3 (`other:the skipper`, the
+  order to lower the anchor in a silhouetted ship -- Scrooge equally possible); *Two-Way*
+  121 g2 and g5 (Donald, silhouettes / a long shot where the tail reaches nobody).
+- **SMALL INK.** Names resting on under 150px: *All at Sea* 101 g9
+  (72+55px), 102 g6 (61px), 109 g0 (59+33px), 114 g6 (66+55px); *Two-Way* 117 g11 (**16px**
+  blue sliver on the lowest boy of a ramp row), 121 g7 (48px), 122 g7 (82+50px). All
+  medium, each with the count.
+- **RETYPES (5), NO TEXT CORRECTIONS.** Bubble trails to `thought`: *Fishy Warden* 175 g1,
+  g3 (above water -- underwater in that story both Gyro and the frogmen speak with bubble
+  trails, so 176 g3/g4 were left `dialogue`); *Two-Way* 117 g14. A tailed balloon stored
+  `narration` to `dialogue`: *Two-Way* 117 g0 (Scrooge's silhouette). A voice stored
+  `sound_effect` to `dialogue`: *All at Sea* 106 g11 (Donald's hired `OWOOO!`). Kept as
+  `sound_effect` with the maker named: the rats' `SNIFF SNIFF` (113 g10, g13).
+- **PRE-PASS REVIEW MARKS CLEARED** by the apply (the 2026-09-26 ruling): 6 on *All at Sea*,
+  1 on *Two-Way*; those groups are in the queue with the pass's call.
+- `other:` values, no near-duplicates by the census. *All at Sea*: `a Beagle Boy` (44 per
+  engine), `the skipper` (7), `a rat` (6), `a crook` (3), `the bank director` (3), `a
+  bargeman` (2), `a bank messenger`, `a crewman`, `the produce merchant`; plus `The Beagle
+  Boys` (roster) for the three sung lines. *Fishy Warden*: `a frogman` (10, +1 added), `a
+  game officer` (7), `the patrol captain` (4), `a dog`, `a patrol boat crewman`. *Two-Way*:
+  `a Jewel Club judge` (4), `the pilot` (4), `Scrooge's secretary` (3), `a villager` (3),
+  `the emerald finder` (3, never named in the story).
+
+
+**Missed text (lane 1) -- the reviewer adds these first.**
+
+Queues are `~/barks-vision/all-at-sea/queue-missed.txt` and
+`~/barks-vision/two-way-luck/queue-missed.txt`, one line per engine, parked on a group in the
+same panel. *Fishy Warden*: no missed text -- the one ungrouped lettering on it was added by
+the pass.
+
+| title | page | panel | lettering | class | suggested |
+|---|---|---|---|---|---|
+| *All at Sea* | 098 | 1 | `$` x3 | neither engine | drawn on the two money bags and the desk emblem -- ignore list |
+| *All at Sea* | 098 | 2 | `$` | neither engine | on the gold-sun painting -- ignore list |
+| *All at Sea* | 098 | 4 | `$` | neither engine | on the painting behind Scrooge -- ignore list |
+| *All at Sea* | 100 | 1 | `$` x2 | neither engine | coins in the painting -- ignore list |
+| *All at Sea* | 101 | 1 | `176-176` | neither engine | number plate on the standing Beagle Boy -- add, or ignore |
+| *All at Sea* | 101 | 3 | `♪` x4 | neither engine | music notes round the Beagle Boys' song (g5) -- add, or ignore |
+| *All at Sea* | 104 | 1 | `176-617` | neither engine | plate above the grouped `BEAGLE` sweater (g2) -- fold into g2, or ignore |
+| *All at Sea* | 110 | 2 | `176-617` | neither engine | plate on the gunner -- add, or ignore |
+| *All at Sea* | 112 | 3 | `176-176` | neither engine | plate on the Beagle Boy with the rope -- add, or ignore |
+| *All at Sea* | 113 | 2 | `BOYS INC.` | neither engine | partial sweater -- ignore list |
+| *All at Sea* | 113 | 5 | `ZIP` x2 | 2 in the art, 0 grouped | **audit artefact**: both are g12 `ZIP / ZIP` -- ignore list |
+| *Two-Way Luck* | 115 | 1 | `$` x2 | 3 in the art, 1 grouped | money bags in the splash (the door `$` is g15) -- ignore list |
+| *Two-Way Luck* | 118 | 3, 4 | `$` x2 | neither engine | the plane's fuselage emblem -- ignore list |
+| *Two-Way Luck* | 120 | 6 | `OSADA` | neither engine | inn sign POSADA, its P cut by the border -- add, or ignore |
+| *Two-Way Luck* | 123 | 8 | `$` | neither engine | on the prize money bag beside the `1ST PRIZE` tag -- ignore list |
+
+The pass ADDED one group neither engine had: *Fishy Warden* 177 panel 1 `OW` (dialogue,
+`other:a frogman` hit by a dart; box from the red ink at x251-373 y30-90, padded). It is on
+both engines and in the unreviewed queue -- check the box. The key was dropped from the
+page's `result.json` after the apply so a re-apply cannot add it twice.
+
+**Queue counts (lane 1).**
+
+| title | speakers low/med | speakers unreviewed | text | type | missed |
+|---|---|---|---|---|---|
+| *All at Sea* | 27 | 272 | 0 | 1 | 11 items |
+| *Fishy Warden* | 3 | 51 | 0 | 2 | 0 (1 group added by the pass) |
+| *Two-Way Luck* | 15 | 131 | 0 | 2 | 5 items |
+
+Text and type are per group here, not per engine (the lane reported 2 / 4 / 4 rows, a retype
+being two). `scripts/closeout.sh --stage apply` FAILed only on the missed-text and
+corrections rows, as expected before a review.
+
+**Images read (lane 1).**
+
+| title | pages | images | per page | what they were |
+|---|---|---|---|---|
+| *All at Sea* | 17 | 29 | 1.71 | page.png plus 12 tail crops |
+| *Fishy Warden* | 4 | 4 | 1.00 | page.png alone; the added `OW` was boxed off the red ink numerically |
+| *Two-Way Luck* | 9 | 16 | 1.78 | page.png plus 7 crops |
+| **lane total** | **30** | **49** | **1.63** | |
+
 ### Findings to paste into the next run (2026-09-28, SEED, REVIEWED -- *Donald's Grandma Duck*)
 
 *Donald's Grandma Duck* closed at 210/210 on both engines (prelim `bb408bb9`), four groups
@@ -12690,6 +12804,23 @@ percentages below are proposals, not corrections.
   Jackal`, `a Bedouin`, `the panthers and wild cats`. No near-duplicates; the
   two prospector values are deliberately distinct (the Pizen Valley crowd against
   the man who rents the burro).
+
+## Per-volume cap palette
+
+Vol. 24 (lane 1), three titles read 2026-09-28 (eighty-seventh batch; **NONE REVIEWED**, so
+every figure below is the pass's own). 30 pages, 49 images.
+
+**THE SAME THREE INKS AS THE REST OF VOL. 24; THE DECOYS ARE THE TREES, THE CURTAIN AND
+SCROOGE'S HAT.** Red `#e61b1f`, green `#009e45`-`#009e49` H146-148, blue `#00a5d5` H193.5.
+*All at Sea*'s tree (100 p2) prints the cap green's identical `#009e47`, *Two-Way Luck*'s
+melon vines the same ink, and its curtain (123 p7-p8) the roster red; Scrooge's top hat is the
+roster blue in both.
+
+| title | reference | red | green | blue | construction |
+|---|---|---|---|---|---|
+| *All at Sea* (24, lane 1) | **100 panel 2** -- three boys facing the reader, red x541-598, blue x674-731, green x798-856; **106 panel 1** a second row, green x300-342, red x564-604, blue x765-806 | `#e61b1f` H358.8, **29-3,670px** (102 p4 a whole back of cap). Decoys: Scrooge's coat, Donald's bow tie, the ship's rail `#b45d49` H11 everywhere at sea, the flour-cook's bucket | `#009e45`-`#009e47` H146-147, **30-1,209px**. Decoys: **the tree at the identical `#009e47`** (100 p2), doors and portholes `#008a69` H165, the sea `#01a08c` H172, the gnome hat (106) | `#00a5d5` H193.5, **16-1,058px**. Decoys: **Scrooge's blue top hat** (2,252px), Donald's cap | Black beanie with a coloured quarter, often a sliver. Boys absent 098-099 and 104-107 except Dewey ashore in **a pink bow (103-110)**; **disguises on 106-108** (bowler with a blue band, gnome hat in the cap green). Cast: The Beagle Boys, `other:the skipper`, `other:a rat` |
+| *Fishy Warden* (24, lane 1) | -- | -- | -- | -- | No nephews. Gyro, the Little Helper, `other:a game officer`, `other:a frogman` |
+| *Two-Way Luck* (24, lane 1) | **120 panel 8** -- three boys with ropes, blue x667-723, green x772-821, red x853-905; **120 panel 1** red x542-596, blue x658-722, green x805-848 | `#e61b1f`/`#e4191e` H358, **88-1,166px** (115's held caps). Decoys: **Scrooge's coat `#c32227`** in almost every panel, Donald's bow tie, **the curtain at the roster red** (123 p7-p8) | `#009e48`-`#009e49` H147.7, **48-347px**. Decoys: the melon vines at the same ink (120 p1), palm fronds | `#00a5d5` H193.5, **16-284px**. Decoys: Scrooge's top hat, Donald's cap, the plane's seats (118 p2) | Black beanie with a small quarter, often a sliver. **Bare-headed indoors on 115 (caps held at the waist) and in the plane cabin (118)**. Cast: `other:the emerald finder`, `other:a Jewel Club judge`, `other:Scrooge's secretary`, `other:the pilot`, `other:a villager` |
 
 ## Per-volume cap palette
 
