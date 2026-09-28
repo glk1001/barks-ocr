@@ -7420,6 +7420,34 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-sixth batch, SIX OF EIGHT REVIEWED AND MIRRORED -- *Knights of the Flying Sleds*)
+
+*Knights of the Flying Sleds* closed at 139/139 on both engines (prelim `d170d7e4`). **3
+speaker corrections over 138 pass groups, all highs and all on 073: high 3 of 114, medium 0
+of 23, low 0 of 1** (counted by text; the review added a group on 080). Every pass retype
+confirmed. The 076 `♪` went to the ignore list.
+
+- **THE DEWEY QUESTION: THE PASS'S READING STOOD.** 071 g1, g2 (the green-plumed charger,
+  Dewey with `cap_colour: green`, because 072 g15 says `IT WAS SIR DEWEY'S LANCE`), 072 g14
+  (green -> Louie) and g15 (blue -> Dewey) all kept. Dialogue names the boy where it fixes
+  him, the ink is recorded as printed, and the convention holds everywhere else -- the
+  colourist ruling applied as written, and not title-wide.
+- **UNDER-NAMING AT HIGH: A COSTUME KEY THAT HOLDS ACROSS THE TITLE NAMES.** 073 g4 `THIS BOOK,
+  KNIGHTS OF THE ROUND TABLE!` and g5 were left `nephews` because the plumes did not print
+  and "the helmets alone are a costume key, which does not travel". But the pass had itself
+  found the helmets consistent per boy (teal pot = Louie, blue-grey visor = Dewey) on every
+  other page, and the review named both by them (Louie green, Dewey). The costume rule is
+  about keys that break between pages; one that never breaks in the title is a key.
+- **073 g13 WENT TO THE NEIGHBOUR.** `GYRO, DO YOU MAKE THESE THINGS IN KID SIZES?` was Dewey on
+  the middle boy's blue plume; the review named Louie, in green -- the green-plumed boy on
+  his left. A tail read to the wrong boy, at high.
+- **GAP TIPS:** 079 g10 (Louie) and 080 g12 (Huey) stood. Lane 2's slant-named gap tips are
+  **3 of 3** so far.
+- The three sled-only names (076 g0-g2, `costume`, `cap_colour` null) stood.
+- **THE REVIEW'S ADD WAS SEEDED AGAIN.** 080 g15 `ZOO` (a second zoo sign, panel 6) arrived as
+  `dialogue` with `speaker_was: 'unknown'`; retyped `background` and the key removed on both
+  engines. 080's capture did not carry that sign, which is why the audit never raised it.
+
 ### Findings to paste into the next run (2026-09-28, eighty-sixth batch, FIVE OF EIGHT REVIEWED AND MIRRORED -- *The Snow Chaser*)
 
 *The Snow Chaser* closed at 89/89 on both engines (prelim `0785b854`), 170 g12 ticked from a
