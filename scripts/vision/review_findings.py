@@ -41,6 +41,17 @@ commit's blob, which keeps a pass's own proposal that the review then confirmed
 and drops the stale ones. Without `--since` the distinction cannot be drawn at
 all and the list says so.
 
+WHY `--since` PAIRS BY TEXT, NOT BY ID. A review that adds a group renumbers
+the rest of its page, and a re-sort moves ids without adding anything, so the
+pass's `g6` can be the review's `g5`. Paired by id, every group after an add was
+compared with its neighbour's pass state: on the eighty-sixth batch that put a
+medium's correction under high on *The Snow Chaser* and counted the review's own
+`! ! !` add as a correction on *Pipeline to Danger* (8 reported, 7 real). A group
+is now paired with the pass group whose text -- or whose own proposed
+`vision_corrected_text` -- matches it, markup stripped, duplicates taken in
+order. A group with no counterpart at `since` is listed as added or rewritten by
+the review and is not counted as a correction.
+
 The output is raw material, not the finding. Reading it and stating the rule is
 the judgement, and a rule inferred from a correction can misread WHY it was made.
 """
@@ -54,6 +65,7 @@ from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_DIR
 from barks_fantagraphics.speech_groupers import SpeechGroups
+from barks_fantagraphics.speech_markup import strip_markup
 
 from barks_ocr.utils.title_selection import resolve_titles
 from barks_ocr.utils.vision_schema import (
@@ -68,6 +80,7 @@ from barks_ocr.utils.vision_schema import (
     TYPE_REVIEWED_DATE_KEY,
     TYPE_REVIEWED_KEY,
     TYPE_WAS_KEY,
+    VISION_CORRECTED_TEXT_KEY,
     VISION_NOTE_KEY,
 )
 
@@ -119,6 +132,43 @@ def _blob_groups(ref: str, path: str) -> dict:
     return json.loads(proc.stdout).get("groups", {})
 
 
+def _text_key(text: str | None) -> str:
+    """Return *text* with markup stripped and whitespace collapsed, for pairing."""
+    return " ".join(strip_markup(text or "").split())
+
+
+def _pair_by_text(before: dict, groups: dict) -> dict[str, dict | None]:
+    """Pair each current group with its pass counterpart in *before*, by text.
+
+    Ids are not stable across a review (an add renumbers the page, a re-sort moves
+    them), so a pass group is matched on its stored text first and then on the
+    text it proposed itself, which is what an accepted text correction leaves.
+    Equal texts are consumed in page order.
+
+    Args:
+        before: the page's groups at the pass's commit.
+        groups: the page's groups now.
+
+    Returns:
+        Each current group id mapped to its pass group, or None when it has none.
+
+    """
+    unused = list(before.values())
+    pairs: dict[str, dict | None] = {}
+    for field in ("ai_text", VISION_CORRECTED_TEXT_KEY):
+        for gid, group in groups.items():
+            if gid in pairs:
+                continue
+            key = _text_key(group.get("ai_text"))
+            match = next(
+                (old for old in unused if old.get(field) and _text_key(old[field]) == key), None
+            )
+            if match is not None:
+                unused.remove(match)
+                pairs[gid] = match
+    return {gid: pairs.get(gid) for gid in groups}
+
+
 def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in sections.
     """Print a title's corrections, grouped by direction, with both sides' notes."""
     argv = sys.argv[1:]
@@ -137,6 +187,7 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
     types: list[str] = []
     stale_types: list[str] = []
     phantom = 0
+    unpaired: list[str] = []
     was_confidence: Counter[str] = Counter()
     corrected_confidence: Counter[str] = Counter()
 
@@ -159,14 +210,30 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
                     str(OCR_PRELIM_DIR) + "/", ""
                 )
                 before = _blob_groups(since, rel)
+            groups = page_group.speech_page_json.get("groups", {})
+            pairs = _pair_by_text(before, groups) if before else {}
 
-            for gid, group in page_group.speech_page_json.get("groups", {}).items():
+            for gid, group in groups.items():
                 groups_seen += 1
                 speaker = group.get(SPEAKER_KEY)
                 if speaker in NEPHEW_NAMES or speaker == COLLECTIVE:
                     nephew_domain += 1
 
-                old = before.get(gid) or {}
+                old = pairs.get(gid) or {}
+                if before and not old:
+                    # No pass counterpart: the review added this group, or rewrote
+                    # its text past both the stored and the proposed version. Any
+                    # `_was` on it is not the pass's answer, so it is not counted.
+                    unpaired.append(
+                        f"{page} g{gid}: {_text_key(group.get('ai_text'))[:40]!r}"
+                        f" -> {speaker!r}"
+                        + (
+                            f"   [carries speaker_was {group[SPEAKER_WAS_KEY]!r}]"
+                            if SPEAKER_WAS_KEY in group
+                            else ""
+                        )
+                    )
+                    continue
                 old_conf = old.get(SPEAKER_CONFIDENCE_KEY)
                 if old_conf:
                     was_confidence[old_conf] += 1
@@ -251,6 +318,14 @@ def main() -> None:  # noqa: C901, PLR0912, PLR0915 -- one report, printed in se
             print(f"     {line}")
         if len(stale_types) > MAX_PER_CLASS:
             print(f"     ... and {len(stale_types) - MAX_PER_CLASS} more")
+
+    if unpaired:
+        print(
+            f"\n--- no counterpart at {since} -- added or rewritten by the review: {len(unpaired)}"
+        )
+        print("      (NOT counted above; check each is an add, not a lost pairing)")
+        for line in unpaired[:MAX_PER_CLASS]:
+            print(f"     {line}")
 
     if phantom:
         print(f"\n!! {phantom} group(s) carry a _was equal to the current value.")
