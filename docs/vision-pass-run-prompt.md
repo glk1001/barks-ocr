@@ -7420,6 +7420,46 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-seventh batch, ALL THREE REVIEWED AND MIRRORED -- *Two-Way Luck* closes it)
+
+*Two-Way Luck* (Vol. 24, 115-123) reviewed 133 of 133 and mirrored clean (prelim
+`a43922c1`). **One speaker correction** (0.8%; 1 of 9 in the nephew domain): high 0 of 115,
+medium 1 of 13, low 0 of 2. Two type fixes confirmed. The missed-text review added the
+fuselage `$` (118 g4) and POSADA (120 g10) and restored the cut-off menu sign as `FONDA /
+TORTILLAS / TAMALES` (120 g11), completed from its visible ends for search.
+
+- **A THIRD GAP TIP WHERE NEARNESS LOST -- AND A DECLINE THE ROSTER FORBIDS.** 118 g2, the
+  plane cabin, `THE PILOT IS LOWERING HIS WHEELS TO LAND! WE'VE SURE MADE A FAST TRIP!`: the
+  tip ended in the gap ~17px from the nearer bare-headed boy and ~50px from Scrooge, and the
+  pass wrote `nephews` ("a boy, not nameable"). The review named **Scrooge**, the head to
+  the tip's left. Two things wrong in one call: the roster already says never decline to
+  `nephews` on a gap tip alone, and the nearer head was not the speaker. With *All at Sea*
+  103 g8 and 106 g2 the nearness clause is **0 for 3** in this batch.
+- **The floating tips held.** 120 g1 (Dewey) and 122 g6 (Donald), tips ~100px above the heads
+  named by following the tail's line, both stood -- consistent with the reviewer's "the tip is
+  an arrow" ruling on *All at Sea*.
+- **Every other flagged call held**: the held red caps on 115 (g3, g8, Huey at medium), the
+  16px blue sliver on 117 g11, the small-ink names, 121 g6 (art against dialogue, named
+  Scrooge from the dialogue), and the low silhouette calls 121 g2/g5.
+- **Spanish in the lettering takes its accent.** The review spelled `SENOR` as `SEÑOR` on 118
+  g10 and g11 (U+00D1, precomposed; the groups file stores it `Ñ`). The pass wrote the
+  bare N both times -- transcribe the tilde where the letterer drew it.
+- **A text fix leaves the speaker unticked.** 118 g11 came out of the review as the one
+  straggler, the group whose text had been changed; a one-line `queue-straggler.txt` closed it.
+- Type fixes confirmed: 117 g0 `narration` -> `dialogue` (Scrooge's silhouette, a tailed
+  balloon) and 117 g14 bubble trail -> `thought`.
+
+#### Batch close -- eighty-seventh batch, all three reviewed
+
+462 groups over 30 pages (*All at Sea* 278, *Fishy Warden* 51, *Two-Way Luck* 133), 49
+images. **Seven speaker corrections (1.5%)**; nephew domain 4 of 48 (8.3%). By the pass's
+confidence: **high 2 of 407 (0.5%), medium 5 of 42 (11.9%)**, low 0 of 3. Five type fixes,
+all confirmed; two text fixes (`SEÑOR`), both the reviewer's. **All four nephew corrections
+were gap tips**, and the roster's "unless measurably nearer the other" clause lost all three
+times it decided a call. The reviewer's ruling -- read the direction the tip points, not where
+it stops -- is written here as a Vol. 24 ruling and is NOT yet in `roster.txt`
+(`vision_schema.py:930` still carries the nearness clause).
+
 ### Findings to paste into the next run (2026-09-28, eighty-seventh batch, TWO OF THREE REVIEWED AND MIRRORED -- *Fishy Warden*)
 
 *Fishy Warden* (Vol. 24, 174-177, Gyro, no nephews) reviewed 51 of 51 and mirrored clean
