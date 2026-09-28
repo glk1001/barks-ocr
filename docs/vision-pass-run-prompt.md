@@ -7420,6 +7420,27 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-sixth batch, SEVEN OF EIGHT REVIEWED AND MIRRORED -- *Riding the Pony Express*)
+
+*Riding the Pony Express* closed at 130/130 on both engines (prelim `7d8a2923`) with **no
+speaker corrections**: high 0 of 108, medium 0 of 21 (counted by text; the review added
+`Chap. I`, 090 g14, `background`). Every pass retype and the `WOOLY WEST!` text correction
+(081 g1, one L as lettered) confirmed. No missed text.
+
+- **IDENTICAL HATS MAKE EVERY NEPHEW CALL COLLECTIVE, AND THE REVIEW AGREED.** All 20
+  `nephews` calls stood: three identical green cowboy hats, then three identical play-Indian
+  headbands, with no line naming a boy. Where the same ink prints on every boy, the
+  collective is the answer, not an under-naming.
+- **NAMES CARRIED BACK BY COSTUME WITHIN ONE SCENE STOOD.** `other:Chief Scissor Bill` and
+  `other:Chief Brass Eagle`, named on 086 and applied back to 083 by costume, kept; 082 keeps
+  `a guest`. The census's `a guest` / `the lady guest` / `the girl guest` suspects are
+  different people, as the lane said.
+- **087 g9, named by eliminating the throwers, stood.**
+- **EVERY REVIEW ADD IN THIS LANE HAS CARRIED `speaker_was: 'unknown'`** -- *The Snow Chaser*
+  174 `TAT TAT`, *Knights* 080 `ZOO`, and 090 `Chap. I` here, each removed by hand. It is
+  not seed residue: an add starts at speaker `unknown`, and the editor's speaker write
+  stamps any change from that as a correction. Until it is fixed, strip it after any add.
+
 ### Findings to paste into the next run (2026-09-28, eighty-sixth batch, SIX OF EIGHT REVIEWED AND MIRRORED -- *Knights of the Flying Sleds*)
 
 *Knights of the Flying Sleds* closed at 139/139 on both engines (prelim `d170d7e4`). **3
