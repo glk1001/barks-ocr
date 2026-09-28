@@ -27,6 +27,58 @@ from barks_ocr.utils.ocr_box import (
 )
 
 
+def get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
+    ocr_raw_results = json.loads(ocr_file.read_text(encoding="utf-8"))
+
+    ocr_data = []
+    for result in ocr_raw_results:
+        box = result[0]
+        # noinspection PyUnusedLocal
+        ocr_text = result[1]  # noqa: F841
+        accepted_text = result[2]
+        ocr_prob = result[3]
+
+        assert len(box) == 8  # noqa: PLR2004
+        text_box = [(box[0], box[1]), (box[2], box[3]), (box[4], box[5]), (box[6], box[7])]
+
+        ocr_data.append({"text_box": text_box, "text": accepted_text, "prob": ocr_prob})
+
+    return ocr_data
+
+
+def get_enclosing_box(boxes: list[PointList]) -> PointList:
+    x_min = min(box[0][0] for box in boxes)
+    y_min = min(box[1][1] for box in boxes)
+    x_max = max(box[2][0] for box in boxes)
+    y_max = max(box[3][1] for box in boxes)
+
+    return [(x_min, y_min), (x_max, y_min), (x_max, y_max), (x_min, y_max)]
+
+
+def get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:  # noqa: ANN001
+    ocr_box = OcrBox(box, "", 0, "")
+    box = ocr_box.min_rotated_rectangle
+    bottom_left = box[0]
+    top_right = box[1]
+    box_rect = Rect(
+        bottom_left[0],
+        bottom_left[1],
+        top_right[0] - bottom_left[0],
+        top_right[1] - bottom_left[1],
+    )
+
+    for i, panel_box in enumerate(panel_segment_info["panels"]):
+        top_left_x = panel_box[0]
+        top_left_y = panel_box[1]
+        w = panel_box[2]
+        h = panel_box[3]
+        panel_rect = Rect(top_left_x, top_left_y, w, h)
+        if panel_rect.is_rect_inside_rect(box_rect):
+            return i + 1
+
+    return -1
+
+
 class GeminiAiGrouper:
     def __init__(
         self,
@@ -138,7 +190,7 @@ class GeminiAiGrouper:
             logger.info(f'Making Gemini AI OCR groups for file "{get_abbrev_path(png_file)}"...')
             logger.info(f'Using OCR file "{get_abbrev_path(ocr_file)}"...')
 
-            ocr_data = self._get_ocr_data(ocr_file)
+            ocr_data = get_ocr_data(ocr_file)
             ocr_bound_ids = self._assign_ids_to_ocr_boxes(ocr_data)
 
             ai_predicted_groups = self._get_ai_predicted_groups(
@@ -219,10 +271,10 @@ class GeminiAiGrouper:
                 logger.warning(f"Ignoring group {group_id}: 'box_bounds is None'.")
                 continue
 
-            enclosing_box = self._get_enclosing_box(box_bounds)
+            enclosing_box = get_enclosing_box(box_bounds)
             # noinspection PyBroadException
             try:
-                panel_num = self._get_enclosing_panel_num(enclosing_box, panel_segment_info)
+                panel_num = get_enclosing_panel_num(enclosing_box, panel_segment_info)
             except:  # noqa: E722
                 logger.exception(f"Could not get enclosing panel number for group '{group_id}':")
                 continue
@@ -248,25 +300,6 @@ class GeminiAiGrouper:
         return {"use_as_final": False, "groups": merged_groups}
 
     @staticmethod
-    def _get_ocr_data(ocr_file: Path) -> list[dict[str, Any]]:
-        ocr_raw_results = json.loads(ocr_file.read_text(encoding="utf-8"))
-
-        ocr_data = []
-        for result in ocr_raw_results:
-            box = result[0]
-            # noinspection PyUnusedLocal
-            ocr_text = result[1]  # noqa: F841
-            accepted_text = result[2]
-            ocr_prob = result[3]
-
-            assert len(box) == 8  # noqa: PLR2004
-            text_box = [(box[0], box[1]), (box[2], box[3]), (box[4], box[5]), (box[6], box[7])]
-
-            ocr_data.append({"text_box": text_box, "text": accepted_text, "prob": ocr_prob})
-
-        return ocr_data
-
-    @staticmethod
     def _assign_ids_to_ocr_boxes(bounds: list[dict[str, Any]]) -> list[dict[str, Any]]:
         return [{**bound, "text_id": str(i)} for i, bound in enumerate(bounds)]
 
@@ -277,39 +310,6 @@ class GeminiAiGrouper:
     @staticmethod
     def _get_ocr_box_groups_json_filename(fanta_page: str, ocr_type: str) -> str:
         return fanta_page + f"-{ocr_type}-gemini-groups.json"
-
-    @staticmethod
-    def _get_enclosing_box(boxes: list[PointList]) -> PointList:
-        x_min = min(box[0][0] for box in boxes)
-        y_min = min(box[1][1] for box in boxes)
-        x_max = max(box[2][0] for box in boxes)
-        y_max = max(box[3][1] for box in boxes)
-
-        return [(x_min, y_min), (x_max, y_min), (x_max, y_max), (x_min, y_max)]
-
-    @staticmethod
-    def _get_enclosing_panel_num(box: PointList, panel_segment_info) -> int:  # noqa: ANN001
-        ocr_box = OcrBox(box, "", 0, "")
-        box = ocr_box.min_rotated_rectangle
-        bottom_left = box[0]
-        top_right = box[1]
-        box_rect = Rect(
-            bottom_left[0],
-            bottom_left[1],
-            top_right[0] - bottom_left[0],
-            top_right[1] - bottom_left[1],
-        )
-
-        for i, panel_box in enumerate(panel_segment_info["panels"]):
-            top_left_x = panel_box[0]
-            top_left_y = panel_box[1]
-            w = panel_box[2]
-            h = panel_box[3]
-            panel_rect = Rect(top_left_x, top_left_y, w, h)
-            if panel_rect.is_rect_inside_rect(box_rect):
-                return i + 1
-
-        return -1
 
     @staticmethod
     def _get_text_groups(
