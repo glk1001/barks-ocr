@@ -3235,13 +3235,28 @@ class EditorApp(App):
         # Only on a real change, and only the first time: a second edit of an
         # already-corrected group must not overwrite the pass's original answer
         # with the first reviewer's.
+        #
+        # Nor, for either key, on a group added in the editor that nobody has
+        # answered yet. Its `unknown` is the placeholder `_seed_group_from` writes,
+        # not a call, so stamping it made every add read as a correction: four
+        # adds across one 2026-09-28 batch review came out `speaker_was:
+        # 'unknown'`, and one was counted in a title's error rate. The pass writes
+        # a `vision_note` on every group it adds or reads, so an add without one
+        # has no pass answer to keep; a pass that genuinely wrote `unknown` still
+        # records its correction.
+        unanswered_add = (
+            was_speaker == UNPLACED_SPEAKER
+            and group.get(VISION_ADDED_KEY)
+            and VISION_NOTE_KEY not in group
+        )
         if (
             was_speaker
+            and not unanswered_add
             and normalize_speaker(was_speaker, self._story_cast()) != speaker
             and SPEAKER_WAS_KEY not in group
         ):
             group[SPEAKER_WAS_KEY] = was_speaker
-        if was_cap != cap_colour and CAP_COLOUR_WAS_KEY not in group:
+        if not unanswered_add and was_cap != cap_colour and CAP_COLOUR_WAS_KEY not in group:
             group[CAP_COLOUR_WAS_KEY] = was_cap
         group[SPEAKER_KEY] = speaker
         group[SPEAKER_CONFIDENCE_KEY] = REVIEWED_CONFIDENCE
