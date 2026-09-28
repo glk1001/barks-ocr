@@ -36,6 +36,7 @@ box ids, as a pass's ``added_groups`` are.
 """
 
 import json
+import re
 from pathlib import Path
 from typing import Annotated, Any
 
@@ -74,6 +75,12 @@ app = typer.Typer(help="Seed a vision pass on pages with raw OCR but no prelim g
 SEED_ENGINE = OcrTypes.EASYOCR
 COPY_ENGINE = OcrTypes.PADDLEOCR
 COPIED_FROM_ENGINE_KEY = "copied_from_engine"
+
+# The seed pass writes every group's text itself, where Gemini used to, so the house
+# style is checked here: the corpus spaces an em dash on both sides, 4,908 `WORD —`
+# and 2,829 `— WORD` against none touching a letter once Camp Counselor's three
+# were fixed in review (2026-09-28).
+DASH_TOUCHING_LETTER = re.compile(r"[A-Za-z0-9]\u2014|\u2014[A-Za-z0-9]")
 
 BOXES_JSON = "boxes.json"
 BOXES_TXT = "boxes.txt"
@@ -315,6 +322,10 @@ def _group_errors(
         errors.append(f"{where}: ai_text is empty.")
     elif strip_markup(text) != text:
         errors.append(f"{where}: ai_text carries markup; put emphasis in result.json.")
+    elif DASH_TOUCHING_LETTER.search(text):
+        errors.append(
+            f"{where}: an em dash touches a letter; the corpus spaces it (WORD — / — WORD)."
+        )
     if group.get("type") not in GROUP_TYPES:
         errors.append(f"{where}: type {group.get('type')!r} is not in {sorted(GROUP_TYPES)}.")
     ids = group.get("box_ids", [])
