@@ -108,6 +108,20 @@ MARK_BAND = 0.15  # and stays inside the word's own line, give or take this much
 MARK_STEPS = 3
 MARK_PAD = 6  # the reviewer's boxes sit about this far past the ink
 
+# TWO MORE EDGES WORD BOXES CLIP, found in Donald's Grandma Duck's review once the
+# trailing mark was fixed: an em dash at the start or end of a line (a flat stroke
+# EasyOCR does not read as part of the word) and a caption's drop capital (a letter
+# one to two lines tall set left of the first word). Scored against both reviewed
+# seed titles' 302 word-built boxes: 6 moved closer to the reviewer's, none further.
+DASH = "\u2014"
+DASH_MAX_HEIGHT = 0.25  # a dash is flat ...
+DASH_WIDTH = (0.3, 1.4)  # ... about a letter wide ...
+DASH_MID = 0.2  # ... and sits in the middle of its line, clear of top and bottom
+DASH_GAP = 0.6  # at most this many word heights outside the word
+DROP_CAP_HEIGHT = (1.0, 2.5)  # a drop capital is one to two and a half lines tall
+DROP_CAP_MAX_WIDTH = 2.0
+DROP_CAP_GAP = 0.3
+
 BOXES_JSON = "boxes.json"
 BOXES_TXT = "boxes.txt"
 SEED_FILE = "seed.json"
@@ -452,6 +466,66 @@ def _fit_trailing_mark(
     return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
 
 
+def _text_lines(words: list[tuple[int, int, int, int]]) -> list[list[tuple[int, int, int, int]]]:
+    """Group word bounds into lines by vertical overlap, each line left to right."""
+    lines: list[list[tuple[int, int, int, int]]] = []
+    for word in sorted(words, key=lambda w: (w[1], w[0])):
+        for line in lines:
+            last = line[-1]
+            if min(last[3], word[3]) - max(last[1], word[1]) > 0.5 * (word[3] - word[1]):
+                line.append(word)
+                break
+        else:
+            lines.append([word])
+    return [sorted(line) for line in lines]
+
+
+def _is_dash(c: tuple[int, int, int, int], word: tuple[int, int, int, int]) -> bool:
+    """Return whether an ink patch is shaped and placed like an em dash on this word's line."""
+    h = word[3] - word[1]
+    width, height = c[2] - c[0], c[3] - c[1]
+    middle = (c[1] + c[3]) / 2
+    return (
+        height <= DASH_MAX_HEIGHT * h
+        and DASH_WIDTH[0] * h <= width <= DASH_WIDTH[1] * h
+        and word[1] + DASH_MID * h <= middle <= word[3] - DASH_MID * h
+    )
+
+
+def _fit_edge_dashes(text_box: list, lines: list, ink: list[tuple[int, int, int, int]]) -> list:
+    """Extend a box over an em dash just outside the first or last word of any line."""
+    x0, y0, x1, y1 = text_box[0][0], text_box[0][1], text_box[2][0], text_box[2][1]
+    for line in lines:
+        first, last = line[0], line[-1]
+        for c in ink:
+            if _is_dash(c, first) and 0 <= first[0] - c[2] <= DASH_GAP * (first[3] - first[1]):
+                x0 = min(x0, c[0] - MARK_PAD)
+            if _is_dash(c, last) and 0 <= c[0] - last[2] <= DASH_GAP * (last[3] - last[1]):
+                x1 = max(x1, c[2] + MARK_PAD)
+    return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+
+
+def _fit_drop_capital(text_box: list, lines: list, ink: list[tuple[int, int, int, int]]) -> list:
+    """Extend a caption's box over a drop capital set just left of its first word."""
+    x0, y0, x1, y1 = text_box[0][0], text_box[0][1], text_box[2][0], text_box[2][1]
+    word = lines[0][0]
+    h = word[3] - word[1]
+    for c in ink:
+        width, height = c[2] - c[0], c[3] - c[1]
+        if (
+            0 <= word[0] - c[2] <= DROP_CAP_GAP * h
+            and DROP_CAP_HEIGHT[0] * h <= height <= DROP_CAP_HEIGHT[1] * h
+            and width <= DROP_CAP_MAX_WIDTH * h
+            and min(c[3], word[3]) - max(c[1], word[1]) > 0.5 * h
+        ):
+            x0, y0, y1 = (
+                min(x0, c[0] - MARK_PAD),
+                min(y0, c[1] - MARK_PAD),
+                max(y1, c[3] + MARK_PAD),
+            )
+    return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+
+
 def _prelim_group(
     group: dict,
     boxes: dict[str, dict],
@@ -468,6 +542,11 @@ def _prelim_group(
         text_box = [list(p) for p in get_enclosing_box(quads)]
         if group["type"] in BALLOON_TYPES:
             text_box = _fit_trailing_mark(text_box, members, ink, page_wh)
+            lines = _text_lines([_word_bounds(m["quad"]) for m in members])
+            if DASH in group["ai_text"]:
+                text_box = _fit_edge_dashes(text_box, lines, ink)
+            if group["type"] == "narration":
+                text_box = _fit_drop_capital(text_box, lines, ink)
     panel_num = group.get("panel_num") or _panel_of(text_box, panel_boxes)
     return {
         "panel_id": str(panel_num),
