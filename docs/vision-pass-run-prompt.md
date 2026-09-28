@@ -7420,6 +7420,58 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, SEED, NONE REVIEWED -- Vol. 30 whole, fifteen titles)
+
+*Uncle Scrooge -- Lost Beneath the Sea* (Vol. 30) is the first **whole volume** through the
+seed flow: `barks-ocr-batch --engine easyocr` over every story page, then each title grouped
+and read in one pass, the paddleocr prelim a marked copy. 197 pages, **2,598 groups**, **251
+images (1.27 per page)**; the pass's confidence was high 2,333, medium 259, low 6. Every
+figure below is the pass's own; nothing is reviewed.
+
+| title | pages | groups | images | nephew calls (collective) | missed text | prelim |
+|---|---|---|---|---|---|---|
+| *Lost Beneath the Sea* | 008-029 | 291 | 27 | 25 (17) | 4 | `3f64c4a3` |
+| *The Status Seeker* | 032-051 | 271 | 26 | 43 (22) | 4 | `93b08420` |
+| *For Old Dime's Sake* | 052-069 | 221 | 20 | 24 (24) | 7 | `f579fff1` |
+| *The Invisible Intruder* | 070-075 | 80 | 6 | 0 | 3 | `6e355027` |
+| *The Case of the Sticky Money* | 076-095 | 272 | 29 | 40 (17) | 7 | `364c5836` |
+| *The Travel Tightwad* | 096-099 | 68 | 5 | 0 | 3 | `791b2895` |
+| *Crown of the Mayas* | 100-120 | 266 | 29 | 49 (34) | 0 | `4a0b29a7` |
+| *Isle of Golden Geese* | 122-144 | 304 | 34 | 35 (16) | 8 | `a461f8cb` |
+| *The Thrifty Spendthrift* | 146-165 | 248 | 23 | 29 (17) | 7 | `42b4e5f7` |
+| *The Lemonade Fling* | 166-170 | 78 | 8 | 20 (4) | 0 | `83918567` |
+| *The Many Faces of Magica De Spell* | 172-193 | 296 | 25 | 34 (24) | 4 | `1c68c866` |
+| *Snow Duster* | 194-197 | 58 | 5 | 0 | 0 | `4c228c52` |
+| *A Helper's Helping Hand* | 198-201 | 51 | 6 | 0 | 0 | `601b63e5` |
+| *Man Versus Machine* | 202-205 | 49 | 4 | 0 | 0 | `13f6805f` |
+| *Jonah Gyro* | 206-209 | 45 | 4 | 0 | 0 | `57d99604` |
+
+- **THE VOL. 30 CAP IS A BLACK BEANIE WITH ONE COLOURED QUARTER**: red Huey `#e61a20`, blue
+  Dewey `#00a3d4`, green Louie `#009c44`-`#009e46` (H146 -- the `leafgrn` column, and the
+  same value as this volume's foliage, so a green blob names nobody until it is on a head).
+  The quarter is small, so most cap blobs run 50-300px; the boys are bare-headed indoors,
+  and a bare or unreadable head went to `nephews` (180 collective of 299 nephew calls).
+- **MISSED TEXT IS MOSTLY `$`.** 47 items, 36 of them a drawn `$` -- the Money Bin emblem,
+  money bags, bedsteads, limousine and desk ornaments, signs flying off banknotes -- which
+  EasyOCR never boxes, so no seed group ever covers it. Each title's `queue-missed.txt`
+  parks them one line per engine; decide once whether a background `$` group is wanted and
+  ignore-list the rest by a single rule rather than 36 times. The other 11 are labels and
+  signs (ASIA 010, S.O.S. 020, GADILLAC 046, DEPTH 049, BEAGLE BOYS / 14K / GLUE on
+  082-087, 99 FT 124, TREE 158), one song's music notes (038), and one truncated
+  placard (158, `AND THIS`).
+- **Look first at** the 259 mediums, which carry this volume's nephew names off small caps,
+  *Crown of the Mayas* above all (69 mediums of 266); and at the `other:` cast, which is
+  new to the corpus and spelled here for the first time -- `other:Porkman De Lardo`,
+  `Foulcrook`, `Slyviper`, `Ratface`, `Fanny Featherbrain`, `the Duchess of Duckshire`,
+  `Sir Surelock`, `King Fulla Cola`, `Little Helper`, `the Martian chief`, and `a Martian`
+  / `a Martian guard` kept apart from the chief in *Lost Beneath the Sea*.
+- **Apply normalizes `other:Magica De Spell` to the roster's `Magica De Spell`** -- *For Old
+  Dime's Sake* was written with the prefix and stored without it, so the two titles agree.
+- **Two build faults recurred and both are caught**: a raw box claimed by two groups (on
+  185, a caption's last line swallowed by the next caption) and an emphasis
+  string whose spacing drifted from the seed (`!...` for `!... `). Check both locally
+  before the dry run.
+
 ### Findings to paste into the next run (2026-09-28, eighty-seventh batch, ALL THREE REVIEWED AND MIRRORED -- *Two-Way Luck* closes it)
 
 *Two-Way Luck* (Vol. 24, 115-123) reviewed 133 of 133 and mirrored clean (prelim
