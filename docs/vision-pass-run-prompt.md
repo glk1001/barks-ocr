@@ -7420,6 +7420,23 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-seventh batch, TWO OF THREE REVIEWED AND MIRRORED -- *Fishy Warden*)
+
+*Fishy Warden* (Vol. 24, 174-177, Gyro, no nephews) reviewed 51 of 51 and mirrored clean
+(prelim `8593b68a`). **One speaker correction** (2.0%): high 1 of 48, medium 0 of 3. No
+missed text, no text corrections.
+
+- **Name the animal from the drawing, not the scene's cast.** 176 g7, a drawn `?` in a small
+  cloud over the watching animal on the bank: `other:a dog` -> `other:a rabbit`. The pass had
+  the animal right as the speaker and wrong as the species, at high.
+- **The water line does not decide a bubble trail -- the balloon does.** Both retypes above
+  water were confirmed (175 g1, g3 to `thought`), but Gyro's bubble-trail lines are `thought`
+  UNDERWATER too (175 g4-g7 and 176 g5, from the 2026-09-25 cleanup, which the review left
+  alone), while the frogman's bubble-trailed order 176 g4 and Gyro's 176 g3 stayed
+  `dialogue`. The lane's "speech underwater, thought above" reading was not the rule.
+- **A group the pass adds itself can stand as boxed.** 177 g0 `OW` (`other:a frogman`), boxed
+  numerically off the red ink with no image, came through the review unchanged.
+
 ### Findings to paste into the next run (2026-09-28, eighty-seventh batch, ONE OF THREE REVIEWED AND MIRRORED -- *All at Sea*)
 
 *All at Sea* (Vol. 24, 098-114) reviewed 278 of 278 and mirrored clean (prelim `1d536005`).
