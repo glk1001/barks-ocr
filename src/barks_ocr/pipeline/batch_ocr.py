@@ -3,6 +3,7 @@
 import json
 import tempfile
 from pathlib import Path
+from typing import Annotated
 
 import cv2 as cv
 import easyocr
@@ -28,6 +29,10 @@ APP_LOGGING_NAME = "bocr"
 
 EASYOCR_BATCH_SIZE = 16
 
+# A title read by the vision seed flow is OCRed on easyocr alone: its paddleocr
+# prelim is a marked copy of the easyocr one, so a PaddleOCR run would be wasted.
+ALL_ENGINES = frozenset({"easyocr", "paddleocr"})
+
 REJECTED_WORDS = ["F", "H", "M", "W", "OO", "VV", "|", "L", "\\", "IY"]
 # noinspection SpellCheckingInspection
 AUTO_CORRECTIONS = {
@@ -42,7 +47,12 @@ if not BARKS_OCR_SPELL_DICT.is_file():
 spell_dict = enchant.DictWithPWL("en_US", str(BARKS_OCR_SPELL_DICT))
 
 
-def ocr_titles(comics_database: ComicsDatabase, title_list: list[str], work_dir: Path) -> None:
+def ocr_titles(
+    comics_database: ComicsDatabase,
+    title_list: list[str],
+    work_dir: Path,
+    engines: frozenset[str] = ALL_ENGINES,
+) -> None:
     timing = Timing()
 
     num_files_processed = 0
@@ -60,7 +70,8 @@ def ocr_titles(comics_database: ComicsDatabase, title_list: list[str], work_dir:
         dest_file_groups = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
         for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
-            result = ocr_comic_page(work_dir, srce_file, dest_files)
+            wanted = tuple(f for f in dest_files if get_ocr_type(f) in engines)
+            result = ocr_comic_page(work_dir, srce_file, wanted)
             if result == ProcessResult.FAILURE:
                 logger.error(f'"{srce_file}": There were process errors.')
             else:
@@ -72,7 +83,7 @@ def ocr_titles(comics_database: ComicsDatabase, title_list: list[str], work_dir:
 
 
 def ocr_comic_page(
-    work_dir: Path, svg_file: Path, ocr_json_files: tuple[Path, Path]
+    work_dir: Path, svg_file: Path, ocr_json_files: tuple[Path, ...]
 ) -> ProcessResult:
     png_file = Path(str(svg_file) + ".png")
 
@@ -290,14 +301,23 @@ app = typer.Typer()
 def main(
     volumes_str: VolumesArg = "",
     title_str: TitleArg = "",
+    engine: Annotated[
+        str,
+        typer.Option("--engine", help="Which engine to run: easyocr, paddleocr or both."),
+    ] = "both",
     log_level_str: LogLevelArg = "DEBUG",
 ) -> None:
+    engines = ALL_ENGINES if engine == "both" else frozenset({engine})
+    if not engines <= ALL_ENGINES:
+        msg = f'Unknown engine "{engine}": expected easyocr, paddleocr or both.'
+        raise typer.BadParameter(msg)
+
     init_logging(APP_LOGGING_NAME, "batch-ocr.log", log_level_str)
 
     comics_database, titles = get_comic_titles(volumes_str, title_str)
     work_dir = Path(tempfile.gettempdir())
 
-    ocr_titles(comics_database, titles, work_dir)
+    ocr_titles(comics_database, titles, work_dir, engines)
 
 
 if __name__ == "__main__":
