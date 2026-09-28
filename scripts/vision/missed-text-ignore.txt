@@ -753,3 +753,10 @@ HELP KEEP AMERICA STRONG
 24 101 ♪
 24 113 BOYS INC.
 24 113 ZIP
+
+# Two-Way Luck (reviewer, 2026-09-28): drawn `$` on the splash's money bags (115 p1; the
+# door `$` is g15), the plane's fuselage emblem (118 p4; p3's is g4) and the prize money bag
+# (123 p8)
+24 115 $
+24 118 $
+24 123 $
