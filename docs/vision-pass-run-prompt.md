@@ -7420,6 +7420,55 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-sixth batch, ALL EIGHT REVIEWED AND MIRRORED -- *Want to Buy an Island?* closes it)
+
+*Want to Buy an Island?* closed at 140/140 on both engines (prelim `87be36ee`). **7 speaker
+corrections over 135 pass groups (5.2%): high 3 of 108 (2.8%), medium 4 of 27 (14.8%).**
+The review added the five 092 wall cards the audit raised (panel 5's pair read `A BIRD` /
+`A CAT` as lettered, fixed by hand from `BIRD` / `CAT`), and gave 097 g12's `GROAN` to
+`other:the range observer` -- entered as `the rangekeeper` and unified. All four retypes
+confirmed. This is the first review after the editor fix `0458b67`: none of the five adds
+carried `speaker_was`.
+
+- **A HIDDEN TAIL INFERRED BY ELIMINATION SWAPPED A PAIR.** 091 g3 `I'D LIKE TO BE A BANKER`
+  (tail hidden, "which leaves this one to the duck boy") and g4 `I'D LIKE TO BE A MERCHANT`
+  (a notch "over the freckled human boy") were exactly reversed: g3 is the classmate's, g4
+  the boys'. Elimination is only as good as the one tail it starts from.
+- **A BUBBLE TRAIL 60px ABOVE A BOY DID NOT REACH HIM.** 097 g1 `???` was named Huey off a
+  trail ending "about 60px above the boy standing on the sand"; the review made it
+  `nephews`. The same finding as *The Snow Chaser*'s floating tips, now in the roster.
+- **TWO DECLINED CALLS WERE NAMED.** 092 g7 `WE DID ALL RIGHT, HUH?` (a tip between the desk
+  boy and the top-hatted buyer) is Dewey, the land seller the pass had itself identified
+  from 091 g9; 098 g4 (15px right of red, 30px left of blue, no slant) is Huey, the nearer
+  and left boy -- the case the new roster rule covers.
+- **ONE TIP SLID A HEAD LEFT.** 100 g4 `UNCA DONALD!`, measured to the middle boy's 352px blue
+  quarter, is Huey, the red boy on his left.
+- **A STORY INFERENCE LOST.** 097 g12 `GROAN` was Donald "just clonked, 098"; it is the range
+  observer's.
+- The buyer's lines left `nephews` (091 g10, g12, 092 g4) stood -- the review did not name
+  them from 097 g10's `I AM LORD FATWALLET`.
+
+**THE EIGHTY-SIXTH BATCH CLOSES AT 26 SPEAKER CORRECTIONS OVER 1,046 PASS GROUPS (2.5%).**
+By the confidence the pass wrote, counted by text: **high 10 of 875 (1.1%), medium 16 of
+165 (9.7%)**, low 0 of 6. Lane 1 (Vol. 24) 12 over 556, lane 2 (Vol. 23) 14 over 490; three
+of the eight titles had none. Every pass retype but one (*Snow Chaser*'s 174 corner box,
+kept `dialogue`) and all three text corrections (`PIGMIES`, `GRUFFLED`, `WOOLY`) confirmed.
+Five missed-text findings went to the ignore list on the reviewer's word; the five 092 wall
+cards were added as groups.
+
+- **THE GAP-TIP RULE IS IN THE ROSTER** (`723f71b`): the left boy, unless the tip is
+  measurably nearer the other, and never `nephews` on a gap tip alone. Lane 1's left calls
+  stood 8 of 10, lane 2's 6 of 6.
+- **WHAT STILL LOSES, IN ORDER:** a tip read short of where the tail ends (the floating tips
+  on *Snow Chaser* 170 g5, 173 g5, *Island* 097 g1); one-head slips on a row of small heads
+  (*Pipeline* 071 g6, 078 g4, 085 g6, *Island* 100 g4); role and story reasoning
+  (*Hound* 063 g16, 067 g7, *Island* 097 g12); and declining where a hidden tail or the
+  pass's own identification was there to use (*Pipeline* 072 g13, *Island* 092 g7).
+- **TOOLING FIXED IN THE REVIEW:** the editor stamped every add `speaker_was: 'unknown'`
+  (`0458b67`), and `review_findings.py` paired groups by id across adds and re-sorts, which
+  counted an add as a correction (`1fea529`). Earlier sections of this batch were corrected
+  by hand; from here the tool's counts are the text-paired ones.
+
 ### Findings to paste into the next run (2026-09-28, eighty-sixth batch, SEVEN OF EIGHT REVIEWED AND MIRRORED -- *Riding the Pony Express*)
 
 *Riding the Pony Express* closed at 130/130 on both engines (prelim `7d8a2923`) with **no
