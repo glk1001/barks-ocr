@@ -7420,6 +7420,35 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-sixth batch, FIVE OF EIGHT REVIEWED AND MIRRORED -- *The Snow Chaser*)
+
+*The Snow Chaser* closed at 89/89 on both engines (prelim `0785b854`), 170 g12 ticked from a
+one-line straggler queue. **4 speaker corrections over 88 pass groups, every one a medium:
+high 0 of 76, medium 4 of 12 (33.3%).** Counted BY TEXT: the review added `TAT TAT` as 174
+g1 and renumbered the page, and `review_findings.py` -- which pairs by id -- reported high 2
+of 76 and a phantom `unknown -> none`. The type corrections confirmed except 174's corner
+box (below). No missed text.
+
+- **A TIP THAT FLOATS ABOVE A HEAD IS NOT "INSIDE THE HEAD SPAN".** 170 g5 (tip "inside the
+  green boy's head span ... about 140px above his cap", slant toward the red boy; "tip taken
+  over direction") -> Huey; 173 g5 (tip "about 90px above his crown", 73px from the other boy
+  at head height) -> Louie. The reviewer calls both tip misreads: the tail had not ended
+  where the pass put it. An x-span match 90-140px above the head is not a measured tip --
+  crop further down the tail before letting it outvote the slant.
+- **A LINE WHOSE TAIL GOES TO A TELEPHONE CAN BE THE BOY HOLDING IT.** 169 g8 `THERE ARE TEN
+  OTHER STALLED CARS AHEAD OF YOU` was `other:the tow-truck man` ("the voice on the line")
+  and is Dewey's. Relayed voice is a real class, but check who holds the receiver first.
+- **A TAILLESS CORNER BOX CAN STILL BE DIALOGUE.** 174 `THE SONIC STORM CHASER GETS SCATTERED
+  INTO A JILLION PIECES!` -- the pass retyped it `narration`/narrator (medium); the review
+  kept `dialogue` with the speaker `unknown`. Its stale `identified_by: ['caption']` was
+  cleared by hand.
+- **THE ROLE QUESTION WENT TO THE TAIL.** `YES, SCATTERING THEM INTO A JILLION PEACEFUL
+  PIECES -- SNOWFLAKES!` (174, the lane's one gap tip here) stayed Dewey, not Gyro whose words
+  it echoes. Lane 2's slant-named gap tips: 1 of 1 so far.
+- **AN ADD SEEDED FROM A NEIGHBOUR CARRIES ITS `speaker_was`.** The `TAT TAT` add arrived
+  with `speaker_was: 'unknown'`, which is what made the phantom correction. Removed on both
+  engines. Check a review's adds for `speaker_was` as well as `ai_text` and `type`.
+
 ### Findings to paste into the next run (2026-09-28, eighty-sixth batch, FOUR OF EIGHT REVIEWED AND MIRRORED -- *War Paint*; lane 1 closed)
 
 *War Paint* closed at 63/63 on both engines (prelim `31dbe55c`) with **no speaker
