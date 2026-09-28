@@ -7420,6 +7420,27 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-sixth batch, FOUR OF EIGHT REVIEWED AND MIRRORED -- *War Paint*; lane 1 closed)
+
+*War Paint* closed at 63/63 on both engines (prelim `31dbe55c`) with **no speaker
+corrections** (high 0 of 55, medium 0 of 8). All six retypes confirmed: five bubble trails
+under smooth balloons to `thought` (170 g1, g4, g13, 171 g1, g18) and the war whoop (172 g0)
+to `dialogue`. No missed text.
+
+**Lane 1 (Vol. 24) closes at 13 speaker corrections over 556 pass groups (2.3%)** -- *Hound*
+5, *Pipeline* 8, *Yoicks* 0, *War Paint* 0. By the confidence the pass wrote: high 4 of 469
+(0.9%), **medium 8 of 82 (9.8%)**, low 0 of 5. All 19 lane-1 retypes and both text
+corrections (`PIGMIES`, `GRUFFLED`) confirmed. Every correction fell in the two titles with boys in them; the Gyro
+story and the Scrooge-led *Yoicks* came through untouched.
+
+- **A BUBBLE TRAIL UNDER A SMOOTH BALLOON IS `thought`, WHATEVER THE OUTLINE.** Five on
+  *War Paint*, three more on *Pipeline* (075 g12) and *Yoicks* (090 g12, 095 g6), and none
+  reversed. Retype it on sight.
+- **What lost in lane 1 was the same three things as the eighty-fifth batch:** role reasoning
+  deciding a line (*Hound* 063 g16, 067 g7), a single tip measured on a row of small heads
+  (*Pipeline* 071 g6, 078 g4, 085 g6), and declining where a hidden tail was there to find
+  (*Pipeline* 072 g13).
+
 ### Findings to paste into the next run (2026-09-28, eighty-sixth batch, THREE OF EIGHT REVIEWED AND MIRRORED -- *Yoicks! The Fox!*)
 
 *Yoicks! The Fox!* closed at 113/113 on both engines (prelim `4eada6d0`) with **no speaker
