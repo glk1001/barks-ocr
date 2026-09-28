@@ -7420,6 +7420,22 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-sixth batch, THREE OF EIGHT REVIEWED AND MIRRORED -- *Yoicks! The Fox!*)
+
+*Yoicks! The Fox!* closed at 113/113 on both engines (prelim `4eada6d0`) with **no speaker
+corrections**: high 0 of 103, medium 0 of 10. The four pass retypes and the `GRUFFLED
+GROUSE` text correction (091 g10) confirmed; no missed text.
+
+- **THE GAP TIP STOOD.** 089 g12 (Huey, named left on 35px of ink) kept, which makes lane 1's
+  left-named gap and edge tips **8 of 10** across *Hound*, *Pipeline* and *Yoicks*. The
+  2026-09-27 ruling (left, unless measurably nearer the other) now waits only on lane 2's
+  slant-named set before it goes in the roster.
+- **INSTRUMENT NOISE NAMES ITS PLAYER, AGAIN.** The hunting horn's `TOO-TOOTLE-TEE` (090 g6)
+  kept `dialogue` and `other:the huntsman`; the *Milktime* hi-fi ruling (a machine) does not
+  reach a horn someone is blowing.
+- A title where the boys appear small on six pages and Scrooge carries the story: the
+  mediums were the small caps and Scrooge's garbled bird names, and all ten stood.
+
 ### Findings to paste into the next run (2026-09-27, eighty-sixth batch, TWO OF EIGHT REVIEWED AND MIRRORED -- *Pipeline to Danger*)
 
 *Pipeline to Danger* closed at 245/245 on both engines (prelim `9c545981`). **8 speaker
