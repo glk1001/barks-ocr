@@ -7420,6 +7420,41 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, eighty-seventh batch, ONE OF THREE REVIEWED AND MIRRORED -- *All at Sea*)
+
+*All at Sea* (Vol. 24, 098-114) reviewed 278 of 278 and mirrored clean (prelim `1d536005`).
+**Five speaker corrections** (1.8% of groups; 3 of 39 in the nephew domain, 7.7%), one type
+confirmed, no text corrections. By the pass's confidence: **high 1 of 244 (0.4%), medium 4
+of 26 (15.4%)**, low 0 of 1. The missed-text review added seven groups first (drawn `$` on
+098/100, three Beagle Boy number plates, 104 g2 re-boxed onto its plate) -- the three plates
+arrived by Copy In wearing the sweater group's four-line text, and 104's plate number came in
+as 176-176 for a printed 176-617, so check an added plate's `ai_text` against its crop.
+
+- **THE TIP IS AN ARROW -- ITS DIRECTION NAMES THE SPEAKER, NOT WHERE IT STOPS (reviewer,
+  2026-09-28).** All three nephew corrections were gap tips the lane had flagged, and the
+  reviewer settled each by the way the tip POINTS: *103 g8* Huey -> **Dewey** (tip 6px from
+  the right boy, 32px from the left -- the pass took the nearer; the tip pointed left); *106
+  g2* Dewey -> **Huey** (25px against 50px, same exception, "tail runs down-left" in the
+  pass's own note); *103 g9* Louie -> **Huey** (a gap tip the left default put on the left
+  boy; it pointed right, at the middle boy). The roster's "unless measurably nearer the
+  other" clause went **0 for 2**, and the left default lost the one where the tip pointed
+  right. On a gap tip, read the direction of the tail's last stretch and name the boy it
+  points at; quote that direction in the note, not the two distances. **This runs against
+  the Vol. 14 history** (*The Golden Fleecing*: six tips named by the ray into the right boy
+  all went left), so hold it as a Vol. 24 ruling until another volume confirms it.
+- **103 g9's cap is recorded red.** The pass sampled the middle boy's cap as a navy
+  `#004a8e`, not a roster ink; the review named him Huey and set `cap_colour` red.
+- **`other:` roles (2).** 107 g12 `a bank messenger` -> `a bank guard` (the uniformed man
+  emptying a sack); 109 g11 `a Beagle Boy` -> `the skipper` (a long shot of the gunboat
+  firing, no figure drawn -- the order is the skipper's).
+- **What held.** Every other risky call the lane flagged stood: the gnome-hat Louie by the
+  cap green (106 g14/g17), Dewey in the pink bow by continuity (103-110), the floating tips
+  80-85px up (100 g2), the small-ink names, and the low `other:the skipper` (103 g3). The one
+  type retype, 106 g11 `OWOOO!` to `dialogue`, was confirmed.
+- **The missed text was worked first.** The `$` signs on 098 p1, 100 p1, the song notes on
+  101 p3, 113's partial sweater and its `ZIP` artefact went to the ignore list; 104 and 112's
+  page captures now carry the grouped plate strings so the audit reads clean.
+
 ### Findings to paste into the next run (2026-09-28, eighty-seventh batch, NONE REVIEWED -- the fourth lane round: lane 1 Vol. 24, lane 2 empty)
 
 Three titles read in one lane and merged into the prelim `main` as `e27aa80c` (lane 1:
