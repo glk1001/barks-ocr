@@ -1,0 +1,533 @@
+# ruff: noqa: T201
+"""Seed a vision pass on pages that were never grouped: raw OCR boxes in, prelim JSON out.
+
+The ordinary pipeline is OCR (``barks-ocr-batch``) -> Gemini grouping
+(``barks-ocr-gemini-*``) -> a vision pass that judges the groups Gemini made.  A
+page that was never OCRed has no prelim file, so ``vision-prep`` has nothing to
+prep.  This tool lets the vision pass do the grouping itself, in the same reading:
+
+1. ``barks-ocr-batch --engine easyocr --title T`` writes the raw EasyOCR boxes.
+2. ``barks-ocr-vision-seed prep --title T`` crops the pages as ``vision-prep``
+   does and lists each page's raw boxes -- id, panel, bounds, text -- in
+   ``boxes.txt`` (and ``boxes.json``), in place of the groups ``vision-prep``
+   would dump.  It writes the same ``queue.json``, ``roster.txt`` and capture
+   stubs, so ``vision-apply`` reads the directory unchanged.
+3. The pass reads each page and writes two files: ``seed.json``, the page's
+   groups in reading order as lists of raw box ids (``"6-13"`` ranges allowed)
+   plus the lettering, type and (where needed) panel; and ``result.json``, the
+   ordinary vision result, whose group ids are the positions in ``seed.json`` --
+   ``"0"`` for the first group.
+4. ``barks-ocr-vision-seed build --out-dir D`` writes the easyocr prelim file in
+   the Gemini grouper's schema, and the paddleocr prelim as a copy of it.
+5. ``barks-ocr-vision-apply --out-dir D --no-mirror`` validates and applies the
+   results as for any pass, and ``barks-ocr-vision-seed sync`` then re-copies
+   the finished easyocr file onto paddleocr.
+
+**The paddleocr side is a copy, and says so.**  Nothing reads the raw OCR file
+beside a prelim once it is built, so a copied file works everywhere; but every
+cross-engine check (``ocr_check``, ``engine_compare``, ``vision-mirror``) is
+then comparing a file with itself and passes by construction.  The copy carries
+a top-level ``copied_from_engine`` key so that can be told apart from agreement.
+``sync`` refuses to overwrite a paddleocr file that lacks the key: that one came
+from a real PaddleOCR run and is not this tool's to replace.
+
+**Lettering EasyOCR missed** is a seed group with an explicit ``text_box`` and no
+box ids, as a pass's ``added_groups`` are.
+"""
+
+import json
+from pathlib import Path
+from typing import Annotated, Any
+
+import typer
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
+from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
+from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.comics_helpers import get_title_from_volume_page
+from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePanelBoxes
+from barks_fantagraphics.speech_groupers import OcrTypes
+from barks_fantagraphics.speech_markup import strip_markup
+from loguru import logger
+from PIL import Image
+
+from barks_ocr.pipeline.gemini_grouper import get_enclosing_box, get_enclosing_panel_num
+from barks_ocr.tools.vision_prep import (
+    CAPTURE_STUB_FILE,
+    CROP_PAD_PX,
+    DEFAULT_ROOT,
+    GROUP_FIELDS,
+    MAX_IMAGE_BYTES,
+    ROSTER_FILE,
+    _capture_stub,
+    _cast_for,
+    _crop_panel,
+    _page_image_file,
+    _slug,
+    _write_overview,
+    _write_panel,
+)
+from barks_ocr.utils.vision_schema import GROUP_TYPES, roster_text
+from barks_ocr.utils.volume_holds import HOLDS_FILE, held_volumes
+
+app = typer.Typer(help="Seed a vision pass on pages with raw OCR but no prelim groups.")
+
+SEED_ENGINE = OcrTypes.EASYOCR
+COPY_ENGINE = OcrTypes.PADDLEOCR
+COPIED_FROM_ENGINE_KEY = "copied_from_engine"
+
+BOXES_JSON = "boxes.json"
+BOXES_TXT = "boxes.txt"
+SEED_FILE = "seed.json"
+QUEUE_FILE = "queue.json"
+
+# The keys a vision pass writes onto a group. A prelim file carrying any of them has
+# been applied, and `build --replace` must not throw that work away.
+APPLIED_MARKERS = ("speaker", "vision_note", "speaker_reviewed")
+
+
+def _dump_prelim(data: dict) -> str:
+    """Return a groups file's text exactly as the prelim repo stores it."""
+    return json.dumps(data, indent=4)
+
+
+def _raw_boxes(raw_file: Path) -> list[dict[str, Any]]:
+    """Return the raw OCR boxes, with their ids, quads, raw and accepted text."""
+    boxes = []
+    for i, (box, ocr_text, accepted_text, prob) in enumerate(json.loads(raw_file.read_text())):
+        quad = [[box[0], box[1]], [box[2], box[3]], [box[4], box[5]], [box[6], box[7]]]
+        boxes.append(
+            {"id": str(i), "quad": quad, "ocr_text": ocr_text, "text": accepted_text, "prob": prob}
+        )
+    return boxes
+
+
+def _panel_info(panel_boxes: PagePanelBoxes) -> tuple[dict, list[int]]:
+    """Return the panel list in the segments-file shape, and each entry's panel number."""
+    ordered = sorted(panel_boxes.panel_boxes, key=lambda b: b.panel_num)
+    info = {"panels": [[b.x0, b.y0, b.w, b.h] for b in ordered]}
+    return info, [b.panel_num for b in ordered]
+
+
+def _panel_of(quad: list, panel_boxes: PagePanelBoxes) -> int:
+    """Return the panel a box lies inside, else the one holding its centre, else -1."""
+    info, nums = _panel_info(panel_boxes)
+    xs = [p[0] for p in quad]
+    ys = [p[1] for p in quad]
+    # The grouper's test takes an axis-aligned box, which is all Gemini ever hands
+    # it; a raw OCR quad can be rotated a degree or two, and a flat one is degenerate.
+    upright = [(min(xs), min(ys)), (max(xs), min(ys)), (max(xs), max(ys)), (min(xs), max(ys))]
+    if max(xs) > min(xs) and max(ys) > min(ys):
+        index = get_enclosing_panel_num(upright, info)
+        if index != -1:
+            return nums[index - 1]
+    cx = sum(xs) / 4
+    cy = sum(ys) / 4
+    for b in panel_boxes.panel_boxes:
+        if b.x0 <= cx <= b.x0 + b.w and b.y0 <= cy <= b.y0 + b.h:
+            return b.panel_num
+    return -1
+
+
+def _seed_pages(comics_database: ComicsDatabase, title_str: str) -> list[tuple[str, Path]]:
+    """Return (page, raw easyocr file) for every page of a title that has no prelim yet."""
+    comic = comics_database.get_comic_book(title_str)
+    volume = comics_database.get_fanta_volume_int(title_str)
+    svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
+    raws = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
+
+    pages: list[tuple[str, Path]] = []
+    missing_raw: list[str] = []
+    for svg, raw_pair in zip(svg_files, raws, strict=True):
+        page = Path(svg).name.split(".")[0]
+        if get_title_from_volume_page(comics_database, volume, page)[0] != title_str:
+            logger.info(f"Page {page} belongs to another title; not seeding it here.")
+            continue
+        if comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value).is_file():
+            logger.info(f"Page {page} already has an easyocr prelim; use vision-prep for it.")
+            continue
+        raw_file = next(f for f in raw_pair if SEED_ENGINE.value in f.name)
+        if not raw_file.is_file():
+            missing_raw.append(page)
+            continue
+        pages.append((page, raw_file))
+
+    if missing_raw:
+        msg = (
+            f'No raw easyocr OCR for "{title_str}" page(s) {", ".join(missing_raw)}.'
+            f' Run: barks-ocr-batch --engine easyocr --title "{title_str}"'
+        )
+        raise typer.BadParameter(msg)
+    if not pages:
+        msg = f'"{title_str}" has no page without a prelim file; nothing to seed.'
+        raise typer.BadParameter(msg)
+    return pages
+
+
+def _boxes_txt(page: str, boxes: list[dict], panel_boxes: PagePanelBoxes) -> str:
+    """Return the compact, one-line-per-box listing the pass reads."""
+    lines = [f"# page {page}: {len(boxes)} raw easyocr box(es)", "# panels (page coords):"]
+    lines += [
+        f"#   panel {b.panel_num}: x{b.x0}-{b.x0 + b.w} y{b.y0}-{b.y0 + b.h}"
+        f"  (panel-{b.panel_num:02d}.png origin {max(0, b.x0 - CROP_PAD_PX)},"
+        f"{max(0, b.y0 - CROP_PAD_PX)})"
+        for b in sorted(panel_boxes.panel_boxes, key=lambda b: b.panel_num)
+    ]
+    lines.append("# id  panel  x0,y0-x1,y1         prob  accepted text  |  raw text")
+    for box in boxes:
+        xs = [p[0] for p in box["quad"]]
+        ys = [p[1] for p in box["quad"]]
+        lines.append(
+            f"{box['id']:>4}  p{box['panel_num']:<3} {min(xs):>4},{min(ys):>4}-{max(xs):>4},"
+            f"{max(ys):>4}  {box['prob']:.2f}  {box['text']}  |  {box['ocr_text']}"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def _prep_page(  # noqa: PLR0913 -- one page's inputs, all distinct.
+    comics_database: ComicsDatabase,
+    title_str: str,
+    page: str,
+    raw_file: Path,
+    panel_boxes: PagePanelBoxes,
+    out_dir: Path,
+) -> dict:
+    """Write one page's crops, raw-box listing and capture stub. Returns its queue entry."""
+    page_file = _page_image_file(comics_database, title_str, page)
+    if not page_file.is_file():
+        msg = f'Page image not found: "{page_file}".'
+        raise typer.BadParameter(msg)
+    page_image = Image.open(page_file).convert("RGB")
+
+    page_dir = out_dir / page
+    page_dir.mkdir(parents=True, exist_ok=True)
+    oversized = []
+    if _write_overview(page_image, page_dir / "page.png") > MAX_IMAGE_BYTES:
+        oversized.append("page.png")
+    panel_files: list[str] = []
+    for panel_box in panel_boxes.panel_boxes:
+        panel = _crop_panel(page_image, panel_box, CROP_PAD_PX)
+        names, size = _write_panel(panel, page_dir, panel_box.panel_num)
+        if size > MAX_IMAGE_BYTES:
+            oversized.append(names[0])
+        panel_files.extend(names)
+    if oversized:
+        msg = f"Page {page}: image(s) over {MAX_IMAGE_BYTES // 1024}KB: {', '.join(oversized)}."
+        raise typer.BadParameter(msg)
+
+    boxes = _raw_boxes(raw_file)
+    for box in boxes:
+        box["panel_num"] = _panel_of(box["quad"], panel_boxes)
+    (page_dir / BOXES_JSON).write_text(json.dumps(boxes, indent=2) + "\n")
+    (page_dir / BOXES_TXT).write_text(_boxes_txt(page, boxes, panel_boxes))
+
+    panel_nums = [b.panel_num for b in panel_boxes.panel_boxes]
+    (page_dir / CAPTURE_STUB_FILE).write_text(_capture_stub(panel_nums))
+    return {
+        "fanta_page": page,
+        "title": title_str,
+        "engine": SEED_ENGINE.value,
+        "panels": panel_files,
+        "panel_nums": panel_nums,
+        "num_groups": 0,
+        "num_raw_boxes": len(boxes),
+        "seed": True,
+        "status": "pending",
+    }
+
+
+@app.command(help="Crop a title's un-grouped pages and list their raw OCR boxes.")
+def prep(
+    title_str: Annotated[str, typer.Option("--title", "-t", help="Story title.")],
+    out_dir: Annotated[
+        Path | None,
+        typer.Option("--out-dir", "-o", help=f"Work directory (default: under {DEFAULT_ROOT})."),
+    ] = None,
+) -> None:
+    comics_database = ComicsDatabase()
+    volume = comics_database.get_fanta_volume_int(title_str)
+    holds = held_volumes()
+    if volume in holds:
+        reason = holds[volume] or "no reason given"
+        msg = f"Vol. {volume} is on hold ({reason}) -- see {HOLDS_FILE}."
+        raise typer.BadParameter(msg)
+
+    pages = _seed_pages(comics_database, title_str)
+    out_dir = out_dir or DEFAULT_ROOT.expanduser() / _slug(title_str)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    title_boxes = TitlePanelBoxes(comics_database).get_page_panel_boxes(
+        STR_TITLE_TO_ENUM[title_str]
+    )
+    entries = [
+        _prep_page(comics_database, title_str, page, raw, title_boxes.pages[page], out_dir)
+        for page, raw in pages
+    ]
+
+    cast, things, titles = _cast_for(entries)
+    queue = {
+        "volume": volume,
+        "engine": SEED_ENGINE.value,
+        "titles": titles,
+        "story_cast": cast,
+        "story_things": things,
+        "seed": True,
+        "pages": entries,
+    }
+    (out_dir / QUEUE_FILE).write_text(json.dumps(queue, indent=2) + "\n")
+    (out_dir / ROSTER_FILE).write_text(roster_text(cast, things))
+
+    total_boxes = sum(e["num_raw_boxes"] for e in entries)
+    print(f'Seeded {len(entries)} page(s), {total_boxes} raw box(es) in "{out_dir}".')
+    print(f'Read "{out_dir / ROSTER_FILE}" first. Per page write {SEED_FILE} and result.json;')
+    print(f"then: barks-ocr-vision-seed build --out-dir {out_dir}")
+
+
+def _expand_ids(ids: list[str | int]) -> list[str]:
+    """Expand ``"6-13"`` range entries in a seed group's ``box_ids`` into single ids.
+
+    EasyOCR boxes are word-level -- about fifty to a page -- so a balloon is
+    usually a run of consecutive ids, and a range keeps the seed file readable.
+
+    Raises:
+        ValueError: for an entry that is neither an id nor an ascending range.
+
+    """
+    out: list[str] = []
+    for item in ids:
+        text = str(item)
+        if "-" in text:
+            lo, hi = (int(part) for part in text.split("-", 1))
+            if hi < lo:
+                msg = f"range {text!r} runs backwards"
+                raise ValueError(msg)
+            out.extend(str(n) for n in range(lo, hi + 1))
+        else:
+            out.append(str(int(text)))
+    return out
+
+
+def _group_errors(
+    where: str, group: dict, boxes: dict[str, dict], panel_nums: list[int]
+) -> list[str]:
+    """Return what is wrong with one seed group, box reuse aside."""
+    errors: list[str] = []
+    text = group.get("ai_text")
+    if not isinstance(text, str) or not text.strip():
+        errors.append(f"{where}: ai_text is empty.")
+    elif strip_markup(text) != text:
+        errors.append(f"{where}: ai_text carries markup; put emphasis in result.json.")
+    if group.get("type") not in GROUP_TYPES:
+        errors.append(f"{where}: type {group.get('type')!r} is not in {sorted(GROUP_TYPES)}.")
+    ids = group.get("box_ids", [])
+    if not ids and not group.get("text_box"):
+        errors.append(f"{where}: give box_ids, or a text_box for lettering OCR missed.")
+    errors += [f"{where}: box id {i!r} is not in boxes.json." for i in ids if i not in boxes]
+    panel = group.get("panel_num")
+    if panel is not None and panel not in panel_nums:
+        errors.append(f"{where}: panel_num {panel} is not one of {panel_nums}.")
+    return errors
+
+
+def _seed_errors(page: str, seed: dict, boxes: dict[str, dict], panel_nums: list[int]) -> list[str]:
+    """Return everything wrong with one page's seed.json, before anything is written."""
+    groups = seed.get("groups")
+    if not isinstance(groups, list) or not groups:
+        return [f"{page}: seed.json needs a non-empty 'groups' list."]
+    errors: list[str] = []
+    used: dict[str, int] = {}
+    for i, group in enumerate(groups):
+        where = f"{page} seed group {i}"
+        errors += _group_errors(where, group, boxes, panel_nums)
+        for box_id in group.get("box_ids", []):
+            if box_id in used:
+                errors.append(f"{where}: box {box_id} is already in group {used[box_id]}.")
+            used[box_id] = i
+    return errors
+
+
+def _prelim_group(group: dict, boxes: dict[str, dict], panel_boxes: PagePanelBoxes) -> dict:
+    """Build one prelim group in the Gemini grouper's schema."""
+    members = [boxes[i] for i in group.get("box_ids", [])]
+    if group.get("text_box"):
+        text_box = [list(p) for p in group["text_box"]]
+    else:
+        quads = [[tuple(p) for p in m["quad"]] for m in members]
+        text_box = [list(p) for p in get_enclosing_box(quads)]
+    panel_num = group.get("panel_num") or _panel_of(text_box, panel_boxes)
+    return {
+        "panel_id": str(panel_num),
+        "panel_num": panel_num,
+        "text_box": text_box,
+        "ocr_text": " ".join(m["ocr_text"] for m in members),
+        "ai_text": group["ai_text"],
+        "type": group["type"],
+        "style": "normal",
+        "notes": group.get("notes", ""),
+        "cleaned_box_texts": {
+            m["id"]: {"text_frag": m["text"], "text_box": m["quad"]} for m in members
+        },
+    }
+
+
+def _was_applied(prelim_file: Path) -> bool:
+    """Return whether a prelim file already carries a vision pass's annotations."""
+    groups = json.loads(prelim_file.read_text()).get("groups", {})
+    return any(key in g for g in groups.values() for key in APPLIED_MARKERS)
+
+
+def _load_seed(seed_file: Path, panel_nums: list[int]) -> tuple[dict, dict[str, dict], list[str]]:
+    """Read one page's seed and raw boxes, expand id ranges, and check the seed."""
+    page = seed_file.parent.name
+    seed = json.loads(seed_file.read_text())
+    boxes = {b["id"]: b for b in json.loads((seed_file.parent / BOXES_JSON).read_text())}
+    try:
+        for group in seed.get("groups") or []:
+            group["box_ids"] = _expand_ids(group.get("box_ids", []))
+    except ValueError as exc:
+        return seed, boxes, [f"{page}: bad box_ids entry: {exc}."]
+    return seed, boxes, _seed_errors(page, seed, boxes, panel_nums)
+
+
+def _plan_page(
+    comics_database: ComicsDatabase,
+    out_dir: Path,
+    entry: dict,
+    panel_boxes: PagePanelBoxes,
+    *,
+    replace: bool,
+) -> tuple[dict | None, list[str]]:
+    """Validate one page's seed and return the prelim it would write, or its errors."""
+    page = entry["fanta_page"]
+    seed_file = out_dir / page / SEED_FILE
+    if not seed_file.is_file():
+        logger.warning(f"Page {page}: no {SEED_FILE} yet, skipping.")
+        return None, []
+    seed, boxes, errors = _load_seed(seed_file, entry["panel_nums"])
+    if errors:
+        return None, errors
+    groups = {str(i): _prelim_group(g, boxes, panel_boxes) for i, g in enumerate(seed["groups"])}
+    no_panel = [gid for gid, g in groups.items() if g["panel_num"] == -1]
+    if no_panel:
+        return None, [f"{page}: group(s) {no_panel} fall in no panel; give panel_num."]
+    prelim = {"use_as_final": False, "groups": groups}
+
+    comic = comics_database.get_comic_book(entry["title"])
+    easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
+    copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
+    if easy_file.is_file() and easy_file.read_text() == _dump_prelim(prelim):
+        logger.info(f"Page {page}: {easy_file.name} is already this seed; leaving it.")
+        return None, []
+    if easy_file.is_file() and _was_applied(easy_file):
+        errors.append(f"{page}: {easy_file.name} has been applied to; a rebuild would lose it.")
+    elif easy_file.is_file() and not replace:
+        errors.append(f"{page}: {easy_file.name} exists; pass --replace to rebuild it.")
+    if copy_file.is_file() and COPIED_FROM_ENGINE_KEY not in json.loads(copy_file.read_text()):
+        errors.append(f"{page}: {copy_file.name} is a real paddleocr file; not replacing.")
+    if errors:
+        return None, errors
+    grouped = {i for g in seed["groups"] for i in g.get("box_ids", [])}
+    unused = [b for b in boxes.values() if b["id"] not in grouped]
+    if unused:
+        listing = ", ".join(f"{b['id']} {b['text']!r}" for b in unused)
+        logger.info(f"Page {page}: {len(unused)} raw box(es) in no group: {listing}")
+    return {
+        "page": page,
+        "prelim": prelim,
+        "easy_file": easy_file,
+        "copy_file": copy_file,
+    }, []
+
+
+def _write_page(plan: dict, out_dir: Path) -> None:
+    """Write one page's easyocr prelim, its marked paddleocr copy, and groups.json."""
+    prelim = plan["prelim"]
+    plan["easy_file"].parent.mkdir(parents=True, exist_ok=True)
+    plan["easy_file"].write_text(_dump_prelim(prelim))
+    plan["copy_file"].write_text(
+        _dump_prelim({COPIED_FROM_ENGINE_KEY: SEED_ENGINE.value, **prelim})
+    )
+    trimmed = {gid: {f: g.get(f) for f in GROUP_FIELDS} for gid, g in prelim["groups"].items()}
+    (out_dir / plan["page"] / "groups.json").write_text(json.dumps(trimmed, indent=2) + "\n")
+
+
+@app.command(help="Write the easyocr prelim from each page's seed.json, and its paddleocr copy.")
+def build(
+    out_dir: Annotated[Path, typer.Option("--out-dir", "-o", help="The seed prep directory.")],
+    dry_run: Annotated[bool, typer.Option("--dry-run", help="Validate; write nothing.")] = False,
+    replace: Annotated[
+        bool,
+        typer.Option("--replace", help="Rebuild a seeded prelim that no pass has applied to yet."),
+    ] = False,
+) -> None:
+    queue = json.loads((out_dir / QUEUE_FILE).read_text())
+    if not queue.get("seed"):
+        msg = f'"{out_dir}" is not a seed directory; use vision-apply on it.'
+        raise typer.BadParameter(msg)
+    comics_database = ComicsDatabase()
+    title_boxes = TitlePanelBoxes(comics_database)
+    panel_boxes = {
+        t: title_boxes.get_page_panel_boxes(STR_TITLE_TO_ENUM[t]).pages for t in queue["titles"]
+    }
+
+    plans: list[tuple[dict, dict]] = []
+    errors: list[str] = []
+    for entry in queue["pages"]:
+        page_boxes = panel_boxes[entry["title"]][entry["fanta_page"]]
+        plan, page_errors = _plan_page(comics_database, out_dir, entry, page_boxes, replace=replace)
+        errors += page_errors
+        if plan is not None:
+            plans.append((entry, plan))
+    if errors:
+        print(f"{len(errors)} problem(s); nothing written:")
+        for error in errors:
+            print(f"  {error}")
+        raise typer.Exit(code=1)
+
+    for entry, plan in plans:
+        groups = plan["prelim"]["groups"]
+        print(f"{plan['page']}: {len(groups)} group(s) -> {plan['easy_file'].name} + copy")
+        if not dry_run:
+            _write_page(plan, out_dir)
+            entry["num_groups"] = len(groups)
+    if not dry_run:
+        (out_dir / QUEUE_FILE).write_text(json.dumps(queue, indent=2) + "\n")
+    print(f"{'Would write' if dry_run else 'Wrote'} {len(plans)} page(s).")
+    if not dry_run and plans:
+        print(f"Next: barks-ocr-vision-apply --out-dir {out_dir} --no-mirror --dry-run")
+
+
+@app.command(help="Re-copy a title's seeded easyocr prelim files onto their paddleocr copies.")
+def sync(
+    title_str: Annotated[str, typer.Option("--title", "-t", help="Story title.")],
+    write: Annotated[
+        bool, typer.Option("--write", help="Write; the default is a dry run.")
+    ] = False,
+) -> None:
+    comics_database = ComicsDatabase()
+    comic = comics_database.get_comic_book(title_str)
+    svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
+    changed = same = 0
+    for svg in svg_files:
+        page = Path(svg).name.split(".")[0]
+        easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
+        copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
+        if not easy_file.is_file() or not copy_file.is_file():
+            continue
+        current = json.loads(copy_file.read_text())
+        if COPIED_FROM_ENGINE_KEY not in current:
+            continue  # A real paddleocr file: not a copy, so not this tool's.
+        wanted = _dump_prelim(
+            {COPIED_FROM_ENGINE_KEY: SEED_ENGINE.value, **json.loads(easy_file.read_text())}
+        )
+        if copy_file.read_text() == wanted:
+            same += 1
+            continue
+        changed += 1
+        print(f"{page}: {copy_file.name} differs from its easyocr source")
+        if write:
+            copy_file.write_text(wanted)
+    verb = "Re-copied" if write else "Would re-copy"
+    print(f"{verb} {changed} page(s); {same} already identical.")
+
+
+if __name__ == "__main__":
+    app()
