@@ -73,6 +73,7 @@ hexcode
 hlines
 hotpink
 ikey
+imread
 imwrite
 inducks
 initargs

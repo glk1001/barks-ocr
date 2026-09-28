@@ -37,9 +37,12 @@ box ids, as a pass's ``added_groups`` are.
 
 import json
 import re
+import statistics
 from pathlib import Path
 from typing import Annotated, Any
 
+import cv2
+import numpy as np
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
@@ -81,6 +84,29 @@ COPIED_FROM_ENGINE_KEY = "copied_from_engine"
 # and 2,829 `— WORD` against none touching a letter once Camp Counselor's three
 # were fixed in review (2026-09-28).
 DASH_TOUCHING_LETTER = re.compile(r"[A-Za-z0-9]\u2014|\u2014[A-Za-z0-9]")
+
+# FITTING A CLIPPED TRAILING MARK. EasyOCR's word box usually stops short of a
+# closing `!` -- Barks letters it as a thin tapering stroke plus a separate dot, and
+# neither reads as part of the word -- so a group box built from word boxes clipped
+# it, and on Camp Counselor 31 of the reviewer's 35 box refits were that right edge
+# moving out 10-33px. `_fit_trailing_mark` finds the stroke and dot in the page's ink
+# and extends the box over them. Scored against that review's 106 balloon boxes:
+# every edge within 6px of the reviewer's went from 76 to 89, the mean edge error
+# from 2.5 to 1.0px; the two it moved away from the review were a `!` the review had
+# itself left clipped (112 g4) and a 10px overshoot (117 g0). The numbers below are
+# the ones that scored that.
+INK_DARK = 380  # an RGB sum below this is lettering ink
+MIN_INK_AREA = 6  # smaller than this is a speck, not a stroke or a dot
+BALLOON_TYPES = frozenset({"dialogue", "thought", "narration"})
+ART_WORD = 1.5  # a word this many times the page's median height is art lettering
+MARK_REACH = 0.6  # the first stroke may start this many word heights past the word
+MARK_STEP = 0.3  # a further piece (the dot, a second `!`) this close to the last
+MARK_MAX_GROWTH = 0.8  # never extend the word by more than this many word heights
+MARK_MAX_WIDTH = 0.45  # a mark is narrow ...
+MARK_MAX_HEIGHT = 0.85  # ... and shorter than the word box; a border line is not
+MARK_BAND = 0.15  # and stays inside the word's own line, give or take this much
+MARK_STEPS = 3
+MARK_PAD = 6  # the reviewer's boxes sit about this far past the ink
 
 BOXES_JSON = "boxes.json"
 BOXES_TXT = "boxes.txt"
@@ -355,7 +381,84 @@ def _seed_errors(page: str, seed: dict, boxes: dict[str, dict], panel_nums: list
     return errors
 
 
-def _prelim_group(group: dict, boxes: dict[str, dict], panel_boxes: PagePanelBoxes) -> dict:
+def _ink_components(page_file: Path) -> list[tuple[int, int, int, int]]:
+    """Return the bounds (x0, y0, x1, y1) of every connected patch of dark ink on a page.
+
+    Labelled over the WHOLE page, so a balloon outline stays one huge component
+    and is never mistaken for a letter; labelling a window round the box cut the
+    outline into letter-sized pieces and grew boxes into it.
+    """
+    image = cv2.imread(str(page_file))
+    if image is None:
+        msg = f'Could not read page image "{page_file}".'
+        raise typer.BadParameter(msg)
+    ink = (image.astype(int).sum(axis=2) < INK_DARK).astype(np.uint8)
+    _count, _labels, stats, _centroids = cv2.connectedComponentsWithStats(ink, connectivity=8)
+    return [
+        (int(x), int(y), int(x + w), int(y + h))
+        for x, y, w, h, area in stats[1:]
+        if area >= MIN_INK_AREA
+    ]
+
+
+def _word_bounds(quad: list) -> tuple[int, int, int, int]:
+    xs = [p[0] for p in quad]
+    ys = [p[1] for p in quad]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def _mark_edge(word: tuple, ink: list[tuple[int, int, int, int]]) -> tuple[int, int, int]:
+    """Return how far right a clipped trailing mark takes this word, and its top and bottom."""
+    _wx0, wy0, wx1, wy1 = word
+    wh = wy1 - wy0
+    edge, top, bottom = wx1, wy0, wy1
+    for step in range(MARK_STEPS):
+        reach = (MARK_REACH if step == 0 else MARK_STEP) * wh
+        hits = [
+            c
+            for c in ink
+            if -0.3 * wh <= c[0] - edge <= reach
+            and c[2] > edge
+            and c[2] - c[0] <= MARK_MAX_WIDTH * wh
+            and c[3] - c[1] <= MARK_MAX_HEIGHT * wh
+            and c[1] >= wy0 - MARK_BAND * wh
+            and c[3] <= wy1 + MARK_BAND * wh
+            and c[2] <= wx1 + MARK_MAX_GROWTH * wh
+        ]
+        if not hits:
+            break
+        edge = max(edge, *(c[2] for c in hits))
+        top = min(top, *(c[1] for c in hits))
+        bottom = max(bottom, *(c[3] for c in hits))
+    return edge, top, bottom
+
+
+def _fit_trailing_mark(
+    text_box: list, members: list[dict], ink: list[tuple[int, int, int, int]], page_wh: float
+) -> list:
+    """Extend a balloon group's box over any trailing `!` its word boxes clipped."""
+    x0, y0, x1, y1 = text_box[0][0], text_box[0][1], text_box[2][0], text_box[2][1]
+    words = [_word_bounds(m["quad"]) for m in members]
+    for word in words:
+        _wx0, wy0, wx1, wy1 = word
+        if wy1 - wy0 > ART_WORD * page_wh:
+            continue  # art lettering, not a balloon line
+        line_mates = [w for w in words if w[0] > wx1 and min(w[3], wy1) - max(w[1], wy0) > 0]
+        if line_mates:
+            continue  # not the last word on its line
+        edge, top, bottom = _mark_edge(word, ink)
+        if edge > wx1 + 2:
+            x1, y0, y1 = max(x1, edge + MARK_PAD), min(y0, top), max(y1, bottom)
+    return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+
+
+def _prelim_group(
+    group: dict,
+    boxes: dict[str, dict],
+    panel_boxes: PagePanelBoxes,
+    ink: list[tuple[int, int, int, int]],
+    page_wh: float,
+) -> dict:
     """Build one prelim group in the Gemini grouper's schema."""
     members = [boxes[i] for i in group.get("box_ids", [])]
     if group.get("text_box"):
@@ -363,6 +466,8 @@ def _prelim_group(group: dict, boxes: dict[str, dict], panel_boxes: PagePanelBox
     else:
         quads = [[tuple(p) for p in m["quad"]] for m in members]
         text_box = [list(p) for p in get_enclosing_box(quads)]
+        if group["type"] in BALLOON_TYPES:
+            text_box = _fit_trailing_mark(text_box, members, ink, page_wh)
     panel_num = group.get("panel_num") or _panel_of(text_box, panel_boxes)
     return {
         "panel_id": str(panel_num),
@@ -415,7 +520,14 @@ def _plan_page(
     seed, boxes, errors = _load_seed(seed_file, entry["panel_nums"])
     if errors:
         return None, errors
-    groups = {str(i): _prelim_group(g, boxes, panel_boxes) for i, g in enumerate(seed["groups"])}
+    ink = _ink_components(_page_image_file(comics_database, entry["title"], page))
+    page_wh = statistics.median(
+        _word_bounds(b["quad"])[3] - _word_bounds(b["quad"])[1] for b in boxes.values()
+    )
+    groups = {
+        str(i): _prelim_group(g, boxes, panel_boxes, ink, page_wh)
+        for i, g in enumerate(seed["groups"])
+    }
     no_panel = [gid for gid, g in groups.items() if g["panel_num"] == -1]
     if no_panel:
         return None, [f"{page}: group(s) {no_panel} fall in no panel; give panel_num."]
