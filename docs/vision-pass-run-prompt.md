@@ -7420,6 +7420,32 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, SEED, NONE REVIEWED -- *Donald's Grandma Duck*)
+
+*Donald's Grandma Duck* (Vol. 9, 096-109) is the second seed title: EasyOCR alone (1,206 word
+boxes, 222s on CPU), grouped and read in one pass into 210 groups, the paddleocr prelim a
+marked copy (prelim `f0c6c17a`). **17 images over 14 pages (1.2)**. The first seed title
+built with the trailing-`!` box fit (`0f526a4`) and the em-dash check (`190654b`). Every
+figure below is the pass's own.
+
+- **Cast:** `Grandma Duck` and `other:Gus Goose` (the corpus spellings, 296 and 66 groups);
+  the boys arrive on 100. Gus's goose `HONK` into a handkerchief (099) and on his horn (109)
+  are dialogue, his.
+- **CAPS ONLY OUTDOORS, AND FOLIAGE IMITATES THEM.** The boys wear quartered caps outdoors on
+  101-104 -- red Huey `#e61b1f`, green Louie `#4ea33f` (H107, the Vol. 9 cap green), blue
+  Dewey `#00a5d7` -- and are bare-headed indoors on 102 p3 and 105-109. The census puts
+  tree green `#009e49` (103 p6) and `#56b03f` (104 p5) and a fence rail (102 p5) on their
+  heads; none of those is a cap, and each note says so.
+- **DIALOGUE NAMED THREE CALLS:** 102 p7 `'ATTABOY, DEWEY!` names the chased boy, 103 p6
+  `LOUIE! HUEY! LOOK OUT` its speaker, and 107 p6-p7 `WHAT'S THAT, LOUIE?` the boy with the
+  idea and his reply. **Look first at** the Dewey calls on 101 p5, 102 p6 and 103 p5, each
+  resting on a blue patch of 127-161px, and 104 p3, where the blue cap flying off the boy
+  was read on a crop but never sampled.
+- **Letters are background groups boxed by hand.** Ezra Scrooge's foreclosure letter (099)
+  and the boys' note (109, spelled `Dere Grandma`) were read by EasyOCR as dozens of word
+  fragments with lines missing. One `visible_text` entry per group: listing the letterhead
+  and body separately made the audit report both as ungrouped.
+
 ### Findings to paste into the next run (2026-09-28, SEED PILOT, REVIEWED -- *Camp Counselor*, the first title OCRed and read in one pass)
 
 *Camp Counselor* (Vol. 9, 110-117) had never been OCRed. It went through the new seed flow

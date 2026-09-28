@@ -157,3 +157,4 @@ volume,titles,pages,images,calls,tokens_m,recorded,note
 23,Riding the Pony Express,10,11,32,10.9,2026-09-27,"eighty-sixth batch (lane 2); page.png alone -- identical hats and headbands, every nephew call collective"
 23,Want to Buy an Island?,10,16,38,14.7,2026-09-27,"eighty-sixth batch (lane 2); page.png plus one crop strip on six pages -- bare-headed at kindergarten, quartered caps outdoors"
 9,Camp Counselor,8,13,257,69.9,2026-09-28,"seed pilot: EasyOCR raw boxes grouped and read in one pass; page.png plus 5 crops -- calls and tokens INCLUDE building vision_seed in the same session, so not the flow's running cost"
+9,Donald's Grandma Duck,14,17,124,42.2,2026-09-28,"seed: EasyOCR raw boxes grouped and read in one pass; page.png plus 3 montages -- caps outdoors only, three calls named by dialogue"
