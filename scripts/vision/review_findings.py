@@ -143,7 +143,11 @@ def _pair_by_text(before: dict, groups: dict) -> dict[str, dict | None]:
     Ids are not stable across a review (an add renumbers the page, a re-sort moves
     them), so a pass group is matched on its stored text first and then on the
     text it proposed itself, which is what an accepted text correction leaves.
-    Equal texts are consumed in page order.
+    Equal texts are consumed in page order.  A group whose text the REVIEW rewrote
+    matches neither, so as a last step it takes the pass group at its own id --
+    but only while that one is still unclaimed, which an add or a re-sort would
+    have prevented by pairing it elsewhere.  (Camp Counselor, 2026-09-28: two
+    em dashes given a space in review read as two groups with no pass counterpart.)
 
     Args:
         before: the page's groups at the pass's commit.
@@ -166,6 +170,11 @@ def _pair_by_text(before: dict, groups: dict) -> dict[str, dict | None]:
             if match is not None:
                 unused.remove(match)
                 pairs[gid] = match
+    for gid in groups:
+        same_id = before.get(gid)
+        if gid not in pairs and same_id is not None and any(o is same_id for o in unused):
+            unused.remove(same_id)
+            pairs[gid] = same_id
     return {gid: pairs.get(gid) for gid in groups}
 
 
