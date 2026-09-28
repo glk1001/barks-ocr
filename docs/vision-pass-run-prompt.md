@@ -7420,6 +7420,32 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, SEED, REVIEWED -- *Donald's Grandma Duck*)
+
+*Donald's Grandma Duck* closed at 210/210 on both engines (prelim `bb408bb9`), four groups
+ticked from a straggler queue after the review edited their text. **16 speaker corrections
+over 210 groups; high 15 of 191 (7.9%), medium 1 of 19** -- the reverse of the usual
+pattern, and all from one error.
+
+- **A CENSUS ZERO ON A SMALL BOY IS NOT A BARE HEAD. 14 of the 16 are `nephews` -> a name,**
+  every one of them a collective written at HIGH on the head census finding no cap ink:
+  the tiny boys on the station platform (100 p8), the running boys against the fence (102
+  p5), the fleeing and pigpen boys (104 p4-p5), the mud-caked boys (105 p1). In Vol. 9 the
+  cap is a black beanie with one small coloured quarter; at those sizes the quarter is under
+  the census floor or lost in foliage green, and the reviewer read it anyway. The roster's
+  rule already says to quote the scan's own zero -- the pass did, and the zero was still
+  about the scan. **Crop the heads before writing a collective on a small boy**, and write a
+  collective you have not looked at as medium, not high.
+- 102 g14 (`'ATTABOY, DEWEY!`, from Huey or Louie) is Louie; 102 g12 `— WE HOPE!` is Huey's
+  line, not a caption; 104's cackle is the rooster's.
+- **A WORD BROKEN ACROSS LINES TAKES A SOFT HYPHEN (U+00AD), NOT `-`.** The review gave
+  `TELE­VISION` one, and `HOME­MADE` followed; the corpus has 418 such groups. A real hyphen
+  (`FIVE-FIFTEEN`, `KA-RASH`) stays.
+- **THE BOX FIT HELD.** The review refitted 29 of 205 boxes (14%), against 35 of 115 (30%) on
+  *Camp Counselor* before the trailing-`!` fit. What is left: a caption's drop capital
+  (`LATER!`, `SHORTLY!`, left edge out 12-59px), a leading or trailing em dash the word boxes
+  clip (`— WE HOPE!`, `BE FUN —`), and the hand-drawn boxes on sound effects and letters.
+
 ### Findings to paste into the next run (2026-09-28, SEED, NONE REVIEWED -- *Donald's Grandma Duck*)
 
 *Donald's Grandma Duck* (Vol. 9, 096-109) is the second seed title: EasyOCR alone (1,206 word
