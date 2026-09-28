@@ -7420,6 +7420,35 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-28, SEED PILOT, REVIEWED -- *Camp Counselor*, the first title OCRed and read in one pass)
+
+*Camp Counselor* (Vol. 9, 110-117) had never been OCRed. It went through the new seed flow
+(`barks-ocr-vision-seed`, barks-ocr `4d0d33f`): EasyOCR alone (516 word boxes, ~15s a page
+on CPU), the pass grouping those boxes AND reading them in the same pass, and the paddleocr
+prelim a copy marked `copied_from_engine: easyocr`. Read 2026-09-28 with **13 images over 8
+pages (1.6)**; reviewed the same day (prelim `1aa7c2da` pass, `7098d438` review).
+
+**115/115 reviewed, no speaker corrections** (high 0 of 109, medium 0 of 6), no groups added,
+merged or split, no type changes, no missed text. What the review did change was the part
+Gemini used to do:
+
+- **EM DASHES ARE SPACED ON BOTH SIDES.** The seed pass wrote `REMEMBER—`, `AFRICA—`, `YOU—`
+  and `WELL —UH— WHEN`; the corpus has 4,908 `WORD —` and 2,829 `— WORD` and, after the
+  fix, none touching a letter. Two were fixed in review, two after it; `seed build` now
+  refuses the unspaced form (`190654b`).
+- **A WHOLLY BOLD BALLOON IS `[b]` END TO END.** 115 g15 `PLENTY!` became `[b]PLENTY![/b]`.
+- **35 OF 115 TEXT BOXES WERE REFITTED.** A seed group's box is the enclosing box of its
+  word boxes, which runs a few px inside or outside the lettering; the review redrew a
+  third of them by hand. Expected, not an error class -- but it is a third of the groups.
+- **Identical costume hats made every nephew call collective (59), and the review agreed** --
+  tan campaign hats with no roster ink, blue 0 blobs in every panel. Same finding as *Riding
+  the Pony Express*.
+
+**The review wrote to BOTH engines' files** (speaker ticks on easyocr only, box refits on
+both, a few px apart). Close a seed title with `seed sync --write`, never `vision-mirror`:
+it re-copies the reviewed easyocr file whole, so paddleocr's own refits are replaced.
+`review_findings.py` now pairs a group whose text the review rewrote by its id (`6766b9b`).
+
 ### Findings to paste into the next run (2026-09-28, eighty-sixth batch, ALL EIGHT REVIEWED AND MIRRORED -- *Want to Buy an Island?* closes it)
 
 *Want to Buy an Island?* closed at 140/140 on both engines (prelim `87be36ee`). **7 speaker
