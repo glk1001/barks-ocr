@@ -7505,8 +7505,8 @@ corrections** (high 0 of 55, medium 0 of 8). All six retypes confirmed: five bub
 under smooth balloons to `thought` (170 g1, g4, g13, 171 g1, g18) and the war whoop (172 g0)
 to `dialogue`. No missed text.
 
-**Lane 1 (Vol. 24) closes at 13 speaker corrections over 556 pass groups (2.3%)** -- *Hound*
-5, *Pipeline* 8, *Yoicks* 0, *War Paint* 0. By the confidence the pass wrote: high 4 of 469
+**Lane 1 (Vol. 24) closes at 12 speaker corrections over 556 pass groups (2.2%)** -- *Hound*
+5, *Pipeline* 7, *Yoicks* 0, *War Paint* 0. By the confidence the pass wrote: high 4 of 469
 (0.9%), **medium 8 of 82 (9.8%)**, low 0 of 5. All 19 lane-1 retypes and both text
 corrections (`PIGMIES`, `GRUFFLED`) confirmed. Every correction fell in the two titles with boys in them; the Gyro
 story and the Scrooge-led *Yoicks* came through untouched.
@@ -7537,8 +7537,10 @@ GROUSE` text correction (091 g10) confirmed; no missed text.
 
 ### Findings to paste into the next run (2026-09-27, eighty-sixth batch, TWO OF EIGHT REVIEWED AND MIRRORED -- *Pipeline to Danger*)
 
-*Pipeline to Danger* closed at 245/245 on both engines (prelim `9c545981`). **8 speaker
-corrections over 244 pass groups (3.3%), 7 in the nephew domain (of 43, 16.3%).** By the
+*Pipeline to Danger* closed at 245/245 on both engines (prelim `9c545981`). **7 speaker
+corrections over 244 pass groups (2.9%), all 7 in the nephew domain (of 43, 16.3%).**
+(`review_findings.py` said 8: it paired the review's own 084 g14 add, below, with the pass's
+g14 by id. Recounted by text 2026-09-28; the prelim commit message still says 8.) By the
 confidence the pass wrote: high 2 of 201 (1.0%), **medium 5 of 41 (12.2%)**, low 0 of 2.
 The five pass retypes and the `PIGMIES` text correction (082 g3) confirmed. The one
 missed-text finding (084 `!`, which g14 `! ! !` carries) went to the ignore list, and
@@ -7562,8 +7564,8 @@ g14's `ai_text` lost a trailing newline the editor had left on it.
   VILLAGE!` sat over the blue and green boys and was left `nephews`; the review found a
   hidden tail to the green boy (Louie). Same lesson as *Island in the Sky*'s under-naming:
   look again before declining.
-- **A DRAWN DEVICE BELONGS TO WHOEVER IS SURPRISED.** 084 g14 `! ! !` over the tiny tribe went
-  from `unknown` to `other:the tribesmen`.
+- **THE REVIEW ADDED THE TRIBESMEN'S `! ! !`** as 084 g14 (`other:the tribesmen`) -- an add, not
+  a correction; its `unknown -> other:the tribesmen` was the editor's `speaker_was` stamp.
 - The small-ink names mostly stood: 084 g8 (27px), 085 g1 (50px), 085 g12 (84px) kept; only
   071 g6 (96px) moved. The decoy warnings (Scrooge's blue top hat, the green helicopter, the
   red extinguishers) produced no corrections.
