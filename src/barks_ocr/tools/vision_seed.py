@@ -43,6 +43,12 @@ a ``speaker*``, ``vision_*`` or ``type_reviewed`` key -- since reseeding would
 throw that away. ``build`` then backs up both Gemini files into the prelim
 backup tree before replacing them, and the real paddleocr file becomes a marked
 copy like any other seed page's.
+
+**Refitting boxes after a fitter fix.** ``build`` will not touch an applied page,
+so a better box fit does not reach titles already read. ``refit --out-dir D``
+recomputes the word-built caption boxes of that directory's applied pages and writes
+only the ones that grow, on both engines; a page anyone has reviewed (``speaker_reviewed``
+or ``type_reviewed`` on any group) and a hand-set ``text_box`` are left alone.
 """
 
 import json
@@ -154,8 +160,8 @@ LEAD_MAX_WIDTH = 1.2
 # The same letter can straddle the word box instead of sitting wholly outside it: a
 # caption's first capital, set a little wider than the rest (Crown of the Mayas: AT A
 # VILLAGE's A 12px out, AS THE's A 6px). One sticking out more than this many pixels is
-# fitted. Scored on the three reviewed seed titles' 519 balloon boxes: 9 closer to the
-# reviewed left edge, 1 further (a 9px margin the review had accepted as built).
+# fitted -- in a CAPTION only: at a balloon's edge the same test took a stroke of art
+# and chained left through the drawing (Vol. 30's 192, 196 and 138).
 LEAD_STRADDLE = 3
 
 BOXES_JSON = "boxes.json"
@@ -171,6 +177,11 @@ APPLIED_MARKERS = ("speaker", "vision_note", "speaker_reviewed")
 # a group. Prefixes, so `speaker_confidence`, `speaker_was`, `vision_added` count too.
 REVIEW_MARKER_PREFIXES = ("speaker", "vision_")
 REVIEW_MARKER_KEYS = frozenset({"type_reviewed"})
+# What `refit` will not touch: a page a person has reviewed, whose boxes may be theirs.
+REVIEWED_KEYS = ("speaker_reviewed", "type_reviewed")
+# And only captions: on Vol. 30's balloons, built before the leading-letter fit, the
+# refit took balloon-edge art as letters (a cloud's scallops, speed lines, a torn edge).
+REFIT_TYPES = frozenset({"narration"})
 REPLACES_PRELIM_KEY = "replaces_prelim"
 
 
@@ -624,8 +635,13 @@ def _is_letter(c: tuple[int, int, int, int], height: float) -> bool:
     return LETTER_HEIGHT[0] * height <= h <= LETTER_HEIGHT[1] * height
 
 
-def _fit_leading_letters(text_box: list, lines: list, ink: list[tuple[int, int, int, int]]) -> list:
-    """Extend a box left over a letter EasyOCR left out before any line's first word."""
+def _fit_leading_letters(
+    text_box: list, lines: list, ink: list[tuple[int, int, int, int]], *, straddle: bool
+) -> list:
+    """Extend a box left over a letter EasyOCR left out before any line's first word.
+
+    With ``straddle`` (captions only) a letter sticking out of the word box counts too.
+    """
     x0, y0, x1, y1 = text_box[0][0], text_box[0][1], text_box[2][0], text_box[2][1]
     for line in lines:
         _fx0, fy0, _fx1, fy1 = line[0]
@@ -636,7 +652,7 @@ def _fit_leading_letters(text_box: list, lines: list, ink: list[tuple[int, int, 
                 c
                 for c in ink
                 if edge - c[2] <= LEAD_REACH * h
-                and (c[2] <= edge or c[0] < edge - LEAD_STRADDLE)
+                and (c[2] <= edge or (straddle and c[0] < edge - LEAD_STRADDLE))
                 and c[0] < edge
                 and _is_letter(c, h)
                 and c[2] - c[0] <= LEAD_MAX_WIDTH * h
@@ -651,6 +667,23 @@ def _fit_leading_letters(text_box: list, lines: list, ink: list[tuple[int, int, 
     return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
 
 
+def _word_box(
+    group: dict, members: list[dict], ink: list[tuple[int, int, int, int]], page_wh: float
+) -> list:
+    """Return a group's box built from its word boxes, fitted over ink they clipped."""
+    quads = [[tuple(p) for p in m["quad"]] for m in members]
+    text_box = [list(p) for p in get_enclosing_box(quads)]
+    if group["type"] in BALLOON_TYPES:
+        text_box = _fit_trailing_mark(text_box, members, ink, page_wh)
+        lines = _text_lines([_word_bounds(m["quad"]) for m in members])
+        if DASH in group["ai_text"]:
+            text_box = _fit_edge_dashes(text_box, lines, ink)
+        if group["type"] == "narration":
+            text_box = _fit_drop_capital(text_box, lines, ink)
+        text_box = _fit_leading_letters(text_box, lines, ink, straddle=group["type"] == "narration")
+    return text_box
+
+
 def _prelim_group(
     group: dict,
     boxes: dict[str, dict],
@@ -663,16 +696,7 @@ def _prelim_group(
     if group.get("text_box"):
         text_box = [list(p) for p in group["text_box"]]
     else:
-        quads = [[tuple(p) for p in m["quad"]] for m in members]
-        text_box = [list(p) for p in get_enclosing_box(quads)]
-        if group["type"] in BALLOON_TYPES:
-            text_box = _fit_trailing_mark(text_box, members, ink, page_wh)
-            lines = _text_lines([_word_bounds(m["quad"]) for m in members])
-            if DASH in group["ai_text"]:
-                text_box = _fit_edge_dashes(text_box, lines, ink)
-            if group["type"] == "narration":
-                text_box = _fit_drop_capital(text_box, lines, ink)
-            text_box = _fit_leading_letters(text_box, lines, ink)
+        text_box = _word_box(group, members, ink, page_wh)
     panel_num = group.get("panel_num") or _panel_of(text_box, panel_boxes)
     return {
         "panel_id": str(panel_num),
@@ -687,6 +711,13 @@ def _prelim_group(
             m["id"]: {"text_frag": m["text"], "text_box": m["quad"]} for m in members
         },
     }
+
+
+def _page_word_height(boxes: dict[str, dict]) -> float:
+    """Return the median height of a page's raw word boxes."""
+    return statistics.median(
+        _word_bounds(b["quad"])[3] - _word_bounds(b["quad"])[1] for b in boxes.values()
+    )
 
 
 def _was_applied(prelim_file: Path) -> bool:
@@ -749,9 +780,7 @@ def _plan_page(
     if errors:
         return None, errors
     ink = _ink_components(_page_image_file(comics_database, entry["title"], page))
-    page_wh = statistics.median(
-        _word_bounds(b["quad"])[3] - _word_bounds(b["quad"])[1] for b in boxes.values()
-    )
+    page_wh = _page_word_height(boxes)
     groups = {
         str(i): _prelim_group(g, boxes, panel_boxes, ink, page_wh)
         for i, g in enumerate(seed["groups"])
@@ -858,6 +887,93 @@ def build(
     print(f"{'Would write' if dry_run else 'Wrote'} {len(plans)} page(s).")
     if not dry_run and plans:
         print(f"Next: barks-ocr-vision-apply --out-dir {out_dir} --no-mirror --dry-run")
+
+
+def _contains(outer: list, inner: list) -> bool:
+    """Return whether one box encloses another."""
+    return (
+        outer[0][0] <= inner[0][0]
+        and outer[0][1] <= inner[0][1]
+        and outer[2][0] >= inner[2][0]
+        and outer[2][1] >= inner[2][1]
+    )
+
+
+def _refit_page(comics_database: ComicsDatabase, out_dir: Path, entry: dict) -> tuple[dict, int]:
+    """Return an applied page's prelim with its word-built boxes refitted, and how many grew."""
+    page = entry["fanta_page"]
+    comic = comics_database.get_comic_book(entry["title"])
+    easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
+    seed_file = out_dir / page / SEED_FILE
+    if not seed_file.is_file() or not easy_file.is_file():
+        return {}, 0
+    seed, boxes, errors = _load_seed(seed_file, entry["panel_nums"])
+    text = easy_file.read_text()
+    prelim = json.loads(text)
+    groups = prelim["groups"]
+    if errors or text != _dump_prelim(prelim):
+        print(f"{page}: seed or prelim file does not check out; left alone.")
+        return {}, 0
+    if any(key in g for g in groups.values() for key in REVIEWED_KEYS):
+        print(f"{page}: reviewed; left alone.")
+        return {}, 0
+    ink = _ink_components(_page_image_file(comics_database, entry["title"], page))
+    page_wh = _page_word_height(boxes)
+    grown = 0
+    for i, seed_group in enumerate(seed["groups"]):
+        group = groups.get(str(i))
+        if group is None or set(group["cleaned_box_texts"]) != set(seed_group["box_ids"]):
+            print(f"{page}: group {i} no longer matches its seed (an add or re-sort?); left alone.")
+            return {}, 0
+        if seed_group.get("text_box") or seed_group["type"] not in REFIT_TYPES:
+            continue
+        old = group["text_box"]
+        new = _word_box(seed_group, [boxes[b] for b in seed_group["box_ids"]], ink, page_wh)
+        if new == old:
+            continue
+        if not _contains(new, old):
+            print(f"{page} g{i}: the refit would cut the box ({old} -> {new}); left alone.")
+            continue
+        edges = f"x0 {new[0][0] - old[0][0]:+d} y0 {new[0][1] - old[0][1]:+d}"
+        edges += f" x1 {new[2][0] - old[2][0]:+d} y1 {new[2][1] - old[2][1]:+d}"
+        print(f"{page} g{i} {seed_group['type']}: {edges}  {seed_group['ai_text'][:30]!r}")
+        group["text_box"] = new
+        grown += 1
+    return prelim, grown
+
+
+@app.command(help="Refit the word-built boxes of a seed directory's applied, unreviewed pages.")
+def refit(
+    out_dir: Annotated[Path, typer.Option("--out-dir", "-o", help="The seed prep directory.")],
+    write: Annotated[
+        bool, typer.Option("--write", help="Write; the default is a dry run.")
+    ] = False,
+) -> None:
+    queue = json.loads((out_dir / QUEUE_FILE).read_text())
+    if not queue.get("seed"):
+        msg = f'"{out_dir}" is not a seed directory.'
+        raise typer.BadParameter(msg)
+    comics_database = ComicsDatabase()
+    pages = boxes_grown = 0
+    for entry in queue["pages"]:
+        prelim, grown = _refit_page(comics_database, out_dir, entry)
+        if not grown:
+            continue
+        pages += 1
+        boxes_grown += grown
+        if write:
+            comic = comics_database.get_comic_book(entry["title"])
+            page = entry["fanta_page"]
+            copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
+            comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value).write_text(
+                _dump_prelim(prelim)
+            )
+            if COPIED_FROM_ENGINE_KEY in json.loads(copy_file.read_text()):
+                copy_file.write_text(
+                    _dump_prelim({COPIED_FROM_ENGINE_KEY: SEED_ENGINE.value, **prelim})
+                )
+    verb = "Refitted" if write else "Would refit"
+    print(f"{verb} {boxes_grown} box(es) on {pages} page(s).")
 
 
 @app.command(help="Re-copy a title's seeded easyocr prelim files onto their paddleocr copies.")
