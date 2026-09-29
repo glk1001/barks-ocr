@@ -10,7 +10,6 @@
 # carried across by hand -- *The Paul Bunyan Machine*, 2026-09-24. Delete a line
 # when the reviewer says that volume's cleanup is done.
 
-25  still being cleaned by the reviewer (2026-09-26)
 26  still being cleaned by the reviewer (2026-09-26)
 27  still being cleaned by the reviewer (2026-09-26)
 28  still being cleaned by the reviewer (2026-09-26)
