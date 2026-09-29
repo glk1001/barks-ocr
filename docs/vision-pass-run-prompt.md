@@ -7420,6 +7420,71 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-29, RESEED, NONE REVIEWED -- Vol. 26 whole, nineteen titles)
+
+*Uncle Scrooge -- The Golden Nugget Boat* (Vol. 26) is the first volume through
+`barks-ocr-vision-seed prep --reseed`: the unchecked Gemini prelims were backed up to
+`Prelim-backups` and replaced, title by title, by EasyOCR raw boxes grouped and read in one
+pass, the paddleocr prelim a marked copy. 174 pages, **2,427 groups**, **197 images (1.13
+per page)**; the pass's confidence was high 2,087, medium 323, low 17. Every figure below is
+the pass's own; nothing is reviewed.
+
+| title | pages | groups | images | nephew calls (collective) | missed text | prelim |
+|---|---|---|---|---|---|---|
+| *The Golden Nugget Boat* | 007-025 | 264 | 22 | 24 (24) | 14 | `9fa43681` |
+| *That's No Fable!* | 027-044 | 239 | 21 | 28 (17) | 8 | `6a323784` |
+| *Clothes Make the Duck* | 045-052 | 102 | 9 | 6 (0) | 3 | `8f9d0d09` |
+| *Billions in the Hole* | 053-068 | 224 | 17 | 39 (4) | 17 | `f60382aa` |
+| *Bongo on the Congo* | 069-078 | 152 | 11 | 24 (7) | 4 | `0d42a644` |
+| *Chugwagon Derby* | 079-088 | 123 | 13 | 6 (3) | 4 | `04ccbb0d` |
+| *Mythtic Mystery* | 089-102 | 211 | 23 | 63 (26) | 5 | `7990056e` |
+| *Gift Lion* | 103-106 | 94 | 4 | 0 | 3 | `ae086728` |
+| *The Midas Touch* | 107-123 | 244 | 18 | 43 (20) | 8 | `9347e2aa` |
+| *Money Bag Goat* | 125-130 | 66 | 6 | 8 (5) | 0 | `e7ee9cec` |
+| *Cave of the Winds* | 131-140 | 130 | 10 | 0 | 5 | `6077b706` |
+| *The Madball Pitcher* | 141-148 | 118 | 9 | 4 (2) | 2 | `7901911b` |
+| *Mixed-Up Mixer* | 149-155 | 90 | 7 | 0 | 0 | `6222c2cd` |
+| *The Bear Tamer* | 157-163 | 117 | 7 | 0 | 0 | `3589b3f7` |
+| *That Small Feeling* | 165-168 | 58 | 4 | 0 | 0 | `6ba8f233` |
+| *You Can't Win* | 169-172 | 45 | 4 | 0 | 0 | `1703a7e2` |
+| *Wily Rival* | 173-176 | 36 | 4 | 0 | 0 | `4c9f2c80` |
+| *Fast Away Castaway* | 177-180 | 55 | 4 | 0 | 0 | `c1cdfd17` |
+| *Duckburg's Day of Peril* | 181-184 | 59 | 4 | 0 | 0 | `a5ee8e3d` |
+
+- **THE CAPS CHANGE CONSTRUCTION BETWEEN TITLES.** *Mythtic Mystery* prints black caps
+  with a thin roster band (red `#e61b1f`, blue `#00a5d5`, green `#009e46`-`#009e49`), often
+  50-400px, so most of its 63 nephew calls are mediums read off a band; *The Midas Touch*
+  prints whole coloured caps (green 1,500px, blue 900px). Sample every head before
+  naming, and a head with no roster ink went to `nephews`.
+- **IN *BILLIONS IN THE HOLE* THE COLOURIST PRINTS LOUIE RED AND HUEY GREEN.** Dialogue
+  fixed it (062's searching pair, 066 "IT'S ME, LOUIE!"), and only the calls that
+  dialogue pins were swapped; cap-only calls elsewhere keep red Huey / green Louie.
+- **MISSED TEXT IS AGAIN MOSTLY `$`.** 73 items, 28 of them a drawn `$` on money bags,
+  the Money Bin, curtains and signs, which EasyOCR never boxes. The rest are Beagle Boy
+  sweater numbers (*Billions in the Hole*, 059-068; *Gift Lion* 105; *Cave of the Winds*
+  135), cut-off signs and labels (ALASKA CAFE, HOTEL, DRUG, SHOP on 012-016; SALE 028;
+  SUGAR 065; AIR WA 078; BERMUDA 112; ROSA 117), and odd marks (? 009/010/033/053/090,
+  music notes 025). Each title's `queue-missed.txt` parks them one line per engine.
+- **THE BACK HALF IS NINE GYRO STORIES WITH NO NEPHEWS** (*Cave of the Winds* on). Their
+  cast is new to the corpus and spelled here for the first time: `other:Thor`, `Odin`,
+  `Balder`, `Vulcan`, `Hercules` (*Mythtic Mystery*), `Knuckleball Noogan`,
+  `the Grand Vizier` / `the Big Cheese` of the Horseshoe Kids, `Goliath`,
+  `Mr. Giltfilcher`, `Mr. Ipsquiggle`, `Billy the goat`, and `Little Helper`. In
+  *Wily Rival* the blank-faced "rival inventor" on 173-175 is itself a robot; its
+  captions went to `other:a rival inventor` and its CLANK to `other:the robot`.
+- **Look first at** the 323 mediums: *Mythtic Mystery* (73 of 211), *The Midas Touch*
+  (56), *Billions in the Hole* (46) and *That's No Fable!* (40) carry most of them.
+- **A BOX FIX AFTER APPLY CANNOT BE REBUILT IN PLACE.** Once a page is applied, `build`
+  refuses it ("its prelim files now carry review or vision work"), and `--replace` covers
+  only an unapplied seed. To fix one page, `git checkout` its two prelim files back to the
+  Gemini originals and rebuild that page alone from a scratch out-dir holding only its
+  folder and a one-page `queue.json` (*The Madball Pitcher* 146); the rebuild takes a
+  second, harmless backup of the Gemini file. Catch overlaps before the build: a raw box
+  claimed by two groups recurred six times.
+- **`setting` takes the vocabulary only** -- `street`, not a town name
+  (*Mythtic Mystery* 089 was refused as `Duckburg`); a named place goes in
+  `other:`.
+
 ### Findings to paste into the next run (2026-09-28, SEED, NONE REVIEWED -- Vol. 30 whole, fifteen titles)
 
 *Uncle Scrooge -- Lost Beneath the Sea* (Vol. 30) is the first **whole volume** through the
