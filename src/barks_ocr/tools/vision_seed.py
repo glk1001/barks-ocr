@@ -33,10 +33,21 @@ from a real PaddleOCR run and is not this tool's to replace.
 
 **Lettering EasyOCR missed** is a seed group with an explicit ``text_box`` and no
 box ids, as a pass's ``added_groups`` are.
+
+**Reseeding a Gemini-grouped title.** ``prep --reseed`` also takes pages that
+already have Gemini prelim files, so a title nobody has hand-checked yet can be
+grouped and read in one pass instead of cleaned by hand: on Vol. 25 the seed
+matched the reviewer's cleaned text on 196 of 212 groups against Gemini's 117
+(2026-09-29). It refuses the title if any page carries review or vision work --
+a ``speaker*``, ``vision_*`` or ``type_reviewed`` key -- since reseeding would
+throw that away. ``build`` then backs up both Gemini files into the prelim
+backup tree before replacing them, and the real paddleocr file becomes a marked
+copy like any other seed page's.
 """
 
 import json
 import re
+import shutil
 import statistics
 from pathlib import Path
 from typing import Annotated, Any
@@ -48,6 +59,8 @@ from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
+from barks_fantagraphics.comics_utils import get_backup_file
+from barks_fantagraphics.ocr_file_paths import OCR_PRELIM_BACKUP_DIR, OCR_PRELIM_DIR
 from barks_fantagraphics.panel_boxes import PagePanelBoxes, TitlePanelBoxes
 from barks_fantagraphics.speech_groupers import OcrTypes
 from barks_fantagraphics.speech_markup import strip_markup
@@ -145,6 +158,12 @@ QUEUE_FILE = "queue.json"
 # been applied, and `build --replace` must not throw that work away.
 APPLIED_MARKERS = ("speaker", "vision_note", "speaker_reviewed")
 
+# What `prep --reseed` will not throw away: any trace of a review or a vision pass on
+# a group. Prefixes, so `speaker_confidence`, `speaker_was`, `vision_added` count too.
+REVIEW_MARKER_PREFIXES = ("speaker", "vision_")
+REVIEW_MARKER_KEYS = frozenset({"type_reviewed"})
+REPLACES_PRELIM_KEY = "replaces_prelim"
+
 
 def _dump_prelim(data: dict) -> str:
     """Return a groups file's text exactly as the prelim repo stores it."""
@@ -189,29 +208,64 @@ def _panel_of(quad: list, panel_boxes: PagePanelBoxes) -> int:
     return -1
 
 
-def _seed_pages(comics_database: ComicsDatabase, title_str: str) -> list[tuple[str, Path]]:
-    """Return (page, raw easyocr file) for every page of a title that has no prelim yet."""
+def _review_markers(prelim_file: Path) -> set[str]:
+    """Return the review or vision-pass keys any group in a prelim file carries."""
+    if not prelim_file.is_file():
+        return set()
+    groups = json.loads(prelim_file.read_text()).get("groups", {})
+    return {
+        key
+        for g in groups.values()
+        for key in g
+        if key.startswith(REVIEW_MARKER_PREFIXES) or key in REVIEW_MARKER_KEYS
+    }
+
+
+def _seed_pages(
+    comics_database: ComicsDatabase, title_str: str, *, reseed: bool = False
+) -> list[tuple[str, Path, bool]]:
+    """Return (page, raw easyocr file, replaces a prelim) for each page of a title to seed.
+
+    Without ``reseed`` that is every page with no prelim yet. With it, pages that
+    already have prelim files are taken too, unless any of them carries review or
+    vision work, in which case the whole title is refused.
+    """
     comic = comics_database.get_comic_book(title_str)
     volume = comics_database.get_fanta_volume_int(title_str)
     svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     raws = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
-    pages: list[tuple[str, Path]] = []
+    pages: list[tuple[str, Path, bool]] = []
     missing_raw: list[str] = []
+    worked: list[str] = []
     for svg, raw_pair in zip(svg_files, raws, strict=True):
         page = Path(svg).name.split(".")[0]
         if get_title_from_volume_page(comics_database, volume, page)[0] != title_str:
             logger.info(f"Page {page} belongs to another title; not seeding it here.")
             continue
-        if comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value).is_file():
+        easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
+        has_prelim = easy_file.is_file()
+        if has_prelim and not reseed:
             logger.info(f"Page {page} already has an easyocr prelim; use vision-prep for it.")
             continue
+        if has_prelim:
+            copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
+            markers = _review_markers(easy_file) | _review_markers(copy_file)
+            if markers:
+                worked.append(f"{page} ({', '.join(sorted(markers))})")
+                continue
         raw_file = next(f for f in raw_pair if SEED_ENGINE.value in f.name)
         if not raw_file.is_file():
             missing_raw.append(page)
             continue
-        pages.append((page, raw_file))
+        pages.append((page, raw_file, has_prelim))
 
+    if worked:
+        msg = (
+            f'"{title_str}" has review or vision work that a reseed would throw away,'
+            f" on page(s): {'; '.join(worked)}."
+        )
+        raise typer.BadParameter(msg)
     if missing_raw:
         msg = (
             f'No raw easyocr OCR for "{title_str}" page(s) {", ".join(missing_raw)}.'
@@ -219,7 +273,8 @@ def _seed_pages(comics_database: ComicsDatabase, title_str: str) -> list[tuple[s
         )
         raise typer.BadParameter(msg)
     if not pages:
-        msg = f'"{title_str}" has no page without a prelim file; nothing to seed.'
+        hint = "" if reseed else " Pass --reseed to replace Gemini prelim files."
+        msg = f'"{title_str}" has no page without a prelim file; nothing to seed.{hint}'
         raise typer.BadParameter(msg)
     return pages
 
@@ -303,6 +358,14 @@ def prep(
         Path | None,
         typer.Option("--out-dir", "-o", help=f"Work directory (default: under {DEFAULT_ROOT})."),
     ] = None,
+    reseed: Annotated[
+        bool,
+        typer.Option(
+            "--reseed",
+            help="Also take pages that already have Gemini prelim files; build backs them up"
+            " and replaces them. Refused if any page carries review or vision work.",
+        ),
+    ] = False,
 ) -> None:
     comics_database = ComicsDatabase()
     volume = comics_database.get_fanta_volume_int(title_str)
@@ -312,16 +375,17 @@ def prep(
         msg = f"Vol. {volume} is on hold ({reason}) -- see {HOLDS_FILE}."
         raise typer.BadParameter(msg)
 
-    pages = _seed_pages(comics_database, title_str)
+    pages = _seed_pages(comics_database, title_str, reseed=reseed)
     out_dir = out_dir or DEFAULT_ROOT.expanduser() / _slug(title_str)
     out_dir.mkdir(parents=True, exist_ok=True)
     title_boxes = TitlePanelBoxes(comics_database).get_page_panel_boxes(
         STR_TITLE_TO_ENUM[title_str]
     )
-    entries = [
-        _prep_page(comics_database, title_str, page, raw, title_boxes.pages[page], out_dir)
-        for page, raw in pages
-    ]
+    entries = []
+    for page, raw, replaces in pages:
+        entry = _prep_page(comics_database, title_str, page, raw, title_boxes.pages[page], out_dir)
+        entry[REPLACES_PRELIM_KEY] = replaces
+        entries.append(entry)
 
     cast, things, titles = _cast_for(entries)
     queue = {
@@ -331,6 +395,7 @@ def prep(
         "story_cast": cast,
         "story_things": things,
         "seed": True,
+        "reseed": reseed,
         "pages": entries,
     }
     (out_dir / QUEUE_FILE).write_text(json.dumps(queue, indent=2) + "\n")
@@ -338,6 +403,9 @@ def prep(
 
     total_boxes = sum(e["num_raw_boxes"] for e in entries)
     print(f'Seeded {len(entries)} page(s), {total_boxes} raw box(es) in "{out_dir}".')
+    replacing = sum(e[REPLACES_PRELIM_KEY] for e in entries)
+    if replacing:
+        print(f"{replacing} page(s) replace Gemini prelim files; build backs those up first.")
     print(f'Read "{out_dir / ROSTER_FILE}" first. Per page write {SEED_FILE} and result.json;')
     print(f"then: barks-ocr-vision-seed build --out-dir {out_dir}")
 
@@ -629,6 +697,29 @@ def _load_seed(seed_file: Path, panel_nums: list[int]) -> tuple[dict, dict[str, 
     return seed, boxes, _seed_errors(page, seed, boxes, panel_nums)
 
 
+def _overwrite_errors(
+    page: str, easy_file: Path, copy_file: Path, *, replaces: bool, replace: bool
+) -> list[str]:
+    """Return why a page's existing prelim files must not be overwritten, if they must not."""
+    errors: list[str] = []
+    if replaces:
+        # Checked again here: the files may have been worked on since prep.
+        markers = _review_markers(easy_file) | _review_markers(copy_file)
+        if markers:
+            errors.append(
+                f"{page}: its prelim files now carry review or vision work"
+                f" ({', '.join(sorted(markers))}); not replacing them."
+            )
+        return errors
+    if easy_file.is_file() and _was_applied(easy_file):
+        errors.append(f"{page}: {easy_file.name} has been applied to; a rebuild would lose it.")
+    elif easy_file.is_file() and not replace:
+        errors.append(f"{page}: {easy_file.name} exists; pass --replace to rebuild it.")
+    if copy_file.is_file() and COPIED_FROM_ENGINE_KEY not in json.loads(copy_file.read_text()):
+        errors.append(f"{page}: {copy_file.name} is a real paddleocr file; not replacing.")
+    return errors
+
+
 def _plan_page(
     comics_database: ComicsDatabase,
     out_dir: Path,
@@ -665,12 +756,8 @@ def _plan_page(
     if easy_file.is_file() and easy_file.read_text() == _dump_prelim(prelim):
         logger.info(f"Page {page}: {easy_file.name} is already this seed; leaving it.")
         return None, []
-    if easy_file.is_file() and _was_applied(easy_file):
-        errors.append(f"{page}: {easy_file.name} has been applied to; a rebuild would lose it.")
-    elif easy_file.is_file() and not replace:
-        errors.append(f"{page}: {easy_file.name} exists; pass --replace to rebuild it.")
-    if copy_file.is_file() and COPIED_FROM_ENGINE_KEY not in json.loads(copy_file.read_text()):
-        errors.append(f"{page}: {copy_file.name} is a real paddleocr file; not replacing.")
+    replaces = entry.get(REPLACES_PRELIM_KEY, False)
+    errors = _overwrite_errors(page, easy_file, copy_file, replaces=replaces, replace=replace)
     if errors:
         return None, errors
     grouped = {i for g in seed["groups"] for i in g.get("box_ids", [])}
@@ -683,12 +770,27 @@ def _plan_page(
         "prelim": prelim,
         "easy_file": easy_file,
         "copy_file": copy_file,
+        "backup": replaces,
     }, []
+
+
+def _backup_prelim(prelim_file: Path) -> Path:
+    """Copy a prelim file into the prelim backup tree, as vision-apply does before a write."""
+    backup_file = Path(
+        str(get_backup_file(prelim_file)).replace(str(OCR_PRELIM_DIR), str(OCR_PRELIM_BACKUP_DIR))
+    )
+    backup_file.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(prelim_file, backup_file)
+    return backup_file
 
 
 def _write_page(plan: dict, out_dir: Path) -> None:
     """Write one page's easyocr prelim, its marked paddleocr copy, and groups.json."""
     prelim = plan["prelim"]
+    if plan["backup"]:
+        for prelim_file in (plan["easy_file"], plan["copy_file"]):
+            if prelim_file.is_file():
+                logger.info(f"Backed up {prelim_file.name} to {_backup_prelim(prelim_file)}.")
     plan["easy_file"].parent.mkdir(parents=True, exist_ok=True)
     plan["easy_file"].write_text(_dump_prelim(prelim))
     plan["copy_file"].write_text(
@@ -733,7 +835,10 @@ def build(
 
     for entry, plan in plans:
         groups = plan["prelim"]["groups"]
-        print(f"{plan['page']}: {len(groups)} group(s) -> {plan['easy_file'].name} + copy")
+        replacing = " (replaces the Gemini files, backed up first)" if plan["backup"] else ""
+        print(
+            f"{plan['page']}: {len(groups)} group(s) -> {plan['easy_file'].name} + copy{replacing}"
+        )
         if not dry_run:
             _write_page(plan, out_dir)
             entry["num_groups"] = len(groups)
