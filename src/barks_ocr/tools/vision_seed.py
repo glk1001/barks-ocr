@@ -122,6 +122,20 @@ DROP_CAP_HEIGHT = (1.0, 2.5)  # a drop capital is one to two and a half lines ta
 DROP_CAP_MAX_WIDTH = 2.0
 DROP_CAP_GAP = 0.3
 
+# AND ONE MORE, found scoring four seeded titles (Camp Counselor, Donald's Grandma
+# Duck, Balloonatics, The Day the Farm Stood Still) by the lettering a reviewed box
+# holds and the built box cuts off: a lone letter EasyOCR left out at the start of a
+# line (`A DUCK,`, `A PLASTIC`). Of 461 balloon boxes, 10 clipped real lettering;
+# this fits 2 and moves none of the 382 within 6px of the reviewed box further out.
+# A reach of 0.6 word heights also pulled 2 boxes across a joined balloon's seam.
+# A whole first or last line EasyOCR never boxed (105's `DISASTER!`) is NOT fitted:
+# the next balloon's first line sits as close to the box as a missed line does
+# (`AHA!` 8px inside the edge, `DISASTER!` 2px), and fitting it pulled 12 boxes into
+# their neighbours. Telling the two apart needs the balloon's interior.
+LETTER_HEIGHT = (0.5, 1.2)  # a letter's height, in line heights
+LEAD_REACH = 0.5  # a leading letter ends at most this many word heights before the word
+LEAD_MAX_WIDTH = 1.2
+
 BOXES_JSON = "boxes.json"
 BOXES_TXT = "boxes.txt"
 SEED_FILE = "seed.json"
@@ -526,6 +540,38 @@ def _fit_drop_capital(text_box: list, lines: list, ink: list[tuple[int, int, int
     return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
 
 
+def _is_letter(c: tuple[int, int, int, int], height: float) -> bool:
+    """Return whether an ink patch is sized like a letter on a line this tall."""
+    h = c[3] - c[1]
+    return LETTER_HEIGHT[0] * height <= h <= LETTER_HEIGHT[1] * height
+
+
+def _fit_leading_letters(text_box: list, lines: list, ink: list[tuple[int, int, int, int]]) -> list:
+    """Extend a box left over a letter EasyOCR left out before any line's first word."""
+    x0, y0, x1, y1 = text_box[0][0], text_box[0][1], text_box[2][0], text_box[2][1]
+    for line in lines:
+        _fx0, fy0, _fx1, fy1 = line[0]
+        h = fy1 - fy0
+        edge = line[0][0]
+        for _step in range(MARK_STEPS):
+            hits = [
+                c
+                for c in ink
+                if 0 <= edge - c[2] <= LEAD_REACH * h
+                and c[0] < edge
+                and _is_letter(c, h)
+                and c[2] - c[0] <= LEAD_MAX_WIDTH * h
+                and c[1] >= fy0 - MARK_BAND * h
+                and c[3] <= fy1 + MARK_BAND * h
+            ]
+            if not hits:
+                break
+            edge = min(c[0] for c in hits)
+        if edge < line[0][0]:
+            x0 = min(x0, edge - MARK_PAD)
+    return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+
+
 def _prelim_group(
     group: dict,
     boxes: dict[str, dict],
@@ -547,6 +593,7 @@ def _prelim_group(
                 text_box = _fit_edge_dashes(text_box, lines, ink)
             if group["type"] == "narration":
                 text_box = _fit_drop_capital(text_box, lines, ink)
+            text_box = _fit_leading_letters(text_box, lines, ink)
     panel_num = group.get("panel_num") or _panel_of(text_box, panel_boxes)
     return {
         "panel_id": str(panel_num),
