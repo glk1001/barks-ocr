@@ -134,6 +134,9 @@ DASH_GAP = 0.6  # at most this many word heights outside the word
 DROP_CAP_HEIGHT = (1.0, 2.5)  # a drop capital is one to two and a half lines tall
 DROP_CAP_MAX_WIDTH = 2.0
 DROP_CAP_GAP = 0.3
+# An italic drop capital's crossbar or last stroke reaches over the first word's box
+# (Crown of the Mayas: T 17px, M 10px, T 24px), so it may also overlap by this much.
+DROP_CAP_OVERLAP = 0.8
 
 # AND ONE MORE, found scoring four seeded titles (Camp Counselor, Donald's Grandma
 # Duck, Balloonatics, The Day the Farm Stood Still) by the lettering a reviewed box
@@ -148,6 +151,12 @@ DROP_CAP_GAP = 0.3
 LETTER_HEIGHT = (0.5, 1.2)  # a letter's height, in line heights
 LEAD_REACH = 0.5  # a leading letter ends at most this many word heights before the word
 LEAD_MAX_WIDTH = 1.2
+# The same letter can straddle the word box instead of sitting wholly outside it: a
+# caption's first capital, set a little wider than the rest (Crown of the Mayas: AT A
+# VILLAGE's A 12px out, AS THE's A 6px). One sticking out more than this many pixels is
+# fitted. Scored on the three reviewed seed titles' 519 balloon boxes: 9 closer to the
+# reviewed left edge, 1 further (a 9px margin the review had accepted as built).
+LEAD_STRADDLE = 3
 
 BOXES_JSON = "boxes.json"
 BOXES_TXT = "boxes.txt"
@@ -595,7 +604,8 @@ def _fit_drop_capital(text_box: list, lines: list, ink: list[tuple[int, int, int
     for c in ink:
         width, height = c[2] - c[0], c[3] - c[1]
         if (
-            0 <= word[0] - c[2] <= DROP_CAP_GAP * h
+            c[0] < word[0]
+            and -DROP_CAP_OVERLAP * h <= word[0] - c[2] <= DROP_CAP_GAP * h
             and DROP_CAP_HEIGHT[0] * h <= height <= DROP_CAP_HEIGHT[1] * h
             and width <= DROP_CAP_MAX_WIDTH * h
             and min(c[3], word[3]) - max(c[1], word[1]) > 0.5 * h
@@ -625,7 +635,8 @@ def _fit_leading_letters(text_box: list, lines: list, ink: list[tuple[int, int, 
             hits = [
                 c
                 for c in ink
-                if 0 <= edge - c[2] <= LEAD_REACH * h
+                if edge - c[2] <= LEAD_REACH * h
+                and (c[2] <= edge or c[0] < edge - LEAD_STRADDLE)
                 and c[0] < edge
                 and _is_letter(c, h)
                 and c[2] - c[0] <= LEAD_MAX_WIDTH * h
