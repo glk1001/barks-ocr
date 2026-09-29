@@ -7420,6 +7420,80 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-29, RESEED, NONE REVIEWED -- Vol. 27 whole, seventeen titles)
+
+*Donald Duck -- Duck Luck* (Vol. 27) is the second volume through `prep --reseed`, title by
+title in page order, one prelim commit each. 160 pages, **2,335 groups**, **220 images
+(1.38 per page)**; the pass's confidence was high 2,078, medium 256, low 1. Every figure
+below is the pass's own; nothing is reviewed.
+
+| title | pages | groups | images | nephew calls (collective) | missed text | prelim |
+|---|---|---|---|---|---|---|
+| *Duck Luck* | 007-016 | 153 | 19 | 52 (3) | 2 | `9b6085e6` |
+| *Sitting High* | 017-026 | 167 | 20 | 71 (15) | 1 | `d5a5bc1c` |
+| *The Madcap Mariner* | 027-035 | 126 | 13 | 30 (9) | 1 | `94de691f` |
+| *Terrible Tourist* | 037-046 | 139 | 16 | 35 (23) | 0 | `00e06c0d` |
+| *Lost Frontier* | 047-056 | 135 | 18 | 60 (44) | 0 | `0a84f82f` |
+| *Stranger Than Fiction* | 057-065 | 133 | 9 | 26 (26) | 0 | `9f94ea7c` |
+| *Boxed-In* | 067-076 | 157 | 17 | 60 (15) | 1 | `77dcd35c` |
+| *Mr. Private Eye* | 077-086 | 170 | 17 | 40 (20) | 0 | `1f2f9aec` |
+| *A Sticky Situation* | 087-094 | 114 | 8 | 0 | 0 | `4e4161cc` |
+| *Ring Leader Roundup* | 095-100 | 97 | 6 | 0 | 0 | `41bfa658` |
+| *Too Much Help* | 101-104 | 70 | 4 | 0 | 0 | `7649d5c4` |
+| *Ruling the Roost* | 105-112 | 144 | 9 | 0 | 6 | `84d5c58b` |
+| *Daringly Different* | 113-117 | 75 | 6 | 0 | 1 | `e8f859fd` |
+| *Saviors of the Lake* | 121-133 | 157 | 15 | 48 (42) | 2 | `4bc4910e` |
+| *Bottled Battlers* | 134-145 | 152 | 15 | 59 (56) | 1 | `f3d72946` |
+| *Maple Sugar Time (How Sweet It Is!)* | 146-158 | 180 | 13 | 51 (51) | 1 | `d3e72f76` |
+| *Traitor in the Ranks* | 159-171 | 166 | 15 | 64 (58) | 0 | `72d3d500` |
+
+- **THE VOL. 27 CAP IS BLACK WITH A COLOURED QUARTER.** Red `#e51a20`/`#e61b1f`, blue
+  `#00a0d1`/`#00a5d5`, green `#009d46`/`#009e49`; *Boxed-In* prints its green lighter,
+  `#00a85e`/`#01a860`. The boys go bare-headed indoors, and a bare or unreadable head went
+  to `nephews`.
+- **THREE PLACES WHERE THE DIALOGUE AND THE INK DISAGREE, RECORDED AS PRINTED.** *Sitting
+  High* 025 (the boy the dialogue makes Dewey wears a red cap, and in panel 5 a green one),
+  *Boxed-In* 072 (the boy called Dewey prints red), and *Traitor in the Ranks* 159 (the boy
+  who wakes "Huey! Dewey!" is Louie, in red pyjamas). The name comes from the dialogue and
+  `cap_colour` is the printed ink. Nothing was swapped title-wide.
+- **THE FOUR JUNIOR WOODCHUCKS STORIES ARE ALMOST ALL COLLECTIVE.** Woodchuck hats carry no
+  roster ink, so 207 of their 222 nephew calls are `nephews`; a boy is named only where the
+  dialogue addresses him. The troop leader has a different name in every title (C.O.O.L.
+  H.E.A.D., D.E.M.I.J.O.H.N., S.A.P.P.Y. P.A.P.P.Y., B.R.A.S.S. G.A.S.S.E.R.). He went in as
+  `other:the Woodchuck commander` in *Saviors of the Lake* (48 uses) and as
+  `other:the troop leader` in the other three. **Pick one spelling at review.**
+- **DAISY'S DIARY SCRIPT CAPTIONS ARE NARRATION IN `[i]`.** Five titles (*A Sticky
+  Situation* through *Daringly Different*): the script captions are stored mixed-case as
+  printed, with `emphasis_markup` wrapping the whole caption in `[i]...[/i]`, and apply
+  writes the tags into `ai_text`, matching Vol. 23. The title group reads "WALT\nDISNEY'S\nDAISY
+  DUCK'S DIARY\n<TITLE>". Daisy's nieces are `other:Daisy's nieces` (the corpus precedent);
+  April, May and June have no bow-colour key.
+- **SPEAKER SPELLINGS APPLY ACCEPTS OR REFUSES.** `Grandma Duck` bare; `other:Gus Goose`;
+  a Beagle Boy speaker as `other:the Beagle Boys` is canonicalized to `The Beagle Boys`, but
+  a capture's `characters` list refuses `The Beagle Boys` and needs the `other:` form.
+  `Magica De Spell` bare was refused in *Bottled Battlers* (not tagged for the story) and
+  went in as `other:Magica De Spell`. Capture characters must be roster names or `other:`
+  (`Clarabelle` and `Horace` were refused).
+- **MISSED TEXT: 16 ITEMS, 11 OF THEM A DRAWN `$`** on money bags, the Bin and Scrooge's
+  desk (*Duck Luck* 011, *Ruling the Roost* 105/106/109-112, *Saviors of the Lake*
+  122/130, *Bottled Battlers* 137, *Maple Sugar Time* 147). The other five are TRIPE
+  (*Sitting High* 026), COMICS (*The Madcap Mariner* 032, *Boxed-In* 076), the small DAISY
+  DUCK on a mailbox (*Daringly Different* 113), and *Duck Luck* 016's store sign, which
+  reads QUACKIE-WACKIE SU at the border where the group says SUPER. Each title's
+  `queue-missed.txt` parks them one line per engine.
+- **A RECORDED VOICE IS NAMED FOR THE VOICE.** *Traitor in the Ranks* 166-168: Donald's
+  tape player crying HELP! from the cave is `Donald`, medium, `balloon-tail`+`dialogue`.
+  The one `low` in the volume is 165's "WHO LET THAT ROOKIE JUMP IN THE CREEK?"
+  (`other:a voice`; probably the troop leader arriving).
+- **Look first at** the 256 mediums. Most are in *Sitting High* (34), *Saviors of the
+  Lake* (31), *Lost Frontier* (30), *Boxed-In* (29), *Mr. Private Eye* (28) and *Traitor in
+  the Ranks* (24).
+- **THE CLOSED VOCABULARIES REFUSED FOUR MORE VALUES.** `setting` rejected `mixed`,
+  `time_of_day` rejected `evening` (the choices are `day`, `dusk-or-dawn`,
+  `indoors-or-unclear` and `night`), and `identified_by` rejected `sign`. `cap_colour` takes
+  only `red`, `blue` or `green`, so a duffel bag's colour goes in as the ink and the bag
+  goes in the note (*Saviors of the Lake* 122).
+
 ### Findings to paste into the next run (2026-09-29, RESEED, NONE REVIEWED -- Vol. 26 whole, nineteen titles)
 
 *Uncle Scrooge -- The Golden Nugget Boat* (Vol. 26) is the first volume through
