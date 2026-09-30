@@ -7420,6 +7420,42 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-09-30, REVIEWED -- *Crown of the Mayas*, Vol. 30 100-120, the first seed title of Vol. 30 back)
+
+Reviewed on both engines, closed with `seed sync --write` (prelim `2c27cdbb`). 21 pages,
+264 groups. **16 speaker corrections (6.1%), all in the nephew domain; 15 of the 69
+mediums corrected (21.7%) against 1 of the 194 highs (0.5%).**
+
+- **ON 115 SCROOGE IS HOLDING DONALD'S TAIL.** Four `Scrooge` -> `Donald` (115 g4, g10,
+  g11, g12): the diver in front with the torch is Donald, Scrooge the one behind holding
+  on. The pass named the chain's leader from the old-man silhouette. 115 g8 (`Scrooge`,
+  high, "the others holding his tail") is the one straggler never ticked --
+  `queue-straggler.txt`, and very likely Donald too.
+- **Under-naming again: four `nephews` -> a name** (104 g15 Louie, 108 g10 Dewey, 109 g4
+  Louie, 109 g6 Dewey), three of them named by a cap colour the pass had left null. One
+  over-naming the other way (102 g1 Huey -> `nephews`) and one swap (120 g12 Dewey -> Huey).
+- **NO GROUP FOR ART.** The review deleted three groups the pass had built on OCR
+  fragments and then given a word the scene suggested: 110 `RUMBLE` (`ruK 4 4` in the
+  rubble), 115 `KERSPLASH` (`k 'bl` at a splash), 118 `MMMMM` (a jar's painted band, the
+  pass's own note saying "read as lettering by OCR"). A raw box you cannot read as a word
+  in the art stays unused. Now in `roster.txt`.
+- **`the End` is `narration` / `narrator` / `caption`** -- the review added 120's that way.
+  The seven Vols. 26-27 had as `background` / `none` were retyped to match (prelim
+  `220cdcb3`, `7e62748c`); rule in `roster.txt`.
+- **DROP CAPITALS WERE STILL CLIPPED, AND IT WAS THE FIT, NOT THE PASS.** 22 caption boxes
+  refitted, the top-left corner out 7-61px, the bottom-right untouched. Two causes, both
+  fixed in barks-ocr `17046a1`/`e1a21f8`: an italic drop capital overhangs the first word's
+  box (T by 17px, M by 10px), which the drop-cap fit refused; and a caption's first capital
+  sticks out of the word box (AT A VILLAGE's A by 12px). Scored on the three reviewed seed
+  titles' 519 balloon boxes: 16 closer, 1 further. The fix then reached the applied,
+  unreviewed seed pages through the new `barks-ocr-vision-seed refit`: **125 caption boxes on
+  99 pages** (Vol. 26 33, Vol. 27 15, Vol. 30 77; prelim `220cdcb3`, `7e62748c`,
+  `70c9d939`), captions only. On Vol. 30's balloons, built before the leading-letter fit,
+  the same regrowth took balloon-edge art for letters (a cloud's scallops, speed lines);
+  those were left as built, so that fit's reach at a balloon's edge is still worth a look.
+- Sound-effect boxes were refitted too, some by hundreds of pixels: art lettering is
+  still unfitted by `build`, as before.
+
 ### Findings to paste into the next run (2026-09-29, RESEED, NONE REVIEWED -- Vol. 27 whole, seventeen titles)
 
 *Donald Duck -- Duck Luck* (Vol. 27) is the second volume through `prep --reseed`, title by
