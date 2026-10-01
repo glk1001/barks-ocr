@@ -760,3 +760,7 @@ HELP KEEP AMERICA STRONG
 24 115 $
 24 118 $
 24 123 $
+
+# Lost Beneath the Sea (reviewer, 2026-10-02): drawn `$` on the money bag on the cabinet
+# (008 p1); the Money Bin door plaque `$` on 029 was added as a group
+30 008 $
