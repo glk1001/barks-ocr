@@ -919,24 +919,30 @@ def _refit_page(comics_database: ComicsDatabase, out_dir: Path, entry: dict) -> 
         return {}, 0
     ink = _ink_components(_page_image_file(comics_database, entry["title"], page))
     page_wh = _page_word_height(boxes)
+    # Pair each seed group with its prelim group by the raw boxes it holds, not by
+    # position: an add, a delete or a re-sort renumbers the page (Lost Beneath the Sea
+    # 008, whose caption and balloon a review swapped, was skipped whole by position).
+    by_boxes = {
+        frozenset(g["cleaned_box_texts"]): g for g in groups.values() if g["cleaned_box_texts"]
+    }
     grown = 0
     for i, seed_group in enumerate(seed["groups"]):
-        group = groups.get(str(i))
-        if group is None or set(group["cleaned_box_texts"]) != set(seed_group["box_ids"]):
-            print(f"{page}: group {i} no longer matches its seed (an add or re-sort?); left alone.")
-            return {}, 0
         if seed_group.get("text_box") or seed_group["type"] not in REFIT_TYPES:
+            continue
+        group = by_boxes.get(frozenset(seed_group["box_ids"]))
+        if group is None:
+            print(f"{page}: seed group {i} has no prelim group with its boxes; left alone.")
             continue
         old = group["text_box"]
         new = _word_box(seed_group, [boxes[b] for b in seed_group["box_ids"]], ink, page_wh)
         if new == old:
             continue
         if not _contains(new, old):
-            print(f"{page} g{i}: the refit would cut the box ({old} -> {new}); left alone.")
+            print(f"{page} seed g{i}: the refit would cut the box ({old} -> {new}); left alone.")
             continue
         edges = f"x0 {new[0][0] - old[0][0]:+d} y0 {new[0][1] - old[0][1]:+d}"
         edges += f" x1 {new[2][0] - old[2][0]:+d} y1 {new[2][1] - old[2][1]:+d}"
-        print(f"{page} g{i} {seed_group['type']}: {edges}  {seed_group['ai_text'][:30]!r}")
+        print(f"{page} seed g{i} {seed_group['type']}: {edges}  {seed_group['ai_text'][:30]!r}")
         group["text_box"] = new
         grown += 1
     return prelim, grown
