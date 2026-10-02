@@ -6,7 +6,8 @@
 #
 # Folds the close-out sequence from the vision-pass skill into one command:
 # the missed-text audit, the engine diff, outstanding text/type corrections,
-# unreviewed speaker stragglers on BOTH engines, the other: speaker census,
+# unreviewed speaker stragglers on BOTH engines, a `the End` logo check, the
+# other: speaker census,
 # the mirror dry run,
 # `git status` in every repo the pass touches, and a census of what the day's
 # reading cost in Claude Code tokens.
@@ -233,6 +234,24 @@ if capture group-audit uv run python scripts/vision/audit_groups.py "$TITLE"; th
     fi
 else
     row FAIL "group audit" "command failed -- read the log"
+fi
+
+# --- 4b'. the end logo -------------------------------------------------------
+# Advisory. EasyOCR never boxes the script `the End` logo and the missed-text
+# audit cannot see a group the pass also left out of visible_text, so eleven
+# Vol. 30 titles went out without one. Many stories have no logo at all, so an
+# absent group is a WARN: look at the last panel's corner, don't count it.
+echo "-> the End logo"
+if capture end-logo uv run python scripts/vision/end_logo_check.py "$TITLE"; then
+    if grep -q '^the End: present' "$LOG_DIR/end-logo.log"; then
+        row OK "the End" "$(sed -n 's/^the End: //p' "$LOG_DIR/end-logo.log")"
+    elif grep -q '^the End: absent' "$LOG_DIR/end-logo.log"; then
+        row WARN "the End" "$(sed -n 's/^the End: //p' "$LOG_DIR/end-logo.log") -- look at the last panel's corner"
+    else
+        row WARN "the End" "could not parse output -- read the log"
+    fi
+else
+    row WARN "the End" "check failed -- read the log"
 fi
 
 # --- 4c. the other: census ---------------------------------------------------
