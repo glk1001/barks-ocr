@@ -769,3 +769,8 @@ HELP KEEP AMERICA STRONG
 # (010 g7 DONALD DUCK, 026 g8 FATSONIA); the capture keeps the printed fragment
 30 010 DON DUC
 30 026 ATSONIA
+
+# The Status Seeker (reviewer, 2026-10-02): drawn `$` on the money-bag sign (035 p5),
+# and the music notes drawn inside 038 p5's already-grouped song balloon
+30 035 $
+30 038 ♪
