@@ -779,3 +779,9 @@ HELP KEEP AMERICA STRONG
 # review wrote whole; 038 BE, a half-hidden sweater under the 176 group, was deleted
 30 038 SECRET
 30 038 BE
+
+# For Old Dime's Sake (reviewer, 2026-10-02): the second drawn `$` the review did not add
+# (054 p5 money bag, 059 p2 bin emblem), and 060's two spectacle `$` grouped as one `$ $`
+30 054 $
+30 059 $
+30 060 $
