@@ -781,7 +781,6 @@ HELP KEEP AMERICA STRONG
 30 038 BE
 
 # For Old Dime's Sake (reviewer, 2026-10-02): the second drawn `$` the review did not add
-# (054 p5 money bag, 059 p2 bin emblem), and 060's two spectacle `$` grouped as one `$ $`
+# (054 p5 money bag), and 060's two spectacle `$` grouped as one `$ $`
 30 054 $
-30 059 $
 30 060 $
