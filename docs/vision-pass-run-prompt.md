@@ -7420,6 +7420,27 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-02, REVIEWED -- *For Old Dime's Sake*, Vol. 30 052-069)
+
+Reviewed and closed with `seed sync --write` (prelim `3df11797`). 18 pages, 230 groups.
+**1 speaker correction (0.4%): 0 of 206 highs, 1 of 15 mediums** -- 061 g4 `nephews` ->
+Donald, a small bare-headed figure with the phone.
+
+- **ADD MISSED TEXT, THEN REGENERATE THE SPEAKER QUEUE.** The `$` adds landed mid-page and
+  renumbered seven pages, so the last group on each (052 053 054 057 058 059 060) moved
+  to an id the old `queue-full.txt` never listed and came out of the review unticked.
+  After the missed-text adds, rebuild the queues with
+  `barks-ocr-speaker-queue --title T --unreviewed` before the speaker review.
+- **A MISSED-TEXT ADD MADE BY REWRITING A GROUP KEEPS THAT GROUP'S PAST.** On 059 easyocr
+  the original KA-WAM group became the `$` (carrying KA-WAM's word boxes and a
+  `type_was: sound_effect`) and a new KA-WAM was added; rebuilt from paddleocr. Add a
+  new group; never retype an existing one into the add.
+- Missed text: seven drawn `$` added (060's two in the spectacles as one `$ $`); 054's
+  money-bag `$` ignore-listed. 054 g2's box refitted on each engine separately; union
+  kept.
+- Outstanding at close: those eight stragglers (the seven above plus 069's `the End`) --
+  `queue-straggler.txt`.
+
 ### Findings to paste into the next run (2026-10-02, REVIEWED -- *The Status Seeker*, Vol. 30 032-051)
 
 Reviewed and closed with `seed sync --write` (prelim `94540d0e`). 20 pages, 277 groups.
