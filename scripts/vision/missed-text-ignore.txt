@@ -764,3 +764,8 @@ HELP KEEP AMERICA STRONG
 # Lost Beneath the Sea (reviewer, 2026-10-02): drawn `$` on the money bag on the cabinet
 # (008 p1); the Money Bin door plaque `$` on 029 was added as a group
 30 008 $
+
+# Lost Beneath the Sea (reviewer, 2026-10-02): border-cut signs the review wrote whole
+# (010 g7 DONALD DUCK, 026 g8 FATSONIA); the capture keeps the printed fragment
+30 010 DON DUC
+30 026 ATSONIA

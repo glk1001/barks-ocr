@@ -7420,6 +7420,27 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-02, REVIEWED -- *Lost Beneath the Sea*, Vol. 30 008-029)
+
+Reviewed on easyocr and closed with `seed sync --write` (prelim `5c4b1c51`). 22 pages, 295
+groups. **5 speaker corrections (1.7%): 3 of 265 highs, 1 of 25 mediums, the one low.** The
+cleanest seed title back so far.
+
+- **A CENSUS ZERO DID NOT STOP THE REVIEW NAMING THE BOY.** 025 g10 and g11 went `nephews` ->
+  Huey and Dewey, red and blue, where the pass's notes cite `capscan panel-07: red 0 blob(s)
+  total`; 020 g9 -> Louie where the pass had already measured green `#009a49` on the boy and
+  still wrote `nephews`. Under-naming, as in every review: the measurement was there.
+- **A SIGN THE BORDER CUTS OFF IS WRITTEN WHOLE.** The review completed 010's `DON DUC` ->
+  `DONALD DUCK` and 026's `ATSONIA` -> `FATSONIA` (in the roster since `db95eba`; this title was read the day before).
+  The capture keeps the printed fragment, so both are ignore-listed rather than re-captured.
+- Missed text: three adds (010 ASIA, 020 S.O.S, 029 `$` on the Bin door), the last two
+  retyped `background`; 008's bag `$` ignore-listed. `the End` added on 029 as narration.
+- Two role names: 011 g10 `other:a sailor` -> `nephews` (the off-panel voice was the boys'),
+  018 g9 a ship's officer -> `other:the captain`.
+- Outstanding at close: three stragglers never ticked, 010 g18 (Donald), 013 g8 (Scrooge,
+  retyped thought -> dialogue, so its speaker stayed unticked) and 020 g15 (nephews) --
+  `queue-straggler.txt`.
+
 ### Findings to paste into the next run (2026-09-30, REVIEWED -- *Crown of the Mayas*, Vol. 30 100-120, the first seed title of Vol. 30 back)
 
 Reviewed on both engines, closed with `seed sync --write` (prelim `2c27cdbb`). 21 pages,
