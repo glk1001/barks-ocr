@@ -7420,6 +7420,29 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-02, REVIEWED -- *The Status Seeker*, Vol. 30 032-051)
+
+Reviewed and closed with `seed sync --write` (prelim `94540d0e`). 20 pages, 277 groups.
+**4 speaker corrections (1.4%): 2 of 229 highs, 2 of 38 mediums.**
+
+- **A MASKED DIVER IS NOT A NEPHEW BY DEFAULT.** 042 g6 and g7, `nephews` -> Scrooge: the
+  pass wrote "no cap" on a diving-helmeted figure and fell back to the boys. A helmet hides
+  the cap; size and the scene name the diver.
+- 036 g5 Donald -> Daisy (the tail crossed Donald's hand); 048 g6 `other:a Beagle Boy` ->
+  `nephews` (a tail ending at the surfaced sub, not a figure).
+- **BEAGLE BOY SWEATERS ARE ONE GROUP**, number and BEAGLE BOYS INC., written whole where the
+  number is legible -- the reviewer's convention, now in `roster.txt`. The review added four
+  on 044 and completed 037's and 048's; four split pairs in this title and *Sticky Money*
+  were merged beforehand (prelim `2d25e461`).
+- Missed text: 034 WHEEZY COMICS (twice), 046 GADILLAC, 049 DEPTH and its scale added; 038's
+  SECRET completed to SECRETARY and a half-hidden `BE` dropped (both ignore-listed); 035's
+  bag `$` and 038's song-balloon notes ignore-listed. `the End` on 051 kept.
+- **The review refitted three boxes on each engine separately**, a few px apart (035 g7,
+  037 g14, g19). `seed sync` copies easyocr over paddleocr, so check for this before
+  syncing; the union of the two was kept.
+- Outstanding at close: two stragglers never ticked, 044 g10 (Scrooge, medium) and 048 g14
+  (a sweater) -- `queue-straggler.txt`.
+
 ### Findings to paste into the next run (2026-10-02, REVIEWED -- *Lost Beneath the Sea*, Vol. 30 008-029)
 
 Reviewed on easyocr and closed with `seed sync --write` (prelim `5c4b1c51`). 22 pages, 295

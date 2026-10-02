@@ -774,3 +774,8 @@ HELP KEEP AMERICA STRONG
 # and the music notes drawn inside 038 p5's already-grouped song balloon
 30 035 $
 30 038 ♪
+
+# The Status Seeker (reviewer, 2026-10-02): 038 SECRET is the border-cut SECRETARY the
+# review wrote whole; 038 BE, a half-hidden sweater under the 176 group, was deleted
+30 038 SECRET
+30 038 BE
