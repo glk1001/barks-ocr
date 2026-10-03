@@ -7420,6 +7420,99 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-03, RESEED, NONE REVIEWED -- Vol. 29 whole, seventeen titles)
+
+*Donald Duck -- The Lonely Lighthouse on Cape Quack* (Vol. 29) is the fourth volume through
+`prep --reseed`, title by title in page order, one prelim commit each; its hold was lifted for
+the purpose (barks-ocr `59a9f50`). 180 pages, **2,482 groups**, **223 images (1.24 per
+page)**; the pass's confidence was high 2,190, medium 284, low 8. Every figure below is the
+pass's own; nothing is reviewed.
+
+| title | pages | groups | images | nephew calls (collective) | missed text | prelim |
+|---|---|---|---|---|---|---|
+| *Northeaster on Cape Quack* | 008-017 | 141 | 17 | 31 (17) | 0 | `0153d0e6` |
+| *Hound Hounder* | 018-027 | 141 | 12 | 21 (21) | 1 | `ff0fbaef` |
+| *Jet Witch* | 028-037 | 151 | 15 | 14 (11) | 1 | `67b5b122` |
+| *Boat Buster* | 038-047 | 147 | 12 | 22 (16) | 0 | `d77c66bf` |
+| *Movie Mad* | 048-057 | 123 | 13 | 53 (53) | 0 | `5f021d0a` |
+| *Ten-Cent Valentine* | 058-067 | 139 | 12 | 24 (20) | 4 | `d45a30ec` |
+| *Jungle Bungle* | 068-077 | 134 | 12 | 38 (13) | 0 | `74dc9adb` |
+| *Merry Ferry* | 078-087 | 148 | 13 | 55 (30) | 2 | `7f9b774a` |
+| *Medaling Around* | 088-097 | 140 | 10 | 22 (22) | 0 | `7ef9ca33` |
+| *Way Out Yonder* | 098-107 | 145 | 13 | 43 (25) | 1 | `ecc79c7a` |
+| *The Candy Kid* | 108-117 | 136 | 13 | 19 (9) | 2 | `ffd24124` |
+| *Master Wrecker* | 118-127 | 146 | 11 | 23 (13) | 1 | `ffacf9a4` |
+| *Raven Mad* | 128-137 | 151 | 17 | 31 (8) | 0 | `9eb2dd28` |
+| *Eagle Savers* | 138-149 | 151 | 13 | 42 (35) | 1 | `9e1f7ecf` |
+| *Storm Dancers* | 150-161 | 160 | 13 | 77 (72) | 1 | `7ed3c8a9` |
+| *Hound of the Moaning Hills* | 162-174 | 161 | 13 | 71 (64) | 0 | `b7d4983c` |
+| *The Day the Mountain Shook* | 175-187 | 168 | 14 | 89 (66) | 4 | `42227196` |
+
+- **THE VOL. 29 CAP IS BLACK WITH A COLOURED QUARTER, AS IN VOLS. 27-28.** Red
+  `#e61920`/`#e4181f`, blue `#03a4d5`/`#05a4d4`, green `#009d44`-`#019c46`. One teal-green
+  quarter, `#018777` (H172.8) on *Merry Ferry* 078, was read as the green boy -- the only
+  off-roster cap ink in the volume, and the call to check first in that title.
+- **THE JUNIOR WOODCHUCK FUR HATS ARE IDENTICAL, SO THOSE STORIES GO `nephews`.** *Eagle
+  Savers*, *Storm Dancers*, *Hound of the Moaning Hills* and *The Day the Mountain Shook*
+  carry 237 of the volume's 495 collectives; a boy is named there only where dialogue fixes
+  him (Louie the disaster-predictor and Dewey the batter-maker in *Mountain Shook*).
+  `other:the troop leader` (88) and `other:a Junior Woodchuck` (65) are the volume's commonest
+  `other:` speakers.
+- **A SPEAKER NAMED EARLY WAS RENAMED WHEN A LATER PAGE IDENTIFIED HIM.** The out-dir was
+  re-run before apply each time, so the stored names agree within each title: the "witch" in *Jet
+  Witch* is Gyro; *Ten-Cent Valentine*'s dog-faced manager is `other:the tester`, kept apart
+  from *The Candy Kid*'s `other:Mr. Stumble`; *Jungle Bungle*'s professor is
+  `other:Dr. Livingstump`; *Eagle Savers*' troop leader is `other:Senator Birdfriend`; the
+  *Moaning Hills* hermit is Scrooge; *Mountain Shook*'s official hound is `other:Pluto`.
+  *Moaning Hills* keeps `other:the official hound` (2 groups) -- **check at review whether it
+  is the same Pluto.**
+- **A WORD BREAK WRITTEN AS `-` IS NOT REFUSED BY BUILD.** Eight line-end breaks on five
+  *Mountain Shook* pages (175, 181-183, 186) were written `LIMIT-`, `EVERY-`, `UN-`,
+  `FINGER-`, `CON-`, `BEHE-`, `MIX-`, `GEL-`; a grep for a line-final `-` caught them before
+  build, and they were rewritten as U+00AD. The other
+  sixteen titles were swept the same way and hold only real hyphens (`HIGH-FASHION`,
+  `GROUND-SNIFFING`, `T.A.I.L.-C.R.A.N.K.E.R.`, `Teeny-Bike`, `KE-RUNCH`). **Grep for a
+  line-final `-` before build**: the rule is roster text only
+  (`vision_schema.py`), and neither build nor apply checks it.
+- **APPLY REFUSED *THE CANDY KID* TWICE**: `identified_by` was missing on the orchestra's
+  sound-effect groups (a noise named for its maker still needs one; `sole-figure` went in),
+  and 117's `panels_of_note` named panel 8 on a seven-panel page. Both are checked by apply,
+  not by build.
+- **THE BOLD SCREEN FLAGS THE 1970s SLANTED EMPHASIS.** The Junior Woodchuck stories letter
+  emphasis in a slanted heavier face that measures 0.98-1.11, so `allbold.py` reports EXTRA-BOLD
+  on nearly every [b]; the art shows the heavier face, and the [b] stays.
+- **THE 1e92da78 HAND FIXES WERE CARRIED.** 037's `&amp; CO.` sign stores `&amp;`; the
+  CONFETTI, SCRIBBLE, ARTIFACT and Signature placeholders on 125/126/167 were dropped under
+  the no-groups-for-art rule. A page-level box (panel `p-1`, the page number) is not in
+  `boxes.txt` and cannot be grouped.
+- **`the End` IS PRINTED ON THIRTEEN TITLES**, `the\nEnd` narration, hand-boxed on *Hound
+  Hounder* 027 and *Merry Ferry* 087 (script), a plain THE END on *Movie Mad* 057. *Northeaster
+  on Cape Quack* 017, *Jet Witch* 037, *Boat Buster* 047 and *The Day the Mountain Shook* 187
+  print no logo, each checked at the last panel's corner.
+- **MISSED TEXT: 18 ITEMS, ALL A DRAWN `♪` OR `$`.** Music notes from horns, bugles, a
+  staff, the orchestra and songs (*Hound Hounder* 026, *Jet Witch* 029, *Merry Ferry*
+  082/083, *Way Out Yonder* 099, *The Candy Kid* 113/114, *Master Wrecker* 121, *Eagle
+  Savers* 149, *Storm Dancers* 151, *The Day the Mountain Shook* 175/177/182/183), and drawn
+  `$` on the curtains and money bags of *Ten-Cent Valentine* 058-061. Each title's
+  `queue-missed.txt` parks them one line per engine.
+- **Look first at** the 284 mediums. Most are in *Merry Ferry* (35), *Raven Mad* (31),
+  *Northeaster on Cape Quack* (29), *The Day the Mountain Shook* (29), *Jungle Bungle* (28)
+  and *Way Out Yonder* (26). The eight lows are all `none` sound effects: *Merry Ferry* 082
+  g3 and 085 g3, *Way Out Yonder* 098 g4, *The Candy Kid* 114 g2 and 116 g4/g10/g13, *Master
+  Wrecker* 126 g6.
+- **COST: 595 CALLS AND 300.7M CACHE-READ TOKENS, 1.67M PER PAGE**, against the 1.15M
+  baseline that `--trend` takes from the previous five batches. The figure comes from a
+  single long session that averaged 472K of context per call, which the close-out flagged
+  as running hot. Images stayed under budget at 1.24 per page, so the excess is context,
+  not images.
+- **A WRAPPER SCRIPT HIDES THE PASS FROM THE CENSUS.** `usage_census.py --by-title` credits
+  a title only when a tool call runs `vision-prep`, `vision-apply` or `closeout.sh` and names
+  the title literally. Prep and apply ran inside scratch wrappers, so 11 of the 17 rows came
+  back "no session on disk" until `closeout.sh --stage apply "<title>"` was re-run with each
+  title written out. A title passed through a loop variable (`for t in ...; "$t"`) does
+  not count either. Run the close-out per title with the title written out, before
+  `--write-ledger`.
+
 ### Findings to paste into the next run (2026-10-03, RESEED, NONE REVIEWED -- Vol. 28 whole, seventeen titles)
 
 *Uncle Scrooge -- Cave of Ali Baba* (Vol. 28) is the third volume through `prep --reseed`,
