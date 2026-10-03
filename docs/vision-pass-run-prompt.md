@@ -7420,6 +7420,95 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-03, RESEED, NONE REVIEWED -- Vol. 28 whole, seventeen titles)
+
+*Uncle Scrooge -- Cave of Ali Baba* (Vol. 28) is the third volume through `prep --reseed`,
+title by title in page order, one prelim commit each; its hold was lifted for the purpose
+(barks-ocr `85d5cc4`). 154 pages, **2,201 groups**, **209 images (1.36 per page)**; the
+pass's confidence was high 1,851, medium 346, low 4. Every figure below is the pass's own;
+nothing is reviewed.
+
+| title | pages | groups | images | nephew calls (collective) | missed text | prelim |
+|---|---|---|---|---|---|---|
+| *Cave of Ali Baba* | 008-023 | 225 | 31 | 54 (19) | 3 | `d03bc10e` |
+| *Deep Down Doings* | 026-034 | 146 | 14 | 18 (4) | 3 | `42375fb4` |
+| *The Unsafe Safe* | 036-054 | 270 | 27 | 12 (3) | 3 | `5e0ef2da`, `800aefc3` |
+| *Much Luck McDuck* | 056-062 | 127 | 13 | 29 (8) | 2 | `1f66b94d` |
+| *A Spicy Tale* | 064-081 | 242 | 22 | 43 (6) | 4 | `9ebd4381` |
+| *Tricky Experiment* | 084-091 | 131 | 9 | 8 (3) | 0 | `89791b98` |
+| *Oddball Odyssey* | 092-110 | 207 | 26 | 52 (15) | 4 | `32ed85c0`, `1f6b164f` |
+| *Monsterville* | 114-123 | 167 | 13 | 13 (0) | 2 | `0097f39b` |
+| *The Cube* | 124-128 | 75 | 5 | 0 | 0 | `a674dcb3` |
+| *Mighty but Miserable* | 130-136 | 125 | 7 | 0 | 0 | `69da004c` |
+| *Brain-Strain* | 138-144 | 112 | 7 | 0 | 0 | `d01ed3e0` |
+| *Buffaloed by Buffaloes* | 146-149 | 59 | 4 | 0 | 0 | `28b00473` |
+| *The Great Pop Up* | 150-153 | 53 | 4 | 0 | 0 | `c61b1631`, `a8eb50b5` |
+| *Madcap Inventors* | 154-157 | 48 | 4 | 0 | 0 | `8a4924dc` |
+| *Finny Fun* | 158-161 | 56 | 4 | 0 | 1 | `b9ecae38` |
+| *Posthasty Postman* | 162-165 | 62 | 7 | 0 | 0 | `a4775705` |
+| *Pied Piper of Duckburg* | 166-174 | 96 | 12 | 0 | 6 | `9f400ab8` |
+
+- **THE VOL. 28 CAP IS BLACK WITH A COLOURED QUARTER, AS IN VOL. 27.** Red `#e61b1f`, blue
+  `#00a5d5`, green `#009e46`-`#009e49`. Teal `#008b80` (H175) is jars, clothing and Beagle Boy
+  props, never a cap; sky `#6cc4dc` floods the blue band in outdoor panels, so rank inside
+  the head, not the panel.
+- **TWO PLACES WHERE THE DIALOGUE AND THE INK DISAGREE, RECORDED AS PRINTED.** *Cave of Ali
+  Baba* 010 g5 (the boy the dialogue calls Huey prints green) and *A Spicy Tale* 071 g1
+  (Dewey by dialogue, the green sliver too doubtful to record, `cap_colour` null). Nothing
+  was swapped title-wide.
+- **A NAME BY ELIMINATION CARRIES NO `cap-colour`.** Apply refuses `cap-colour` in
+  `identified_by` when `cap_colour` is null, and the closed vocabulary has no `elimination`
+  kind; such calls went in as `balloon-tail` alone with the reasoning in the note
+  (*Oddball Odyssey* 099 g3, 101 g6, 110 g4; *Monsterville* 123 g11). They are the ones to
+  check first.
+- **TRANSFORMED CHARACTERS KEEP THEIR NAMES.** *Oddball Odyssey* 102-109: Magica turns the
+  boys into pigs (`nephews`, high: nothing tells the pigs apart), Donald into a goat and a
+  turtle, Scrooge into a mule; each named from the dialogue. Magica as "La Circe" is
+  `Magica De Spell`.
+- **HAND-SET TEXT BOXES WERE OFF THE ART FIVE TIMES IN 39.** A montage of every
+  `text_box`-only group (crop `page.png` at half the box's coordinates) found 151 FZZZZ,
+  152 SPUT, 162 MAIL twice and 163 RIP partly or wholly off their lettering; 151/152 fixed in
+  the prelim (`a8eb50b5`), 162/163 before build. **Montage the hand boxes before `build`**:
+  one image covers a whole batch and costs less than a review add.
+- **`the End` IS `the\nEnd`** (`1f6b164f` fixed *Oddball Odyssey* 110, written on one line).
+  Most of the Gyro stories print no logo -- *Monsterville*, *The Cube*, *Mighty but
+  Miserable*, *Brain-Strain*, *Buffaloed by Buffaloes* and *Pied Piper of Duckburg* were each
+  checked at the last panel's corner; *The Great Pop Up*, *Madcap Inventors* and *Finny Fun*
+  letter a plain THE END, boxed and stored as `narration`.
+- **LITTLE HELPER IS TAGGED IN SOME GYRO STORIES AND NOT OTHERS**, so the same character went
+  in as bare `Little Helper` (speaker on *Brain-Strain* 139 g1 and 141 g2; captures in *The
+  Cube*, *Mighty but Miserable*, *Brain-Strain*, *The Great Pop Up* and *Madcap Inventors*)
+  and as `other:Little Helper` (speaker on *Monsterville* 115/122 and *Pied Piper of
+  Duckburg* 166; captures in those two and *Finny Fun*). **Pick one at review.** Other speakers new to the corpus: `other:Mr. Quacksoap` (the ambassador,
+  *Buffaloed by Buffaloes*), `other:the outcast Beagle Boy` (kept apart from
+  `other:a Beagle Boy` on purpose; the census flags the pair), `other:the neighbor`,
+  `other:the postmaster`, `other:the bridge tender`.
+- **A DELIBERATE NOISE TAKES ITS MAKER.** Little Helper's bell (DING DING) and bulb buzz, the
+  postmen's bugle fanfare (`other:the band`), a driver's horn: named for the maker. Snores
+  and creature cries are `dialogue`; impacts, grabs and snatches stay `none` (*Oddball
+  Odyssey* 093 SNATCH was moved to `none` before apply). *The Unsafe Safe* 045-046's
+  instrument noises were stored `dialogue` and retyped `sound_effect` after apply
+  (`800aefc3`).
+- **THE 2026-08-03 HAND FIX ON 166 WAS CARRIED.** Both SCROOGE McDUCK BANKER & TYCOON signs
+  store `&amp;`, as `f7458167` left them: the seed's `ai_text` holds a plain `&` (build
+  refuses markup) and `emphasis_markup` holds `&amp;`, which apply writes back.
+- **MISSED TEXT: 28 ITEMS, 18 OF THEM A DRAWN `$` OR A MUSIC NOTE.** Drawn `$` on bags,
+  curtains, desks and the Bin (*A Spicy Tale* 064, *Oddball Odyssey* 092/093/097,
+  *Monsterville* 119/120, *Pied Piper of Duckburg* 166-169/174); `♪` with drumming, flutes
+  and a song (*Cave of Ali Baba* 010, *Deep Down Doings* 034, *The Unsafe Safe* 044-046,
+  *A Spicy Tale* 073/074/076); drawn `!` and `?` (*Cave of Ali Baba* 012/017, *Deep Down
+  Doings* 028, *Oddball Odyssey* 093, *Finny Fun* 159, *Pied Piper of Duckburg* 169); and
+  *Much Luck McDuck*'s cut MOSQ/MOS labels (059/060), written whole as MOSQUITOES. Each
+  title's `queue-missed.txt` parks them one line per engine.
+- **Look first at** the 346 mediums. Most are in *A Spicy Tale* (54), *Cave of Ali Baba*
+  (45), *Oddball Odyssey* (33), *Monsterville* (31), *Tricky Experiment* (29), *Much Luck
+  McDuck* (26), *Finny Fun* (24) and *The Unsafe Safe* (24). The four lows are in *Cave of
+  Ali Baba* and *A Spicy Tale*.
+- **THE CLOSED VOCABULARIES REFUSED FIVE MORE VALUES.** `setting` rejected `harbour`, `sea`,
+  `shore` and `ruins` (use `outdoors`, `at sea`, `indoors` or `other:<place>`), and
+  `identified_by` rejected `visual-context` and `elimination`. A capture's `characters`
+  refuses `The Beagle Boys` and an untagged `Little Helper`; use the `other:` form.
+
 ### Findings to paste into the next run (2026-10-02, REVIEWED -- *For Old Dime's Sake*, Vol. 30 052-069)
 
 Reviewed and closed with `seed sync --write` (prelim `3df11797`). 18 pages, 230 groups.
