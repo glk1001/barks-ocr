@@ -9,5 +9,3 @@
 # and texts are rewritten, and a pass prepped against the old files has to be
 # carried across by hand -- *The Paul Bunyan Machine*, 2026-09-24. Delete a line
 # when the reviewer says that volume's cleanup is done.
-
-29  still being cleaned by the reviewer (2026-09-26)
