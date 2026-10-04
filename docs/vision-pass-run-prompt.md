@@ -7420,6 +7420,103 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-04, NONE REVIEWED -- Vol. 25 whole, eighteen titles, the corpus complete)
+
+*Donald Duck -- Balloonatics* (Vol. 25) is the volume the reviewer cleaned by hand, so it
+went through the ordinary `vision-prep` pass, **not** a reseed: the cleaned text and
+grouping were kept and the pass added speakers, types, emphasis and captures. One prelim
+commit per title. 171 pages, **2,437 groups**, **204 images (1.19 per page)**; the pass's
+confidence was high 2,119, medium 318, low 0. With it `vision-status` reads **458 of 458
+titles done** -- every story in the corpus has now had a vision pass. Nothing here is
+reviewed.
+
+| title | pages | groups | images | nephew calls (collective) | type / text fixes | missed text | prelim |
+|---|---|---|---|---|---|---|---|
+| *Balloonatics* | 006-015 | 115 | 10 | 31 (11) | 4 / 0 | 0 | `06d09625` |
+| *Froggy Farmer* | 016-025 | 123 | 21 | 44 (18) | 11 / 1 | 0 | `317a6139` |
+| *The Dog-sitter* | 026-035 | 118 | 13 | 22 (11) | 9 / 0 | 3 | `b691b412` |
+| *Mystery of the Loch* | 036-045 | 145 | 19 | 59 (13) | 5 / 1 | 0 | `508062fb` |
+| *The Village Blacksmith* | 046-055 | 148 | 16 | 46 (5) | 1 / 0 | 3 | `d70e31d1` |
+| *The Fraidy Falcon* | 056-065 | 135 | 11 | 52 (6) | 6 / 0 | 0 | `6109f549` |
+| *Rocks to Riches* | 066-075 | 140 | 11 | 60 (9) | 2 / 0 | 1 | `3efb6950` |
+| *Turkey Trouble* | 076-085 | 148 | 11 | 25 (6) | 15 / 1 | 2 | `fdf86417` |
+| *Missile Fizzle* | 086-095 | 150 | 10 | 47 (18) | 7 / 0 | 1 | `8de840e5` |
+| *The Whole Herd of Help* | 096-103 | 114 | 8 | 31 (14) | 4 / 0 | 3 | `300bde9a` |
+| *The Day the Farm Stood Still* | 104-109 | 97 | 6 | 0 | 3 / 0 | 0 | `66dcabe2` |
+| *The Training Farm Fuss* | 110-116 | 118 | 7 | 16 (6) | 1 / 1 | 2 | `9b218969` |
+| *The Reversed Rescue* | 117-123 | 136 | 7 | 24 (9) | 4 / 0 | 3 | `9feb58f1` |
+| *Peril of the Black Forest* | 124-137 | 196 | 14 | 66 (66) | 21 / 2 | 3 | `95d9213c` |
+| *Whale of a Good Deed* | 138-151 | 176 | 15 | 67 (59) | 0 / 0 | 1 | `7680b8a5` |
+| *Let Sleeping Bones Lie* | 152-165 | 176 | 14 | 52 (49) | 2 / 0 | 2 | `8f2e065a` |
+| *Bad Day for Troop 'A'* | 166-171 | 120 | 6 | 35 (31) | 3 / 0 | 0 | `ab4e5411` |
+| *Life Savers* | 172-176 | 82 | 5 | 18 (18) | 1 / 0 | 1 | `86546c92` |
+
+- **THE VOL. 25 CAP IS BLACK WITH A COLOURED QUARTER, AS IN VOLS. 27-29.** Red `#e61b1f`,
+  blue `#00a5d5`, green `#009e46`-`#009e49`. On *Rocks to Riches* and *Turkey Trouble* the
+  quarter is often a band too thin for `capscan`'s blob census; a direct pixel sample of the
+  cap region (`#00a4d5`, `#009f46`) settled those boys instead of a crop. *The Village
+  Blacksmith* 052 prints every ink dark at page scale (a red cap reads brown) -- trust the
+  hex there, not the eye.
+- **DIALOGUE NAMES THE BOYS IN TWO TITLES, AND THE INK AGREES.** *The Village Blacksmith*
+  047-050 (Dewey goes to Gyro, Louie to Scrooge, Huey to Daisy -- the captions name them)
+  and *Balloonatics* 006-008 (Louie flies the mail balloon, Dewey the freight balloon, so
+  the helmeted patrol-balloon boy is Huey by elimination). Each errand's boy is named on
+  later pages by the object he carries.
+- **THE FIVE 1969-70 JUNIOR WOODCHUCK STORIES ARE ALMOST ALL COLLECTIVE.** Identical fur
+  hats, no roster ink: 223 of their 238 nephew calls are `nephews`. A boy is named only
+  where a trooper addresses "General Huey/Dewey/Louie" (*Whale of a Good Deed* 143-148,
+  *Bad Day for Troop 'A'* 168-170, *Let Sleeping Bones Lie* 152). The Woodchuck commanders
+  went in as `other:the troop leader` throughout (B.O.W.W.O.W., T.O.P. B.R.A.S.S.,
+  R.I.N.G.T.A.I.L.E.D. S.N.O.R.T.E.R., J.A.W.B.O.N.E. -- Philodemus Gentlefogg); the other
+  troops' boys as `other:a Junior Woodchuck`, `other:a Troop K trooper`, `other:a Troop A
+  trooper`.
+- **SIX WORD-LEVEL TEXT CORRECTIONS ARE QUEUED** (`queue-text.txt` in each out-dir):
+  *Froggy Farmer* 016 CICADAS -> CICADEES; *Mystery of the Loch* 045 LOCH NESS -> LOCH LESS
+  (the story's own loch); *Turkey Trouble* 079 RACE -> RA'R; *The Training Farm Fuss* 116
+  LUMMOX -> DUMMOX; *Peril of the Black Forest* 130 and 134 OPERATION ZZ -> OPERATION 22.
+  Each was read from a 3x crop.
+- **99 TYPE CORRECTIONS**, nearly all one of two kinds: a balloon with a bubble trail stored
+  as `dialogue` (retyped `thought`; *The Dog-sitter* 030 had six on one page) and an animal's
+  cry, a laugh or a snore stored as `sound_effect` (retyped `dialogue`). Three story logos
+  stored as `background` or `narration` were retyped `title`. Run
+  `barks-ocr-vision-corrections` with no `--title` and it reports **205 outstanding across
+  the corpus, all of them Vol. 25** -- both engines of these 99 types and 6 texts.
+- **`added_groups` ADDED *Whale of a Good Deed* 151's `the End`**, which neither engine had
+  grouped; the close-out now finds it. *Let Sleeping Bones Lie* 165 and *Peril of the Black
+  Forest* 137 print a plain THE END! that the cleaned OCR already grouped as narration (the
+  close-out's End row warns on the plain form). The other fifteen titles print no logo.
+- **TWO TITLES HAD A STALE OUT-DIR FROM THE 2026-09-29 SEED BAKE-OFF** (*Balloonatics*,
+  *The Day the Farm Stood Still*), holding `seed.json` and an old `groups.json`. They were
+  moved aside to `<slug>-bakeoff-2026-09-29`, not deleted, and re-prepped. A pass started
+  in a stale out-dir would have read the bake-off's groups, not the cleaned prelim:
+  **check that `<slug>/` is new before reading it.**
+- **A NEAR-DUPLICATE `other:` NAME IS NOT ALWAYS ONE PERSON.** *Peril of the Black Forest*
+  flagged `a bulldozer driver` against `the bulldozer driver`; they were briefly folded,
+  then split again as `other:a construction worker` once the art showed several men on
+  131-133 against the one driver of 125-127. Read the pages, not just the census.
+- **VISION-APPLY CLEARED THE REVIEWER'S PRE-PASS SPEAKER MARKS** where it read a page for
+  the first time (13 on *Bad Day for Troop 'A'*, 7 on *The Reversed Rescue*, single ones
+  elsewhere) -- the ruled 2026-09-26 behaviour; those groups reach the reviewer with the
+  pass's call.
+- **MISSED TEXT: 25 ITEMS**, each parked in its title's `queue-missed.txt`: drawn `$`
+  (money bags, a truck emblem, a banknote, dollar signs round Scrooge -- *Village Blacksmith*
+  048, *Rocks to Riches* 071, *Turkey Trouble* 079, *Whole Herd of Help* 096/103, *Peril*
+  128, *Let Sleeping Bones Lie* 158), `♪` (*Dog-sitter* 028, *Village Blacksmith* 048/051,
+  *Turkey Trouble* 077, *Whole Herd* 102, *Training Farm Fuss* 114, *Peril* 134, *Bones*
+  163), drawn `?` (*Peril* 125, *Whale* 144 over Scrooge, *Reversed Rescue* 121), labels
+  (*Dog-sitter* 034 GLUE, 035 HAIR REMOVER; *Missile Fizzle* 091 the rocket's 12; *Life
+  Savers* 176 G-M-G) and two Beagle Boy sweaters on *The Reversed Rescue* 119. Two are
+  ignore-list candidates: *Training Farm Fuss* 115's border-cut BOOLFIG (grouped whole as
+  BOOLFIGHT) and *Reversed Rescue* 121's `?` (already inside g3).
+- **COST: 505 CALLS AND 272M CACHE-READ TOKENS, 1.59M PER PAGE**, against the 1.15M
+  baseline. As with Vol. 29 it is one long session (it averaged over 500K of context per
+  call by the end), not the images. The census credited only 4 titles until the read-only
+  close-out was re-run per title with the title written out -- the wrapper blind spot the
+  Vol. 29 findings describe.
+- **Look first at** the 318 mediums: *Missile Fizzle* (42), *Mystery of the Loch* (38), *The
+  Fraidy Falcon* (37), *The Reversed Rescue* (27) and *Rocks to Riches* (26) carry most of
+  them -- most are gap tips read at page scale, said so in the note.
+
 ### Findings to paste into the next run (2026-10-03, RESEED, NONE REVIEWED -- Vol. 29 whole, seventeen titles)
 
 *Donald Duck -- The Lonely Lighthouse on Cape Quack* (Vol. 29) is the fourth volume through
