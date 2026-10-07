@@ -823,3 +823,11 @@ HELP KEEP AMERICA STRONG
 30 130 $
 30 131 $
 30 124 99 FT
+
+# Isle of Golden Geese (reviewer, 2026-10-07, speaker review): fragments the capture kept
+# where the review completed or merged the group -- 124's DEPTH GAUGE caption, merged with
+# panel 1's 99 FT into g1; 124's FOOD M, completed to FOOD MARKET (g12); and 139's sweater,
+# written whole as 176-167 BEAGLE BOYS INC. (g8)
+30 124 DEPTH GAUGE —100 FT
+30 124 FOOD M
+30 139 176-167 BEAGLE

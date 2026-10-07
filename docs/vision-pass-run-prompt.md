@@ -7420,6 +7420,34 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-07, REVIEWED -- *Isle of Golden Geese*, Vol. 30 122-144)
+
+Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `f556ec2a`;
+missed-text adds `cc59bb05`). 23 pages, 309 groups, every one reviewed. **7 speaker
+corrections (2.3%): 5 of 271 highs (1.8%), 2 of 33 mediums (6.1%).**
+
+- **Under-naming again: three collectives became a name.** 134 g11 Huey, 136 g9 Louie and
+  143 g0 Louie were all `nephews`. 143's note says "capscan finds no cap ink on him", and
+  136's note measured the middle boy's red and still declined to name the tail's boy.
+  Once the tail lands on one boy, a clean cap names him.
+- **Tails between two heads went to the wrong one twice.** 126 g2 Louie -> Donald ("ends
+  between Donald's head and the boy's, slightly nearer the boy") and 135 g8 Donald ->
+  Scrooge ("just right of Donald's cap, left of Scrooge's top hat"). 122 g10 Scrooge ->
+  Louie: the tail went to the figure holding the quill, which was the wrong figure.
+- **A disguised speaker is the character, not the disguise.** 130 g12, given to the raven
+  as `other:Ratface`, is `Magica De Spell`, who is tagged for this story.
+- **A MERGE DURING REVIEW STRANDS THE QUEUE TOO.** 124 lost a group when panel 1's `99 FT`
+  was merged into the depth-gauge caption (g1). That left three 124 groups unreviewed
+  (g1, g2, g4) until a straggler queue picked them up. Re-run the stragglers check after
+  any review that deletes or merges a group.
+- **The review's completed texts went to the ignore list** (`DEPTH GAUGE —100 FT` and
+  `FOOD M` on 124, the 139 sweater fragment), as on *Sticky Money*.
+- **The `seed copy` close-out row caught the box divergence it was built for** (60 boxes
+  before sync). 51 refits were on easyocr only. 4 were refit on both engines and took the
+  union. 5 more looked like both until checked against the page's pre-review boxes, because
+  ids had moved (124 lost a group, 129 was re-sorted). Decide each box's side by box, not
+  by id or text.
+
 ### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Travel Tightwad*, Vol. 30 096-099)
 
 Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `429466a0`;
