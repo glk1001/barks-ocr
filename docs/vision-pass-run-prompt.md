@@ -7420,6 +7420,28 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Invisible Intruder*, Vol. 30 070-075)
+
+Reviewed on easyocr and mirrored with `vision-mirror --write` (prelim `1eea4597`; missed-text
+adds `2b7982a2` and `95177e83`). 6 pages, 85 groups, every one reviewed. **0 speaker
+corrections: 0 of 77 highs, 0 of 3 mediums**, and no type or text corrections queued. The
+review fixed boxes (070-074, including 074 g13's inverted CLUMP box) and two texts on 074
+(g0 gains `[b]N-NOBODY'S[/b]`, g12 reads `SHIFT! ..`).
+
+- **THE COPY-IN TEXT TRAP AGAIN, ON A `$`.** 071's headboard `$` was copied in from g6, the
+  sleep-cloud `Z`. The box was moved onto the emblem, but `ai_text` stayed `Z`, so the audit
+  went on reporting the `$`. Fixed to `$` before commit. When an add leaves its missed-text
+  item still reported, suspect its text before assuming the item was skipped.
+- **THE AUDIT COUNTS EACH COPY OF A REPEATED GLYPH.** 071 prints the bed's `$` on the headboard
+  AND the footboard. One `$` group left the line reading `$  [2 in the art, 1 grouped]`, so
+  the footboard needed its own group (g10). Write one missed-text queue line per printed
+  copy, not per distinct text.
+- **AN END TAG ADDED IN REVIEW IS SPEAKER `narrator`.** 075's `the\nEnd` came in as narration
+  with speaker `none`. The corpus has 51 end tags with `narrator` against 3 with `none`, and
+  all 18 others in Vol. 30 are `narrator`. Set to `narrator` before the mirror.
+- **`other:Sir Surelock` is a promotion candidate** (22 uses across both engines, census).
+  Add it to `SPEAKER_OPTIONS` if he recurs past this title.
+
 ### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Case of the Sticky Money*, Vol. 30 076-095)
 
 Reviewed on easyocr and closed with `seed sync --write` (prelim `37d75139`; missed-text adds
