@@ -7444,7 +7444,12 @@ seven titles used the tag for every line, and fourteen used the singular.
   stored behind `other:`, totalling 222 groups across both engines:
   `other:the Mad Scientist` 112, `other:Neighbor Jones` 50, `other:Grandma Duck`
   20, `other:J. Morganbilt Giltwhiskers` 14, `other:El Dorado` 10, `other:Mournful
-  Mary` 10, `other:Herbert` 4 and `other:Doctor Carver Beakoff` 2. **Not swept.**
+  Mary` 10, `other:Herbert` 4 and `other:Doctor Carver Beakoff` 2. **Swept the
+  same day** (prelim `a7d4f1f5`..`f00e19e2`, one commit per volume, Vols. 2, 3, 5,
+  6, 9 and 11), together with 40 capture `characters` entries, one of them
+  *Magical Misery*'s `other:Bolivar`. The census now reports no off-roster or
+  non-canonical speaker anywhere in the corpus. **A story-cast name is written
+  bare, never behind `other:`.**
 
 ### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Invisible Intruder*, Vol. 30 070-075)
 
