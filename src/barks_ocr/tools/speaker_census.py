@@ -13,6 +13,7 @@ Read-only.  It reports what a human should decide about; it changes nothing.
 """
 
 from collections import Counter, defaultdict
+from collections.abc import Mapping
 from dataclasses import dataclass
 from typing import Annotated
 
@@ -22,6 +23,7 @@ from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.speech_groupers import SpeechGroups
 from comic_utils.common_typer_options import TitleArg, VolumesArg
 
+from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.title_selection import resolve_titles
 from barks_ocr.utils.vision_schema import (
     OTHER_PREFIX,
@@ -191,22 +193,53 @@ def _print_near_duplicates(found: dict[str, list[Occurrence]]) -> bool:
     return True
 
 
-def _print_anomalies(found: dict[str, list[Occurrence]]) -> bool:
-    """Print values that are off-roster or not in canonical form. Returns whether any exist."""
-    off_roster = [s for s in found if s not in ROSTER and not s.startswith(OTHER_PREFIX)]
-    non_canonical = [s for s in found if s != normalize_speaker(s)]
+def _story_casts(title_list: list[str]) -> dict[str, frozenset[str]]:
+    """Return each title's database-tagged cast, the names it may use without the prefix."""
+    return {t: frozenset(story_characters(STR_TITLE_TO_ENUM[t])) for t in title_list}
+
+
+def _is_story_cast(speaker: str, place: Occurrence, casts: Mapping[str, frozenset[str]]) -> bool:
+    """Return whether a bare *speaker* is in the tagged cast of the title it occurs in."""
+    return speaker in casts.get(place.title, frozenset())
+
+
+def _print_anomalies(
+    found: dict[str, list[Occurrence]], casts: Mapping[str, frozenset[str]]
+) -> bool:
+    """Print values that are off-roster or not in canonical form. Returns whether any exist.
+
+    A bare name in the story's tagged cast is legal there and nowhere else, so
+    both checks are made per occurrence against its own title's cast. Judged
+    against the roster alone, every story-cast name (`The Beagle Boys`, `Goldie
+    O'Gilt`) reported as off-roster in every story it was correctly used in.
+    """
+    off_roster: dict[str, list[Occurrence]] = {}
+    non_canonical: dict[tuple[str, str], int] = defaultdict(int)
+    for speaker, places in found.items():
+        for place in places:
+            if (
+                speaker not in ROSTER
+                and not speaker.startswith(OTHER_PREFIX)
+                and not _is_story_cast(speaker, place, casts)
+            ):
+                off_roster.setdefault(speaker, []).append(place)
+            canonical = normalize_speaker(speaker, casts.get(place.title, frozenset()))
+            if canonical != speaker:
+                non_canonical[speaker, canonical] += 1
     if off_roster:
-        print("\nOff-roster values — neither a roster name nor an 'other:' name:")
-        for speaker in _by_count([(s, len(found[s])) for s in off_roster]):
-            print(f"  {speaker[0]!r:40} {speaker[1]:5d}   {found[speaker[0]][0]}")
+        print("\nOff-roster values — not a roster name, the story's tagged cast, or 'other:':")
+        for speaker, count in _by_count([(s, len(p)) for s, p in off_roster.items()]):
+            print(f"  {speaker!r:40} {count:5d}   {off_roster[speaker][0]}")
     if non_canonical:
         print("\nNot in canonical form — written before normalization, or by hand:")
-        for speaker in sorted(non_canonical):
-            print(f"  {speaker!r:40} -> {normalize_speaker(speaker)!r}")
+        for (speaker, canonical), count in sorted(non_canonical.items()):
+            print(f"  {speaker!r:40} -> {canonical!r}  ({count})")
     return bool(off_roster or non_canonical)
 
 
-def _report(found: dict[str, list[Occurrence]], promote_at: int) -> None:
+def _report(
+    found: dict[str, list[Occurrence]], casts: Mapping[str, frozenset[str]], promote_at: int
+) -> None:
     """Print the whole census."""
     total = sum(len(places) for places in found.values())
     if not total:
@@ -219,6 +252,16 @@ def _report(found: dict[str, list[Occurrence]], promote_at: int) -> None:
     print("Both engines are counted — a line annotated on each is counted twice.")
 
     _print_counts("Roster", _by_count([(s, len(p)) for s, p in found.items() if s in ROSTER]))
+    _print_counts(
+        "Story cast (tagged in the database for the story)",
+        _by_count(
+            [
+                (s, n)
+                for s, p in found.items()
+                if s not in ROSTER and (n := sum(_is_story_cast(s, o, casts) for o in p))
+            ]
+        ),
+    )
 
     free_form = {s: p for s, p in found.items() if s.startswith(OTHER_PREFIX)}
     # Quoted, so a name stored with stray whitespace is visible as such here and
@@ -241,7 +284,7 @@ def _report(found: dict[str, list[Occurrence]], promote_at: int) -> None:
 
     flagged = _print_variants(found)
     flagged = _print_near_duplicates(found) or flagged
-    flagged = _print_anomalies(found) or flagged
+    flagged = _print_anomalies(found, casts) or flagged
     if not flagged:
         print("\nNo variant spellings, no near-duplicates and nothing off-roster.")
 
@@ -261,7 +304,7 @@ def main(
     found = _collect(comics_database, speech_groups, title_list)
 
     print(f"Speaker census over {len(title_list)} title(s).")
-    _report(found, promote_at)
+    _report(found, _story_casts(title_list), promote_at)
 
 
 if __name__ == "__main__":
