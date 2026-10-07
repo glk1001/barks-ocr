@@ -7420,6 +7420,27 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Travel Tightwad*, Vol. 30 096-099)
+
+Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `429466a0`;
+missed-text adds `7c2eeb1f` and `4637eb0b`). 4 pages, 74 groups, every one reviewed. **0 speaker
+corrections: 0 of 61 highs, 0 of 7 mediums.** Nothing is queued for text or type. The review
+added the truck sign `HEMET\nFREIGHT\nLINE` (097 g21). The capture had not listed it.
+
+- **THE COPY-IN TEXT TRAP, A THIRD TIME.** 096 g15, the door `$` in panel 1, was copied in
+  from the E. PLURIBUS KEEPUM seal (g4) and kept the seal's text. That is the same failure
+  as *The Invisible Intruder*'s 071 `$`, which kept a `Z`, and *Sticky Money*'s two `$`.
+  Check every missed-text add's `ai_text` against its own crop before committing.
+- **ONE `$` IN THE CAPTURE HID A SECOND ONE.** 096 prints a door `$` in panel 1 and another
+  in panel 4. The capture listed `$` once, so the panel-4 add made the audit read clean
+  while panel 1 stayed ungrouped. The queue line named the right panel, and the add went
+  to a different one. Check that each add lands in the panel its queue line names.
+- **A SEED TITLE CLOSES WITH `seed sync`, NOT `vision-mirror`.** See *The Invisible
+  Intruder* below. The box diff before sync found 14 refits here: 11 on easyocr only, and 3
+  on both engines (096 g0, 098 g16, 099 g18), which took the union.
+  `closeout.sh`'s mirror row checks only the fields the mirror copies, so it passed with
+  20 boxes diverged.
+
 ### `The Beagle Boys` names one Beagle too -- ruled 2026-10-07
 
 **One Beagle Boy speaking is `The Beagle Boys`, the same as the gang.** This
@@ -7453,8 +7474,10 @@ seven titles used the tag for every line, and fourteen used the singular.
 
 ### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Invisible Intruder*, Vol. 30 070-075)
 
-Reviewed on easyocr and mirrored with `vision-mirror --write` (prelim `1eea4597`; missed-text
-adds `2b7982a2` and `95177e83`). 6 pages, 85 groups, every one reviewed. **0 speaker
+Reviewed on easyocr and first closed, wrongly, with `vision-mirror --write` (prelim `1eea4597`;
+missed-text adds `2b7982a2` and `95177e83`). The mirror copies no `text_box`, so 20 box refits
+stayed on easyocr only until the close was redone with a union and `seed sync --write`
+(`fef3c8ad`). 6 pages, 85 groups, every one reviewed. **0 speaker
 corrections: 0 of 77 highs, 0 of 3 mediums**, and no type or text corrections queued. The
 review fixed boxes (070-074, including 074 g13's inverted CLUMP box) and two texts on 074
 (g0 gains `[b]N-NOBODY'S[/b]`, g12 reads `SHIFT! ..`).
