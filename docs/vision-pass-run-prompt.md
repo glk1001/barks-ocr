@@ -7434,8 +7434,10 @@ corrections (2.3%): 5 of 271 highs (1.8%), 2 of 33 mediums (6.1%).**
   between Donald's head and the boy's, slightly nearer the boy") and 135 g8 Donald ->
   Scrooge ("just right of Donald's cap, left of Scrooge's top hat"). 122 g10 Scrooge ->
   Louie: the tail went to the figure holding the quill, which was the wrong figure.
-- **A disguised speaker is the character, not the disguise.** 130 g12, given to the raven
-  as `other:Ratface`, is `Magica De Spell`, who is tagged for this story.
+- **On a long shot, trace the tail all the way to a figure.** 130 g12 is a distance shot.
+  The pass gave the line to the raven on the terminal roof (`other:Ratface`), but the
+  tail ends at Magica, small in the frame (reviewer, 2026-10-07). A tiny figure is easy
+  to miss beside a nearer, more obvious one: crop the tip before naming the larger shape.
 - **A MERGE DURING REVIEW STRANDS THE QUEUE TOO.** 124 lost a group when panel 1's `99 FT`
   was merged into the depth-gauge caption (g1). That left three 124 groups unreviewed
   (g1, g2, g4) until a straggler queue picked them up. Re-run the stragglers check after
