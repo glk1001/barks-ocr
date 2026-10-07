@@ -79,6 +79,10 @@ SPEAKER_NOTES: dict[str, str] = {
     "unknown": "the speaker could not be placed at all",
 }
 
+# A story-cast group tag that covers one member as well as the gang -- see
+# `roster_text`, which renders the rule only where the story is tagged with it.
+BEAGLE_BOYS = "The Beagle Boys"
+
 CONFIDENCES: frozenset[str] = frozenset(CONFIDENCE_OPTIONS)
 
 # `NEPHEW_NAMES` (the three by name, as distinct from the collective) is imported above.
@@ -867,6 +871,14 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
             "",
             "  and, tagged in the database as appearing in THIS story:",
             *[f"    {name}" for name in extra],
+        ]
+    if BEAGLE_BOYS in extra:
+        # Ruled 2026-10-07: the tag was being kept for the gang only, with
+        # `other:a Beagle Boy` for one member, and 1,168 groups were swept back.
+        lines += [
+            f"  `{BEAGLE_BOYS}` ALSO NAMES ONE BEAGLE SPEAKING ALONE: never",
+            f"    `{OTHER_PREFIX}a Beagle Boy`. Only a Beagle with his own identity keeps",
+            f"    `{OTHER_PREFIX}` (Blackheart, Grandpa, the outcast Beagle Boy).",
         ]
     lines += [
         f'  anyone else goes behind the prefix: "{OTHER_PREFIX}the shopkeeper".',

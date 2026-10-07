@@ -7420,6 +7420,32 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### `The Beagle Boys` names one Beagle too -- ruled 2026-10-07
+
+**One Beagle Boy speaking is `The Beagle Boys`, the same as the gang.** This
+supersedes the habit of `other:a Beagle Boy` for one speaker, which started with
+the Vol. 20/21 reviews and was never ruled on (*The Paul Bunyan Machine*'s
+findings asked, "Say if the tag should be used instead"). It had split the corpus:
+seven titles used the tag for every line, and fourteen used the singular.
+
+- **Every Beagle story is now tagged** in `barks_tags_data.py`. *Mastering the
+  Matterhorn*, *Cave of the Winds*, *The Reversed Rescue*, *Mighty but Miserable*
+  and *Maple Sugar Time* were untagged, and apply refused the bare tag in them.
+- **Swept in the prelim repo, one commit per volume** (`37367c0f`..`4f57ed65`,
+  Vols. 14, 16, 20, 21, 23-28 and 30): 1,164 `other:a Beagle Boy` and 4
+  `other:the Beagle Boys` speakers, plus 81 capture `characters` entries, three of
+  which collapsed onto a `The Beagle Boys` already in the list. `speaker_was` keeps
+  the pass's `other:a Beagle Boy` on 6 groups, because it is provenance.
+- **Still `other:`:** a Beagle with his own identity, namely `other:Blackheart
+  Beagle`, `other:Grandpa Beagle` and `other:the outcast Beagle Boy`.
+- `roster.txt` now states the rule on every Beagle-tagged title.
+  `speaker-census` no longer reports a story-cast name as off-roster, and checks
+  canonical form against the story's cast. That surfaced eight cast names still
+  stored behind `other:`, totalling 222 groups across both engines:
+  `other:the Mad Scientist` 112, `other:Neighbor Jones` 50, `other:Grandma Duck`
+  20, `other:J. Morganbilt Giltwhiskers` 14, `other:El Dorado` 10, `other:Mournful
+  Mary` 10, `other:Herbert` 4 and `other:Doctor Carver Beakoff` 2. **Not swept.**
+
 ### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Invisible Intruder*, Vol. 30 070-075)
 
 Reviewed on easyocr and mirrored with `vision-mirror --write` (prelim `1eea4597`; missed-text
