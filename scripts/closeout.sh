@@ -8,7 +8,7 @@
 # the missed-text audit, the engine diff, outstanding text/type corrections,
 # unreviewed speaker stragglers on BOTH engines, a `the End` logo check, the
 # other: speaker census,
-# the mirror dry run,
+# the mirror dry run, a seed title's paddleocr-copy check,
 # `git status` in every repo the pass touches, and a census of what the day's
 # reading cost in Claude Code tokens.
 #
@@ -21,9 +21,10 @@
 #                   reviewer. Unreviewed speakers and a pending mirror are the
 #                   expected state, so they are reported but do not fail.
 #   --stage review  after the reviewer says the review is done AND after
-#                   `barks-ocr-vision-mirror --write`. Now stragglers and a
-#                   non-empty mirror dry run are failures: they mean the title
-#                   is not actually finished.
+#                   `barks-ocr-vision-mirror --write` (`barks-ocr-vision-seed
+#                   sync --write` on a seed title). Now stragglers, a non-empty
+#                   mirror dry run and a diverged seed copy are failures: they
+#                   mean the title is not actually finished.
 #
 # Exits 0 only if every gating check for the stage is clean; 1 otherwise, with
 # the per-check log paths printed so the finding can be read in full. Reading
@@ -293,6 +294,39 @@ if capture mirror uv run barks-ocr-vision-mirror --title "$TITLE"; then
     fi
 else
     row FAIL "mirror" "command failed -- read the log"
+fi
+
+# --- 5b. seed copy: paddleocr must stay an exact copy of easyocr --------------
+# Only on seed pages, whose paddleocr file carries `copied_from_engine`. The
+# mirror row above compares only the fields vision-mirror copies, and it copies
+# no text_box: The Invisible Intruder passed it with 21 review refits stranded on
+# easyocr (2026-10-07). The cure is a union of any box refit on both engines,
+# then `barks-ocr-vision-seed sync --write`. A FAIL at review; at apply it is a
+# WARN, because a title can be run mid-review.
+echo "-> seed copy"
+if capture seed-copy uv run python scripts/vision/seed_copy_check.py "$TITLE"; then
+    seeds=$(num seed-copy 's/^seed pages: \([0-9]*\)$/\1/p')
+    read -r d_pages d_boxes d_other < <(sed -n \
+        's/^diverged: \([0-9]*\) page(s), \([0-9]*\) box(es), \([0-9]*\) other field(s)$/\1 \2 \3/p' \
+        "$LOG_DIR/seed-copy.log")
+    if [[ -z "$seeds" ]]; then
+        row FAIL "seed copy" "could not parse output -- read the log"
+    elif ((seeds == 0)); then
+        : # Two real OCR runs; their boxes are expected to differ.
+    elif [[ -z "${d_pages:-}" ]]; then
+        row FAIL "seed copy" "could not parse output -- read the log"
+    elif ((d_pages > 0)); then
+        detail="$d_boxes box(es), $d_other other field(s) differ on $d_pages page(s) -- union, then seed sync --write"
+        if [[ "$STAGE" == "review" ]]; then
+            row FAIL "seed copy" "$detail"
+        else
+            row WARN "seed copy" "$detail"
+        fi
+    else
+        row OK "seed copy" "paddleocr matches easyocr on $seeds seed page(s)"
+    fi
+else
+    row FAIL "seed copy" "command failed -- read the log"
 fi
 
 # --- 6. git status, every repo the pass touches ------------------------------

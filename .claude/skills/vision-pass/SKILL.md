@@ -415,7 +415,8 @@ one-string change reformats the whole file.
 `copied_from_engine` (all of Vols. 26-30, and any page built by
 `barks-ocr-vision-seed`), do NOT use `vision-mirror`: it copies no `text_box`, so
 every box refit stays on easyocr. *The Invisible Intruder* was closed that way on
-2026-10-07 and left 20 boxes diverged, and `closeout.sh`'s mirror row still passed.
+2026-10-07 and left 21 boxes diverged, and `closeout.sh`'s mirror row still
+passed; its `seed copy` row now fails on that.
 Instead, diff each easyocr group's box against the paddleocr box and against the
 pre-review commit. Where both engines were refit, write the union onto easyocr. Then:
 

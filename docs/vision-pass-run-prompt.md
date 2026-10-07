@@ -7439,7 +7439,7 @@ added the truck sign `HEMET\nFREIGHT\nLINE` (097 g21). The capture had not liste
   Intruder* below. The box diff before sync found 14 refits here: 11 on easyocr only, and 3
   on both engines (096 g0, 098 g16, 099 g18), which took the union.
   `closeout.sh`'s mirror row checks only the fields the mirror copies, so it passed with
-  20 boxes diverged.
+  21 boxes diverged.
 
 ### `The Beagle Boys` names one Beagle too -- ruled 2026-10-07
 
@@ -7475,7 +7475,7 @@ seven titles used the tag for every line, and fourteen used the singular.
 ### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Invisible Intruder*, Vol. 30 070-075)
 
 Reviewed on easyocr and first closed, wrongly, with `vision-mirror --write` (prelim `1eea4597`;
-missed-text adds `2b7982a2` and `95177e83`). The mirror copies no `text_box`, so 20 box refits
+missed-text adds `2b7982a2` and `95177e83`). The mirror copies no `text_box`, so 21 box refits
 stayed on easyocr only until the close was redone with a union and `seed sync --write`
 (`fef3c8ad`). 6 pages, 85 groups, every one reviewed. **0 speaker
 corrections: 0 of 77 highs, 0 of 3 mediums**, and no type or text corrections queued. The
