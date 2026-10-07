@@ -784,3 +784,15 @@ HELP KEEP AMERICA STRONG
 # (054 p5 money bag), and 060's two spectacle `$` grouped as one `$ $`
 30 054 $
 30 060 $
+
+# The Case of the Sticky Money (reviewer, 2026-10-07): drawn `$` on money bags the review
+# did not add (076 p5, 081 p3, 082 p5/p7 -- 081's bin-sign and gate `$` are g1 and g11);
+# 076's sweater numbers the review wrote whole (g8 176-176, g10 176-671 BEAGLE BOYS INC.)
+# where the capture keeps the bare number; and 085's third stamp, read 14K by the capture,
+# which the review grouped as 16K
+30 076 $
+30 076 176-176
+30 076 176-671
+30 081 $
+30 082 $
+30 085 14K
