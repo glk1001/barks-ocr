@@ -814,3 +814,12 @@ HELP KEEP AMERICA STRONG
 30 093 176-716
 30 094 BEAGLE BOYS INC.
 30 095 CCC
+
+# Isle of Golden Geese (reviewer, 2026-10-07): drawn `$` on money bags the review did not
+# add (123, 129 p7, 130 p1, 131 p6); and 124 panel 2's second `99 FT`, which is grouped
+# inside the whole gauge g4 `100 FT` / `99 FT`, so the audit's whole-text match misses it
+30 123 $
+30 129 $
+30 130 $
+30 131 $
+30 124 99 FT
