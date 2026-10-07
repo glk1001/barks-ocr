@@ -411,6 +411,21 @@ one-string change reformats the whole file.
 
 ## When the reviewer says a title's review is done
 
+**First, is it a seed title?** If its paddleocr file carries a top-level
+`copied_from_engine` (all of Vols. 26-30, and any page built by
+`barks-ocr-vision-seed`), do NOT use `vision-mirror`: it copies no `text_box`, so
+every box refit stays on easyocr. *The Invisible Intruder* was closed that way on
+2026-10-07 and left 20 boxes diverged, and `closeout.sh`'s mirror row still passed.
+Instead, diff each easyocr group's box against the paddleocr box and against the
+pre-review commit. Where both engines were refit, write the union onto easyocr. Then:
+
+```bash
+barks-ocr-vision-seed sync --title "…"          # dry run first
+barks-ocr-vision-seed sync --title "…" --write  # paddleocr = easyocr again
+```
+
+Otherwise, for an ordinary two-engine title:
+
 ```bash
 barks-ocr-vision-mirror --title "…"            # dry run first
 barks-ocr-vision-mirror --title "…" --write
