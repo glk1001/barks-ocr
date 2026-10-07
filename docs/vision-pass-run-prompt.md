@@ -7420,6 +7420,40 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-07, REVIEWED -- *The Case of the Sticky Money*, Vol. 30 076-095)
+
+Reviewed on easyocr and closed with `seed sync --write` (prelim `37d75139`; missed-text adds
+`c4218dc9`). 20 pages, 280 groups, every one reviewed. **7 speaker corrections (2.5%): 3 of
+239 highs, 4 of 25 mediums (16.0%).**
+
+- **Under-naming again: three collectives -> a name.** 078 g3 Dewey and g4 Louie, both
+  `nephews` at HIGH on "the three dance bare-headed" with the census blobs on the red ground;
+  095 g7 Louie, `nephews` at medium on a census zero for the right-hand boy. The review named
+  them blue, green, green.
+- **Two swaps, one off-roster call, one wrong figure:** 080 g12 Dewey -> Huey (a tip at the
+  edge of a cap, between two boys) and 090 g7 Huey -> Dewey (boys seen from behind, tip at
+  the middle cap); 084 g7, a cloud balloon the pass gave Scrooge at HIGH, is the Beagle
+  Boys'; 091 g13, a "bare-headed boy" between Donald and Scrooge, is Donald.
+- **A MISSED-TEXT ADD KEEPS THE FIELDS OF THE GROUP IT WAS COPIED FROM.** Three of the
+  title's adds came in carrying a neighbour's text (077 g5 and 081 g11, both drawn `$`) or
+  type (087 g10 GLUE, now `background`). All were fixed before the review; check every
+  add's text and type, not just its box.
+- **THE REVIEW REFIT BOXES ON EACH ENGINE SEPARATELY.** Most refits were on easyocr only,
+  which the sync carries, but 17 boxes differed between the engines at close (076 g8/g10,
+  077 g1, 083 g12, 084 g1/g3/g12, 085 g2/g13, 090 g13-g16, 093 g14/g15/g18/g19) and took
+  the union; 086 g11 was refit on paddleocr only and took its box. Both were written to
+  easyocr before `seed sync`. paddleocr also carried two wrong sweater texts (082 g9
+  `176-617`, 094 g12 with no number); the art agrees with easyocr, and the sync fixed both.
+  **Diff the engines -- text as well as boxes -- before every seed sync.**
+- **BEAGLE BOY SWEATERS WRITTEN WHOLE MAKE THE AUDIT FIRE.** The review completed every
+  sweater on 076, 084, 090, 093 and 094 as `176-xxx BEAGLE BOYS INC.`; the captures keep the
+  fragments the pass saw (`176-167 BEAG`, `71`, `6-176`), so each reported as missed text and
+  went to `missed-text-ignore.txt` (19 entries for the title), with 095's deleted tractor
+  `CCC` and the bag `$` the review did not add.
+- **AN IGNORE ENTRY DOES NOT SILENCE A NEAR-MISS.** 083's capture reads SCREEEEEE where the
+  art and g12 have five E's; the audit's "nearly a grouped text" row ignores the ignore
+  list, so the close-out keeps one advisory WARN.
+
 ### Findings to paste into the next run (2026-10-04, NONE REVIEWED -- Vol. 25 whole, eighteen titles, the corpus complete)
 
 *Donald Duck -- Balloonatics* (Vol. 25) is the volume the reviewer cleaned by hand, so it

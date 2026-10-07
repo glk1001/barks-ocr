@@ -796,3 +796,21 @@ HELP KEEP AMERICA STRONG
 30 081 $
 30 082 $
 30 085 14K
+
+# The Case of the Sticky Money (reviewer, 2026-10-07, speaker review): Beagle Boy sweaters
+# the review wrote whole as `176-xxx BEAGLE BOYS INC.` where the capture keeps the fragment
+# it saw (084 g1/g12 and an unreadable `71`; 090 g13-g16; 093 g14/g15/g18/g19; 094 g12);
+# and 095's partly visible tractor lettering CCC, which the review deleted
+30 084 176-167 BEAG
+30 084 176-617 BEAGLE
+30 084 71
+30 090 176-716
+30 090 176-617
+30 090 176-176 BEAGLE
+30 090 176-671 BEAGLE
+30 093 176-61
+30 093 6-176
+30 093 176-617
+30 093 176-716
+30 094 BEAGLE BOYS INC.
+30 095 CCC
