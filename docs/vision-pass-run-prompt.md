@@ -7420,6 +7420,22 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-08, REVIEWED -- *Snow Duster*, Vol. 30 194-197)
+
+Reviewed on easyocr and closed with `seed sync --write` (prelim `7f8f5f97`). 4 pages, 59 groups,
+every one reviewed. **1 speaker correction (1.7%): 1 of 56 highs, 0 of 3 mediums.**
+
+- **The tail reached a character who wasn't speaking.** 196 g8: the pass gave the line to
+  Little Helper because the tail ran down to him, but it belongs to one of the snowbirds he
+  was shooing (`other:a snowbird`). When the speaker could be the shooed or the shooer,
+  read what the line says. Little Helper stays behind `other:` here because *Snow Duster*
+  has no database cast tags.
+- **An added `the End` logo was missed by the review queue.** 197 g16, added on
+  2026-10-02, was the one straggler. The low/medium queue skips a high-confidence add, so
+  check the straggler row before committing.
+- 197 g5 `SNO` was completed to `SNOW`, and the capture fragment is on the ignore list.
+- All 14 box refits were on easyocr, so none needed a union.
+
 ### An ellipsis is spaced on both sides -- ruled 2026-10-08
 
 **A run of two or more dots takes a space on each side, except where it starts or ends a

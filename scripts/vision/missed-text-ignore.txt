@@ -844,3 +844,7 @@ HELP KEEP AMERICA STRONG
 # The Many Faces of Magica De Spell (reviewer, 2026-10-08): the drawn `$` on 173's money
 # bags, which the review did not add
 30 173 $
+
+# Snow Duster (reviewer, 2026-10-08, speaker review): 197's partly visible sign SNO, which
+# the review wrote whole as SNOW (g5)
+30 197 SNO
