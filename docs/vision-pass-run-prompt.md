@@ -7420,6 +7420,36 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### An ellipsis is spaced on both sides -- ruled 2026-10-08
+
+**A run of two or more dots takes a space on each side, except where it starts or ends a
+line.** It hugs a closing `?`, `!`, `)` or quote after it, and an opening `(` or quote
+before it. Examples: `WORD ... WORD`, `HOME! ... UNCLE`, `WHAT ...` at a line's end,
+`... WHAT` at a line's start, `DICKENS ...?`, `(YAWN! ...)`, `"... THE ISLAND`,
+`MINUTE! .. (GULP!)`. A quote counts as opening when it starts a line or follows a space
+or `(`, and as closing when no letter or digit follows it.
+
+- **Why:** the corpus was split, with 1,902 runs of which 1,138 broke the rule. The seed
+  volumes were worst (Vol. 26 had 27 `!...` to none spaced), and the reviewer had been
+  respacing balloons by hand (six on *The Many Faces of Magica De Spell*).
+- **Enforced** (barks-ocr `0bdd076`). `group_checks` has a dismissable `ellipsis_spacing`
+  check, which `barks-ocr-check` reports and repairs under `--fix-ellipses`. Unlike the
+  whitespace and dash fixers, that fixer is safe on groups carrying `[b]`/`[i]`.
+  `vision-seed build` refuses a seed group that breaks the rule, `vision-apply` refuses a
+  proposed correction or an added group that does, and `roster.txt` states the rule
+  beside the em-dash one.
+- **Swept** with `barks-ocr-check --volume N --fix-ellipses`, one prelim commit per volume
+  (`25be8450`..`7ffad0cf`, all 30 volumes): 1,934 `ai_text`s in 1,480 files, both engines,
+  plus 4 pending `vision_corrected_text` proposals. The only changes are spaces; no letter
+  or tag moved. Afterwards nothing in the corpus breaks the rule, the seed copies are
+  still exact, and the corrections backlog is unchanged (205, all Vol. 25).
+  `visible_text`, `ocr_text` and `speaker_was` were left as they are.
+- **Odd cases the rule produces mechanically, and that stand:** `ETC ...`,
+  `OW- .....` and `S.N.O.R.T.E.R.* ..!`.
+- **Not part of this:** six groups carry markup that was invalid before the sweep and is
+  untouched by it. 151 g1's `HAM & HAM` has an unescaped `&`, and the bracketed chemical
+  formulas on Vol. 26 160 g7 and 161 g15 need `&bl;`/`&br;`. Each is on both engines.
+
 ### Findings to paste into the next run (2026-10-08, REVIEWED -- *The Many Faces of Magica De Spell*, Vol. 30 172-193)
 
 Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `4e3e2d35`;
@@ -7440,7 +7470,8 @@ corrections (3.3%), every one in the nephew domain (10 of 32, 31.2%): 5 of 283 h
   figure is too small to see, settle the speaker from the dialogue around it.
 - **The reviewer spaces an ellipsis after `!`.** Six balloons went from `!...` to `! ...`
   (176 g3, 186 g10, 187 g7, 189 g13, 190 g6, 192 g10). The corpus is split: the seed
-  volumes 26-30 carry 161 `!...` against 30 `! ...`. Pending a ruling.
+  volumes 26-30 carry 161 `!...` against 30 `! ...`. Ruled and swept the same day -- see
+  the ellipsis ruling above.
 - **paddleocr can be re-sorted by the editor with no content change** (179 and 182 here),
   so ids stop matching between the engines. Before a sync, compare the two sides by text.
   If paddleocr matches `HEAD` in content, the sync is safe.
