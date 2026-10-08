@@ -7420,6 +7420,31 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-08, REVIEWED -- *The Many Faces of Magica De Spell*, Vol. 30 172-193)
+
+Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `4e3e2d35`;
+missed-text adds `5a522161`). 22 pages, 300 groups, every one reviewed. **10 speaker
+corrections (3.3%), every one in the nephew domain (10 of 32, 31.2%): 5 of 283 highs (1.8%),
+3 of 15 mediums (20.0%), both lows.**
+
+- **The cap the pass measured was the wrong boy's, three times.** 180 g0 Dewey -> Huey,
+  180 g5 Louie -> Dewey and 192 g13 Dewey -> Huey. Each note quotes a capscan blob (blue
+  620px, green 101px, blue 509px) and then names its owner. The tail's boy was the one
+  beside it. Place the blob on the head the tail reaches before taking its colour.
+- **Under-naming three more times:** 179 g3 Dewey, 179 g14 Huey and 182 g3 Louie were
+  `nephews`. 179 g3's note had a 154px blue on the tail's boy and still declined to name.
+- **Donald read as Scrooge twice on one page** (180 g10, g12: "Scrooge's silhouette",
+  "Scrooge being sprayed").
+- **A voice from a distant plane or a parachutist is not a collective by default.**
+  182 g10 (a distant plane) is Scrooge and 182 g12 (a parachutist) is Donald. When the
+  figure is too small to see, settle the speaker from the dialogue around it.
+- **The reviewer spaces an ellipsis after `!`.** Six balloons went from `!...` to `! ...`
+  (176 g3, 186 g10, 187 g7, 189 g13, 190 g6, 192 g10). The corpus is split: the seed
+  volumes 26-30 carry 161 `!...` against 30 `! ...`. Pending a ruling.
+- **paddleocr can be re-sorted by the editor with no content change** (179 and 182 here),
+  so ids stop matching between the engines. Before a sync, compare the two sides by text.
+  If paddleocr matches `HEAD` in content, the sync is safe.
+
 ### Findings to paste into the next run (2026-10-08, REVIEWED -- *The Thrifty Spendthrift*, Vol. 30 146-165)
 
 Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `98b73634`;
