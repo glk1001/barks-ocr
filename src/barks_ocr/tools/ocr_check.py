@@ -53,6 +53,7 @@ from barks_ocr.utils.group_checks import (
     BOX_IS_WIDE_ISSUE,
     BOX_MISMATCH_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
+    ELLIPSIS_SPACING_ISSUE,
     LETTERING_IS_LARGE_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
     TEXT_NEVER_FITS_ISSUE,
@@ -61,6 +62,7 @@ from barks_ocr.utils.group_checks import (
     is_acknowledged,
     panels_with_no_groups,
     with_dash_fixes,
+    with_ellipsis_fixes,
 )
 from barks_ocr.utils.ocr_box import OcrBox, PointList, points_bbox, text_box_problem
 
@@ -317,6 +319,7 @@ class FixFlags:
     newlines: bool = False
     whitespace: bool = False
     dashes: bool = False
+    ellipses: bool = False
     boxes: bool = False
 
     def any_enabled(self) -> bool:
@@ -328,6 +331,7 @@ class FixFlags:
                 self.newlines,
                 self.whitespace,
                 self.dashes,
+                self.ellipses,
                 self.boxes,
             )
         )
@@ -2162,20 +2166,22 @@ class OcrChecker:
     def _apply_text_fixes(self, json_groups: dict) -> bool:
         """Apply the unambiguous string rewrites. Returns whether anything changed.
 
-        Both are pure cleanups with no judgement in them — stray whitespace
-        and "--" for an em-dash — which is why they can run unattended while the
-        wrapping fixes need cross-engine evidence.
+        All three are pure cleanups with no judgement in them — stray whitespace,
+        "--" for an em-dash, and the spacing round an ellipsis — which is why they
+        can run unattended while the wrapping fixes need cross-engine evidence.
 
         A group that has acknowledged the issue a fixer exists for is left
         alone, exactly as the check leaves it alone. Otherwise the next --fix
         run would quietly undo the dismissal the user made in the editor, and
         the run after that would do it again.
 
-        Groups carrying emphasis markup are skipped, like the line-pattern
-        transplant skips them: the fixers edit the raw stored string, and
-        rewriting around ``[b]``/``[i]`` tags is exactly the offset problem
-        this module refuses to solve mechanically. The issue stays reported
-        for a hand fix in the editor.
+        Groups carrying emphasis markup are skipped by the whitespace and dash
+        fixers, like the line-pattern transplant skips them: those edit the raw
+        stored string, and rewriting around ``[b]``/``[i]`` tags is exactly the
+        offset problem this module refuses to solve mechanically. The issue
+        stays reported for a hand fix in the editor. The ellipsis fixer is the
+        exception: it works from each visible character's raw index and never
+        moves a tag.
         """
         changed = False
         for group_id, group in json_groups.items():
@@ -2185,14 +2191,19 @@ class OcrChecker:
                 after = cleaned_whitespace(after)
             if self._fixes.dashes:
                 after = with_dash_fixes(after, group)
-            if after == before:
-                continue
-            if has_markup(before):
+            if after != before and has_markup(before):
                 logger.warning(
                     f"Group {group_id}: ai_text needs cleanup but carries emphasis"
-                    f" markup, so the text fixes were skipped."
+                    f" markup, so the whitespace and dash fixes were skipped."
                     f" Fix it by hand in the editor."
                 )
+                after = before
+            # The ellipsis fixer only inserts or deletes a space at an exact raw
+            # index beside the dots, so it is the one text fix that is safe on a
+            # group carrying markup, and it runs after the skip above.
+            if self._fixes.ellipses and not is_acknowledged(group, ELLIPSIS_SPACING_ISSUE):
+                after = with_ellipsis_fixes(after)
+            if after == before:
                 continue
             group["ai_text"] = after
             changed = True
@@ -2838,6 +2849,14 @@ def main(  # noqa: PLR0913
         default=False,
         help="Rewrite '--' as an em-dash in ai_text and normalize the spacing around it.",
     ),
+    fix_ellipses: bool = typer.Option(
+        default=False,
+        help=(
+            "Space every '..'/'...' run in ai_text by the house rule: a space each side"
+            " except at a line's ends and next to a closing ?, !, ), quote or an opening"
+            " (, quote. Safe on groups carrying emphasis markup."
+        ),
+    ),
     fix_boxes: bool = typer.Option(
         default=False,
         help=(
@@ -2966,6 +2985,7 @@ def main(  # noqa: PLR0913
         newlines=fix_newlines,
         whitespace=fix_whitespace,
         dashes=fix_dashes,
+        ellipses=fix_ellipses,
         boxes=fix_boxes,
     )
     if fixes.any_enabled():

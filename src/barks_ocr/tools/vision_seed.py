@@ -89,6 +89,7 @@ from barks_ocr.tools.vision_prep import (
     _write_overview,
     _write_panel,
 )
+from barks_ocr.utils.group_checks import ellipsis_spacing_ok, with_ellipsis_fixes
 from barks_ocr.utils.vision_schema import GROUP_TYPES, roster_text
 from barks_ocr.utils.volume_holds import HOLDS_FILE, held_volumes
 
@@ -467,6 +468,11 @@ def _group_errors(
     elif DASH_TOUCHING_LETTER.search(text):
         errors.append(
             f"{where}: an em dash touches a letter; the corpus spaces it (WORD — / — WORD)."
+        )
+    elif not ellipsis_spacing_ok(text):
+        errors.append(
+            f"{where}: an ellipsis is spaced against the rule (WORD ... WORD, HOME! ... WE,"
+            f" DICKENS ...?); fixed: {with_ellipsis_fixes(text)!r}."
         )
     if group.get("type") not in GROUP_TYPES:
         errors.append(f"{where}: type {group.get('type')!r} is not in {sorted(GROUP_TYPES)}.")

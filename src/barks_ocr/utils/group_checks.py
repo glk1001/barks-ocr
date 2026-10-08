@@ -134,6 +134,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     "page_number_notes",
     "dot_at_end_of_sentence",
     "em_dash_spacing",
+    "ellipsis_spacing",
     "double_hyphen",
     "unbalanced_quotes",
     "invalid_type",
@@ -305,6 +306,132 @@ def has_em_dash_spacing_error(group: dict) -> bool:
     return False
 
 
+ELLIPSIS_SPACING_ISSUE = "ellipsis_spacing"
+# What an ellipsis may hug. Ruled 2026-10-08: a run of two or more dots takes a
+# space on each side, except at either end of a line -- and except that it hugs
+# a closing `?`, `!`, `)` or quote after it, and an opening `(` or quote before
+# it: `WORD ... WORD`, `HOME! ... UNCLE`, `DICKENS ...?`, `(YAWN! ...)`,
+# `"... THE ISLAND`. The rule is the reviewer's; the corpus was split on it,
+# 1,902 runs of which 1,138 broke it, the seed volumes worst.
+_ELLIPSIS_OPENERS = frozenset({"("})
+_ELLIPSIS_CLOSERS = frozenset({"?", "!", ")"})
+_QUOTES = frozenset({'"', "'"})
+_EMPHASIS_TAG_RE = re.compile(r"\[/?[bi]\]")
+
+
+def _visible_chars(raw: str) -> list[tuple[str, int]]:
+    """Return (character, index into *raw*) for every character outside a markup tag.
+
+    The ellipsis rule is about the lettering, but its fixer has to edit the stored
+    string, tags and all. Pairing each visible character with its raw index lets
+    it insert or delete a plain space at an exact position without ever touching a
+    tag -- which is why, unlike the whitespace and dash fixers, it is safe on a
+    group carrying ``[b]``/``[i]``.
+    """
+    out: list[tuple[str, int]] = []
+    i = 0
+    while i < len(raw):
+        tag = _EMPHASIS_TAG_RE.match(raw, i)
+        if tag:
+            i = tag.end()
+            continue
+        out.append((raw[i], i))
+        i += 1
+    return out
+
+
+def _quote_opens(chars: list[tuple[str, int]], at: int) -> bool:
+    """Whether the quote at *at* opens: it starts a line or follows a space or `(`."""
+    return at == 0 or chars[at - 1][0] in (" ", "\n", "(")
+
+
+def _quote_closes(chars: list[tuple[str, int]], at: int) -> bool:
+    """Whether the quote at *at* closes: nothing alphanumeric follows it."""
+    return at + 1 >= len(chars) or not chars[at + 1][0].isalnum()
+
+
+def _hugs_before(chars: list[tuple[str, int]], at: int) -> bool:
+    """Whether the character at *at*, just before an ellipsis, may touch it."""
+    char = chars[at][0]
+    return char in _ELLIPSIS_OPENERS or (char in _QUOTES and _quote_opens(chars, at))
+
+
+def _hugs_after(chars: list[tuple[str, int]], at: int) -> bool:
+    """Whether the character at *at*, just after an ellipsis, may touch it."""
+    char = chars[at][0]
+    return char in _ELLIPSIS_CLOSERS or (char in _QUOTES and _quote_closes(chars, at))
+
+
+def _left_edit(chars: list[tuple[str, int]], start: int) -> tuple[int, bool] | None:
+    """Return the edit the ellipsis starting at *start* needs on its left, if any."""
+    if start == 0 or chars[start - 1][0] == "\n":
+        return None  # starts a line
+    if chars[start - 1][0] != " ":
+        return None if _hugs_before(chars, start - 1) else (chars[start][1], True)
+    if start >= 2 and _hugs_before(chars, start - 2):  # noqa: PLR2004 -- the char before the space
+        return chars[start - 1][1], False
+    return None
+
+
+def _right_edit(chars: list[tuple[str, int]], end: int) -> tuple[int, bool] | None:
+    """Return the edit the ellipsis ending before *end* needs on its right, if any."""
+    if end >= len(chars) or chars[end][0] == "\n":
+        return None  # ends a line
+    if chars[end][0] != " ":
+        return None if _hugs_after(chars, end) else (chars[end - 1][1] + 1, True)
+    if end + 1 < len(chars) and _hugs_after(chars, end + 1):
+        return chars[end][1], False
+    return None
+
+
+def _ellipsis_space_edits(raw: str) -> list[tuple[int, bool]]:
+    """Return the edits that space every ellipsis in *raw* by the rule.
+
+    Each edit is ``(raw index, insert)``: insert a space before that index, or
+    delete the space at it. A deletion is a space between an ellipsis and a
+    character it should hug (`DICKENS ... ?`, `( ...`).
+    """
+    chars = _visible_chars(raw)
+    edits: list[tuple[int, bool]] = []
+    start = 0
+    while start < len(chars):
+        if chars[start][0] != "." or start + 1 >= len(chars) or chars[start + 1][0] != ".":
+            start += 1
+            continue
+        end = start
+        while end < len(chars) and chars[end][0] == ".":
+            end += 1
+        edits += [e for e in (_left_edit(chars, start), _right_edit(chars, end)) if e is not None]
+        start = end
+    return edits
+
+
+def ellipsis_spacing_ok(text: str) -> bool:
+    """Whether every run of two or more dots in *text* is spaced by the rule.
+
+    For callers holding a string rather than a group: ``vision-seed build`` and
+    ``vision-apply`` refuse text that fails it. See ``ELLIPSIS_SPACING_ISSUE``.
+    """
+    return not _ellipsis_space_edits(text)
+
+
+def has_ellipsis_spacing_error(group: dict) -> bool:
+    """Whether the group's ai_text has an ellipsis spaced against the rule."""
+    return not ellipsis_spacing_ok(group.get("ai_text") or "")
+
+
+def with_ellipsis_fixes(text: str) -> str:
+    """Return *text* with every ellipsis spaced by the rule, markup untouched.
+
+    Only ever inserts or deletes a single plain space next to a run of dots, so
+    the tags, the line breaks and every other character survive as they were,
+    and the result passes ``ellipsis_spacing_ok`` on one pass.
+    """
+    for index, insert in sorted(_ellipsis_space_edits(text), reverse=True):
+        text = f"{text[:index]} {text[index:]}" if insert else text[:index] + text[index + 1 :]
+    return text
+
+
 def has_double_hyphen(group: dict) -> bool:
     """Whether the text has a run of hyphens, almost always an unconverted em-dash."""
     return bool(_HYPHEN_RUN_RE.search(_plain_text(group)))
@@ -442,6 +569,7 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     "page_number_notes": has_page_number_notes,
     "dot_at_end_of_sentence": has_dot_at_end_of_sentence,
     "em_dash_spacing": has_em_dash_spacing_error,
+    ELLIPSIS_SPACING_ISSUE: has_ellipsis_spacing_error,
     "double_hyphen": has_double_hyphen,
     "unbalanced_quotes": has_unbalanced_quotes,
     "invalid_type": has_invalid_type,

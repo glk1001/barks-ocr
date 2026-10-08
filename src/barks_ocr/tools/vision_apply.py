@@ -60,6 +60,7 @@ from loguru import logger
 from barks_ocr.tools.vision_mirror import MirrorReport, mirror_title
 from barks_ocr.tools.vision_prep import CROP_PAD_PX
 from barks_ocr.utils.emphasis import italic_emphasis_problem
+from barks_ocr.utils.group_checks import ellipsis_spacing_ok, with_ellipsis_fixes
 from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
     ADDED_AI_TEXT_KEY,
@@ -284,7 +285,23 @@ def _validate_group(  # noqa: PLR0913
     _check_emphasis(entry.get(EMPHASIS_MARKUP_KEY), ai_text, where, errors)
     if not entry.get(RESULT_TEXT_OK_KEY) and not entry.get(RESULT_CORRECTED_TEXT_KEY):
         errors.append(f"{where}: text_ok is false but no corrected_text was supplied.")
+    _check_ellipses(entry.get(RESULT_CORRECTED_TEXT_KEY), RESULT_CORRECTED_TEXT_KEY, where, errors)
     del gid
+
+
+def _check_ellipses(text: Any, key: str, where: str, errors: list[str]) -> None:  # noqa: ANN401
+    """Refuse lettering the pass wrote with an ellipsis spaced against the house rule.
+
+    Only text the pass authors is checked -- a proposed correction or an added
+    group. Emphasis markup must strip back to the stored text exactly, so it
+    cannot change the spacing round an ellipsis; the stored text was swept to the rule on
+    2026-10-08 (see ``ELLIPSIS_SPACING_ISSUE``).
+    """
+    if isinstance(text, str) and not ellipsis_spacing_ok(text):
+        errors.append(
+            f"{where}: {key} spaces an ellipsis against the rule (WORD ... WORD,"
+            f" HOME! ... WE, DICKENS ...?); write {with_ellipsis_fixes(text)!r}."
+        )
 
 
 BOX_CORNERS = 4  # x0, y0, x1, y1
@@ -446,6 +463,7 @@ def _validate_added_group(
     text = entry.get(ADDED_AI_TEXT_KEY)
     if not isinstance(text, str) or not text.strip():
         errors.append(f"{where}: {ADDED_AI_TEXT_KEY} must be the lettering as drawn, got {text!r}.")
+    _check_ellipses(text, ADDED_AI_TEXT_KEY, where, errors)
 
     group_type = entry.get(TYPE_KEY)
     if not isinstance(group_type, str) or group_type not in GROUP_TYPES:
