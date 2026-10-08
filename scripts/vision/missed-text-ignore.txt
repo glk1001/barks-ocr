@@ -840,3 +840,7 @@ HELP KEEP AMERICA STRONG
 # The Thrifty Spendthrift (reviewer, 2026-10-08, speaker review): 157's partly visible
 # DON DU, which the review wrote whole as DONALD DUCK (g6)
 30 157 DON DU
+
+# The Many Faces of Magica De Spell (reviewer, 2026-10-08): the drawn `$` on 173's money
+# bags, which the review did not add
+30 173 $
