@@ -831,3 +831,8 @@ HELP KEEP AMERICA STRONG
 30 124 DEPTH GAUGE —100 FT
 30 124 FOOD M
 30 139 176-167 BEAGLE
+
+# The Thrifty Spendthrift (reviewer, 2026-10-08): the drawn `$` on the money bag on the desk
+# (149 panel 2), which the review did not add; 148 panel 3's bag `$` was left too, but the
+# capture lists 148's `$` once and the panel-7 plaques satisfy it
+30 149 $
