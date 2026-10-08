@@ -836,3 +836,7 @@ HELP KEEP AMERICA STRONG
 # (149 panel 2), which the review did not add; 148 panel 3's bag `$` was left too, but the
 # capture lists 148's `$` once and the panel-7 plaques satisfy it
 30 149 $
+
+# The Thrifty Spendthrift (reviewer, 2026-10-08, speaker review): 157's partly visible
+# DON DU, which the review wrote whole as DONALD DUCK (g6)
+30 157 DON DU

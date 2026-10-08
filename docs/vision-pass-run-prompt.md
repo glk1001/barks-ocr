@@ -7420,6 +7420,33 @@ cap_colour / confidence distributions equal on both engines.
   four lettered INSIDE an existing group and recommended for
   `missed-text-ignore.txt`).
 
+### Findings to paste into the next run (2026-10-08, REVIEWED -- *The Thrifty Spendthrift*, Vol. 30 146-165)
+
+Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `98b73634`;
+missed-text adds `c554347e` and `9e5628fd`; Bruto rename `fe6900b3`). 20 pages, 261 groups,
+every one reviewed. **7 speaker corrections (2.7%), every one in the nephew domain (7 of 29,
+24.1%): 5 of 246 highs (2.0%), 2 of 11 mediums (18.2%).** One type correction: 149 g7
+`sound_effect` -> `dialogue`.
+
+- **UNDER-NAMING IS STILL THE LEADING ERROR: five collectives became a name.** 147 g6 Huey,
+  153 g7 Huey, and 154 g2/g3/g4 Dewey, Louie and Huey. On 154 the pass traced each bubble
+  trail to its own boy (left, middle, right) and still wrote all three as `nephews`. Three
+  trails to three boys is a named row, not a collective. "Bare-headed indoors" (147) and
+  "too small to read caps" (153) were wrong as excuses: the reviewer named both boys.
+- **Two boys swapped:** 152 g8 Dewey -> Huey and 155 g1 Huey -> Dewey.
+- **A named animal is the name, not the species.** The Duchess of Duckshire's dog is
+  Bruto: `other:the dog` became `other:Bruto` (14 groups, 5 captures; reviewer). He has no
+  database tag. When a caption or a line names an animal, use the name.
+- **Review-completed texts:** 157 `DON\nDU` -> `DONALD\nDUCK` (its capture fragment is on
+  the ignore list); 151's job board gains its counts and 161's sound words are reordered.
+  Both stay as advisory near-misses, because the ignore list cannot silence one.
+- **A repeated sign is not always the copy-in trap.** 156 g20 `THE\nBLUE GOOSE\nCOMPANY`
+  has the same text as g3, and the crop shows the goose cart really is lettered that way.
+  Check the crop; do not "fix" a repeat from its text alone.
+- 161 g10, a drawn `?` the review added and gave to Donald, carries `speaker_was: none`
+  from the group it was started from. `review_findings` lists it as an add rather than
+  counting a correction, which is the right reading.
+
 ### Findings to paste into the next run (2026-10-07, REVIEWED -- *Isle of Golden Geese*, Vol. 30 122-144)
 
 Reviewed on easyocr and closed with a box union plus `seed sync --write` (prelim `f556ec2a`;
