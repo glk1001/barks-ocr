@@ -7446,9 +7446,11 @@ or `(`, and as closing when no letter or digit follows it.
   `visible_text`, `ocr_text` and `speaker_was` were left as they are.
 - **Odd cases the rule produces mechanically, and that stand:** `ETC ...`,
   `OW- .....` and `S.N.O.R.T.E.R.* ..!`.
-- **Not part of this:** six groups carry markup that was invalid before the sweep and is
-  untouched by it. 151 g1's `HAM & HAM` has an unescaped `&`, and the bracketed chemical
-  formulas on Vol. 26 160 g7 and 161 g15 need `&bl;`/`&br;`. Each is on both engines.
+- **Six groups had markup that was already invalid** before the sweep, which left them
+  untouched: Vol. 30 151 g1's `HAM & HAM` had an unescaped `&`, and the bracketed chemical
+  formulas on Vol. 26 160 g7 and 161 g15 needed `&bl;`/`&br;`. Each was on both engines.
+  They were fixed with `escape_markup` the same day (prelim `9259329d`, `83093a89`), and
+  no group in the corpus now fails `validate_markup`.
 
 ### Findings to paste into the next run (2026-10-08, REVIEWED -- *The Many Faces of Magica De Spell*, Vol. 30 172-193)
 
