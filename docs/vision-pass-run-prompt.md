@@ -7428,8 +7428,9 @@ every one reviewed. **1 speaker correction (1.7%): 1 of 56 highs, 0 of 3 mediums
 - **The tail reached a character who wasn't speaking.** 196 g8: the pass gave the line to
   Little Helper because the tail ran down to him, but it belongs to one of the snowbirds he
   was shooing (`other:a snowbird`). When the speaker could be the shooed or the shooer,
-  read what the line says. Little Helper stays behind `other:` here because *Snow Duster*
-  has no database cast tags.
+  read what the line says. The reviewer then tagged Little Helper for *Snow Duster*, and
+  his 14 speakers and 4 capture entries were unwrapped to the bare name (prelim
+  `6579a352`).
 - **An added `the End` logo was missed by the review queue.** 197 g16, added on
   2026-10-02, was the one straggler. The low/medium queue skips a high-confidence add, so
   check the straggler row before committing.
