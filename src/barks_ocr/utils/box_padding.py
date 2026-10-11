@@ -247,10 +247,13 @@ def _ring_in_fill(fill_labels: np.ndarray, component: np.ndarray, fill: int) -> 
     was entirely measurable.
     """
     gap = RING_GAP_PX
-    mask = cv2.copyMakeBorder(component, gap, gap, gap, gap, cv2.BORDER_CONSTANT, value=0)
+    # Scalars as 1-tuples: OpenCV 4.10's stubs type `Scalar` as a sequence only, and the
+    # lock installs 4.10 (pinned via paddleocr) beside 4.13 (easyocr, barks-ocr) into
+    # one cv2 folder.
+    mask = cv2.copyMakeBorder(component, gap, gap, gap, gap, cv2.BORDER_CONSTANT, value=(0,))
     outside = mask.copy()
     flood_mask = np.zeros((mask.shape[0] + 2, mask.shape[1] + 2), np.uint8)
-    cv2.floodFill(outside, flood_mask, (0, 0), 2)
+    cv2.floodFill(outside, flood_mask, (0, 0), (2,))
     solid = (outside != 2).astype(np.uint8)  # noqa: PLR2004
     inner = cv2.dilate(solid, np.ones((2 * gap - 1, 2 * gap - 1), np.uint8))
     ring = cv2.dilate(solid, np.ones((2 * gap + 1, 2 * gap + 1), np.uint8)) - inner
@@ -272,7 +275,9 @@ def _letter_components(
     count, labels, stats, _ = cv2.connectedComponentsWithStats(shapes, connectivity=8)
     ink_px = np.bincount(labels[ink], minlength=count)
     gap = RING_GAP_PX
-    padded_fill = cv2.copyMakeBorder(fill_labels, gap, gap, gap, gap, cv2.BORDER_CONSTANT, value=-1)
+    padded_fill = cv2.copyMakeBorder(
+        fill_labels, gap, gap, gap, gap, cv2.BORDER_CONSTANT, value=(-1,)
+    )
     height, width = shapes.shape
     letters: list[int] = []
     for i in range(1, count):
