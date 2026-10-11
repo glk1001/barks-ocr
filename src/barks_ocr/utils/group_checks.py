@@ -82,6 +82,14 @@ BOX_OUTSIDE_PANEL_ISSUE = "box-outside-panel"
 # so no group in the corpus carried it.
 BOX_MISMATCH_ISSUE = "box_mismatch"
 
+# Acknowledging this silences `ocr_check`'s three padding verdicts on the group --
+# `box_too_tight`, `box_too_tight_deep` and `box_too_loose` -- and stops
+# `--fix-padding` moving its box. Named for the judgement, "the box is right as
+# drawn": the lettering the measurement read as crossing the edge was the art or
+# the balloon outline, or the blank fill is deliberate. One acknowledgement for
+# all three, since they are one measurement read against two thresholds.
+BOX_PADDING_OK_ISSUE = "box-padding-is-right"
+
 
 def panels_with_no_groups(json_groups: dict, panel_count: int) -> list[int]:
     """Return the panels a page skips: 1..max-with-text, minus those that have text.
@@ -147,6 +155,7 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     PANEL_HAS_NO_TEXT_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
     BOX_MISMATCH_ISSUE,
+    BOX_PADDING_OK_ISSUE,
 )
 
 # The `type` vocabulary Gemini is asked for. Anything else is a mis-labelled
@@ -589,6 +598,8 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     # And again: it is a verdict on a pair of groups, one per engine, which
     # `ocr_check` alone has in hand.
     BOX_MISMATCH_ISSUE: _never_fires,
+    # And again: the verdict is read off the page image, which no group holds.
+    BOX_PADDING_OK_ISSUE: _never_fires,
 }
 
 # Issue types that were renamed or merged. 75 groups carry an acknowledgement

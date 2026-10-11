@@ -143,6 +143,8 @@ def simulate_transplant(  # noqa: PLR0913
     working = copy.deepcopy(group)
     context = oc.PageContext(
         volume=0,
+        # Only the padding check reads the title, and this simulation never runs it.
+        title=None,  # ty: ignore[invalid-argument-type]
         fanta_page=page,
         engine="",
         # `_check_text_layout` and the transplant never touch the panel boxes;

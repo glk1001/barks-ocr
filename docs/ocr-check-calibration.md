@@ -1244,6 +1244,47 @@ counts above include it).
 
 ---
 
+## `--check-padding` — the box against its lettering's ink
+
+Every check above reads a box against something written down: the page's line heights,
+the engines' fragment quads, the other engine's box. None looks at the page, so none sees
+the fault reviews have spent the most time on, a box that cuts into its own lettering.
+`--check-padding` loads each page image and measures the lettering inside each
+dialogue, thought and narration box; `--fix-padding` pads a crossed side out to the house
+padding where the measurement can be trusted. The measurement, every constant and the
+tables behind them are in `src/barks_ocr/utils/box_padding.py`'s docstring; this is the
+summary.
+
+- **`HOUSE_PADDING_PX = 7`** is the median distance from box to ink, every side, over the
+  2,588 balloon boxes reviewers changed by hand with the text unchanged (mined from the
+  prelim repo's review commits, 2026-10-11). 89% of the sides they moved more than 3px
+  moved outward: reviews were mostly padding out tight boxes.
+- **`MIN_CLIP_PX = 2`.** A box is `box_too_tight` only where the lettering crosses its
+  edge by 2px or more. Reviewers accept 0-2px margins, and a 1px crossing is the
+  anti-aliased rim of the last ink row.
+- **`MAX_FIXABLE_CLIP_PX = 8`.** A deeper crossing is `box_too_tight_deep`, never fixed and
+  reported only with `--include-marginal`: of twelve sampled on Vol. 12, at most two were
+  real; the rest were the measurement reaching a thought balloon's puffs, `$` signs drawn
+  in the balloon, art below it, or a neighbouring balloon's words.
+- **`MIN_INK_COVERAGE = 0.9`.** A tight box is fixed only when the measured letters explain
+  90% of the dark pixels inside it; otherwise something there is unplaced and it is left
+  to a person.
+- **`DISPLAY_LETTER_RATIO = 1.0`.** Letters taller than the page's reference line height
+  are display lettering -- `HELP! HELP!`, `BAA!` -- and are not judged: that leaves out
+  2.8% of the reviewed boxes measuring fine and 40% of the deep crossings.
+- **`LOOSE_PADDING_PX = 25`** over an ink-free margin is `box_too_loose`, report only.
+  Reviews rarely shrank a box, so there is nothing to calibrate a fix against.
+
+On 3,000 random untouched balloon groups (Vols. 1-24) the default queue takes 1.4%, 1.1%
+fixable. The fix, applied to the 278 fixable pre-review boxes, moves each crossed side a
+median 10px from the reviewer's to 3px, and 12% of the sides it moves end up further
+from the reviewer's than they were.
+
+Acknowledge with `box-padding-is-right` when the box is right as drawn; it silences all
+three verdicts and keeps `--fix-padding` off the group.
+
+---
+
 ## What is **not** validated
 
 - **`FIT_WIDTH_TOLERANCE = 1.5`** — inherited, never calibrated. It allows a line 50%

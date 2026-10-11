@@ -13,8 +13,9 @@ from itertools import zip_longest
 from pathlib import Path
 from statistics import mean, median
 
+import numpy as np
 import typer
-from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
+from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM, Titles
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_titles
 from barks_fantagraphics.comics_utils import get_backup_file
@@ -36,11 +37,19 @@ from barks_fantagraphics.speech_groupers import (
 )
 from barks_fantagraphics.speech_markup import escape_markup, has_markup, strip_markup
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
+from comic_utils.pil_image_utils import load_pil_image_for_reading
 from intspan import intspan
 from loguru import logger
 from PIL import Image, ImageDraw, ImageFont
 
 from barks_ocr.cli_setup import init_logging
+from barks_ocr.utils.box_padding import (
+    TOO_LOOSE_ISSUE,
+    TOO_TIGHT_DEEP_ISSUE,
+    TOO_TIGHT_ISSUE,
+    judge_padding,
+    page_image_file,
+)
 from barks_ocr.utils.engine_compare import (
     BOX_IOU_MIN,
     box_growth,
@@ -53,6 +62,7 @@ from barks_ocr.utils.group_checks import (
     BOX_IS_WIDE_ISSUE,
     BOX_MISMATCH_ISSUE,
     BOX_OUTSIDE_PANEL_ISSUE,
+    BOX_PADDING_OK_ISSUE,
     ELLIPSIS_SPACING_ISSUE,
     LETTERING_IS_LARGE_ISSUE,
     PANEL_HAS_NO_TEXT_ISSUE,
@@ -223,6 +233,7 @@ class PageContext:
     """
 
     volume: int
+    title: Titles
     fanta_page: str
     engine: str
     panel_boxes: PagePanelBoxes
@@ -240,6 +251,7 @@ class PageContext:
         """Derive the context from the page group being checked."""
         return cls(
             volume=page_group.fanta_vol,
+            title=page_group.title,
             fanta_page=page_group.fanta_page,
             engine=str(page_group.ocr_index),
             panel_boxes=panel_boxes,
@@ -321,6 +333,7 @@ class FixFlags:
     dashes: bool = False
     ellipses: bool = False
     boxes: bool = False
+    padding: bool = False
 
     def any_enabled(self) -> bool:
         """Whether this run will write to the prelim files at all."""
@@ -333,6 +346,7 @@ class FixFlags:
                 self.dashes,
                 self.ellipses,
                 self.boxes,
+                self.padding,
             )
         )
 
@@ -461,6 +475,13 @@ _QUEUE_SEVERITY: tuple[str, ...] = (
     # cross-engine comparisons for the same reason box_outside_panel is.
     "box_too_big",
     "box_too_big_marginal",
+    # Read off the page image, and only with --check-padding. Below the oversize
+    # pair because those are measured against the page and these against the
+    # ink, which a mis-measure can get wrong; the deep crossing last of the
+    # three for the same reason (see box_padding.TOO_TIGHT_DEEP_ISSUE).
+    TOO_TIGHT_ISSUE,
+    TOO_LOOSE_ISSUE,
+    TOO_TIGHT_DEEP_ISSUE,
     # The cross-engine block. A box disagreement is a concrete geometry fault and
     # is worth seeing ahead of a text diff; an attribute difference is the least
     # urgent of the set. "box_mismatch" and "text_mismatch" cannot both fire on
@@ -1379,16 +1400,22 @@ def _prelim_backup_file(ocr_file: Path) -> Path:
 class OcrChecker:
     """Checks prelim OCR JSON files for issues and writes a kivy-editor queue file."""
 
-    def __init__(
+    def __init__(  # noqa: PLR0913
         self,
         comics_database: ComicsDatabase,
         fixes: FixFlags | None = None,
         line_height_limits: LineHeightLimits | None = None,
         box_limits: BoxAgreementLimits | None = None,
         overhang_limits: PanelOverhangLimits | None = None,
+        *,
+        check_padding: bool = False,
     ) -> None:
         self._comics_database = comics_database
         self._fixes = fixes or FixFlags()
+        # The padding check reads the page image, which no other check does, so
+        # it is opt-in; --fix-padding implies it.
+        self._check_padding = check_padding or self._fixes.padding
+        self._page_gray: tuple[tuple[int, str], np.ndarray | None] | None = None
         self._limits = line_height_limits or LineHeightLimits()
         self._boxes = box_limits or BoxAgreementLimits()
         self._overhang = overhang_limits or PanelOverhangLimits()
@@ -1801,6 +1828,63 @@ class OcrChecker:
 
         return issues, there_were_fixes
 
+    def _gray_page(self, context: PageContext) -> np.ndarray | None:
+        """Return the page image as grayscale, loaded once for both engines.
+
+        None, with a warning, when the image cannot be read: the padding check is
+        then skipped for the page rather than ending the run.
+        """
+        key = (context.volume, context.fanta_page)
+        if self._page_gray is None or self._page_gray[0] != key:
+            try:
+                image_file = page_image_file(
+                    self._comics_database, context.title, context.volume, context.fanta_page
+                )
+                gray = np.asarray(load_pil_image_for_reading(image_file).convert("L"))
+            except (OSError, ValueError, KeyError, IndexError) as e:
+                logger.warning(
+                    f"Vol {context.volume} page {context.fanta_page}: no page image for the"
+                    f" padding check ({e})."
+                )
+                gray = None
+            self._page_gray = (key, gray)
+        return self._page_gray[1]
+
+    def _padding_issue(
+        self, context: PageContext, group_id: str, group: dict
+    ) -> tuple[LayoutIssue | None, bool]:
+        """Judge the box against its lettering's ink; fix a tight one under --fix-padding.
+
+        Returns (issue, fixed). A fixed box is not also reported. Only balloon
+        types are judged -- see ``box_padding`` for the measurement, and for why
+        sound effects, signs and titles are left out.
+        """
+        if is_acknowledged(group, BOX_PADDING_OK_ISSUE):
+            return None, False
+        gray = self._gray_page(context)
+        if gray is None:
+            return None, False
+        verdict = judge_padding(gray, group, context.line_heights.own)
+        if verdict is None or verdict.issue_type is None:
+            return None, False
+        if verdict.issue_type == TOO_TIGHT_DEEP_ISSUE and not self._limits.include_marginal:
+            # Opt-in like the other noisy bands: a crossing this deep is mostly
+            # the measurement's own error (see box_padding.TOO_TIGHT_DEEP_ISSUE),
+            # and it is never fixed, so it only ever adds queue entries.
+            return None, False
+        if self._fixes.padding and verdict.fixed_box is not None:
+            logger.info(
+                f"Vol {context.volume} page {context.fanta_page} ({context.engine})"
+                f" group {group_id}: padded text_box out from {group['text_box']}"
+                f" to {verdict.fixed_box} ({verdict.note})."
+            )
+            group["text_box"] = verdict.fixed_box
+            return None, True
+        note = verdict.note
+        if verdict.fixed_box is not None:
+            note += "; --fix-padding would fix it"
+        return LayoutIssue(verdict.issue_type, note=note), False
+
     def _text_issues(
         self,
         context: PageContext,
@@ -1812,8 +1896,9 @@ class OcrChecker:
         """Text-level issues for one group with text. Returns (issues, layout_fixed).
 
         The registry checks come straight off utils/group_checks.py, so adding
-        a check there needs no change here. The layout check is skipped for a
-        malformed text_box, whose geometry means nothing.
+        a check there needs no change here. The layout check, and the padding
+        check under --check-padding, are skipped for a malformed text_box, whose
+        geometry means nothing.
         """
         found: list[LayoutIssue] = [
             LayoutIssue(t)
@@ -1826,6 +1911,11 @@ class OcrChecker:
         layout_fixed, layout_issue = self._check_text_layout(group, group_id, context)
         if layout_issue is not None:
             found.append(layout_issue)
+        if self._check_padding:
+            padding_issue, padding_fixed = self._padding_issue(context, group_id, group)
+            if padding_issue is not None:
+                found.append(padding_issue)
+            layout_fixed = layout_fixed or padding_fixed
         return found, layout_fixed
 
     def _panel_issue(
@@ -2865,6 +2955,23 @@ def main(  # noqa: PLR0913
             " of --box-iou-min, which only decides what gets reported."
         ),
     ),
+    check_padding: bool = typer.Option(
+        default=False,
+        help=(
+            "Measure each balloon's text_box against its lettering on the page image:"
+            " 'box_too_tight' where the lettering crosses an edge, 'box_too_tight_deep'"
+            " where it crosses by more than a fix will trust, 'box_too_loose' where a side"
+            " has far more blank fill than the house padding. Reads every page image."
+            " The deep band is reported only with --include-marginal."
+        ),
+    ),
+    fix_padding: bool = typer.Option(
+        default=False,
+        help=(
+            "Pad each 'box_too_tight' side out to the house padding where the measurement"
+            " can be trusted; the rest stay reported. Implies --check-padding."
+        ),
+    ),
     max_box_growth: float = typer.Option(
         MAX_BOX_GROWTH,
         help=(
@@ -2880,7 +2987,7 @@ def main(  # noqa: PLR0913
         default=False,
         help=(
             "Also report the noisier line-height bands, as 'too_many_lines_marginal'"
-            " and 'box_too_big_marginal'."
+            " and 'box_too_big_marginal', and with --check-padding 'box_too_tight_deep'."
         ),
     ),
     line_height_threshold: float = typer.Option(
@@ -2987,6 +3094,7 @@ def main(  # noqa: PLR0913
         dashes=fix_dashes,
         ellipses=fix_ellipses,
         boxes=fix_boxes,
+        padding=fix_padding,
     )
     if fixes.any_enabled():
         _check_prelim_repo_clean(force=force)
@@ -2998,9 +3106,9 @@ def main(  # noqa: PLR0913
     overhang_limits = PanelOverhangLimits(fraction=outside_panel_fraction, min_px=outside_panel_px)
     box_limits = BoxAgreementLimits(iou_min=box_iou_min, max_growth=max_box_growth)
     output_file = output or _default_output_file(volumes_str)
-    OcrChecker(comics_database, fixes, limits, box_limits, overhang_limits).check_titles(
-        title_list, output_file
-    )
+    OcrChecker(
+        comics_database, fixes, limits, box_limits, overhang_limits, check_padding=check_padding
+    ).check_titles(title_list, output_file)
 
 
 if __name__ == "__main__":
