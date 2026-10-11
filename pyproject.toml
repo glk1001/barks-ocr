@@ -12,7 +12,11 @@ description = "Scripts for OCR processing of Fantagraphics Carl Barks comic page
 readme = "README.md"
 license = "Apache-2.0"
 license-files = ["LICENCE", "NOTICE"]
-requires-python = ">=3.13"
+# Capped below 3.14 because two dependencies do not run there: Kivy, and paddlepaddle
+# 3.2.1, which ships no 3.14 wheel. Without the cap uv cannot lock at all, since
+# required-environments demands a Linux x86-64 wheel for every Python allowed. Lift it
+# when both support 3.14.
+requires-python = ">=3.13,<3.14"
 dependencies = [
     "barks-fantagraphics",
     "barks-kivy-ui",
@@ -94,6 +98,15 @@ en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/dow
 [tool.uv]
 required-environments = [
     "sys_platform == 'linux' and platform_machine == 'x86_64'"
+]
+# One OpenCV everywhere. paddlex (via paddleocr) pins opencv-contrib-python==4.10.0.84,
+# while barks-ocr asks for opencv-python and easyocr for opencv-python-headless, both
+# 4.13. All three write the same site-packages/cv2 folder, so whichever installed last
+# supplied the runtime AND the type stubs: the overnight machine got 4.10 contrib, and
+# box_padding failed ty and pyrefly there while passing here (2026-10-12). paddlex and
+# paddleocr use no contrib-only cv2 module (no ximgproc, xfeatures2d, aruco ...).
+override-dependencies = [
+    "opencv-contrib-python==4.13.0.92",
 ]
 
 [dependency-groups]
