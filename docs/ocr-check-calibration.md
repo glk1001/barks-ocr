@@ -1263,9 +1263,10 @@ summary.
   edge by 2px or more. Reviewers accept 0-2px margins, and a 1px crossing is the
   anti-aliased rim of the last ink row.
 - **`MAX_FIXABLE_CLIP_PX = 8`.** A deeper crossing is `box_too_tight_deep`, never fixed and
-  reported only with `--include-marginal`: of twelve sampled on Vol. 12, at most two were
-  real; the rest were the measurement reaching a thought balloon's puffs, `$` signs drawn
-  in the balloon, art below it, or a neighbouring balloon's words.
+  reported only with `--include-marginal`: before the shape and fill tests below, at most
+  two of twelve sampled on Vol. 12 were real, the rest being the measurement reaching a
+  thought balloon's puffs, `$` signs drawn in the balloon, art below it, or a neighbouring
+  balloon's words.
 - **`MIN_INK_COVERAGE = 0.9`.** A tight box is fixed only when the measured letters explain
   90% of the dark pixels inside it; otherwise something there is unplaced and it is left
   to a person.
@@ -1275,8 +1276,15 @@ summary.
 - **`LOOSE_PADDING_PX = 25`** over an ink-free margin is `box_too_loose`, report only.
   Reviews rarely shrank a box, so there is nothing to calibrate a fix against.
 
-On 3,000 random untouched balloon groups (Vols. 1-24) the default queue takes 1.4%, 1.1%
-fixable. The fix, applied to the 278 fixable pre-review boxes, moves each crossed side a
+- **`SHAPE_GREY_MAX = 170`, `FILL_TONE_TOLERANCE = 20`.** What joins into one shape, and
+  where the balloon's fill is, are read at a looser cut than the lettering's extent, and the
+  fill must also be the balloon's own tone. The first trial write (Vol. 12) had padded boxes
+  out over pieces of balloon outline that broke away at the strict cut, and the reviewer
+  pulled 18 of its 26 boxes back in; with these, none of the reviewer's final boxes reaches
+  the default queue.
+
+On 3,000 random untouched balloon groups (Vols. 1-24) the default queue takes 0.7%, 0.6%
+fixable. The fix, applied to the 260 fixable pre-review boxes, moves each crossed side a
 median 10px from the reviewer's to 3px, and 12% of the sides it moves end up further
 from the reviewer's than they were.
 

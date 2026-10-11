@@ -32,27 +32,29 @@ same edits and over 3,000 random balloon groups no review had touched (Vols.
 ==================  ========  ==========  =========
 verdict             reviewed  pre-review  untouched
 ==================  ========  ==========  =========
-tight, fixable          1.2%       10.7%       1.1%
-tight, not fixed        0.4%        1.7%       0.3%
-tight, deep             4.1%       13.6%       4.0%
-loose                   0.1%        0.1%       0.0%
-not judged              6.0%        6.1%       2.2%
+tight, fixable          0.9%       10.0%       0.6%
+tight, not fixed        0.3%        1.9%       0.1%
+tight, deep             1.7%       11.1%       1.1%
+loose                   0.1%        0.1%       0.1%
+not judged              8.0%        8.0%       2.2%
 ==================  ========  ==========  =========
 
-Of twelve reviewed boxes still called tight, about half were real crossings of
-2-7px the review had let through -- a drop capital, an opening quote mark, a
-script descender, a trailing dash -- and half were art marks just below the
-balloon; the fix only ever grows such a box a few pixels into blank fill. Of
-twelve deep crossings sampled on Vol. 12, at most two were real, which is why
-the deep band is never fixed and ``ocr_check`` reports it only on request.
+The fix, applied to the 260 fixable pre-review boxes, moves each crossed side a
+median 10px from where the reviewer put it to 3px, and leaves 12% of the sides it
+moves further from the reviewer's than they were.
 
-The fix itself, applied to the 278 fixable pre-review boxes, moves each crossed
-side a median 10px from where the reviewer put it to 3px, and leaves 12% of the
-sides it moves further from the reviewer's than they were.
+The first trial write (Vol. 12, 2026-10-11) is why the shape and fill tests read
+at ``SHAPE_GREY_MAX`` and ``FILL_TONE_TOLERANCE``. Before them, the reviewer
+pulled 18 of its 26 fixed boxes back in: the fix had padded out over pieces of
+balloon outline. After them, none of the reviewer's 52 final boxes (26 groups,
+both engines) reaches the default queue, and the proposals made from the boxes
+as they were before the trial land a median 1px from the reviewer's. The deep
+band is never fixed and ``ocr_check`` reports it only on request.
 
 What counts as lettering, and why each test is there:
 
-- **Dark**: grey below ``INK_GREY_MAX``.
+- **Dark**: one shape is what joins up below ``SHAPE_GREY_MAX``, and its extent
+  is its pixels below ``INK_GREY_MAX``.
 - **Enclosed by the balloon's own fill.** The fill is the non-ink region most of
   the box's interior belongs to, and a component counts only if at least
   ``MIN_RING_IN_FILL`` of the pixels round it are that fill. This is what keeps
@@ -96,7 +98,22 @@ if TYPE_CHECKING:
 
 BALLOON_TYPES: frozenset[str] = frozenset({"dialogue", "thought", "narration"})
 
-INK_GREY_MAX = 110  # grey below this is ink
+INK_GREY_MAX = 110  # grey below this is ink: what the lettering's extent is measured on
+# Grey below this is part of a SHAPE: what decides which pixels belong together,
+# and where the balloon's fill is. At INK_GREY_MAX a thin or faint run of balloon
+# outline breaks into letter-sized pieces, each ringed by light pixels, and the
+# grey background leaks through the breaks into the fill -- so scallops, bumps
+# and a tail's root measured as lettering outside the box, and the first trial
+# --fix-padding (Vol. 12, 2026-10-11) padded boxes out over them: the reviewer
+# pulled 18 of its 26 boxes back in. The looser cut keeps the outline whole and
+# the fill sealed, and takes a letter's anti-aliased rim in with the letter.
+SHAPE_GREY_MAX = 170
+# The fill is also the balloon's own TONE, within this many grey levels of the
+# median inside the box. Without it the grey ground beside a white balloon was
+# "fill" too wherever the two met, and a piece of outline between them passed as
+# a letter enclosed by fill.
+FILL_TONE_TOLERANCE = 20
+RING_GAP_PX = 2  # the fill test reads a ring this far out, past a letter's anti-aliased rim
 HOUSE_PADDING_PX = 7  # the reviewed boxes' median, every side
 # The lettering must cross the edge by at least this much to make the box tight.
 # A 1px crossing is the anti-aliased rim of the last ink row or column: invisible,
@@ -129,9 +146,9 @@ INNER_FILL_INSET_PX = 3  # sample the fill this far inside the box
 
 TOO_TIGHT_ISSUE = "box_too_tight"
 # A crossing deeper than MAX_FIXABLE_CLIP_PX. Kept apart because it is where a
-# real clip and a mis-measure overlap: of the reviewed boxes -- accepted by a
-# reviewer, so mostly the measurement's error -- 236 of 2,580 cross that deep,
-# against 502 of the same groups before review.
+# real clip and a mis-measure overlap: 45 of the 2,588 reviewed boxes -- accepted by
+# a reviewer, so mostly the measurement's error -- cross that deep, against 287 of
+# the same groups before review.
 TOO_TIGHT_DEEP_ISSUE = "box_too_tight_deep"
 TOO_LOOSE_ISSUE = "box_too_loose"
 
@@ -229,26 +246,38 @@ def _ring_in_fill(fill_labels: np.ndarray, component: np.ndarray, fill: int) -> 
     letter: measured coverage then sat at a median 64% on boxes whose lettering
     was entirely measurable.
     """
-    mask = cv2.copyMakeBorder(component, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=0)
+    gap = RING_GAP_PX
+    mask = cv2.copyMakeBorder(component, gap, gap, gap, gap, cv2.BORDER_CONSTANT, value=0)
     outside = mask.copy()
     flood_mask = np.zeros((mask.shape[0] + 2, mask.shape[1] + 2), np.uint8)
     cv2.floodFill(outside, flood_mask, (0, 0), 2)
     solid = (outside != 2).astype(np.uint8)  # noqa: PLR2004
-    ring = cv2.dilate(solid, np.ones((3, 3), np.uint8)) - solid
+    inner = cv2.dilate(solid, np.ones((2 * gap - 1, 2 * gap - 1), np.uint8))
+    ring = cv2.dilate(solid, np.ones((2 * gap + 1, 2 * gap + 1), np.uint8)) - inner
     return float((fill_labels[ring > 0] == fill).mean())
 
 
 def _letter_components(
-    ink: np.ndarray, fill_labels: np.ndarray, fill: int, line_height: float
+    shapes: np.ndarray,
+    ink: np.ndarray,
+    fill_labels: np.ndarray,
+    fill: int,
+    line_height: float,
 ) -> tuple[np.ndarray, np.ndarray, list[int]]:
-    """Label the region's ink and return (labels, stats, the ids that are lettering)."""
-    count, labels, stats, _ = cv2.connectedComponentsWithStats(ink, connectivity=8)
-    padded_fill = cv2.copyMakeBorder(fill_labels, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=-1)
-    height, width = ink.shape
+    """Label the region's shapes and return (labels, stats, the ids that are lettering).
+
+    Shapes are cut at ``SHAPE_GREY_MAX``; a shape with fewer than
+    ``MIN_COMPONENT_PX`` pixels of real ink (``INK_GREY_MAX``) is a smudge.
+    """
+    count, labels, stats, _ = cv2.connectedComponentsWithStats(shapes, connectivity=8)
+    ink_px = np.bincount(labels[ink], minlength=count)
+    gap = RING_GAP_PX
+    padded_fill = cv2.copyMakeBorder(fill_labels, gap, gap, gap, gap, cv2.BORDER_CONSTANT, value=-1)
+    height, width = shapes.shape
     letters: list[int] = []
     for i in range(1, count):
         x, y, w, h, area = (int(v) for v in stats[i])
-        if area < MIN_COMPONENT_PX:
+        if ink_px[i] < MIN_COMPONENT_PX:
             continue
         if x == 0 or y == 0 or x + w >= width or y + h >= height:
             continue  # runs off the search region: outline or art
@@ -259,7 +288,7 @@ def _letter_components(
         ):
             continue  # a long thin curve: an outline arc or a tail
         component = (labels[y : y + h, x : x + w] == i).astype(np.uint8)
-        ring_fill = padded_fill[y : y + h + 2, x : x + w + 2]
+        ring_fill = padded_fill[y : y + h + 2 * gap, x : x + w + 2 * gap]
         if _ring_in_fill(ring_fill, component, fill) >= MIN_RING_IN_FILL:
             letters.append(i)
     return labels, stats, letters
@@ -377,34 +406,43 @@ def measure_lettering(gray: np.ndarray, text_box: list, n_lines: int) -> Letteri
     if rx1 - rx0 < 2 or ry1 - ry0 < 2:  # noqa: PLR2004
         return None
     region = gray[ry0:ry1, rx0:rx1]
-    ink = (region < INK_GREY_MAX).astype(np.uint8)
+    ink = region < INK_GREY_MAX
+    shapes = (region < SHAPE_GREY_MAX).astype(np.uint8)
 
-    _, fill_labels = cv2.connectedComponents(1 - ink, connectivity=4)
     box = (x0 - rx0, y0 - ry0, x1 - rx0, y1 - ry0)
     inset = INNER_FILL_INSET_PX
-    inner = fill_labels[
-        max(box[1] + inset, 0) : max(box[3] - inset, 1),
-        max(box[0] + inset, 0) : max(box[2] - inset, 1),
-    ]
+    inner_box = (
+        slice(max(box[1] + inset, 0), max(box[3] - inset, 1)),
+        slice(max(box[0] + inset, 0), max(box[2] - inset, 1)),
+    )
+    light = region[inner_box][shapes[inner_box] == 0]
+    if light.size == 0:
+        return None
+    tone = int(np.median(light))
+    fill_mask = (shapes == 0) & (np.abs(region.astype(np.int16) - tone) <= FILL_TONE_TOLERANCE)
+    _, fill_labels = cv2.connectedComponents(fill_mask.astype(np.uint8), connectivity=4)
+    inner = fill_labels[inner_box]
     inner_fill = inner[inner > 0]
     if inner_fill.size == 0:
         return None
     fill = int(np.bincount(inner_fill).argmax())
 
-    labels, stats, letters = _letter_components(ink, fill_labels, fill, line_height)
+    labels, stats, letters = _letter_components(shapes, ink, fill_labels, fill, line_height)
     taken, letter_height = _grow_from_box(stats, letters, box, line_height)
     if not taken:
         return None
 
-    ix0 = min(int(stats[i][0]) for i in taken)
-    iy0 = min(int(stats[i][1]) for i in taken)
-    ix1 = max(int(stats[i][0] + stats[i][2]) for i in taken)
-    iy1 = max(int(stats[i][1] + stats[i][3]) for i in taken)
+    # The extent is the real ink of the shapes taken, not the shapes' rims, which
+    # is the cut HOUSE_PADDING_PX was measured on.
+    lettering = np.isin(labels, list(taken)) & ink
+    rows, cols = np.nonzero(lettering)
+    ix0, iy0 = int(cols.min()), int(rows.min())
+    ix1, iy1 = int(cols.max()) + 1, int(rows.max()) + 1
 
     c = COVERAGE_INSET_PX
-    window = labels[max(box[1] + c, 0) : box[3] - c, max(box[0] + c, 0) : box[2] - c]
-    total = int((window > 0).sum())
-    coverage = float(np.isin(window, list(taken)).sum() / total) if total else 0.0
+    inner_box = (slice(max(box[1] + c, 0), box[3] - c), slice(max(box[0] + c, 0), box[2] - c))
+    total = int(ink[inner_box].sum())
+    coverage = float(lettering[inner_box].sum() / total) if total else 0.0
 
     margins = (
         ink[iy0:iy1, max(box[0], 0) : max(ix0 - 1, 0)],
