@@ -1,0 +1,6 @@
+# Words volume_audit.py's rare-word checks (split word, near typo) must accept.
+#
+# One word per line, any case; `#` starts a comment. Add a word here when it is a
+# faithful transcription -- Barks's own coinages, dialect, accents, names -- so the
+# audit stops offering it. A word that is a real misread belongs in the groups, not
+# here: fix the text instead.
