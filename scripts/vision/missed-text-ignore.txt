@@ -853,3 +853,9 @@ HELP KEEP AMERICA STRONG
 # sign, which the pass transcribed from a box clipping its right edge; the review widened
 # the box and wrote the group whole (g1)
 30 199 PAINTE WANTE TO RIS NECKS BRIDGE NEEDS NE COAT
+
+# Vol. 30 audit (reviewer, 2026-10-13): near misses where the group is right and the pass's
+# transcription is off -- one E too many on 083, two sounds in the other order on 161 and 185
+30 083 SCREEEEEE
+30 161 RAT A TAT TAT! FEETLE TE TWEE QUONK! MOO OOO LA LA!
+30 185 CAW! WHEET! TWIT! CHEEP! CHIP! WHIRRUP!

@@ -4,3 +4,17 @@
 # faithful transcription -- Barks's own coinages, dialect, accents, names -- so the
 # audit stops offering it. A word that is a real misread belongs in the groups, not
 # here: fix the text instead.
+
+# Vol. 30 audit (reviewer, 2026-10-13): each checked against the art and faithful
+FULLA       # King Fulla Cola, 046
+ANYBODY'D   # 076
+NYET        # 130, 141
+HORS        # 133
+ALAYING     # 150, 156
+AMI         # 157
+CHREE       # 185
+CAWRS       # 186
+TILLION     # 186
+FACER       # 188
+ZAG         # ZIG ZAG, 105
+UPPANCE     # 118
