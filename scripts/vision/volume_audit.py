@@ -648,8 +648,9 @@ def check_missed(
         out.append(
             Finding("missed", volume, page, None, own[page].first_group(), f"{item[:50]!r} ({who})")
         )
-    for _, volume, page, item, close in near:
-        if page in own:
+    for near_miss in near:
+        _, volume, page, item, close = near_miss
+        if page in own and not missed.ignored(ignores, near_miss):
             out.append(
                 Finding(
                     "near_missed",

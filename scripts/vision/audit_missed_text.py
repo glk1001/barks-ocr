@@ -156,9 +156,15 @@ def load_ignores() -> set[tuple[int | None, str | None, str]]:
     return {e for e in entries if e[2]}
 
 
-def ignored(entries: set[tuple[int | None, str | None, str]], finding: Finding) -> bool:
-    """Whether the ignore list covers this finding."""
-    _, volume, page, item, _, _ = finding
+def ignored(entries: set[tuple[int | None, str | None, str]], finding: Finding | NearMiss) -> bool:
+    """Whether the ignore list covers this finding or near miss.
+
+    Near misses are matched on the page's lettering, as findings are. Until
+    2026-10-12 they were never checked at all, so a decided one -- 30 199's sign,
+    transcribed from a box that clipped it and written whole in review -- warned
+    at every close-out however it was recorded here.
+    """
+    _, volume, page, item = finding[:4]
     needle = comparable(item)
     return any(
         needle == text and (vol is None or (vol == volume and pg == page))
@@ -382,9 +388,12 @@ def report(
     near_misses: list[NearMiss],
     pages: int,
     suppressed: int,
-    ignores: int,
+    ignores: tuple[int, int],
 ) -> None:
-    """Print the sweep result, worst class first."""
+    """Print the sweep result, worst class first.
+
+    *ignores* is how many findings and how many near misses the ignore list hid.
+    """
     neither = [f for f in findings if not f[5]]
     one_only = [f for f in findings if f[5]]
 
@@ -392,7 +401,10 @@ def report(
     print(f"Suppressed {suppressed} story-logo echo(es) on pages that carry no logo.")
     # Never silent: an ignore list that hides its own size is a way to stop
     # seeing a problem rather than a way to record a decision about it.
-    print(f"Ignored {ignores} finding(s) listed in {IGNORE_FILE.name}.\n")
+    print(
+        f"Ignored {ignores[0]} finding(s) and {ignores[1]} near miss(es)"
+        f" listed in {IGNORE_FILE.name}.\n"
+    )
 
     print(f"=== grouped by NEITHER engine: {len(neither)} ===")
     for title_str, volume, page, _item, line, _ in neither:
@@ -452,8 +464,15 @@ def main() -> None:
 
     ignores = load_ignores()
     kept = [f for f in findings if not ignored(ignores, f)]
+    kept_near = [n for n in near_misses if not ignored(ignores, n)]
 
-    report(kept, near_misses, pages, suppressed, len(findings) - len(kept))
+    report(
+        kept,
+        kept_near,
+        pages,
+        suppressed,
+        (len(findings) - len(kept), len(near_misses) - len(kept_near)),
+    )
     if csv_out:
         write_csv(kept, csv_out)
 

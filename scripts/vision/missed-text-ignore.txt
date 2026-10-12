@@ -848,3 +848,8 @@ HELP KEEP AMERICA STRONG
 # Snow Duster (reviewer, 2026-10-08, speaker review): 197's partly visible sign SNO, which
 # the review wrote whole as SNOW (g5)
 30 197 SNO
+
+# A Helper's Helping Hand (reviewer, 2026-10-12, speaker review): 199's painters-wanted
+# sign, which the pass transcribed from a box clipping its right edge; the review widened
+# the box and wrote the group whole (g1)
+30 199 PAINTE WANTE TO RIS NECKS BRIDGE NEEDS NE COAT
