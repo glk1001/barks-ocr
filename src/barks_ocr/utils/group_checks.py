@@ -198,6 +198,9 @@ _SENTENCE_END_ABBREVIATIONS: frozenset[str] = frozenset(
         "U.S",
         "VS",
         "ETC",
+        "MT",
+        "S.S",
+        "S.O.S",
     }
 )
 
@@ -250,7 +253,7 @@ def _plain_text(group: dict) -> str:
 
 def is_short_text(group: dict) -> bool:
     ai_text = _plain_text(group).strip().lower()
-    return (len(ai_text) == 1) and (ai_text not in ("?", "!"))
+    return (len(ai_text) == 1) and (ai_text not in ("$", "?", "!"))
 
 
 def is_ai_detected_error(group: dict) -> bool:
