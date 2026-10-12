@@ -19,6 +19,12 @@ It prints one row per check per volume and a verdict per volume, then up to
 queue (``volume page engine group kind``). A finding about a page rather than a group
 is parked on the page's first group, as the missed-text queues are.
 
+SILENCING A WARN THAT IS RIGHT. Rare words go in ``rare-word-allow.txt`` and near
+misses in ``missed-text-ignore.txt``. The glyph and self-named checks have no word to
+list, so they are dismissed on the group instead, with the editor's Mark OK popup
+(``glyphs-are-right``, ``speaker-names-self``), which their queue lines pre-tick. On a
+seed volume, mark easyocr and let ``seed sync --write`` carry it; elsewhere mark both.
+
 THE TWO KINDS OF CHECK.
 
 A **FAIL** check measures completeness: a volume with any count there is not
@@ -59,9 +65,10 @@ WARN
                        ``HISSELF``. Add the faithful ones to ``rare-word-allow.txt``.
   glyphs               a digit inside a word, lowercase in all-capitals lettering, a
                        ``|``, unbalanced brackets, a doubled small word (``THE THE``).
+                       Mark OK as ``glyphs-are-right`` when it is what is printed.
   self-named speaker   a roster speaker whose own name is in their line -- the
                        cheapest sign of a swapped pair, though Barks's characters do
-                       announce themselves.
+                       announce themselves. Mark OK as ``speaker-names-self``.
   speaker/type         dialogue or thought with no speaker, ``none`` or ``narrator``;
                        narration spoken by anyone but the narrator; a sound effect,
                        sign or title given to the narrator. Read pages only.
@@ -118,6 +125,7 @@ from barks_ocr.tools.vision_mirror import (
     _match_key,
 )
 from barks_ocr.utils.box_padding import judge_padding, page_image_file
+from barks_ocr.utils.group_checks import GLYPHS_OK_ISSUE, SELF_NAMED_OK_ISSUE, is_acknowledged
 from barks_ocr.utils.story_cast import story_characters
 from barks_ocr.utils.vision_schema import (
     OTHER_PREFIX,
@@ -467,6 +475,8 @@ def check_self_named(page: Page) -> list[Finding]:
     out = []
     for engine in page.engines:
         for gid, group in page.groups(engine).items():
+            if is_acknowledged(group, SELF_NAMED_OK_ISSUE):
+                continue
             names = SELF_NAMES.get(group.get(SPEAKER_KEY) or "")
             text = _plain(group).upper()
             if names and any(re.search(rf"\b{n}\b", text) for n in names):
@@ -488,6 +498,8 @@ def check_glyphs(page: Page) -> list[Finding]:
     out = []
     for engine in page.engines:
         for gid, group in page.groups(engine).items():
+            if is_acknowledged(group, GLYPHS_OK_ISSUE):
+                continue
             raw = _plain(group)
             letters = [c for c in raw if c.isalpha()]
             capitals = (
@@ -888,6 +900,12 @@ def print_report(
             print(f"  ... and {len(rows) - details} more")
 
 
+# Checks a reviewer can Mark OK on the group in the kivy editor. Their queue lines
+# carry the acknowledgement's own name as the kind, so the editor's Mark OK popup
+# opens with it pre-ticked; every other check's kind is `audit-<check>`.
+ACKNOWLEDGE_AS = {"self_named": SELF_NAMED_OK_ISSUE, "glyphs": GLYPHS_OK_ISSUE}
+
+
 def write_queue(findings: list[Finding], dest: Path) -> int:
     """Write every finding with a group as a kivy-editor queue line; return the line count."""
     lines = set()
@@ -895,7 +913,8 @@ def write_queue(findings: list[Finding], dest: Path) -> int:
         if f.group_id is None:
             continue
         for engine in [f.engine] if f.engine else [EASY, PADDLE]:
-            lines.add((f.volume, f.page, int(f.group_id), engine, f"audit-{f.check}"))
+            kind = ACKNOWLEDGE_AS.get(f.check, f"audit-{f.check}")
+            lines.add((f.volume, f.page, int(f.group_id), engine, kind))
     ordered = sorted(lines, key=lambda r: (r[0], r[1], r[2], r[3]))
     with dest.open("w") as queue:
         queue.write(f"# volume_audit: {len(ordered)} entries\n")

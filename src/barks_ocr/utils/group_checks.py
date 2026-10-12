@@ -90,6 +90,16 @@ BOX_MISMATCH_ISSUE = "box_mismatch"
 # all three, since they are one measurement read against two thresholds.
 BOX_PADDING_OK_ISSUE = "box-padding-is-right"
 
+# Acknowledging these silences two of `scripts/vision/volume_audit.py`'s WARN
+# heuristics on the group, neither of which has a word list to put the answer in.
+# `speaker-names-self`: the speaker's own name is in their line and they really
+# do say it -- Scrooge announcing himself, a radio call sign -- rather than the
+# pair being swapped. `glyphs-are-right`: the digit, lowercase letter, `|`,
+# bracket or doubled word is what is printed (Vol. 30's lowercase `No`).
+# Recorded on the group, so they survive the renumbering an add or a re-sort does.
+SELF_NAMED_OK_ISSUE = "speaker-names-self"
+GLYPHS_OK_ISSUE = "glyphs-are-right"
+
 
 def panels_with_no_groups(json_groups: dict, panel_count: int) -> list[int]:
     """Return the panels a page skips: 1..max-with-text, minus those that have text.
@@ -156,6 +166,8 @@ DISMISSABLE_ISSUE_TYPES: tuple[str, ...] = (
     BOX_OUTSIDE_PANEL_ISSUE,
     BOX_MISMATCH_ISSUE,
     BOX_PADDING_OK_ISSUE,
+    SELF_NAMED_OK_ISSUE,
+    GLYPHS_OK_ISSUE,
 )
 
 # The `type` vocabulary Gemini is asked for. Anything else is a mis-labelled
@@ -603,6 +615,10 @@ DISMISSABLE_PREDICATES: dict[str, Callable[[dict], bool]] = {
     BOX_MISMATCH_ISSUE: _never_fires,
     # And again: the verdict is read off the page image, which no group holds.
     BOX_PADDING_OK_ISSUE: _never_fires,
+    # And these two belong to volume_audit, a script outside the package, which
+    # consults `is_acknowledged` for its own checks.
+    SELF_NAMED_OK_ISSUE: _never_fires,
+    GLYPHS_OK_ISSUE: _never_fires,
 }
 
 # Issue types that were renamed or merged. 75 groups carry an acknowledgement
