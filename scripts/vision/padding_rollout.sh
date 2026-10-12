@@ -21,12 +21,15 @@
 # while this ran on Vol. 7; the path-scoped verify and staging kept the two apart.)
 # Run it from the barks-ocr repo root.
 #
+# Set PADDING_COMMIT_TRAILER to append a trailer line (e.g. Co-Authored-By) to each
+# commit, as lanes.sh's LANE_COMMIT_TRAILER does.
+#
 # Calibration and the measurement are in src/barks_ocr/utils/box_padding.py; dry-run
 # a volume first with `barks-ocr-check --volume N --check-padding`.
 set -u
 
 if [ $# -lt 2 ]; then
-  sed -n '2,25p' "$0"
+  sed -n '2,28p' "$0"
   exit 2
 fi
 QUEUE_DIR=$1
@@ -62,12 +65,15 @@ for v in "$@"; do
     echo "STOP vol $v: something outside the volume is staged"
     exit 1
   fi
-  git -C "$PRELIM" commit -q -m "fix(boxes): Vol. $v text_boxes padded out to their lettering
+  msg="fix(boxes): Vol. $v text_boxes padded out to their lettering
 
 ocr_check --fix-padding (barks-ocr $WRITER) padded $n balloon text_box(es),
 counted per engine, whose lettering crossed an edge out to the house
 padding. Only text_box changed, and both engines' boxes still agree as
-they did before." > "$QUEUE_DIR/logs/vol$v-commit.log" 2>&1 \
+they did before."
+  trailer=()
+  [ -n "${PADDING_COMMIT_TRAILER:-}" ] && trailer=(-m "$PADDING_COMMIT_TRAILER")
+  git -C "$PRELIM" commit -q -m "$msg" "${trailer[@]}" > "$QUEUE_DIR/logs/vol$v-commit.log" 2>&1 \
     || { echo "STOP vol $v: commit failed (see logs/vol$v-commit.log)"; exit 1; }
   echo "vol $v: committed $(git -C "$PRELIM" log -1 --format=%h)"
 done
