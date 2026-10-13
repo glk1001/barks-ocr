@@ -334,6 +334,18 @@ capture record.
 compare to the stored `ai_text`. Do not learn about a mismatch from validation
 after all the reading is done.
 
+**Outstanding: the emphasis backfill.** `docs/emphasis-backfill.md` owes a
+full-corpus re-screen of `emphasis_markup`, and until it runs the later volumes
+are known to be short of bold runs — measured at roughly 20% on Vol. 16 and 45%
+on Vol. 19. The cause was a fixed 1.30 stroke-width threshold read out of
+`allbold.py`'s "confirm anything under about 1.3x", which is a confidence line
+and not a detection floor; it is fixed at source but the corpus is not. **The
+low rates in Vols. 1–3 are CORRECT and not part of this** — emphasis density
+tracks the volume because Barks' letterer used the bold face more over the
+years, and a title recording zero there has been checked against the art.
+`scripts/closeout.sh` prints a TODO row every run until that file's `Status:`
+line changes.
+
 ## Queues — distinct paths, and four kinds of review
 
 Speakers, from what is already annotated:
