@@ -859,3 +859,7 @@ HELP KEEP AMERICA STRONG
 30 083 SCREEEEEE
 30 161 RAT A TAT TAT! FEETLE TE TWEE QUONK! MOO OOO LA LA!
 30 185 CAW! WHEET! TWIT! CHEEP! CHIP! WHIRRUP!
+
+# The Dog-sitter (reviewer, 2026-10-13, missed-text queue): 028's two drawn music notes
+# beside PLINK PLINK in panel 5, not given a group, as elsewhere in the corpus
+25 028 ♪
