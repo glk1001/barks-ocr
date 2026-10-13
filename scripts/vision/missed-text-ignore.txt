@@ -863,3 +863,11 @@ HELP KEEP AMERICA STRONG
 # The Dog-sitter (reviewer, 2026-10-13, missed-text queue): 028's two drawn music notes
 # beside PLINK PLINK in panel 5, not given a group, as elsewhere in the corpus
 25 028 ♪
+
+# The Village Blacksmith (reviewer, 2026-10-13, speaker review): drawn symbols not given
+# a group, as elsewhere in the corpus -- 048's two $ on Scrooge's money bags (panel 1) and
+# two notes from Daisy's music box (panel 5); 051's staff of notes from Scrooge's adding
+# machine (panel 4)
+25 048 $
+25 048 ♪
+25 051 ♪
