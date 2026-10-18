@@ -887,3 +887,14 @@ HELP KEEP AMERICA STRONG
 # balloon (panel 3) and 079's $ on the banknote Donald holds out (panel 8)
 25 077 ♪
 25 079 $
+
+# Counting artefact (The Whole Herd of Help, reviewer, 2026-10-18): 096 panel 1's $ emblem
+# on the McDuck truck is in the truck sign's group, g4 `McDUCK / $ / TRUCK / LINES`, which
+# the audit does not match against a capture item of its own.
+25 096 $
+
+# The Whole Herd of Help (reviewer, 2026-10-18, missed-text queue): drawn symbols not given
+# a group, as elsewhere in the corpus -- 102's two music notes in Dobbin's WHINNY balloon
+# (panel 7) and 103's $ on Scrooge's money bag (panel 5)
+25 102 ♪
+25 103 $
