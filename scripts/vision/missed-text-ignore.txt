@@ -881,3 +881,9 @@ HELP KEEP AMERICA STRONG
 # round Scrooge's head (071 p4) are all in the review's one added group, g8
 # `$ $ / $ $ / $ / $`, which the audit counts as one.
 25 071 $
+
+# Turkey Trouble (reviewer, 2026-10-18, missed-text queue): drawn symbols not given a
+# group, as elsewhere in the corpus -- 077's two music notes in the club woman's song
+# balloon (panel 3) and 079's $ on the banknote Donald holds out (panel 8)
+25 077 ♪
+25 079 $
