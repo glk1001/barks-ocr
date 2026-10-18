@@ -11,7 +11,7 @@ import typer
 from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM, Titles
 from barks_fantagraphics.comic_book import get_page_str
 from barks_fantagraphics.comic_book_info import ONE_PAGERS
-from barks_fantagraphics.comics_consts import FONT_DIR, OPEN_SANS_FONT, PNG_FILE_EXT, PageType
+from barks_fantagraphics.comics_consts import FONT_DIR, PNG_FILE_EXT, SPEECH_FONT, PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_backup_file
@@ -140,11 +140,11 @@ if not hasattr(_TextInput, "_kivy_patch_applied"):
 # TODO: Duplicated in 'font_manager.py'.
 # Set up custom fonts.
 LabelBase.register(
-    name=OPEN_SANS_FONT,
-    fn_regular=str(FONT_DIR / "OpenSans-Medium.ttf"),
-    fn_bold=str(FONT_DIR / "OpenSans-Bold.ttf"),
-    fn_italic=str(FONT_DIR / "OpenSans-MediumItalic.ttf"),
-    fn_bolditalic=str(FONT_DIR / "OpenSans-BoldItalic.ttf"),
+    name=SPEECH_FONT,
+    fn_regular=str(FONT_DIR / "DejaVuSansCondensed.ttf"),
+    fn_bold=str(FONT_DIR / "DejaVuSansCondensed-Bold.ttf"),
+    fn_italic=str(FONT_DIR / "DejaVuSansCondensed-Oblique.ttf"),
+    fn_bolditalic=str(FONT_DIR / "DejaVuSansCondensed-BoldOblique.ttf"),
 )
 
 EASY_OCR = "EasyOCR"
@@ -1549,7 +1549,7 @@ class EditorApp(App):
 
         text_input = TextInput(
             text=getattr(self, pane.text_prop),
-            font_name=OPEN_SANS_FONT,
+            font_name=SPEECH_FONT,
             font_size="20sp",
             multiline=True,
             padding=10,
@@ -1566,7 +1566,7 @@ class EditorApp(App):
         rendered_label = Label(
             text="",
             markup=True,
-            font_name=OPEN_SANS_FONT,
+            font_name=SPEECH_FONT,
             font_size="20sp",
             halign="left",
             valign="top",
@@ -2010,7 +2010,7 @@ class EditorApp(App):
 
         for item in items:
             btn_text = f"{item.panel_num}({item.group_id}): {item.text.replace(chr(10), ' ')}"
-            btn = Button(text=btn_text, font_name=OPEN_SANS_FONT, size_hint_y=None, height=40)
+            btn = Button(text=btn_text, font_name=SPEECH_FONT, size_hint_y=None, height=40)
             btn.bind(on_release=lambda _inst, i=item: select_item(i))
             list_layout.add_widget(btn)
 
