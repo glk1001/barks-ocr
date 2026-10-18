@@ -871,3 +871,8 @@ HELP KEEP AMERICA STRONG
 25 048 $
 25 048 ♪
 25 051 ♪
+
+# The Fraidy Falcon (reviewer, 2026-10-18, speaker review): 062 panel 8's hangar sign runs
+# off the panel's right edge, so the art prints only HA; the review's added group (g13)
+# writes the word whole as HANGAR so the page is searchable by it
+25 062 HA
