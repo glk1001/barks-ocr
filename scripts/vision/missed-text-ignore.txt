@@ -898,3 +898,10 @@ HELP KEEP AMERICA STRONG
 # (panel 7) and 103's $ on Scrooge's money bag (panel 5)
 25 102 ♪
 25 103 $
+
+# The Training Farm Fuss (reviewer, 2026-10-18, missed-text queue): 114's music notes from
+# Grandma's violin (panel 5) are a drawn symbol not given a group, as elsewhere in the
+# corpus; 115 panel 1's bullring sign runs off the panel border, so the art prints only
+# BOOLFIG, and g3 writes the word whole as BOOLFIGHT so the page is searchable by it
+25 114 ♪
+25 115 BOOLFIG
