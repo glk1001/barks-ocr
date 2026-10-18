@@ -876,3 +876,8 @@ HELP KEEP AMERICA STRONG
 # off the panel's right edge, so the art prints only HA; the review's added group (g13)
 # writes the word whole as HANGAR so the page is searchable by it
 25 062 HA
+
+# Counting artefact (Rocks to Riches, reviewer, 2026-10-18): the six drawn dollar signs
+# round Scrooge's head (071 p4) are all in the review's one added group, g8
+# `$ $ / $ $ / $ / $`, which the audit counts as one.
+25 071 $
