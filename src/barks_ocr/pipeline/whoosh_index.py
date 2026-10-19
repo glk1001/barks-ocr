@@ -334,6 +334,8 @@ def _tag_volumes(
     volumes: list[int],
     ocr_index_to_use: OcrTypes,
     entities_dir: Path,
+    *,
+    skip_missing_pages: bool = False,
 ) -> None:
     tagger = EntityTagger()
     all_speech_groups = SpeechGroups(comics_database)
@@ -347,7 +349,9 @@ def _tag_volumes(
         )
         for title_str, fanta_info in titles:
             title = fanta_info.comic_book_info.title
-            speech_page_groups = all_speech_groups.get_speech_page_groups(title)
+            speech_page_groups = all_speech_groups.get_speech_page_groups(
+                title, skip_missing=skip_missing_pages
+            )
             for speech_page in speech_page_groups:
                 if speech_page.ocr_index != ocr_index_to_use:
                     continue
@@ -404,13 +408,19 @@ def main(  # noqa: PLR0913
         check_index_integrity(comics_database, volumes, checks_output, volumes_index_dir)
         return
 
-    if tag or tag_only:
-        _tag_volumes(comics_database, volumes, OCR_TYPE_DICT[ocr_index], volumes_index_dir)
-        if tag_only:
-            return
-
     if skip_missing_pages:
         _report_missing_prelim_pages(comics_database, volumes)
+
+    if tag or tag_only:
+        _tag_volumes(
+            comics_database,
+            volumes,
+            OCR_TYPE_DICT[ocr_index],
+            volumes_index_dir,
+            skip_missing_pages=skip_missing_pages,
+        )
+        if tag_only:
+            return
 
     entity_provider = get_merged_entity_provider(volumes_index_dir, volumes)
     whoosh_search = SearchEngineCreator(
