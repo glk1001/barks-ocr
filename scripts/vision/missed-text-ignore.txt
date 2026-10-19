@@ -913,3 +913,9 @@ HELP KEEP AMERICA STRONG
 # the pass's transcription without INC. no longer matches, as with Vol. 23's sweaters
 25 119 176-716 BEAGLE BOYS
 25 121 ?
+
+# Peril of the Black Forest (reviewer, 2026-10-19, missed-text queue): drawn symbols not
+# given a group, as elsewhere in the corpus -- 128's $ on the money bag by Scrooge's desk
+# (panel 2) and 134's music notes from the boy's eagle call (panel 6)
+25 128 $
+25 134 ♪
