@@ -905,3 +905,11 @@ HELP KEEP AMERICA STRONG
 # BOOLFIG, and g3 writes the word whole as BOOLFIGHT so the page is searchable by it
 25 114 ♪
 25 115 BOOLFIG
+
+# Counting artefact (The Reversed Rescue, reviewer, 2026-10-19): 121 panel 1's drawn ? under
+# Grandma's balloon is already the last line of g3 `CORKS / AND / A CAN? / ?`, which the
+# audit does not match against a capture item of its own; and the review's added group for
+# 119 panel 1's driver's sweater (g4) writes it at full text, 176-716 BEAGLE BOYS INC., so
+# the pass's transcription without INC. no longer matches, as with Vol. 23's sweaters
+25 119 176-716 BEAGLE BOYS
+25 121 ?
