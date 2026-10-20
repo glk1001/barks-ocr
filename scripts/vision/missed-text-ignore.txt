@@ -925,3 +925,8 @@ HELP KEEP AMERICA STRONG
 # `? ? ?` holds all three; the pass's capture lists them as ??? plus a fourth ?, so the
 # audit still counts one more than is grouped
 25 144 ???
+
+# Let Sleeping Bones Lie (reviewer, 2026-10-20, missed-text queue): drawn symbol not given a
+# group, as elsewhere in the corpus -- 163's music notes round Scrooge's singing balloons
+# (panels 5-6)
+25 163 ♪
