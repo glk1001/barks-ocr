@@ -936,3 +936,8 @@ HELP KEEP AMERICA STRONG
 # `$ $`; the pass's capture lists them as two separate $, so the audit still counts one
 # more than is grouped (panel 3's pair is g6)
 25 158 $
+
+# Not story lettering (Let Sleeping Bones Lie, reviewer, 2026-10-20): 152 panel 1 carries the
+# printer's job code D/D 2003-003, which the pass grouped as background g6; the review
+# deleted that group, so the capture's copy of the code is no longer grouped by design
+25 152 D/D 2003-003
