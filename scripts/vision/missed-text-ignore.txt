@@ -919,3 +919,9 @@ HELP KEEP AMERICA STRONG
 # (panel 2) and 134's music notes from the boy's eagle call (panel 6)
 25 128 $
 25 134 ♪
+
+# Counting artefact (Whale of a Good Deed, reviewer, 2026-10-20): 144 panel 6 prints three
+# red ? round Scrooge's hat -- two left, one right -- and the review's added group g12
+# `? ? ?` holds all three; the pass's capture lists them as ??? plus a fourth ?, so the
+# audit still counts one more than is grouped
+25 144 ???
