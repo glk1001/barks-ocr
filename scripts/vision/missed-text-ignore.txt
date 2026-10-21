@@ -941,3 +941,11 @@ HELP KEEP AMERICA STRONG
 # printer's job code D/D 2003-003, which the pass grouped as background g6; the review
 # deleted that group, so the capture's copy of the code is no longer grouped by design
 25 152 D/D 2003-003
+
+# The Golden Nugget Boat (reviewer, 2026-10-21, missed-text queue): not given a group, as
+# elsewhere in the corpus -- 007's drawn $ on the money bag (panel 1), 015's DRUG store
+# sign clipped by the panel border (panel 1), and 025's drawn music notes round Scrooge's
+# song (panel 4; the review took the notes out of the balloon's text)
+26 007 $
+26 015 DRUG
+26 025 ♪
