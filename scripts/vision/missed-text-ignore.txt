@@ -983,3 +983,8 @@ HELP KEEP AMERICA STRONG
 26 045 $
 26 046 $
 26 052 $
+
+# Deleted by the review (Clothes Make the Duck, reviewer, 2026-10-21): 050 panel 1's DUCK was
+# grouped by the pass as background g2; the review dropped it as a fragment, so the capture's
+# copy is no longer grouped by design
+26 050 DUCK
