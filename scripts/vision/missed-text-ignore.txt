@@ -976,3 +976,10 @@ HELP KEEP AMERICA STRONG
 26 028 HOU W PALA $10
 26 028 SALE
 26 029 VIEW LOTS WITH (PERISCOPE) 10.00
+
+# Clothes Make the Duck (reviewer, 2026-10-21, missed-text queue): drawn $ not given a group,
+# as elsewhere in the corpus -- 045's money bags (panels 1, 2 and 7), 046's banknotes and
+# money bag (panels 1-4) and 052's money bag (panel 2)
+26 045 $
+26 046 $
+26 052 $
