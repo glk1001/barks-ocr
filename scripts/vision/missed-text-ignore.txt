@@ -949,3 +949,8 @@ HELP KEEP AMERICA STRONG
 26 007 $
 26 015 DRUG
 26 025 ♪
+
+# The Golden Nugget Boat (reviewer, 2026-10-21): 008 panel 5's building sign is stored at
+# its full text, McDuck BLDG. $, so the clipped lettering the pass transcribed no longer
+# matches any group
+26 008 Mc BI $
