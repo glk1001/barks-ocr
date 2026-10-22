@@ -359,12 +359,18 @@ def _split_into_columns(items: list[dict], page_width: float | None = None) -> l
     return columns
 
 
-# Footnote markers: in this book LlamaParse emits a footnote-bearing text
-# item with ``bbox[0].label == "footnote"``. The body marker that points at
-# such a footnote is a literal asterisk that survives into the markdown as
-# the escaped sequence ``\*`` — italics use bare ``*``, so matching ``\*``
-# only is unambiguous and avoids tagging italic openers/closers.
+# Footnote markers: LlamaParse emits a footnote-bearing text item with
+# ``bbox[0].label == "footnote"``. The body marker that points at such a
+# footnote is either a literal asterisk that survives into the markdown as the
+# escaped sequence ``\*`` (italics use bare ``*``, so matching ``\*`` only is
+# unambiguous and avoids tagging italic openers/closers), or — in a book with
+# numbered per-page footnotes — a ``<sup>N</sup>`` superscript. The numbered
+# form is only treated as a marker on a page whose footnote items themselves
+# open with ``<sup>N</sup>``, so endnote references on other books' pages
+# (which ``_linkify_footnotes`` handles) are left alone.
 _BODY_FOOTNOTE_MARKER_RE = re.compile(r"\\\*")
+_NUMBERED_FOOTNOTE_MARKER_RE = re.compile(r"\\\*|<sup>(\d+)</sup>")
+_FOOTNOTE_HEAD_SUP_RE = re.compile(r"^<sup>\d+</sup>\s*")
 
 
 def _is_footnote_item(item: dict) -> bool:
@@ -379,16 +385,18 @@ def _group_footnote_items(page: BookPage) -> list[list[dict]]:
     """Group footnote-tagged text items into one list per logical footnote.
 
     A new group starts whenever a footnote item's text begins with an asterisk
-    (raw or markdown-escaped); subsequent footnote items without a leading
-    marker are continuations of the current footnote (LlamaParse occasionally
-    splits a long footnote at a layout break).
+    (raw or markdown-escaped) or a ``<sup>N</sup>`` number; subsequent footnote
+    items without a leading marker are continuations of the current footnote
+    (LlamaParse occasionally splits a long footnote at a layout break).
     """
     groups: list[list[dict]] = []
     for item in page.items:
         if not _is_footnote_item(item) or item.get("type") != "text":
             continue
         md_lstrip = (item.get("md") or "").lstrip()
-        starts_marker = md_lstrip.startswith(("\\*", "*"))
+        starts_marker = md_lstrip.startswith(("\\*", "*")) or bool(
+            _FOOTNOTE_HEAD_SUP_RE.match(md_lstrip)
+        )
         if starts_marker or not groups:
             groups.append([item])
         else:
@@ -410,26 +418,41 @@ def _merge_footnote_continuations(page: BookPage, groups: list[list[dict]]) -> N
             page.items.remove(tail)
 
 
-def _substitute_body_markers(page: BookPage, page_id: int) -> int:
-    r"""Replace every body ``\*`` with an EPUB3 noteref. Returns the count."""
+def _page_uses_numbered_footnotes(groups: list[list[dict]]) -> bool:
+    """Return True if any footnote group on the page opens with ``<sup>N</sup>``."""
+    return any(_FOOTNOTE_HEAD_SUP_RE.match((g[0].get("md") or "").lstrip()) for g in groups)
+
+
+def _substitute_body_markers(page: BookPage, page_id: int, *, numbered: bool) -> int:
+    r"""Replace every body footnote marker with an EPUB3 noteref. Returns the count.
+
+    Args:
+        page: Book page; text items' ``md`` is rewritten in place.
+        page_id: The page's global index, used to build unique anchor ids.
+        numbered: If True, ``<sup>N</sup>`` counts as a marker alongside ``\*``
+            and the noteref shows ``N``; otherwise only ``\*`` is matched.
+
+    """
+    marker_re = _NUMBERED_FOOTNOTE_MARKER_RE if numbered else _BODY_FOOTNOTE_MARKER_RE
     counter = 0
     for item in page.items:
         if _is_footnote_item(item) or item.get("type") != "text":
             continue
         md = item.get("md")
-        if not isinstance(md, str) or "\\*" not in md:
+        if not isinstance(md, str) or not marker_re.search(md):
             continue
 
-        def _repl(_: re.Match[str]) -> str:
+        def _repl(m: re.Match[str]) -> str:
             nonlocal counter
             counter += 1
+            label = m.group(1) if numbered and m.group(1) else "*"
             return (
                 f'<sup><a id="fnref-{page_id}-{counter}" '
                 f'epub:type="noteref" href="#fn-{page_id}-{counter}" '
-                f'role="doc-noteref">*</a></sup>'
+                f'role="doc-noteref">{label}</a></sup>'
             )
 
-        item["md"] = _BODY_FOOTNOTE_MARKER_RE.sub(_repl, md)
+        item["md"] = marker_re.sub(_repl, md)
     return counter
 
 
@@ -463,12 +486,16 @@ def _link_page_footnotes(page: BookPage) -> None:
     _merge_footnote_continuations(page, groups)
 
     page_id = page.page_index_global
-    found = _substitute_body_markers(page, page_id)
+    numbered = _page_uses_numbered_footnotes(groups)
+    found = _substitute_body_markers(page, page_id, numbered=numbered)
 
     for n, group in enumerate(groups, start=1):
         head = group[0]
+        head_md = (head.get("md") or "").lstrip()
+        sup = _FOOTNOTE_HEAD_SUP_RE.match(head_md)
         head["_footnote_num"] = n
         head["_footnote_page_id"] = page_id
+        head["_footnote_label"] = sup.group(0).strip()[5:-6] if sup else "*"
 
     if found != len(groups):
         logger.warning(
@@ -1181,7 +1208,7 @@ def _render_item_html(page: BookPage, item: dict, md_renderer: MarkdownIt) -> st
 def _render_footnote_html(item: dict, md_renderer: MarkdownIt) -> str:
     r"""Render a footnote-tagged item as an EPUB3 ``<aside>`` block.
 
-    The leading ``\*`` (or ``*``) marker is stripped from the item's markdown
+    The leading ``\*`` (or ``*``, or ``<sup>N</sup>``) marker is stripped from the item's markdown
     before rendering, then a backlink to the body marker is injected at the
     start of the first paragraph so EPUB readers without a built-in popup can
     still navigate back. ``_link_page_footnotes`` is responsible for setting
@@ -1195,10 +1222,13 @@ def _render_footnote_html(item: dict, md_renderer: MarkdownIt) -> str:
         body_md = body_md[2:].lstrip()
     elif body_md.startswith("*"):
         body_md = body_md[1:].lstrip()
+    else:
+        body_md = _FOOTNOTE_HEAD_SUP_RE.sub("", body_md)
     rendered = md_renderer.render(body_md).strip()
     n = item["_footnote_num"]
     page_id = item["_footnote_page_id"]
-    backlink = f'<sup><a href="#fnref-{page_id}-{n}" role="doc-backlink">*</a></sup> '
+    label = item.get("_footnote_label", "*")
+    backlink = f'<sup><a href="#fnref-{page_id}-{n}" role="doc-backlink">{label}</a></sup> '
     if rendered.startswith("<p>"):
         rendered = "<p>" + backlink + rendered[len("<p>") :]
     else:
