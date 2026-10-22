@@ -1,0 +1,189 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "14",
+              "value": "14",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nMAHARAJAH DONALD",
+              "value": "CARL BARKS' DUCK\nMAHARAJAH DONALD",
+              "bbox": [
+                {
+                  "h": 13.78,
+                  "w": 97.55,
+                  "x": 247.28,
+                  "y": 75.08,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.36,
+                  "w": 116.47,
+                  "x": 577.99,
+                  "y": 77.24,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "15",
+              "value": "15",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "14\n\nCARL BARKS' DUCK\nMAHARAJAH DONALD\n\n15",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "by the 1970s, except that a lot of countries were beginning to assert themselves against America's intellectual and military attitude of superiority.",
+          "value": "by the 1970s, except that a lot of countries were beginning to assert themselves against America's intellectual and military attitude of superiority.",
+          "bbox": [
+            {
+              "h": 41.69,
+              "w": 310.38,
+              "x": 134.24,
+              "y": 98.03,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "However, even if you welcomed this chaos—as my Dad, a man who cut his teeth protesting in the 60s and 70s, did—stories like \"Maharajah Donald,\" with their old school attitude, nonetheless have that grand air of adventure; a Joseph Campbell sense of heroes revealing themselves through sheer chance. And, they are entertaining as all hell. This is early Barks, a story where we see him, and maybe even his hero, cutting their teeth, wriggling into their roles and trying to make them fit.",
+          "value": "However, even if you welcomed this chaos—as my Dad, a man who cut his teeth protesting in the 60s and 70s, did—stories like \"Maharajah Donald,\" with their old school attitude, nonetheless have that grand air of adventure; a Joseph Campbell sense of heroes revealing themselves through sheer chance. And, they are entertaining as all hell. This is early Barks, a story where we see him, and maybe even his hero, cutting their teeth, wriggling into their roles and trying to make them fit.",
+          "bbox": [
+            {
+              "h": 109.63,
+              "w": 311.99,
+              "x": 130.81,
+              "y": 140.61,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "From that splash panel giving us a clue of Donald's strange fate, we cut to our \"hero,\" such as he is, standing in front of his garage, beckoning the same nephews to come and haul away the accumulated junk that threatens to tumble out into the street. He makes a deal: \"When you're finished, I'll give you any of the junk I don't want to keep!\"<sup>2</sup> But the next panel sees a close-up of Donald, smiling, saying to himself, \"They work real hard when they think they're going to get paid!\"",
+          "value": "From that splash panel giving us a clue of Donald's strange fate, we cut to our \"hero,\" such as he is, standing in front of his garage, beckoning the same nephews to come and haul away the accumulated junk that threatens to tumble out into the street. He makes a deal: \"When you're finished, I'll give you any of the junk I don't want to keep!\"<sup>2</sup> But the next panel sees a close-up of Donald, smiling, saying to himself, \"They work real hard when they think they're going to get paid!\"",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "From there the story takes off. \"Maharajah Donald\" is the first of the early Donald Duck comics (it was Barks' seventh full-length story) that I think is worthy of extensive commentary. In the first page, from that first panel, we're already sent rolling into what we know will turn out to be a crazy story. This is one of the few, if only, stories where the splash panel gives us a mysterious clue as to the climax of the story—usually the panel serves as a bold beginning as opposed to foreshadowing. Donald will somehow become a Maharajah, but then Barks drags us back home, and this adventure begins in a garage, in the stifling banality of Burbank (where Barks' early Duck stories were",
+          "value": "From there the story takes off. \"Maharajah Donald\" is the first of the early Donald Duck comics (it was Barks' seventh full-length story) that I think is worthy of extensive commentary. In the first page, from that first panel, we're already sent rolling into what we know will turn out to be a crazy story. This is one of the few, if only, stories where the splash panel gives us a mysterious clue as to the climax of the story—usually the panel serves as a bold beginning as opposed to foreshadowing. Donald will somehow become a Maharajah, but then Barks drags us back home, and this adventure begins in a garage, in the stifling banality of Burbank (where Barks' early Duck stories were",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "situated.) The nephews, good and earnest, will get screwed by their jerk of an uncle and, probably, save the day with their wit and pluck. And this happens. Watching it unfold is the fun, and the method by which the kids launch this adventure makes the reader believe that this could happen to them. Implausible, perhaps, but stranger things have happened.",
+          "value": "situated.) The nephews, good and earnest, will get screwed by their jerk of an uncle and, probably, save the day with their wit and pluck. And this happens. Watching it unfold is the fun, and the method by which the kids launch this adventure makes the reader believe that this could happen to them. Implausible, perhaps, but stranger things have happened.",
+          "bbox": [
+            {
+              "h": 82.47,
+              "w": 311.16,
+              "x": 475.03,
+              "y": 103.03,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "At the time of \"Maharajah Donald,\" Barks was writing numerous stories in which Donald would lord over the only people who could be lorded over by such a shiftless loaf—namely, his nephews, Huey, Dewey and Louie. Naturally, they rebel—this was in fact a variation on the theme of the nephews being Katzenjammer-like<sup>3</sup> kids in the cartoons, but expanded and made richer in the comics. Here, as in many other stories, the nephews are mischievous but also hardworking, intelligent, and capable of very adult behavior, in fact, more adult than their guardian. They do not do mischief simply for the sake of discord, waiting to be suppressed by punitive adults. No, the nephews react to the very improper and mean-spirited (not to mention cowardly) behavior on the part of their uncle. Admittedly, I am not a huge fan of this plotline, and the better stories (as you will see) involve a nice balance between all the ducks sniping at one another but eventually helping each other out. Here, the nephews do all the saving.",
+          "value": "At the time of \"Maharajah Donald,\" Barks was writing numerous stories in which Donald would lord over the only people who could be lorded over by such a shiftless loaf—namely, his nephews, Huey, Dewey and Louie. Naturally, they rebel—this was in fact a variation on the theme of the nephews being Katzenjammer-like<sup>3</sup> kids in the cartoons, but expanded and made richer in the comics. Here, as in many other stories, the nephews are mischievous but also hardworking, intelligent, and capable of very adult behavior, in fact, more adult than their guardian. They do not do mischief simply for the sake of discord, waiting to be suppressed by punitive adults. No, the nephews react to the very improper and mean-spirited (not to mention cowardly) behavior on the part of their uncle. Admittedly, I am not a huge fan of this plotline, and the better stories (as you will see) involve a nice balance between all the ducks sniping at one another but eventually helping each other out. Here, the nephews do all the saving.",
+          "bbox": [
+            {
+              "h": 212.03,
+              "w": 311.92,
+              "x": 472.93,
+              "y": 186.58,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "This young trio was named after Huey Long, Thomas Dewey (ambitious governors of Louisiana and New York, respectively), and Louis Schmitt, an animator at Disney, for whatever that's worth. They are the perfect foil to Donald, and if you're a kid, they're a nice way to connect to each story. I'm not entirely sure young characters are necessary for children to appreciate any story, much less a Donald",
+          "value": "This young trio was named after Huey Long, Thomas Dewey (ambitious governors of Louisiana and New York, respectively), and Louis Schmitt, an animator at Disney, for whatever that's worth. They are the perfect foil to Donald, and if you're a kid, they're a nice way to connect to each story. I'm not entirely sure young characters are necessary for children to appreciate any story, much less a Donald",
+          "bbox": [
+            {
+              "h": 84.55,
+              "w": 311.67,
+              "x": 471.49,
+              "y": 397.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "<sup>2</sup> Barks always ends his sentences with an exclamation point and often bolds specific words for effect—with every quote from a comic that I use, the emphasis is always Barks'. <sup>3</sup> *The Katzenjammer Kids* was one of the earliest and most popular newspaper strips (the first to use word balloons), written by Rudolph Dirks and drawn by Harold H. Knerr. The stories were essentially always the same—two brothers, younger boys, who wreak havoc on the world. Such was their popularity that they became synonymous with unruly children.",
+              "value": "<sup>2</sup> Barks always ends his sentences with an exclamation point and often bolds specific words for effect—with every quote from a comic that I use, the emphasis is always Barks'.\n<sup>3</sup> The Katzenjammer Kids was one of the earliest and most popular newspaper strips (the first to use word balloons), written by Rudolph Dirks and drawn by Harold H. Knerr. The stories were essentially always the same—two brothers, younger boys, who wreak havoc on the world. Such was their popularity that they became synonymous with unruly children.",
+              "bbox": [
+                {
+                  "h": 54.35,
+                  "w": 311.87,
+                  "x": 470.18,
+                  "y": 504.13,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "footnote",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "<sup>2</sup> Barks always ends his sentences with an exclamation point and often bolds specific words for effect—with every quote from a comic that I use, the emphasis is always Barks'.\n<sup>3</sup> *The Katzenjammer Kids* was one of the earliest and most popular newspaper strips (the first to use word balloons), written by Rudolph Dirks and drawn by Harold H. Knerr. The stories were essentially always the same—two brothers, younger boys, who wreak havoc on the world. Such was their popularity that they became synonymous with unruly children.",
+          "bbox": null,
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "14, 15"
+    }
+  ]
+}

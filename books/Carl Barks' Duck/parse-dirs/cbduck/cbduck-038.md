@@ -1,0 +1,21 @@
+any day.
+
+The opening panel is a whirl of action. Donald and the boys are slightly airborne in old 313, indicating speed. Our man's taking a curve fast, wide-eyed and smiling, almost tumbling over the side of the road and off into a rushing waterfall that ends below in a whirlpool (with vultures circling overhead.) A snarling mountain lion, as big as the car, is poised to leap from a branch in the upper left, while a raging bear pursues the car in the upper right. In his eagerness to get out of the city, Donald's racing so fast that he fails to notice he's almost bouncing the boys out of the back—Huey reaches out for Donald, while Dewey hangs on for dear life, clutching Louie, who has just fallen off the rear and almost into the jaws of the bear.
+
+"Ah! Vacation time! The one season of the year when we can get away from the dangers of city living!" Donald says with a happy smile on his face, oblivious to the many threats on this mountain road.
+
+From here on out we will get the standard eight panel per page layout (with some variations), but the panels, as if on some sort of laughing gas, will bend and point and make room for a world which is meant to be as elastic as salt-water taffy. The joke of the first giant panel—that this treacherous world is perceived as safer than the big city of Duckburg—is repeated through the next two pages, with Donald as usual getting everyone lost.
+
+The difference here, and one that we'll see played out later, is that "Vacation Time" is definitely Donald's terrain—the boys will help, will laugh at their uncle, but it is Donald who is in charge, and it is he who saves them. He is oblivious to danger here, but when he does see it, he reacts bravely.
+
+After that first joke, Barks' comic timing kicks in beautifully, filling each panel with lovely detail, as the family climbs the mountains heading to the National Park where they'll camp. "Peaceful country roads! No trucks roaring at you from blind cross streets!" he says as a mountain locomotive bears down on them. "No traffic jams! No
+
+***
+
+
+
+noise!" he observes as they squeeze across a mountain bridge that is jam packed with sheep. A hay truck will nearly push them into a ditch while Donald complains about city road hogs, and later, when he repairs an already well-patched inner tube, he wonders aloud how he'd survive if he had to fix the flat on the corner of Wilshire and Vermont (back in Duckburg, one presumes.) As he says this, two wolves and a coiling rattlesnake appear ready to strike, yet only the nephews are sweating.
+
+Visually, the page is split into two halves, each half taking the clan deeper into the wilderness. The "editing" here is spot-on: just as a motion picture moves you along with the removal of banal information between action shots, so, too, does Barks carry these Ducks up the mountain pass swiftly, for maximum comic effect. In each half of page two, which is made up of seven total panels, the panels bend inward, bringing the eye, as in the first large page, into distinct focal points, a sort of cone that the Ducks strive to move toward as they try and reach their destination. The top four panels point inward, the little car is always pointing in the direction in which the panel is bent, leading them toward that same center, which heads to their destination. Deeper and deeper into this friendly abyss we'll go.
+
+This is a fish out of its urban water—Donald is oblivious, of course, to the dangers of the wild, the beasts and the uneven roads. Though who hasn't been a passenger in a car on a mountain road and felt as though the driver didn't know what they were doing? Presumably Donald can see the road in front of him, even if he can't see the screaming eagle bearing down on them in the large panel in the bottom half of page two. This one is another favorite, and indicates the almost magic nature of the 313 auto: Donald's at the wheel on a steep incline, so steep that one boy pushes it at the bumper, another pushes at the long end of a stick (which makes no sense, insofar as physics is concerned, but who cares), and another nephew pulls the car up with a rope, all the while that golden eagle seems determined to pluck their smiling

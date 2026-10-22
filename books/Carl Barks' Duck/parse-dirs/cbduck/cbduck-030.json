@@ -1,0 +1,129 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "illustration: comic panel of a duck character shouting \"YEEK!\"",
+          "value": "illustration: comic panel of a duck character shouting \"YEEK!\"",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Fig. 15. The Magic Hourglass, 13:7",
+          "value": "Fig. 15. The Magic Hourglass, 13:7",
+          "bbox": [
+            {
+              "h": 29.32,
+              "w": 135.13,
+              "x": 643.77,
+              "y": 192.49,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            },
+            {
+              "h": 10.89,
+              "w": 111.53,
+              "x": 228.54,
+              "y": 342.87,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## THE EVIL THAT MEN DO:",
+          "value": "THE EVIL THAT MEN DO:",
+          "bbox": [
+            {
+              "h": 13.676712328767138,
+              "w": 133.35367499999995,
+              "x": 644.41125,
+              "y": 192.00000000000003,
+              "confidence": 0.5,
+              "end_index": 23,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "*The Magic Hourglass*",
+          "value": "The Magic Hourglass",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Let me admit something: I think Uncle Scrooge is a jerk. \"The Magic Hourglass\" will only prove this point if I'm willing to ignore every other Scrooge comic in existence. For whatever reason, Carl Barks thought very highly of the old man, and readers have come to agree. As I've stated, I do actually like some of the Scrooge comics. But I have to confess to being prejudiced against the wealthy in general, and this certainly affects my impression of the old duck.",
+          "value": "Let me admit something: I think Uncle Scrooge is a jerk. \"The Magic Hourglass\" will only prove this point if I'm willing to ignore every other Scrooge comic in existence. For whatever reason, Carl Barks thought very highly of the old man, and readers have come to agree. As I've stated, I do actually like some of the Scrooge comics. But I have to confess to being prejudiced against the wealthy in general, and this certainly affects my impression of the old duck.",
+          "bbox": [
+            {
+              "h": 105.1,
+              "w": 312.11,
+              "x": 465.03,
+              "y": 261.02,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I honestly cannot comprehend wanting to read the \"heroic\" Scrooge McDuck again and again. His Money Bin is an oppressive, depressing place, with its fat piles of cash and coin, dollar signs everywhere, nothing of beauty anywhere, just a place for a miser to hoard the world's wealth. Scrooge has no friends, no companions, just scared sycophants and brow-beaten opponents. At various times enemies swoop in to steal his fortune or challenge his status as the wealthiest man on earth. Really: who doesn't root for the Beagle Boys in their pursuit? Or wish that someone, anyone, would beat this old miser? Too often gifts to the poor have to be tricked out of him, and even then he seems pained, as if by a stomach ailment, to release even a damn dime. Yes, in the parlance of today's trickle-down economics, Scrooge creates jobs, but no one is empowered by these, rather, they're",
+          "value": "I honestly cannot comprehend wanting to read the \"heroic\" Scrooge McDuck again and again. His Money Bin is an oppressive, depressing place, with its fat piles of cash and coin, dollar signs everywhere, nothing of beauty anywhere, just a place for a miser to hoard the world's wealth. Scrooge has no friends, no companions, just scared sycophants and brow-beaten opponents. At various times enemies swoop in to steal his fortune or challenge his status as the wealthiest man on earth. Really: who doesn't root for the Beagle Boys in their pursuit? Or wish that someone, anyone, would beat this old miser? Too often gifts to the poor have to be tricked out of him, and even then he seems pained, as if by a stomach ailment, to release even a damn dime. Yes, in the parlance of today's trickle-down economics, Scrooge creates jobs, but no one is empowered by these, rather, they're",
+          "bbox": [
+            {
+              "h": 185.26,
+              "w": 313.68,
+              "x": 462.59,
+              "y": 365.88,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "caption": "",
+          "md": "![](cbduck-030_fig_1.png)",
+          "url": "cbduck-030_fig_1.png",
+          "bbox": [
+            {
+              "h": 160.12,
+              "w": 217.54,
+              "x": 177.11,
+              "y": 182.49,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "52, 53"
+    }
+  ]
+}

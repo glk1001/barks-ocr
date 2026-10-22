@@ -1,0 +1,211 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "56",
+              "value": "56",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK",
+              "value": "CARL BARKS' DUCK",
+              "bbox": [
+                {
+                  "h": 11.79,
+                  "w": 98.05,
+                  "x": 229.88,
+                  "y": 65.69,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "THE MAGIC HOURGLASS",
+              "value": "THE MAGIC HOURGLASS",
+              "bbox": [
+                {
+                  "h": 11.93,
+                  "w": 128.25,
+                  "x": 554.67,
+                  "y": 69.8,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "57",
+              "value": "57",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "56\n\nCARL BARKS' DUCK\n\nTHE MAGIC HOURGLASS\n\n57",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "As with most of the Barks stories involving secret lands and treasures, it takes an elderly man to give them valuable information—a history lesson—that pushes our heroes in the right direction. An elderly junkman, whom the nephews try to sell the hourglass for a whole dime, scoffs at their request and says \"and don't try to tell me it's a magic hourglass just because of what's written on the top of it!\" (see Fig. 16) The writing, in ancient Arabic (in which the vendor in Duckburg is somehow fluent), reads that when the hourglass keeps perfect time, the owner will \"grow richer by the hour!\"",
+          "value": "As with most of the Barks stories involving secret lands and treasures, it takes an elderly man to give them valuable information—a history lesson—that pushes our heroes in the right direction. An elderly junkman, whom the nephews try to sell the hourglass for a whole dime, scoffs at their request and says \"and don't try to tell me it's a magic hourglass just because of what's written on the top of it!\" (see Fig. 16) The writing, in ancient Arabic (in which the vendor in Duckburg is somehow fluent), reads that when the hourglass keeps perfect time, the owner will \"grow richer by the hour!\"",
+          "bbox": [
+            {
+              "h": 126.83,
+              "w": 311.38,
+              "x": 116.53,
+              "y": 91.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The Ducks quickly realize that their fortunes are tied together—with the boat, they can get to Africa to fill that hourglass and make them wealthy (they quickly put two kazillion and two kazillion together to realize that Uncle Scrooge's fortune was founded on this hourglass' magic.) Unfortunately, the boat is in no condition to sail across the Atlantic Ocean (admittedly, it seems too small to cross the sea even in top shape.) Thinking the hourglass might have some residue of good fortune in its red sand, the whole clan close their eyes and begin walking, holding it aloft like a beacon lighting their way through the darkness.",
+          "value": "The Ducks quickly realize that their fortunes are tied together—with the boat, they can get to Africa to fill that hourglass and make them wealthy (they quickly put two kazillion and two kazillion together to realize that Uncle Scrooge's fortune was founded on this hourglass' magic.) Unfortunately, the boat is in no condition to sail across the Atlantic Ocean (admittedly, it seems too small to cross the sea even in top shape.) Thinking the hourglass might have some residue of good fortune in its red sand, the whole clan close their eyes and begin walking, holding it aloft like a beacon lighting their way through the darkness.",
+          "bbox": [
+            {
+              "h": 135.7,
+              "w": 312.75,
+              "x": 113.54,
+              "y": 217.2,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Again, the magic of Disney training came through for Barks here, as the \"whatever works\" philosophy took hold suddenly. Follow this thread: The Ducks, eyes closed, walk right off the end of the pier and into the drink. Underwater, Donald spies two great white sharks (which tells us for the first time that Duckburg is on the sea.) They race at him, teeth bared. Somehow he dives and they smack their heads against the pier, which knocks them out. So, the ducks tie the groggy sharks to either side of the Junk II, and use them as snarling engines to cross a turbulent sea. (see Plate 7)",
+          "value": "Again, the magic of Disney training came through for Barks here, as the \"whatever works\" philosophy took hold suddenly. Follow this thread: The Ducks, eyes closed, walk right off the end of the pier and into the drink. Underwater, Donald spies two great white sharks (which tells us for the first time that Duckburg is on the sea.) They race at him, teeth bared. Somehow he dives and they smack their heads against the pier, which knocks them out. So, the ducks tie the groggy sharks to either side of the Junk II, and use them as snarling engines to cross a turbulent sea. (see Plate 7)",
+          "bbox": [
+            {
+              "h": 125.37,
+              "w": 312.27,
+              "x": 111.39,
+              "y": 357.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I mean, fucking hell. There is an amazing splash panel, one of my favorites, a riotous symphony of movement—Donald sits high atop a chair which is nearly as tall as the mast on the ship, and he's cracking a whip; we see both sharks' faces, with teeth exposed looking very",
+          "value": "I mean, fucking hell. There is an amazing splash panel, one of my favorites, a riotous symphony of movement—Donald sits high atop a chair which is nearly as tall as the mast on the ship, and he's cracking a whip; we see both sharks' faces, with teeth exposed looking very",
+          "bbox": [
+            {
+              "h": 59.03,
+              "w": 311.49,
+              "x": 109.89,
+              "y": 483.53,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "much like the nose of a World War II spitfire with its fangs painted on; one of the kids is halfway up the mast, pointing at the portside shark, the other is at the wheel, while the other checks the rope which binds the starboard shark. This is a turbulent sea, and the Junk II is sliding down the front of the wave, its prow cutting through the sea, water surging onto the deck. And this is in the narration box:",
+          "value": "much like the nose of a World War II spitfire with its fangs painted on; one of the kids is halfway up the mast, pointing at the portside shark, the other is at the wheel, while the other checks the rope which binds the starboard shark. This is a turbulent sea, and the Junk II is sliding down the front of the wave, its prow cutting through the sea, water surging onto the deck. And this is in the narration box:",
+          "bbox": [
+            {
+              "h": 83.56,
+              "w": 310.69,
+              "x": 457.45,
+              "y": 94.96,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Father Neptune has seen some strange ships cross his broad oceans, but none stranger than the argosy of the fortune-hunting Ducks!",
+          "value": "Father Neptune has seen some strange ships cross his broad oceans, but none stranger than the argosy of the fortune-hunting Ducks!",
+          "bbox": [
+            {
+              "h": 28.77,
+              "w": 301.23,
+              "x": 465.64,
+              "y": 193.41,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But that's it! One magnificent panel, encompassing the whole of their adventure across the sea, and then we cut back to Duckburg, and Scrooge just now figuring out that this hourglass is the secret to his success. We see the worst of his life: trapped in an office while whole rooms full of terrified men sweat profusely, agonizing over the reports that their miserly boss is losing a billion dollars a minute.",
+          "value": "But that's it! One magnificent panel, encompassing the whole of their adventure across the sea, and then we cut back to Duckburg, and Scrooge just now figuring out that this hourglass is the secret to his success. We see the worst of his life: trapped in an office while whole rooms full of terrified men sweat profusely, agonizing over the reports that their miserly boss is losing a billion dollars a minute.",
+          "bbox": [
+            {
+              "h": 84.45,
+              "w": 311.43,
+              "x": 455.45,
+              "y": 235.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "And here is another specific detail that sets these stories between the two ducks apart: hyperbole. Donald does some crazy things in his tales, but he is always grounded in our reality. Until we hit the \"Brittle Mastery\" stories later, we see that Donald's exploits are ridiculous in a screwball comedy way. From sharks guiding a boat, to the search for a Gilded Man, and a lost civilization in the mists of the Andes Mountains—all of these could happen, and in fact they do in our imagination, without tremendous leaps of faith. At one point in \"The Magic Hourglass,\" Scrooge begins weeping and says \"I can't go on like this—losing a billion dollars a minute! I'll be broke in 600 years!\" Never mind that this joke is stolen from *Citizen Kane* (where Kane jokes that the loss of a million dollars a year on a newspaper will result in the end of his fortune in sixty years, which, in fact, we've already seen occur in flashback), but it also signifies that Scrooge has superhuman wealth. Doing the math, this means his wealth sits at 18,921,600,000,000,000,000 dollars—almost 19 quintillion dollars,",
+          "value": "And here is another specific detail that sets these stories between the two ducks apart: hyperbole. Donald does some crazy things in his tales, but he is always grounded in our reality. Until we hit the \"Brittle Mastery\" stories later, we see that Donald's exploits are ridiculous in a screwball comedy way. From sharks guiding a boat, to the search for a Gilded Man, and a lost civilization in the mists of the Andes Mountains—all of these could happen, and in fact they do in our imagination, without tremendous leaps of faith. At one point in \"The Magic Hourglass,\" Scrooge begins weeping and says \"I can't go on like this—losing a billion dollars a minute! I'll be broke in 600 years!\" Never mind that this joke is stolen from Citizen Kane (where Kane jokes that the loss of a million dollars a year on a newspaper will result in the end of his fortune in sixty years, which, in fact, we've already seen occur in flashback), but it also signifies that Scrooge has superhuman wealth. Doing the math, this means his wealth sits at 18,921,600,000,000,000,000 dollars—almost 19 quintillion dollars,",
+          "bbox": [
+            {
+              "h": 225.92,
+              "w": 312.74,
+              "x": 453.33,
+              "y": 319.91,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "56, 57"
+    }
+  ]
+}

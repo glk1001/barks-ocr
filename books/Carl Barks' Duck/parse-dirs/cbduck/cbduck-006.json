@@ -1,0 +1,228 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "4",
+              "value": "4",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nINTRODUCTION",
+              "value": "CARL BARKS' DUCK\nINTRODUCTION",
+              "bbox": [
+                {
+                  "h": 15.33,
+                  "w": 98.95,
+                  "x": 246.33,
+                  "y": 66.72,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.79,
+                  "w": 80.14,
+                  "x": 595.17,
+                  "y": 77.61,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "5",
+              "value": "5",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "4\n\nCARL BARKS' DUCK\nINTRODUCTION\n\n5",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "heroes and tough, solid villains. I wanted a decent adventure even if there were no villains.",
+          "value": "heroes and tough, solid villains. I wanted a decent adventure even if there were no villains.",
+          "bbox": [
+            {
+              "h": 27.21,
+              "w": 310.53,
+              "x": 133.75,
+              "y": 88.23,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "And I got them, every once in awhile, from the Donald Duck comics that my Dad brought home. Sometimes, you'd get a Duck comic that was insipid. Other times, though, you got one that wasn't just fun, it was spectacular—witty, exciting, hilarious.",
+          "value": "And I got them, every once in awhile, from the Donald Duck comics that my Dad brought home. Sometimes, you'd get a Duck comic that was insipid. Other times, though, you got one that wasn't just fun, it was spectacular—witty, exciting, hilarious.",
+          "bbox": [
+            {
+              "h": 60.58,
+              "w": 310.97,
+              "x": 131.11,
+              "y": 116.83,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Problem was, neither my father nor myself nor my brother knew exactly how to find those \"good\" comics. These were, of course, the Donald Duck stories written and drawn by Carl Barks. Despite there existing a parallel universe in the 1970s where Carl Barks was being discovered and celebrated by rabid fans, young men who wrote letters to Disney and physically flew themselves to Southern California to meet the man, for the casual reader such as myself, I had no clue as to who wrote and drew these things. Obviously there wasn't an internet, and the revelation that Barks was one of the century's greatest comic book creators was the stuff of fanzines and journals that I didn't have access to, in small part because I didn't care at that age. Instead, I had to make due with the silly Duck stories as drawn by who-the-hell-knows, with their stumpy beaks and cheap backgrounds (not to mention terrible jokes and idiotic stories) or that guy whose lettering was architect-neat and whose ducks were drawn perfectly, his imaginative stories thrilling to the extreme.",
+          "value": "Problem was, neither my father nor myself nor my brother knew exactly how to find those \"good\" comics. These were, of course, the Donald Duck stories written and drawn by Carl Barks. Despite there existing a parallel universe in the 1970s where Carl Barks was being discovered and celebrated by rabid fans, young men who wrote letters to Disney and physically flew themselves to Southern California to meet the man, for the casual reader such as myself, I had no clue as to who wrote and drew these things. Obviously there wasn't an internet, and the revelation that Barks was one of the century's greatest comic book creators was the stuff of fanzines and journals that I didn't have access to, in small part because I didn't care at that age. Instead, I had to make due with the silly Duck stories as drawn by who-the-hell-knows, with their stumpy beaks and cheap backgrounds (not to mention terrible jokes and idiotic stories) or that guy whose lettering was architect-neat and whose ducks were drawn perfectly, his imaginative stories thrilling to the extreme.",
+          "bbox": [
+            {
+              "h": 228.78,
+              "w": 318.63,
+              "x": 120.2,
+              "y": 172.81,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 120.08,
+              "w": 313.25,
+              "x": 115.03,
+              "y": 397.09,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In a sense, this was like walking up to a movie theater with a marquee that read \"Warner Brothers\" and one day you get *Battlefield Earth* another day you get *Jonah Hex* and on yet another day you get Howard Hawks' *The Big Sleep* or Terrence Malick's *Badlands*. You would be stunned by the latter two, hungry for more, hungry to find out just who made these beauties... except that the credits read that the director and writer—hell, everyone who worked on the film—is \"The Warner Brothers.\" It was damned frustrating.",
+          "value": "In a sense, this was like walking up to a movie theater with a marquee that read \"Warner Brothers\" and one day you get Battlefield Earth another day you get Jonah Hex and on yet another day you get Howard Hawks' The Big Sleep or Terrence Malick's Badlands. You would be stunned by the latter two, hungry for more, hungry to find out just who made these beauties... except that the credits read that the director and writer—hell, everyone who worked on the film—is \"The Warner Brothers.\" It was damned frustrating.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Then one day, in 1978, fortified with a bunch of birthday money, I made my way to the local bookstore. There, at the exorbitant price of",
+          "value": "Then one day, in 1978, fortified with a bunch of birthday money, I made my way to the local bookstore. There, at the exorbitant price of",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "$25, was a white coffee-table tome simply titled \"Donald Duck\", with a large picture of Donald, tongue out in determination, chasing after an hourglass. Walt's manufactured signature was up top, and there was a little gold and blue ribbon stamped in the upper-right hand corner that read \"Best Comics\". No slip cover, just pure white on the back. This was a strange publishing venture (even by today's high standards) from some concern called Abbeville Press out of New York City.",
+          "value": "$25, was a white coffee-table tome simply titled \"Donald Duck\", with a large picture of Donald, tongue out in determination, chasing after an hourglass. Walt's manufactured signature was up top, and there was a little gold and blue ribbon stamped in the upper-right hand corner that read \"Best Comics\". No slip cover, just pure white on the back. This was a strange publishing venture (even by today's high standards) from some concern called Abbeville Press out of New York City.",
+          "bbox": [
+            {
+              "h": 97.09,
+              "w": 310.68,
+              "x": 474.85,
+              "y": 104.08,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I sat down and began to read, though I didn't get far. Thumbing through the book, I instantly recognized that they were all the \"good\" Donald Duck stories that I'd come to love. Then I glanced at the introduction, and read:",
+          "value": "I sat down and began to read, though I didn't get far. Thumbing through the book, I instantly recognized that they were all the \"good\" Donald Duck stories that I'd come to love. Then I glanced at the introduction, and read:",
+          "bbox": [
+            {
+              "h": 54.15,
+              "w": 311.0,
+              "x": 474.16,
+              "y": 201.74,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*Being the author and illustrator of the ten short novels*\n*that appear on the following pages...*",
+          "value": "Being the author and illustrator of the ten short novels\nthat appear on the following pages...",
+          "bbox": [
+            {
+              "h": 27.57,
+              "w": 239.04,
+              "x": 492.67,
+              "y": 272.12,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "There he was: Carl Barks. I immediately bought the book, using up all my birthday money and a bit more savings, and raced home to read these little masterpieces. That thing really turned me on to what remains my favorite comic book character, Donald Duck, and it was a perfect introduction to Barks, even if in this edition the coloring is a bit bright and they reformatted each to fit onto such tall pages. Barks, in his introduction, states that the material is \"not juvenile kids' stuff,\" which made me feel all grown-up, and the stories themselves were amazing. From \"Frozen Gold,\" with Donald going snowblind in the tundra as he tries to deliver penicillin to poor Alaskans; to \"Lost in the Andes,\" perhaps Barks' most highly regarded story (the one with the square eggs); to one of my two personal favorites, then and now, \"The Golden Helmet,\" featuring a race for the eponymous treasure that would essentially give its owner tyrannical control over North America and all its people. From then on, I was hooked, and tried to find Barks' stories whenever and wherever I could.",
+          "value": "There he was: Carl Barks. I immediately bought the book, using up all my birthday money and a bit more savings, and raced home to read these little masterpieces. That thing really turned me on to what remains my favorite comic book character, Donald Duck, and it was a perfect introduction to Barks, even if in this edition the coloring is a bit bright and they reformatted each to fit onto such tall pages. Barks, in his introduction, states that the material is \"not juvenile kids' stuff,\" which made me feel all grown-up, and the stories themselves were amazing. From \"Frozen Gold,\" with Donald going snowblind in the tundra as he tries to deliver penicillin to poor Alaskans; to \"Lost in the Andes,\" perhaps Barks' most highly regarded story (the one with the square eggs); to one of my two personal favorites, then and now, \"The Golden Helmet,\" featuring a race for the eponymous treasure that would essentially give its owner tyrannical control over North America and all its people. From then on, I was hooked, and tried to find Barks' stories whenever and wherever I could.",
+          "bbox": [
+            {
+              "h": 223.41,
+              "w": 311.94,
+              "x": 473.04,
+              "y": 313.79,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Since then, I've read probably everything by the \"Duck Man\", from",
+          "value": "Since then, I've read probably everything by the \"Duck Man\", from",
+          "bbox": [
+            {
+              "h": 13.72,
+              "w": 302.01,
+              "x": 481.78,
+              "y": 539.09,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "4, 5"
+    }
+  ]
+}

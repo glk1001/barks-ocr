@@ -1,0 +1,9 @@
+illustration: A park ranger handing a pamphlet to Donald Duck. Speech bubbles: "WHAT'S MORE, YOU LOOK LIKE FELLOWS WHO'LL READ THE RULES AND FOLLOW THEM! HAVE YOURSELVES A GOOD TIME!", "YES, SIR!"
+
+Fig. 17. Vacation Time, 4:7
+
+## THE FORGOTTEN MASTERPIECE: *Vacation Time*
+
+Donald Duck has sought his fortune in the jungles of Guiana, the deserts of Morocco, crossed the ocean and, as you'll soon see, will save North America by following the Viking trail up the coast of Newfoundland. In comics not discussed here, he would spelunk deep into the earth, and zoom on rockets to distant asteroids and planets. But Carl Barks' second greatest comic, in my mind (after "The Golden Helmet"), takes Donald just a few hours outside of Duckburg, on a camping trip. Like Buster Keaton, Donald will be initially perceived as a fool only to shed this embarrassing exoskeleton to reveal, in a terrifying and ultimately moving series of events, a hero unlike any in the Barks canon. "Vacation Time" is the name of the story, and it is one of the most incredible comic book tales ever written, brilliantly composed with an array of panels that bend and twist to give a sense of movement and humor, before returning them to 'normal' shape, and thus allowing them to communicate the gravity of the scene within their borders. "Vacation Time" is Carl Barks' *General*, Donald's best performance, and perhaps the best kept secret in comics.
+
+I don't know what happened to Barks to make him lose his mind on this particular story, but I'm glad that he did. Barks pulled out all the stops in making this as hilarious as any of the slapsticks from

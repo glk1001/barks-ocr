@@ -1,0 +1,322 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "74 CARL BARKS' DUCK VACATION TIME 75",
+              "value": "74 CARL BARKS' DUCK VACATION TIME 75",
+              "bbox": [
+                {
+                  "h": 11.21,
+                  "w": 99.09,
+                  "x": 224.02,
+                  "y": 74.95,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.1,
+                  "w": 83.09,
+                  "x": 578.56,
+                  "y": 72.73,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "74 CARL BARKS' DUCK VACATION TIME 75",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "here we really see that his Donald Duck comics are the perfect \"paper movies\"—the world of Carl Barks is too great to be confined to a \"stage.\" His \"direction\" here is faultless, as page after page revels in a series of bent panels, each one with its close-up, medium-, or long distance shots to achieve maximum effect. Consider page 15, where we see the climax of a chase between Donald and the elusive buck. The nephews have flushed the deer toward a boulder upon which Donald hopes to achieve a rather noble shot. However, a bear has snuck up behind him, unthreatening, wearing a look of dumb curiosity. On the next page, the top four panels are again bent in such a way as to point inward toward one focal point. In the upper left, the trapezoid shows Donald about ready to snap a photo when the bear snatches the camera from his hand. The next panels in the top half are all five sided polygons, bending toward a center of all the action. The bottom half is divided by a page-wide panel that narrows to the left (the direction you're reading), and the bottom two panels slant upwards. The sequence goes as follows:",
+          "value": "here we really see that his Donald Duck comics are the perfect \"paper movies\"—the world of Carl Barks is too great to be confined to a \"stage.\" His \"direction\" here is faultless, as page after page revels in a series of bent panels, each one with its close-up, medium-, or long distance shots to achieve maximum effect. Consider page 15, where we see the climax of a chase between Donald and the elusive buck. The nephews have flushed the deer toward a boulder upon which Donald hopes to achieve a rather noble shot. However, a bear has snuck up behind him, unthreatening, wearing a look of dumb curiosity. On the next page, the top four panels are again bent in such a way as to point inward toward one focal point. In the upper left, the trapezoid shows Donald about ready to snap a photo when the bear snatches the camera from his hand. The next panels in the top half are all five sided polygons, bending toward a center of all the action. The bottom half is divided by a page-wide panel that narrows to the left (the direction you're reading), and the bottom two panels slant upwards. The sequence goes as follows:",
+          "bbox": [
+            {
+              "h": 238.46,
+              "w": 311.39,
+              "x": 112.92,
+              "y": 100.74,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "1.) Donald is about to snap a picture but the bear, whose chest and arm are all we see, snatch the camera from him.",
+          "value": "1.) Donald is about to snap a picture but the bear, whose chest and arm are all we see, snatch the camera from him.",
+          "bbox": [
+            {
+              "h": 25.47,
+              "w": 310.29,
+              "x": 113.02,
+              "y": 353.57,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "2.) Donald turns, infuriated, in full close up, shouting \"Hey! What's the big idea?\"",
+          "value": "2.) Donald turns, infuriated, in full close up, shouting \"Hey! What's the big idea?\"",
+          "bbox": [
+            {
+              "h": 27.39,
+              "w": 310.15,
+              "x": 113.72,
+              "y": 381.62,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "3.) The next panel, extremely narrow like a tower, sees Donald racing up the rock, hat flying off, blubbering \"A b-b-b-b-b-bear!\"",
+          "value": "3.) The next panel, extremely narrow like a tower, sees Donald racing up the rock, hat flying off, blubbering \"A b-b-b-b-b-bear!\"",
+          "bbox": [
+            {
+              "h": 27.1,
+              "w": 310.57,
+              "x": 113.09,
+              "y": 409.8,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "4.) then, the collision: Donald and Buck meet, head on, in the largest panel on the top half, stars and the word SPLAT!",
+          "value": "4.) then, the collision: Donald and Buck meet, head on, in the largest panel on the top half, stars and the word SPLAT!",
+          "bbox": [
+            {
+              "h": 26.8,
+              "w": 310.33,
+              "x": 113.0,
+              "y": 438.02,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "5.) Next page-wide panel has the bear in the wider half, actually taking the picture with a \"Click!\", bewildered, while the deer stands, legs akimbo, Donald underneath, both loopy from the collision and looking like a couple of drunken pals after a bender;",
+          "value": "5.) Next page-wide panel has the bear in the wider half, actually taking the picture with a \"Click!\", bewildered, while the deer stands, legs akimbo, Donald underneath, both loopy from the collision and looking like a couple of drunken pals after a bender;",
+          "bbox": [
+            {
+              "h": 55.61,
+              "w": 310.03,
+              "x": 113.35,
+              "y": 465.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "6.) Next, the bear is leaping away, reacting to the click of the camera, and leaving it behind.",
+          "value": "6.) Next, the bear is leaping away, reacting to the click of the camera, and leaving it behind.",
+          "bbox": [
+            {
+              "h": 26.94,
+              "w": 310.0,
+              "x": 113.08,
+              "y": 522.54,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "7.) And then we conclude with Donald, gazing past us, head in hands, a black \"CENSORED\" bar in his word balloon, while the buck dances away from us, tail in the air, ass toward the reader (and our hero). (see Plate 11)",
+          "value": "7.) And then we conclude with Donald, gazing past us, head in hands, a black \"CENSORED\" bar in his word balloon, while the buck dances away from us, tail in the air, ass toward the reader (and our hero). (see Plate 11)",
+          "bbox": [
+            {
+              "h": 56.0,
+              "w": 311.83,
+              "x": 460.55,
+              "y": 98.58,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "This description doesn't do justice to the speed with which Barks moved this story along. Slapstick requires swift movement, it requires a precise editor who maximizes each image for its full comic effect, and we get that here. We even get Donald breaking the fourth wall, as he gets exasperated to the point of seeking understanding directly from the reader. (see Fig. 19)",
+          "value": "This description doesn't do justice to the speed with which Barks moved this story along. Slapstick requires swift movement, it requires a precise editor who maximizes each image for its full comic effect, and we get that here. We even get Donald breaking the fourth wall, as he gets exasperated to the point of seeking understanding directly from the reader. (see Fig. 19)",
+          "bbox": [
+            {
+              "h": 84.19,
+              "w": 312.18,
+              "x": 461.27,
+              "y": 168.51,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "After fifteen pages of this slapstick, cavorting through this magnificent forest (and I have to say that these moments are not only funny but totally relaxing—Barks has captured this National Forest beautifully) we begin to get indications of trouble. As Donald pursues",
+          "value": "After fifteen pages of this slapstick, cavorting through this magnificent forest (and I have to say that these moments are not only funny but totally relaxing—Barks has captured this National Forest beautifully) we begin to get indications of trouble. As Donald pursues",
+          "bbox": [
+            {
+              "h": 56.44,
+              "w": 312.66,
+              "x": 461.68,
+              "y": 252.68,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "![Donald Duck looking exasperated with a speech bubble saying \"THERE HE IS! RIGHT IN CAMP EATING OUR LEFT-OVER FLAPJACKS!\"](cbduck-041_fig_1.png)",
+          "value": "illustration: Donald Duck looking exasperated with a speech bubble saying \"THERE HE IS! RIGHT IN CAMP EATING OUR LEFT-OVER FLAPJACKS!\"",
+          "bbox": [
+            {
+              "h": 211.57,
+              "w": 144.88,
+              "x": 463.9,
+              "y": 321.1,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-041_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 19. Vacation Time, 12:3",
+          "value": "Fig. 19. Vacation Time, 12:3",
+          "bbox": [
+            {
+              "h": 9.62,
+              "w": 91.83,
+              "x": 516.69,
+              "y": 537.57,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "the buck, finally about to capture a perfect pose, he smells smoke. And here the story turns into one of danger, a more realistic and threatening problem than in any of the Duck comics. In fact, this shared concern for the smoke results in a subtle suggestion of harmony: when Donald smells it, he actually climbs on top of the deer he's been chasing for a better look.",
+          "value": "the buck, finally about to capture a perfect pose, he smells smoke. And here the story turns into one of danger, a more realistic and threatening problem than in any of the Duck comics. In fact, this shared concern for the smoke results in a subtle suggestion of harmony: when Donald smells it, he actually climbs on top of the deer he's been chasing for a better look.",
+          "bbox": [
+            {
+              "h": 180.68,
+              "w": 148.33,
+              "x": 626.86,
+              "y": 308.48,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Vacation Time,\" up to this point a straightforward comedy, becomes fraught with",
+          "value": "\"Vacation Time,\" up to this point a straightforward comedy, becomes fraught with",
+          "bbox": [
+            {
+              "h": 55.03,
+              "w": 115.94,
+              "x": 659.22,
+              "y": 491.55,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 10.779999999999973,
+              "w": 45.24000000000001,
+              "x": 668.87,
+              "y": 491.84,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 14.70999999999998,
+              "w": 35.02999999999997,
+              "x": 740.99,
+              "y": 489.02,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "74, 75"
+    }
+  ]
+}

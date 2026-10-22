@@ -1,0 +1,229 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "42",
+              "value": "42",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN",
+              "value": "CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN",
+              "bbox": [
+                {
+                  "h": 12.02,
+                  "w": 98.57,
+                  "x": 230.52,
+                  "y": 66.8,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.86,
+                  "w": 223.47,
+                  "x": 515.18,
+                  "y": 70.82,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "43",
+              "value": "43",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "42\n\nCARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN\n\n43",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Upon confronting one another, the two hotheads fight, and in the process sink Gladstone's kayak, leaving only Donald's with its four seats. They flip a coin to see who will go for rescue, and of course the lucky one wins. This is where Donald demands Gladstone haul the kids along, but when they scatter, refusing to leave Donald, Gladstone takes off. As he rows away, he sees, in a page wide panel, a Viking ship frozen in the berg (see Plate 4).",
+          "value": "Upon confronting one another, the two hotheads fight, and in the process sink Gladstone's kayak, leaving only Donald's with its four seats. They flip a coin to see who will go for rescue, and of course the lucky one wins. This is where Donald demands Gladstone haul the kids along, but when they scatter, refusing to leave Donald, Gladstone takes off. As he rows away, he sees, in a page wide panel, a Viking ship frozen in the berg (see Plate 4).",
+          "bbox": [
+            {
+              "h": 97.92,
+              "w": 310.81,
+              "x": 118.69,
+              "y": 91.85,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The Ducks endure. Left with a fishing line (but no drinking water) they eat raw fish, and the nephews appear fatigued and emaciated as the story goes on (nice work dragging them along, Mr. Duck.) As the winds blow them into warmer seas, making large chunks of the ice fall into the sea, Donald wonders aloud \"if help comes for us, how will they ever recognize this berg?\" with its now totally different exterior. To make matters worse, a warship begins using their frozen island for target practice. Explosions tear into the berg, it splits in half, and in a small yet emotionally charged panel, we see a silhouette of the ducks, holding hands, falling to their deaths, and saying \"Good-bye Unca' Donald.\" (see Fig. 9)",
+          "value": "The Ducks endure. Left with a fishing line (but no drinking water) they eat raw fish, and the nephews appear fatigued and emaciated as the story goes on (nice work dragging them along, Mr. Duck.) As the winds blow them into warmer seas, making large chunks of the ice fall into the sea, Donald wonders aloud \"if help comes for us, how will they ever recognize this berg?\" with its now totally different exterior. To make matters worse, a warship begins using their frozen island for target practice. Explosions tear into the berg, it splits in half, and in a small yet emotionally charged panel, we see a silhouette of the ducks, holding hands, falling to their deaths, and saying \"Good-bye Unca' Donald.\" (see Fig. 9)",
+          "bbox": [
+            {
+              "h": 154.36941320793295,
+              "w": 311.99861109375,
+              "x": 115.20495,
+              "y": 188.07442240850543,
+              "confidence": 0.97344345,
+              "end_index": 717,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Because I'm hoping you'll seek these stories out, I'll keep you from too much of the finish, except to say that our boys land on the Viking",
+          "value": "Because I'm hoping you'll seek these stories out, I'll keep you from too much of the finish, except to say that our boys land on the Viking",
+          "bbox": [
+            {
+              "h": 31.68,
+              "w": 311.68,
+              "x": 114.07,
+              "y": 343.83,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "illustration: silhouette of the ducks falling from an iceberg with a speech bubble saying \"GOOD-BYE, UNCA' DONALD!\"",
+          "value": "illustration: silhouette of the ducks falling from an iceberg with a speech bubble saying \"GOOD-BYE, UNCA' DONALD!\"",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Fig. 10. Luck of the North, 23:7",
+          "value": "Fig. 10. Luck of the North, 23:7",
+          "bbox": [
+            {
+              "h": 9.46,
+              "w": 100.83,
+              "x": 219.09,
+              "y": 539.58,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "ship, manage to get rescued by Gladstone, who takes all the valuable gold on board, and leaves them behind (at their angry request.) With a sleek Viking ship to take them home, they encounter even more disaster, but emerge with a strange sort of wealth—a real Viking map, worth \"many times more than the gold that Gladstone got from the Viking ship.\" They're rescued by the Coast Guard at the end, who remark that the ducks are out of their head, singing,",
+          "value": "ship, manage to get rescued by Gladstone, who takes all the valuable gold on board, and leaves them behind (at their angry request.) With a sleek Viking ship to take them home, they encounter even more disaster, but emerge with a strange sort of wealth—a real Viking map, worth \"many times more than the gold that Gladstone got from the Viking ship.\" They're rescued by the Coast Guard at the end, who remark that the ducks are out of their head, singing,",
+          "bbox": [
+            {
+              "h": 98.21,
+              "w": 311.12,
+              "x": 466.15,
+              "y": 97.32,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*Gladstone's luck*\n*Ain't worth a shuck*\n*It takes a duck*\n*To have good luck!*",
+          "value": "Gladstone's luck\nAin't worth a shuck\nIt takes a duck\nTo have good luck!",
+          "bbox": [
+            {
+              "h": 54.58,
+              "w": 87.32,
+              "x": 581.78,
+              "y": 210.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "We'll see that this is equally true in \"The Gilded Man,\" a story that is just as adventurous, but also as economically satisfying for the Ducks as \"Luck of the North.\"",
+          "value": "We'll see that this is equally true in \"The Gilded Man,\" a story that is just as adventurous, but also as economically satisfying for the Ducks as \"Luck of the North.\"",
+          "bbox": [
+            {
+              "h": 39.07,
+              "w": 311.33,
+              "x": 464.6,
+              "y": 278.9,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Let's open with the splash panel, of Donald, at his desk, which is crowded with multi-color books. Huge books, fat as telephone directories, but these are albums and catalogues of rare stamps. On the wall is a huge map of South America, with one country highlighted—British Guiana (as today's Guyana was known then.) Donald's lost in his work, and his word balloon communicates a bundle: \"Three Blue Centennials worth ten cents apiece, and a Belgian Prince Leopold worth four bucks!\" As usual, Barks' storytelling chops come shining through: from the map, we know where we're going, and from that word balloon, we know why. Though the title is \"The Gilded Man,\" this is a hunt for a rare stamp.",
+          "value": "Let's open with the splash panel, of Donald, at his desk, which is crowded with multi-color books. Huge books, fat as telephone directories, but these are albums and catalogues of rare stamps. On the wall is a huge map of South America, with one country highlighted—British Guiana (as today's Guyana was known then.) Donald's lost in his work, and his word balloon communicates a bundle: \"Three Blue Centennials worth ten cents apiece, and a Belgian Prince Leopold worth four bucks!\" As usual, Barks' storytelling chops come shining through: from the map, we know where we're going, and from that word balloon, we know why. Though the title is \"The Gilded Man,\" this is a hunt for a rare stamp.",
+          "bbox": [
+            {
+              "h": 154.07,
+              "w": 311.7,
+              "x": 463.77,
+              "y": 321.57,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The backstory comes at us quickly, in a very sweet panel as the boys want their uncle to take them to a movie. First let me say that one of the hallmarks of the Donald Duck stories is the home, a warm and comfortable place. Barks never really put a ton of detail into this modest space, but over time I've come to see it has a living",
+          "value": "The backstory comes at us quickly, in a very sweet panel as the boys want their uncle to take them to a movie. First let me say that one of the hallmarks of the Donald Duck stories is the home, a warm and comfortable place. Barks never really put a ton of detail into this modest space, but over time I've come to see it has a living",
+          "bbox": [
+            {
+              "h": 71.67,
+              "w": 312.12,
+              "x": 462.57,
+              "y": 476.11,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "42, 43"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "48 CARL BARKS' DUCK LUCK OF THE NORTH AND THE GILDED MAN 49",
+              "value": "48 CARL BARKS' DUCK LUCK OF THE NORTH AND THE GILDED MAN 49",
+              "bbox": [
+                {
+                  "h": 12.58,
+                  "w": 99.64,
+                  "x": 243.71,
+                  "y": 64.42,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 15.04,
+                  "w": 222.93,
+                  "x": 528.69,
+                  "y": 70.02,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "48 CARL BARKS' DUCK LUCK OF THE NORTH AND THE GILDED MAN 49",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "then ask him if he knows where to find the One Cent Magenta Stamp of 1856, in the first instance the stamp is mentioned by name.",
+          "value": "then ask him if he knows where to find the One Cent Magenta Stamp of 1856, in the first instance the stamp is mentioned by name.",
+          "bbox": [
+            {
+              "h": 31.62,
+              "w": 311.14,
+              "x": 132.45,
+              "y": 88.32,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Like \"Lost in the Andes,\" we see Barks relying on an old man to allow our heroes entrance into a magical otherworld that no one else has found. Animals also help on this journey. As the Ducks march into the jungles, carrying a rifle (which Barks, unlike Chekov, decided to keep unfired), they rely on a tame monkey to lead them to the promised land.",
+          "value": "Like \"Lost in the Andes,\" we see Barks relying on an old man to allow our heroes entrance into a magical otherworld that no one else has found. Animals also help on this journey. As the Ducks march into the jungles, carrying a rifle (which Barks, unlike Chekov, decided to keep unfired), they rely on a tame monkey to lead them to the promised land.",
+          "bbox": [
+            {
+              "h": 82.52,
+              "w": 312.35,
+              "x": 130.95,
+              "y": 116.92,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Almost immediately, they find what they're looking for—a leather mail pouch with silver belt buckles—but in doing so infuriate the enormous El Dorado, who stands before them, nearly naked, and a human being, to boot. Typically, Barks depicted everyone as an animal of sorts, usually dog-like; their canine nature revealed only by black noses and floppy ears (they have flesh colored faces and hands, and no tails, unlike Donald and his family). But here, El Dorado and his men are, in fact, men, which actually lends an added air of menace to the whole scene—something about those dog faces are none too threatening.",
+          "value": "Almost immediately, they find what they're looking for—a leather mail pouch with silver belt buckles—but in doing so infuriate the enormous El Dorado, who stands before them, nearly naked, and a human being, to boot. Typically, Barks depicted everyone as an animal of sorts, usually dog-like; their canine nature revealed only by black noses and floppy ears (they have flesh colored faces and hands, and no tails, unlike Donald and his family). But here, El Dorado and his men are, in fact, men, which actually lends an added air of menace to the whole scene—something about those dog faces are none too threatening.",
+          "bbox": [
+            {
+              "h": 140.05,
+              "w": 312.97,
+              "x": 127.9,
+              "y": 200.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Donald and the boys are captured, thrown into a dungeon beneath the temple, and are going to be sacrificed in the morning. I won't reveal the details of their escape, except to say that it involves the nephews, once again saving their uncle, and, strangely, making El Dorado one happy dude.",
+          "value": "Donald and the boys are captured, thrown into a dungeon beneath the temple, and are going to be sacrificed in the morning. I won't reveal the details of their escape, except to say that it involves the nephews, once again saving their uncle, and, strangely, making El Dorado one happy dude.",
+          "bbox": [
+            {
+              "h": 69.58,
+              "w": 310.98,
+              "x": 125.89,
+              "y": 341.29,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "What happens next is a strange conclusion, one that I think befits his interactions with Gladstone. The Donald Duck comics are, as I've mentioned, about journeys, about the joys or risk-taking and the spiritual success of such travels. However, \"The Gilded Man,\" as in Luck of the North, is one of the few stories where Donald's success is purely financial, for even though we've had a rip-roaring adventure as readers, Donald for once seems not to care that he encountered the great mystery of the story, in this case El Dorado. Where usually he will pause to reflect upon his journey, here Donald is interested solely",
+          "value": "What happens next is a strange conclusion, one that I think befits his interactions with Gladstone. The Donald Duck comics are, as I've mentioned, about journeys, about the joys or risk-taking and the spiritual success of such travels. However, \"The Gilded Man,\" as in Luck of the North, is one of the few stories where Donald's success is purely financial, for even though we've had a rip-roaring adventure as readers, Donald for once seems not to care that he encountered the great mystery of the story, in this case El Dorado. Where usually he will pause to reflect upon his journey, here Donald is interested solely",
+          "bbox": [
+            {
+              "h": 131.1,
+              "w": 312.79,
+              "x": 123.05,
+              "y": 411.48,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "in the stamps, and even then not for any reason other than it's cash value. In fact, we never end up seeing the stamp, which I think is a wasted opportunity from many angles, not the least of which you could perhaps show it as being unbelievably ugly or dull. But the stamp was of zero importance even to Barks—money is the focal point here.",
+          "value": "in the stamps, and even then not for any reason other than it's cash value. In fact, we never end up seeing the stamp, which I think is a wasted opportunity from many angles, not the least of which you could perhaps show it as being unbelievably ugly or dull. But the stamp was of zero importance even to Barks—money is the focal point here.",
+          "bbox": [
+            {
+              "h": 74.99,
+              "w": 311.24,
+              "x": 478.32,
+              "y": 94.8,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "On the verge of boarding a steamer home, Donald is stopped at customs, where the prized mail pouch is seized by a government inspector (the English government by the way—this is still colonialized South America.) This bag, after all, remains the property of the King, and it must be delivered. A sympathetic postal employee allows Donald to write down the address and follow it—if the woman who is to receive the letter in question is still around, \"Perhaps you can recover the letter from her.\"",
+          "value": "On the verge of boarding a steamer home, Donald is stopped at customs, where the prized mail pouch is seized by a government inspector (the English government by the way—this is still colonialized South America.) This bag, after all, remains the property of the King, and it must be delivered. A sympathetic postal employee allows Donald to write down the address and follow it—if the woman who is to receive the letter in question is still around, \"Perhaps you can recover the letter from her.\"",
+          "bbox": [
+            {
+              "h": 110.76,
+              "w": 312.9,
+              "x": 475.4,
+              "y": 165.27,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "To this day, I still don't quite get what \"recovering\" the letter from \"Miss Susiebell Swan\" would mean. It's a sure bet that someone from 1856 is probably long dead by 1952, when this story was released. Surely, Donald's not interested in offering her a fair price for the stamp. He just wants to get his grubby feathers on it so he can sell to someone else. Well, Donald follows the stamp, from Mudhen, Ohio,",
+          "value": "To this day, I still don't quite get what \"recovering\" the letter from \"Miss Susiebell Swan\" would mean. It's a sure bet that someone from 1856 is probably long dead by 1952, when this story was released. Surely, Donald's not interested in offering her a fair price for the stamp. He just wants to get his grubby feathers on it so he can sell to someone else. Well, Donald follows the stamp, from Mudhen, Ohio,",
+          "bbox": [
+            {
+              "h": 88.42,
+              "w": 311.86,
+              "x": 473.34,
+              "y": 277.79,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "![Donald Duck having a tantrum in a brick-walled room with a speech bubble saying \"AND EVERY TEN FEET I'M GOING TO STOP AND HAVE A TANTRUM!\"](cbduck-028_fig_1.png)",
+          "value": "illustration: Donald Duck having a tantrum in a brick-walled room with a speech bubble saying \"AND EVERY TEN FEET I'M GOING TO STOP AND HAVE A TANTRUM!\"",
+          "bbox": [
+            {
+              "h": 156.33,
+              "w": 224.11,
+              "x": 513.32,
+              "y": 380.76,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-028_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 14. The Gilded Man, 29:4",
+          "value": "Fig. 14. The Gilded Man, 29:4",
+          "bbox": [
+            {
+              "h": 9.75,
+              "w": 96.47,
+              "x": 575.6,
+              "y": 539.07,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "48, 49"
+    }
+  ]
+}

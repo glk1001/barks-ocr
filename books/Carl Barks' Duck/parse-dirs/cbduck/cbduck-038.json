@@ -1,0 +1,211 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "68",
+              "value": "68",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nVACATION TIME",
+              "value": "CARL BARKS' DUCK\nVACATION TIME",
+              "bbox": [
+                {
+                  "h": 11.66,
+                  "w": 98.43,
+                  "x": 237.63,
+                  "y": 67.33,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.83,
+                  "w": 83.62,
+                  "x": 590.11,
+                  "y": 68.59,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "69",
+              "value": "69",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "68\n\nCARL BARKS' DUCK\nVACATION TIME\n\n69",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "any day.",
+          "value": "any day.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The opening panel is a whirl of action. Donald and the boys are slightly airborne in old 313, indicating speed. Our man's taking a curve fast, wide-eyed and smiling, almost tumbling over the side of the road and off into a rushing waterfall that ends below in a whirlpool (with vultures circling overhead.) A snarling mountain lion, as big as the car, is poised to leap from a branch in the upper left, while a raging bear pursues the car in the upper right. In his eagerness to get out of the city, Donald's racing so fast that he fails to notice he's almost bouncing the boys out of the back—Huey reaches out for Donald, while Dewey hangs on for dear life, clutching Louie, who has just fallen off the rear and almost into the jaws of the bear.",
+          "value": "The opening panel is a whirl of action. Donald and the boys are slightly airborne in old 313, indicating speed. Our man's taking a curve fast, wide-eyed and smiling, almost tumbling over the side of the road and off into a rushing waterfall that ends below in a whirlpool (with vultures circling overhead.) A snarling mountain lion, as big as the car, is poised to leap from a branch in the upper left, while a raging bear pursues the car in the upper right. In his eagerness to get out of the city, Donald's racing so fast that he fails to notice he's almost bouncing the boys out of the back—Huey reaches out for Donald, while Dewey hangs on for dear life, clutching Louie, who has just fallen off the rear and almost into the jaws of the bear.",
+          "bbox": [
+            {
+              "h": 152.92,
+              "w": 311.26,
+              "x": 125.07,
+              "y": 107.43,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"Ah! Vacation time! The one season of the year when we can get away from the dangers of city living!\" Donald says with a happy smile on his face, oblivious to the many threats on this mountain road.",
+          "value": "\"Ah! Vacation time! The one season of the year when we can get away from the dangers of city living!\" Donald says with a happy smile on his face, oblivious to the many threats on this mountain road.",
+          "bbox": [
+            {
+              "h": 41.24,
+              "w": 310.51,
+              "x": 124.45,
+              "y": 261.78,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "From here on out we will get the standard eight panel per page layout (with some variations), but the panels, as if on some sort of laughing gas, will bend and point and make room for a world which is meant to be as elastic as salt-water taffy. The joke of the first giant panel—that this treacherous world is perceived as safer than the big city of Duckburg—is repeated through the next two pages, with Donald as usual getting everyone lost.",
+          "value": "From here on out we will get the standard eight panel per page layout (with some variations), but the panels, as if on some sort of laughing gas, will bend and point and make room for a world which is meant to be as elastic as salt-water taffy. The joke of the first giant panel—that this treacherous world is perceived as safer than the big city of Duckburg—is repeated through the next two pages, with Donald as usual getting everyone lost.",
+          "bbox": [
+            {
+              "h": 97.16,
+              "w": 311.22,
+              "x": 123.4,
+              "y": 303.64,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The difference here, and one that we'll see played out later, is that \"Vacation Time\" is definitely Donald's terrain—the boys will help, will laugh at their uncle, but it is Donald who is in charge, and it is he who saves them. He is oblivious to danger here, but when he does see it, he reacts bravely.",
+          "value": "The difference here, and one that we'll see played out later, is that \"Vacation Time\" is definitely Donald's terrain—the boys will help, will laugh at their uncle, but it is Donald who is in charge, and it is he who saves them. He is oblivious to danger here, but when he does see it, he reacts bravely.",
+          "bbox": [
+            {
+              "h": 68.81,
+              "w": 310.73,
+              "x": 122.29,
+              "y": 401.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "After that first joke, Barks' comic timing kicks in beautifully, filling each panel with lovely detail, as the family climbs the mountains heading to the National Park where they'll camp. \"Peaceful country roads! No trucks roaring at you from blind cross streets!\" he says as a mountain locomotive bears down on them. \"No traffic jams! No",
+          "value": "After that first joke, Barks' comic timing kicks in beautifully, filling each panel with lovely detail, as the family climbs the mountains heading to the National Park where they'll camp. \"Peaceful country roads! No trucks roaring at you from blind cross streets!\" he says as a mountain locomotive bears down on them. \"No traffic jams! No",
+          "bbox": [
+            {
+              "h": 70.46,
+              "w": 310.84,
+              "x": 121.52,
+              "y": 472.38,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "noise!\" he observes as they squeeze across a mountain bridge that is jam packed with sheep. A hay truck will nearly push them into a ditch while Donald complains about city road hogs, and later, when he repairs an already well-patched inner tube, he wonders aloud how he'd survive if he had to fix the flat on the corner of Wilshire and Vermont (back in Duckburg, one presumes.) As he says this, two wolves and a coiling rattlesnake appear ready to strike, yet only the nephews are sweating.",
+          "value": "noise!\" he observes as they squeeze across a mountain bridge that is jam packed with sheep. A hay truck will nearly push them into a ditch while Donald complains about city road hogs, and later, when he repairs an already well-patched inner tube, he wonders aloud how he'd survive if he had to fix the flat on the corner of Wilshire and Vermont (back in Duckburg, one presumes.) As he says this, two wolves and a coiling rattlesnake appear ready to strike, yet only the nephews are sweating.",
+          "bbox": [
+            {
+              "h": 110.83,
+              "w": 311.32,
+              "x": 471.79,
+              "y": 95.43,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Visually, the page is split into two halves, each half taking the clan deeper into the wilderness. The \"editing\" here is spot-on: just as a motion picture moves you along with the removal of banal information between action shots, so, too, does Barks carry these Ducks up the mountain pass swiftly, for maximum comic effect. In each half of page two, which is made up of seven total panels, the panels bend inward, bringing the eye, as in the first large page, into distinct focal points, a sort of cone that the Ducks strive to move toward as they try and reach their destination. The top four panels point inward, the little car is always pointing in the direction in which the panel is bent, leading them toward that same center, which heads to their destination. Deeper and deeper into this friendly abyss we'll go.",
+          "value": "Visually, the page is split into two halves, each half taking the clan deeper into the wilderness. The \"editing\" here is spot-on: just as a motion picture moves you along with the removal of banal information between action shots, so, too, does Barks carry these Ducks up the mountain pass swiftly, for maximum comic effect. In each half of page two, which is made up of seven total panels, the panels bend inward, bringing the eye, as in the first large page, into distinct focal points, a sort of cone that the Ducks strive to move toward as they try and reach their destination. The top four panels point inward, the little car is always pointing in the direction in which the panel is bent, leading them toward that same center, which heads to their destination. Deeper and deeper into this friendly abyss we'll go.",
+          "bbox": [
+            {
+              "h": 167.38,
+              "w": 312.24,
+              "x": 471.3,
+              "y": 207.53,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "This is a fish out of its urban water—Donald is oblivious, of course, to the dangers of the wild, the beasts and the uneven roads. Though who hasn't been a passenger in a car on a mountain road and felt as though the driver didn't know what they were doing? Presumably Donald can see the road in front of him, even if he can't see the screaming eagle bearing down on them in the large panel in the bottom half of page two. This one is another favorite, and indicates the almost magic nature of the 313 auto: Donald's at the wheel on a steep incline, so steep that one boy pushes it at the bumper, another pushes at the long end of a stick (which makes no sense, insofar as physics is concerned, but who cares), and another nephew pulls the car up with a rope, all the while that golden eagle seems determined to pluck their smiling",
+          "value": "This is a fish out of its urban water—Donald is oblivious, of course, to the dangers of the wild, the beasts and the uneven roads. Though who hasn't been a passenger in a car on a mountain road and felt as though the driver didn't know what they were doing? Presumably Donald can see the road in front of him, even if he can't see the screaming eagle bearing down on them in the large panel in the bottom half of page two. This one is another favorite, and indicates the almost magic nature of the 313 auto: Donald's at the wheel on a steep incline, so steep that one boy pushes it at the bumper, another pushes at the long end of a stick (which makes no sense, insofar as physics is concerned, but who cares), and another nephew pulls the car up with a rope, all the while that golden eagle seems determined to pluck their smiling",
+          "bbox": [
+            {
+              "h": 167.86,
+              "w": 312.12,
+              "x": 471.1,
+              "y": 375.93,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "68, 69"
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "*\"Oh, he is so many types of characters...\"*",
+          "value": "\"Oh, he is so many types of characters...\"",
+          "bbox": [
+            {
+              "h": 15.45,
+              "w": 187.68,
+              "x": 176.45,
+              "y": 195.83,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "—Carl Barks",
+          "value": "—Carl Barks",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## CONTENTS",
+          "value": "CONTENTS",
+          "bbox": null,
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "001 INTRODUCTION",
+          "value": "001 INTRODUCTION",
+          "bbox": [
+            {
+              "h": 8.92,
+              "w": 84.06,
+              "x": 548.04,
+              "y": 136.63,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "012 THE PENCIL STUB THAT LAUNCHED A SHIP\nMaharajah Donald",
+          "value": "012 THE PENCIL STUB THAT LAUNCHED A SHIP\nMaharajah Donald",
+          "bbox": [
+            {
+              "h": 21.34,
+              "w": 190.75,
+              "x": 548.2,
+              "y": 158.38,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "024 THE EGG AND I\nLost in the Andes",
+          "value": "024 THE EGG AND I\nLost in the Andes",
+          "bbox": [
+            {
+              "h": 19.94,
+              "w": 112.44,
+              "x": 548.12,
+              "y": 191.56,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "034 UNFATED\nLuck of the North\n&\nThe Gilded Man",
+          "value": "034 UNFATED\nLuck of the North\n&\nThe Gilded Man",
+          "bbox": [
+            {
+              "h": 8.62,
+              "w": 54.94,
+              "x": 548.28,
+              "y": 224.79,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 8.25,
+              "w": 76.15,
+              "x": 585.05,
+              "y": 235.92,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 8.73,
+              "w": 71.36,
+              "x": 584.85,
+              "y": 257.75,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "052 THE EVIL THAT MEN DO\nThe Magic Hourglass",
+          "value": "052 THE EVIL THAT MEN DO\nThe Magic Hourglass",
+          "bbox": [
+            {
+              "h": 21.46,
+              "w": 127.91,
+              "x": 548.38,
+              "y": 279.89,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "064 THE FORGOTTEN MASTERPIECE\nVacation Time",
+          "value": "064 THE FORGOTTEN MASTERPIECE\nVacation Time",
+          "bbox": [
+            {
+              "h": 19.88,
+              "w": 149.21,
+              "x": 548.28,
+              "y": 312.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "080 ONE HELMET TO RULE THEM ALL\nThe Golden Helmet",
+          "value": "080 ONE HELMET TO RULE THEM ALL\nThe Golden Helmet",
+          "bbox": [
+            {
+              "h": 19.98,
+              "w": 152.6,
+              "x": 548.61,
+              "y": 346.17,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "092 WORKING MAN\nLand of the Totem Poles\n&\nNo Such Varmint\n&\nTHE WORK STORIES:\nThe Master Rainmaker\nSmoke Writer in the Sky\nThe Master Glasser\nMaster Wrecker\nSpare That Hair",
+          "value": "092 WORKING MAN\nLand of the Totem Poles\n&\nNo Such Varmint\n&\nTHE WORK STORIES:\nThe Master Rainmaker\nSmoke Writer in the Sky\nThe Master Glasser\nMaster Wrecker\nSpare That Hair",
+          "bbox": [
+            {
+              "h": 8.65,
+              "w": 85.93,
+              "x": 548.49,
+              "y": 379.33,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 8.8,
+              "w": 106.24,
+              "x": 585.34,
+              "y": 390.46,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 8.3,
+              "w": 73.23,
+              "x": 585.37,
+              "y": 412.26,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 9.02,
+              "w": 83.56,
+              "x": 585.07,
+              "y": 434.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 8.81,
+              "w": 98.21,
+              "x": 621.83,
+              "y": 445.38,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 8.36,
+              "w": 82.83,
+              "x": 621.53,
+              "y": 467.59,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 8.59,
+              "w": 69.62,
+              "x": 621.63,
+              "y": 478.87,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 54.47,
+              "w": 101.17,
+              "x": 621.16,
+              "y": 445.2,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "110 BIBLIOGRAPHY",
+          "value": "110 BIBLIOGRAPHY",
+          "bbox": [
+            {
+              "h": 8.77,
+              "w": 80.33,
+              "x": 549.48,
+              "y": 511.77,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "114 BIOGRAPHICAL INFORMATION",
+          "value": "114 BIOGRAPHICAL INFORMATION",
+          "bbox": [
+            {
+              "h": 8.78,
+              "w": 148.37,
+              "x": 549.51,
+              "y": 533.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "115 COLOR PLATES",
+          "value": "115 COLOR PLATES",
+          "bbox": [
+            {
+              "h": 8.84,
+              "w": 80.79,
+              "x": 549.43,
+              "y": 556.17,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true
+    }
+  ]
+}

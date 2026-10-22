@@ -1,0 +1,230 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "84 CARL BARKS' DUCK\nTHE GOLDEN HELMET 85",
+              "value": "84 CARL BARKS' DUCK\nTHE GOLDEN HELMET 85",
+              "bbox": [
+                {
+                  "h": 11.75,
+                  "w": 99.87,
+                  "x": 223.37,
+                  "y": 59.47,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.76,
+                  "w": 110.51,
+                  "x": 565.86,
+                  "y": 64.91,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "84 CARL BARKS' DUCK\nTHE GOLDEN HELMET 85",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "ship was helmed by one Olaf the Blue, and that in the year 901 landed on the coast of North America, \"years before Eric the Red!\" (The man who truly \"discovered\" America.) To prove that he landed on the shore of North America, Olaf buried the eponymous helmet, and the map points to exactly where this thing is located. Excited that the Duckburg Museum has proof of exactly who discovered America, the Curator spins Donald around, happily shouting, \"You'll be famous! The museum will be famous!\"",
+          "value": "ship was helmed by one Olaf the Blue, and that in the year 901 landed on the coast of North America, \"years before Eric the Red!\" (The man who truly \"discovered\" America.) To prove that he landed on the shore of North America, Olaf buried the eponymous helmet, and the map points to exactly where this thing is located. Excited that the Duckburg Museum has proof of exactly who discovered America, the Curator spins Donald around, happily shouting, \"You'll be famous! The museum will be famous!\"",
+          "bbox": [
+            {
+              "h": 109.29,
+              "w": 311.65,
+              "x": 111.56,
+              "y": 84.4,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Ready to dispatch an expedition to retrieve the prize, the Curator is suddenly interrupted by Azure Blue and his lawyer, Sharky, who spouts a weird Latinate legalbabble. They demand the map, claiming that Blue is the descendant of the original Olaf, and that by owning said helmet Azure will, in fact, become the King of North America.",
+          "value": "Ready to dispatch an expedition to retrieve the prize, the Curator is suddenly interrupted by Azure Blue and his lawyer, Sharky, who spouts a weird Latinate legalbabble. They demand the map, claiming that Blue is the descendant of the original Olaf, and that by owning said helmet Azure will, in fact, become the King of North America.",
+          "bbox": [
+            {
+              "h": 71.76,
+              "w": 310.97,
+              "x": 109.87,
+              "y": 196.46,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Barks concocted a wonderful historical mini-backstory, suggesting that during the time of Charlemagne the rulers of the world agreed that whomever discovers a new land shall own it, unless he claims it for his king. Olaf claimed it for himself, so now it goes to his distant relative, Azure Blue. \"How can you prove he is Olaf's nearest of kin?\" The Curator shouts, to which Sharky replies, \"Flickus, Flackus, Fumdeedledum!\", and then: \"Which is legal language for, 'How can you prove that he isn't?'\" And with that, they grab the map, and head out the door to retrieve the Golden Helmet.",
+          "value": "Barks concocted a wonderful historical mini-backstory, suggesting that during the time of Charlemagne the rulers of the world agreed that whomever discovers a new land shall own it, unless he claims it for his king. Olaf claimed it for himself, so now it goes to his distant relative, Azure Blue. \"How can you prove he is Olaf's nearest of kin?\" The Curator shouts, to which Sharky replies, \"Flickus, Flackus, Fumdeedledum!\", and then: \"Which is legal language for, 'How can you prove that he isn't?'\" And with that, they grab the map, and head out the door to retrieve the Golden Helmet.",
+          "bbox": [
+            {
+              "h": 124.91,
+              "w": 312.51,
+              "x": 106.78,
+              "y": 266.73,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "What's interesting is that this is essentially an adventure of attitudes. Whereas, say, in *Raiders*, Indy is out for adventure, but he's also going to help stop a menace that is physical—the Nazis will use the Ark of the Covenant to literally destroy other, freedom-loving armies. With the Ark, they could (had their faces not been melted off and heads exploded) ruled the world against everyone's will. Here, this is a threat of perception: if Azure Blue gets the helmet, he will own North America, but his control over the continent depends solely on whether the population as a whole actually believes him to be so. It depends on armies of lawyers and politicians, each one, we imagine, angling",
+          "value": "What's interesting is that this is essentially an adventure of attitudes. Whereas, say, in Raiders, Indy is out for adventure, but he's also going to help stop a menace that is physical—the Nazis will use the Ark of the Covenant to literally destroy other, freedom-loving armies. With the Ark, they could (had their faces not been melted off and heads exploded) ruled the world against everyone's will. Here, this is a threat of perception: if Azure Blue gets the helmet, he will own North America, but his control over the continent depends solely on whether the population as a whole actually believes him to be so. It depends on armies of lawyers and politicians, each one, we imagine, angling",
+          "bbox": [
+            {
+              "h": 143.55,
+              "w": 314.13,
+              "x": 103.98,
+              "y": 393.16,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "for whatever advantage they can get from Blue. Such is the power of this \"law\" that it will even dissolve boundaries—notice that the owner of the Golden Helmet is not king of America or Canada, but North America.",
+          "value": "for whatever advantage they can get from Blue. Such is the power of this \"law\" that it will even dissolve boundaries—notice that the owner of the Golden Helmet is not king of America or Canada, but North America.",
+          "bbox": [
+            {
+              "h": 52.27,
+              "w": 311.65,
+              "x": 460.94,
+              "y": 90.96,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "This is what modern man has come to: if someone says they're the king of North America, we won't fight, but merely hope that politicians and lawyers can get us out of this mess.",
+          "value": "This is what modern man has come to: if someone says they're the king of North America, we won't fight, but merely hope that politicians and lawyers can get us out of this mess.",
+          "bbox": [
+            {
+              "h": 41.06,
+              "w": 311.8,
+              "x": 460.58,
+              "y": 146.59,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Even before we can get this story rolling, we need to see the worst of people, this time in the kids. Donald races home to find his nephews stupidly shooting marbles in the living room, bored, eyes half closed, making one wonder if kids back then were as challenged to get out and about as they are today. So ignorant of geography that one of them asks if Labrador is a coat, Donald runs headlong into a wall out of exasperation. But soon they're on their way, taking an all-night flight to Labrador (with a nifty fold out queen-sized bed in it—man, travel was awesome back then).",
+          "value": "Even before we can get this story rolling, we need to see the worst of people, this time in the kids. Donald races home to find his nephews stupidly shooting marbles in the living room, bored, eyes half closed, making one wonder if kids back then were as challenged to get out and about as they are today. So ignorant of geography that one of them asks if Labrador is a coat, Donald runs headlong into a wall out of exasperation. But soon they're on their way, taking an all-night flight to Labrador (with a nifty fold out queen-sized bed in it—man, travel was awesome back then).",
+          "bbox": [
+            {
+              "h": 124.56,
+              "w": 313.61,
+              "x": 460.37,
+              "y": 188.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The chase is on. And we notice that the sea excited Barks more than any other landscape. Inspired by the richly detailed newspaper comic strip *Prince Valiant*, Barks played not only with the breathtaking visuals",
+          "value": "The chase is on. And we notice that the sea excited Barks more than any other landscape. Inspired by the richly detailed newspaper comic strip Prince Valiant, Barks played not only with the breathtaking visuals",
+          "bbox": [
+            {
+              "h": 41.16,
+              "w": 313.3,
+              "x": 460.3,
+              "y": 315.41,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "![Donald Duck in a boat with a speech bubble saying \"LET HIM SCOOT! IT ISN'T SPEED THAT'S GOING TO WIN THIS RACE — IT'S RUGGEDNESS!\"](cbduck-046_fig_1.png)",
+          "value": "illustration: Donald Duck in a boat with a speech bubble saying \"LET HIM SCOOT! IT ISN'T SPEED THAT'S GOING TO WIN THIS RACE — IT'S RUGGEDNESS!\"",
+          "bbox": [
+            {
+              "h": 152.26,
+              "w": 193.47,
+              "x": 516.62,
+              "y": 372.32,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-046_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 23. The Golden Helmet, 12:3",
+          "value": "Fig. 23. The Golden Helmet, 12:3",
+          "bbox": [
+            {
+              "h": 9.55,
+              "w": 107.56,
+              "x": 561.81,
+              "y": 528.5,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "84, 85"
+    }
+  ]
+}

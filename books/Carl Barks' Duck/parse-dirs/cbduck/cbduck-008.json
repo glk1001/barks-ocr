@@ -1,0 +1,134 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "8 CARL BARKS' DUCK\nINTRODUCTION 9",
+              "value": "8 CARL BARKS' DUCK\nINTRODUCTION 9",
+              "bbox": [
+                {
+                  "h": 15.12,
+                  "w": 98.17,
+                  "x": 246.98,
+                  "y": 73.97,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.84,
+                  "w": 80.54,
+                  "x": 593.3,
+                  "y": 83.88,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "8 CARL BARKS' DUCK\nINTRODUCTION 9",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "in a 1994 interview for Danish television, I think of these stories in the way I think of movies, essentially \"paper movies,\" the panels composed similarly, the \"editing\"—the leaving out of superfluous visual information to heighten what we do see—has a timing like the best movies. Barks' paper movies have a star, and his name is Donald Duck.",
+          "value": "in a 1994 interview for Danish television, I think of these stories in the way I think of movies, essentially \"paper movies,\" the panels composed similarly, the \"editing\"—the leaving out of superfluous visual information to heighten what we do see—has a timing like the best movies. Barks' paper movies have a star, and his name is Donald Duck.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Part of great comedy involves anticipation, and expecting the worst from an obvious situation can be damned funny. When we hear that Cary Grant is a scientist or Laurel and Hardy are hired to move a piano, we can't wait to see what happens. There's actually not a lot in the classic Laurel and Hardy short \"The Music Box\" that is a genuine surprise (that's the one where they haul a player piano up about ten billion steps), but it is the unfolding disaster that excites us. So it is with Donald Duck. When we hear that he's Duckburg's greatest glass maker, as he is in 1959's \"The Master Glasser\", the mind reels at the spectacle of broken glass and wreckage that we know is coming. We can smell the story baking, and gorge ourselves on that glorious loaf of chaos. Donald Duck is a character in a series of great adventures and outright comedies that seem to rival the best work that came out of the Hollywood studio system, which I think the Disney combine resembles (albeit without any of the artist recognition that, say, Howard Hawks and others enjoyed.)",
+          "value": "Part of great comedy involves anticipation, and expecting the worst from an obvious situation can be damned funny. When we hear that Cary Grant is a scientist or Laurel and Hardy are hired to move a piano, we can't wait to see what happens. There's actually not a lot in the classic Laurel and Hardy short \"The Music Box\" that is a genuine surprise (that's the one where they haul a player piano up about ten billion steps), but it is the unfolding disaster that excites us. So it is with Donald Duck. When we hear that he's Duckburg's greatest glass maker, as he is in 1959's \"The Master Glasser\", the mind reels at the spectacle of broken glass and wreckage that we know is coming. We can smell the story baking, and gorge ourselves on that glorious loaf of chaos. Donald Duck is a character in a series of great adventures and outright comedies that seem to rival the best work that came out of the Hollywood studio system, which I think the Disney combine resembles (albeit without any of the artist recognition that, say, Howard Hawks and others enjoyed.)",
+          "bbox": [
+            {
+              "h": 229.63,
+              "w": 320.37,
+              "x": 118.77,
+              "y": 180.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Barks created such a believable character probably because he himself related most to Donald. \"I was a fizzle as a cowboy, a logger, a printing press feeder, a steelworker, a carpenter, an animator, a chicken grower, and a barfly,\" Barks admitted. His experience with chickens certainly plays a part in the stories—Donald fails at raising chickens or is involved with chickens in numerous stories, from a wonderful little story called \"Omelet\" to \"Lost in the Andes\" and even in \"The Magic Hourglass\", where an egg sets the story in motion. I'm not going to go too much into Barks' life, except to say that this background, this series of failures, informs his work, just as Barks' endless inability to",
+          "value": "Barks created such a believable character probably because he himself related most to Donald. \"I was a fizzle as a cowboy, a logger, a printing press feeder, a steelworker, a carpenter, an animator, a chicken grower, and a barfly,\" Barks admitted. His experience with chickens certainly plays a part in the stories—Donald fails at raising chickens or is involved with chickens in numerous stories, from a wonderful little story called \"Omelet\" to \"Lost in the Andes\" and even in \"The Magic Hourglass\", where an egg sets the story in motion. I'm not going to go too much into Barks' life, except to say that this background, this series of failures, informs his work, just as Barks' endless inability to",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "make a lot of money resulted, sadly for him but happily for us, in his fixating on writing and drawing these great comics.",
+          "value": "make a lot of money resulted, sadly for him but happily for us, in his fixating on writing and drawing these great comics.",
+          "bbox": [
+            {
+              "h": 26.52,
+              "w": 311.32,
+              "x": 472.99,
+              "y": 110.59,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Carl Barks labored under this system, blessed with a third wife who appreciated his work, blessed with the humility to work without recognition for two decades for Disney (and Western Publishing directly), blessed to have such little interest in travel and luxury living that allowed him to direct all of his considerable energies into the Duck stories and not get upset that he never had any money to go out and live a little. Barks essentially made a decent living, probably not a whole lot more than your average schoolteacher (probably less in some years), failed at just about every money-making scheme he concocted, and eventually drifted into retirement and a belated recognition from his fans. In this retirement, he made oil paintings of the ducks that have none of the charm of his early work, but brought in some well needed dough, and made his fan base happy. Sad in a way, and maybe a bit Willy Loman, but that's what happened.",
+          "value": "Carl Barks labored under this system, blessed with a third wife who appreciated his work, blessed with the humility to work without recognition for two decades for Disney (and Western Publishing directly), blessed to have such little interest in travel and luxury living that allowed him to direct all of his considerable energies into the Duck stories and not get upset that he never had any money to go out and live a little. Barks essentially made a decent living, probably not a whole lot more than your average schoolteacher (probably less in some years), failed at just about every money-making scheme he concocted, and eventually drifted into retirement and a belated recognition from his fans. In this retirement, he made oil paintings of the ducks that have none of the charm of his early work, but brought in some well needed dough, and made his fan base happy. Sad in a way, and maybe a bit Willy Loman, but that's what happened.",
+          "bbox": [
+            {
+              "h": 195.58,
+              "w": 312.25,
+              "x": 471.99,
+              "y": 138.15,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Donald Duck shares some of these traits, even as he is wildly different. Here I am going to take a somewhat contradictory position from many Barks' critics and even Barks himself. Critic Thomas Andrae said of Donald, \"No one tried harder—or failed more miserably—to attain the American dream,\" and Barks himself stated many times that his creation is \"unlucky.\" I find this somewhat true but essentially off-the-mark: Donald fails constantly, to our pleasure, but he succeeds more often that you'd think. Donald does not typically succeed financially. But he does emerge from many of these stories with his dignity intact and with a spiritual success in the face of economic ruin that is unmatched (though sometimes, as you'll see, he does simply emerge rich, though it is a wealth that never follows him into another story.) Like Donald, most of us fail, which is why he is so approachable. But Donald's mounting losses never seem oppressive to us because he's actually won a few times, but even in the worst of his defeats, when the final panels show him bent over from his failure, or wrecking a place",
+          "value": "Donald Duck shares some of these traits, even as he is wildly different. Here I am going to take a somewhat contradictory position from many Barks' critics and even Barks himself. Critic Thomas Andrae said of Donald, \"No one tried harder—or failed more miserably—to attain the American dream,\" and Barks himself stated many times that his creation is \"unlucky.\" I find this somewhat true but essentially off-the-mark: Donald fails constantly, to our pleasure, but he succeeds more often that you'd think. Donald does not typically succeed financially. But he does emerge from many of these stories with his dignity intact and with a spiritual success in the face of economic ruin that is unmatched (though sometimes, as you'll see, he does simply emerge rich, though it is a wealth that never follows him into another story.) Like Donald, most of us fail, which is why he is so approachable. But Donald's mounting losses never seem oppressive to us because he's actually won a few times, but even in the worst of his defeats, when the final panels show him bent over from his failure, or wrecking a place",
+          "bbox": [
+            {
+              "h": 224.21,
+              "w": 312.71,
+              "x": 471.69,
+              "y": 334.98,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "8, 9"
+    }
+  ]
+}

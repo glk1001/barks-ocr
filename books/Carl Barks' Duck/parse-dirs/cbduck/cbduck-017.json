@@ -1,0 +1,235 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "26 CARL BARKS' DUCK\nLOST IN THE ANDES 27",
+              "value": "26 CARL BARKS' DUCK\nLOST IN THE ANDES 27",
+              "bbox": [
+                {
+                  "h": 11.03,
+                  "w": 98.73,
+                  "x": 227.55,
+                  "y": 65.89,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.88,
+                  "w": 98.45,
+                  "x": 577.77,
+                  "y": 72.24,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "26 CARL BARKS' DUCK\nLOST IN THE ANDES 27",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "photograph: A comic strip panel showing scientists examining square eggs with speech bubbles.",
+          "value": "photograph: A comic strip panel showing scientists examining square eggs with speech bubbles.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Fig. 5. Lost in the Andes, 2:1",
+          "value": "Fig. 5. Lost in the Andes, 2:1",
+          "bbox": [
+            {
+              "h": 9.31,
+              "w": 92.32,
+              "x": 223.85,
+              "y": 205.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "managing to hold a mirror up to the closemindedness of preindustrial cultures, albeit ones that have been essentially colonialized. Like any masterpiece, \"Lost in the Andes\" means many things to many critics, each one finding something new with every reading.",
+          "value": "managing to hold a mirror up to the closemindedness of preindustrial cultures, albeit ones that have been essentially colonialized. Like any masterpiece, \"Lost in the Andes\" means many things to many critics, each one finding something new with every reading.",
+          "bbox": [
+            {
+              "h": 55.29,
+              "w": 311.35,
+              "x": 114.68,
+              "y": 232.84,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "But it is also a story about eggs.",
+          "value": "But it is also a story about eggs.",
+          "bbox": [
+            {
+              "h": 13.43,
+              "w": 139.1,
+              "x": 124.21,
+              "y": 288.69,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl Barks was once an egg farmer, and this profession appears to have influenced more of his stories than any of his other failed efforts. Here, as in \"The Magic Hourglass\" (and a story not mentioned here, \"Omelet\", worth seeking out), eggs get things rolling. Even though these eggs don't roll.",
+          "value": "Carl Barks was once an egg farmer, and this profession appears to have influenced more of his stories than any of his other failed efforts. Here, as in \"The Magic Hourglass\" (and a story not mentioned here, \"Omelet\", worth seeking out), eggs get things rolling. Even though these eggs don't roll.",
+          "bbox": [
+            {
+              "h": 69.15,
+              "w": 310.59,
+              "x": 114.17,
+              "y": 302.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"Lost in the Andes\" begins quietly in a natural history museum, cleaning time at this hallowed institution. In the opening splash panel, we have a narrative box explaining that Donald is the fourth assistant janitor, and he's being ordered to clean by the third assistant janitor—a joke in and of itself, a stick in the eye to either the bloated bureaucracy of a major public museum, or to wage slaves and their need to be superior to someone, anyone. Donald wears the eager look of a man intent on his work. His superior seems like a total jerk. Our hero's assignment? To polish stones.",
+          "value": "\"Lost in the Andes\" begins quietly in a natural history museum, cleaning time at this hallowed institution. In the opening splash panel, we have a narrative box explaining that Donald is the fourth assistant janitor, and he's being ordered to clean by the third assistant janitor—a joke in and of itself, a stick in the eye to either the bloated bureaucracy of a major public museum, or to wage slaves and their need to be superior to someone, anyone. Donald wears the eager look of a man intent on his work. His superior seems like a total jerk. Our hero's assignment? To polish stones.",
+          "bbox": [
+            {
+              "h": 125.3955824117802,
+              "w": 310.62430546875,
+              "x": 112.759639453125,
+              "y": 371.6107594379749,
+              "confidence": 0.9794722,
+              "end_index": 586,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "From this lowly moment in Donald's life the adventure begins. Donald is supposed to clean years of accumulated dust on \"ancient Inca ruins,\" including what appear to be square stones. Here, Donald's",
+          "value": "From this lowly moment in Donald's life the adventure begins. Donald is supposed to clean years of accumulated dust on \"ancient Inca ruins,\" including what appear to be square stones. Here, Donald's",
+          "bbox": [
+            {
+              "h": 41.59,
+              "w": 310.35,
+              "x": 112.87,
+              "y": 499.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "clumsiness is a boon: he drops one of these stones, and is shocked to discover it breaks open on the floor, spilling its contents. The rocks, as it turns out, are eggs. By the end of page two we will see Donald and his nephews aboard an expeditionary boat to Peru, and along the way there's a sudden, breakneck pace to Barks' paper movie, the montage of discovery.",
+          "value": "clumsiness is a boon: he drops one of these stones, and is shocked to discover it breaks open on the floor, spilling its contents. The rocks, as it turns out, are eggs. By the end of page two we will see Donald and his nephews aboard an expeditionary boat to Peru, and along the way there's a sudden, breakneck pace to Barks' paper movie, the montage of discovery.",
+          "bbox": [
+            {
+              "h": 82.38,
+              "w": 311.7,
+              "x": 466.08,
+              "y": 98.98,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Donald's accidental discovery startles the scientific world!\" In a wonderful, page-wide panel, Barks shows eleven scientists studying and arguing over the eggs. (see Fig. 5) What a collection of, well, eggheads. They are bearded in most cases (including one fellow who is nothing but a pair of eyes in the midst of a shrub of facial hair), though the one who is not stares at the others through a pair of bottle-thick specs and has nothing but wrinkles, like a shar pei. In the next panel, a pair of fat, egg-headed, wealthy \"egg dealers\" (with diamonds on their shirts), are literally drooling with anticipation of what these eggs can do for their industry (and the fact that one of them fondles a square egg suggests that the scientists' forthcoming journey is going to be underwritten by these unpleasant people.) Next, we see a pair of rube chicken farmers \"agog\" (in Barks' words) over the possibilities as well.",
+          "value": "\"Donald's accidental discovery startles the scientific world!\" In a wonderful, page-wide panel, Barks shows eleven scientists studying and arguing over the eggs. (see Fig. 5) What a collection of, well, eggheads. They are bearded in most cases (including one fellow who is nothing but a pair of eyes in the midst of a shrub of facial hair), though the one who is not stares at the others through a pair of bottle-thick specs and has nothing but wrinkles, like a shar pei. In the next panel, a pair of fat, egg-headed, wealthy \"egg dealers\" (with diamonds on their shirts), are literally drooling with anticipation of what these eggs can do for their industry (and the fact that one of them fondles a square egg suggests that the scientists' forthcoming journey is going to be underwritten by these unpleasant people.) Next, we see a pair of rube chicken farmers \"agog\" (in Barks' words) over the possibilities as well.",
+          "bbox": [
+            {
+              "h": 182.23,
+              "w": 312.11,
+              "x": 465.38,
+              "y": 182.75,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "One of the things I've always loved about Barks is his attention to background detail, and especially the jokes he puts in the form of signs and shapes. In the panel with the fat-cats fondling the square hen fruit, you'll notice there's a graph with the name \"Interglobal Eggs—'Something to Cackle About!'\" on the wall, and the globe in their office is egg shaped. As the farmers yak on about the possible bounty of \"square fryers with round corners,\" one of the roosters is looking on, sweat flying from his brow. The ships, the offices, the farms are rich with this background detail, but detail that helps us slow down to appreciate each panel of the story.",
+          "value": "One of the things I've always loved about Barks is his attention to background detail, and especially the jokes he puts in the form of signs and shapes. In the panel with the fat-cats fondling the square hen fruit, you'll notice there's a graph with the name \"Interglobal Eggs—'Something to Cackle About!'\" on the wall, and the globe in their office is egg shaped. As the farmers yak on about the possible bounty of \"square fryers with round corners,\" one of the roosters is looking on, sweat flying from his brow. The ships, the offices, the farms are rich with this background detail, but detail that helps us slow down to appreciate each panel of the story.",
+          "bbox": [
+            {
+              "h": 139.91,
+              "w": 312.65,
+              "x": 464.37,
+              "y": 365.52,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Once everyone gets on the boat, we see a reprisal of the hierarchy that existed at the museum, a system that Donald will be free from thanks, again, to eggs. The discovery of the square eggs released",
+          "value": "Once everyone gets on the boat, we see a reprisal of the hierarchy that existed at the museum, a system that Donald will be free from thanks, again, to eggs. The discovery of the square eggs released",
+          "bbox": [
+            {
+              "h": 41.61,
+              "w": 312.19,
+              "x": 464.32,
+              "y": 506.5,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "26, 27"
+    }
+  ]
+}

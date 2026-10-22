@@ -1,0 +1,87 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "![Donald Duck looking at a broken square egg with speech bubble \"DOGGONED IF IT WASN'T AN EGG! A SQUARE EGG!\"](cbduck-016_fig_1.png)",
+          "value": "illustration: Donald Duck looking at a broken square egg with speech bubble \"DOGGONED IF IT WASN'T AN EGG! A SQUARE EGG!\"",
+          "bbox": [
+            {
+              "h": 152.6,
+              "w": 212.66,
+              "x": 168.63,
+              "y": 178.37,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-016_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 4. Lost in the Andes, 2:1",
+          "value": "Fig. 4. Lost in the Andes, 2:1",
+          "bbox": [
+            {
+              "h": 9.29,
+              "w": 91.47,
+              "x": 230.02,
+              "y": 336.39,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "## THE EGG AND I: *Lost in the Andes*",
+          "value": "THE EGG AND I: Lost in the Andes",
+          "bbox": [
+            {
+              "h": 26.23,
+              "w": 99.76,
+              "x": 677.01,
+              "y": 184.39,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Lost in the Andes\" is widely regarded as Carl Barks' finest story, was his personal favorite, and the one he felt was his most technically perfect. Visually, it is an astonishing piece, taking us from cramped ship's quarters to the open sky above the mountains, through fog and bright sunlight, each panel masterfully rendered for maximum effect. As a story it is equally remarkable, personifying what critic Michael Barrier said of the auteur: \"Barks was a writer first and an artist second, and his drawings have life because they are in the service of characters and ideas.\" This writing shines in \"Lost in the Andes,\" taking us from a stuffy museum in Burbank, over a turbulent ocean to South America, up mountains, across plains, down valleys, and into a fog-shrouded land with strange people who speak like Southern Gentlemen from Alabama, with a heroic and curious Donald and brave and intelligent nephews who end up saving themselves from a life sentence in prison. For once, Donald is not motivated by greed or heroics, but curiosity and a taste for adventure. It is a morality play about happiness and a neat character study of the Ducks. Critics such as Thomas Andrae have examined \"Lost in the Andes\" and argued, quite effectively, that it possesses acidic criticisms of the capitalist system, that it deftly skewers the \"myth of the explorer\" and colonialism, while also",
+          "value": "\"Lost in the Andes\" is widely regarded as Carl Barks' finest story, was his personal favorite, and the one he felt was his most technically perfect. Visually, it is an astonishing piece, taking us from cramped ship's quarters to the open sky above the mountains, through fog and bright sunlight, each panel masterfully rendered for maximum effect. As a story it is equally remarkable, personifying what critic Michael Barrier said of the auteur: \"Barks was a writer first and an artist second, and his drawings have life because they are in the service of characters and ideas.\" This writing shines in \"Lost in the Andes,\" taking us from a stuffy museum in Burbank, over a turbulent ocean to South America, up mountains, across plains, down valleys, and into a fog-shrouded land with strange people who speak like Southern Gentlemen from Alabama, with a heroic and curious Donald and brave and intelligent nephews who end up saving themselves from a life sentence in prison. For once, Donald is not motivated by greed or heroics, but curiosity and a taste for adventure. It is a morality play about happiness and a neat character study of the Ducks. Critics such as Thomas Andrae have examined \"Lost in the Andes\" and argued, quite effectively, that it possesses acidic criticisms of the capitalist system, that it deftly skewers the \"myth of the explorer\" and colonialism, while also",
+          "bbox": [
+            {
+              "h": 288.11,
+              "w": 312.39,
+              "x": 463.3,
+              "y": 253.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "24, 25"
+    }
+  ]
+}

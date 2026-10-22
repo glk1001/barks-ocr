@@ -1,0 +1,260 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "86",
+              "value": "86",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nTHE GOLDEN HELMET",
+              "value": "CARL BARKS' DUCK\nTHE GOLDEN HELMET",
+              "bbox": [
+                {
+                  "h": 12.25,
+                  "w": 99.66,
+                  "x": 222.82,
+                  "y": 68.12,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                },
+                {
+                  "h": 10.86,
+                  "w": 109.59,
+                  "x": 567.83,
+                  "y": 78.12,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "87",
+              "value": "87",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "86\n\nCARL BARKS' DUCK\nTHE GOLDEN HELMET\n\n87",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "of a turbulent sea, but also with a rocky coastline that is as inhospitable as Mars. This is a bleak, unforgiving world that encompasses this chase, and Blue is ready for it, with his yacht, filled with reporters (to verify his finding the helmet), and a warship (strangely numbered '313,' same as Donald's jalopy) for protection. On the other hand, Donald will give chase in a smaller boat, tossed about by the waves. \"It isn't speed that's going to win this race—it's ruggedness!\" he says, as a cold spray blasts him at the wheel of his boat. (see Fig. 23)",
+          "value": "of a turbulent sea, but also with a rocky coastline that is as inhospitable as Mars. This is a bleak, unforgiving world that encompasses this chase, and Blue is ready for it, with his yacht, filled with reporters (to verify his finding the helmet), and a warship (strangely numbered '313,' same as Donald's jalopy) for protection. On the other hand, Donald will give chase in a smaller boat, tossed about by the waves. \"It isn't speed that's going to win this race—it's ruggedness!\" he says, as a cold spray blasts him at the wheel of his boat. (see Fig. 23)",
+          "bbox": [
+            {
+              "h": 114.27,
+              "w": 312.44,
+              "x": 110.26,
+              "y": 92.63,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Again, Barks revealed Donald's impressive skills through action: he's adept with a sextant and compass, knowing exactly where he's going with both. Like the fire scenes in \"Vacation Time,\" he presses forwards, even as scores of puffins sail by in the opposite direction, away from an impending storm. Eventually, things get so rough even the destroyer turns around, and Azure's ship is crashed upon an iceberg.",
+          "value": "Again, Barks revealed Donald's impressive skills through action: he's adept with a sextant and compass, knowing exactly where he's going with both. Like the fire scenes in \"Vacation Time,\" he presses forwards, even as scores of puffins sail by in the opposite direction, away from an impending storm. Eventually, things get so rough even the destroyer turns around, and Azure's ship is crashed upon an iceberg.",
+          "bbox": [
+            {
+              "h": 97.09,
+              "w": 311.99,
+              "x": 108.21,
+              "y": 205.52,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "We know this because Donald spies the crew of Blue's ship, and its passengers, in lifeboats heading back south. And he is not the least bit interested in seeing if he can help, or even radioing for help, and in fact the boys dance a little jig, celebrating their victory. The race for this helmet has already stripped our heroes of their humanity.",
+          "value": "We know this because Donald spies the crew of Blue's ship, and its passengers, in lifeboats heading back south. And he is not the least bit interested in seeing if he can help, or even radioing for help, and in fact the boys dance a little jig, celebrating their victory. The race for this helmet has already stripped our heroes of their humanity.",
+          "bbox": [
+            {
+              "h": 71.6,
+              "w": 311.69,
+              "x": 106.32,
+              "y": 303.3,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Of course, it cannot be this simple, as the luck of Azure Blue demands that, in a thick fog, he accidentally encounters the ducks and steals their boat, leaving them to survive in a life raft themselves. But they're equally fortunate: discovering the wreckage of Azure's boat, which includes a sail, they're able to jerry-rig a mast and shoot across the sea and up the coast just like Vikings, and in hot pursuit.",
+          "value": "Of course, it cannot be this simple, as the luck of Azure Blue demands that, in a thick fog, he accidentally encounters the ducks and steals their boat, leaving them to survive in a life raft themselves. But they're equally fortunate: discovering the wreckage of Azure's boat, which includes a sail, they're able to jerry-rig a mast and shoot across the sea and up the coast just like Vikings, and in hot pursuit.",
+          "bbox": [
+            {
+              "h": 86.01,
+              "w": 312.78,
+              "x": 104.39,
+              "y": 373.36,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Azure reaches the coast first, the location of the helmet, and yet cannot find it, thus prompting Sharky, his lawyer to sneer that Azure should \"sue somebody—anybody.\" This particular comic was written in late 1951 or early 1952, during or just after the time when Barks was involved in an awful divorce from his alcoholic second wife. Lawyers no doubt left a bitter taste in his mouth, and thus Sharky provides",
+          "value": "Azure reaches the coast first, the location of the helmet, and yet cannot find it, thus prompting Sharky, his lawyer to sneer that Azure should \"sue somebody—anybody.\" This particular comic was written in late 1951 or early 1952, during or just after the time when Barks was involved in an awful divorce from his alcoholic second wife. Lawyers no doubt left a bitter taste in his mouth, and thus Sharky provides",
+          "bbox": [
+            {
+              "h": 87.43,
+              "w": 313.26,
+              "x": 102.5,
+              "y": 458.07,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "![Sharky the lawyer speaking to Azure Blue. Speech bubble: \"I SUGGEST THAT YOU SUE SOMEBODY— ANYBODY— FOR MILLIONS OF DOLLARS DAMAGES FOR YOUR DISAPPOINTMENT, SIR!\"](cbduck-047_fig_1.png)",
+          "value": "illustration: Sharky the lawyer speaking to Azure Blue. Speech bubble: \"I SUGGEST THAT YOU SUE SOMEBODY— ANYBODY— FOR MILLIONS OF DOLLARS DAMAGES FOR YOUR DISAPPOINTMENT, SIR!\"",
+          "bbox": [
+            {
+              "h": 137.65,
+              "w": 196.88,
+              "x": 521.48,
+              "y": 104.63,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-047_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 24. The Golden Helmet, 19:4",
+          "value": "Fig. 24. The Golden Helmet, 19:4",
+          "bbox": [
+            {
+              "h": 9.74,
+              "w": 109.16,
+              "x": 564.13,
+              "y": 248.9,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "a constantly negative (and at times tiresome) dialogue, suggesting, again and again, that Azure can sue for every setback life sends him. (see Fig. 24)",
+          "value": "a constantly negative (and at times tiresome) dialogue, suggesting, again and again, that Azure can sue for every setback life sends him. (see Fig. 24)",
+          "bbox": [
+            {
+              "h": 41.18,
+              "w": 311.98,
+              "x": 462.4,
+              "y": 272.1,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But Sharky's important, at least in the way that this odd story is constructed: Azure can only make his claim through the power of law, which Barks seemed to believe was eminently pliable, provided you had a good lawyer. Without Sharky, this adventure loses its power, a power that becomes seriously warped as the story progresses.",
+          "value": "But Sharky's important, at least in the way that this odd story is constructed: Azure can only make his claim through the power of law, which Barks seemed to believe was eminently pliable, provided you had a good lawyer. Without Sharky, this adventure loses its power, a power that becomes seriously warped as the story progresses.",
+          "bbox": [
+            {
+              "h": 69.86,
+              "w": 312.63,
+              "x": 462.16,
+              "y": 313.67,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Donald is able to withstand the worst the sea has to offer, and though the kids endure this as well, they do so with a lot of complaining. Up and down the headland they go, vainly seeking the cross-marked spot, to no avail. Finally, Azure and Sharky literally crash into Donald and the boys yet again, this time ramming their boat and sinking them offshore.",
+          "value": "Donald is able to withstand the worst the sea has to offer, and though the kids endure this as well, they do so with a lot of complaining. Up and down the headland they go, vainly seeking the cross-marked spot, to no avail. Finally, Azure and Sharky literally crash into Donald and the boys yet again, this time ramming their boat and sinking them offshore.",
+          "bbox": [
+            {
+              "h": 81.2,
+              "w": 312.68,
+              "x": 462.42,
+              "y": 384.24,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But this helps our heroes. Washed ashore, one of the kids realizes that the cross-shaped headland would in fact erode over time—and it turns out they're standing right by the mound that contains the Golden Helmet. (And ensconced beneath a puffin's nest—when Donald goes to retrieve it, he gets a \"golden helmet\" of smashed eggs on his head. Again, eggs!)",
+          "value": "But this helps our heroes. Washed ashore, one of the kids realizes that the cross-shaped headland would in fact erode over time—and it turns out they're standing right by the mound that contains the Golden Helmet. (And ensconced beneath a puffin's nest—when Donald goes to retrieve it, he gets a \"golden helmet\" of smashed eggs on his head. Again, eggs!)",
+          "bbox": [
+            {
+              "h": 84.1,
+              "w": 312.39,
+              "x": 462.66,
+              "y": 468.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "86, 87"
+    }
+  ]
+}

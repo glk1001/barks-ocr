@@ -1,0 +1,259 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "level": 2,
+          "md": "## CRITICAL CARTOONS 002",
+          "value": "CRITICAL CARTOONS 002",
+          "bbox": [
+            {
+              "h": 9.09,
+              "w": 82.93,
+              "x": 206.15,
+              "y": 99.46,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "Comics / Graphic Novels / Literary Criticism",
+          "value": "Comics / Graphic Novels / Literary Criticism",
+          "bbox": [
+            {
+              "h": 9.8,
+              "w": 157.82,
+              "x": 206.05,
+              "y": 128.74,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "From 1942 to his retirement in 1966, Carl Barks drew Donald Duck comic books (7<sup>th</sup> greatest comic of the 20<sup>th</sup> Century according to *The Comics Journal*) for Walt Disney. Peter Schilling Jr. leads us on an illuminating journey through several Duck stories—from classics like *Lost in the Andes*, through forgotten masterpieces like *Vacation Time* to more obscure adventures like *Master Wrecker* or *Spare That Hair* (and many more)—and shows us how Barks took what should have been a bland franchise and turned it into a classic. Drawing on his experiences—most notably a brief stint as a chicken farmer—Barks went to create a character who was remarkable... for not being remarkable. In his pursuit of a good job, his boredom with suburban life, his temper, his squabbles with neighbors, and his resolve in the face of his many failures, Carl Barks' Duck was truly your average American.",
+          "value": "From 1942 to his retirement in 1966, Carl Barks drew Donald Duck comic books (7<sup>th</sup> greatest comic of the 20<sup>th</sup> Century according to The Comics Journal) for Walt Disney. Peter Schilling Jr. leads us on an illuminating journey through several Duck stories—from classics like Lost in the Andes, through forgotten masterpieces like Vacation Time to more obscure adventures like Master Wrecker or Spare That Hair (and many more)—and shows us how Barks took what should have been a bland franchise and turned it into a classic. Drawing on his experiences—most notably a brief stint as a chicken farmer—Barks went to create a character who was remarkable... for not being remarkable. In his pursuit of a good job, his boredom with suburban life, his temper, his squabbles with neighbors, and his resolve in the face of his many failures, Carl Barks' Duck was truly your average American.",
+          "bbox": [
+            {
+              "h": 168.91,
+              "w": 269.68,
+              "x": 205.43,
+              "y": 164.59,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Peter Schilling Jr. is the author of *The End of Baseball*, and *Mark Twain's Mississippi River*. He also writes about film and the arts for a variety of publications. He has been reading and studying Carl Barks' entire catalogue since he was a child.",
+          "value": "Peter Schilling Jr. is the author of The End of Baseball, and Mark Twain's Mississippi River. He also writes about film and the arts for a variety of publications. He has been reading and studying Carl Barks' entire catalogue since he was a child.",
+          "bbox": [
+            {
+              "h": 47.46,
+              "w": 268.27,
+              "x": 205.03,
+              "y": 348.2,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "Critical Cartoons is a series of books on comics with a new approach. Cut loose the smartest writers on the whole of comic-book history: classic comic strips, superhero epics, independent masterpieces, underground transgressions, obscure gems by well known masters, and more. Each volume of Critical Cartoons is long-form criticism that's passionate, idiosyncratic, provocative and entertaining.",
+          "value": "Critical Cartoons is a series of books on comics with a new approach. Cut loose the smartest writers on the whole of comic-book history: classic comic strips, superhero epics, independent masterpieces, underground transgressions, obscure gems by well known masters, and more. Each volume of Critical Cartoons is long-form criticism that's passionate, idiosyncratic, provocative and entertaining.",
+          "bbox": [
+            {
+              "h": 66.47956875000006,
+              "w": 269.21028070081013,
+              "x": 203.87953817584844,
+              "y": 412.15688718749993,
+              "confidence": 0.9687972,
+              "end_index": 394,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "**Other Books in the Critical Cartoons Series:**",
+          "value": "Other Books in the Critical Cartoons Series:",
+          "bbox": [
+            {
+              "h": 9.46890000000002,
+              "w": 164.12054794520543,
+              "x": 204.62465753424658,
+              "y": 495.53909999999996,
+              "confidence": 0.5,
+              "end_index": 47,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "*Ed vs. Yummy Fur: Or, What Happens When a Serial Comic Becomes a Graphic Novel* by Brian Evenson",
+          "value": "Ed vs. Yummy Fur: Or, What Happens When a Serial Comic Becomes a Graphic Novel by Brian Evenson",
+          "bbox": [
+            {
+              "h": 21.79,
+              "w": 268.08,
+              "x": 204.59,
+              "y": 506.49,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "$12.95 US\n$14.50 CAN",
+          "value": "$12.95 US\n$14.50 CAN",
+          "bbox": [
+            {
+              "h": 18.17,
+              "w": 44.4,
+              "x": 316.99,
+              "y": 550.34,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "ISBN 978-0-9889014-0-7",
+          "value": "ISBN 978-0-9889014-0-7",
+          "bbox": [
+            {
+              "h": 7.87,
+              "w": 91.99,
+              "x": 374.44,
+              "y": 561.94,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "logo: Uncivilized Books",
+          "value": "logo: Uncivilized Books",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "md": "**Uncivilized Books**",
+          "value": "Uncivilized Books\n",
+          "bbox": [
+            {
+              "h": 8.942850000000021,
+              "w": 68.12054794520549,
+              "x": 205.15068493150687,
+              "y": 602.8533,
+              "confidence": 0.5,
+              "end_index": 20,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "[www.uncivilizedbooks.com](http://www.uncivilizedbooks.com)",
+          "text": "www.uncivilizedbooks.com",
+          "url": "http://www.uncivilizedbooks.com",
+          "bbox": [
+            {
+              "h": 7.33,
+              "w": 99.15,
+              "x": 204.08,
+              "y": 612.98,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 17.8,
+              "w": 99.27,
+              "x": 204.1,
+              "y": 602.3,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "link"
+        },
+        {
+          "md": "barcode: ISBN 978-0-9889014-0-7",
+          "value": "barcode: ISBN 978-0-9889014-0-7",
+          "bbox": null,
+          "type": "text"
+        },
+        {
+          "caption": "",
+          "md": "",
+          "url": "",
+          "bbox": [
+            {
+              "h": 28.78,
+              "w": 28.11,
+              "x": 202.91,
+              "y": 569.0,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image"
+        },
+        {
+          "caption": "",
+          "md": "",
+          "url": "",
+          "bbox": [
+            {
+              "h": 35.51,
+              "w": 144.72,
+              "x": 318.8,
+              "y": 585.71,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image"
+        }
+      ],
+      "page_height": 841.68,
+      "page_number": 1,
+      "page_width": 595.2,
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "70 CARL BARKS' DUCK\nVACATION TIME 71",
+              "value": "70 CARL BARKS' DUCK\nVACATION TIME 71",
+              "bbox": [
+                {
+                  "h": 12.23,
+                  "w": 99.77,
+                  "x": 243.92,
+                  "y": 68.29,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.09,
+                  "w": 82.19,
+                  "x": 594.06,
+                  "y": 73.2,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "70 CARL BARKS' DUCK\nVACATION TIME 71",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "uncle from the cockpit of the car.",
+          "value": "uncle from the cockpit of the car.",
+          "bbox": [
+            {
+              "h": 13.81,
+              "w": 148.0,
+              "x": 133.57,
+              "y": 93.54,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Finally on leveler ground, the ducks reach a fork in the road, whose sign is shot to pieces, and Donald has to make a decision which direction to go—of course, he makes the wrong one and, of course, he makes bold claims that he knows exactly where they're going as he \"[has] a sixth sense—like a homing pigeon, you know!\" One of my favorite subtle jokes sees Huey, out of the car and with a magnifying glass looking at the road, saying \"Unca Donald, this road is getting awfully dim!\" To determine they're on the wrong road, one of the kids had to climb out and use a magnifying glass? No reason, except that it's funny.",
+          "value": "Finally on leveler ground, the ducks reach a fork in the road, whose sign is shot to pieces, and Donald has to make a decision which direction to go—of course, he makes the wrong one and, of course, he makes bold claims that he knows exactly where they're going as he \"[has] a sixth sense—like a homing pigeon, you know!\" One of my favorite subtle jokes sees Huey, out of the car and with a magnifying glass looking at the road, saying \"Unca Donald, this road is getting awfully dim!\" To determine they're on the wrong road, one of the kids had to climb out and use a magnifying glass? No reason, except that it's funny.",
+          "bbox": [
+            {
+              "h": 138.23,
+              "w": 312.51,
+              "x": 131.12,
+              "y": 108.25,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In spite of the great lengths Barks has gone through to show them climbing into vast mountain wilderness, the world down this fork flattens into a hillbilly wasteland, where we get one panel of perhaps my favorite joke (and one I wouldn't have understood as a child—in fact, I didn't discover this comic until I was an adult): two bearded Hillbillies, rifles drawn, stare down at the Ducks, whose path is blocked by a pig. \"Revenoors!\" the one cries. \"An' a-ridin' an ottymobile! Fust one I ever seed!\" the other notes, taking aim. The ducks continue on until they reach a stone marker indicating that this is the road back to Duckburg.",
+          "value": "In spite of the great lengths Barks has gone through to show them climbing into vast mountain wilderness, the world down this fork flattens into a hillbilly wasteland, where we get one panel of perhaps my favorite joke (and one I wouldn't have understood as a child—in fact, I didn't discover this comic until I was an adult): two bearded Hillbillies, rifles drawn, stare down at the Ducks, whose path is blocked by a pig. \"Revenoors!\" the one cries. \"An' a-ridin' an ottymobile! Fust one I ever seed!\" the other notes, taking aim. The ducks continue on until they reach a stone marker indicating that this is the road back to Duckburg.",
+          "bbox": [
+            {
+              "h": 139.34,
+              "w": 311.31,
+              "x": 129.13,
+              "y": 247.82,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Nothing comes of this detour, and in fact these jokes serve dual purposes: first and foremost they work, and make us laugh, but they also communicate that we have not actually entered the boundaries within which this story will settle. The crazy moonshiners, the train, the wildlife run amok... this is not a legitimate danger zone, it is a land of comic possibilities, as indicated by the fact that not only does Donald not act heroically, but the nephews cower, too. Their cowering—as Donald nearly kills them—communicates to us to just enjoy the ride. This is the easy part: the terrors that Donald blindly gropes by in order to get to his natural paradise... and real danger.",
+          "value": "Nothing comes of this detour, and in fact these jokes serve dual purposes: first and foremost they work, and make us laugh, but they also communicate that we have not actually entered the boundaries within which this story will settle. The crazy moonshiners, the train, the wildlife run amok... this is not a legitimate danger zone, it is a land of comic possibilities, as indicated by the fact that not only does Donald not act heroically, but the nephews cower, too. Their cowering—as Donald nearly kills them—communicates to us to just enjoy the ride. This is the easy part: the terrors that Donald blindly gropes by in order to get to his natural paradise... and real danger.",
+          "bbox": [
+            {
+              "h": 141.98,
+              "w": 311.27,
+              "x": 126.65,
+              "y": 388.19,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "And the paradise in this case is what appears to be a National Forest",
+          "value": "And the paradise in this case is what appears to be a National Forest",
+          "bbox": [
+            {
+              "h": 14.28,
+              "w": 301.24,
+              "x": 134.76,
+              "y": 528.98,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "in, as Donald states earlier, the fictional Eagleclaw Mountains. On page four, the jokes suddenly cease, as do our elastic panels (albeit just for this page for now.) Here, our hero pays a visit to the ranger station, in order to get a fire permit and instructions. \"We want this scenery to still be here when we leave!\" Now nature is in harmony with the Ducks: squirrels and chipmunks come right up to their vehicle and even stand on the Ducks' heads. The ranger, a tall, upright man with perfectly creased pants, is delighted at Donald's preparation—the ranger feels assured that the Ducks are going to follow the rules and leave nature as it was.",
+          "value": "in, as Donald states earlier, the fictional Eagleclaw Mountains. On page four, the jokes suddenly cease, as do our elastic panels (albeit just for this page for now.) Here, our hero pays a visit to the ranger station, in order to get a fire permit and instructions. \"We want this scenery to still be here when we leave!\" Now nature is in harmony with the Ducks: squirrels and chipmunks come right up to their vehicle and even stand on the Ducks' heads. The ranger, a tall, upright man with perfectly creased pants, is delighted at Donald's preparation—the ranger feels assured that the Ducks are going to follow the rules and leave nature as it was.",
+          "bbox": [
+            {
+              "h": 136.55,
+              "w": 311.68,
+              "x": 474.01,
+              "y": 98.57,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "As they drive on to their campsite, the streams are pristine, burbling, no longer threatening whirlpools that can suck them to their deaths. Gone are the fierce creatures, the crazy roads and narrow, crumbling bridges, the snarling hillbillies. At the campsite, Donald orders his nephews about, who valiantly (and judging from",
+          "value": "As they drive on to their campsite, the streams are pristine, burbling, no longer threatening whirlpools that can suck them to their deaths. Gone are the fierce creatures, the crazy roads and narrow, crumbling bridges, the snarling hillbillies. At the campsite, Donald orders his nephews about, who valiantly (and judging from",
+          "bbox": [
+            {
+              "h": 71.12,
+              "w": 311.74,
+              "x": 472.73,
+              "y": 238.63,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "![Donald Duck relaxing in a chair at a campsite while his nephews set up a tent and cook over a campfire. A speech bubble from one nephew says \"GEE, UNCA DONALD, YOU SURE KNOW HOW TO MAKE A CAMP!\"](cbduck-039_fig_1.png)",
+          "value": "illustration: Donald Duck relaxing in a chair at a campsite while his nephews set up a tent and cook over a campfire. A speech bubble from one nephew says \"GEE, UNCA DONALD, YOU SURE KNOW HOW TO MAKE A CAMP!\"",
+          "bbox": [
+            {
+              "h": 217.14,
+              "w": 298.93,
+              "x": 478.37,
+              "y": 316.86,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-039_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 18. Vacation Time, 5:5",
+          "value": "Fig. 18. Vacation Time, 5:5",
+          "bbox": [
+            {
+              "h": 9.13,
+              "w": 87.77,
+              "x": 581.66,
+              "y": 537.9,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "70, 71"
+    }
+  ]
+}

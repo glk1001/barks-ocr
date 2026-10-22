@@ -1,0 +1,56 @@
+# Carl Barks' Duck: Average American (Peter Schilling Jr., 2014) — chapter sidecar.
+# Each chapter must specify exactly one anchor:
+#   * 'start_printed_page' — must match a printed page number detected on a spread.
+#   * 'start_heading' — matched case-insensitively against a type:heading item's text.
+# Chapter openers carry no folio, so printed_page_number was filled on every spread
+# from the contiguous numbering (spread N = pages 2N-8, 2N-7; verified against all 51
+# spreads where LlamaParse detected a number). Anchors are the Contents page's numbers.
+
+[[chapters]]
+title = "Contents"
+start_heading = "Contents"
+kind = "contents"
+
+[[chapters]]
+title = "Introduction"
+start_printed_page = "1"
+
+[[chapters]]
+title = "The Pencil Stub That Launched a Ship: Maharajah Donald"
+start_printed_page = "12"
+
+[[chapters]]
+title = "The Egg and I: Lost in the Andes"
+start_printed_page = "24"
+
+[[chapters]]
+title = "Unfated: Luck of the North and The Gilded Man"
+start_printed_page = "34"
+
+[[chapters]]
+title = "The Evil That Men Do: The Magic Hourglass"
+start_printed_page = "52"
+
+[[chapters]]
+title = "The Forgotten Masterpiece: Vacation Time"
+start_printed_page = "64"
+
+[[chapters]]
+title = "One Helmet to Rule Them All: The Golden Helmet"
+start_printed_page = "80"
+
+[[chapters]]
+title = "Working Man: Land of the Totem Poles, No Such Varmint and The Work Stories"
+start_printed_page = "92"
+
+[[chapters]]
+title = "Bibliography"
+start_printed_page = "110"
+
+[[chapters]]
+title = "Biographical Information"
+start_printed_page = "114"
+
+[[chapters]]
+title = "Color Plates"
+start_printed_page = "115"

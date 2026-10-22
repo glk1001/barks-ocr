@@ -1,0 +1,230 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "82 CARL BARKS' DUCK THE GOLDEN HELMET 83",
+              "value": "82 CARL BARKS' DUCK THE GOLDEN HELMET 83",
+              "bbox": [
+                {
+                  "h": 11.37,
+                  "w": 98.08,
+                  "x": 229.5,
+                  "y": 64.76,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.25,
+                  "w": 110.78,
+                  "x": 568.98,
+                  "y": 67.74,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "82 CARL BARKS' DUCK THE GOLDEN HELMET 83",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "four of them.",
+          "value": "four of them.",
+          "bbox": [
+            {
+              "h": 10.38,
+              "w": 58.67,
+              "x": 119.29,
+              "y": 88.58,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In fact, the opening scene, is one of stasis, boredom. (see Fig. 22) Contrast the narration with the opening of \"Lost in the Andes.\" Both feature Donald working at a museum: in the latter, Barks wrote, \"It is morning of a day destined to live long in history! At the Museum of Natural Science the third assistant janitor is giving orders to the fourth assistant janitor!\" This joke just brims with energy. Donald has a huge smile on his face, even as he holds a feather duster.",
+          "value": "In fact, the opening scene, is one of stasis, boredom. (see Fig. 22) Contrast the narration with the opening of \"Lost in the Andes.\" Both feature Donald working at a museum: in the latter, Barks wrote, \"It is morning of a day destined to live long in history! At the Museum of Natural Science the third assistant janitor is giving orders to the fourth assistant janitor!\" This joke just brims with energy. Donald has a huge smile on his face, even as he holds a feather duster.",
+          "bbox": [
+            {
+              "h": 97.76,
+              "w": 311.15,
+              "x": 116.21,
+              "y": 103.38,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Here, the narration box simply reads, \"Donald is the assistant guard in the Museum at Duckburg!\" A guard strikes me as a more intriguing position than janitor, and yet in \"The Golden Helmet,\" Donald leans against a sculpture of a strange looking \"prehistoric cow\" (as the placard reads), his eyes are almost closed, and he's bored beyond belief. Donald's opening line? \"Ho hum!\" The Museum doesn't even have a name—the \"Museum at Duckburg?\"—and gone is the joke about multiple assistants, even though he's an assistant guard.",
+          "value": "Here, the narration box simply reads, \"Donald is the assistant guard in the Museum at Duckburg!\" A guard strikes me as a more intriguing position than janitor, and yet in \"The Golden Helmet,\" Donald leans against a sculpture of a strange looking \"prehistoric cow\" (as the placard reads), his eyes are almost closed, and he's bored beyond belief. Donald's opening line? \"Ho hum!\" The Museum doesn't even have a name—the \"Museum at Duckburg?\"—and gone is the joke about multiple assistants, even though he's an assistant guard.",
+          "bbox": [
+            {
+              "h": 114.23,
+              "w": 311.86,
+              "x": 113.93,
+              "y": 201.03,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "A Viking ship will play a large part in this tale, as Barks foreshadowed his plot points as usual—there's a big Viking ship in the background, with a large placard describing the thing. Banality wins out: \"Old Viking Ship\" (there's no more descriptive term than that?) And this: \"This ancient hulk was dug up in Herring, Norway, where it was buried by the Vikings about 920 A.D.\" \"Hulk\" suggests that this ship is merely junk, and the bland sentence communicates simply the most rote facts, and even those aren't all that interesting.",
+          "value": "A Viking ship will play a large part in this tale, as Barks foreshadowed his plot points as usual—there's a big Viking ship in the background, with a large placard describing the thing. Banality wins out: \"Old Viking Ship\" (there's no more descriptive term than that?) And this: \"This ancient hulk was dug up in Herring, Norway, where it was buried by the Vikings about 920 A.D.\" \"Hulk\" suggests that this ship is merely junk, and the bland sentence communicates simply the most rote facts, and even those aren't all that interesting.",
+          "bbox": [
+            {
+              "h": 114.33,
+              "w": 312.2,
+              "x": 111.18,
+              "y": 313.37,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In this opening page, Donald wanders the museum (as a guard must do), alternating between yawning and bemoaning his fate, a fate of having nothing to do. The museum offers a collection of history's detritus: the Headless Horseman's toupee, Lady Godiva's laundry bag, and, perhaps most telling, a morose statue with a long face, titled \"Joy.\" At the close of the first page, and over the next few, Donald has circled back to the Viking ship, where he muses over how soft modern man has become. So here the theme asserts itself: the boredom of",
+          "value": "In this opening page, Donald wanders the museum (as a guard must do), alternating between yawning and bemoaning his fate, a fate of having nothing to do. The museum offers a collection of history's detritus: the Headless Horseman's toupee, Lady Godiva's laundry bag, and, perhaps most telling, a morose statue with a long face, titled \"Joy.\" At the close of the first page, and over the next few, Donald has circled back to the Viking ship, where he muses over how soft modern man has become. So here the theme asserts itself: the boredom of",
+          "bbox": [
+            {
+              "h": 115.21,
+              "w": 311.54,
+              "x": 109.17,
+              "y": 425.6,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "![Donald Duck as a museum guard yawning next to exhibits like the Headless Horseman's Toupee and a statue titled God of Gab](cbduck-045_fig_1.png)",
+          "value": "illustration: Donald Duck as a museum guard yawning next to exhibits like the Headless Horseman's Toupee and a statue titled God of Gab",
+          "bbox": [
+            {
+              "h": 150.88,
+              "w": 215.23,
+              "x": 513.17,
+              "y": 94.78,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-045_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 22. The Golden Helmet, 2:2",
+          "value": "Fig. 22. The Golden Helmet, 2:2",
+          "bbox": [
+            {
+              "h": 9.49,
+              "w": 104.53,
+              "x": 568.36,
+              "y": 251.85,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "modern man. The vessels and castoffs of history's bravest people are trapped in these four walls and behind glass, while we simply wander about, dazed, gazing upon them. At this point, a fat, myopic man with Coke-bottle glasses asks where to find the butterfly collection, leaving Donald shaking his head. And when an effete fellow with large eyelashes says, \"Mister Guard, where is the lace and tatting collection?\" Donald cannot help but actually climb aboard the \"hulk\" and pretend, in his words, that he is a \"he-man.\"",
+          "value": "modern man. The vessels and castoffs of history's bravest people are trapped in these four walls and behind glass, while we simply wander about, dazed, gazing upon them. At this point, a fat, myopic man with Coke-bottle glasses asks where to find the butterfly collection, leaving Donald shaking his head. And when an effete fellow with large eyelashes says, \"Mister Guard, where is the lace and tatting collection?\" Donald cannot help but actually climb aboard the \"hulk\" and pretend, in his words, that he is a \"he-man.\"",
+          "bbox": [
+            {
+              "h": 111.21,
+              "w": 312.57,
+              "x": 463.03,
+              "y": 278.89,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "It is while he's playing this game of the imagination that Donald stumbles across the villain of the piece, Azure Blue, a craggy, goatee'd sourpuss who's breaking the ship apart looking for a map. Donald shoos him away and then, of course, discovers the map that will transport him from Duckburg to the high seas.",
+          "value": "It is while he's playing this game of the imagination that Donald stumbles across the villain of the piece, Azure Blue, a craggy, goatee'd sourpuss who's breaking the ship apart looking for a map. Donald shoos him away and then, of course, discovers the map that will transport him from Duckburg to the high seas.",
+          "bbox": [
+            {
+              "h": 69.41,
+              "w": 312.1,
+              "x": 463.18,
+              "y": 391.4,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "This is quite a find. No mere treasure map, it is, instead, a \"log of that old Viking ship!\", as the museum's curator points out. The curator is a friendly soul, balding, bushy beard, but oddly enough he will never have a name other than \"The Curator\". The scene that follows is reminiscent of the opening (though not the prologue) of *Raiders of the Lost Ark*: in The Curator's office, we learn that the map reveals that the",
+          "value": "This is quite a find. No mere treasure map, it is, instead, a \"log of that old Viking ship!\", as the museum's curator points out. The curator is a friendly soul, balding, bushy beard, but oddly enough he will never have a name other than \"The Curator\". The scene that follows is reminiscent of the opening (though not the prologue) of Raiders of the Lost Ark: in The Curator's office, we learn that the map reveals that the",
+          "bbox": [
+            {
+              "h": 83.72,
+              "w": 312.13,
+              "x": 463.21,
+              "y": 461.65,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "82, 83"
+    }
+  ]
+}

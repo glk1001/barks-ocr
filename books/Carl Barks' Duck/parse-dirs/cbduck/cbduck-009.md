@@ -1,0 +1,19 @@
+because his frustrations have finally mounted, Donald always keeps us dreaming, because you know what? His life is still amazing.
+
+The best cinematic analogy I can think of is Steven Spielberg's *Raiders of the Lost Ark*. Would you call that a movie about failure? No, you wouldn't. And yet Indiana Jones gets the Ark, but we don't see him benefit financially by the prize, nor professionally—in fact, in that famous final shot, we see that his treasure is taken and lost in a warehouse representing a vast, Kafkaesque bureaucracy. But who among us doesn't think of his journey as a great success?
+
+Donald seeks adventure because this is what makes life worth living. In many of his stories you will find a character who embarks on a journey—to save North America for instance—for nothing other than the fact that he can. Donald never seems to blink an eye dropping everything to seek his fortune, even if that fortune is only spiritual.
+
+This little book is not—I repeat, NOT—an exhaustive study of Carl Barks' work. First of all, there's a few of those out there, from Thomas Andrae's *Carl Barks and the Disney Comic Book* to the essays in all the Hamilton books, to the lovingly curated Carl Barks' site, www.CBarks.dk, run by the friendly Peter Kylling, to the somewhat famous (or infamous, depending on who you talk to) Marxist critique, *How to Read Donald Duck* by Ariel Dorfman and Armand Mattelart (subtitled *Imperialist Ideology in the Disney Comic*—this was originally published in Chile and banned in the U.S. for a time!) All of these will give you everything you need to know about the man and his work, even, on CarlBarks.dk, how much he was paid to create each story, which I find fascinating.
+
+No, this is an appreciation, my attempt at convincing you, a casual comic book reader, to put this book down eventually and head over and read some of Barks' work. Here you will find seven separate essays on my nine favorite Donald Duck "novels" and the best of his "work" stories, shorter pieces wherein Donald is somehow a master of a certain craft—he is the best there is at, say, rainmaking, but then
+
+
+
+he runs afoul of his own ego and essentially destroys his business, or Duckburg, or both.
+
+The stories chosen are my own personal favorites, though I did break from my top ten and included other favorites (farther down the list) that give you a glimpse of Donald interacting with prominent characters in the Barks' universe, such as Uncle Scrooge and Gladstone Gander, or certain stories that are quintessential Donald. So, for instance, I've included "The Magic Hourglass," which is one of my favorites, but it beat out, say, "Frozen Gold," because it will be the one story I chose to cover that involves Uncle Scrooge, albeit a wicked, greedy Scrooge, and one that evokes not only Frank Norris' *McTeague* but also Erich von Stroheim's film version *Greed* (but more on that later.)
+
+Sadly, it'll take some time, and some money, for you to indulge in many of these suggestions, should you desire such a treat, as Fantagraphics is still releasing the Carl Barks stories, roughly two volumes a year (albeit chock full of stories.) You can go online and get many of the Gladstone editions, but they'll set you back a pretty penny. For now, I encourage you to seek these out however you can, with whatever resources are at your disposal.
+
+So set aside your preconceptions about all things Disney, and marvel at these incredible adventures and comedies. For I'm serious when I say that Carl Barks' Donald Duck stories are brilliant "paper movies," an American pop culture phenomenon to rank up there with screwball comedies of the 30s and the best adventure serials. If I do my job right, you'll be hiding your Donald Duck book behind your *Wall Street Journal* on the bus or subway, or shouting at your kids to let you have "Lost in the Andes" back.

@@ -1,0 +1,7 @@
+## INTRODUCTION
+
+Before I began to read comics, I indulged myself in "real" books. Books with words, maybe an illustration or two if it was a classic like *Huckleberry Finn*, but no comics whatsoever. As a nervous kid of the 1970s, I was content to retreat into novels, everything from *The Hobbit* to *Watership Down* to *The Red Pony*, and even an attempt at cracking *Moby-Dick* (at which I failed miserably, though that edition was illustrated.) As the product of divorced parents, whose mother allowed my brother and me one television show a week (but we could stay up an hour past bedtime with a book), and whose father didn't even have a television, I found myself lost in books over and over again, eager for new challenges (like Melville) but never the comics. They simply weren't my bag.
+
+There were two reasons for this: first, we didn't have much money, and comic books cost money, even if they were only thirty-five cents at the time. My family found most of our reading material at the library, and libraries didn't have comics (many still don't, though that's improving.)
+
+However, one day at the Bay City (Michigan) Central Library, a stately old brick building in the center of that ruined town, where I lost countless Saturday afternoons, I came across the *Smithsonian*

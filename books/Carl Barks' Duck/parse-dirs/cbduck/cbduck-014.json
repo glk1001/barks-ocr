@@ -1,0 +1,258 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "20",
+              "value": "20",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nMAHARAJAH DONALD",
+              "value": "CARL BARKS' DUCK\nMAHARAJAH DONALD",
+              "bbox": [
+                {
+                  "h": 12.99,
+                  "w": 99.82,
+                  "x": 231.75,
+                  "y": 66.91,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.14,
+                  "w": 116.25,
+                  "x": 567.51,
+                  "y": 74.17,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "21",
+              "value": "21",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "20\n\nCARL BARKS' DUCK\nMAHARAJAH DONALD\n\n21",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "the city is relatively flat, as bereft of detail as a *Peanuts* strip. But look at India! Here we have vast forests, crowded cities, the outfits, tigers, elephants, the works.",
+          "value": "the city is relatively flat, as bereft of detail as a Peanuts strip. But look at India! Here we have vast forests, crowded cities, the outfits, tigers, elephants, the works.",
+          "bbox": [
+            {
+              "h": 40.13,
+              "w": 309.2,
+              "x": 120.53,
+              "y": 91.17,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Once the kids have their ticket to ride, Donald instantly (and correctly) surmises that the boys aren't going anywhere, not the least because this is passage for one. \"I am going to India! Pack my bags, infants!\" he says, pointing with disdain. So not only are the kids' labors in the garage paid for with less-than-peanuts, the fruit of their additional labors (in trading those less-than-peanuts) are stolen and the kids are ordered to do even more work. This time for nothing.",
+          "value": "Once the kids have their ticket to ride, Donald instantly (and correctly) surmises that the boys aren't going anywhere, not the least because this is passage for one. \"I am going to India! Pack my bags, infants!\" he says, pointing with disdain. So not only are the kids' labors in the garage paid for with less-than-peanuts, the fruit of their additional labors (in trading those less-than-peanuts) are stolen and the kids are ordered to do even more work. This time for nothing.",
+          "bbox": [
+            {
+              "h": 102.87,
+              "w": 309.96,
+              "x": 118.22,
+              "y": 133.45,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "However, unlike their Uncle Donald, a loafer extraordinaire, the kids won't mope and complain—they scheme and ponder and get their adventure.",
+          "value": "However, unlike their Uncle Donald, a loafer extraordinaire, the kids won't mope and complain—they scheme and ponder and get their adventure.",
+          "bbox": [
+            {
+              "h": 38.41,
+              "w": 309.84,
+              "x": 116.04,
+              "y": 231.98,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In a sense, \"Maharajah Donald\" is almost not a Donald Duck comic, and this is one of the reasons I'm including it here. This is the story of kids, kids who still take orders from their guardian, but who are the engines of the story; the masters of their fate. Without them, we don't get on a steamer for the far east. Without them, we don't end up in the fictional country of Bumpay. Without them, Donald doesn't become a maharajah, and without them he doesn't get almost eaten by tigers.",
+          "value": "In a sense, \"Maharajah Donald\" is almost not a Donald Duck comic, and this is one of the reasons I'm including it here. This is the story of kids, kids who still take orders from their guardian, but who are the engines of the story; the masters of their fate. Without them, we don't get on a steamer for the far east. Without them, we don't end up in the fictional country of Bumpay. Without them, Donald doesn't become a maharajah, and without them he doesn't get almost eaten by tigers.",
+          "bbox": [
+            {
+              "h": 103.97,
+              "w": 312.21,
+              "x": 113.57,
+              "y": 273.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "When they stow-away on the boat, and are then discovered, Donald claims not to know his nephews. Forced to work for their passage, the boys grumble while their uncle enjoys his trip. Upon docking in Calcutta, the trio steals Donald's passport in order to keep him from being able to disembark (\"If we can't land in Calcutta, neither can you!\") an action which then propels us into the next act, when an effete man in a turban and a western-style suit offers to \"solve their problem\" in \"return for a -(cough)- small favor.\"",
+          "value": "When they stow-away on the boat, and are then discovered, Donald claims not to know his nephews. Forced to work for their passage, the boys grumble while their uncle enjoys his trip. Upon docking in Calcutta, the trio steals Donald's passport in order to keep him from being able to disembark (\"If we can't land in Calcutta, neither can you!\") an action which then propels us into the next act, when an effete man in a turban and a western-style suit offers to \"solve their problem\" in \"return for a -(cough)- small favor.\"",
+          "bbox": [
+            {
+              "h": 113.72,
+              "w": 310.27,
+              "x": 110.95,
+              "y": 371.82,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "This gent is the Maharajah of Hoopadoola, who takes the Ducks deep into India, to his gold-domed palace, where they're clothed and fed and wondering just what it is this guy could possibly want. Though not one of his greatest splash panels, we can almost imagine the scene",
+          "value": "This gent is the Maharajah of Hoopadoola, who takes the Ducks deep into India, to his gold-domed palace, where they're clothed and fed and wondering just what it is this guy could possibly want. Though not one of his greatest splash panels, we can almost imagine the scene",
+          "bbox": [
+            {
+              "h": 60.71,
+              "w": 309.47,
+              "x": 109.08,
+              "y": 484.19,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "at the bottom of page 11 in Cinemascope, our heroes gaping at the Taj Mahal-like palace in wonder. (see Plate 1)",
+          "value": "at the bottom of page 11 in Cinemascope, our heroes gaping at the Taj Mahal-like palace in wonder. (see Plate 1)",
+          "bbox": [
+            {
+              "h": 27.34,
+              "w": 310.83,
+              "x": 464.16,
+              "y": 99.69,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Well, the favor, when it arrives, is a doozy: the Maharajah of Hoopadoola asks them to ride an old elephant across the river to the neighboring Kingdom of Bumpay... at gunpoint. See, whomever crosses the river becomes the Maharajah of Bumpay. Donald a maharajah! Replete with a harem and a small army (made up of three tired men, one of whom is a midget.) The catch? Apparently, Bumpay must pay its mortgage to Hoopadoola. To satisfy the bill, their maharajah must weigh the same or more than 100 pounds of diamonds, otherwise Hoopadoola takes Bumpay's finest tiger-hunting lands. Donald must weigh those 100 pounds (which he will unquestionably fail to do), or he'll get thrown to the tigers and Bumpay will wait until next year, when another victim is sacrificed to their mortgage.",
+          "value": "Well, the favor, when it arrives, is a doozy: the Maharajah of Hoopadoola asks them to ride an old elephant across the river to the neighboring Kingdom of Bumpay... at gunpoint. See, whomever crosses the river becomes the Maharajah of Bumpay. Donald a maharajah! Replete with a harem and a small army (made up of three tired men, one of whom is a midget.) The catch? Apparently, Bumpay must pay its mortgage to Hoopadoola. To satisfy the bill, their maharajah must weigh the same or more than 100 pounds of diamonds, otherwise Hoopadoola takes Bumpay's finest tiger-hunting lands. Donald must weigh those 100 pounds (which he will unquestionably fail to do), or he'll get thrown to the tigers and Bumpay will wait until next year, when another victim is sacrificed to their mortgage.",
+          "bbox": [
+            {
+              "h": 168.11,
+              "w": 312.04,
+              "x": 463.09,
+              "y": 128.18,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Donald fails miserably, as we know he will. The kids rub gold dust into his feathers to weigh him down (still too light), then decide to shove a hose into their uncle's mouth and fill him with water just before he's weighed. However, they accidentally use a gas hose, causing Donald to fill up like a balloon. Put on the scale, it is determined that \"He weighs less than nothing!\" Jailed, waiting a sure death in the morning, Donald appears doomed. The boys are at a loss as to how to help save their uncle from being devoured. And then, walking the streets of Bumpay, they find the stub of a pencil, and another day of trading begins...",
+          "value": "Donald fails miserably, as we know he will. The kids rub gold dust into his feathers to weigh him down (still too light), then decide to shove a hose into their uncle's mouth and fill him with water just before he's weighed. However, they accidentally use a gas hose, causing Donald to fill up like a balloon. Put on the scale, it is determined that \"He weighs less than nothing!\" Jailed, waiting a sure death in the morning, Donald appears doomed. The boys are at a loss as to how to help save their uncle from being devoured. And then, walking the streets of Bumpay, they find the stub of a pencil, and another day of trading begins...",
+          "bbox": [
+            {
+              "h": 139.61,
+              "w": 312.58,
+              "x": 462.04,
+              "y": 296.36,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Maharajah Donald\" involves adventure and riotous slapstick, Donald a bumbling fool who steals his nephews treasures while desperately needing their help. Here, he is far from heroic—in fact, Donald is a coward and a thief, a man totally unwilling to work in this story and who floats through life like a feather, without enough weight literally and figuratively. Only the boys seem content to carve out their own path, and save their uncle in the meantime.",
+          "value": "\"Maharajah Donald\" involves adventure and riotous slapstick, Donald a bumbling fool who steals his nephews treasures while desperately needing their help. Here, he is far from heroic—in fact, Donald is a coward and a thief, a man totally unwilling to work in this story and who floats through life like a feather, without enough weight literally and figuratively. Only the boys seem content to carve out their own path, and save their uncle in the meantime.",
+          "bbox": [
+            {
+              "h": 97.45,
+              "w": 312.83,
+              "x": 461.17,
+              "y": 436.68,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Were this a movie in the early career of an actor named Donald",
+          "value": "Were this a movie in the early career of an actor named Donald",
+          "bbox": [
+            {
+              "h": 13.37,
+              "w": 301.51,
+              "x": 470.44,
+              "y": 535.7,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "20, 21"
+    }
+  ]
+}

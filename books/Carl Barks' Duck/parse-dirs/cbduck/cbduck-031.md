@@ -1,0 +1,19 @@
+browbeaten into submission. Duckburg with Scrooge is not the Duckburg that Donald lives in when Scrooge is absent—it's a place controlled by the man, who seems, on many occasions, to literally possess every industry in town (and in other comics, the whole world).
+
+"The Magic Hourglass" is included here because this is the one time Barks really emphasized Scrooge's shortcomings. For once he suggests that the old bastard is in fact a horrible person; Scrooge is lonely, and unable to grasp the joys and beauty of life. Scrooge loses here. He loses big, selling his soul for wealth.
+
+But "The Magic Hourglass" also succeeds because our heroes embark on yet another of their crazy journeys, trying to refill a magic hourglass in the mystical sands from the Oasis of No Issa, sailing across the Atlantic in a broken-down boat that is powered—get this—by a pair of great white sharks, show themselves to be able gunmen, and finally, in a nod to Frank Norris' McTeague, end up discovering the true meaning of wealth and water.
+
+Barks' talents were on full display here, both visually and in terms of storytelling. A magnificent splash panel opens this story, of the Ducks staring out from the observation deck of a skyscraper out over a curving river that cuts through a downtown of tall buildings and ferry terminals. (see Plate 6) This is now Duckburg, not Burbank, and this vibrant skyline resembles Chicago. "What a swell view of the city!" the nephews proclaim. "You mean a swell view of some of my Uncle Scrooge's property!" Donald retorts, and we know instantly that most of the city is owned by Uncle Scrooge. An argument ensues between them, the nephews and Donald quarreling over which one Uncle Scrooge likes the best.
+
+Cut to Scrooge in his smoking jacket, cooking his breakfast—alone, of course. He carries on an interior monologue about an hourglass he uses to time his boiled "hen fruit" just right—three minutes to perfection. "Not once has it failed to tell the time exactly! Not once in all the years since I bought it in a thieves' market in Morocco!"
+
+And then... whoops! When cracked, the eggs spill out on the plate, undercooked. That rotten hourglass' sand has worn out. In a foul mood, Scrooge reads his financial reports over his lousy eggs, and discovers something troubling: a fishing boat, the "Junk II" is worthless and draining money from the Scrooge McDuck corporation.
+
+"Thus does destiny's scheme begin to hatch!" reads the narration box above the next panel, and again we see the mysterious power of eggs in a Barks narrative. Scrooge calls his nephews and Donald to his office, as he says, with a smile on his wicked face, "to show you how much I love you!" Is this the only mention of the word "love" in the whole of the Barks' canon? Maybe, maybe not, but it stands out here like a sore thumb. In Disney comics in general, this loaded word of affection is rarely used, such is its power, just as there's few parents, husbands and wives, just a collection of uncles, aunts, and boyfriend and girlfriends. Scrooge, trying to get something important (love) for less-than-nothing, gives Donald the Junk II and the boys the hourglass.
+
+The boys feel ripped off; it only takes a moment before Donald realizes he's in the same boat, so to speak. Reaching the Junk II, seeing it listing in the water, he reassures himself that at least he's got a better gift than the hourglass. That is, until he is suddenly attacked by the owner of the docks. Owing fees and penalties associated with the hunk of, well, junk, Donald coughs up all his dough.
+
+illustration: Two comic panels from The Magic Hourglass. In the first, a dock owner yells at Donald Duck while pointing at a junk boat. In the second, Donald is shown looking frustrated while holding the hourglass.
+
+Fig. 16. The Magic Hourglass, 5:7-8

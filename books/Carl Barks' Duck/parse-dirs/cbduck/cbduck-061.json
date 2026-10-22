@@ -1,0 +1,208 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "COLOR PLATES 115",
+              "value": "COLOR PLATES 115",
+              "bbox": [
+                {
+                  "h": 11.0,
+                  "w": 75.68,
+                  "x": 593.87,
+                  "y": 74.55,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "COLOR PLATES 115",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "illustration: portrait of Peter Schilling Jr.",
+          "value": "illustration: portrait of Peter Schilling Jr.",
+          "bbox": [
+            {
+              "h": 13.02,
+              "w": 111.31,
+              "x": 219.2,
+              "y": 251.33,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "PETER SCHILLING JR.",
+          "value": "PETER SCHILLING JR.",
+          "bbox": [
+            {
+              "h": 13.676712328767138,
+              "w": 110.73352499999999,
+              "x": 219.099825,
+              "y": 251.7041095890411,
+              "confidence": 0.5,
+              "end_index": 18,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Peter Schilling Jr. is the author of *The End of Baseball*, and *Mark Twain's Mississippi River*. He also writes about film and the arts for a variety of publications. He has been reading and studying Carl Barks' entire catalogue since he was a child.",
+          "value": "Peter Schilling Jr. is the author of The End of Baseball, and Mark Twain's Mississippi River. He also writes about film and the arts for a variety of publications. He has been reading and studying Carl Barks' entire catalogue since he was a child.",
+          "bbox": [
+            {
+              "h": 65.5,
+              "w": 184.0,
+              "x": 216.98,
+              "y": 302.28,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "![Comic panel showing a dog character in a naval uniform introducing a character in a turban. Speech bubble: \"GENTLEMEN, THE MAHARAJAH OF HOOPADOOLA!\"](cbduck-061_fig_1.png)",
+          "value": "illustration: Comic panel showing a dog character in a naval uniform introducing a character in a turban. Speech bubble: \"GENTLEMEN, THE MAHARAJAH OF HOOPADOOLA!\"",
+          "bbox": [
+            {
+              "h": 103.35,
+              "w": 160.75,
+              "x": 479.28,
+              "y": 102.98,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-061_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "![Comic panel showing Donald Duck and his nephews reacting with surprise. Speech bubbles: \"A MAHARAJAH!\", \"G-GOSH!\"](cbduck-061_fig_2.png)",
+          "value": "illustration: Comic panel showing Donald Duck and his nephews reacting with surprise. Speech bubbles: \"A MAHARAJAH!\", \"G-GOSH!\"",
+          "bbox": [
+            {
+              "h": 103.25,
+              "w": 130.03,
+              "x": 643.18,
+              "y": 102.4,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-061_fig_2.png",
+          "caption": ""
+        },
+        {
+          "md": "![Comic panel showing Donald and his nephews looking at a large palace. Speech bubbles: \"FROM BURBANK, CALIF., TO A MAHARAJAH'S PALACE IS A BIG JUMP FOR THE DUCKS! IT ALMOST TAKES THEIR BREATH AWAY!\", \"THE ROOF IS SOLID GOLD! AND THE WALLS ARE STUDDED WITH JEWELS!\"](cbduck-061_fig_3.png)",
+          "value": "illustration: Comic panel showing Donald and his nephews looking at a large palace. Speech bubbles: \"FROM BURBANK, CALIF., TO A MAHARAJAH'S PALACE IS A BIG JUMP FOR THE DUCKS! IT ALMOST TAKES THEIR BREATH AWAY!\", \"THE ROOF IS SOLID GOLD! AND THE WALLS ARE STUDDED WITH JEWELS!\"",
+          "bbox": [
+            {
+              "h": 103.6,
+              "w": 294.82,
+              "x": 479.72,
+              "y": 209.85,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-061_fig_3.png",
+          "caption": ""
+        },
+        {
+          "md": "Plate 1. Maharajah Donald, 11:5-7",
+          "value": "Plate 1. Maharajah Donald, 11:5-7",
+          "bbox": [
+            {
+              "h": 9.04,
+              "w": 111.31,
+              "x": 571.54,
+              "y": 314.69,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "![Comic panel showing Donald and his nephews looking down at a square, blocky city from a cliff. Speech bubbles: \"WELL, WHADDAYA KNOW!\", \"A LOST WORLD BENEATH THE FOG,\", \"SURE IS A BLOCKY-LOOKIN' PLACE!\"](cbduck-061_fig_4.png)",
+          "value": "illustration: Comic panel showing Donald and his nephews looking down at a square, blocky city from a cliff. Speech bubbles: \"WELL, WHADDAYA KNOW!\", \"A LOST WORLD BENEATH THE FOG,\", \"SURE IS A BLOCKY-LOOKIN' PLACE!\"",
+          "bbox": [
+            {
+              "h": 212.28,
+              "w": 295.46,
+              "x": 479.19,
+              "y": 332.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-061_fig_4.png",
+          "caption": ""
+        },
+        {
+          "md": "Plate 2. Lost in the Andes, 17:5",
+          "value": "Plate 2. Lost in the Andes, 17:5",
+          "bbox": [
+            {
+              "h": 7.81,
+              "w": 100.07,
+              "x": 577.44,
+              "y": 547.14,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "114, 115"
+    }
+  ]
+}

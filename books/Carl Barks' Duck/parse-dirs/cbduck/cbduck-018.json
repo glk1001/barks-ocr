@@ -1,0 +1,211 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "28",
+              "value": "28",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nLOST IN THE ANDES",
+              "value": "CARL BARKS' DUCK\nLOST IN THE ANDES",
+              "bbox": [
+                {
+                  "h": 12.23,
+                  "w": 98.76,
+                  "x": 230.75,
+                  "y": 69.04,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                },
+                {
+                  "h": 11.66,
+                  "w": 97.58,
+                  "x": 586.33,
+                  "y": 74.25,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "29",
+              "value": "29",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "28\n\nCARL BARKS' DUCK\nLOST IN THE ANDES\n\n29",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "comic panel: A scientist in a tuxedo and top hat demands an omelet from his assistant, who in turn demands it from another assistant.",
+          "value": "comic panel: A scientist in a tuxedo and top hat demands an omelet from his assistant, who in turn demands it from another assistant.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Fig. 6. Lost in the Andes, 3:2",
+          "value": "Fig. 6. Lost in the Andes, 3:2",
+          "bbox": [
+            {
+              "h": 9.41,
+              "w": 92.86,
+              "x": 223.3,
+              "y": 254.03,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Donald from the walls of the museum, as he is hauled along on this expedition with only his nephews beneath him in the pecking order. In a weird but hilarious sequence, the top scientist demands an omelet from his assistant, Tombsbury. He, in turn, demands his assistant, Wormsley, make it instead (in a panel that has a strange noirish tilt to it, shot from a god's-eye-point-of-view and looking like a lost frame from Orson Welles' *Lady From Shanghai*). (see Fig. 6) Wormsley, without any of the dignity he or his supervisor received, shouts at Donald, whose name he doesn't even know--\"Hey you! The prof wants an omelet! Get busy!\" Our hero, chest puffed out, calls for \"Assistants Four, Five, and Six...\" to make the omelet. These are, of course, Huey, Dewey and Louie, who are all blowing gum bubbles.",
+          "value": "Donald from the walls of the museum, as he is hauled along on this expedition with only his nephews beneath him in the pecking order. In a weird but hilarious sequence, the top scientist demands an omelet from his assistant, Tombsbury. He, in turn, demands his assistant, Wormsley, make it instead (in a panel that has a strange noirish tilt to it, shot from a god's-eye-point-of-view and looking like a lost frame from Orson Welles' Lady From Shanghai). (see Fig. 6) Wormsley, without any of the dignity he or his supervisor received, shouts at Donald, whose name he doesn't even know--\"Hey you! The prof wants an omelet! Get busy!\" Our hero, chest puffed out, calls for \"Assistants Four, Five, and Six...\" to make the omelet. These are, of course, Huey, Dewey and Louie, who are all blowing gum bubbles.",
+          "bbox": [
+            {
+              "h": 170.52295510333363,
+              "w": 312.99975,
+              "x": 113.36377499999999,
+              "y": 275.02225037611845,
+              "confidence": 0.9800912,
+              "end_index": 806,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Like the pencil stub in \"Maharajah Donald,\" the nephews' gum bubbles are a cue to a future solution. Without finding any eggs, the boys use what's available, and follow orders, making an omelet from the square eggs—you know, the eggs that are decades old.",
+          "value": "Like the pencil stub in \"Maharajah Donald,\" the nephews' gum bubbles are a cue to a future solution. Without finding any eggs, the boys use what's available, and follow orders, making an omelet from the square eggs—you know, the eggs that are decades old.",
+          "bbox": [
+            {
+              "h": 56.97,
+              "w": 311.83,
+              "x": 112.27,
+              "y": 445.39,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "As the plate of rancid omelet is handed off from assistant to assistant, each man, hungry I guess, takes a small bite, and by page five each and every member of this expedition—with the exception",
+          "value": "As the plate of rancid omelet is handed off from assistant to assistant, each man, hungry I guess, takes a small bite, and by page five each and every member of this expedition—with the exception",
+          "bbox": [
+            {
+              "h": 44.38,
+              "w": 311.88,
+              "x": 111.41,
+              "y": 501.95,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "of the nephews—is sick beyond belief (with \"Acute Ptomaine Ptosis of the Ptummy!\"). When the ship finally lands in Peru, the same hierarchical chain rejects the idea of chasing after square eggs, having lost interest thanks to their sickness. Donald, being near the bottom, thinks to send his nephews, but decides to go himself when he sees them blowing bubbles. Apparently he believes that he's the only one mature enough to lead this expedition.",
+          "value": "of the nephews—is sick beyond belief (with \"Acute Ptomaine Ptosis of the Ptummy!\"). When the ship finally lands in Peru, the same hierarchical chain rejects the idea of chasing after square eggs, having lost interest thanks to their sickness. Donald, being near the bottom, thinks to send his nephews, but decides to go himself when he sees them blowing bubbles. Apparently he believes that he's the only one mature enough to lead this expedition.",
+          "bbox": [
+            {
+              "h": 97.91,
+              "w": 312.42,
+              "x": 472.71,
+              "y": 100.0,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Outside of the thrill of watching this story unfold, of the madness of square eggs and the rather ridiculous way the expedition has at once unraveled and sent our hero on his way, what strikes me as significant here is Donald's motivation. Though we know that Donald is going to fumble and bumble along the way, much to our joy, he's also a much richer character now than he was in, say, \"Maharajah Donald.\" He's someone with direction, brave, pushing through to find the source of those square eggs. Do we think to ask why? Consider: as Thomas Andrae points out in his remarkable *Carl Barks and the Disney Comic Book*, Donald has never received credit for the initial discovery of the eggs (not that accidentally dropping one while cleaning is worthy of tremendous accolades), but Barks has pretty much established that Donald isn't going to get anything more than his day's wages for this dangerous journey—wages which I can't imagine amounts to much.",
+          "value": "Outside of the thrill of watching this story unfold, of the madness of square eggs and the rather ridiculous way the expedition has at once unraveled and sent our hero on his way, what strikes me as significant here is Donald's motivation. Though we know that Donald is going to fumble and bumble along the way, much to our joy, he's also a much richer character now than he was in, say, \"Maharajah Donald.\" He's someone with direction, brave, pushing through to find the source of those square eggs. Do we think to ask why? Consider: as Thomas Andrae points out in his remarkable Carl Barks and the Disney Comic Book, Donald has never received credit for the initial discovery of the eggs (not that accidentally dropping one while cleaning is worthy of tremendous accolades), but Barks has pretty much established that Donald isn't going to get anything more than his day's wages for this dangerous journey—wages which I can't imagine amounts to much.",
+          "bbox": [
+            {
+              "h": 196.5,
+              "w": 313.16,
+              "x": 470.87,
+              "y": 198.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "And yet, in the treacherous mountains of Peru, Donald and the nephews push on, despite numerous failings (all of which are funny), even going so far as to climb to the \"the highest plateau in the region!\" and then, \"[m]iles and miles and miles later,\" feeling more frustrated than exhausted, the clan comes across a very old fellow who speaks of an American who passed through and into the \"region of the mists.\" This American returned with \"a look of madness,\" cold and hungry. Armed with this news, the ducks practically race into the mists, even as the old man tries to call them back to warn them that no one but that American had ever returned.",
+          "value": "And yet, in the treacherous mountains of Peru, Donald and the nephews push on, despite numerous failings (all of which are funny), even going so far as to climb to the \"the highest plateau in the region!\" and then, \"[m]iles and miles and miles later,\" feeling more frustrated than exhausted, the clan comes across a very old fellow who speaks of an American who passed through and into the \"region of the mists.\" This American returned with \"a look of madness,\" cold and hungry. Armed with this news, the ducks practically race into the mists, even as the old man tries to call them back to warn them that no one but that American had ever returned.",
+          "bbox": [
+            {
+              "h": 137.96,
+              "w": 314.43,
+              "x": 469.06,
+              "y": 395.13,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "What's amazing to me is that we're not even at the heart of this story,",
+          "value": "What's amazing to me is that we're not even at the heart of this story,",
+          "bbox": [
+            {
+              "h": 15.16,
+              "w": 302.96,
+              "x": 478.09,
+              "y": 536.07,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "28, 29"
+    }
+  ]
+}

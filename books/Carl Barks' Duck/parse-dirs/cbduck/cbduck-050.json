@@ -1,0 +1,114 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "![comic panel: Donald Duck holding a scythe talking to a character with a large head of hair. Speech bubbles: \"NEVER MIND THE FLATTERY, DUCK! WHEN DO YOU START?\" and \"AS SOON AS I SELECT THE PROPER TOOL, SIR!\"](cbduck-050_fig_1.png)",
+          "value": "comic panel: Donald Duck holding a scythe talking to a character with a large head of hair. Speech bubbles: \"NEVER MIND THE FLATTERY, DUCK! WHEN DO YOU START?\" and \"AS SOON AS I SELECT THE PROPER TOOL, SIR!\"",
+          "bbox": [
+            {
+              "h": 175.12,
+              "w": 263.43,
+              "x": 136.24,
+              "y": 180.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-050_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 26. Spare That Hair, 1:4",
+          "value": "Fig. 26. Spare That Hair, 1:4",
+          "bbox": [
+            {
+              "h": 10.3,
+              "w": 89.29,
+              "x": 220.79,
+              "y": 355.77,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## WORKING MAN:",
+          "value": "WORKING MAN:",
+          "bbox": null,
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### Land of the Totem Poles, No Such Varmint, and the Work Stories",
+          "value": "Land of the Totem Poles, No Such Varmint, and the Work Stories",
+          "bbox": [
+            {
+              "h": 41.13,
+              "w": 249.27,
+              "x": 525.93,
+              "y": 191.46,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Everyone works, for the most part. Your parents worked, and maybe even as a child you held down a job delivering newspapers or raking the yard for your allowance or maybe even selling magazine subscriptions or Grit door-to-door. When you hit high school perhaps you slung burgers at McDonald's or mowed lawns or sold pot. In any case, you worked, and did so with varying degrees of success, just like everyone.",
+          "value": "Everyone works, for the most part. Your parents worked, and maybe even as a child you held down a job delivering newspapers or raking the yard for your allowance or maybe even selling magazine subscriptions or Grit door-to-door. When you hit high school perhaps you slung burgers at McDonald's or mowed lawns or sold pot. In any case, you worked, and did so with varying degrees of success, just like everyone.",
+          "bbox": [
+            {
+              "h": 103.49,
+              "w": 313.07,
+              "x": 462.27,
+              "y": 261.27,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "If you're reading this book, the chances are pretty good that you're not a millionaire, not a wealthy CEO, but someone who schleps through each day, earning your bread. In his stories, Donald often works his tail off, in a variety of different positions, and here we see actor and creator in perfect synch with one another. Barks worked, from the time he dropped out of high school at age 15 to help his pop out with their farm, and on through retirement, as he painted Duck portraits (with Disney's permission) to supplement his meager income in his dotage. With his hero, Barks captured, with amazing thoroughness, the essence of work—its lows and its highs—better than anyone, in part because he experienced it firsthand, and never stopped experiencing the rigors of day labor. Even as a writer for Western Publishing, churning out the great Duck stories, Barks was fiddling around with chicken farms. His",
+          "value": "If you're reading this book, the chances are pretty good that you're not a millionaire, not a wealthy CEO, but someone who schleps through each day, earning your bread. In his stories, Donald often works his tail off, in a variety of different positions, and here we see actor and creator in perfect synch with one another. Barks worked, from the time he dropped out of high school at age 15 to help his pop out with their farm, and on through retirement, as he painted Duck portraits (with Disney's permission) to supplement his meager income in his dotage. With his hero, Barks captured, with amazing thoroughness, the essence of work—its lows and its highs—better than anyone, in part because he experienced it firsthand, and never stopped experiencing the rigors of day labor. Even as a writer for Western Publishing, churning out the great Duck stories, Barks was fiddling around with chicken farms. His",
+          "bbox": [
+            {
+              "h": 182.96,
+              "w": 312.78,
+              "x": 461.6,
+              "y": 365.8,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "92, 93"
+    }
+  ]
+}

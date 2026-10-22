@@ -1,0 +1,216 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "94",
+              "value": "94",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nWORKING MAN",
+              "value": "CARL BARKS' DUCK\nWORKING MAN",
+              "bbox": [
+                {
+                  "h": 13.39,
+                  "w": 99.51,
+                  "x": 227.48,
+                  "y": 62.68,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.59,
+                  "w": 81.58,
+                  "x": 585.54,
+                  "y": 70.35,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "95",
+              "value": "95",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "94\n\nCARL BARKS' DUCK\nWORKING MAN\n\n95",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "failures informed his hero. And in the final analysis, as you'll see here, Donald is better for his work, better for his labors, even when he fails. And he fails often—until he succeeds.",
+          "value": "failures informed his hero. And in the final analysis, as you'll see here, Donald is better for his work, better for his labors, even when he fails. And he fails often—until he succeeds.",
+          "bbox": [
+            {
+              "h": 42.5,
+              "w": 310.79,
+              "x": 115.18,
+              "y": 86.48,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The *Bhagavad Gita* states, \"Work alone is your privilege, never the fruits thereof. Never let the fruits of action be your motive; and never cease to work... Be not affected by success or failure.\" This very Eastern approach to labor certainly smacks headlong into America's very capitalist approach to working hard and attaining a fortune. As I've stated before, and have shown in two of these comics—\"Luck of the North\" and \"The Gilded Man\"—Donald does emerge rich, though in both cases what we had was essentially a treasure hunt existing outside the realm of work. Though both of those stories involved working hard for the treasures involved, neither was about an actual job. (In fact, we may wonder what exactly Donald does that he can take time off for his pursuits.)",
+          "value": "The Bhagavad Gita states, \"Work alone is your privilege, never the fruits thereof. Never let the fruits of action be your motive; and never cease to work... Be not affected by success or failure.\" This very Eastern approach to labor certainly smacks headlong into America's very capitalist approach to working hard and attaining a fortune. As I've stated before, and have shown in two of these comics—\"Luck of the North\" and \"The Gilded Man\"—Donald does emerge rich, though in both cases what we had was essentially a treasure hunt existing outside the realm of work. Though both of those stories involved working hard for the treasures involved, neither was about an actual job. (In fact, we may wonder what exactly Donald does that he can take time off for his pursuits.)",
+          "bbox": [
+            {
+              "h": 166.38,
+              "w": 314.91,
+              "x": 110.64,
+              "y": 129.46,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "\"Land of the Totem Poles\" shows Donald hard at work as a salesman, and it's a fun and utterly ridiculous story, made wonderful by Barks' insane attention to detail. We open in Duckburg, a city that seems gripped by a happy indolence. A squirrel is perched on Donald's toes as he reads the paper on a park bench, while behind him is a statue of a fat guy in swim trunks hosing himself off. Our hero's intrigued by an ad: \"Wanted: super salesmen to sell high-priced gizmo!... huge commissions!\" Excited, he races to the job in silhouette, while a not unhappy bum lounges beneath a tree. (see Fig. 25) Our hero is surprised to see a block-length line at the business where he hopes to work. Barks filled this line with a neat array of Duckburg citizenry: fat and tall, smoking pipes and dressed nattily, aged and stooped, and even a pair engaged in fisticuffs. Donald pulls a trick on the supervisor to get to the head of the line and makes his case for employment, which he wins. Pissed at being duped, the head of the sales force is eager to see Donald \"get the business,\" and so he sends our man north, to the Kickmiquik River, to sell \"the product.\" Inspired by their uncle (and,",
+          "value": "\"Land of the Totem Poles\" shows Donald hard at work as a salesman, and it's a fun and utterly ridiculous story, made wonderful by Barks' insane attention to detail. We open in Duckburg, a city that seems gripped by a happy indolence. A squirrel is perched on Donald's toes as he reads the paper on a park bench, while behind him is a statue of a fat guy in swim trunks hosing himself off. Our hero's intrigued by an ad: \"Wanted: super salesmen to sell high-priced gizmo!... huge commissions!\" Excited, he races to the job in silhouette, while a not unhappy bum lounges beneath a tree. (see Fig. 25) Our hero is surprised to see a block-length line at the business where he hopes to work. Barks filled this line with a neat array of Duckburg citizenry: fat and tall, smoking pipes and dressed nattily, aged and stooped, and even a pair engaged in fisticuffs. Donald pulls a trick on the supervisor to get to the head of the line and makes his case for employment, which he wins. Pissed at being duped, the head of the sales force is eager to see Donald \"get the business,\" and so he sends our man north, to the Kickmiquik River, to sell \"the product.\" Inspired by their uncle (and,",
+          "bbox": [
+            {
+              "h": 244.14,
+              "w": 316.43,
+              "x": 103.41,
+              "y": 297.42,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 9.29,
+              "w": 133.11,
+              "x": 554.63,
+              "y": 256.36,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "![Donald Duck as a salesman in silhouette, running past a building with a sign that reads \"I CAN SELL ANYTHING TO ANYBODY ANYPLACE! I'M THAT GOOD!\"](cbduck-051_fig_1.png)",
+          "value": "illustration: Donald Duck as a salesman in silhouette, running past a building with a sign that reads \"I CAN SELL ANYTHING TO ANYBODY ANYPLACE! I'M THAT GOOD!\"",
+          "bbox": [
+            {
+              "h": 153.81,
+              "w": 205.92,
+              "x": 517.12,
+              "y": 97.5,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-051_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 27. The Land of the Totem Poles, 1:3",
+          "value": "Fig. 27. The Land of the Totem Poles, 1:3",
+          "bbox": [
+            {
+              "h": 8.153424657534288,
+              "w": 131.24947499999996,
+              "x": 555.7718249999999,
+              "y": 256.43835616438355,
+              "confidence": 0.5,
+              "end_index": 40,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "as usual, joining him on this adventure), the kids run out to get some goods to sell themselves. And with that, we're off.",
+          "value": "as usual, joining him on this adventure), the kids run out to get some goods to sell themselves. And with that, we're off.",
+          "bbox": [
+            {
+              "h": 26.99,
+              "w": 311.14,
+              "x": 464.99,
+              "y": 279.7,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Land of the Totem Poles,\" with its focus on the indigenous tribes of British Columbia, seems to come straight out of the pages of National Geographic, and is, at its heart, a comedy of lovely extremes: we go from lazy Duckburg, to the Canadian wilderness, and incredibly this is the British Columbian frontier that is glimpsed in the summer—no snow to speak of. To make matters even more intriguing, when Donald arrives (in a river town called Chilled Foot), he discovers that his product is none other than a truck-sized steam calliope. Undaunted, Donald and the boys rig up a raft, its paddle hooked up to the truck's axle (the calliope sits upon the bed of the vehicle), and sail down the river.",
+          "value": "\"Land of the Totem Poles,\" with its focus on the indigenous tribes of British Columbia, seems to come straight out of the pages of National Geographic, and is, at its heart, a comedy of lovely extremes: we go from lazy Duckburg, to the Canadian wilderness, and incredibly this is the British Columbian frontier that is glimpsed in the summer—no snow to speak of. To make matters even more intriguing, when Donald arrives (in a river town called Chilled Foot), he discovers that his product is none other than a truck-sized steam calliope. Undaunted, Donald and the boys rig up a raft, its paddle hooked up to the truck's axle (the calliope sits upon the bed of the vehicle), and sail down the river.",
+          "bbox": [
+            {
+              "h": 150.41,
+              "w": 311.7,
+              "x": 464.37,
+              "y": 308.11,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Naturally, there's barely a soul around, until they reach a shack with a sad, long-faced woman who doesn't have the $22,000 to buy a steam calliope. But the boys pounce, selling their wares—cosmetics—to the lady, taking all of her life's savings, $22. Engraged, Donald decides to take the boys' goods to sell himself, leaving them to deal with the calliope.",
+          "value": "Naturally, there's barely a soul around, until they reach a shack with a sad, long-faced woman who doesn't have the $22,000 to buy a steam calliope. But the boys pounce, selling their wares—cosmetics—to the lady, taking all of her life's savings, $22. Engraged, Donald decides to take the boys' goods to sell himself, leaving them to deal with the calliope.",
+          "bbox": [
+            {
+              "h": 83.15,
+              "w": 311.7,
+              "x": 463.26,
+              "y": 462.17,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "94, 95"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "CRITICAL CARTOONS",
+          "value": "CRITICAL CARTOONS",
+          "bbox": [
+            {
+              "h": 8.942849999999993,
+              "w": 83.11232876712327,
+              "x": 208.83287671232878,
+              "y": 130.197375,
+              "confidence": 0.5,
+              "end_index": 16,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "level": 1,
+          "md": "# CARL BARKS' DUCK",
+          "value": "CARL BARKS' DUCK",
+          "bbox": [
+            {
+              "h": 65.86,
+              "w": 330.84,
+              "x": 205.75,
+              "y": 164.46,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "doc_title",
+              "start_index": null
+            }
+          ],
+          "type": "heading"
+        },
+        {
+          "md": "AVERAGE AMERICAN",
+          "value": "AVERAGE AMERICAN",
+          "bbox": [
+            {
+              "h": 15.97,
+              "w": 153.52,
+              "x": 206.17,
+              "y": 213.09,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "doc_title",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "BY PETER SCHILLING JR.",
+          "value": "BY PETER SCHILLING JR.",
+          "bbox": [
+            {
+              "h": 14.58,
+              "w": 167.05,
+              "x": 206.93,
+              "y": 325.06,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text"
+        },
+        {
+          "md": "illustration: yellow silhouette of Donald Duck on a blue background",
+          "value": "illustration: yellow silhouette of Donald Duck on a blue background",
+          "bbox": null,
+          "type": "text"
+        }
+      ],
+      "page_height": 841.68,
+      "page_number": 1,
+      "page_width": 595.2,
+      "success": true
+    }
+  ]
+}

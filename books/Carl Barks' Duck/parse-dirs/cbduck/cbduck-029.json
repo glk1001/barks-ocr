@@ -1,0 +1,192 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "50 CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN 51",
+              "value": "50 CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN 51",
+              "bbox": [
+                {
+                  "h": 12.14,
+                  "w": 99.97,
+                  "x": 225.19,
+                  "y": 65.86,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.8,
+                  "w": 223.45,
+                  "x": 508.75,
+                  "y": 71.78,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "50 CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN 51",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "where Miss Swan is no longer living, to Webfoot, Oregon, where she had a forwarding address. In Webfoot, which is a city so perpetually flooded that taxis drive through waist-deep water and the postman wears waders, Donald discovers that Miss Swan \"floated away in 1901\" to Duckburg.",
+          "value": "where Miss Swan is no longer living, to Webfoot, Oregon, where she had a forwarding address. In Webfoot, which is a city so perpetually flooded that taxis drive through waist-deep water and the postman wears waders, Donald discovers that Miss Swan \"floated away in 1901\" to Duckburg.",
+          "bbox": [
+            {
+              "h": 69.04,
+              "w": 311.49,
+              "x": 113.86,
+              "y": 91.89,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "This is actually terrible news. Back home, our heroes race to the post office, only to get there just when—guess who?—Gladstone is coming to pick up his mail. And so the story circles back: Gladstone gets the stamp, realizes its value (thanks in no small part to Donald's earlier gloating, which of course got him the money to go to Guiana, which brings us here) and races to Mr. Philo T. Ellic to sell. The Ducks inexplicably follow him, and stare forlornly as the monster emerges, $50,000 richer.",
+          "value": "This is actually terrible news. Back home, our heroes race to the post office, only to get there just when—guess who?—Gladstone is coming to pick up his mail. And so the story circles back: Gladstone gets the stamp, realizes its value (thanks in no small part to Donald's earlier gloating, which of course got him the money to go to Guiana, which brings us here) and races to Mr. Philo T. Ellic to sell. The Ducks inexplicably follow him, and stare forlornly as the monster emerges, $50,000 richer.",
+          "bbox": [
+            {
+              "h": 108.65,
+              "w": 311.24,
+              "x": 112.39,
+              "y": 162.24,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Shooing the kids because he wants to take a long walk alone, Donald will stop every ten feet to \"have a tantrum\" (we see him running his head into a wall in frustration.) This was Barks' reflection on Donald's bad luck—only, as we will see, his luck will turn, albeit in a weird, and perhaps unethical way. For Donald, destitute on a bridge, is in the right place at the right time, as Philo T. Ellic, absent-minded to the extreme, hails a taxi right next to Donald, and then proceeds to leave the album with the valuable stamp on the railing, right next to our man.",
+          "value": "Shooing the kids because he wants to take a long walk alone, Donald will stop every ten feet to \"have a tantrum\" (we see him running his head into a wall in frustration.) This was Barks' reflection on Donald's bad luck—only, as we will see, his luck will turn, albeit in a weird, and perhaps unethical way. For Donald, destitute on a bridge, is in the right place at the right time, as Philo T. Ellic, absent-minded to the extreme, hails a taxi right next to Donald, and then proceeds to leave the album with the valuable stamp on the railing, right next to our man.",
+          "bbox": [
+            {
+              "h": 121.79,
+              "w": 310.45,
+              "x": 110.58,
+              "y": 274.32,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "On a train that Ellic believes is bound for San Francisco (actually it's a train to Chicago—and Ellic's bad memory is now about as much fun as Mr. Magoo's blindness), Donald hops aboard. Just when Ellic is about to panic at losing the album, Donald appears, and he receives a $50,000 reward.",
+          "value": "On a train that Ellic believes is bound for San Francisco (actually it's a train to Chicago—and Ellic's bad memory is now about as much fun as Mr. Magoo's blindness), Donald hops aboard. Just when Ellic is about to panic at losing the album, Donald appears, and he receives a $50,000 reward.",
+          "bbox": [
+            {
+              "h": 66.67,
+              "w": 309.79,
+              "x": 109.54,
+              "y": 400.52,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "I guess Ellic gave Donald the value of the stamp since he actually saved a whole book's full of rare stamps. But the conclusion here goes against the grain of most of Barks' stories—namely, that the money doesn't matter, it's the fun of the journey, the thrill of adventure and learning that makes life worth living.",
+          "value": "I guess Ellic gave Donald the value of the stamp since he actually saved a whole book's full of rare stamps. But the conclusion here goes against the grain of most of Barks' stories—namely, that the money doesn't matter, it's the fun of the journey, the thrill of adventure and learning that makes life worth living.",
+          "bbox": [
+            {
+              "h": 70.1,
+              "w": 310.73,
+              "x": 107.86,
+              "y": 471.07,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Perhaps Barks was hamstrung by the character of Gladstone. For Donald seems continually in battle with his cousin, when it would seem like the best route would be to leave him alone. In a sense, you can't beat Gladstone, any more than you can beat luck in general. Specifically, Donald's victories in \"Maharajah Donald,\" \"Lost in the Andes,\" and the other stories we'll examine are not very measurable in terms of hard dollars. Barks has to tread lightly on \"beating\" Gladstone philosophically, as that could only be communicated through some kind of cloying speech. With Gladstone in the picture, Donald can only win by getting more (or an equal amount of) treasure, as he does here and in \"Luck of the North.\"",
+          "value": "Perhaps Barks was hamstrung by the character of Gladstone. For Donald seems continually in battle with his cousin, when it would seem like the best route would be to leave him alone. In a sense, you can't beat Gladstone, any more than you can beat luck in general. Specifically, Donald's victories in \"Maharajah Donald,\" \"Lost in the Andes,\" and the other stories we'll examine are not very measurable in terms of hard dollars. Barks has to tread lightly on \"beating\" Gladstone philosophically, as that could only be communicated through some kind of cloying speech. With Gladstone in the picture, Donald can only win by getting more (or an equal amount of) treasure, as he does here and in \"Luck of the North.\"",
+          "bbox": [
+            {
+              "h": 151.3,
+              "w": 312.16,
+              "x": 459.6,
+              "y": 98.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "That said, both are ripping adventure yarns, and the details again served Barks well. Donald's following the Magenta stamp from Ohio to Oregon to California is brisk, and Barks wisely made each and every visit radically different—in Mudhen, time has stood still, as the post office is covered in cobwebs, and a weird little robot stamps letters; in Webfoot the water permeates everything; back in Duckburg, in a weird coincidence that I'm not sure was intentional, the postman looks identical to the one in Webfoot—wearing an Amish style beard, glasses, lacking only the pipe of the other. The South American backgrounds are rich with detail, vines growing around and inside homes. Donald is, once again, as ridiculous as he is heroic.",
+          "value": "That said, both are ripping adventure yarns, and the details again served Barks well. Donald's following the Magenta stamp from Ohio to Oregon to California is brisk, and Barks wisely made each and every visit radically different—in Mudhen, time has stood still, as the post office is covered in cobwebs, and a weird little robot stamps letters; in Webfoot the water permeates everything; back in Duckburg, in a weird coincidence that I'm not sure was intentional, the postman looks identical to the one in Webfoot—wearing an Amish style beard, glasses, lacking only the pipe of the other. The South American backgrounds are rich with detail, vines growing around and inside homes. Donald is, once again, as ridiculous as he is heroic.",
+          "bbox": [
+            {
+              "h": 153.78,
+              "w": 311.55,
+              "x": 458.97,
+              "y": 252.5,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But can we really say, as Barks and other critics have, that Donald is unlucky? He is the one stamp collector in the whole world who is able to find this stamp. We open with his dream of finding a stamp, sequestered as he is in his office, and the story will basically take us to where he achieves his goal, which really was to obtain $50,000. Along with the reward, he and his nephews not only found the stamp, but as an aside uncovered El Dorado, the mythical Gilded Man. If that's unlucky, I'm curious to know Barks' idea of good luck. Gladstone's mind-numbingly endless fortune? No thanks.",
+          "value": "But can we really say, as Barks and other critics have, that Donald is unlucky? He is the one stamp collector in the whole world who is able to find this stamp. We open with his dream of finding a stamp, sequestered as he is in his office, and the story will basically take us to where he achieves his goal, which really was to obtain $50,000. Along with the reward, he and his nephews not only found the stamp, but as an aside uncovered El Dorado, the mythical Gilded Man. If that's unlucky, I'm curious to know Barks' idea of good luck. Gladstone's mind-numbingly endless fortune? No thanks.",
+          "bbox": [
+            {
+              "h": 126.03,
+              "w": 311.0,
+              "x": 457.73,
+              "y": 406.81,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "50, 51"
+    }
+  ]
+}

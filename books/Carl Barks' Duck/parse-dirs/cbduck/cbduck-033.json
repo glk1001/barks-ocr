@@ -1,0 +1,241 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "58",
+              "value": "58",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nTHE MAGIC HOURGLASS",
+              "value": "CARL BARKS' DUCK\nTHE MAGIC HOURGLASS",
+              "bbox": [
+                {
+                  "h": 12.51,
+                  "w": 99.42,
+                  "x": 234.71,
+                  "y": 63.57,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 12.92,
+                  "w": 126.03,
+                  "x": 567.31,
+                  "y": 71.75,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "59",
+              "value": "59",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "58\n\nCARL BARKS' DUCK\nTHE MAGIC HOURGLASS\n\n59",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "in case you're wondering, a sum so grotesque it renders his manic pursuit of the hourglass inhuman. Scrooge's response is to race to the Ducks' home where he demands the hourglass back for a whole dime. Again, an elderly man, clipping the hedge, tells Scrooge that the Ducks are headed to Africa. Now Scrooge is mad: despite the fact that the hourglass does indeed belong to them (thanks to Scrooge's giving it away) he flies to Morocco, where he employs thugs to violently take it from them.",
+          "value": "in case you're wondering, a sum so grotesque it renders his manic pursuit of the hourglass inhuman. Scrooge's response is to race to the Ducks' home where he demands the hourglass back for a whole dime. Again, an elderly man, clipping the hedge, tells Scrooge that the Ducks are headed to Africa. Now Scrooge is mad: despite the fact that the hourglass does indeed belong to them (thanks to Scrooge's giving it away) he flies to Morocco, where he employs thugs to violently take it from them.",
+          "bbox": [
+            {
+              "h": 108.05,
+              "w": 312.2,
+              "x": 121.14,
+              "y": 87.9,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "From here, The Magic Hourglass takes on a truly nasty edge, more so than any other Duck comic. This is the bleakness of noir, of Kane, of Stroheim's *Greed*. I've not found any evidence that Barks was a man captivated by the moving image. By his own admission he barely read books, focusing his attentions on Zane Grey<sup>1</sup> and magazines, and a great fondness for newspaper comics. Like the early Donald in \"Maharajah,\" this early Scrooge is not heroic, but a miser with evil intentions, which only get worse.",
+          "value": "From here, The Magic Hourglass takes on a truly nasty edge, more so than any other Duck comic. This is the bleakness of noir, of Kane, of Stroheim's Greed. I've not found any evidence that Barks was a man captivated by the moving image. By his own admission he barely read books, focusing his attentions on Zane Grey<sup>1</sup> and magazines, and a great fondness for newspaper comics. Like the early Donald in \"Maharajah,\" this early Scrooge is not heroic, but a miser with evil intentions, which only get worse.",
+          "bbox": [
+            {
+              "h": 113.5,
+              "w": 310.68,
+              "x": 118.86,
+              "y": 199.49,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Captured by Scrooge's thugs in Morocco, Donald is hauled away and tortured (though the torture involves being tickled into submission... this is, after all, a Disney comic). He confesses that the hourglass is on the boat. But the kids have escaped, into the dark, dangerous port city in Morocco (Casablanca?). Donald's worried—we see knife fights and bottles of booze lying about. But the kids are in disguise, roping Donald and making a hasty retreat to the edge of the Sahara desert.",
+          "value": "Captured by Scrooge's thugs in Morocco, Donald is hauled away and tortured (though the torture involves being tickled into submission... this is, after all, a Disney comic). He confesses that the hourglass is on the boat. But the kids have escaped, into the dark, dangerous port city in Morocco (Casablanca?). Donald's worried—we see knife fights and bottles of booze lying about. But the kids are in disguise, roping Donald and making a hasty retreat to the edge of the Sahara desert.",
+          "bbox": [
+            {
+              "h": 101.64,
+              "w": 311.54,
+              "x": 115.12,
+              "y": 311.69,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Suddenly, a man on a camel, brandishing a rifle, appears. When this stranger mentions that Scrooge has a reward on their heads (and yet another instance of Scrooge's brutality—for these offers are no doubt being made to the worst of Morocco's already rampantly criminal underclass), Donald begins putting up his dukes in full cartoon mode. \"You won't take us without a fight.\" This is kind of ridiculous, considering the stranger has a rifle and Donald and the boys have only their fists.",
+          "value": "Suddenly, a man on a camel, brandishing a rifle, appears. When this stranger mentions that Scrooge has a reward on their heads (and yet another instance of Scrooge's brutality—for these offers are no doubt being made to the worst of Morocco's already rampantly criminal underclass), Donald begins putting up his dukes in full cartoon mode. \"You won't take us without a fight.\" This is kind of ridiculous, considering the stranger has a rifle and Donald and the boys have only their fists.",
+          "bbox": [
+            {
+              "h": 109.18,
+              "w": 312.18,
+              "x": 111.99,
+              "y": 410.09,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<sup>1</sup> Gray was the preeminent writer of westerns in the 20th century.",
+          "value": "<sup>1</sup> Gray was the preeminent writer of westerns in the 20th century.",
+          "bbox": [
+            {
+              "h": 16.19,
+              "w": 242.56,
+              "x": 114.33,
+              "y": 531.89,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "footnote",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "![A hooded figure on a camel points a rifle at Donald Duck, who is holding his fists up. A speech bubble from the figure says \"SHH! QUIET! YOU'RE NOT GOING TO GET HURT!\"](cbduck-033_fig_1.png)",
+          "value": "illustration: A hooded figure on a camel points a rifle at Donald Duck, who is holding his fists up. A speech bubble from the figure says \"SHH! QUIET! YOU'RE NOT GOING TO GET HURT!\"",
+          "bbox": [
+            {
+              "h": 159.84,
+              "w": 217.65,
+              "x": 514.18,
+              "y": 96.46,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-033_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 16. The Magic Hourglass, 13:6",
+          "value": "Fig. 16. The Magic Hourglass, 13:6",
+          "bbox": [
+            {
+              "h": 11.08,
+              "w": 112.1,
+              "x": 564.8,
+              "y": 255.51,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But the stranger has an even more bizarre response: To Donald's claim that he won't go without a fight, the stranger says, \"That is what I figured: in fact, that's why I came to find you!\" Turns out, his caravan has twice been raided by the bandits near the Oasis of No Issa, the only place where the ducks can get their hourglass filled.",
+          "value": "But the stranger has an even more bizarre response: To Donald's claim that he won't go without a fight, the stranger says, \"That is what I figured: in fact, that's why I came to find you!\" Turns out, his caravan has twice been raided by the bandits near the Oasis of No Issa, the only place where the ducks can get their hourglass filled.",
+          "bbox": [
+            {
+              "h": 73.49,
+              "w": 312.25,
+              "x": 462.96,
+              "y": 279.72,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Though I love \"The Magic Hourglass,\" appreciating it especially for its strange mix of cruelty, humor, violence, and straight out bat-shit weirdness, clearly Barks just wants to cut to the chase and reach his various climaxes. This meeting, like the crossing of the ocean, takes no time to develop: this dude is so poorly conceived that he doesn't even have a name (Donald calls him \"Sheik,\" but only once). The Sheik needs fighting men, though it appears he has many; as it turns out, he admits that there is no Oasis, but that it must exist because that is the only place these raiders could come from; everyone reaches their destination in a short page, and the Ducks turn out not only to possess an accuracy with a rifle that would make a sniper jealous, but are actually able to give the sheik—who must've made this trek dozens of times—strategies for turning back the bandits.",
+          "value": "Though I love \"The Magic Hourglass,\" appreciating it especially for its strange mix of cruelty, humor, violence, and straight out bat-shit weirdness, clearly Barks just wants to cut to the chase and reach his various climaxes. This meeting, like the crossing of the ocean, takes no time to develop: this dude is so poorly conceived that he doesn't even have a name (Donald calls him \"Sheik,\" but only once). The Sheik needs fighting men, though it appears he has many; as it turns out, he admits that there is no Oasis, but that it must exist because that is the only place these raiders could come from; everyone reaches their destination in a short page, and the Ducks turn out not only to possess an accuracy with a rifle that would make a sniper jealous, but are actually able to give the sheik—who must've made this trek dozens of times—strategies for turning back the bandits.",
+          "bbox": [
+            {
+              "h": 184.47,
+              "w": 313.8,
+              "x": 460.21,
+              "y": 350.4,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 16.61,
+              "w": 301.7,
+              "x": 467.63,
+              "y": 533.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Sadly, unlike the ocean, the desert did not inflame Barks' artistic",
+          "value": "Sadly, unlike the ocean, the desert did not inflame Barks' artistic",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "58, 59"
+    }
+  ]
+}

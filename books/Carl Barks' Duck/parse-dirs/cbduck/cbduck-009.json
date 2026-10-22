@@ -1,0 +1,234 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "10",
+              "value": "10",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "level": 2,
+              "md": "## CARL BARKS' DUCK",
+              "value": "CARL BARKS' DUCK",
+              "bbox": [
+                {
+                  "h": 14.56,
+                  "w": 99.63,
+                  "x": 250.68,
+                  "y": 73.94,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "heading"
+            },
+            {
+              "level": 2,
+              "md": "## INTRODUCTION",
+              "value": "INTRODUCTION",
+              "bbox": [
+                {
+                  "h": 11.06,
+                  "w": 80.34,
+                  "x": 599.3,
+                  "y": 82.74,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "heading"
+            },
+            {
+              "md": "11",
+              "value": "11",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "10\n\n## CARL BARKS' DUCK\n## INTRODUCTION\n\n11",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "because his frustrations have finally mounted, Donald always keeps us dreaming, because you know what? His life is still amazing.",
+          "value": "because his frustrations have finally mounted, Donald always keeps us dreaming, because you know what? His life is still amazing.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The best cinematic analogy I can think of is Steven Spielberg's *Raiders of the Lost Ark*. Would you call that a movie about failure? No, you wouldn't. And yet Indiana Jones gets the Ark, but we don't see him benefit financially by the prize, nor professionally—in fact, in that famous final shot, we see that his treasure is taken and lost in a warehouse representing a vast, Kafkaesque bureaucracy. But who among us doesn't think of his journey as a great success?",
+          "value": "The best cinematic analogy I can think of is Steven Spielberg's Raiders of the Lost Ark. Would you call that a movie about failure? No, you wouldn't. And yet Indiana Jones gets the Ark, but we don't see him benefit financially by the prize, nor professionally—in fact, in that famous final shot, we see that his treasure is taken and lost in a warehouse representing a vast, Kafkaesque bureaucracy. But who among us doesn't think of his journey as a great success?",
+          "bbox": [
+            {
+              "h": 104.71,
+              "w": 312.14,
+              "x": 134.56,
+              "y": 123.84,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 79.49,
+              "w": 311.73,
+              "x": 130.34,
+              "y": 221.76,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Donald seeks adventure because this is what makes life worth living. In many of his stories you will find a character who embarks on a journey—to save North America for instance—for nothing other than the fact that he can. Donald never seems to blink an eye dropping everything to seek his fortune, even if that fortune is only spiritual.",
+          "value": "Donald seeks adventure because this is what makes life worth living. In many of his stories you will find a character who embarks on a journey—to save North America for instance—for nothing other than the fact that he can. Donald never seems to blink an eye dropping everything to seek his fortune, even if that fortune is only spiritual.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "This little book is not—I repeat, NOT—an exhaustive study of Carl Barks' work. First of all, there's a few of those out there, from Thomas Andrae's *Carl Barks and the Disney Comic Book* to the essays in all the Hamilton books, to the lovingly curated Carl Barks' site, ",
+          "value": "This little book is not—I repeat, NOT—an exhaustive study of Carl Barks' work. First of all, there's a few of those out there, from Thomas Andrae's Carl Barks and the Disney Comic Book to the essays in all the Hamilton books, to the lovingly curated Carl Barks' site, ",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "[www.CBarks.dk](http://www.CBarks.dk)",
+          "text": "www.CBarks.dk",
+          "url": "http://www.CBarks.dk",
+          "bbox": null,
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": ", run by the friendly Peter Kylling, to the somewhat famous (or infamous, depending on who you talk to) Marxist critique, *How to Read Donald Duck* by Ariel Dorfman and Armand Mattelart (subtitled *Imperialist Ideology in the Disney Comic*—this was originally published in Chile and banned in the U.S. for a time!) All of these will give you everything you need to know about the man and his work, even, on CarlBarks.dk, how much he was paid to create each story, which I find fascinating.",
+          "value": ", run by the friendly Peter Kylling, to the somewhat famous (or infamous, depending on who you talk to) Marxist critique, How to Read Donald Duck by Ariel Dorfman and Armand Mattelart (subtitled Imperialist Ideology in the Disney Comic—this was originally published in Chile and banned in the U.S. for a time!) All of these will give you everything you need to know about the man and his work, even, on CarlBarks.dk, how much he was paid to create each story, which I find fascinating.",
+          "bbox": [
+            {
+              "h": 170.58,
+              "w": 316.47,
+              "x": 122.03,
+              "y": 291.71,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "No, this is an appreciation, my attempt at convincing you, a casual comic book reader, to put this book down eventually and head over and read some of Barks' work. Here you will find seven separate essays on my nine favorite Donald Duck \"novels\" and the best of his \"work\" stories, shorter pieces wherein Donald is somehow a master of a certain craft—he is the best there is at, say, rainmaking, but then",
+          "value": "No, this is an appreciation, my attempt at convincing you, a casual comic book reader, to put this book down eventually and head over and read some of Barks' work. Here you will find seven separate essays on my nine favorite Donald Duck \"novels\" and the best of his \"work\" stories, shorter pieces wherein Donald is somehow a master of a certain craft—he is the best there is at, say, rainmaking, but then",
+          "bbox": [
+            {
+              "h": 94.45,
+              "w": 310.63,
+              "x": 119.73,
+              "y": 459.68,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "he runs afoul of his own ego and essentially destroys his business, or Duckburg, or both.",
+          "value": "he runs afoul of his own ego and essentially destroys his business, or Duckburg, or both.",
+          "bbox": [
+            {
+              "h": 26.45,
+              "w": 310.71,
+              "x": 479.04,
+              "y": 109.53,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The stories chosen are my own personal favorites, though I did break from my top ten and included other favorites (farther down the list) that give you a glimpse of Donald interacting with prominent characters in the Barks' universe, such as Uncle Scrooge and Gladstone Gander, or certain stories that are quintessential Donald. So, for instance, I've included \"The Magic Hourglass,\" which is one of my favorites, but it beat out, say, \"Frozen Gold,\" because it will be the one story I chose to cover that involves Uncle Scrooge, albeit a wicked, greedy Scrooge, and one that evokes not only Frank Norris' *McTeague* but also Erich von Stroheim's film version *Greed* (but more on that later.)",
+          "value": "The stories chosen are my own personal favorites, though I did break from my top ten and included other favorites (farther down the list) that give you a glimpse of Donald interacting with prominent characters in the Barks' universe, such as Uncle Scrooge and Gladstone Gander, or certain stories that are quintessential Donald. So, for instance, I've included \"The Magic Hourglass,\" which is one of my favorites, but it beat out, say, \"Frozen Gold,\" because it will be the one story I chose to cover that involves Uncle Scrooge, albeit a wicked, greedy Scrooge, and one that evokes not only Frank Norris' McTeague but also Erich von Stroheim's film version Greed (but more on that later.)",
+          "bbox": [
+            {
+              "h": 138.56,
+              "w": 311.82,
+              "x": 478.86,
+              "y": 137.3,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Sadly, it'll take some time, and some money, for you to indulge in many of these suggestions, should you desire such a treat, as Fantagraphics is still releasing the Carl Barks stories, roughly two volumes a year (albeit chock full of stories.) You can go online and get many of the Gladstone editions, but they'll set you back a pretty penny. For now, I encourage you to seek these out however you can, with whatever resources are at your disposal.",
+          "value": "Sadly, it'll take some time, and some money, for you to indulge in many of these suggestions, should you desire such a treat, as Fantagraphics is still releasing the Carl Barks stories, roughly two volumes a year (albeit chock full of stories.) You can go online and get many of the Gladstone editions, but they'll set you back a pretty penny. For now, I encourage you to seek these out however you can, with whatever resources are at your disposal.",
+          "bbox": [
+            {
+              "h": 97.54,
+              "w": 311.99,
+              "x": 478.52,
+              "y": 277.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "So set aside your preconceptions about all things Disney, and marvel at these incredible adventures and comedies. For I'm serious when I say that Carl Barks' Donald Duck stories are brilliant \"paper movies,\" an American pop culture phenomenon to rank up there with screwball comedies of the 30s and the best adventure serials. If I do my job right, you'll be hiding your Donald Duck book behind your *Wall Street Journal* on the bus or subway, or shouting at your kids to let you have \"Lost in the Andes\" back.",
+          "value": "So set aside your preconceptions about all things Disney, and marvel at these incredible adventures and comedies. For I'm serious when I say that Carl Barks' Donald Duck stories are brilliant \"paper movies,\" an American pop culture phenomenon to rank up there with screwball comedies of the 30s and the best adventure serials. If I do my job right, you'll be hiding your Donald Duck book behind your Wall Street Journal on the bus or subway, or shouting at your kids to let you have \"Lost in the Andes\" back.",
+          "bbox": [
+            {
+              "h": 110.98,
+              "w": 311.9,
+              "x": 478.26,
+              "y": 376.1,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "10, 11"
+    }
+  ]
+}

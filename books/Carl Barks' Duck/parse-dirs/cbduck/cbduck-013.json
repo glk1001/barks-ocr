@@ -1,0 +1,254 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "18 CARL BARKS' DUCK",
+              "value": "18 CARL BARKS' DUCK",
+              "bbox": [
+                {
+                  "h": 11.76,
+                  "w": 98.25,
+                  "x": 248.6,
+                  "y": 72.5,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "level": 2,
+              "md": "## MAHARAJAH DONALD",
+              "value": "MAHARAJAH DONALD",
+              "bbox": [
+                {
+                  "h": 12.098630136986301,
+                  "w": 115.46797500000002,
+                  "x": 589.965075,
+                  "y": 86.26849315068493,
+                  "confidence": 0.5,
+                  "end_index": 18,
+                  "label": "paragraph_title",
+                  "start_index": 0
+                }
+              ],
+              "type": "heading"
+            },
+            {
+              "md": "19",
+              "value": "19",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "18 CARL BARKS' DUCK\n## MAHARAJAH DONALD\n19",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "![other: Comic panel showing Huey, Dewey, and Louie in silhouette, discussing trading a pencil stub. Speech bubbles: \"SHALL WE THROW IT AWAY?\", \"NAW! SOME KID MIGHT WANT IT!\", \"LET'S SEE WHAT WE CAN TRADE IT FOR!\"](cbduck-013_fig_1.png)",
+          "value": "other: Comic panel showing Huey, Dewey, and Louie in silhouette, discussing trading a pencil stub. Speech bubbles: \"SHALL WE THROW IT AWAY?\", \"NAW! SOME KID MIGHT WANT IT!\", \"LET'S SEE WHAT WE CAN TRADE IT FOR!\"",
+          "bbox": [
+            {
+              "h": 181.51,
+              "w": 245.23,
+              "x": 166.94,
+              "y": 97.32,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-013_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 3. Maharajah Donald, 2:4",
+          "value": "Fig. 3. Maharajah Donald, 2:4",
+          "bbox": [
+            {
+              "h": 9.99,
+              "w": 96.45,
+              "x": 239.42,
+              "y": 277.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            },
+            {
+              "h": 10.98,
+              "w": 116.51,
+              "x": 589.52,
+              "y": 85.52,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Barks' doesn't really care if we know who's speaking.",
+          "value": "Barks' doesn't really care if we know who's speaking.",
+          "bbox": [
+            {
+              "h": 16.2,
+              "w": 233.8,
+              "x": 132.28,
+              "y": 300.89,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "But back to the story. Given the pencil stub, and woefully underpaid for their labors, Dewey grumbles about their Uncle's largess, Louie makes a sarcastically happy face and says \"So generous!\", while Huey makes a rather wicked face and says \"Don't rob yourself Unca' Donald.\" Despite being screwed, they seem defiant and determined. In fact, in the very next panel, the wheels are already beginning to turn.",
+          "value": "But back to the story. Given the pencil stub, and woefully underpaid for their labors, Dewey grumbles about their Uncle's largess, Louie makes a sarcastically happy face and says \"So generous!\", while Huey makes a rather wicked face and says \"Don't rob yourself Unca' Donald.\" Despite being screwed, they seem defiant and determined. In fact, in the very next panel, the wheels are already beginning to turn.",
+          "bbox": [
+            {
+              "h": 85.78,
+              "w": 311.66,
+              "x": 130.49,
+              "y": 315.38,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In a nice visual break from the preceding panels, (see Fig. 3) Barks shows his three little protagonists in silhouette, and already they're working an angle. \"Let's see what we can trade for it!\" one says, and of course we have no idea who is speaking because, in shadow, we can't see their hat colors (and perhaps this speaks to Barks' total lack of interest in identifying each duckling.) But it doesn't matter, for the kids are about to go on a trading spree.",
+          "value": "In a nice visual break from the preceding panels, (see Fig. 3) Barks shows his three little protagonists in silhouette, and already they're working an angle. \"Let's see what we can trade for it!\" one says, and of course we have no idea who is speaking because, in shadow, we can't see their hat colors (and perhaps this speaks to Barks' total lack of interest in identifying each duckling.) But it doesn't matter, for the kids are about to go on a trading spree.",
+          "bbox": [
+            {
+              "h": 99.27,
+              "w": 311.08,
+              "x": 128.29,
+              "y": 399.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "This spree, short though it is, encompassing fourteen panels and just over two pages. Pencil stub is swapped for a ball of string, string for a jackknife (to a poor kid whose kite has run out of string—the boys admit to highway robbery), knife for a silver belt buckle, and",
+          "value": "This spree, short though it is, encompassing fourteen panels and just over two pages. Pencil stub is swapped for a ball of string, string for a jackknife (to a poor kid whose kite has run out of string—the boys admit to highway robbery), knife for a silver belt buckle, and",
+          "bbox": [
+            {
+              "h": 58.62,
+              "w": 310.66,
+              "x": 126.74,
+              "y": 497.91,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "then, \"some hours later\" a camera for a \"genuine poil me pop sent me from de south seas!\" Unsure as to whether this pearl, which looks to be about the size of a superball, is real or paste, the trio hauls it to a jeweler, and there they meet some high-hat who gawks in amazement. This gentleman, clad in a top hat, spats, bow tie, and pinstriped pants, needs that pearl, as \"it's exactly the size to complete my wife's necklace\" (in what remains one of the very few moments where an actual married relationship is mentioned in a Disney comic book.)",
+          "value": "then, \"some hours later\" a camera for a \"genuine poil me pop sent me from de south seas!\" Unsure as to whether this pearl, which looks to be about the size of a superball, is real or paste, the trio hauls it to a jeweler, and there they meet some high-hat who gawks in amazement. This gentleman, clad in a top hat, spats, bow tie, and pinstriped pants, needs that pearl, as \"it's exactly the size to complete my wife's necklace\" (in what remains one of the very few moments where an actual married relationship is mentioned in a Disney comic book.)",
+          "bbox": [
+            {
+              "h": 111.87,
+              "w": 311.66,
+              "x": 485.87,
+              "y": 111.36,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "In keeping with the spirit of the story thus far, Huey, Dewey and Louie turn down this man's offer to buy the pearl, asking instead for a trade (\"whatcha got?\"). And so Mr. Moneybags gives them the only thing other than money that he's willing to part with: a steamship ticket to India.",
+          "value": "In keeping with the spirit of the story thus far, Huey, Dewey and Louie turn down this man's offer to buy the pearl, asking instead for a trade (\"whatcha got?\"). And so Mr. Moneybags gives them the only thing other than money that he's willing to part with: a steamship ticket to India.",
+          "bbox": [
+            {
+              "h": 66.71,
+              "w": 311.46,
+              "x": 485.37,
+              "y": 223.59,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Barks was a tourist of his own imagination, relying heavily on his beloved collection of *National Geographic* (which he subscribed to the whole of his life and, like so many other subscribers, kept proudly displayed on bookshelves) to give him ideas. Unable to afford travel of any kind, and someone who did not see the world through the military (in fact, Barks was a strange combination of right-wing conservative and anti-war isolationist who thought World War II was a mistake), he roamed the world vicariously through the comics he drew. In later interviews he admitted to disliking leaving home, though that may be a product of his age at the time. Perhaps this is what makes Barks' work so effective—the Ducks maneuverings through India (and other locales we will examine later) were really the only way he himself was ever going to see much of the world outside of Hemet, the California village where he spent his days. The more detail he could put in a comic book, the better, for both him and his readers.",
+          "value": "Barks was a tourist of his own imagination, relying heavily on his beloved collection of National Geographic (which he subscribed to the whole of his life and, like so many other subscribers, kept proudly displayed on bookshelves) to give him ideas. Unable to afford travel of any kind, and someone who did not see the world through the military (in fact, Barks was a strange combination of right-wing conservative and anti-war isolationist who thought World War II was a mistake), he roamed the world vicariously through the comics he drew. In later interviews he admitted to disliking leaving home, though that may be a product of his age at the time. Perhaps this is what makes Barks' work so effective—the Ducks maneuverings through India (and other locales we will examine later) were really the only way he himself was ever going to see much of the world outside of Hemet, the California village where he spent his days. The more detail he could put in a comic book, the better, for both him and his readers.",
+          "bbox": [
+            {
+              "h": 209.46,
+              "w": 312.82,
+              "x": 484.02,
+              "y": 293.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The high seas and India provide \"Maharajah Donald\" with its most effective panels. In later works, Donald's city of residence (Burbank here, Duckburg later) becomes a vibrant city, its parks almost jungles, its streets rich with detail (cars, people, posters on the walls). Here,",
+          "value": "The high seas and India provide \"Maharajah Donald\" with its most effective panels. In later works, Donald's city of residence (Burbank here, Duckburg later) becomes a vibrant city, its parks almost jungles, its streets rich with detail (cars, people, posters on the walls). Here,",
+          "bbox": [
+            {
+              "h": 56.35,
+              "w": 311.52,
+              "x": 483.56,
+              "y": 504.74,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "18, 19"
+    }
+  ]
+}

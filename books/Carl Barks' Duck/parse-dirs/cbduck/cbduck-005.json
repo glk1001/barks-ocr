@@ -1,0 +1,153 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "2",
+              "value": "2",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nINTRODUCTION",
+              "value": "CARL BARKS' DUCK\nINTRODUCTION",
+              "bbox": [
+                {
+                  "h": 14.58,
+                  "w": 98.92,
+                  "x": 251.26,
+                  "y": 77.23,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.59,
+                  "w": 80.14,
+                  "x": 596.08,
+                  "y": 77.47,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "3",
+              "value": "3",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "2\n\nCARL BARKS' DUCK\nINTRODUCTION\n\n3",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "*Collection of Newspaper Comics*, that big, beautiful hardcover collection of old strips from long, lost newspapers, lovingly assembled by Bill Blackbeard and Martin Williams. God, that thing blew my mind with those brief glimpses of Segar's *Popeye*, Gottfredson's *Mickey Mouse*, and Walt Kelly's *Pogo* (among many others.) Granted, I did read the daily comic strips in the *Detroit Free Press*, like *Peanuts* and *Shoe* and *Tank McNamara*. But that was it for me, comic-wise, even though the Smithsonian collection made me want more.",
+          "value": "Collection of Newspaper Comics, that big, beautiful hardcover collection of old strips from long, lost newspapers, lovingly assembled by Bill Blackbeard and Martin Williams. God, that thing blew my mind with those brief glimpses of Segar's Popeye, Gottfredson's Mickey Mouse, and Walt Kelly's Pogo (among many others.) Granted, I did read the daily comic strips in the Detroit Free Press, like Peanuts and Shoe and Tank McNamara. But that was it for me, comic-wise, even though the Smithsonian collection made me want more.",
+          "bbox": [
+            {
+              "h": 117.41,
+              "w": 313.02,
+              "x": 135.13,
+              "y": 97.82,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The second problem, as I saw it, was that comic books were almost all about superheroes, and superheroes seemed to be the preferred reading material of assholes. Before readers of the *Fantastic Four* and the *Dark Knight* get all up in my grill, this was my experience as a child: I know a ton of good people now who adore superhero comics, and I myself read a bunch of the really great ones, *Plastic Man* and *The Spirit*, Jack Kirby's work, etc. At the time, however, I really loathed them and it was because the toughs and dickheads at my school all dug the superheroes. I know now that this was actually a fascinating time for Marvel and DC comics, their Silver Period, I guess, dealing with issues of that tumultuous decade, the inner-city violence, drug use and looking mod. Trying to fit in, I'd try one or two superhero comics borrowed from a some playground pal I didn't know all that well, but the stories seemed too macho for my tastes, and with way too much backstory and dumb violence. To a degree, I still think that's a problem today.",
+          "value": "The second problem, as I saw it, was that comic books were almost all about superheroes, and superheroes seemed to be the preferred reading material of assholes. Before readers of the Fantastic Four and the Dark Knight get all up in my grill, this was my experience as a child: I know a ton of good people now who adore superhero comics, and I myself read a bunch of the really great ones, Plastic Man and The Spirit, Jack Kirby's work, etc. At the time, however, I really loathed them and it was because the toughs and dickheads at my school all dug the superheroes. I know now that this was actually a fascinating time for Marvel and DC comics, their Silver Period, I guess, dealing with issues of that tumultuous decade, the inner-city violence, drug use and looking mod. Trying to fit in, I'd try one or two superhero comics borrowed from a some playground pal I didn't know all that well, but the stories seemed too macho for my tastes, and with way too much backstory and dumb violence. To a degree, I still think that's a problem today.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "These are the mid- to late-70s I'm remembering, '75 to the dawning of the Reagan years. Now, as an adult, I love looking back at the crazy 70s, the bell bottom jeans, the amazing music and movies, the advertisements, virtually everything about that decade fascinates me. Look at the *Green Lantern* and *Green Arrow* comics of that time, with their funky outfits, their driving in a van across America, dealing with the ghetto and the drugs and the Man. That's really cool.",
+          "value": "These are the mid- to late-70s I'm remembering, '75 to the dawning of the Reagan years. Now, as an adult, I love looking back at the crazy 70s, the bell bottom jeans, the amazing music and movies, the advertisements, virtually everything about that decade fascinates me. Look at the Green Lantern and Green Arrow comics of that time, with their funky outfits, their driving in a van across America, dealing with the ghetto and the drugs and the Man. That's really cool.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Back then, however, I was a sheepish, pale, timid boy who was almost",
+          "value": "Back then, however, I was a sheepish, pale, timid boy who was almost",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "literally scared of his own shadow. The 1970s tended to intimidate me, and though I went batty for 70s baseball and *Star Wars*, I tended to love old stuff more. Old books, old movies like *Citizen Kane* and *Singin' in the Rain* (yes, I watched *Kane* as a precocious ten-year-old, thanks to my Dad's prodding me that \"there was more to life than *Star Wars*\" and hauling us to the majestic Temple Theater in Saginaw to watch old movies), classical music and my parents' Beatles, Creedence, Fugs, and Stones albums, and the old Disney cartoons like *Pinocchio* and *Fantasia*. *Kiss*, *Grease*, *Welcome Back Kotter*, and all the classic 70s comics either eluded me or, quite honestly, frightened me.",
+          "value": "literally scared of his own shadow. The 1970s tended to intimidate me, and though I went batty for 70s baseball and Star Wars, I tended to love old stuff more. Old books, old movies like Citizen Kane and Singin' in the Rain (yes, I watched Kane as a precocious ten-year-old, thanks to my Dad's prodding me that \"there was more to life than Star Wars\" and hauling us to the majestic Temple Theater in Saginaw to watch old movies), classical music and my parents' Beatles, Creedence, Fugs, and Stones albums, and the old Disney cartoons like Pinocchio and Fantasia. Kiss, Grease, Welcome Back Kotter, and all the classic 70s comics either eluded me or, quite honestly, frightened me.",
+          "bbox": [
+            {
+              "h": 138.62,
+              "w": 311.11,
+              "x": 476.06,
+              "y": 104.06,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Now my father grew up in the 1950s, and despite his being a leftist, an almost-hippie with his long hair and earring (radical in the 70s), growing pot in his bedroom closet, celebrating his vegetarian diet, protesting nuclear power and other subversive pursuits, paradoxically he still had a great affection for Walt Disney comics. As a child, he, like literally millions of others, subscribed to *Walt Disney's Comics and Stories*, and fell in love with Donald Duck and Uncle Scrooge stories especially. Every once in awhile he would pick up a Donald Duck comic from the local drugstore for my brother and me. This was a time when you didn't have to go to a comic book store to buy your swag—in fact, there weren't all that many comic book stores around. There was always a metal rack full of comics, Marvel and DC, Richie Rich and Disney Comics from Whitman publishing in virtually every pharmacy, K-mart, bookstore, and convenience store. Any place that sold magazines, really.",
+          "value": "Now my father grew up in the 1950s, and despite his being a leftist, an almost-hippie with his long hair and earring (radical in the 70s), growing pot in his bedroom closet, celebrating his vegetarian diet, protesting nuclear power and other subversive pursuits, paradoxically he still had a great affection for Walt Disney comics. As a child, he, like literally millions of others, subscribed to Walt Disney's Comics and Stories, and fell in love with Donald Duck and Uncle Scrooge stories especially. Every once in awhile he would pick up a Donald Duck comic from the local drugstore for my brother and me. This was a time when you didn't have to go to a comic book store to buy your swag—in fact, there weren't all that many comic book stores around. There was always a metal rack full of comics, Marvel and DC, Richie Rich and Disney Comics from Whitman publishing in virtually every pharmacy, K-mart, bookstore, and convenience store. Any place that sold magazines, really.",
+          "bbox": [
+            {
+              "h": 209.29,
+              "w": 311.41,
+              "x": 475.8,
+              "y": 244.13,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Problem was, most of the Disney material back then was pretty insulting to a kid's intelligence. God, I hated the Disney storytelling style, *The Apple Dumpling Gang*, *Escape to Witch Mountain*, and other crap with their silly villains who could be easily defeated by anyone with half a brain and an overripe banana as a weapon. (This was one of the many reasons I adored *Star Wars* and especially the badass Darth Vader.) For me, I wanted a good, solid story, with good, solid",
+          "value": "Problem was, most of the Disney material back then was pretty insulting to a kid's intelligence. God, I hated the Disney storytelling style, The Apple Dumpling Gang, Escape to Witch Mountain, and other crap with their silly villains who could be easily defeated by anyone with half a brain and an overripe banana as a weapon. (This was one of the many reasons I adored Star Wars and especially the badass Darth Vader.) For me, I wanted a good, solid story, with good, solid",
+          "bbox": [
+            {
+              "h": 97.52,
+              "w": 311.57,
+              "x": 475.56,
+              "y": 454.89,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "2, 3"
+    }
+  ]
+}

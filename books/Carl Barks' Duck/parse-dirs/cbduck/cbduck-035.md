@@ -1,0 +1,13 @@
+head high, eyes wide, the kids in tight line behind him, the family focused and happy, no longer bickering (as they did in the opening panels of the story), and ruminating on their journey. "Well, our dream of riches may have gone up in smoke, but what does it matter? We're happy!" Donald says.
+
+Remember, it wasn't the search for fortune that pushed them to embark on this journey. At first, the Ducks were trying to get to the bottom of who their uncle loved more, and in the course of this epic fight, involving sharks, cutthroats, torture, gunplay, and treasures won and lost, the family—the Duck family, not Scrooge—is reunited by the end of "The Magic Hourglass." The nephews are no longer at odds with their uncle. They're together now, and their compassion has also returned: When Scrooge offers to trade gold and diamonds for a drink of water, they reject his pleas, until he finally caves in and puts up the hourglass. At this point, Donald decides to give his cruel uncle a drink of water. But with it, Scrooge must keep the hourglass, keep his fortune, and must sail, as they did, all alone across the ocean on the Junk II, with its shark engine.
+
+The story closes with a large and beautifully composed panel, of Uncle Scrooge cursing the ducks and cracking the whip, alone. (see Plate 9) For their efforts in finding the Raiders of No Issa they received a financial reward, which means they can afford a luxury liner that sails in the background of the Junk II. Scrooge is alone, cradling his hourglass; the "winner." The Ducks have some money (presumably the reward will buy them more than just four tickets home), but what they really gained is harmony.
+
+"The Magic Hourglass," despite some of some of its bizarre structural turns, and an unfascinating look at the Sahara (not to mention fairly lazy rendering of the citizens of Morocco) works in part because of Barks' robust storytelling and the genuine affection for the family of one Donald Duck. Plus, I like this rendering of Uncle Scrooge, as it is the most honest assessment of this bastard's life: lonely, angry, veering
+
+***
+
+
+
+into evil to get what he wants. In later Uncle Scrooge comics we'll see an often coldhearted man who, Grinch-like, often gives way to a man who comes to understand kindness and generosity, to which I say bullshit. The Uncle Scrooge of torture, of trying to buy love, of cheating and swindling and browbeating hardworking underlings into submission, is the true Scrooge. Which only makes the Duck family all the more appealing.

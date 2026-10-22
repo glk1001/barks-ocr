@@ -1,0 +1,228 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "60 CARL BARKS' DUCK THE MAGIC HOURGLASS 61",
+              "value": "60 CARL BARKS' DUCK THE MAGIC HOURGLASS 61",
+              "bbox": [
+                {
+                  "h": 11.54,
+                  "w": 98.26,
+                  "x": 229.72,
+                  "y": 67.02,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.81,
+                  "w": 127.89,
+                  "x": 564.21,
+                  "y": 71.07,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "60 CARL BARKS' DUCK THE MAGIC HOURGLASS 61",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "chops. The Sahara in \"The Magic Hourglass\" is nothing more than horizon, barely more than just a slightly wavy line, with blue sky and brown dunes, no swirling sands, no sun, sometimes not even the desert—just Donald or the sheik in close-up against a blank backdrop.",
+          "value": "chops. The Sahara in \"The Magic Hourglass\" is nothing more than horizon, barely more than just a slightly wavy line, with blue sky and brown dunes, no swirling sands, no sun, sometimes not even the desert—just Donald or the sheik in close-up against a blank backdrop.",
+          "bbox": [
+            {
+              "h": 55.76,
+              "w": 309.48,
+              "x": 118.86,
+              "y": 92.99,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "After they beat back the raiders, the Ducks tell the sheik they're leaving the caravan to backtrack the bandits to No Issa. Oddly enough, they don't take any camels, and it is only through the sheik's kindness that they even remember to bring a water bag. This exchange is important, for it will speak to the value of what is truly important, especially in such a harsh climate as the desert, but it also suggests that no one is paying any attention to the dangers around them, least of all Barks, who seemed not to give a hoot about the desert—it's as fundamentally safe as it appears in the Hope/Crosby Road to Morocco flick.",
+          "value": "After they beat back the raiders, the Ducks tell the sheik they're leaving the caravan to backtrack the bandits to No Issa. Oddly enough, they don't take any camels, and it is only through the sheik's kindness that they even remember to bring a water bag. This exchange is important, for it will speak to the value of what is truly important, especially in such a harsh climate as the desert, but it also suggests that no one is paying any attention to the dangers around them, least of all Barks, who seemed not to give a hoot about the desert—it's as fundamentally safe as it appears in the Hope/Crosby Road to Morocco flick.",
+          "bbox": [
+            {
+              "h": 135.46,
+              "w": 310.78,
+              "x": 116.83,
+              "y": 149.13,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Animals and water appear once again, as our men see, in the distance, a lone camel walking with determination. Like the trained monkey in \"The Gilded Man,\" not only does this animal know where it's going, but the Ducks recognize this and use it to their advantage. The camel leads them back to a water hole and then disappears—it turns out the Oasis of No Issa exists in a long tunnel beneath the underground river at the oasis.",
+          "value": "Animals and water appear once again, as our men see, in the distance, a lone camel walking with determination. Like the trained monkey in \"The Gilded Man,\" not only does this animal know where it's going, but the Ducks recognize this and use it to their advantage. The camel leads them back to a water hole and then disappears—it turns out the Oasis of No Issa exists in a long tunnel beneath the underground river at the oasis.",
+          "bbox": [
+            {
+              "h": 96.55,
+              "w": 311.13,
+              "x": 115.12,
+              "y": 289.22,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Now Barks' imagination became excited again, as we enter a mysterious and beautiful underground palace—replete with gorgeous silks, gold lamps, and large-breasted women in veils, again human (lacking the black button dog nose.) Another nameless sheik fumes because of the failure of the raiders to make a successful raid on the desert caravan. \"You dopes were unlucky because you are unsanitary!\" he screams, demanding they go bathe in a pile of magical red sand—the same sand that makes the hourglass work its particular miracles.",
+          "value": "Now Barks' imagination became excited again, as we enter a mysterious and beautiful underground palace—replete with gorgeous silks, gold lamps, and large-breasted women in veils, again human (lacking the black button dog nose.) Another nameless sheik fumes because of the failure of the raiders to make a successful raid on the desert caravan. \"You dopes were unlucky because you are unsanitary!\" he screams, demanding they go bathe in a pile of magical red sand—the same sand that makes the hourglass work its particular miracles.",
+          "bbox": [
+            {
+              "h": 112.29,
+              "w": 311.86,
+              "x": 113.78,
+              "y": 387.21,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "In a nicely humorous moment, the ducks go to fill the hourglass and accidentally bang one of the fully submerged raiders on the noggin—and, of course, they're instantly captured. Brought before the",
+          "value": "In a nicely humorous moment, the ducks go to fill the hourglass and accidentally bang one of the fully submerged raiders on the noggin—and, of course, they're instantly captured. Brought before the",
+          "bbox": [
+            {
+              "h": 42.82,
+              "w": 311.24,
+              "x": 113.36,
+              "y": 499.6,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "evil sheik, who threatens to boil them in camel fat, Donald explains that he was only there to fill the hourglass, when the sheik explodes with joy. Here we get the background: the \"mighty magician\" Hassan Hadda Haircut built the little hourglass centuries earlier. Distracted by the hourglass, the bandits race out of the cave in search of treasure, leaving the Ducks behind.",
+          "value": "evil sheik, who threatens to boil them in camel fat, Donald explains that he was only there to fill the hourglass, when the sheik explodes with joy. Here we get the background: the \"mighty magician\" Hassan Hadda Haircut built the little hourglass centuries earlier. Distracted by the hourglass, the bandits race out of the cave in search of treasure, leaving the Ducks behind.",
+          "bbox": [
+            {
+              "h": 82.95,
+              "w": 310.31,
+              "x": 467.39,
+              "y": 97.24,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Back to the surface, we get a nice convergence of the forces moving this story along. Scrooge has relented (in his mind), carrying bags with a billion dollars to buy the hourglass from the nephews. But the raiders attack, taking the hourglass, the money, and scattering Scrooge's men across the wide Sahara.",
+          "value": "Back to the surface, we get a nice convergence of the forces moving this story along. Scrooge has relented (in his mind), carrying bags with a billion dollars to buy the hourglass from the nephews. But the raiders attack, taking the hourglass, the money, and scattering Scrooge's men across the wide Sahara.",
+          "bbox": [
+            {
+              "h": 68.67,
+              "w": 311.17,
+              "x": 466.85,
+              "y": 181.02,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "That is, until one of the raiders holds aloft the hourglass, only to watch in horror as Donald lassos it right out of his hand! Whatever works, whatever works. \"With the hourglass in their possession, the Ducks' luck is unbeatable—it almost seems!\" Apparently that's true for the ducks, but not the North Africans who possessed it just a couple panels earlier.",
+          "value": "That is, until one of the raiders holds aloft the hourglass, only to watch in horror as Donald lassos it right out of his hand! Whatever works, whatever works. \"With the hourglass in their possession, the Ducks' luck is unbeatable—it almost seems!\" Apparently that's true for the ducks, but not the North Africans who possessed it just a couple panels earlier.",
+          "bbox": [
+            {
+              "h": 83.34,
+              "w": 310.71,
+              "x": 466.94,
+              "y": 251.06,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Now comes the moral, which isn't much of a surprise, but further reinforces the overall themes we see in Donald's universe. The hourglass only brings them material wealth—a lake of diamonds, a water bag full of gold—but it won't provide what they need most: water. In their haste, the ducks have forgotten this most precious commodity in the raging desert. But the Duck luck outweighs the hourglass. In what I consider a pretty intense panel, content-wise, Scrooge, walking alone (Why doesn't anyone get camels? Is no one worried about walking across the desert, even with water?) encounters the four ducks, collapsed on the sand, tongues out, dying. Then, the nastiness increases—Scrooge walks up with his bulging water bag and his face twists into a rictus of greed, knowing he has them over a barrel. Water for hourglass, no discounts, no deals. (see Plate 8)",
+          "value": "Now comes the moral, which isn't much of a surprise, but further reinforces the overall themes we see in Donald's universe. The hourglass only brings them material wealth—a lake of diamonds, a water bag full of gold—but it won't provide what they need most: water. In their haste, the ducks have forgotten this most precious commodity in the raging desert. But the Duck luck outweighs the hourglass. In what I consider a pretty intense panel, content-wise, Scrooge, walking alone (Why doesn't anyone get camels? Is no one worried about walking across the desert, even with water?) encounters the four ducks, collapsed on the sand, tongues out, dying. Then, the nastiness increases—Scrooge walks up with his bulging water bag and his face twists into a rictus of greed, knowing he has them over a barrel. Water for hourglass, no discounts, no deals. (see Plate 8)",
+          "bbox": [
+            {
+              "h": 181.47,
+              "w": 311.33,
+              "x": 466.3,
+              "y": 335.58,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "The Ducks respond immediately, happily, and then, in the next panel, we see this story's moral summed up nicely: Donald walking,",
+          "value": "The Ducks respond immediately, happily, and then, in the next panel, we see this story's moral summed up nicely: Donald walking,",
+          "bbox": [
+            {
+              "h": 27.5,
+              "w": 310.58,
+              "x": 466.44,
+              "y": 518.44,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "60, 61"
+    }
+  ]
+}

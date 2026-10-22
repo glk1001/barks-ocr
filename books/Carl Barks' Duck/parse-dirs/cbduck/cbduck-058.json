@@ -1,0 +1,186 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "108",
+              "value": "108",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nWORKING MAN",
+              "value": "CARL BARKS' DUCK\nWORKING MAN",
+              "bbox": [
+                {
+                  "h": 12.69,
+                  "w": 98.26,
+                  "x": 231.42,
+                  "y": 66.24,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.25,
+                  "w": 82.41,
+                  "x": 587.15,
+                  "y": 72.29,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "109",
+              "value": "109",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "108\n\nCARL BARKS' DUCK\nWORKING MAN\n\n109",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "It is the nephews who survey all the equipment Scrooge has sent them, the boys who push Donald onto the glass-bottomed boat, and the boys who uncover many of the clues, like the gouged sea bottom where the ship once lay. Which begs the question: what would the boys' brain waves have revealed? We don't know if 11.5 vs. 115 is a measurement of intelligence (the higher the number, the smarter the bean?), or just a number on a scale. Earlier, when the doctor consults his guides, he scrolls down toward 11.5 and reads \"Fiend... chicken thief... human fly...\" suggesting that that number does not sit in the best company. And yet, detective doesn't seem like the dopiest job in the world. Perhaps the nephews should have had their skulls scanned as well.",
+          "value": "It is the nephews who survey all the equipment Scrooge has sent them, the boys who push Donald onto the glass-bottomed boat, and the boys who uncover many of the clues, like the gouged sea bottom where the ship once lay. Which begs the question: what would the boys' brain waves have revealed? We don't know if 11.5 vs. 115 is a measurement of intelligence (the higher the number, the smarter the bean?), or just a number on a scale. Earlier, when the doctor consults his guides, he scrolls down toward 11.5 and reads \"Fiend... chicken thief... human fly...\" suggesting that that number does not sit in the best company. And yet, detective doesn't seem like the dopiest job in the world. Perhaps the nephews should have had their skulls scanned as well.",
+          "bbox": [
+            {
+              "h": 157.0,
+              "w": 313.22,
+              "x": 116.73,
+              "y": 90.42,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Out on Barnacle Bay, the boys are disgusted as Donald rejects their pleas to actually get on with the work of detecting—but the disgust is mutual, as this is work that Donald clearly did not agree to perform. \"Don't bother me with small troubles! I'm dreaming up a new tune!\" Spoken like a true artist. Forced out in the middle of the water, he tries out a \"special number for charming big snakes,\" and man, does he get one. Here's the \"Varmint\" of the title—the goofiest, friendliest sea monster ever to emerge out of the drink.",
+          "value": "Out on Barnacle Bay, the boys are disgusted as Donald rejects their pleas to actually get on with the work of detecting—but the disgust is mutual, as this is work that Donald clearly did not agree to perform. \"Don't bother me with small troubles! I'm dreaming up a new tune!\" Spoken like a true artist. Forced out in the middle of the water, he tries out a \"special number for charming big snakes,\" and man, does he get one. Here's the \"Varmint\" of the title—the goofiest, friendliest sea monster ever to emerge out of the drink.",
+          "bbox": [
+            {
+              "h": 112.83,
+              "w": 312.97,
+              "x": 113.37,
+              "y": 245.25,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Donald's terrified, and in this case, maybe rightfully so. He's a coward—as any of us would be—in the face of a 500 yard snake rising out of the water. Escaping to the shore, the boys are convinced that they've solved this little mystery (they have), that they've got to figure out where this creature's hidden the boat which contains all the gold. Donald, for his part, is content to play in such a way as to arouse worms to rise from logs (for a \"bright future\" selling bait), and then dreams of training snakes for vaudeville (a fun little reference of Barks'—vaudeville was long dead by then, so was he a fan?) or creating a \"rattlesnake band.\" As he practices (and dreams) by the crater lake, his music captures the attention of the giant beast, who rises, wearing a mask of almost pure euphoria. Donald tries to run away, but the eponymous varmint grabs him, and only releases Donald when he",
+          "value": "Donald's terrified, and in this case, maybe rightfully so. He's a coward—as any of us would be—in the face of a 500 yard snake rising out of the water. Escaping to the shore, the boys are convinced that they've solved this little mystery (they have), that they've got to figure out where this creature's hidden the boat which contains all the gold. Donald, for his part, is content to play in such a way as to arouse worms to rise from logs (for a \"bright future\" selling bait), and then dreams of training snakes for vaudeville (a fun little reference of Barks'—vaudeville was long dead by then, so was he a fan?) or creating a \"rattlesnake band.\" As he practices (and dreams) by the crater lake, his music captures the attention of the giant beast, who rises, wearing a mask of almost pure euphoria. Donald tries to run away, but the eponymous varmint grabs him, and only releases Donald when he",
+          "bbox": [
+            {
+              "h": 186.49,
+              "w": 314.14,
+              "x": 108.69,
+              "y": 356.82,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "begins to play. In a delightful series of panels, the snake can be seen cavorting in the water, while Donald, exhausted, plays on.",
+          "value": "begins to play. In a delightful series of panels, the snake can be seen cavorting in the water, while Donald, exhausted, plays on.",
+          "bbox": [
+            {
+              "h": 26.71,
+              "w": 309.34,
+              "x": 468.02,
+              "y": 98.61,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Through the machinations of the boys, Donald is freed, the snake slithers away, having had barrels of black pepper tossed in its mouth. As it retreats, it hauls Scrooge's ship into the depths with it, thus removing any evidence whatsoever of the ship or its very presence. Donald, exhausted, wants nothing more to do with snake charming, and the boys have failed at their (Donald's) detective work. All have failed. Or have they?",
+          "value": "Through the machinations of the boys, Donald is freed, the snake slithers away, having had barrels of black pepper tossed in its mouth. As it retreats, it hauls Scrooge's ship into the depths with it, thus removing any evidence whatsoever of the ship or its very presence. Donald, exhausted, wants nothing more to do with snake charming, and the boys have failed at their (Donald's) detective work. All have failed. Or have they?",
+          "bbox": [
+            {
+              "h": 96.12,
+              "w": 310.97,
+              "x": 467.64,
+              "y": 126.77,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "In the end, we return to the park, where the fat cats of Duckburg saunter by, proud and stately in their accomplishments. The boys repeat the lines that I think sum up our man quite perfectly: \"People are funny!\" Dewey says, gaping into space as though he's just revealed a profound truth. \"Some are great...\"—and we cut to Donald, now picking up trash in the park and seeming to almost dance with joy in doing so—\"...and some are like Unca Donald!\"",
+          "value": "In the end, we return to the park, where the fat cats of Duckburg saunter by, proud and stately in their accomplishments. The boys repeat the lines that I think sum up our man quite perfectly: \"People are funny!\" Dewey says, gaping into space as though he's just revealed a profound truth. \"Some are great...\"—and we cut to Donald, now picking up trash in the park and seeming to almost dance with joy in doing so—\"...and some are like Unca Donald!\"",
+          "bbox": [
+            {
+              "h": 97.74,
+              "w": 311.82,
+              "x": 467.85,
+              "y": 224.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Very few, indeed. With Donald Duck, Barks examined the nature of work in America like no other comic book artist, examined the nature of citizen heroism, of the joy in adventure and learning (such as the expedition in \"Lost in the Andes\") for its own sake. Donald's losses are tremendous—most of the stories here show him not achieving his goals—but they do reveal a character who understood that not taking risk is far worse than taking the risk, and the failures in living this life are actually triumphs. We usually think that for everyone who has succeeded—the Scrooges of the world—there are failures. But there are not just people who fail—like Donald—but, sadly, there are people who never tried. Donald's failures, then, reveal a profound and spiritual success. Failing to try, failing to live, seemed, to Barks, like the worst fate of all.",
+          "value": "Very few, indeed. With Donald Duck, Barks examined the nature of work in America like no other comic book artist, examined the nature of citizen heroism, of the joy in adventure and learning (such as the expedition in \"Lost in the Andes\") for its own sake. Donald's losses are tremendous—most of the stories here show him not achieving his goals—but they do reveal a character who understood that not taking risk is far worse than taking the risk, and the failures in living this life are actually triumphs. We usually think that for everyone who has succeeded—the Scrooges of the world—there are failures. But there are not just people who fail—like Donald—but, sadly, there are people who never tried. Donald's failures, then, reveal a profound and spiritual success. Failing to try, failing to live, seemed, to Barks, like the worst fate of all.",
+          "bbox": [
+            {
+              "h": 179.5,
+              "w": 312.29,
+              "x": 467.93,
+              "y": 322.85,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "108, 109"
+    }
+  ]
+}

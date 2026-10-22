@@ -1,0 +1,74 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "90 CARL BARKS' DUCK",
+              "value": "90 CARL BARKS' DUCK",
+              "bbox": [
+                {
+                  "h": 11.79,
+                  "w": 99.28,
+                  "x": 232.05,
+                  "y": 72.11,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "90 CARL BARKS' DUCK",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "to work at the museum. The laywer is back to his job, we presume, the Curator back curating. \"That rugged life had its points—but I don't know—\" Donald says, staring again at the Viking ship. His ruminations are interrupted by another effete gentlemen, with giant eyelashes and weird pursed lips, who asks where to find the embroidered lampshades. As Donald begins to give directions, he gives up, choosing instead to take the man there. \"Darned if I ain't interested in embroidered lampshades, myself!\"",
+          "value": "to work at the museum. The laywer is back to his job, we presume, the Curator back curating. \"That rugged life had its points—but I don't know—\" Donald says, staring again at the Viking ship. His ruminations are interrupted by another effete gentlemen, with giant eyelashes and weird pursed lips, who asks where to find the embroidered lampshades. As Donald begins to give directions, he gives up, choosing instead to take the man there. \"Darned if I ain't interested in embroidered lampshades, myself!\"",
+          "bbox": [
+            {
+              "h": 113.13,
+              "w": 311.17,
+              "x": 118.96,
+              "y": 96.16,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "What is the message here? Was it simply to tell people not to question their peaceful lives? The opening scenes of \"The Golden Helmet\" suggest a world of total banality, of boredom. But by its end the notion that the adventurous life is worth living—even if it's not financially rewarding—has vanished, with the final panels, suggesting that this life, this comfortable life in America, is worth living, dull though it may be. Barks was no doubt sick of lawyers, but perhaps \"The Golden Helmet\" is a note to himself, a suggestion to give up any dreams of wealth, to celebrate simply working as a Disney artist with its meager pay. Is this Zen-like resignation to the nature of our prosperous banality, or Barks giving up on life? I don't know, but I do love the bitter aftertaste of \"The Golden Helmet,\" which remains, to me, a startling concoction even by Barks' often dark standards.",
+          "value": "What is the message here? Was it simply to tell people not to question their peaceful lives? The opening scenes of \"The Golden Helmet\" suggest a world of total banality, of boredom. But by its end the notion that the adventurous life is worth living—even if it's not financially rewarding—has vanished, with the final panels, suggesting that this life, this comfortable life in America, is worth living, dull though it may be. Barks was no doubt sick of lawyers, but perhaps \"The Golden Helmet\" is a note to himself, a suggestion to give up any dreams of wealth, to celebrate simply working as a Disney artist with its meager pay. Is this Zen-like resignation to the nature of our prosperous banality, or Barks giving up on life? I don't know, but I do love the bitter aftertaste of \"The Golden Helmet,\" which remains, to me, a startling concoction even by Barks' often dark standards.",
+          "bbox": [
+            {
+              "h": 192.25,
+              "w": 313.94,
+              "x": 113.86,
+              "y": 208.32,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "90, 91"
+    }
+  ]
+}

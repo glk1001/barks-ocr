@@ -1,0 +1,528 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "BIBLIOGRAPHY 111",
+              "value": "BIBLIOGRAPHY 111",
+              "bbox": [
+                {
+                  "h": 10.85,
+                  "w": 73.71,
+                  "x": 584.84,
+                  "y": 68.0,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.82,
+                  "w": 87.6,
+                  "x": 112.65,
+                  "y": 187.26,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "BIBLIOGRAPHY 111",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## BIBLIOGRAPHY:",
+          "value": "BIBLIOGRAPHY:",
+          "bbox": [
+            {
+              "h": 13.413698630136992,
+              "w": 88.639425,
+              "x": 112.311675,
+              "y": 187.00273972602741,
+              "confidence": 0.5,
+              "end_index": 15,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "Ault, Donald, ed., *Carl Barks: Conversations*, 2003, University Press of Mississippi.",
+          "value": "Ault, Donald, ed., Carl Barks: Conversations, 2003, University Press of Mississippi.",
+          "bbox": [
+            {
+              "h": 26.92,
+              "w": 311.33,
+              "x": 110.41,
+              "y": 259.39,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Andrae, Thomas, *Carl Barks and the Disney Comic Book: Unmasking the Myth of Modernity*, 2006, University Press of Mississippi.",
+          "value": "Andrae, Thomas, Carl Barks and the Disney Comic Book: Unmasking the Myth of Modernity, 2006, University Press of Mississippi.",
+          "bbox": [
+            {
+              "h": 30.57,
+              "w": 310.71,
+              "x": 109.63,
+              "y": 287.83,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Dorfman, Ariel and Mattelart, Armand, *How to Read Donald Duck: Imperialist Ideology in the Disney Comic Book*, 1991, International General, New York.",
+          "value": "Dorfman, Ariel and Mattelart, Armand, How to Read Donald Duck: Imperialist Ideology in the Disney Comic Book, 1991, International General, New York.",
+          "bbox": [
+            {
+              "h": 39.59,
+              "w": 310.01,
+              "x": 109.11,
+              "y": 315.65,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 3,
+          "md": "### Websites",
+          "value": "Websites",
+          "bbox": null,
+          "type": "heading",
+          "book_side": "left"
+        },
+        {
+          "md": "http://www.cbarks.dk/",
+          "text": "http://www.cbarks.dk/",
+          "url": "http://www.cbarks.dk/",
+          "bbox": [
+            {
+              "h": 12.21,
+              "w": 101.81,
+              "x": 107.28,
+              "y": 385.48,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": "http://www.thecarlbarksfanclub.com/",
+          "text": "http://www.thecarlbarksfanclub.com/",
+          "url": "http://www.thecarlbarksfanclub.com/",
+          "bbox": [
+            {
+              "h": 12.28,
+              "w": 168.37,
+              "x": 106.77,
+              "y": 399.87,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": "http://inducks.org/",
+          "text": "http://inducks.org/",
+          "url": "http://inducks.org/",
+          "bbox": [
+            {
+              "h": 12.74,
+              "w": 84.3,
+              "x": 106.46,
+              "y": 413.64,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": "http://www.michaelbarrier.com/",
+          "text": "http://www.michaelbarrier.com/",
+          "url": "http://www.michaelbarrier.com/",
+          "bbox": [
+            {
+              "h": 12.3,
+              "w": 144.89,
+              "x": 106.16,
+              "y": 427.86,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": "http://home.earthlink.net/~vathek/index.html",
+          "text": "http://home.earthlink.net/~vathek/index.html",
+          "url": "http://home.earthlink.net/~vathek/index.html",
+          "bbox": [
+            {
+              "h": 16.44,
+              "w": 283.04,
+              "x": 105.64,
+              "y": 441.73,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": " (Geoffrey Blum)",
+          "value": " (Geoffrey Blum)",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Carl Barks interview ",
+          "value": "Carl Barks interview ",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "http://www.youtube.com/watch?v=8rmIXv5ilTA",
+          "text": "http://www.youtube.com/watch?v=8rmIXv5ilTA",
+          "url": "http://www.youtube.com/watch?v=8rmIXv5ilTA",
+          "bbox": null,
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": " (Thanks Mike Haeg)",
+          "value": " (Thanks Mike Haeg)",
+          "bbox": [
+            {
+              "h": 27.64,
+              "w": 311.06,
+              "x": 105.07,
+              "y": 455.58,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Five amazing things invented by Donald Duck:",
+          "value": "Five amazing things invented by Donald Duck:",
+          "bbox": [
+            {
+              "h": 13.41,
+              "w": 210.98,
+              "x": 104.92,
+              "y": 484.51,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "http://www.cracked.com/article_19021_5-amazing-things-invented-by-donald-duck-seriously.html",
+          "text": "http://www.cracked.com/article_19021_5-amazing-things-invented-by-donald-duck-seriously.html",
+          "url": "http://www.cracked.com/article_19021_5-amazing-things-invented-by-donald-duck-seriously.html",
+          "bbox": [
+            {
+              "h": 28.52,
+              "w": 310.39,
+              "x": 104.17,
+              "y": 498.42,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "link",
+          "book_side": "left"
+        },
+        {
+          "md": "The comics came from these sources. They do appear in other sources, but these are the ones I own and used for research:",
+          "value": "The comics came from these sources. They do appear in other sources, but these are the ones I own and used for research:",
+          "bbox": [
+            {
+              "h": 25.59,
+              "w": 309.11,
+              "x": 461.72,
+              "y": 94.37,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### Maharajah Donald",
+          "value": "Maharajah Donald",
+          "bbox": [
+            {
+              "h": 12.48,
+              "w": 104.46,
+              "x": 462.86,
+              "y": 136.8,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "*Donald Duck*, New York: Abbeville Press, 1978, and",
+          "value": "Donald Duck, New York: Abbeville Press, 1978, and",
+          "bbox": [
+            {
+              "h": 24.09,
+              "w": 212.98,
+              "x": 462.07,
+              "y": 151.22,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 24.36,
+              "w": 212.68,
+              "x": 462.99,
+              "y": 249.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 24.23,
+              "w": 213.11,
+              "x": 463.12,
+              "y": 389.8,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 24.38,
+              "w": 213.35,
+              "x": 463.62,
+              "y": 488.05,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color*, No. 6, Prescott, Arizona: Gladstone, The Bruce Hamilton Company",
+          "value": "The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color, No. 6, Prescott, Arizona: Gladstone, The Bruce Hamilton Company",
+          "bbox": [
+            {
+              "h": 41.7752150366359,
+              "w": 309.63713721561527,
+              "x": 462.6042627843846,
+              "y": 177.57820962089838,
+              "confidence": 0.8715842,
+              "end_index": 137,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### Lost in the Andes",
+          "value": "Lost in the Andes",
+          "bbox": [
+            {
+              "h": 10.0,
+              "w": 92.56,
+              "x": 463.43,
+              "y": 235.09,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "*Donald Duck*, New York: Abbeville Press, 1978, and",
+          "value": "Donald Duck, New York: Abbeville Press, 1978, and",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color*, No. 10, Prescott, Arizona: Gladstone Publishing, The Bruce Hamilton Company",
+          "value": "The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color, No. 10, Prescott, Arizona: Gladstone Publishing, The Bruce Hamilton Company",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "and,",
+          "value": "and,",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Barks, Carl, *Walt Disney's Donald Duck: Lost in the Andes*, Seattle: Fantagraphics Books, 2011",
+          "value": "Barks, Carl, Walt Disney's Donald Duck: Lost in the Andes, Seattle: Fantagraphics Books, 2011",
+          "bbox": [
+            {
+              "h": 27.31,
+              "w": 310.9,
+              "x": 462.81,
+              "y": 332.76,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### Luck of the North",
+          "value": "Luck of the North",
+          "bbox": [
+            {
+              "h": 10.15,
+              "w": 93.83,
+              "x": 463.64,
+              "y": 375.56,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "*Donald Duck*, New York: Abbeville Press, 1978, and",
+          "value": "Donald Duck, New York: Abbeville Press, 1978, and",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color*, No. 12, Prescott, Arizona: Gladstone Publishing, The Bruce Hamilton Company",
+          "value": "The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color, No. 12, Prescott, Arizona: Gladstone Publishing, The Bruce Hamilton Company",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### The Gilded Man",
+          "value": "The Gilded Man",
+          "bbox": [
+            {
+              "h": 10.14,
+              "w": 89.15,
+              "x": 463.51,
+              "y": 473.76,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "paragraph_title",
+              "start_index": null
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "*Donald Duck*, New York: Abbeville Press, 1978, and",
+          "value": "Donald Duck, New York: Abbeville Press, 1978, and",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "*The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color*, No. 20, Prescott, Arizona: Gladstone Publishing, The Bruce",
+          "value": "The Carl Barks Library of Walt Disney's Donald Duck Adventures in Color, No. 20, Prescott, Arizona: Gladstone Publishing, The Bruce",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "110, 111"
+    }
+  ]
+}

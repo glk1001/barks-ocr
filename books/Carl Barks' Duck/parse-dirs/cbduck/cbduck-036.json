@@ -1,0 +1,137 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "64",
+              "value": "64",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK",
+              "value": "CARL BARKS' DUCK",
+              "bbox": [
+                {
+                  "h": 12.3,
+                  "w": 99.47,
+                  "x": 241.18,
+                  "y": 68.97,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "64\n\nCARL BARKS' DUCK",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "![A park ranger handing a pamphlet to Donald Duck. Speech bubbles: \"WHAT'S MORE, YOU LOOK LIKE FELLOWS WHO'LL READ THE RULES AND FOLLOW THEM! HAVE YOURSELVES A GOOD TIME!\", \"YES, SIR!\"](cbduck-036_fig_1.png)",
+          "value": "illustration: A park ranger handing a pamphlet to Donald Duck. Speech bubbles: \"WHAT'S MORE, YOU LOOK LIKE FELLOWS WHO'LL READ THE RULES AND FOLLOW THEM! HAVE YOURSELVES A GOOD TIME!\", \"YES, SIR!\"",
+          "bbox": [
+            {
+              "h": 179.42,
+              "w": 221.5,
+              "x": 175.87,
+              "y": 185.83,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-036_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 17. Vacation Time, 4:7",
+          "value": "Fig. 17. Vacation Time, 4:7",
+          "bbox": [
+            {
+              "h": 9.468493150684935,
+              "w": 85.48312500000003,
+              "x": 243.0351,
+              "y": 365.5890410958904,
+              "confidence": 0.5,
+              "end_index": 26,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## THE FORGOTTEN MASTERPIECE: *Vacation Time*",
+          "value": "THE FORGOTTEN MASTERPIECE: Vacation Time",
+          "bbox": [
+            {
+              "h": 26.89399247841928,
+              "w": 180.17212499999994,
+              "x": 609.428925,
+              "y": 192.00000000000003,
+              "confidence": 0.8076124,
+              "end_index": 44,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Donald Duck has sought his fortune in the jungles of Guiana, the deserts of Morocco, crossed the ocean and, as you'll soon see, will save North America by following the Viking trail up the coast of Newfoundland. In comics not discussed here, he would spelunk deep into the earth, and zoom on rockets to distant asteroids and planets. But Carl Barks' second greatest comic, in my mind (after \"The Golden Helmet\"), takes Donald just a few hours outside of Duckburg, on a camping trip. Like Buster Keaton, Donald will be initially perceived as a fool only to shed this embarrassing exoskeleton to reveal, in a terrifying and ultimately moving series of events, a hero unlike any in the Barks canon. \"Vacation Time\" is the name of the story, and it is one of the most incredible comic book tales ever written, brilliantly composed with an array of panels that bend and twist to give a sense of movement and humor, before returning them to 'normal' shape, and thus allowing them to communicate the gravity of the scene within their borders. \"Vacation Time\" is Carl Barks' *General*, Donald's best performance, and perhaps the best kept secret in comics.",
+          "value": "Donald Duck has sought his fortune in the jungles of Guiana, the deserts of Morocco, crossed the ocean and, as you'll soon see, will save North America by following the Viking trail up the coast of Newfoundland. In comics not discussed here, he would spelunk deep into the earth, and zoom on rockets to distant asteroids and planets. But Carl Barks' second greatest comic, in my mind (after \"The Golden Helmet\"), takes Donald just a few hours outside of Duckburg, on a camping trip. Like Buster Keaton, Donald will be initially perceived as a fool only to shed this embarrassing exoskeleton to reveal, in a terrifying and ultimately moving series of events, a hero unlike any in the Barks canon. \"Vacation Time\" is the name of the story, and it is one of the most incredible comic book tales ever written, brilliantly composed with an array of panels that bend and twist to give a sense of movement and humor, before returning them to 'normal' shape, and thus allowing them to communicate the gravity of the scene within their borders. \"Vacation Time\" is Carl Barks' General, Donald's best performance, and perhaps the best kept secret in comics.",
+          "bbox": [
+            {
+              "h": 243.86,
+              "w": 313.41,
+              "x": 476.86,
+              "y": 261.74,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I don't know what happened to Barks to make him lose his mind on this particular story, but I'm glad that he did. Barks pulled out all the stops in making this as hilarious as any of the slapsticks from",
+          "value": "I don't know what happened to Barks to make him lose his mind on this particular story, but I'm glad that he did. Barks pulled out all the stops in making this as hilarious as any of the slapsticks from",
+          "bbox": [
+            {
+              "h": 41.45,
+              "w": 311.13,
+              "x": 477.25,
+              "y": 507.04,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "64, 65"
+    }
+  ]
+}

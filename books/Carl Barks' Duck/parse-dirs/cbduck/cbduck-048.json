@@ -1,0 +1,260 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "88",
+              "value": "88",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nTHE GOLDEN HELMET",
+              "value": "CARL BARKS' DUCK\nTHE GOLDEN HELMET",
+              "bbox": [
+                {
+                  "h": 13.26,
+                  "w": 99.75,
+                  "x": 233.87,
+                  "y": 66.7,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.3,
+                  "w": 110.01,
+                  "x": 576.29,
+                  "y": 74.22,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "89",
+              "value": "89",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "88\n\nCARL BARKS' DUCK\nTHE GOLDEN HELMET\n\n89",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Looking through binoculars, Blue sees that Donald has the helmet, and in the one mediocre plot twist, steals it back from Donald by... sneaking up and taking it from him. After Blue sneers and proclaims victory, as they march toward his boat (where the Ducks are to become his slaves), the Curator drops a stone on Blue's head, and takes the Helmet yet again. With the evil prize safely in his possession, the Curator demands they board the ship and sail into deep waters, where he can toss the thing into the ocean.",
+          "value": "Looking through binoculars, Blue sees that Donald has the helmet, and in the one mediocre plot twist, steals it back from Donald by... sneaking up and taking it from him. After Blue sneers and proclaims victory, as they march toward his boat (where the Ducks are to become his slaves), the Curator drops a stone on Blue's head, and takes the Helmet yet again. With the evil prize safely in his possession, the Curator demands they board the ship and sail into deep waters, where he can toss the thing into the ocean.",
+          "bbox": [
+            {
+              "h": 112.88,
+              "w": 313.16,
+              "x": 120.37,
+              "y": 90.51,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "And now comes the dark heart of \"The Golden Helmet.\" As they sail deeper and deeper into the Atlantic, which becomes as bleak and depressing as the desert in \"The Magic Hourglass,\" the backgrounds become sparse, languid. The seas have waves, but the ship moves in a straight, flat line across each panel. Gone is adventure, gone is the turbulence (and beauty) of the Atlantic, and what remains is pure avarice.",
+          "value": "And now comes the dark heart of \"The Golden Helmet.\" As they sail deeper and deeper into the Atlantic, which becomes as bleak and depressing as the desert in \"The Magic Hourglass,\" the backgrounds become sparse, languid. The seas have waves, but the ship moves in a straight, flat line across each panel. Gone is adventure, gone is the turbulence (and beauty) of the Atlantic, and what remains is pure avarice.",
+          "bbox": [
+            {
+              "h": 93.87,
+              "w": 312.22,
+              "x": 116.48,
+              "y": 202.72,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "For the Curator, on Sharky's advice, decides to keep the Golden Helmet. Since Sharky has proven that anyone can be Olaf the Blue's kin, the Curator has as much right to be the owner of North America as Azure Blue, or anyone else for that matter. \"Everybody will have to go to a museum twice a day!\" he proclaims, and then proceeds to list off all the museum-friendly things that will occupy the lives of North Americans under his rule.",
+          "value": "For the Curator, on Sharky's advice, decides to keep the Golden Helmet. Since Sharky has proven that anyone can be Olaf the Blue's kin, the Curator has as much right to be the owner of North America as Azure Blue, or anyone else for that matter. \"Everybody will have to go to a museum twice a day!\" he proclaims, and then proceeds to list off all the museum-friendly things that will occupy the lives of North Americans under his rule.",
+          "bbox": [
+            {
+              "h": 97.49,
+              "w": 313.21,
+              "x": 113.38,
+              "y": 300.2,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "But the Curator is exhausted. He collapses, and Donald grabs the Helmet. Midway to tossing it into the sea, Donald suddenly has a vivid image of himself, clad in ermine, sitting atop a gold throne that reads KING of North America. Sharky leans in, whispering, and tells our man that a good lawyer can finagle the legal angle.",
+          "value": "But the Curator is exhausted. He collapses, and Donald grabs the Helmet. Midway to tossing it into the sea, Donald suddenly has a vivid image of himself, clad in ermine, sitting atop a gold throne that reads KING of North America. Sharky leans in, whispering, and tells our man that a good lawyer can finagle the legal angle.",
+          "bbox": [
+            {
+              "h": 74.26,
+              "w": 312.24,
+              "x": 111.09,
+              "y": 398.42,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Donald's full of life now, shouting, \"I won't take a thing away from them!\" as the Helmet, which he's wearing, comes down over his eyes. When Sharky inquires about what Donald expects to possess, he sneers that he's going to force people to wear meters on their chests and pay him for the very air we breathe. (see Fig. 25)",
+          "value": "Donald's full of life now, shouting, \"I won't take a thing away from them!\" as the Helmet, which he's wearing, comes down over his eyes. When Sharky inquires about what Donald expects to possess, he sneers that he's going to force people to wear meters on their chests and pay him for the very air we breathe. (see Fig. 25)",
+          "bbox": [
+            {
+              "h": 74.6,
+              "w": 311.16,
+              "x": 109.01,
+              "y": 468.87,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "![comic panel: Donald Duck wearing the Golden Helmet and shouting \"I'LL MAKE PEOPLE WEAR METERS ON THEIR CHESTS! AND EVERY BREATH THEY TAKE WILL COST 'EM MONEY!\"](cbduck-048_fig_1.png)",
+          "value": "comic panel: Donald Duck wearing the Golden Helmet and shouting \"I'LL MAKE PEOPLE WEAR METERS ON THEIR CHESTS! AND EVERY BREATH THEY TAKE WILL COST 'EM MONEY!\"",
+          "bbox": [
+            {
+              "h": 153.5,
+              "w": 203.75,
+              "x": 524.27,
+              "y": 100.3,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-048_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 25. The Golden Helmet, 28:1",
+          "value": "Fig. 25. The Golden Helmet, 28:1",
+          "bbox": [
+            {
+              "h": 9.59,
+              "w": 107.27,
+              "x": 571.52,
+              "y": 257.26,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Leave it to Donald to take this to its farthest point, even growing paranoid and depositing everyone—including his nephews—on an iceberg when he thinks they're trying to steal back the Helmet. But one of the kids sneaks the compass from Donald, leaving him, on a cloudy day, unable to read the stars to determine where he's sailing.",
+          "value": "Leave it to Donald to take this to its farthest point, even growing paranoid and depositing everyone—including his nephews—on an iceberg when he thinks they're trying to steal back the Helmet. But one of the kids sneaks the compass from Donald, leaving him, on a cloudy day, unable to read the stars to determine where he's sailing.",
+          "bbox": [
+            {
+              "h": 70.99,
+              "w": 312.35,
+              "x": 468.5,
+              "y": 278.01,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "After a polar bear lands on Donald's ship, devouring all their supplies (Sharky has joined him, of course), the Helmet and its power do little to feed either of them (much like the conclusion of \"The Magic Hourglass\"). Suddenly, through the fog we see a Viking ship—Huey, Dewey and Louie took an axe and shaped the iceberg like the old hulk in the museum (and well done, boys).",
+          "value": "After a polar bear lands on Donald's ship, devouring all their supplies (Sharky has joined him, of course), the Helmet and its power do little to feed either of them (much like the conclusion of \"The Magic Hourglass\"). Suddenly, through the fog we see a Viking ship—Huey, Dewey and Louie took an axe and shaped the iceberg like the old hulk in the museum (and well done, boys).",
+          "bbox": [
+            {
+              "h": 83.43,
+              "w": 313.05,
+              "x": 467.8,
+              "y": 348.41,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Donald is so happy to see his nephews that he renounces ownership, which of course makes Sharky grab the Helmet and proclaim himself owner, but by now everyone's tired of the joke (and besides Donald was the best, evilest owner, anyway.) One of the boys grabs a fish and hurls it in Sharky's face. The Golden Helmet flies from his hand and down, down into the depths, never to be seen again.",
+          "value": "Donald is so happy to see his nephews that he renounces ownership, which of course makes Sharky grab the Helmet and proclaim himself owner, but by now everyone's tired of the joke (and besides Donald was the best, evilest owner, anyway.) One of the boys grabs a fish and hurls it in Sharky's face. The Golden Helmet flies from his hand and down, down into the depths, never to be seen again.",
+          "bbox": [
+            {
+              "h": 84.33,
+              "w": 313.2,
+              "x": 466.7,
+              "y": 432.38,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "So we come around full circle. Donald's had his adventure, even had a close up look at the worst instincts in his own breast, and is back",
+          "value": "So we come around full circle. Donald's had his adventure, even had a close up look at the worst instincts in his own breast, and is back",
+          "bbox": [
+            {
+              "h": 27.57,
+              "w": 310.54,
+              "x": 466.9,
+              "y": 517.24,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "88, 89"
+    }
+  ]
+}

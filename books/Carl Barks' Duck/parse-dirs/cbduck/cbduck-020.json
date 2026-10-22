@@ -1,0 +1,168 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "32",
+              "value": "32",
+              "bbox": null,
+              "type": "text"
+            },
+            {
+              "md": "CARL BARKS' DUCK\nLOST IN THE ANDES",
+              "value": "CARL BARKS' DUCK\nLOST IN THE ANDES",
+              "bbox": [
+                {
+                  "h": 12.42,
+                  "w": 99.08,
+                  "x": 223.06,
+                  "y": 66.79,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.7,
+                  "w": 97.53,
+                  "x": 576.65,
+                  "y": 73.05,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            },
+            {
+              "md": "33",
+              "value": "33",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "32\n\nCARL BARKS' DUCK\nLOST IN THE ANDES\n\n33",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Round vs. square, chicken and egg. Needless to say, the boys succeed, but even after this success, how do they escape Plain Awful and get back home? Well, it was the museum that set them on this journey, and it is a museum that sends them on their way back—the museum of Plain Awful has on display a compass, which the ducks trade for square dance lessons (which is, of course, a dance performed in a variety of circles.)",
+          "value": "Round vs. square, chicken and egg. Needless to say, the boys succeed, but even after this success, how do they escape Plain Awful and get back home? Well, it was the museum that set them on this journey, and it is a museum that sends them on their way back—the museum of Plain Awful has on display a compass, which the ducks trade for square dance lessons (which is, of course, a dance performed in a variety of circles.)",
+          "bbox": [
+            {
+              "h": 98.01,
+              "w": 311.07,
+              "x": 110.88,
+              "y": 91.14,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Emerging from the fog, our heroes pause, with a pair of chickens in a case on their backs, and reflect on the happiness of the Awfultonians, people who, Donald notes, have \"never seen the sun,\" but \"were the happiest people we have ever known.\"",
+          "value": "Emerging from the fog, our heroes pause, with a pair of chickens in a case on their backs, and reflect on the happiness of the Awfultonians, people who, Donald notes, have \"never seen the sun,\" but \"were the happiest people we have ever known.\"",
+          "bbox": [
+            {
+              "h": 55.42,
+              "w": 310.54,
+              "x": 108.81,
+              "y": 189.15,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "So why not stay? Well, if we go by the rules of the Campbellian hero's journey, our man must return to his own culture, return with the spoils of his quest. For once, Donald expects to get some credit—in fact, we see him radioing the museum from the ship, sitting at the table with the scientists as they study his chickens, proud of his accomplishment that will change the poultry industry forever... until one hilarious mistake upends this entire expedition.",
+          "value": "So why not stay? Well, if we go by the rules of the Campbellian hero's journey, our man must return to his own culture, return with the spoils of his quest. For once, Donald expects to get some credit—in fact, we see him radioing the museum from the ship, sitting at the table with the scientists as they study his chickens, proud of his accomplishment that will change the poultry industry forever... until one hilarious mistake upends this entire expedition.",
+          "bbox": [
+            {
+              "h": 100.42,
+              "w": 311.18,
+              "x": 106.44,
+              "y": 245.11,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Again: the question that plagues me is \"why?\" Why is this lowly factotum pushing himself and his nephews—up mountains, into a \"lost world,\" and back again—on this maniacal quest for square eggs? Yes, \"Lost in the Andes\" can be seen, as Andrae so eloquently states, as a critique of capitalism and Donald's vast failures, his inability to make money or find success. But this is the thrust behind the Barks' Donald Duck comics as a whole I think—that Donald is someone who just wants more out of his life, which I find exhilarating and inspirational. As a child, we gape and marvel at the opportunities afforded to the nephews, and something so childish—gum bubbles—both push the kids into peril and get them out of the same. For adults caught in meaningless jobs, Donald represents that heroic dream—that some happy accident will come along when we least expect it, and send us on a journey. Donald has no illusions that he's not going to make any",
+          "value": "Again: the question that plagues me is \"why?\" Why is this lowly factotum pushing himself and his nephews—up mountains, into a \"lost world,\" and back again—on this maniacal quest for square eggs? Yes, \"Lost in the Andes\" can be seen, as Andrae so eloquently states, as a critique of capitalism and Donald's vast failures, his inability to make money or find success. But this is the thrust behind the Barks' Donald Duck comics as a whole I think—that Donald is someone who just wants more out of his life, which I find exhilarating and inspirational. As a child, we gape and marvel at the opportunities afforded to the nephews, and something so childish—gum bubbles—both push the kids into peril and get them out of the same. For adults caught in meaningless jobs, Donald represents that heroic dream—that some happy accident will come along when we least expect it, and send us on a journey. Donald has no illusions that he's not going to make any",
+          "bbox": [
+            {
+              "h": 201.08,
+              "w": 314.32,
+              "x": 102.1,
+              "y": 344.13,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "money, or at least doesn't speak of any kind of remuneration. Instead, he presses forward, for the thrill of adventure.",
+          "value": "money, or at least doesn't speak of any kind of remuneration. Instead, he presses forward, for the thrill of adventure.",
+          "bbox": [
+            {
+              "h": 26.38,
+              "w": 310.93,
+              "x": 464.04,
+              "y": 98.75,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "This is what Donald does for us, but perhaps most importantly, perhaps this is what he did for Carl Barks himself. The man was paid all of $925 for his work in that comic book, $800 of which represented his payment for \"Lost in the Andes.\" *Walt Disney's Comics and Stories* usually sold close to three million copies, but let's be conservative and say that issue sold only a cool million—that means Barks commanded a sweet nine ten-thousandths of a cent per issue (had Disney given him just a half cent per issue, Barks would have made five grand by the same estimation, which would have no doubt made him insanely happy.) By this time (1949), Barks was barely making it as a writer/illustrator for Western Comics, was sinking in the morass of a second, disastrous marriage (to a drunk), with a pair of daughters from the first bad marriage and few prospects outside of this work. Armed with that stack of *National Geographics* and an *Encyclopedia Brittanica*, trying desperately to forget the living hell of his domestic life, he created in his hero an everyman who could do what he could not—escape. Certainly, he critiqued capitalist hierarchy, and used this Inca-like culture to his benefit. He shared with us his need for escape, revealing that the journey is its own reward.",
+          "value": "This is what Donald does for us, but perhaps most importantly, perhaps this is what he did for Carl Barks himself. The man was paid all of $925 for his work in that comic book, $800 of which represented his payment for \"Lost in the Andes.\" Walt Disney's Comics and Stories usually sold close to three million copies, but let's be conservative and say that issue sold only a cool million—that means Barks commanded a sweet nine ten-thousandths of a cent per issue (had Disney given him just a half cent per issue, Barks would have made five grand by the same estimation, which would have no doubt made him insanely happy.) By this time (1949), Barks was barely making it as a writer/illustrator for Western Comics, was sinking in the morass of a second, disastrous marriage (to a drunk), with a pair of daughters from the first bad marriage and few prospects outside of this work. Armed with that stack of National Geographics and an Encyclopedia Brittanica, trying desperately to forget the living hell of his domestic life, he created in his hero an everyman who could do what he could not—escape. Certainly, he critiqued capitalist hierarchy, and used this Inca-like culture to his benefit. He shared with us his need for escape, revealing that the journey is its own reward.",
+          "bbox": [
+            {
+              "h": 265.63,
+              "w": 313.8,
+              "x": 461.38,
+              "y": 126.8,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "32, 33"
+    }
+  ]
+}

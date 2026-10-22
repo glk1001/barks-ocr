@@ -1,0 +1,21 @@
+The splash panel that opens "No Such Varmint" again reveals Barks' joy in drawing seascapes. A ship, "laden with gold from the Alaskan mines of Scrooge McDuck," sinks after hitting "a mysterious object." The panel is striking: the sinking ship's stern rises dramatically in the air, smoke billowing parallel to its angled deck. It sinks to the bottom of the water, in an inlet with rocky shores and pine trees (later it's called Barnacle Bay.) The next panel assures us not to worry, as the crew rows away, utterly calm, the captain standing at the bow, scratching his head. "Now, what do you suppose caused that?" he asks, perplexed but not as alarmed as you'd think someone would be who had just survived a shipwreck. Tonally, this was Barks signaling to us that this would be a more relaxed adventure. If they're not going to worry, why should we?
+
+In two panels, Barks had set the tone—in panel three, he begian to lay the groundwork of the story. Our three nephews loaf in a beautiful park—and compare the next few panels depicting Duckburg with the Burbank of "Maharajah Donald." The city is now vivid, with its palm trees and lakes, the perfect place for citizens to relax. "Some people are great people," Huey muses, "and some are bums!" There can be no doubt who they're talking about, and no doubt whether he's great or a bum. From there we get a roll call of so-called "great" people: Flinthide, a banker; Shyster, a lawyer (a good one, famous for his "wit and oratory"... I guess Barks had not wrestled with divorce lawyers yet); Groanbalm, the doctor; Markup, the merchant, the writer Scribble, and Tryle N. Error, not the chemist, but "the mighty chemist!" All of these men, a veritable cavalcade of the city's finest, are meant to serve as a shocking contrast to our hero, ambling down the same path, singing "Oh, the world owes me a livin'—" while the boys hang their heads in shame.
+
+But Donald is different now. In the other work stories, our actor shows his confidence, only to be undermined by any number of internal or external forces. In others, he's a normal guy who is pushed to excellence. Here, however, Donald has the sublime confidence of a
+
+***
+
+
+
+person who has, perhaps, achieved satori, the Zen term for being able to see clearly one's own nature. Donald will not hear of the boys' dismay that he is not pursuing the world's riches, for he has a profession at which he is great: he is a snake charmer. And a great one.
+
+The boys are ashamed, but Donald, unruffled by the kids' obvious displeasure, begins charming all over the park, luring the happy creatures out of hiding with his music. Donald and his beasts are creatures of pure joy—the snakes are apple-cheeked, Donald at one with nature as they dance in a circle.
+
+Undaunted, the nephews read of a man who measures people's heads to determine their lot in life, and decide that their uncle has to figure out his real profession. Reluctantly agreeing to this quackery, Donald sits in the chair while the doctor studies his cranium. Once again, fate appears in the guise of a bug. Donald's reading of "115" becomes "11.5" when a "tired bug" lands on the monitor. According to the doctor's fat guidebook, 11.5 means that Donald is going to be... a great detective.
+
+But Donald doesn't want to be a great detective. Once again, he retreats to the serenity of the park and begins playing his music with the accompaniments of satisfied snakes. But the boys remain convinced in science's superiority (albeit ridiculous pseudo-science) and set up a "Detecktif" agency, place an ad, and wait for someone to hire their uncle. Their first client is none other than Scrooge McDuck, who needs to get some answers as to what sank his ship.
+
+Off they go to Barnacle Bay. In a gorgeous splash panel we see the whole of the bay, with a volcanic lake in the distance. Like a great director, Barks had made each panel fraught with significance—the boys look outward, toward an invisible quarry that their uncle is supposed to be investigating; Donald, on the other hand, is looking backwards, away from the action, and to the woods, where he hopes to entertain the region's snakes.
+
+What we soon discover is that the boys are the detectives, and Donald is happy entertaining the music-starved serpents of the forest.

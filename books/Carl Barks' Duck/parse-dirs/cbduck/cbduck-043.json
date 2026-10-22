@@ -1,0 +1,181 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "78 CARL BARKS' DUCK\nVACATION TIME 79",
+              "value": "78 CARL BARKS' DUCK\nVACATION TIME 79",
+              "bbox": [
+                {
+                  "h": 14.18,
+                  "w": 100.03,
+                  "x": 232.45,
+                  "y": 60.85,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.54,
+                  "w": 82.1,
+                  "x": 590.21,
+                  "y": 71.58,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "78 CARL BARKS' DUCK\nVACATION TIME 79",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "being pushed back by a mountain-sized cloud of ash, and the pilot exclaiming \"Nobody can escape with their lives!\" Even the bully, standing with his back to us, staring at a wall of fire, gloats that there will be no witnesses to his carelessness. If we didn't know that this scene is hopeless, we certainly do now.",
+          "value": "being pushed back by a mountain-sized cloud of ash, and the pilot exclaiming \"Nobody can escape with their lives!\" Even the bully, standing with his back to us, staring at a wall of fire, gloats that there will be no witnesses to his carelessness. If we didn't know that this scene is hopeless, we certainly do now.",
+          "bbox": [
+            {
+              "h": 72.44,
+              "w": 311.15,
+              "x": 119.69,
+              "y": 84.3,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Barks took us back to the Ducks, whose escape is strange to say the least, yet totally believable. Emerging into an open field, the towering fire at their heels, Donald orders the nephews to dig little trenches—graves essentially. Soaking their jackets with water, he lays each on the faces of his nephews, and hands them shovels. In a haunting panel, we see one of the nephews, face hidden beneath the coat, laying backward in this grave, scared, saying \"You can't bury us! We'll suffocate!\" Donald, now sporting a tank top (his jacket is off, soaked with water), responds testily, \"Shut up and put this shovel blade over your head!\" Walking by the three mounds that are his nephews, he digs little air holes for them, until finally burying himself as best he can just moments before the panel is engulfed in flame.",
+          "value": "Barks took us back to the Ducks, whose escape is strange to say the least, yet totally believable. Emerging into an open field, the towering fire at their heels, Donald orders the nephews to dig little trenches—graves essentially. Soaking their jackets with water, he lays each on the faces of his nephews, and hands them shovels. In a haunting panel, we see one of the nephews, face hidden beneath the coat, laying backward in this grave, scared, saying \"You can't bury us! We'll suffocate!\" Donald, now sporting a tank top (his jacket is off, soaked with water), responds testily, \"Shut up and put this shovel blade over your head!\" Walking by the three mounds that are his nephews, he digs little air holes for them, until finally burying himself as best he can just moments before the panel is engulfed in flame.",
+          "bbox": [
+            {
+              "h": 171.29,
+              "w": 316.18,
+              "x": 112.63,
+              "y": 154.79,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "We cut momentarily to the ranger's office, where we find the villain of this piece, chain-smoking and trying to lay the blame for the fire on the Ducks. He is infuriating, and our only saving grace is that the chief ranger seems surprised that the Ducks would have committed such a grievous error, all the while looking sideways at the smoke from this bum's cig. Doing this also allows us to realize that the fire's out, for Barks' has taken us away from the Ducks because we know their gambit worked. It gives us just enough tension, but also reflects our confidence (and obviously Barks') in his hero.",
+          "value": "We cut momentarily to the ranger's office, where we find the villain of this piece, chain-smoking and trying to lay the blame for the fire on the Ducks. He is infuriating, and our only saving grace is that the chief ranger seems surprised that the Ducks would have committed such a grievous error, all the while looking sideways at the smoke from this bum's cig. Doing this also allows us to realize that the fire's out, for Barks' has taken us away from the Ducks because we know their gambit worked. It gives us just enough tension, but also reflects our confidence (and obviously Barks') in his hero.",
+          "bbox": [
+            {
+              "h": 128.95,
+              "w": 314.58,
+              "x": 108.27,
+              "y": 322.96,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Sure enough, they survived, and come out of their trenches. In a heartbreaking contrast to the beauty he had created in the joyous earlier pages, Barks shows us nothing but destruction—the whole forest, in a haunting splash panel, burned to brown and black, charred trunks and wisps of smoke. (see Plate 12) As they wander through this wasteland, past the once blue stream now brown with ash and mud,",
+          "value": "Sure enough, they survived, and come out of their trenches. In a heartbreaking contrast to the beauty he had created in the joyous earlier pages, Barks shows us nothing but destruction—the whole forest, in a haunting splash panel, burned to brown and black, charred trunks and wisps of smoke. (see Plate 12) As they wander through this wasteland, past the once blue stream now brown with ash and mud,",
+          "bbox": null,
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "they seem strangely serene, happy, perhaps, to be alive.",
+          "value": "they seem strangely serene, happy, perhaps, to be alive.",
+          "bbox": [
+            {
+              "h": 15.61,
+              "w": 244.65,
+              "x": 470.38,
+              "y": 96.24,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "If I have a criticism of \"Vacation Time,\" it's that the ending is too pat for my taste—they return to the ranger station, where the bully is shocked to see them alive. A confrontation ensues, and then it turns out one of the boys has Donald's camera which, we discover, contains a shot of Donald arguing with the bully and showing his dangerous campground, enough to... what? Convict him? What happens to a guy that starts a forest fire?",
+          "value": "If I have a criticism of \"Vacation Time,\" it's that the ending is too pat for my taste—they return to the ranger station, where the bully is shocked to see them alive. A confrontation ensues, and then it turns out one of the boys has Donald's camera which, we discover, contains a shot of Donald arguing with the bully and showing his dangerous campground, enough to... what? Convict him? What happens to a guy that starts a forest fire?",
+          "bbox": [
+            {
+              "h": 95.82,
+              "w": 311.35,
+              "x": 468.62,
+              "y": 110.93,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Vindicated, the ranger tells the boys that they can camp anywhere in the forest, and that the rangers will furnish their whole outfit (presumably their stuff's been torched.) For good measure (and at the whispered plea of one of the kids), the rangers confiscate Donald's camera, so that the trip will continue in peace. Our last panels show them having the time of their lives, sleeping, playing, and not taking any pictures. Great—except that we were treated, quite realistically, to the fact that damn near all the campground burned right down to the ground, and we're back to blue streams and trees and even the deer posing for a picture Donald isn't allowed to take. My assumption is that this is a huge park, and this is simply a part that didn't burn, but still.",
+          "value": "Vindicated, the ranger tells the boys that they can camp anywhere in the forest, and that the rangers will furnish their whole outfit (presumably their stuff's been torched.) For good measure (and at the whispered plea of one of the kids), the rangers confiscate Donald's camera, so that the trip will continue in peace. Our last panels show them having the time of their lives, sleeping, playing, and not taking any pictures. Great—except that we were treated, quite realistically, to the fact that damn near all the campground burned right down to the ground, and we're back to blue streams and trees and even the deer posing for a picture Donald isn't allowed to take. My assumption is that this is a huge park, and this is simply a part that didn't burn, but still.",
+          "bbox": [
+            {
+              "h": 163.65,
+              "w": 313.25,
+              "x": 465.25,
+              "y": 208.88,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Vacation Time\" is moving because, though I love the other stories here, this one seems both grounded in the real world (forest fires, rangers) and in the unreal (the mad race to get that damn picture). It is one of Barks' few domestic stories (except for the work tales I discuss in the last essay), and I like that the real world pushes Donald into heroics that transcend virtually any that he's faced before, if only because, while it's true that he kind-of literally saves the whole of North America from enslavement, that story (\"The Golden Helmet\") is pure fantasy. \"Vacation Time\" is, in a sense, the story of a man who simply wanted to take a vacation, who respects nature, respects the rules of our National Parks, and then, when disaster strikes, risks his life and coolly saves his children from death. The kids are kids, and the adult here is an adult, a model citizen, and, dare I say, a real hero.",
+          "value": "\"Vacation Time\" is moving because, though I love the other stories here, this one seems both grounded in the real world (forest fires, rangers) and in the unreal (the mad race to get that damn picture). It is one of Barks' few domestic stories (except for the work tales I discuss in the last essay), and I like that the real world pushes Donald into heroics that transcend virtually any that he's faced before, if only because, while it's true that he kind-of literally saves the whole of North America from enslavement, that story (\"The Golden Helmet\") is pure fantasy. \"Vacation Time\" is, in a sense, the story of a man who simply wanted to take a vacation, who respects nature, respects the rules of our National Parks, and then, when disaster strikes, risks his life and coolly saves his children from death. The kids are kids, and the adult here is an adult, a model citizen, and, dare I say, a real hero.",
+          "bbox": [
+            {
+              "h": 171.61,
+              "w": 313.49,
+              "x": 462.4,
+              "y": 376.64,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "78, 79"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "80 CARL BARKS' DUCK",
+              "value": "80 CARL BARKS' DUCK",
+              "bbox": [
+                {
+                  "h": 11.8,
+                  "w": 98.12,
+                  "x": 229.84,
+                  "y": 70.28,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "80 CARL BARKS' DUCK",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "![comic panel: Donald Duck holding a winged helmet with a speech bubble saying \"BOYS, ISN'T THIS HELMET A BEAUTY? WHAT A SHAME WE HAVE TO THROW IT INTO THE OCEAN!\"](cbduck-044_fig_1.png)",
+          "value": "comic panel: Donald Duck holding a winged helmet with a speech bubble saying \"BOYS, ISN'T THIS HELMET A BEAUTY? WHAT A SHAME WE HAVE TO THROW IT INTO THE OCEAN!\"",
+          "bbox": [
+            {
+              "h": 172.63,
+              "w": 223.92,
+              "x": 159.48,
+              "y": 185.97,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-044_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 21. The Golden Helmet, 22:6",
+          "value": "Fig. 21. The Golden Helmet, 22:6",
+          "bbox": [
+            {
+              "h": 9.84,
+              "w": 108.04,
+              "x": 214.87,
+              "y": 360.52,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "level": 2,
+          "md": "## ONE HELMET TO RULE THEM ALL:",
+          "value": "ONE HELMET TO RULE THEM ALL:",
+          "bbox": [
+            {
+              "h": 12.62465753424658,
+              "w": 184.11749999999995,
+              "x": 593.91045,
+              "y": 191.47397260273976,
+              "confidence": 0.5,
+              "end_index": 30,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "level": 3,
+          "md": "### The Golden Helmet",
+          "value": "The Golden Helmet",
+          "bbox": null,
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "Carl Barks consistently referred to \"Lost in the Andes\" as his finest work, but I would counter with \"The Golden Helmet.\" \"Helmet,\" with its almost zen-like appraisal of a peaceful life, its condemnation of greed and avarice (not to mention lawyers), a story that has humor but not too much, that actually takes itself somewhat seriously, is his finest effort, at the very least in terms of writing (though the art is brilliant as usual). Barks' claimed that the gags in \"Andes\" were executed perfectly, the repeating jokes of the gum bubbles and the square eggs, etc., and this is true—but \"Helmet,\" whose themes run smoothly through this story, is less reliant on knee-slapping gags. \"The Golden Helmet\" isn't just a story of adventure, a story of humor, or even bravery (though those traits exist here.) \"The Golden Helmet\" is Barks' most somber effort, a story of evil, the evil that lurks in everyone. Even children.",
+          "value": "Carl Barks consistently referred to \"Lost in the Andes\" as his finest work, but I would counter with \"The Golden Helmet.\" \"Helmet,\" with its almost zen-like appraisal of a peaceful life, its condemnation of greed and avarice (not to mention lawyers), a story that has humor but not too much, that actually takes itself somewhat seriously, is his finest effort, at the very least in terms of writing (though the art is brilliant as usual). Barks' claimed that the gags in \"Andes\" were executed perfectly, the repeating jokes of the gum bubbles and the square eggs, etc., and this is true—but \"Helmet,\" whose themes run smoothly through this story, is less reliant on knee-slapping gags. \"The Golden Helmet\" isn't just a story of adventure, a story of humor, or even bravery (though those traits exist here.) \"The Golden Helmet\" is Barks' most somber effort, a story of evil, the evil that lurks in everyone. Even children.",
+          "bbox": [
+            {
+              "h": 199.77,
+              "w": 312.49,
+              "x": 465.5,
+              "y": 260.63,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Barks' visual style in \"The Golden Helmet\" seems to also suggest that we're in for a more sobering ride. Gone are the crazy splash panels of \"Vacation Time\" (or any of the other stories mentioned here, almost all of which have a bent panel or two at least). For the opening scene, as with the rest of this tale, there will be not one skewed panel. Splash panels vanish until twelve pages in, and even then there will be only",
+          "value": "Barks' visual style in \"The Golden Helmet\" seems to also suggest that we're in for a more sobering ride. Gone are the crazy splash panels of \"Vacation Time\" (or any of the other stories mentioned here, almost all of which have a bent panel or two at least). For the opening scene, as with the rest of this tale, there will be not one skewed panel. Splash panels vanish until twelve pages in, and even then there will be only",
+          "bbox": [
+            {
+              "h": 85.3,
+              "w": 311.72,
+              "x": 464.36,
+              "y": 463.75,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "80, 81"
+    }
+  ]
+}

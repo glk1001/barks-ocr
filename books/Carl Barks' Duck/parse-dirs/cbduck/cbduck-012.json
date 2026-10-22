@@ -1,0 +1,230 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "16 CARL BARKS' DUCK\nMAHARAJAH DONALD 17",
+              "value": "16 CARL BARKS' DUCK\nMAHARAJAH DONALD 17",
+              "bbox": [
+                {
+                  "h": 12.79,
+                  "w": 98.76,
+                  "x": 244.1,
+                  "y": 71.4,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.33,
+                  "w": 116.44,
+                  "x": 581.54,
+                  "y": 77.2,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "16 CARL BARKS' DUCK\nMAHARAJAH DONALD 17",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "![Three duck nephews looking at a pencil stub with speech bubbles: \"A STUB OF PENCIL FOR ALL THAT WORK!\", \"SO GENEROUS!\", and \"DON'T ROB YOURSELF, UNCA' DONALD!\"](cbduck-012_fig_1.png)",
+          "value": "illustration: Three duck nephews looking at a pencil stub with speech bubbles: \"A STUB OF PENCIL FOR ALL THAT WORK!\", \"SO GENEROUS!\", and \"DON'T ROB YOURSELF, UNCA' DONALD!\"",
+          "bbox": [
+            {
+              "h": 183.27,
+              "w": 258.54,
+              "x": 159.18,
+              "y": 95.92,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-012_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 2. Maharajah Donald, 2:3",
+          "value": "Fig. 2. Maharajah Donald, 2:3",
+          "bbox": [
+            {
+              "h": 10.16,
+              "w": 96.89,
+              "x": 233.89,
+              "y": 276.82,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Duck tale, but they do serve to leaven Donald's lunacy and pettiness, and at times force him to confront his own responsibilities.<sup>4</sup>",
+          "value": "Duck tale, but they do serve to leaven Donald's lunacy and pettiness, and at times force him to confront his own responsibilities.<sup>4</sup>",
+          "bbox": [
+            {
+              "h": 32.26,
+              "w": 310.2,
+              "x": 126.76,
+              "y": 294.38,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The next two pages reveal these kids to be remarkably resourceful and optimistic. After sweating out a whole afternoon cleaning out the garage, Donald inspects what is left over, and keeps nearly everything—an old radio, sleeping bag, a telescope, even old socks—until finally settling on giving the boys a pencil stub. In one brilliant panel, we see all three kids with different expressions, and saying very different things. (see Fig. 2)",
+          "value": "The next two pages reveal these kids to be remarkably resourceful and optimistic. After sweating out a whole afternoon cleaning out the garage, Donald inspects what is left over, and keeps nearly everything—an old radio, sleeping bag, a telescope, even old socks—until finally settling on giving the boys a pencil stub. In one brilliant panel, we see all three kids with different expressions, and saying very different things. (see Fig. 2)",
+          "bbox": [
+            {
+              "h": 98.68,
+              "w": 311.52,
+              "x": 124.58,
+              "y": 323.37,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "A caveat and a digression: I don't own an original of *March of Comics* #4, where \"Maharajah Donald\" originally appeared. First of all, my mind reels at the way these stories were disseminated. The *March of Comics* was an idea of Western Publishing. It was a smaller-sized comic book that was distributed, literally in the millions, to stores around the United States that did brisk business to children. The vendor, say Sears, would have their name and logo on the front,",
+          "value": "A caveat and a digression: I don't own an original of March of Comics #4, where \"Maharajah Donald\" originally appeared. First of all, my mind reels at the way these stories were disseminated. The March of Comics was an idea of Western Publishing. It was a smaller-sized comic book that was distributed, literally in the millions, to stores around the United States that did brisk business to children. The vendor, say Sears, would have their name and logo on the front,",
+          "bbox": [
+            {
+              "h": 102.54,
+              "w": 313.23,
+              "x": 121.8,
+              "y": 422.09,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "<sup>4</sup> Please note, I will refer to the ducks in human terms throughout this book, as they're essentially people.",
+          "value": "<sup>4</sup> Please note, I will refer to the ducks in human terms throughout this book, as they're essentially people.",
+          "bbox": [
+            {
+              "h": 22.6,
+              "w": 309.53,
+              "x": 120.58,
+              "y": 529.64,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "footnote",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "and the kids could get the free book, presumably with a sale (maybe not), and have something to pore over while (again presumably) Mom would drag the kids around shopping.",
+          "value": "and the kids could get the free book, presumably with a sale (maybe not), and have something to pore over while (again presumably) Mom would drag the kids around shopping.",
+          "bbox": [
+            {
+              "h": 41.32,
+              "w": 311.11,
+              "x": 478.72,
+              "y": 103.26,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "This issue's cover featured Donald dressed, inexplicably, as Napoleon, his hand in his coat, giant hat atop his head, with Mickey Mouse snapping his photograph while one of the kids sits atop the camera, looking into the lens. This cover was not drawn by Barks, but what makes this promotion so intriguing to me is, again, the way in which this art was distributed. Here we have this great story, in a free comic book, Barks' name and identity completely hidden, given away to literally millions of children and then, poof, ten years later (or less) they're gone, for the most part. Millions of copies, tossed away. Now they're worth decent coin.",
+          "value": "This issue's cover featured Donald dressed, inexplicably, as Napoleon, his hand in his coat, giant hat atop his head, with Mickey Mouse snapping his photograph while one of the kids sits atop the camera, looking into the lens. This cover was not drawn by Barks, but what makes this promotion so intriguing to me is, again, the way in which this art was distributed. Here we have this great story, in a free comic book, Barks' name and identity completely hidden, given away to literally millions of children and then, poof, ten years later (or less) they're gone, for the most part. Millions of copies, tossed away. Now they're worth decent coin.",
+          "bbox": [
+            {
+              "h": 139.08,
+              "w": 312.86,
+              "x": 477.18,
+              "y": 144.98,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "I'm also bringing this up because I have no idea as to the actual color of the boys' hats, which was later used to distinguish who they were, to a limited degree. What that means is that I also don't really know who is who, and neither does anyone else, including Barks. The two editions of \"Maharajah Donald\" that I do have—the Abbeville Press book mentioned in the introduction and Volume 6 of Gladstone Publishing's *The Carl Barks Library of Donald Duck Adventures in Color*—are colored digitally. The three nephews are meant, according to Barks, to be interchangeable, to be one unit, one organism, really. Barks drew in black and white, so he didn't care how Western colored their hats, didn't care to distinguish them at all. In fact, the nephews' hats, which became red, blue and green, were originally red, yellow and green, the yellow eventually giving way to blue.",
+          "value": "I'm also bringing this up because I have no idea as to the actual color of the boys' hats, which was later used to distinguish who they were, to a limited degree. What that means is that I also don't really know who is who, and neither does anyone else, including Barks. The two editions of \"Maharajah Donald\" that I do have—the Abbeville Press book mentioned in the introduction and Volume 6 of Gladstone Publishing's The Carl Barks Library of Donald Duck Adventures in Color—are colored digitally. The three nephews are meant, according to Barks, to be interchangeable, to be one unit, one organism, really. Barks drew in black and white, so he didn't care how Western colored their hats, didn't care to distinguish them at all. In fact, the nephews' hats, which became red, blue and green, were originally red, yellow and green, the yellow eventually giving way to blue.",
+          "bbox": [
+            {
+              "h": 182.68,
+              "w": 312.69,
+              "x": 475.72,
+              "y": 285.4,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "So there is absolutely no way to tell the difference between the three, here and in the other comics, so I'm going to go by The Disney Corporation's later explanation, when the *Ducktales* series of television cartoons came out, that Dewey wears a blue hat, Huey wears a red hat, and Louie wears a green one. In the interest of a clearer narrative, this will help to explain just who's talking in any given panel, even as",
+          "value": "So there is absolutely no way to tell the difference between the three, here and in the other comics, so I'm going to go by The Disney Corporation's later explanation, when the Ducktales series of television cartoons came out, that Dewey wears a blue hat, Huey wears a red hat, and Louie wears a green one. In the interest of a clearer narrative, this will help to explain just who's talking in any given panel, even as",
+          "bbox": [
+            {
+              "h": 85.25,
+              "w": 311.77,
+              "x": 474.5,
+              "y": 468.11,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "16, 17"
+    }
+  ]
+}

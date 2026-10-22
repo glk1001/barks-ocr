@@ -1,0 +1,224 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "46 CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN 47",
+              "value": "46 CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN 47",
+              "bbox": [
+                {
+                  "h": 12.1,
+                  "w": 98.93,
+                  "x": 236.69,
+                  "y": 65.12,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                },
+                {
+                  "h": 13.38,
+                  "w": 223.67,
+                  "x": 517.01,
+                  "y": 69.22,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "paragraph_title",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "46 CARL BARKS' DUCK\nLUCK OF THE NORTH AND THE GILDED MAN 47",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "![Donald Duck looking out to sea with a speech bubble saying \"OH, WELL, IF WE DON'T FIND ANYTHING, WE'LL HAVE A LOT OF FUN LOOKING!\"](cbduck-027_fig_1.png)",
+          "value": "illustration: Donald Duck looking out to sea with a speech bubble saying \"OH, WELL, IF WE DON'T FIND ANYTHING, WE'LL HAVE A LOT OF FUN LOOKING!\"",
+          "bbox": [
+            {
+              "h": 147.81,
+              "w": 161.72,
+              "x": 197.75,
+              "y": 92.02,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-027_fig_1.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 12. The Gilded Man, 8:5",
+          "value": "Fig. 12. The Gilded Man, 8:5",
+          "bbox": [
+            {
+              "h": 9.28,
+              "w": 92.36,
+              "x": 230.24,
+              "y": 240.93,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            },
+            {
+              "h": 9.34,
+              "w": 96.41,
+              "x": 567.95,
+              "y": 540.87,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "caption",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "(and the story), and then Donald, destitute, collapses in the easy chair in Ellic's office and mopes as the millionaire occupies himself with his stamp collection. As a child, and today, I find this monumentally discomforting—Donald and Gladstone are strangers, and in this man's home, and when Gladstone leaves, and thus ending any reason for them to stay, Donald remains sitting, staring into space while the guy ignores him. It's weird. Nonetheless, Ellic looks up, startled, and wonders just who is this guy sitting in his office. Well, Ellic is what we might call today a victim of dementia—he remembered virtually nothing about leaving his stamps behind, that he paid Gladstone a reward, or that Donald is just the guy who came with him. Thinking Donald brought back the collection, he gives him a thousand bucks, and when Donald tries to give it back, Ellic believes our man's being confoundedly noble, and has his servant not only boot Donald out of the mansion, but to make sure \"he keeps that money!\"",
+          "value": "(and the story), and then Donald, destitute, collapses in the easy chair in Ellic's office and mopes as the millionaire occupies himself with his stamp collection. As a child, and today, I find this monumentally discomforting—Donald and Gladstone are strangers, and in this man's home, and when Gladstone leaves, and thus ending any reason for them to stay, Donald remains sitting, staring into space while the guy ignores him. It's weird. Nonetheless, Ellic looks up, startled, and wonders just who is this guy sitting in his office. Well, Ellic is what we might call today a victim of dementia—he remembered virtually nothing about leaving his stamps behind, that he paid Gladstone a reward, or that Donald is just the guy who came with him. Thinking Donald brought back the collection, he gives him a thousand bucks, and when Donald tries to give it back, Ellic believes our man's being confoundedly noble, and has his servant not only boot Donald out of the mansion, but to make sure \"he keeps that money!\"",
+          "bbox": [
+            {
+              "h": 212.93,
+              "w": 312.73,
+              "x": 119.27,
+              "y": 257.67,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "And with that, they're off, on a journey to find that stamp and make that money. But there's a significant panel before they reach their destination. Sailing on a ship, the boys read up on Guiana, and speak of El Dorado, the legendary Gilded Man. It is a brief moment, out of nowhere really, but it leads us to the next act of this journey, when",
+          "value": "And with that, they're off, on a journey to find that stamp and make that money. But there's a significant panel before they reach their destination. Sailing on a ship, the boys read up on Guiana, and speak of El Dorado, the legendary Gilded Man. It is a brief moment, out of nowhere really, but it leads us to the next act of this journey, when",
+          "bbox": [
+            {
+              "h": 73.13,
+              "w": 311.25,
+              "x": 116.31,
+              "y": 468.86,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "the real motive of Donald's quest makes itself apparent: the thrill of adventure. In perhaps the most significant panel not just here but maybe the whole of Barks' canon, we see Donald, smiling, staring out to sea and saying \"Oh, well, if we don't find anything, we'll have a lot of fun looking!\" (see Fig. 12)",
+          "value": "the real motive of Donald's quest makes itself apparent: the thrill of adventure. In perhaps the most significant panel not just here but maybe the whole of Barks' canon, we see Donald, smiling, staring out to sea and saying \"Oh, well, if we don't find anything, we'll have a lot of fun looking!\" (see Fig. 12)",
+          "bbox": [
+            {
+              "h": 70.01,
+              "w": 312.15,
+              "x": 467.69,
+              "y": 94.37,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Interestingly enough, the next two pages show that looking is actually not a lot of fun. But this is the pursuit of a stamp, and not for the stamp's intrinsic beauty, but for the $50,000 this stamp is worth. After a week of futility, the boys are loafing by the Orinico River (as stated in an earlier panel, even though that river doesn't flow though Guiana) when they see an old man's dugout swamped by a speedboat. He falls into the river and screams for help, as piranhas, inexplicably called by the poor man \"Cannibal Fish!\" (which would mean he's safe since they eat only other piranhas?), set upon devouring him. Thinking quickly, one of the boys throws a bottle of castor oil at the man, who douses himself in the stuff, as the cannibal fish make faces and back away.",
+          "value": "Interestingly enough, the next two pages show that looking is actually not a lot of fun. But this is the pursuit of a stamp, and not for the stamp's intrinsic beauty, but for the $50,000 this stamp is worth. After a week of futility, the boys are loafing by the Orinico River (as stated in an earlier panel, even though that river doesn't flow though Guiana) when they see an old man's dugout swamped by a speedboat. He falls into the river and screams for help, as piranhas, inexplicably called by the poor man \"Cannibal Fish!\" (which would mean he's safe since they eat only other piranhas?), set upon devouring him. Thinking quickly, one of the boys throws a bottle of castor oil at the man, who douses himself in the stuff, as the cannibal fish make faces and back away.",
+          "bbox": [
+            {
+              "h": 167.25,
+              "w": 312.14,
+              "x": 465.24,
+              "y": 164.78,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "Exhausted, the old man thanks the boys and tells them he will do anything for them, such is his gratitude. The boys tell him to \"skip it,\"",
+          "value": "Exhausted, the old man thanks the boys and tells them he will do anything for them, such is his gratitude. The boys tell him to \"skip it,\"",
+          "bbox": [
+            {
+              "h": 30.58,
+              "w": 311.28,
+              "x": 463.91,
+              "y": 332.99,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "![An old man in the water surrounded by fish, with a speech bubble saying \"BOYS, YOU'VE SAVED MY LIFE!\"](cbduck-027_fig_2.png)",
+          "value": "illustration: An old man in the water surrounded by fish, with a speech bubble saying \"BOYS, YOU'VE SAVED MY LIFE!\"",
+          "bbox": [
+            {
+              "h": 155.11,
+              "w": 222.66,
+              "x": 506.6,
+              "y": 381.08,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-027_fig_2.png",
+          "caption": ""
+        },
+        {
+          "md": "Fig. 13. The Gilded Man, 11:2",
+          "value": "Fig. 13. The Gilded Man, 11:2",
+          "bbox": [
+            {
+              "h": 11.925394259160612,
+              "w": 97.49459999999999,
+              "x": 567.169575,
+              "y": 538.8245471707247,
+              "confidence": 0.5,
+              "end_index": 28,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "46, 47"
+    }
+  ]
+}

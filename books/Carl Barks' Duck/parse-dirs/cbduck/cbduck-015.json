@@ -1,0 +1,166 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "22 CARL BARKS' DUCK MAHARAJAH DONALD 23",
+              "value": "22 CARL BARKS' DUCK MAHARAJAH DONALD 23",
+              "bbox": [
+                {
+                  "h": 10.94,
+                  "w": 116.24,
+                  "x": 572.6,
+                  "y": 76.03,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 11.91,
+                  "w": 98.94,
+                  "x": 241.54,
+                  "y": 84.51,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "22 CARL BARKS' DUCK MAHARAJAH DONALD 23",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Duck, \"Maharajah Donald,\" despite having his name on the marquee, would not be considered one of his greatest, or even starring, roles. The kids are the stars here, and Donald, though fun, is really a tool for the boys to express their guile and intelligence.",
+          "value": "Duck, \"Maharajah Donald,\" despite having his name on the marquee, would not be considered one of his greatest, or even starring, roles. The kids are the stars here, and Donald, though fun, is really a tool for the boys to express their guile and intelligence.",
+          "bbox": [
+            {
+              "h": 57.3,
+              "w": 309.78,
+              "x": 130.0,
+              "y": 108.35,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The nephews' behavior is remarkable, not only are they totally resourceful, helping their uncle not only get to India, but save his life and bring him home, but they do so with total humility. Considering their treatment, one would think that at some point they would actually relish shoving a hose down their uncle's throat and filling him full of water. Rather, these ducks worry at first and then intently focus on the job at hand, the job of saving their uncle.",
+          "value": "The nephews' behavior is remarkable, not only are they totally resourceful, helping their uncle not only get to India, but save his life and bring him home, but they do so with total humility. Considering their treatment, one would think that at some point they would actually relish shoving a hose down their uncle's throat and filling him full of water. Rather, these ducks worry at first and then intently focus on the job at hand, the job of saving their uncle.",
+          "bbox": [
+            {
+              "h": 99.78,
+              "w": 310.83,
+              "x": 127.87,
+              "y": 164.54,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "While \"Maharajah Donald\" works, it remains an early Barks story, and not quite up to par with later works. It's a bit clumsy in its exposition, the \"editing,\" or sequencing of the story, isn't as sharp, and though it contains much of his hallmark style (locales, nephew v. uncle confrontations, Donald's anger); there's a ways to go before Barks reaches his zenith in terms of panel composition and backgrounds. All but one page is made up of eight similar panels, broken at times with a borderless panel with Donald or the boys circled for emphasis. And dull Burbank contrasts nicely with the (moderately) rich detail of India. Donald will grow as a more complex character as well, losing much of his nastiness and his cowardice.",
+          "value": "While \"Maharajah Donald\" works, it remains an early Barks story, and not quite up to par with later works. It's a bit clumsy in its exposition, the \"editing,\" or sequencing of the story, isn't as sharp, and though it contains much of his hallmark style (locales, nephew v. uncle confrontations, Donald's anger); there's a ways to go before Barks reaches his zenith in terms of panel composition and backgrounds. All but one page is made up of eight similar panels, broken at times with a borderless panel with Donald or the boys circled for emphasis. And dull Burbank contrasts nicely with the (moderately) rich detail of India. Donald will grow as a more complex character as well, losing much of his nastiness and his cowardice.",
+          "bbox": [
+            {
+              "h": 152.93,
+              "w": 311.81,
+              "x": 124.26,
+              "y": 262.67,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The India of 1949's \"Maharajah Donald\" is a bit patronizing, but it was a stark contrast to the world of 1978, when I first read this story, many changes were taking place throughout the world. In India, for instance, 1974 marked the year the country exploded its first nuclear weapon, astonishingly called The Smiling Buddha, right near the border with Pakistan, and which sent shudders around the world.",
+          "value": "The India of 1949's \"Maharajah Donald\" is a bit patronizing, but it was a stark contrast to the world of 1978, when I first read this story, many changes were taking place throughout the world. In India, for instance, 1974 marked the year the country exploded its first nuclear weapon, astonishingly called The Smiling Buddha, right near the border with Pakistan, and which sent shudders around the world.",
+          "bbox": [
+            {
+              "h": 85.79,
+              "w": 311.23,
+              "x": 121.76,
+              "y": 416.88,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "So here we are, and the world is as complex as it has always been, but we can retreat to a so-called \"simpler\" time, when we believed that Indians and citizens from other nations didn't engage in the same complexities that we did. I like to believe that I'm after a solid story, and Barks delivers many of these. But how do we reconcile the racism, even if it's subtle? I mean, when I watch my favorite movies, like Hawks' *His Girl Friday*, it grates that there are overtly racist plot points. In that film, it was the fact that the escaped convict—who is supposed to be sympathetic, supposed to be funny—has killed a black police officer. In *His Girl Friday*, that murder is OK, and in fact what's awful is that the black community is demanding justice. Here, the racism is not so overt—in \"Maharajah Donald\" there are not so many ridiculous caricatures, and in fact the Indians have their own dignity and power and do not see the Ducks as being more privileged thanks to their being Americans.",
+          "value": "So here we are, and the world is as complex as it has always been, but we can retreat to a so-called \"simpler\" time, when we believed that Indians and citizens from other nations didn't engage in the same complexities that we did. I like to believe that I'm after a solid story, and Barks delivers many of these. But how do we reconcile the racism, even if it's subtle? I mean, when I watch my favorite movies, like Hawks' His Girl Friday, it grates that there are overtly racist plot points. In that film, it was the fact that the escaped convict—who is supposed to be sympathetic, supposed to be funny—has killed a black police officer. In His Girl Friday, that murder is OK, and in fact what's awful is that the black community is demanding justice. Here, the racism is not so overt—in \"Maharajah Donald\" there are not so many ridiculous caricatures, and in fact the Indians have their own dignity and power and do not see the Ducks as being more privileged thanks to their being Americans.",
+          "bbox": [
+            {
+              "h": 58.34,
+              "w": 310.21,
+              "x": 120.32,
+              "y": 501.01,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 152.77,
+              "w": 311.9,
+              "x": 469.29,
+              "y": 102.09,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "So while I encourage readers to seek out Maharajah Donald, because it is a great story, an early \"paper movie\" of a great star, be aware of what you're reading, the work of a man who certainly didn't have much, if any contact, with Indians from the subcontinent. His understanding of the people was, again, imagination-based. Perhaps Barks should be praised for not making them even more of a caricature (less, even, than Apu, the Indian character from the more worldly *The Simpsons*.)",
+          "value": "So while I encourage readers to seek out Maharajah Donald, because it is a great story, an early \"paper movie\" of a great star, be aware of what you're reading, the work of a man who certainly didn't have much, if any contact, with Indians from the subcontinent. His understanding of the people was, again, imagination-based. Perhaps Barks should be praised for not making them even more of a caricature (less, even, than Apu, the Indian character from the more worldly The Simpsons.)",
+          "bbox": [
+            {
+              "h": 98.98,
+              "w": 312.06,
+              "x": 467.6,
+              "y": 255.68,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "22, 23"
+    }
+  ]
+}

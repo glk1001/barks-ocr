@@ -1,0 +1,174 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "items": [
+            {
+              "md": "96 CARL BARKS' DUCK\nWORKING MAN 97",
+              "value": "96 CARL BARKS' DUCK\nWORKING MAN 97",
+              "bbox": [
+                {
+                  "h": 12.56,
+                  "w": 98.95,
+                  "x": 226.96,
+                  "y": 66.61,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                },
+                {
+                  "h": 10.58,
+                  "w": 82.06,
+                  "x": 584.08,
+                  "y": 71.79,
+                  "confidence": 0.5,
+                  "end_index": null,
+                  "label": "header",
+                  "start_index": null
+                }
+              ],
+              "type": "text"
+            }
+          ],
+          "md": "96 CARL BARKS' DUCK\nWORKING MAN 97",
+          "bbox": null,
+          "type": "header",
+          "book_side": "left"
+        },
+        {
+          "md": "Their next victim is a hermit living in a cave high above the Kickmiquik, replete with bones laying about the opening. He's barefoot, nothing but a pile of black hair and eyes that suggest he's angry. Donald tries to ply his cosmetics on the man, lipstick and home permanent kits, eyebrow paint \"to make your scowl glow in the dark.\" Nothing doing. Donald's defeated, but as he descends the rocks back to the raft, he tells the boys that the hermit \"wants one thing in the world, and he wouldn't say what it is!\" Naturally the boys climb up, and naturally the hermit's one desire is... a steam calliope. Ding!",
+          "value": "Their next victim is a hermit living in a cave high above the Kickmiquik, replete with bones laying about the opening. He's barefoot, nothing but a pile of black hair and eyes that suggest he's angry. Donald tries to ply his cosmetics on the man, lipstick and home permanent kits, eyebrow paint \"to make your scowl glow in the dark.\" Nothing doing. Donald's defeated, but as he descends the rocks back to the raft, he tells the boys that the hermit \"wants one thing in the world, and he wouldn't say what it is!\" Naturally the boys climb up, and naturally the hermit's one desire is... a steam calliope. Ding!",
+          "bbox": [
+            {
+              "h": 131.1,
+              "w": 312.72,
+              "x": 113.38,
+              "y": 90.5,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "As with this joke, the Ducks reach the end of the line—the Kickmiquik comes to an abrupt terminus in a box canyon, both the end of this particular trail and this particular series of jokes. But Donald sees smoke signals—and now he's going \"teepee to teepee\" to sell lipstick, on foot. The boys, who need a road or a river on which to haul their machine, are stuck.",
+          "value": "As with this joke, the Ducks reach the end of the line—the Kickmiquik comes to an abrupt terminus in a box canyon, both the end of this particular trail and this particular series of jokes. But Donald sees smoke signals—and now he's going \"teepee to teepee\" to sell lipstick, on foot. The boys, who need a road or a river on which to haul their machine, are stuck.",
+          "bbox": [
+            {
+              "h": 81.1,
+              "w": 312.07,
+              "x": 110.93,
+              "y": 217.64,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "The tribe resembles one of the many from the Pacific Northwest, if only for their complex art and well-built wood homes (indeed, Donald will not go \"teepee to teepee,\" as this village relies on wood to fabricate homes.) In a very cinematic panel, Barks' \"camera\" zooms over a ridge to expose a whole phalanx of people, and we see a gorgeous panorama of a Pacific Northwest Indian village. Staged dramatically on the left, the Chief of the tribe, wearing a ravenshead mask and a long, colorful robe, looks over a bustling scene of people rowing fancy canoes, fishing, and cleaning—all of this ringed by giant totem poles. Little details abound: a woman sleeping beneath the dried fish, rocks on the roofs to keep the slats down, each canoe carved with impressive detail, each fish rendered perfectly on the rack. In a nice touch, one of the tribe is staring at the reader, with a look of irritation, as if we're disturbing this idyllic scene—which, in a sense, we are. This is a moment that is not only gorgeous in terms of art, but it serves as Barks' flexing his research muscles—he clearly spent a great deal of time reading about this village, making sure that it looked as real as possible, exposing his",
+          "value": "The tribe resembles one of the many from the Pacific Northwest, if only for their complex art and well-built wood homes (indeed, Donald will not go \"teepee to teepee,\" as this village relies on wood to fabricate homes.) In a very cinematic panel, Barks' \"camera\" zooms over a ridge to expose a whole phalanx of people, and we see a gorgeous panorama of a Pacific Northwest Indian village. Staged dramatically on the left, the Chief of the tribe, wearing a ravenshead mask and a long, colorful robe, looks over a bustling scene of people rowing fancy canoes, fishing, and cleaning—all of this ringed by giant totem poles. Little details abound: a woman sleeping beneath the dried fish, rocks on the roofs to keep the slats down, each canoe carved with impressive detail, each fish rendered perfectly on the rack. In a nice touch, one of the tribe is staring at the reader, with a look of irritation, as if we're disturbing this idyllic scene—which, in a sense, we are. This is a moment that is not only gorgeous in terms of art, but it serves as Barks' flexing his research muscles—he clearly spent a great deal of time reading about this village, making sure that it looked as real as possible, exposing his",
+          "bbox": [
+            {
+              "h": 244.03,
+              "w": 317.91,
+              "x": 104.66,
+              "y": 301.94,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "readers to a new culture. Apparently, Barks was reliant on a thesaurus that day as well, as the narration box reads, \"In a bosky dell a short distance ahead is the village of the most primitive Indian tribe in North America!\" \"Bosky\"? It means \"wooded\" or \"covered in trees.\" Well played, Mr. Barks. (see Plate 13)",
+          "value": "readers to a new culture. Apparently, Barks was reliant on a thesaurus that day as well, as the narration box reads, \"In a bosky dell a short distance ahead is the village of the most primitive Indian tribe in North America!\" \"Bosky\"? It means \"wooded\" or \"covered in trees.\" Well played, Mr. Barks. (see Plate 13)",
+          "bbox": [
+            {
+              "h": 68.53,
+              "w": 309.88,
+              "x": 464.96,
+              "y": 98.23,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "But the visually gorgeous and accurate panel unfortunately belies the usual 1950s indigenous tropes, as the Indians—again, beautifully rendered as people, not dogs—say things like \"Palefaces bad medicine! Sellum Indian bum goods!\" The humorous paradox is that the chief of the tribe is ready to reject Donald, claiming that his people are brave, and then, as soon as our man bursts onto the scene, the crowd scatters, even going so far as to try and dig a hole to hide in, such is their terror. Well, as soon as Donald applies lipstick on himself (the horror!) (see Plate 14), the townsfolk come running, overtaking our salesman and using his wares in the worst possible way—drinking cologne, eating soap, putting hair remover on the Chief's noggin. Acting like children, unfortunately.",
+          "value": "But the visually gorgeous and accurate panel unfortunately belies the usual 1950s indigenous tropes, as the Indians—again, beautifully rendered as people, not dogs—say things like \"Palefaces bad medicine! Sellum Indian bum goods!\" The humorous paradox is that the chief of the tribe is ready to reject Donald, claiming that his people are brave, and then, as soon as our man bursts onto the scene, the crowd scatters, even going so far as to try and dig a hole to hide in, such is their terror. Well, as soon as Donald applies lipstick on himself (the horror!) (see Plate 14), the townsfolk come running, overtaking our salesman and using his wares in the worst possible way—drinking cologne, eating soap, putting hair remover on the Chief's noggin. Acting like children, unfortunately.",
+          "bbox": [
+            {
+              "h": 167.4,
+              "w": 311.91,
+              "x": 464.39,
+              "y": 168.02,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "As with \"The Magic Hourglass,\" \"Land of the Totem Poles\" is akin to a film from the 1930s or 40s, whose plot and story hum along until they get caught in the mud of racial stereotyping. What's weird here is that Barks clearly read articles whose photographer at least seemed intent on respectfully capturing this culture. That aforementioned splash panel is a more accurate rendering than any Hollywood film up to that point in time (1950) that I can think of, and I imagine it was pretty startling for the white kids of America to come upon.",
+          "value": "As with \"The Magic Hourglass,\" \"Land of the Totem Poles\" is akin to a film from the 1930s or 40s, whose plot and story hum along until they get caught in the mud of racial stereotyping. What's weird here is that Barks clearly read articles whose photographer at least seemed intent on respectfully capturing this culture. That aforementioned splash panel is a more accurate rendering than any Hollywood film up to that point in time (1950) that I can think of, and I imagine it was pretty startling for the white kids of America to come upon.",
+          "bbox": [
+            {
+              "h": 111.09,
+              "w": 311.39,
+              "x": 464.3,
+              "y": 336.85,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "\"Land of the Totem Poles\" isn't one of Barks' more profound comics—unlike \"Golden Helmet,\" it descends into slapstick (not bad, but a bit rote in spots), though it does reflect Barks' obsession, through his actor Donald Duck, with rendering perfectly the hard working everyman who seeks to make it big in his chosen profession. Ask yourself: is Donald a failure? Maybe, for although Donald doesn't emerge rich, unlike Willy Loman in *Death of a Salesman*, he's proud, actually",
+          "value": "\"Land of the Totem Poles\" isn't one of Barks' more profound comics—unlike \"Golden Helmet,\" it descends into slapstick (not bad, but a bit rote in spots), though it does reflect Barks' obsession, through his actor Donald Duck, with rendering perfectly the hard working everyman who seeks to make it big in his chosen profession. Ask yourself: is Donald a failure? Maybe, for although Donald doesn't emerge rich, unlike Willy Loman in Death of a Salesman, he's proud, actually",
+          "bbox": [
+            {
+              "h": 98.05,
+              "w": 311.42,
+              "x": 464.03,
+              "y": 448.8,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true,
+      "printed_page_number": "96, 97"
+    }
+  ]
+}

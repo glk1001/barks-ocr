@@ -1,0 +1,380 @@
+{
+  "pages": [
+    {
+      "items": [
+        {
+          "md": "**Other Books In The Critical Cartoons Series:**",
+          "value": "Other Books In The Critical Cartoons Series:",
+          "bbox": [
+            {
+              "h": 16.34380593457398,
+              "w": 186.751859765625,
+              "x": 112.1801625,
+              "y": 86.46052941652651,
+              "confidence": 0.7727022,
+              "end_index": 47,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "*Ed vs. Yummy Fur: Or, What Happens When a Serial Comic Becomes a Graphic Novel* by Brian Evenson",
+          "value": "Ed vs. Yummy Fur: Or, What Happens When a Serial Comic Becomes a Graphic Novel by Brian Evenson",
+          "bbox": [
+            {
+              "h": 24.82,
+              "w": 298.06,
+              "x": 111.21,
+              "y": 103.2,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "*Carl Barks' Duck: Average American*\nCritical Cartoons 002",
+          "value": "Carl Barks' Duck: Average American\nCritical Cartoons 002",
+          "bbox": [
+            {
+              "h": 19.9890410958904,
+              "w": 114.941925,
+              "x": 106.2621,
+              "y": 234.08219178082194,
+              "confidence": 0.83682144,
+              "end_index": 57,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Copyright © 2014 Peter Schilling Jr. & Uncivilized Books.",
+          "value": "Copyright © 2014 Peter Schilling Jr. & Uncivilized Books.",
+          "bbox": [
+            {
+              "h": 15.086590093452912,
+              "w": 183.6078890625,
+              "x": 105.26342695312499,
+              "y": 257.75618776927297,
+              "confidence": 0.81626,
+              "end_index": 56,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "All artwork is copyright © 2014 Disney Enterprises, Inc.",
+          "value": "All artwork is copyright © 2014 Disney Enterprises, Inc.",
+          "bbox": [
+            {
+              "h": 14.76,
+              "w": 179.74,
+              "x": 104.82,
+              "y": 272.77,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "All rights reserved. No part of this book (except small portions for review purposes) may be reproduced in any form without permission from Uncivilized Books.",
+          "value": "All rights reserved. No part of this book (except small portions for review purposes) may be reproduced in any form without permission from Uncivilized Books.",
+          "bbox": null,
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Series Editor/Art Director: Tom Kaczynski\nAdditional Design: Sean Ford\nCopy Edits: Alec Berry\nProduction assistant: Rachel Topka",
+          "value": "Series Editor/Art Director: Tom Kaczynski\nAdditional Design: Sean Ford\nCopy Edits: Alec Berry\nProduction assistant: Rachel Topka",
+          "bbox": [
+            {
+              "h": 9.55,
+              "w": 66.32,
+              "x": 103.26,
+              "y": 340.72,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 12.02,
+              "w": 111.52,
+              "x": 103.2,
+              "y": 340.56,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 40.86,
+              "w": 139.0,
+              "x": 102.71,
+              "y": 311.64,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Uncivilized Books**\nP.O. Box 6434\nMinneapolis, MN 55406\nUSA",
+          "value": "Uncivilized Books\nP.O. Box 6434\nMinneapolis, MN 55406\nUSA",
+          "bbox": [
+            {
+              "h": 36.45,
+              "w": 78.75,
+              "x": 101.68,
+              "y": 354.5,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "uncivilizedbooks.com",
+          "value": "uncivilizedbooks.com",
+          "bbox": [
+            {
+              "h": 9.28,
+              "w": 70.33,
+              "x": 100.9,
+              "y": 397.96,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "First Edition, Dec 2014\n10 9 8 7 6 5 4 3 2 1",
+          "value": "First Edition, Dec 2014\n10 9 8 7 6 5 4 3 2 1",
+          "bbox": [
+            {
+              "h": 18.66,
+              "w": 73.53,
+              "x": 100.6,
+              "y": 412.26,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "ISBN 978-0-9889014-0-7",
+          "value": "ISBN 978-0-9889014-0-7",
+          "bbox": [
+            {
+              "h": 9.57,
+              "w": 79.32,
+              "x": 100.15,
+              "y": 436.22,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "DISTRIBUTED TO THE TRADE BY:",
+          "value": "DISTRIBUTED TO THE TRADE BY:",
+          "bbox": [
+            {
+              "h": 11.59,
+              "w": 120.19,
+              "x": 99.56,
+              "y": 450.63,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "**Consortium Book Sales & Distribution, LLC.**\n34 Thirteenth Avenue NE,\nSuite 101 Minneapolis,\nMN 55413-1007\nOrders: (800) 283-3572",
+          "value": "Consortium Book Sales & Distribution, LLC.\n34 Thirteenth Avenue NE,\nSuite 101 Minneapolis,\nMN 55413-1007\nOrders: (800) 283-3572",
+          "bbox": [
+            {
+              "h": 12.89,
+              "w": 149.44,
+              "x": 98.64,
+              "y": 465.26,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 38.41,
+              "w": 83.58,
+              "x": 97.96,
+              "y": 475.08,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            },
+            {
+              "h": 47.97,
+              "w": 150.7,
+              "x": 97.92,
+              "y": 465.43,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "Printed in Canada",
+          "value": "Printed in Canada",
+          "bbox": [
+            {
+              "h": 9.15,
+              "w": 57.78,
+              "x": 97.12,
+              "y": 532.66,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "text",
+              "start_index": null
+            }
+          ],
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "CRITICAL CARTOONS",
+          "value": "CRITICAL CARTOONS",
+          "bbox": [
+            {
+              "h": 13.15068493150686,
+              "w": 84.69404999999995,
+              "x": 579.9701249999999,
+              "y": 100.47123287671234,
+              "confidence": 0.5,
+              "end_index": 16,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "level": 2,
+          "md": "## CARL BARKS' DUCK",
+          "value": "CARL BARKS' DUCK",
+          "bbox": [
+            {
+              "h": 76.44908480918158,
+              "w": 147.29399999999998,
+              "x": 547.6180499999999,
+              "y": 190.4219178082192,
+              "confidence": 0.5,
+              "end_index": 18,
+              "label": "paragraph_title",
+              "start_index": 0
+            }
+          ],
+          "type": "heading",
+          "book_side": "right"
+        },
+        {
+          "md": "AVERAGE AMERICAN",
+          "value": "AVERAGE AMERICAN",
+          "bbox": [
+            {
+              "h": 13.67671232876711,
+              "w": 124.93687499999999,
+              "x": 551.82645,
+              "y": 313.2493150684932,
+              "confidence": 0.5,
+              "end_index": 15,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "md": "by Peter Schilling Jr.",
+          "value": "by Peter Schilling Jr.",
+          "bbox": [
+            {
+              "h": 15.086590093452912,
+              "w": 108.15259218749998,
+              "x": 563.025561328125,
+              "y": 379.391820397737,
+              "confidence": 0.5,
+              "end_index": 21,
+              "label": "text",
+              "start_index": 0
+            }
+          ],
+          "type": "text",
+          "book_side": "right"
+        },
+        {
+          "items": [
+            {
+              "md": "Uncivilized Books",
+              "value": "Uncivilized Books",
+              "bbox": null,
+              "type": "text"
+            }
+          ],
+          "md": "Uncivilized Books",
+          "bbox": null,
+          "type": "footer",
+          "book_side": "right"
+        }
+      ],
+      "page_height": 595.2,
+      "page_number": 1,
+      "page_width": 841.68,
+      "success": true
+    }
+  ]
+}
