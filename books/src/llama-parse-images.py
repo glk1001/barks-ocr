@@ -1,10 +1,21 @@
 #!/usr/bin/env python3
-"""Parse a directory of .jpg images with LlamaParse and save .md and .json output files."""
+"""Parse a directory of .jpg images with LlamaParse and save .md and .json output files.
+
+Each image may be a single book page or a two-page spread. For a landscape image
+(width > height) the items in the JSON are tagged with ``book_side`` ("left" or
+"right") based on their bbox center-x, so the EPUB build can split the spread into
+two book pages; a portrait image is left untagged and becomes one book page.
+
+LlamaParse's agentic tier describes a scanned illustration as a text item (bbox label
+``image``, markdown ``illustration: ...``) instead of extracting it. Each such region is
+cropped out of the source scan into ``<stem>_fig_<n>.png`` and the item is rewritten as
+a ``type: image`` item (``url`` + ``md`` alt text) so the EPUB build embeds the figure.
+"""
 
 import json
 import os
 from pathlib import Path
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 import httpx
 import typer
@@ -12,6 +23,7 @@ from dotenv import load_dotenv
 from llama_cloud import LlamaCloud
 from llama_cloud.types.parsing_get_response import MarkdownPageMarkdownResultPage, MetadataPage
 from loguru import logger
+from PIL import Image
 
 if TYPE_CHECKING:
     from llama_cloud.types import ParsingGetResponse
@@ -100,6 +112,126 @@ def _download_images(
         logger.info(f"  Wrote {img_path}")
 
 
+def _bbox_center_x(bbox: Any) -> float | None:  # noqa: ANN401
+    """Return the horizontal center of a LlamaParse bbox, or None if unavailable.
+
+    LlamaParse stores ``bbox`` as a list of region dicts (each with ``x``, ``y``, ``w``,
+    ``h``); this returns the center-x of the first region. Also tolerates the case where
+    ``bbox`` is a bare dict.
+    """
+    region = bbox[0] if isinstance(bbox, list) and bbox else bbox
+    if not isinstance(region, dict):
+        return None
+    x = region.get("x")
+    w = region.get("w")
+    if x is None or w is None:
+        return None
+    return float(x) + float(w) / 2
+
+
+def _tag_book_side(items_data: dict) -> None:
+    """Annotate items on landscape pages with ``book_side`` = "left"|"right".
+
+    A landscape page (``page_width`` > ``page_height``) is taken to be a two-page
+    spread and each item is tagged by its bbox center-x against the page midpoint,
+    in LlamaParse's own page-space units. Portrait pages are single book pages and
+    are left untagged.
+
+    Args:
+        items_data: Dumped items result (modified in place).
+
+    """
+    for page in items_data.get("pages", []):
+        page_width = page.get("page_width")
+        page_height = page.get("page_height")
+        if page_width is None or page_height is None or float(page_width) <= float(page_height):
+            continue
+        mid = float(page_width) / 2
+        items = page.get("items", [])
+        for item in items:
+            cx = _bbox_center_x(item.get("bbox") or item.get("bBox"))
+            if cx is None:
+                continue
+            item["book_side"] = "left" if cx < mid else "right"
+        # An item with no bbox (a chapter heading, typically) takes the side of the next
+        # tagged item in reading order, else the previous one; the build drops untagged
+        # items on a tagged spread.
+        for idx, item in enumerate(items):
+            if "book_side" in item:
+                continue
+            neighbours = items[idx + 1 :] + items[idx - 1 :: -1] if idx else items[idx + 1 :]
+            side = next((n["book_side"] for n in neighbours if "book_side" in n), None)
+            if side is not None:
+                item["book_side"] = side
+
+
+def _bbox_label(item: dict) -> str | None:
+    """Return the layout label of an item's first bbox region, or None."""
+    bbox = item.get("bbox") or item.get("bBox")
+    region = bbox[0] if isinstance(bbox, list) and bbox else bbox
+    if not isinstance(region, dict):
+        return None
+    label = region.get("label")
+    return label if isinstance(label, str) else None
+
+
+def _crop_figures(items_data: dict, image_path: Path, output_dir: Path, stem: str) -> None:
+    """Crop ``image``-labelled regions from the scan and turn them into image items.
+
+    The bbox is in LlamaParse page-space units; the scale to scan pixels is the scan's
+    pixel width over ``page_width``. A small margin is added around each crop so a
+    panel border is not clipped. The item is rewritten in place: ``type`` becomes
+    ``image``, ``url`` names the PNG, ``caption`` is empty and ``md`` keeps LlamaParse's
+    description as the alt text.
+
+    Args:
+        items_data: Dumped items result (modified in place).
+        image_path: The source scan the items were parsed from.
+        output_dir: Directory to write the cropped PNGs into.
+        stem: Source image filename stem used to prefix the crop filenames.
+
+    """
+    margin_units = 1.0
+    min_crop_px = 2
+    fig_num = 0
+    with Image.open(image_path) as scan:
+        for page in items_data.get("pages", []):
+            page_width = page.get("page_width")
+            if page_width is None:
+                continue
+            scale = scan.width / float(page_width)
+            for item in page.get("items", []):
+                # Either a text item LlamaParse used to describe the drawing, or a native
+                # image item it returned with no file behind it; both carry an image bbox.
+                if item.get("url") or _bbox_label(item) != "image":
+                    continue
+                bbox = item.get("bbox") or item.get("bBox")
+                region = bbox[0]
+                x0 = max(0, round((float(region["x"]) - margin_units) * scale))
+                y0 = max(0, round((float(region["y"]) - margin_units) * scale))
+                x1 = min(
+                    scan.width,
+                    round((float(region["x"]) + float(region["w"]) + margin_units) * scale),
+                )
+                y1 = min(
+                    scan.height,
+                    round((float(region["y"]) + float(region["h"]) + margin_units) * scale),
+                )
+                if x1 - x0 < min_crop_px or y1 - y0 < min_crop_px:
+                    logger.warning(f"  Skipping degenerate figure bbox {region} on {stem}")
+                    continue
+                fig_num += 1
+                fig_name = f"{stem}_fig_{fig_num}.png"
+                scan.crop((x0, y0, x1, y1)).save(output_dir / fig_name, format="PNG")
+                description = (item.get("md") or item.get("value") or "").strip()
+                description = description.removeprefix("illustration:").strip()
+                item["type"] = "image"
+                item["url"] = fig_name
+                item["caption"] = ""
+                item["md"] = f"![{description}]({fig_name})"
+                logger.info(f"  Cropped figure {fig_num} -> {fig_name} ({x1 - x0}x{y1 - y0}px)")
+
+
 def parse_image(
     client: LlamaCloud,
     image_path: Path,
@@ -179,6 +311,9 @@ def parse_image(
         lp_page_num = page.get("page_number")
         if lp_page_num in printed_page_numbers:
             page["printed_page_number"] = printed_page_numbers[lp_page_num]
+
+    _tag_book_side(items_data)
+    _crop_figures(items_data, image_path, output_dir, stem)
 
     # Collect original filenames actually referenced in item URLs.
     referenced: set[str] = {
