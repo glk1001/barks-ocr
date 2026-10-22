@@ -102,11 +102,24 @@
           "book_side": "left"
         },
         {
-          "md": "illustration: Huey, Dewey, and Louie looking disappointed at square scrambled eggs on plates, with speech bubbles saying \"SECOND COURSE—\" \"SCRAMBLED\" \"EGGS!\"",
+          "md": "![Huey, Dewey, and Louie looking disappointed at square scrambled eggs on plates, with speech bubbles saying \"SECOND COURSE—\" \"SCRAMBLED\" \"EGGS!\"](cbduck-019_fig_1.png)",
           "value": "illustration: Huey, Dewey, and Louie looking disappointed at square scrambled eggs on plates, with speech bubbles saying \"SECOND COURSE—\" \"SCRAMBLED\" \"EGGS!\"",
-          "bbox": null,
-          "type": "text",
-          "book_side": "right"
+          "bbox": [
+            {
+              "x": 524.88,
+              "y": 102.72,
+              "w": 201.83999999999997,
+              "h": 153.83999999999997,
+              "confidence": 0.0,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-019_fig_1.png",
+          "caption": ""
         },
         {
           "md": "Fig. 7. Lost in the Andes, 21:8",

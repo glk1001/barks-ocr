@@ -147,11 +147,24 @@
           "book_side": "left"
         },
         {
-          "md": "illustration: comic panel showing Gladstone Gander at a charity bazaar",
+          "md": "![comic panel showing Gladstone Gander at a charity bazaar](cbduck-022_fig_1.png)",
           "value": "illustration: comic panel showing Gladstone Gander at a charity bazaar",
-          "bbox": null,
-          "type": "text",
-          "book_side": "right"
+          "bbox": [
+            {
+              "x": 515.76,
+              "y": 98.63999999999999,
+              "w": 206.39999999999998,
+              "h": 137.51999999999998,
+              "confidence": 0.0,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-022_fig_1.png",
+          "caption": ""
         },
         {
           "md": "Fig. 9. Luck of the North, 21:8",

@@ -104,11 +104,24 @@
           "book_side": "left"
         },
         {
-          "md": "illustration: silhouette of the ducks falling from an iceberg with a speech bubble saying \"GOOD-BYE, UNCA' DONALD!\"",
+          "md": "![silhouette of the ducks falling from an iceberg with a speech bubble saying \"GOOD-BYE, UNCA' DONALD!\"](cbduck-025_fig_1.png)",
           "value": "illustration: silhouette of the ducks falling from an iceberg with a speech bubble saying \"GOOD-BYE, UNCA' DONALD!\"",
-          "bbox": null,
-          "type": "text",
-          "book_side": "left"
+          "bbox": [
+            {
+              "x": 157.2,
+              "y": 374.88,
+              "w": 226.79999999999998,
+              "h": 162.23999999999998,
+              "confidence": 0.0,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-025_fig_1.png",
+          "caption": ""
         },
         {
           "md": "Fig. 10. Luck of the North, 23:7",

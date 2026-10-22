@@ -50,11 +50,24 @@
           "book_side": "left"
         },
         {
-          "md": "comic panel: A scientist in a tuxedo and top hat demands an omelet from his assistant, who in turn demands it from another assistant.",
+          "md": "![A scientist in a tuxedo and top hat demands an omelet from his assistant, who in turn demands it from another assistant.](cbduck-018_fig_1.png)",
           "value": "comic panel: A scientist in a tuxedo and top hat demands an omelet from his assistant, who in turn demands it from another assistant.",
-          "bbox": null,
-          "type": "text",
-          "book_side": "left"
+          "bbox": [
+            {
+              "x": 171.35999999999999,
+              "y": 97.44,
+              "w": 203.51999999999998,
+              "h": 152.88,
+              "confidence": 0.0,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left",
+          "url": "cbduck-018_fig_1.png",
+          "caption": ""
         },
         {
           "md": "Fig. 6. Lost in the Andes, 3:2",

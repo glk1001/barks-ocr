@@ -3,44 +3,34 @@
     {
       "items": [
         {
-          "md": "illustration: comic panel of a duck character shouting \"YEEK!\"",
-          "value": "illustration: comic panel of a duck character shouting \"YEEK!\"",
-          "bbox": null,
-          "type": "text",
-          "book_side": "right"
+          "caption": "",
+          "md": "![](cbduck-030_fig_1.png)",
+          "url": "cbduck-030_fig_1.png",
+          "bbox": [
+            {
+              "h": 160.12,
+              "w": 217.54,
+              "x": 177.11,
+              "y": 182.49,
+              "confidence": 0.5,
+              "end_index": null,
+              "label": "image",
+              "start_index": null
+            }
+          ],
+          "type": "image",
+          "book_side": "left"
         },
         {
           "md": "Fig. 15. The Magic Hourglass, 13:7",
           "value": "Fig. 15. The Magic Hourglass, 13:7",
-          "bbox": [
-            {
-              "h": 29.32,
-              "w": 135.13,
-              "x": 643.77,
-              "y": 192.49,
-              "confidence": 0.5,
-              "end_index": null,
-              "label": "paragraph_title",
-              "start_index": null
-            },
-            {
-              "h": 10.89,
-              "w": 111.53,
-              "x": 228.54,
-              "y": 342.87,
-              "confidence": 0.5,
-              "end_index": null,
-              "label": "caption",
-              "start_index": null
-            }
-          ],
           "type": "text",
-          "book_side": "right"
+          "book_side": "left"
         },
         {
           "level": 2,
-          "md": "## THE EVIL THAT MEN DO:",
-          "value": "THE EVIL THAT MEN DO:",
+          "md": "## THE EVIL THAT MEN DO: *The Magic Hourglass*",
+          "value": "THE EVIL THAT MEN DO: The Magic Hourglass",
           "bbox": [
             {
               "h": 13.676712328767138,
@@ -54,13 +44,6 @@
             }
           ],
           "type": "heading",
-          "book_side": "right"
-        },
-        {
-          "md": "*The Magic Hourglass*",
-          "value": "The Magic Hourglass",
-          "bbox": null,
-          "type": "text",
           "book_side": "right"
         },
         {
@@ -98,25 +81,6 @@
           ],
           "type": "text",
           "book_side": "right"
-        },
-        {
-          "caption": "",
-          "md": "![](cbduck-030_fig_1.png)",
-          "url": "cbduck-030_fig_1.png",
-          "bbox": [
-            {
-              "h": 160.12,
-              "w": 217.54,
-              "x": 177.11,
-              "y": 182.49,
-              "confidence": 0.5,
-              "end_index": null,
-              "label": "image",
-              "start_index": null
-            }
-          ],
-          "type": "image",
-          "book_side": "left"
         }
       ],
       "page_height": 595.2,

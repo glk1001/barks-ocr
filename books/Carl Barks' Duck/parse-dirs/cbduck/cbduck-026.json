@@ -55,63 +55,54 @@
           "md": "44\n\nCARL BARKS' DUCK\n## LUCK OF THE NORTH AND THE GILDED MAN\n\n45",
           "bbox": null,
           "type": "header",
-          "book_side": "right"
+          "book_side": "left"
         },
         {
           "md": "room, kitchen, bathroom, dining room, a bedroom for the uncle and one for Huey, Duey and Louie, and an office. Over the years, and in other comics, we see a tiny garage with Donald's little red roadster convertible (with its \"313\" license plate), and a yard in which Donald was forever struggling to grow a garden (or the battlefield for the combat with Neighbor Jones, from a series of hilarious ten-pagers.)",
           "value": "room, kitchen, bathroom, dining room, a bedroom for the uncle and one for Huey, Duey and Louie, and an office. Over the years, and in other comics, we see a tiny garage with Donald's little red roadster convertible (with its \"313\" license plate), and a yard in which Donald was forever struggling to grow a garden (or the battlefield for the combat with Neighbor Jones, from a series of hilarious ten-pagers.)",
           "bbox": null,
           "type": "text",
-          "book_side": "right"
+          "book_side": "left"
         },
         {
           "md": "First of all, the way the nephews ask their uncle to see a movie is adorable—this was a time period when these kids could go on their own, walk all over town if they felt like it, but they want Donald to take them to a movie. The Duck home serves to ground Donald and the kids, give them the weight of a place they call their own. It is Donald's as much as it is theirs, and I think its lack of detail was Barks' way of making it everyone's home (and in stark contrast to Uncle Scrooge's money bin, with all its dollar sign imagery on every surface, where the old man spends all his time, and which is no one's home.)",
           "value": "First of all, the way the nephews ask their uncle to see a movie is adorable—this was a time period when these kids could go on their own, walk all over town if they felt like it, but they want Donald to take them to a movie. The Duck home serves to ground Donald and the kids, give them the weight of a place they call their own. It is Donald's as much as it is theirs, and I think its lack of detail was Barks' way of making it everyone's home (and in stark contrast to Uncle Scrooge's money bin, with all its dollar sign imagery on every surface, where the old man spends all his time, and which is no one's home.)",
           "bbox": null,
           "type": "text",
-          "book_side": "right"
+          "book_side": "left"
         },
         {
           "md": "Donald denies the kids' request, as he is too busy working on his stamp collection. After some wiseacre remarks from the kids, he points out that he is in pursuit of the rarest of stamps, from British Guiana. Now, I don't know if Barks intended to do this or not, but this Macguffin (Hitchcock's term for the device that sets your hero—or the bad guys—off on a journey, like the water in *Chinatown*, pornography in *The Big Sleep*, or stamps here) is a mystery for some time: the specific name of the stamp is not mentioned once until page 11, almost a third of the way through, as if to suggest that it's not worth worrying about. In fact, it is the eponymous gilded man who will make this story really sing, and whose presence is also a mystery until that same page.",
           "value": "Donald denies the kids' request, as he is too busy working on his stamp collection. After some wiseacre remarks from the kids, he points out that he is in pursuit of the rarest of stamps, from British Guiana. Now, I don't know if Barks intended to do this or not, but this Macguffin (Hitchcock's term for the device that sets your hero—or the bad guys—off on a journey, like the water in Chinatown, pornography in The Big Sleep, or stamps here) is a mystery for some time: the specific name of the stamp is not mentioned once until page 11, almost a third of the way through, as if to suggest that it's not worth worrying about. In fact, it is the eponymous gilded man who will make this story really sing, and whose presence is also a mystery until that same page.",
           "bbox": null,
           "type": "text",
-          "book_side": "right"
+          "book_side": "left"
         },
         {
           "md": "\"The Gilded Man\" is a story about the pursuit of financial success, and we know that from the opening splash panel. Donald explains to the perplexed nephews that his collecting is not for the joy of the stamp itself, but so that he can save enough to go to Guiana, and find a rare One Cent Magenta Stamp of 1856. (see Fig. 11) Once found, Donald simply plans to sell the stamp, rather than collect it himself.",
           "value": "\"The Gilded Man\" is a story about the pursuit of financial success, and we know that from the opening splash panel. Donald explains to the perplexed nephews that his collecting is not for the joy of the stamp itself, but so that he can save enough to go to Guiana, and find a rare One Cent Magenta Stamp of 1856. (see Fig. 11) Once found, Donald simply plans to sell the stamp, rather than collect it himself.",
+          "type": "text",
+          "book_side": "left"
+        },
+        {
+          "md": "![Donald Duck teaching his nephews about stamp collecting with a map of South America](cbduck-026_fig_1.png)",
+          "value": "illustration: Donald Duck teaching his nephews about stamp collecting with a map of South America",
           "bbox": [
             {
-              "h": 9.9,
-              "w": 92.61,
-              "x": 574.59,
-              "y": 273.13,
-              "confidence": 0.5,
-              "end_index": null,
-              "label": "caption",
-              "start_index": null
-            },
-            {
-              "h": 181.69,
-              "w": 277.33,
-              "x": 483.28,
-              "y": 95.27,
-              "confidence": 0.5,
+              "x": 484.32,
+              "y": 93.6,
+              "w": 272.64,
+              "h": 177.6,
+              "confidence": 0.0,
               "end_index": null,
               "label": "image",
               "start_index": null
             }
           ],
-          "type": "text",
-          "book_side": "right"
-        },
-        {
-          "md": "illustration: Donald Duck teaching his nephews about stamp collecting with a map of South America",
-          "value": "illustration: Donald Duck teaching his nephews about stamp collecting with a map of South America",
-          "bbox": null,
-          "type": "text",
-          "book_side": "right"
+          "type": "image",
+          "book_side": "right",
+          "url": "cbduck-026_fig_1.png",
+          "caption": ""
         },
         {
           "md": "Fig. 11. The Gilded Man, 1:5",
