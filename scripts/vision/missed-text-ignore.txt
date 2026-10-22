@@ -1009,3 +1009,13 @@ HELP KEEP AMERICA STRONG
 26 066 176-617
 26 067 176-167
 26 068 BEAGLE BOYS INC.
+# Billions in the Hole (reviewer, 2026-10-22, speaker review): 053's three drawn ? over the
+# boy in panel 5 are one group, ? ? ?, so the capture's count of three is an artefact; 060's
+# panel 5 sweater is stored at its full text, 176-167 BEAGLE BOYS INC. (the pass's box sat on
+# the building windows; the reviewer re-boxed it); 065's two sacks are stored as SUGAR
+26 053 ?
+26 060 176-167 BEAGLE BOYS
+26 065 SUGAR 1 LB.
+# ... and 068's panel 4 sweater plate reads 176-716, as the review stores it; the capture
+# misread it as 176-176
+26 068 176-176 BEAGLE BOYS INC.
