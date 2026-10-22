@@ -153,16 +153,23 @@ def _tag_book_side(items_data: dict) -> None:
             if cx is None:
                 continue
             item["book_side"] = "left" if cx < mid else "right"
-        # An item with no bbox (a chapter heading, typically) takes the side of the next
-        # tagged item in reading order, else the previous one; the build drops untagged
-        # items on a tagged spread.
+        # The parse is in reading order, left page then right, so an item with no bbox
+        # is on the left if any later tagged item is, and on the right if any earlier
+        # tagged item is. Between the last left and the first right item the page break
+        # is unknown: leave the item untagged and warn, since the build drops untagged
+        # items on a tagged spread and a guess put whole pages on the wrong side.
         for idx, item in enumerate(items):
             if "book_side" in item:
                 continue
-            neighbours = items[idx + 1 :] + items[idx - 1 :: -1] if idx else items[idx + 1 :]
-            side = next((n["book_side"] for n in neighbours if "book_side" in n), None)
-            if side is not None:
-                item["book_side"] = side
+            if any(n.get("book_side") == "left" for n in items[idx + 1 :]):
+                item["book_side"] = "left"
+            elif any(n.get("book_side") == "right" for n in items[:idx]):
+                item["book_side"] = "right"
+            else:
+                logger.warning(
+                    f"  Item {idx} ({item.get('type')}) has no bbox and sits at the page "
+                    f"break; set its book_side by hand: {(item.get('md') or '')[:60]!r}"
+                )
 
 
 def _bbox_label(item: dict) -> str | None:

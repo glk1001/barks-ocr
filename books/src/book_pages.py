@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from loader import SpreadRecord
+from loguru import logger
 
 _ROMAN_RE = re.compile(r"^[ivxlcdm]+$", re.IGNORECASE)
 
@@ -251,6 +252,13 @@ def split_by_side(
                 page_width=record.page_width,
             )
         ]
+
+    if unsided_items:
+        logger.warning(
+            f"{record.spread_stem}: dropping {len(unsided_items)} item(s) with no "
+            f"book_side on a tagged spread: "
+            + "; ".join(repr((i.get("md") or "")[:40]) for i in unsided_items)
+        )
 
     # Default to positional assignment (left is index 0, right is index 1).
     # Special case: when only the right side has items and the spread carries
