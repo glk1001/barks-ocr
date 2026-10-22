@@ -988,3 +988,24 @@ HELP KEEP AMERICA STRONG
 # grouped by the pass as background g2; the review dropped it as a fragment, so the capture's
 # copy is no longer grouped by design
 26 050 DUCK
+
+# Billions in the Hole (reviewer, 2026-10-22, missed-text queue): Beagle Boy sweaters. The
+# review stores each grouped sweater at its full text, 176-NNN BEAGLE BOYS INC., so the
+# partial lettering the pass captured no longer matches (059 panel 3, 063 panel 5, 064,
+# 066 panel 1, 067); the reviewer chose to leave the rest ungrouped
+# (059 panel 8, 063 panel 8, 066 panel 6, 068 panel 4's three). 058's SCRA is the review's
+# two full-text SCRAM signs
+26 058 SCRA
+26 059 BEAGLE BOYS INC.
+26 059 176-167
+26 059 176-176
+26 063 176-167 BEAGLE BOYS
+26 063 176-176
+26 063 176-617
+26 064 176-167 BEAGLE BOYS
+26 066 176-176
+26 066 176-617 BEAGLE BOYS
+26 066 176-167 BEAGLE BOYS
+26 066 176-617
+26 067 176-167
+26 068 BEAGLE BOYS INC.
