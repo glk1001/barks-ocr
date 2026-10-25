@@ -778,9 +778,7 @@ class OcrChecks:
         for fanta_page, variants in sorted(pages.items()):
             any_group = next(iter(variants.values()))
             try:
-                image = page_image_file(
-                    self._comics_database, enum, any_group.fanta_vol, fanta_page
-                )
+                image = page_image_file(self._comics_database, enum, fanta_page)
                 gray = np.asarray(load_pil_image_for_reading(image).convert("L"))
             except (OSError, ValueError, KeyError, IndexError) as e:
                 logger.warning(f"Vol {any_group.fanta_vol} page {fanta_page}: no page image ({e}).")

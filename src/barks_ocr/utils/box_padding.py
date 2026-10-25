@@ -201,9 +201,7 @@ class PaddingVerdict:
     note: str
 
 
-def page_image_file(
-    comics_database: ComicsDatabase, title: Titles, volume: int, fanta_page: str
-) -> Path:
+def page_image_file(comics_database: ComicsDatabase, title: Titles, fanta_page: str) -> Path:
     """Return the restored page image the ``text_box`` coordinates are measured on.
 
     The same lookup the Kivy editor draws its crops from, one-pagers included.
@@ -211,22 +209,24 @@ def page_image_file(
     Args:
         comics_database: The comics database.
         title: The title the page belongs to.
-        volume: The Fantagraphics volume.
         fanta_page: The page's scan stem.
 
     Returns:
         The image file's path.
 
     """
-    from pathlib import Path  # noqa: PLC0415 -- the TYPE_CHECKING import is not runtime
-
     from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE  # noqa: PLC0415
-    from barks_fantagraphics.comic_book_info import ONE_PAGERS  # noqa: PLC0415
+    from barks_fantagraphics.comic_book_info import (  # noqa: PLC0415
+        ONE_PAGERS,
+        get_one_pager_file,
+    )
     from barks_fantagraphics.comics_consts import PNG_FILE_EXT, PageType  # noqa: PLC0415
 
     if title in ONE_PAGERS:
-        image_dir = comics_database.get_fantagraphics_restored_volume_image_dir(volume)
-        return Path(image_dir) / (fanta_page + PNG_FILE_EXT)
+        # In the home volume, or - for a one-pager no story owns - only in the collection.
+        return get_one_pager_file(
+            title, comics_database.get_fantagraphics_restored_volume_image_dir, PNG_FILE_EXT
+        )
     comic = comics_database.get_comic_book(ENUM_TO_STR_TITLE[title])
     return comic.get_final_srce_story_file(fanta_page, PageType.BODY)[0]
 

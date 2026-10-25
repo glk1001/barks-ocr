@@ -256,8 +256,9 @@ def _seed_pages(
     pages: list[tuple[str, Path, bool]] = []
     missing_raw: list[str] = []
     worked: list[str] = []
-    for svg, raw_pair in restored_svg_and_raw_ocr_files(comics_database, title_str):
-        page = Path(svg).name.split(".")[0]
+    for _svg, raw_pair in restored_svg_and_raw_ocr_files(comics_database, title_str):
+        # Not the svg's name: a one-pager no story owns has its svg under its collection page.
+        page = Path(raw_pair[0]).name.split(".")[0]
         if get_title_from_volume_page(comics_database, volume, page)[0] != title_str:
             logger.info(f"Page {page} belongs to another title; not seeding it here.")
             continue
@@ -991,8 +992,9 @@ def sync(
 ) -> None:
     comics_database = ComicsDatabase()
     changed = same = 0
-    for svg, _raw_pair in restored_svg_and_raw_ocr_files(comics_database, title_str):
-        page = Path(svg).name.split(".")[0]
+    for _svg, raw_pair in restored_svg_and_raw_ocr_files(comics_database, title_str):
+        # Not the svg's name: a one-pager no story owns has its svg under its collection page.
+        page = Path(raw_pair[0]).name.split(".")[0]
         easy_file = prelim_groups_file(comics_database, title_str, page, SEED_ENGINE.value)
         copy_file = prelim_groups_file(comics_database, title_str, page, COPY_ENGINE.value)
         if not easy_file.is_file() or not copy_file.is_file():

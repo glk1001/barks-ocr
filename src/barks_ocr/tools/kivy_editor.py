@@ -10,7 +10,7 @@ from pathlib import Path
 import typer
 from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, STR_TITLE_TO_ENUM, Titles
 from barks_fantagraphics.comic_book import get_page_str
-from barks_fantagraphics.comic_book_info import ONE_PAGERS
+from barks_fantagraphics.comic_book_info import ONE_PAGERS, get_one_pager_file
 from barks_fantagraphics.comics_consts import FONT_DIR, PNG_FILE_EXT, SPEECH_FONT, PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
@@ -904,18 +904,32 @@ class EditorApp(App):
             pane.speech_groups = pane.page_group.speech_groups
 
         self._srce_image_file = self._get_srce_image_file(title_str, fanta_page)
+        self._panel_segments_file = self._get_panel_segments_file(title_str, volume, fanta_page)
+
+    def _get_panel_segments_file(self, title_str: str, volume: int, fanta_page: str) -> Path:
+        title = STR_TITLE_TO_ENUM[title_str]
+        if title in ONE_PAGERS:
+            # In the home volume, or - for one no story owns - only in the collection.
+            return get_one_pager_file(
+                title, self._comics_database.get_fantagraphics_panel_segments_volume_dir, ".json"
+            )
+
         segments_dir = Path(
             self._comics_database.get_fantagraphics_panel_segments_volume_dir(volume)
         )
-        self._panel_segments_file = segments_dir / (fanta_page + ".json")
+        return segments_dir / (fanta_page + ".json")
 
     def _get_srce_image_file(self, title_str: str, fanta_page: str) -> Path:
-        if STR_TITLE_TO_ENUM[title_str] in ONE_PAGERS:
-            # One-pagers have no ini file, so 'get_comic_book' can't resolve them.
-            # Their restored page lives directly in the volume's restored image dir.
-            return Path(
-                self._comics_database.get_fantagraphics_restored_volume_image_dir(self._volume)
-            ) / (fanta_page + PNG_FILE_EXT)
+        title = STR_TITLE_TO_ENUM[title_str]
+        if title in ONE_PAGERS:
+            # One-pagers have no ini file, so 'get_comic_book' can't resolve them. Their
+            # restored page is in the home volume, or - for one no story owns - only in
+            # the collection.
+            return get_one_pager_file(
+                title,
+                self._comics_database.get_fantagraphics_restored_volume_image_dir,
+                PNG_FILE_EXT,
+            )
 
         comic = self._comics_database.get_comic_book(title_str)
         srce_image_file = comic.get_final_srce_story_file(fanta_page, PageType.BODY)

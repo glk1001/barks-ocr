@@ -1838,7 +1838,7 @@ class OcrChecker:
         if self._page_gray is None or self._page_gray[0] != key:
             try:
                 image_file = page_image_file(
-                    self._comics_database, context.title, context.volume, context.fanta_page
+                    self._comics_database, context.title, context.fanta_page
                 )
                 gray = np.asarray(load_pil_image_for_reading(image_file).convert("L"))
             except (OSError, ValueError, KeyError, IndexError) as e:

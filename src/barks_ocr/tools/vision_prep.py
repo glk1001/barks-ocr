@@ -47,7 +47,7 @@ from typing import Annotated, Any
 
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
-from barks_fantagraphics.comic_book_info import ONE_PAGERS
+from barks_fantagraphics.comic_book_info import ONE_PAGERS, get_one_pager_file
 from barks_fantagraphics.comics_consts import PNG_FILE_EXT, PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
@@ -242,11 +242,13 @@ def _write_overview(page_image: Image.Image, out_file: Path) -> int:
 
 def _page_image_file(comics_database: ComicsDatabase, title_str: str, fanta_page: str) -> Path:
     """Return the restored *colour* page -- same coordinate space as the panel boxes."""
-    if STR_TITLE_TO_ENUM[title_str] in ONE_PAGERS:
-        # One-pagers have no ini file, so 'get_comic_book' can't resolve them.
-        volume = comics_database.get_fanta_volume_int(title_str)
-        image_dir = comics_database.get_fantagraphics_restored_volume_image_dir(volume)
-        return Path(image_dir) / (fanta_page + PNG_FILE_EXT)
+    title = STR_TITLE_TO_ENUM[title_str]
+    if title in ONE_PAGERS:
+        # One-pagers have no ini file, so 'get_comic_book' can't resolve them. The page
+        # is in the home volume, or - for one no story owns - only in the collection.
+        return get_one_pager_file(
+            title, comics_database.get_fantagraphics_restored_volume_image_dir, PNG_FILE_EXT
+        )
 
     comic = comics_database.get_comic_book(title_str)
     return comic.get_final_srce_story_file(fanta_page, PageType.BODY)[0]

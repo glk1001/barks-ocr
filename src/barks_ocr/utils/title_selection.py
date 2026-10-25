@@ -20,13 +20,18 @@ from typing import Any
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
 from barks_fantagraphics.comic_book import get_page_str
-from barks_fantagraphics.comic_book_info import ONE_PAGERS, get_one_pager_fanta_vol_and_page
+from barks_fantagraphics.comic_book_info import (
+    ONE_PAGERS,
+    get_one_pager_fanta_vol_and_page,
+    get_one_pager_file,
+)
 from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page, get_titles
 from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_groups_json_filename
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
+from comic_utils.comic_consts import SVG_FILE_EXT
 from intspan import intspan
 from loguru import logger
 
@@ -148,9 +153,11 @@ def restored_svg_and_raw_ocr_files(
 ) -> list[tuple[Path, tuple[Path, Path]]]:
     """Return each restorable page's svg file and its (easyocr, paddleocr) raw OCR files.
 
-    The same paths ``ComicBook`` builds, so a one-pager's files sit where a story's
-    would: ``NNN.svg`` in the volume's restored-svg images, ``NNN.<engine>.json`` in
-    its raw OCR directory.
+    A one-pager's raw OCR files sit where a story's would, ``NNN.<engine>.json`` in its
+    home volume's raw OCR directory. Its svg is wherever ``get_one_pager_file`` finds
+    it: a one-pager that belongs to no story has its svg only in "All One-Pagers",
+    under the collection page number - so take a page's number from its raw OCR files,
+    never from the svg's name.
 
     Args:
         comics_database: The database to resolve the title against.
@@ -171,10 +178,14 @@ def restored_svg_and_raw_ocr_files(
             )
         )
     volume, page = located
-    svg_dir = comics_database.get_fantagraphics_restored_svg_volume_image_dir(volume)
+    svg_file = get_one_pager_file(
+        STR_TITLE_TO_ENUM[title_str],
+        comics_database.get_fantagraphics_restored_svg_volume_image_dir,
+        SVG_FILE_EXT,
+    )
     raw_dir = comics_database.get_fantagraphics_restored_ocr_raw_volume_dir(volume)
     raw_pair = (raw_dir / f"{page}.easyocr.json", raw_dir / f"{page}.paddleocr.json")
-    return [(Path(svg_dir) / f"{page}.svg", raw_pair)]
+    return [(svg_file, raw_pair)]
 
 
 def prelim_groups_file(
