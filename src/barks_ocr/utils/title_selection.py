@@ -14,13 +14,18 @@ this, so the filter belongs in one place rather than in whichever tool noticed
 it first.
 """
 
+from pathlib import Path
 from typing import Any
 
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
+from barks_fantagraphics.comic_book import get_page_str
+from barks_fantagraphics.comic_book_info import ONE_PAGERS, get_one_pager_fanta_vol_and_page
+from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page, get_titles
 from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
+from barks_fantagraphics.ocr_file_paths import get_ocr_prelim_groups_json_filename
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from intspan import intspan
 from loguru import logger
@@ -118,3 +123,80 @@ def title_pages(
             f" but which belong elsewhere: {listed}."
         )
     return pages
+
+
+def _one_pager_location(title_str: str) -> tuple[int, str] | None:
+    """Return a one-pager's host volume and page, or None for any other title.
+
+    One-pagers have no ``.ini``, so ``get_comic_book`` cannot resolve them; their
+    page lives in the host volume under its own number, which ``ONE_PAGER_LOCATIONS``
+    holds.  An unlocated one-pager raises rather than falling through to
+    ``get_comic_book`` and its less helpful error.
+    """
+    title = STR_TITLE_TO_ENUM[title_str]
+    if title not in ONE_PAGERS:
+        return None
+    volume, page = get_one_pager_fanta_vol_and_page(title)
+    if volume is None or page is None:
+        msg = f'One-pager "{title_str}" has no location in ONE_PAGER_LOCATIONS.'
+        raise typer.BadParameter(msg)
+    return volume, get_page_str(page)
+
+
+def restored_svg_and_raw_ocr_files(
+    comics_database: ComicsDatabase, title_str: str
+) -> list[tuple[Path, tuple[Path, Path]]]:
+    """Return each restorable page's svg file and its (easyocr, paddleocr) raw OCR files.
+
+    The same paths ``ComicBook`` builds, so a one-pager's files sit where a story's
+    would: ``NNN.svg`` in the volume's restored-svg images, ``NNN.<engine>.json`` in
+    its raw OCR directory.
+
+    Args:
+        comics_database: The database to resolve the title against.
+        title_str: The story or located one-pager.
+
+    Returns:
+        One (svg file, raw OCR pair) per page, in page order.
+
+    """
+    located = _one_pager_location(title_str)
+    if located is None:
+        comic = comics_database.get_comic_book(title_str)
+        return list(
+            zip(
+                comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES),
+                comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES),
+                strict=True,
+            )
+        )
+    volume, page = located
+    svg_dir = comics_database.get_fantagraphics_restored_svg_volume_image_dir(volume)
+    raw_dir = comics_database.get_fantagraphics_restored_ocr_raw_volume_dir(volume)
+    raw_pair = (raw_dir / f"{page}.easyocr.json", raw_dir / f"{page}.paddleocr.json")
+    return [(Path(svg_dir) / f"{page}.svg", raw_pair)]
+
+
+def prelim_groups_file(
+    comics_database: ComicsDatabase, title_str: str, page: str, engine: str
+) -> Path:
+    """Return the prelim groups JSON file of one page and engine, one-pagers included.
+
+    Args:
+        comics_database: The database to resolve the title against.
+        title_str: The story or located one-pager.
+        page: The fanta page, e.g. ``"030"``.
+        engine: The OCR engine's name, e.g. ``"easyocr"``.
+
+    Returns:
+        The file's path, whether or not it exists.
+
+    """
+    located = _one_pager_location(title_str)
+    if located is None:
+        return comics_database.get_comic_book(title_str).get_ocr_prelim_groups_json_file(
+            page, engine
+        )
+    volume = located[0]
+    prelim_dir = comics_database.get_fantagraphics_restored_ocr_prelim_volume_dir(volume)
+    return Path(prelim_dir) / get_ocr_prelim_groups_json_filename(page, engine)

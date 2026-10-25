@@ -62,7 +62,6 @@ import cv2
 import numpy as np
 import typer
 from barks_fantagraphics.barks_titles import STR_TITLE_TO_ENUM
-from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_helpers import get_title_from_volume_page
 from barks_fantagraphics.comics_utils import get_backup_file
@@ -90,6 +89,7 @@ from barks_ocr.tools.vision_prep import (
     _write_panel,
 )
 from barks_ocr.utils.group_checks import ellipsis_spacing_ok, with_ellipsis_fixes
+from barks_ocr.utils.title_selection import prelim_groups_file, restored_svg_and_raw_ocr_files
 from barks_ocr.utils.vision_schema import GROUP_TYPES, roster_text
 from barks_ocr.utils.volume_holds import HOLDS_FILE, held_volumes
 
@@ -251,26 +251,23 @@ def _seed_pages(
     already have prelim files are taken too, unless any of them carries review or
     vision work, in which case the whole title is refused.
     """
-    comic = comics_database.get_comic_book(title_str)
     volume = comics_database.get_fanta_volume_int(title_str)
-    svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-    raws = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
 
     pages: list[tuple[str, Path, bool]] = []
     missing_raw: list[str] = []
     worked: list[str] = []
-    for svg, raw_pair in zip(svg_files, raws, strict=True):
+    for svg, raw_pair in restored_svg_and_raw_ocr_files(comics_database, title_str):
         page = Path(svg).name.split(".")[0]
         if get_title_from_volume_page(comics_database, volume, page)[0] != title_str:
             logger.info(f"Page {page} belongs to another title; not seeding it here.")
             continue
-        easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
+        easy_file = prelim_groups_file(comics_database, title_str, page, SEED_ENGINE.value)
         has_prelim = easy_file.is_file()
         if has_prelim and not reseed:
             logger.info(f"Page {page} already has an easyocr prelim; use vision-prep for it.")
             continue
         if has_prelim:
-            copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
+            copy_file = prelim_groups_file(comics_database, title_str, page, COPY_ENGINE.value)
             markers = _review_markers(easy_file) | _review_markers(copy_file)
             if markers:
                 worked.append(f"{page} ({', '.join(sorted(markers))})")
@@ -796,9 +793,8 @@ def _plan_page(
         return None, [f"{page}: group(s) {no_panel} fall in no panel; give panel_num."]
     prelim = {"use_as_final": False, "groups": groups}
 
-    comic = comics_database.get_comic_book(entry["title"])
-    easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
-    copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
+    easy_file = prelim_groups_file(comics_database, entry["title"], page, SEED_ENGINE.value)
+    copy_file = prelim_groups_file(comics_database, entry["title"], page, COPY_ENGINE.value)
     if easy_file.is_file() and easy_file.read_text() == _dump_prelim(prelim):
         logger.info(f"Page {page}: {easy_file.name} is already this seed; leaving it.")
         return None, []
@@ -908,8 +904,7 @@ def _contains(outer: list, inner: list) -> bool:
 def _refit_page(comics_database: ComicsDatabase, out_dir: Path, entry: dict) -> tuple[dict, int]:
     """Return an applied page's prelim with its word-built boxes refitted, and how many grew."""
     page = entry["fanta_page"]
-    comic = comics_database.get_comic_book(entry["title"])
-    easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
+    easy_file = prelim_groups_file(comics_database, entry["title"], page, SEED_ENGINE.value)
     seed_file = out_dir / page / SEED_FILE
     if not seed_file.is_file() or not easy_file.is_file():
         return {}, 0
@@ -974,10 +969,9 @@ def refit(
         pages += 1
         boxes_grown += grown
         if write:
-            comic = comics_database.get_comic_book(entry["title"])
-            page = entry["fanta_page"]
-            copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
-            comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value).write_text(
+            title_str, page = entry["title"], entry["fanta_page"]
+            copy_file = prelim_groups_file(comics_database, title_str, page, COPY_ENGINE.value)
+            prelim_groups_file(comics_database, title_str, page, SEED_ENGINE.value).write_text(
                 _dump_prelim(prelim)
             )
             if COPIED_FROM_ENGINE_KEY in json.loads(copy_file.read_text()):
@@ -996,13 +990,11 @@ def sync(
     ] = False,
 ) -> None:
     comics_database = ComicsDatabase()
-    comic = comics_database.get_comic_book(title_str)
-    svg_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
     changed = same = 0
-    for svg in svg_files:
+    for svg, _raw_pair in restored_svg_and_raw_ocr_files(comics_database, title_str):
         page = Path(svg).name.split(".")[0]
-        easy_file = comic.get_ocr_prelim_groups_json_file(page, SEED_ENGINE.value)
-        copy_file = comic.get_ocr_prelim_groups_json_file(page, COPY_ENGINE.value)
+        easy_file = prelim_groups_file(comics_database, title_str, page, SEED_ENGINE.value)
+        copy_file = prelim_groups_file(comics_database, title_str, page, COPY_ENGINE.value)
         if not easy_file.is_file() or not copy_file.is_file():
             continue
         current = json.loads(copy_file.read_text())

@@ -10,7 +10,6 @@ import easyocr
 import enchant
 import typer
 from barks_fantagraphics.comic_book_info import is_non_comic_title
-from barks_fantagraphics.comics_consts import RESTORABLE_PAGE_TYPES
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.comics_utils import get_abbrev_path, get_ocr_type
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
@@ -22,6 +21,7 @@ from paddleocr import PaddleOCR
 from barks_ocr.cli_setup import get_comic_titles, init_logging
 from barks_ocr.utils.common import ProcessResult
 from barks_ocr.utils.preprocessing import preprocess_image
+from barks_ocr.utils.title_selection import restored_svg_and_raw_ocr_files
 
 _RESOURCES = Path(__file__).parent.parent / "resources"
 
@@ -64,12 +64,8 @@ def ocr_titles(
 
         logger.info(f'OCRing all pages in "{title}"...')
 
-        comic = comics_database.get_comic_book(title)
-
-        srce_files = comic.get_srce_restored_svg_story_files(RESTORABLE_PAGE_TYPES)
-        dest_file_groups = comic.get_srce_restored_ocr_raw_story_files(RESTORABLE_PAGE_TYPES)
-
-        for srce_file, dest_files in zip(srce_files, dest_file_groups, strict=True):
+        # One-pagers included: they have no .ini, so not via get_comic_book.
+        for srce_file, dest_files in restored_svg_and_raw_ocr_files(comics_database, title):
             wanted = tuple(f for f in dest_files if get_ocr_type(f) in engines)
             result = ocr_comic_page(work_dir, srce_file, wanted)
             if result == ProcessResult.FAILURE:
