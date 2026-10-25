@@ -1019,3 +1019,6 @@ HELP KEEP AMERICA STRONG
 # ... and 068's panel 4 sweater plate reads 176-716, as the review stores it; the capture
 # misread it as 176-176
 26 068 176-176 BEAGLE BOYS INC.
+# The Big Bobber (reviewer, 2026-10-26): the drawn $ on the money bag under the title logo
+# in panel 1 is a device, not lettering worth a group
+20 036 $
