@@ -1022,3 +1022,9 @@ HELP KEEP AMERICA STRONG
 # The Big Bobber (reviewer, 2026-10-26): the drawn $ on the money bag under the title logo
 # in panel 1 is a device, not lettering worth a group
 20 036 $
+# One-pagers (reviewer, 2026-10-26): drawn devices, not lettering worth a group -- No Noise
+# is Good Noise's two music notes by the drum and the clarinet (panel 3), Dueling Tycoons'
+# hanging money bags (panel 7), and Wishful Excess' money bags in the genie's thought (panel 6)
+8 078 ♪
+30 030 $
+30 031 $
