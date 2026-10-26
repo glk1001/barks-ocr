@@ -1028,3 +1028,16 @@ HELP KEEP AMERICA STRONG
 8 078 ♪
 30 030 $
 30 031 $
+# Collection one-pagers (reviewer, 2026-10-26): drawn devices, not lettering worth a group --
+# the money bags and dollar signs on Tree Trick, The Balmy Swami, Thumbs Up and A Thrift Gift,
+# the guitar notes on Collection Day and the phonograph notes on Playmates; on Flowers Are
+# Flowers and Nest Egg Collector the reviewer grouped the $s as one cluster, which the
+# per-glyph count does not see
+16 157 $
+20 125 $
+22 051 $
+26 026 $
+28 025 ♪
+28 055 ♪
+28 083 $
+28 112 $
