@@ -1047,3 +1047,20 @@ HELP KEEP AMERICA STRONG
 # Bum Steer (reviewer, 2026-10-26): drawn devices, not lettering worth a group -- the $ printed
 # on every money bag Scrooge piles on the tramp, about 30 across the page
 12 152 $
+# Vol. 14 one-pagers (reviewer, 2026-10-26): drawn dollar signs not given a group -- the $ on
+# the title money bags (038, 072, 073, 097, 108, 134, 162) and Classy Taxi's title crest; the
+# reviewer grouped the rest of 096's and 108's. 162's three sums in panel 6 are grouped
+# (g11-g13), but the capture wrote them with a × and other spacing, so they still read as
+# missed. 214's capture spells the logo $CROOGE against the grouped SCROOGE
+14 038 $
+14 072 $
+14 073 $
+14 096 $
+14 097 $
+14 108 $
+14 134 $
+14 162 $
+14 162 $ × $ $$$
+14 162 $ + $ $ $
+14 162 $ | $$$ $$
+14 214 Walt Disney's UNCLE $CROOGE
