@@ -1044,3 +1044,6 @@ HELP KEEP AMERICA STRONG
 # Tale of the Tape (reviewer, 2026-10-26): the capture read the circus man's snore in panel 4
 # as five Zs; the printed text is ZZZZ, which g8 now holds
 26 164 ZZZZZ
+# Bum Steer (reviewer, 2026-10-26): drawn devices, not lettering worth a group -- the $ printed
+# on every money bag Scrooge piles on the tramp, about 30 across the page
+12 152 $
