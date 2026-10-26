@@ -16956,3 +16956,51 @@ straggler short (143 g9), signed off separately.
 - `other:` values after review: `Gyro's Helper`, `a lizard`, `the rattlesnake`,
   `Grandma Duck`, `Grandma Duck, Daisy and the boys`, `a tipsy gopher`,
   `the apple expert`, `the bees`, `the hen`. No near-duplicates.
+
+### Findings to paste into the next run (2026-10-26, one-pagers of Vols. 8, 12 and 13, ALL 22 REVIEWED AND MIRRORED -- batch closed)
+
+**287 groups, 6 speaker corrections (2.1%), every one in the nephew domain (6 of 31,
+19.4%).** Four of the six are on one page, *A Fetching Price* (Vol. 8, 197); the others
+are *Slippery Sipper* 187 g5 and *A Prank Above* 047 g11. By the confidence the pass
+wrote: **high 2/260 (0.8%), medium 4/13 (30.8%)** -- and both highs were declined
+collectives. All 13 type proposals confirmed; no text corrections. 35 images over 22
+pages, 1.59 per page. All 22 mirrored clean; the review-stage close-out passes on every
+title.
+
+- **THREE BALLOONS, THREE TAILS, THREE BOYS: ONE TAIL EACH, UNLESS A TIP IS INSIDE A HEAD
+  SPAN.** *A Fetching Price* 197 has two such cascades (panels 4 and 6). The tips ended
+  beside or above the heads, none inside a head span, and the reading put two tails on
+  the same green-capped boy, then declined one of them to `nephews` at high. The review
+  gave each boy exactly one: panel 4 SEE? Dewey, HE DOES IT Louie, EVERY TIME! Huey (the
+  long thin tail was the red-capped boy's, seen from behind in front); panel 6 WOW! Louie,
+  THAT WAS Dewey, A LONG PEG! Huey. Two tails "on" one boy with another boy left without
+  one means the tip reading is off, not that the scene is a chorus. Find the assignment
+  that gives every boy one tail before declining anything.
+- **THE AIM, NOT THE POSITION.** *A Prank Above* 047 g11: the tip sat just above the
+  blue-capped boy's cap edge, but its point aimed down-left at the green-capped boy at
+  the panel's edge. The pass named the blue boy and wrote the green one in as the other
+  reading; the review named the green one, Louie. The roster's gap rule already says to
+  read the arrowhead's aim -- it applies to a tip above a cap edge too.
+- **ONE MISS ON THE LEFT DEFAULT.** *Slippery Sipper* 187 g5: a tip in the gap with no
+  readable aim, named for the left boy (Louie) per the roster; the review took the right
+  one, Dewey. A single case; not a reason to change the default yet.
+- **TYPE BY THE DRAWING HELD 13 OF 13.** Bubble trail against pointed tail settled four
+  thought/dialogue labels both ways (a ? balloon with a pointed tail is dialogue; a ! in
+  a bubble-trailed cloud is a thought); three title logos stored as `background` are
+  `title`; shouts and screams stored as `sound_effect` (YIPPEE!, YAHOO!, Daisy's EEK!)
+  are dialogue; a price tag on a string is `background`, not a thought.
+- **visible_text ON EVERY PAGE, AND EVERY COPY OF A REPEATED SIGN.** Four one-pagers
+  with no lettering but speech went out with an empty `visible_text`, and the close-out
+  read them as "title not read"; list the logo on such a page. *Oil the News* 210 shows
+  BIG OIL STRIKE six times and the capture listed five: the review added the sixth
+  (panel 5, the vendor's paper) as a group the audit could not have found.
+- **Missed text: 5 found, all resolved.** The review grouped the money-bin $ (106), the
+  "? ?" and desk $ (118) and a second scale card (119); *Bum Steer*'s ~30 money-bag $
+  (152) went on the ignore list. The pass added one group itself (*Dig it!* 211, an
+  ungrouped ? balloon).
+- `other:` values after review: `a moviegoer`, `the matinee kids`, `the polish salesman`,
+  `the tramp`, `the waiter`, `the car salesman`, `the raffle ticket seller`,
+  `the taxi driver`, `the barber`, `a second barber`, `the barber college man`,
+  `the ballet master`, `the process server`, `a society lady`, `the bill collector`,
+  `the fat man`, `a passer-by`, `a bather`, `a woman bather`, `Gypo`. The census flags
+  the barbers and the bathers; both are different people, deliberately named apart.
