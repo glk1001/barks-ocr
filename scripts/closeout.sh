@@ -277,7 +277,9 @@ fi
 
 # --- 5. mirror dry run -------------------------------------------------------
 # At --stage review this runs AFTER `vision-mirror --write`, so a non-zero count
-# means the mirror did not take. Never invoked with --write here.
+# means the mirror did not take. Never invoked with --write here. Since
+# 2026-10-26 the mirror also carries a reviewed group's text_box, so a box refit
+# stranded on one engine fails this row too.
 echo "-> mirror dry run"
 if capture mirror uv run barks-ocr-vision-mirror --title "$TITLE"; then
     pending=$(num mirror 's/.*DRY RUN -- \([0-9]*\) page(s) would be written.*/\1/p')
@@ -298,9 +300,10 @@ fi
 
 # --- 5b. seed copy: paddleocr must stay an exact copy of easyocr --------------
 # Only on seed pages, whose paddleocr file carries `copied_from_engine`. The
-# mirror row above compares only the fields vision-mirror copies, and it copies
-# no text_box: The Invisible Intruder passed it with 21 review refits stranded on
-# easyocr (2026-10-07). The cure is a union of any box refit on both engines,
+# mirror row above compares only the fields vision-mirror copies, and until
+# 2026-10-26 it copied no text_box: The Invisible Intruder passed it with 21
+# review refits stranded on easyocr (2026-10-07). It now carries only REVIEWED
+# boxes, and a seed page's copy must match on every field, so this row stays. The cure is a union of any box refit on both engines,
 # then `barks-ocr-vision-seed sync --write`. A FAIL at review; at apply it is a
 # WARN, because a title can be run mid-review.
 echo "-> seed copy"

@@ -30,6 +30,10 @@ Anything short of that is left alone and reported: a group whose words genuinely
 differ between engines is an unreconciled difference, and silently overwriting one
 side with the other would destroy the evidence rather than the discrepancy.
 
+A reviewed group's ``text_box`` travels too, but only once a human has reviewed
+it: the reviewer refits boxes on one engine, and the refit is about the art.
+Before review each engine keeps its own box.
+
 Dry run by default, and every file it writes is backed up first.
 """
 
@@ -47,6 +51,7 @@ from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from loguru import logger
 
 from barks_ocr.cli_setup import get_comic_titles, init_logging
+from barks_ocr.utils.group_checks import BOX_MISMATCH_ISSUE, is_acknowledged
 from barks_ocr.utils.vision_schema import (
     CAP_COLOUR_KEY,
     CAP_COLOUR_WAS_KEY,
@@ -161,6 +166,7 @@ class MirrorReport:
     fields_copied: int = 0
     markup_copied: int = 0
     markup_skipped: list[str] = field(default_factory=list)
+    boxes_copied: list[str] = field(default_factory=list)
     unmatched: list[str] = field(default_factory=list)
     pages_written: int = 0
 
@@ -169,8 +175,13 @@ class MirrorReport:
         what = "would copy" if dry_run else "copied"
         logger.info(
             f"{self.pages} page(s), {self.annotated} annotated group(s): "
-            f"{what} fields onto {self.fields_copied}, markup onto {self.markup_copied}."
+            f"{what} fields onto {self.fields_copied}, markup onto {self.markup_copied}, "
+            f"reviewed boxes onto {len(self.boxes_copied)}."
         )
+        # Listed, not just counted: a box is the one thing this copies that is
+        # not an annotation, so the reviewer should see which ones moved.
+        for line in self.boxes_copied:
+            logger.info(f"  box {line}")
         # The two buckets are different kinds of unreconciled difference, and
         # saying so is the point: pairing is whitespace-insensitive, so a group
         # that paired at all already agrees word for word. Only its line breaks
@@ -265,6 +276,32 @@ def _copy_fields(src: dict, dst: dict) -> bool:
     return changed
 
 
+def _copy_reviewed_box(src: dict, dst: dict) -> bool:
+    """Copy a reviewed group's ``text_box`` across. Returns whether *dst* changed.
+
+    The reviewer refits boxes in the editor on the source engine only, and
+    nothing else carries the refit across on a non-seed page: ``ocr_check
+    --fix-boxes`` writes the UNION of the two boxes, which re-inflates a box the
+    reviewer tightened. The 16 Vol. 14 one-pagers closed on 2026-10-26 with 35
+    refits stranded on easyocr, 33 of which a union would have undone.
+
+    Gated on ``speaker_reviewed``, so an apply-time mirror -- nothing reviewed
+    yet -- leaves each engine's own box alone. An acknowledged ``box_mismatch``
+    on either side is a reviewer's word that the two may differ, and is honoured
+    here as ``--fix-boxes`` honours it.
+    """
+    if not src.get(SPEAKER_REVIEWED_KEY):
+        return False
+    box = src.get("text_box")
+    if not box or box == dst.get("text_box"):
+        return False
+    if is_acknowledged(src, BOX_MISMATCH_ISSUE) or is_acknowledged(dst, BOX_MISMATCH_ISSUE):
+        return False
+    # Its own lists, so a later in-place edit to one engine's box cannot move both.
+    dst["text_box"] = [list(point) for point in box]
+    return True
+
+
 def mirror_page(src_groups: dict, dst_groups: dict, where: str, report: MirrorReport) -> bool:
     """Mirror one page's annotations from *src_groups* onto *dst_groups*.
 
@@ -302,6 +339,10 @@ def mirror_page(src_groups: dict, dst_groups: dict, where: str, report: MirrorRe
 
         changed = _copy_fields(src, dst) or changed
         report.fields_copied += 1
+
+        if _copy_reviewed_box(src, dst):
+            changed = True
+            report.boxes_copied.append(f"{where} g{gid} -> g{dst_gid}")
 
         # Markup indexes a specific string, so it only travels when the two
         # engines store exactly the same characters -- newlines included, since
