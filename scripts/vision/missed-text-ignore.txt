@@ -1041,3 +1041,6 @@ HELP KEEP AMERICA STRONG
 28 055 ♪
 28 083 $
 28 112 $
+# Tale of the Tape (reviewer, 2026-10-26): the capture read the circus man's snore in panel 4
+# as five Zs; the printed text is ZZZZ, which g8 now holds
+26 164 ZZZZZ
