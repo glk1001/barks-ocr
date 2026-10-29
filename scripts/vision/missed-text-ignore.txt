@@ -1080,3 +1080,15 @@ HELP KEEP AMERICA STRONG
 16 121 ?
 16 159 $
 16 187 $
+# Remaining one-pagers, Vols. 20/22/24 (reviewer, 2026-10-29): the drawn $ on money bags,
+# the bill-sign emblem and the wall picture, not given a group. 075's two ? over Scrooge's
+# silhouette are grouped as one `? ?`, but the capture lists them separately, so the audit
+# still counts more in the art than are grouped
+20 067 $
+20 068 $
+20 127 $
+22 029 $
+22 057 $
+22 075 $
+22 075 ?
+24 027 $
