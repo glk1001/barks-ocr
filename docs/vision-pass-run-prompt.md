@@ -17004,3 +17004,38 @@ title.
   `the ballet master`, `the process server`, `a society lady`, `the bill collector`,
   `the fat man`, `a passer-by`, `a bather`, `a woman bather`, `Gypo`. The census flags
   the barbers and the bathers; both are different people, deliberately named apart.
+
+### Findings to paste into the next run (2026-10-29, one-pagers of Vol. 16, ALL 14 REVIEWED AND MIRRORED -- batch closed)
+
+**156 groups read, 0 speaker corrections.** By the confidence the pass wrote: **high
+0/155, medium 0/1** (123 g2, a gap tip whose aim named the sightseer in the black
+jacket, held). No nephews appear on any of the 14 pages, so there was no nephew domain
+to get wrong. All 13 type proposals confirmed. 16 images over 14 pages, 1.14 per page.
+The review added 8 groups, leaving 164. All 14 mirrored clean, reviewed boxes included,
+and the review-stage close-out passes on every title.
+
+- **A DIFFERENCE YOU NOTE IS A TEXT CORRECTION -- PROPOSE IT.** *Gold Rush* 059 g5: the
+  pass saw an extra drawn `!` between NUGGET! and GOLD!, wrote it into `vision_note`,
+  and left `text_ok` true. The review added it by hand. A note reaches no queue, so a
+  printed-vs-stored difference you can read belongs in `text_correction`.
+- **`So-` IS STORED `SO —`.** *Buffo or Bust* 090 g4 was stored as `So-`. The review
+  changed it to `SO —`, the form *Fertile Assets* 121 g3 already carries. A narration
+  break drawn as a short dash is the em dash, spaced, in capitals.
+- **TYPE BY THE DRAWING HELD 13 OF 13.** Nine balloons with bubble trails and no tail
+  were thoughts (027 g1, 059 g9, 122 g1-g3 and g9, 123 g6-g7). Three title logos stored
+  as `background` are `title`. Scrooge's snore GZORK is dialogue, not a sound effect. A
+  written bill (099 BILL $500) is `background`.
+- **Missed text: 13 found.** The review grouped 027's money-bag `$` in the safe (four
+  groups), 057's two wall emblems, 099's third SALE tag and 121's four `?` round
+  Scrooge's head (one group, `? ? ? ?`). The other money-bag `$` (058, 059, 068, 069,
+  099, 121, 159, 187) and 091's `♪` went on the ignore list.
+- **A CLUSTER THE REVIEW GROUPS AS ONE STILL COUNTS AS MANY.** The capture listed 121's
+  four `?` as four entries, and the audit then counted 4 in the art against 1 grouped.
+  027's bags did the same, and both needed an ignore entry. The roster's per-instance
+  `visible_text` rule is unchanged, but expect this quirk wherever the review merges
+  drawn devices.
+- `other:` values: `the weatherman`, `the cook`, `the beachgoers`, `the store manager`,
+  `the planning commissioner`, `the shopkeeper`, `Buffo`, `the kettledrummer`,
+  `the county plant expert`, `the sightseer with the camera`,
+  `the sightseer in the black jacket`, `the sightseer in the orange jacket`,
+  `Miss Twidley`, `a fireman`. The census flags none.
