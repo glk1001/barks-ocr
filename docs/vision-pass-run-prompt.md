@@ -17039,3 +17039,40 @@ and the review-stage close-out passes on every title.
   `the county plant expert`, `the sightseer with the camera`,
   `the sightseer in the black jacket`, `the sightseer in the orange jacket`,
   `Miss Twidley`, `a fireman`. The census flags none.
+
+### Findings to paste into the next run (2026-10-30, the remaining one-pagers of Vols. 17, 20, 22 and 24, ALL 19 REVIEWED AND MIRRORED -- batch closed)
+
+**146 groups read, 0 speaker corrections.** By the confidence the pass wrote: **high
+0/143, medium 0/3** (095 g6, the debtor's wife named by her spiky hair in silhouette;
+028 g2, a park-bench silhouette whose tip aims at the man; 028 g5, the man in the green
+suit named from the dialogue; all three held). The 8 `nephews` calls held: 037 g8 and
+127 g6, choruses with one tail per boy, and 038's six snores. 27 of the 32 type proposals
+held as proposed. 27 images over 19 pages, 1.42 per page. The review added 4 groups,
+leaving 150. All 19 mirrored clean, reviewed boxes included, and the review-stage
+close-out passes on every title. With this batch every one-pager in the books is read:
+133 of 161, the other 28 not in the books.
+
+- **A SNORE IS TYPED BY ITS BALLOON, NOT BY BEING A SNORE.** *Remember This* 038: the
+  pass moved all six `ZZZ` snores from `sound_effect` to `dialogue`. The review kept g2,
+  in a normal balloon, as dialogue, and made the other five thought, because they are
+  drawn as thought clouds. The speaker (the sleeper) is unchanged. Read the balloon edge
+  of each snore as for any other line. The corpus tally of 84 dialogue to 26 sound
+  effects says what a snore usually is, not what this one is.
+- **TYPE BY THE DRAWING HELD ELSEWHERE.** Every other bubble-trail balloon proposed as a
+  thought was confirmed: 179 g6, 034 g3, 095 g2, 068's five, 067's six dream balloons,
+  103 g6 and g12, 117 g2, and the Vol. 24 027 g1 and g2. So were the four title logos
+  stored as `background` (127, 126, 028, 029), the one pointed tail stored as a thought
+  (102, now g10), and 103's MEOW as dialogue (`other:the kittens`).
+- **Missed text: 11 found.** The review grouped 096's second HELP banner, 075's two `?`
+  over Scrooge (one group, `? ?`), 102's `!` over Scrooge and 102's TRUCK, and put
+  068's sign-emblem `$` into the bin-sign group. The other money-bag `$` (067, 068, 127,
+  029, 057, 075, Vol. 24 027) and 075's `?` cluster went on the ignore list.
+- **CHECK THE TEXT OF EVERY ADDED GROUP AFTER THE REVIEW.** 102 g4, added for the `!`,
+  came back carrying the workman's whole balloon text from g3, on both engines, with the
+  box drawn right. The audit caught it only because the `!` still showed as missed.
+  Diff each page by text against the pass commit before mirroring; an added group whose
+  text matches a neighbour's is the sign.
+- `other:` values: `the jalopy driver`, `the debtor`, `the debtor's wife`,
+  `the man in the bow tie`, `the stableman`, `a sailor`, `the sailors`,
+  `the man in the green suit`, `a man on the park bench`, `the Rajah`, `a workman`,
+  `the truck driver`, `the kittens`.
