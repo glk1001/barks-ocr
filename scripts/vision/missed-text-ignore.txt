@@ -1064,3 +1064,19 @@ HELP KEEP AMERICA STRONG
 14 162 $ + $ $ $
 14 162 $ | $$$ $$
 14 214 Walt Disney's UNCLE $CROOGE
+# Vol. 16 one-pagers (reviewer, 2026-10-29): drawn devices not given a group -- the $ on the
+# money bags (058, 059, 068, 069, 099, 121, 159, 187) and 091's three music notes over the
+# kettledrum. 027's panel 5 bags and 121's four ? round Scrooge's head are grouped, as one
+# group each (`$ $ $` and `? ? ? ?`), but the capture lists the glyphs separately, so the
+# audit still counts more in the art than are grouped
+16 027 $
+16 058 $
+16 059 $
+16 068 $
+16 069 $
+16 091 ♪
+16 099 $
+16 121 $
+16 121 ?
+16 159 $
+16 187 $
