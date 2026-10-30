@@ -25,11 +25,18 @@ Order is ``int(Titles.X)``, which ``vision_status.scan_titles`` documents as
 chronological across all 450 titles with no inversions, so nothing here parses a
 date.
 
-THE THIRD AND FOURTH STATES ARE NOT A BACKLOG. ``READ`` and ``--`` mean what they
-look like. ``NO PAGES`` and ``UNRESOLVED`` mean the title does not resolve to any
-page in the restored volumes -- 50 of the 155 one-pagers as of 2026-09-12 -- so
-they are not work waiting to be done, they are simply not in the scanned books.
-Read the summary line, not just the table, before sizing a batch.
+``NO OCR`` IS A BACKLOG, NOT AN ABSENCE. A located one-pager with no OCR on
+either engine still has a restored page if ``get_one_pager_file`` finds one -- in
+its home volume, or for a one-pager no story owns, in the "All One-Pagers"
+collection's volume under its collection page. That page is work: batch OCR and
+``barks-ocr-vision-seed`` read it from the same place. Fourteen pages restored on
+2026-10-27, a day after the one-pager OCR batch, showed here as ``NO PAGES`` and
+were counted "not in the books" until this state was split out.
+
+THE LAST TWO STATES ARE NOT A BACKLOG. ``NO PAGES`` now means no OCR and no
+restored file either. ``UNRESOLVED`` means the title has no location in
+``ONE_PAGER_LOCATIONS``. Neither is in the scanned books. Read the summary line,
+not just the table, before sizing a batch.
 
 Assumes the barks-ocr repo as the working directory, because the barks path
 dependencies resolve from there.
@@ -39,7 +46,11 @@ from collections.abc import Collection
 from typing import NamedTuple
 
 from barks_fantagraphics.barks_titles import ENUM_TO_STR_TITLE, Titles
-from barks_fantagraphics.comic_book_info import ONE_PAGERS
+from barks_fantagraphics.comic_book_info import (
+    ONE_PAGERS,
+    get_one_pager_fanta_vol_and_page,
+    get_one_pager_file,
+)
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.speech_groupers import OcrTypes, SpeechGroups
 from loguru import logger
@@ -53,6 +64,7 @@ UNKNOWN = "?"
 STATE_READ = "READ"
 STATE_UNREAD = "--"
 STATE_PART = "part"
+STATE_NO_OCR = "NO OCR"
 STATE_NO_PAGES = "NO PAGES"
 
 
@@ -88,6 +100,29 @@ def _pages_read(speech_groups: SpeechGroups, title: Titles, pages: Collection[st
     return read
 
 
+def _no_ocr_row(comics_database: ComicsDatabase, title: Titles) -> Row | None:
+    """Return a ``NO OCR`` row if a one-pager with no OCR has a restored page.
+
+    Args:
+        comics_database: the comics database.
+        title: a one-pager that has no OCR on either engine.
+
+    Returns:
+        The row, labelled with the home volume and page, or None if the title is
+        unlocated or no restored file exists in its home volume or the collection.
+
+    """
+    volume, page = get_one_pager_fanta_vol_and_page(title)
+    if volume is None or page is None:
+        return None
+    restored = get_one_pager_file(
+        title, comics_database.get_fantagraphics_restored_volume_image_dir, ".png"
+    )
+    if not restored.is_file():
+        return None
+    return Row(int(title), ENUM_TO_STR_TITLE[title], str(volume), f"{page:03d}", STATE_NO_OCR)
+
+
 def _scan(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -> list[Row]:
     """Walk every one-pager and work out its state.
 
@@ -115,7 +150,8 @@ def _scan(comics_database: ComicsDatabase, speech_groups: SpeechGroups) -> list[
                 rows.append(Row(int(title), title_str, UNKNOWN, UNKNOWN, f"UNRESOLVED: {exc}"))
                 continue
             if not pages:
-                rows.append(Row(int(title), title_str, UNKNOWN, UNKNOWN, STATE_NO_PAGES))
+                no_ocr = _no_ocr_row(comics_database, title)
+                rows.append(no_ocr or Row(int(title), title_str, UNKNOWN, UNKNOWN, STATE_NO_PAGES))
                 continue
             try:
                 volume = str(comics_database.get_fanta_volume_int(title_str))
@@ -151,12 +187,17 @@ def _report(rows: list[Row]) -> None:
     read = [r for r in rows if r.state == STATE_READ]
     unread = [r for r in rows if r.state == STATE_UNREAD]
     part = [r for r in rows if r.state == STATE_PART]
-    absent = [r for r in rows if r not in read and r not in unread and r not in part]
+    no_ocr = [r for r in rows if r.state == STATE_NO_OCR]
+    work = (read, unread, part, no_ocr)
+    absent = [r for r in rows if not any(r in rs for rs in work)]
     print(
         f"\ntotal {len(rows)}   read {len(read)}   unread {len(unread)}"
-        f"   part {len(part)}   not in the books {len(absent)}"
+        f"   part {len(part)}   no OCR {len(no_ocr)}"
+        f"   not in the books {len(absent)}"
     )
     print("\nThe next batch comes off the `--` rows, oldest first.")
+    if no_ocr:
+        print("The `NO OCR` rows need batch OCR and the seed flow before a pass.")
     for row in absent:
         print(f"  not in the books: {row.title} -- {row.state}")
 
