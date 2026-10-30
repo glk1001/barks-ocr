@@ -17076,3 +17076,39 @@ close-out passes on every title. With this batch every one-pager in the books is
   `the man in the bow tie`, `the stableman`, `a sailor`, `the sailors`,
   `the man in the green suit`, `a man on the park bench`, `the Rajah`, `a workman`,
   `the truck driver`, `the kittens`.
+
+### Findings to paste into the next run (2026-10-30, the 14 one-pagers restored 2026-10-27 -- Vols. 23, 27 and 28, seed flow, ALL 14 REVIEWED AND SYNCED -- batch closed)
+
+**130 groups read, 0 speaker corrections.** By the confidence the pass wrote: **high
+0/123, medium 0/7** (Undercover Girl 119 g11, `other:the woman in the pink suit`;
+Monkey Business 024 g3-g6, `other:a spectator`, and g8/g9, the men in the green vest and
+red beret; all held). No text or type was changed. The review added 1 group (119's BANK
+emblem `$`), leaving 131. 22 images over 14 pages, 1.57 per page; Daisy's Dazed Days
+alone took 4, three crops to solve its rebus. Closed with `seed sync --write`, never
+`vision-mirror`; the review-stage close-out passes on every title apart from the known
+false `title not read` on pages with no lettering outside the groups (The New Girl,
+Small Fryers, Daisy's Dazed Days). With this batch every one-pager in the books is read:
+147 of 161, the other 14 not in the books.
+
+- **THE REVIEW REFITS CAPTIONS, TITLES AND SIGNS, NOT BALLOONS.** 63 of 128 easyocr
+  boxes were refit, all on easyocr only (one, 120 g4 NEWS, on both, 2px apart; kept the
+  union), and none moved to different lettering. Dialogue 2/35, thought 2/8, but
+  narration 27/33, title 9/15, background 17/31 and sound effects 6/6. Twenty moved an
+  edge more than 30px: the Daisy's Diary diary blocks and the GYRO GEARLOOSE / DAISY DUCK
+  logo groups (hand boxes and multi-line boxes over lettering EasyOCR boxes piecemeal),
+  and the art-lettered SFX (VROOM 142px, CRASH TINGLE 85px). The seed build's balloon
+  fit is doing its job; a hand `text_box` over a logo, a diary page or drawn SFX is the
+  one to montage against the art before build.
+- **A DIARY WRITTEN IN THE BOOK HELD AS NARRATION.** The New Girl 142 g1, Daisy's entry
+  lettered on the open diary rather than in a caption box, stayed `narration`/`narrator`.
+- **A PICTURE REBUS IS STORED SOLVED, IN ONE CAPTION** (the reviewer's call, Daisy's
+  Dazed Days 150). The lettering alone ("D Dary: On Monday, took me OUT in the coun 4 a
+  nic ...") is unsearchable, so the one narration group holds the diary as it reads with
+  the pictures solved, and its note lists the picture keys. Nothing goes in
+  `visible_text`, so the close-out's `title not read` on it is expected.
+- **Missed text: 3 found.** The review grouped 119's `$` on the BANK emblem; the drawn
+  `♪` on 070 and 066 went on the ignore list.
+- **A TITLE ABOVE THE PANEL NEEDS `panel_num`.** The seed build refuses a group whose
+  boxes fall in no panel; Daisy's Dazed Days' title sits above its one panel.
+- `other:` values: `Gus Goose`, `the woman in the pink suit`, `a spectator`,
+  `the man in the green vest`, `the man in the red beret`.
