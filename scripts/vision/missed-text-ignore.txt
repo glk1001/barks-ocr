@@ -1092,3 +1092,7 @@ HELP KEEP AMERICA STRONG
 22 075 $
 22 075 ?
 24 027 $
+# Newly restored one-pagers, Vols. 23/27 (reviewer, 2026-10-30): drawn music notes, not
+# given a group -- Tight Shoes' panel 6 and the filler drawing on False Flattery
+23 070 ♪
+27 066 ♪
