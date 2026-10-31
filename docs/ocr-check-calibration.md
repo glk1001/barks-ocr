@@ -1275,6 +1275,16 @@ summary.
   2.8% of the reviewed boxes measuring fine and 40% of the deep crossings.
 - **`LOOSE_PADDING_PX = 25`** over an ink-free margin is `box_too_loose`, report only.
   Reviews rarely shrank a box, so there is nothing to calibrate a fix against.
+  "Ink-free" ignores shapes running out of the search region -- the balloon outline, its
+  tail, art -- since 2026-10-31: before, a box drawn out past its own balloon had the
+  outline in the margin and was never reported, so the loosest boxes were the ones
+  missed (Vol. 3 p011 g0). **`LOOSE_MIN_LINE_SPAN = 0.8`**: the measured lettering must
+  stand 0.8 letter heights per line of text, or some lines went unmeasured -- a joined
+  balloon read on one balloon's fill -- and the "blank" side may be lettering. The default
+  queue's `box_too_loose` entries, both engines, before and after: Vol. 3 0 → 164
+  (220 pages), Vol. 7 0 → 60, Vol. 12 0 → 30, Vol. 20 2 → 10. Of twelve sampled on
+  Vol. 3, most were boxes drawn past the balloon outline; the false ones were a joined
+  balloon (now held back by the line-span test) and a letter merged into the outline.
 
 - **`SHAPE_GREY_MAX = 170`, `FILL_TONE_TOLERANCE = 20`.** What joins into one shape, and
   where the balloon's fill is, are read at a looser cut than the lettering's extent, and the

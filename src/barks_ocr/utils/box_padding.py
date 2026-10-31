@@ -75,6 +75,19 @@ fails the size tests, so it goes unmeasured. That only ever makes the measured
 extent SMALLER, which can hide a clip but never invent one -- and it lowers the
 ink coverage, which is the gate on writing a fix.
 
+It CAN invent a loose side, which is why that verdict is report-only. A side is
+loose when it has more than ``LOOSE_PADDING_PX`` of padding and the strip
+between box and lettering holds no ink except shapes running out of the search
+region -- the balloon outline, its tail, art. Until 2026-10-31 the strip had to
+hold no ink at all, and a box drawn out past its own balloon has the outline in
+the strip, so the loosest boxes were exactly the ones never reported: the
+verdict fired on 0.1% of boxes, and missed Vol. 3 page 011 g0, 28px and 36px
+past the lettering and out over the panel's sky. The strip test alone took
+Vol. 3's easyocr count from 3 to 110, among them joined balloons measured on one
+balloon's fill; requiring the lettering to span the group's line count
+(``LOOSE_MIN_LINE_SPAN``) took it to 75. What still gets through is a letter
+merged into the outline at the side's edge.
+
 Only dialogue, thought and narration are judged. Sound effects, signs and titles
 are lettering drawn over art, where "the balloon's fill" does not exist and the
 measurement is noise.
@@ -121,6 +134,11 @@ HOUSE_PADDING_PX = 7  # the reviewed boxes' median, every side
 MIN_CLIP_PX = 2
 MAX_FIXABLE_CLIP_PX = 8  # a deeper crossing is a clip OR a mis-measure: a person decides
 LOOSE_PADDING_PX = 25  # this much blank fill on a side is box_too_loose
+# A box is judged loose only when its measured lettering stands at least this many
+# letter heights tall per line of the group's text. Shorter, and some of its lines
+# went unmeasured -- a joined balloon whose other parts sit in their own fill -- so
+# the blank "fill" on a side may be lettering.
+LOOSE_MIN_LINE_SPAN = 0.8
 MIN_INK_COVERAGE = 0.9  # the measured letters must explain this much of the box's ink to fix
 # Letters taller than this many of the page's reference line heights are display
 # lettering -- a shout, a song -- and are not judged. On the reviewed boxes this
@@ -169,7 +187,10 @@ class LetteringInk:
             measured lettering. Low when something dark the measurement could
             not place -- a letter merged into the outline, art -- is in there.
         empty_margins: Per side, in ``SIDES`` order, whether the strip between
-            the box edge and the lettering holds no ink at all.
+            the box edge and the lettering holds no ink other than shapes that
+            run out of the search region -- the balloon outline, its tail, art.
+        spans_its_lines: Whether the measured lettering is tall enough for the
+            group's line count, by ``LOOSE_MIN_LINE_SPAN``.
 
     """
 
@@ -177,6 +198,7 @@ class LetteringInk:
     letter_height: float
     coverage: float
     empty_margins: tuple[bool, bool, bool, bool]
+    spans_its_lines: bool
 
 
 @dataclass(frozen=True)
@@ -260,6 +282,13 @@ def _ring_in_fill(fill_labels: np.ndarray, component: np.ndarray, fill: int) -> 
     return float((fill_labels[ring > 0] == fill).mean())
 
 
+def _off_region(stats: np.ndarray, shape: tuple[int, ...]) -> np.ndarray:
+    """Return, per component, whether it runs off the search region: outline or art."""
+    height, width = shape[:2]
+    x, y, w, h = stats[:, 0], stats[:, 1], stats[:, 2], stats[:, 3]
+    return (x == 0) | (y == 0) | (x + w >= width) | (y + h >= height)
+
+
 def _letter_components(
     shapes: np.ndarray,
     ink: np.ndarray,
@@ -274,18 +303,19 @@ def _letter_components(
     """
     count, labels, stats, _ = cv2.connectedComponentsWithStats(shapes, connectivity=8)
     ink_px = np.bincount(labels[ink], minlength=count)
+    off_region = _off_region(stats, shapes.shape)
     gap = RING_GAP_PX
     padded_fill = cv2.copyMakeBorder(
         fill_labels, gap, gap, gap, gap, cv2.BORDER_CONSTANT, value=(-1,)
     )
-    height, width = shapes.shape
+    width = shapes.shape[1]
     letters: list[int] = []
     for i in range(1, count):
         x, y, w, h, area = (int(v) for v in stats[i])
         if ink_px[i] < MIN_COMPONENT_PX:
             continue
-        if x == 0 or y == 0 or x + w >= width or y + h >= height:
-            continue  # runs off the search region: outline or art
+        if off_region[i]:
+            continue  # outline or art
         if h > MAX_LETTER_HEIGHT_LINES * line_height or w > 0.9 * width:
             continue
         if max(w, h) > THIN_CURVE_MIN_LINES * line_height and area / (w * h) < (
@@ -449,11 +479,15 @@ def measure_lettering(gray: np.ndarray, text_box: list, n_lines: int) -> Letteri
     total = int(ink[inner_box].sum())
     coverage = float(lettering[inner_box].sum() / total) if total else 0.0
 
+    # The outline is left out of the margins: a box drawn past its balloon has the
+    # outline in the strip, and counting it made the loosest boxes of all -- the
+    # ones running out over the art -- the ones box_too_loose could never report.
+    stray = ink & ~_off_region(stats, region.shape)[labels]
     margins = (
-        ink[iy0:iy1, max(box[0], 0) : max(ix0 - 1, 0)],
-        ink[max(box[1], 0) : max(iy0 - 1, 0), ix0:ix1],
-        ink[iy0:iy1, ix1 + 1 : box[2]],
-        ink[iy1 + 1 : box[3], ix0:ix1],
+        stray[iy0:iy1, max(box[0], 0) : max(ix0 - 1, 0)],
+        stray[max(box[1], 0) : max(iy0 - 1, 0), ix0:ix1],
+        stray[iy0:iy1, ix1 + 1 : box[2]],
+        stray[iy1 + 1 : box[3], ix0:ix1],
     )
     empty = tuple(strip.size == 0 or not strip.any() for strip in margins)
 
@@ -462,6 +496,7 @@ def measure_lettering(gray: np.ndarray, text_box: list, n_lines: int) -> Letteri
         letter_height=letter_height,
         coverage=coverage,
         empty_margins=(empty[0], empty[1], empty[2], empty[3]),
+        spans_its_lines=iy1 - iy0 >= LOOSE_MIN_LINE_SPAN * n_lines * letter_height,
     )
 
 
@@ -588,7 +623,7 @@ def judge_padding(
     loose = [
         SIDES[side]
         for side, pad in enumerate(padding)
-        if pad > LOOSE_PADDING_PX and ink.empty_margins[side]
+        if pad > LOOSE_PADDING_PX and ink.empty_margins[side] and ink.spans_its_lines
     ]
     if loose:
         note = f"padding px {shown}; blank fill on the {', '.join(loose)}"
