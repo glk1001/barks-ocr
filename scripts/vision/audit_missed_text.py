@@ -39,6 +39,10 @@ such groups by hand in one batch while this reported two of them:
   everything that is not a letter or a digit, so these reduced to the empty string
   and were skipped as nothing to compare. ``device_key`` keeps the marks.
 
+A false class went the other way on 2026-11-01: a capture that splits one caption
+or sign into an entry per printed line made every line a finding. ``coalesce``
+joins such a run back into the grouped text it spells.
+
 Must be run with ``uv run`` from the barks-ocr checkout so the path deps resolve.
 """
 
@@ -267,6 +271,42 @@ def page_capture(capture_file: Path) -> list[str] | None:
     return capture.get(VISIBLE_TEXT_KEY) or None
 
 
+def coalesce(visible: list[str], grouped: set[str]) -> list[str]:
+    r"""Join runs of ``visible_text`` entries that together are one grouped text.
+
+    Some passes listed a caption or a sign one printed LINE (or word) per entry:
+    *Taming the Rapids* 087 carries ``AND`` and ``SO —`` for the caption grouped
+    as ``AND\nSO —``. Compared one at a time, neither entry is any group's text,
+    so each fell through to containment, sat inside a balloon, and reported as
+    quoted aloud. On 2026-11-01 that was 225 of the 458 findings in the corpus.
+
+    A run is joined only when its letters, together, are EXACTLY a group's text
+    on this page, longest run first. Every part must carry letters: a row of
+    ``$`` or ``!`` reduces to one mark under ``device_key``, so merging it would
+    hide the count that catches a device the engines boxed fewer times.
+
+    Args:
+        visible: The page's ``visible_text``, in the order the pass wrote it.
+        grouped: Every comparable grouped text on the page, from either engine.
+
+    Returns:
+        The entries, with each matching run replaced by one space-joined entry.
+
+    """
+    joined: list[str] = []
+    start = 0
+    while start < len(visible):
+        end = start + 1
+        for stop in range(len(visible), start + 1, -1):
+            run = visible[start:stop]
+            if all(normalize(item) for item in run) and normalize(" ".join(run)) in grouped:
+                end = stop
+                break
+        joined.append(" ".join(visible[start:end]))
+        start = end
+    return joined
+
+
 @dataclass(frozen=True)
 class PageIndex:
     """One page's grouped text, indexed the three ways the audit needs to ask about it.
@@ -362,6 +402,7 @@ def audit_title(
             every_text=set().union(*per_engine.values()) if per_engine else set(),
             logos=logos,
         )
+        visible = coalesce(visible, index.every_text)
         wanted = Counter(comparable(item) for item in visible)
         wanted.pop("", None)
         seen: Counter[str] = Counter()
