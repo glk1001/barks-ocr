@@ -1106,3 +1106,45 @@ HELP KEEP AMERICA STRONG
 1 260 ACME BAKING
 1 260 PIES CAKES
 1 260 PIE BERRY
+# Vol. 2 missed-text backlog (reviewer, 2026-11-01). 210: the cracker box shows only
+# CRACK under the hand's hand; the reviewer stored it whole as CRACKERS on purpose. The
+# rest are not given a group: the splash-panel credits on the story openers (031 041
+# 067 077 087 097 137 157), drawn sound effects (098 142 156 161), the OW!/WOW! read
+# aloud on 159, RETARY on 164 and the clipped GOPHE on 211.
+2 031 Donald Duck
+2 031 in "The Hard Loser"
+2 031 by Walt Disney
+2 041 Donald Duck
+2 041 in "Too Many Pets"
+2 041 by Walt Disney
+2 067 Donald Duck
+2 067 in
+2 067 "GOOD NEIGHBORS"
+2 067 by Walt Disney
+2 077 Donald Duck
+2 077 in
+2 077 "SALESMAN DONALD"
+2 077 by Walt Disney
+2 087 Donald Duck
+2 087 in
+2 087 SNOW FUN
+2 087 by Walt Disney
+2 097 Donald Duck
+2 097 by Walt Disney
+2 098 ZIP
+2 098 ZOW
+2 137 DONALD DUCK
+2 137 by WALT DISNEY
+2 142 CRACKLE
+2 142 FZZZZ
+2 142 ZZZ
+2 142 ZAZZ
+2 156 OW!
+2 157 Donald Duck
+2 157 by Walt Disney
+2 159 OW!
+2 159 WOW!
+2 161 WHAM
+2 164 RETARY
+2 210 CRACK
+2 211 GOPHE
