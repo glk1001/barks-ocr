@@ -1148,3 +1148,9 @@ HELP KEEP AMERICA STRONG
 2 164 RETARY
 2 210 CRACK
 2 211 GOPHE
+
+# Vol. 3 missed-text backlog (reviewer, 2026-11-01). 118: the splash credit; 131: the second
+# BAM SPLAT is the same sound repeated; 206: FIR sits inside a balloon's dialogue.
+3 118 Donald Duck
+3 131 BAM SPLAT
+3 206 FIR
