@@ -1096,3 +1096,13 @@ HELP KEEP AMERICA STRONG
 # given a group -- Tight Shoes' panel 6 and the filler drawing on False Flattery
 23 070 ♪
 27 066 ♪
+# Vol. 1 missed-text backlog (reviewer, 2026-11-01). 073: the badge on Donald's cap
+# is lettered CAPT; the reviewer stored it expanded as CAPTAIN on purpose, so the
+# printed form never matches a group. 258: the splash-panel credits. 260: the bakery
+# signs. None given a group.
+1 073 CAPT
+1 258 Donald Duck
+1 258 by Walt Disney
+1 260 ACME BAKING
+1 260 PIES CAKES
+1 260 PIE BERRY
