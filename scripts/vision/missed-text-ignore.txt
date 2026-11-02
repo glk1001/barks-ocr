@@ -1157,3 +1157,15 @@ HELP KEEP AMERICA STRONG
 
 # Vol. 4 missed-text backlog (reviewer, 2026-11-02). 084: DOGS is read aloud inside a balloon.
 4 084 DOGS
+
+# Vol. 5 missed-text backlog (reviewer, 2026-11-02). 197: the sign is cut by the panel edge at
+# EXPRE; the group stores EXPRESS deliberately. 016: all three ? are grouped, as ? and ? ?.
+# 088, 095: the second TAXI and BAM! WHAM! BAM! are the same lettering repeated.
+5 006 $
+5 016 ?
+5 017 *
+5 025 $
+5 088 TAXI
+5 095 BAM! WHAM! BAM!
+5 104 PARK
+5 197 EXPRE
