@@ -32,7 +32,6 @@ colorfmt
 colourist
 colours
 coords
-cscsv
 ctx
 denoise
 denoising

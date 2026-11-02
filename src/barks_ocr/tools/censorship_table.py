@@ -6,8 +6,8 @@ from barks_fantagraphics.censorship_fixes import CENSORSHIP_FIXES_HEADER, read_c
 from great_tables import GT, html, loc, style
 from PIL import Image, ImageChops
 
-# Written by `barks-ocr-censorship-csv`; see `tools/censorship_csv.py` for how the
-# derived columns are worked out.
+# Written by `barks-censorship-csv`, in barks-comic-building; see its `censorship_csv.py`
+# for how the derived columns are worked out.
 COLUMN_WIDTHS = {
     "Volume": "60px",
     "Image": "55px",

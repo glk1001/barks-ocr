@@ -92,5 +92,5 @@ kivy-editor-queue qfile:
 # Check the censorship fixes CSV against its own stories, then against the images
 [group('censorship')]
 check-censorship:
-    {{uv_run}} barks-ocr-censorship-csv --check
+    just comics censorship-csv --check
     just comics check-censorship-csv
