@@ -1285,6 +1285,15 @@ summary.
   (220 pages), Vol. 7 0 → 60, Vol. 12 0 → 30, Vol. 20 2 → 10. Of twelve sampled on
   Vol. 3, most were boxes drawn past the balloon outline; the false ones were a joined
   balloon (now held back by the line-span test) and a letter merged into the outline.
+- **`MERGED_LETTER_GAP_LETTERS = 0.3`.** A letter touching the outline merges into it and
+  was read as outline, so the side behind it looked blank -- commonest where a balloon
+  meets a panel border or black ground (Vol. 12 p013 g6). A side is blank only when no ink
+  lies within 0.3 letter heights past any row's own last letter. Scored against the
+  reviewer's loose-padding fixes of Vols. 1-11 (prelim commits of 2026-10-31): of 409
+  flagged sides the reviewer moved 234 in by 10px or more, and the test keeps 208 of them
+  while dropping 69 of the other 175 -- precision 57% to 66%. At 0.2 it keeps 221 and
+  drops 48; at 0.4, 201 and 79. Drop capitals merged into a caption border still get
+  through.
 
 - **`SHAPE_GREY_MAX = 170`, `FILL_TONE_TOLERANCE = 20`.** What joins into one shape, and
   where the balloon's fill is, are read at a looser cut than the lettering's extent, and the

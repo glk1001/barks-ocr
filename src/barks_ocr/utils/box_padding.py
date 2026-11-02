@@ -85,8 +85,19 @@ verdict fired on 0.1% of boxes, and missed Vol. 3 page 011 g0, 28px and 36px
 past the lettering and out over the panel's sky. The strip test alone took
 Vol. 3's easyocr count from 3 to 110, among them joined balloons measured on one
 balloon's fill; requiring the lettering to span the group's line count
-(``LOOSE_MIN_LINE_SPAN``) took it to 75. What still gets through is a letter
-merged into the outline at the side's edge.
+(``LOOSE_MIN_LINE_SPAN``) took it to 75.
+
+That let in the case the old test was there for: a letter touching the outline
+merges into it, counts as outline, and the side behind it reads as blank. It is
+commonest where a balloon meets a panel border or a black ground (Vol. 12 p013
+g6). Such a letter sits a letter's spacing past its row's last measured letter,
+so a side is blank only when nothing lies within ``MERGED_LETTER_GAP_LETTERS``
+of any row's own end -- see ``_row_gap``. Scored against the reviewer's fixes
+of Vols. 1-11 (prelim commits of 2026-10-31): of 409 sides the outline-blind
+test flagged, the reviewer moved 234 in by 10px or more; the gap test keeps 208
+of those and drops 69 of the other 175, precision 57% to 66%. Larger gaps cost
+more real fixes than they save. A drop capital merged into a caption border
+still gets through: it sits a word space off, not a letter's.
 
 Only dialogue, thought and narration are judged. Sound effects, signs and titles
 are lettering drawn over art, where "the balloon's fill" does not exist and the
@@ -139,6 +150,10 @@ LOOSE_PADDING_PX = 25  # this much blank fill on a side is box_too_loose
 # went unmeasured -- a joined balloon whose other parts sit in their own fill -- so
 # the blank "fill" on a side may be lettering.
 LOOSE_MIN_LINE_SPAN = 0.8
+# Ink this close past a row's own last letter, in letter heights, is a letter's
+# spacing away: a letter merged into the outline, which the measurement cannot
+# take, so the side is not blank fill. See _row_gap.
+MERGED_LETTER_GAP_LETTERS = 0.3
 MIN_INK_COVERAGE = 0.9  # the measured letters must explain this much of the box's ink to fix
 # Letters taller than this many of the page's reference line heights are display
 # lettering -- a shout, a song -- and are not judged. On the reviewed boxes this
@@ -287,6 +302,25 @@ def _off_region(stats: np.ndarray, shape: tuple[int, ...]) -> np.ndarray:
     height, width = shape[:2]
     x, y, w, h = stats[:, 0], stats[:, 1], stats[:, 2], stats[:, 3]
     return (x == 0) | (y == 0) | (x + w >= width) | (y + h >= height)
+
+
+def _row_gap(lettering: np.ndarray, ink: np.ndarray, side: int) -> int:
+    """Return the smallest gap, on *side*, from a row's own outermost letter to the next ink.
+
+    Rows for the left and right sides, columns for the top and bottom. Read from
+    each row's own end, not the lettering's extent: a rounded balloon's outline
+    cuts the extent's corners beside a short line, so read from the extent it
+    sits 0px off the lettering on half the boxes a reviewer did find loose.
+    """
+    turns = (2, 3, 0, 1)[side]  # np.rot90 turns that bring *side* round to the right
+    letters, dark = np.rot90(lettering, turns), np.rot90(ink, turns)
+    gap = dark.shape[1]
+    for row in np.nonzero(letters.any(axis=1))[0]:
+        end = int(np.nonzero(letters[row])[0][-1])
+        beyond = np.nonzero(dark[row, end + 1 :])[0]
+        if beyond.size:
+            gap = min(gap, int(beyond[0]))
+    return gap
 
 
 def _letter_components(
@@ -482,6 +516,11 @@ def measure_lettering(gray: np.ndarray, text_box: list, n_lines: int) -> Letteri
     # The outline is left out of the margins: a box drawn past its balloon has the
     # outline in the strip, and counting it made the loosest boxes of all -- the
     # ones running out over the art -- the ones box_too_loose could never report.
+    # But a letter touching the outline merges into it, so it is outline too, and
+    # the side behind it read as blank: Vol. 12 p013 g6's HELP, its P against the
+    # outline where the balloon meets a black panel ground, measured 32px of fill
+    # off a 5px gap. Such a letter sits a letter's spacing past its row's last
+    # measured letter, which the outline almost never does.
     stray = ink & ~_off_region(stats, region.shape)[labels]
     margins = (
         stray[iy0:iy1, max(box[0], 0) : max(ix0 - 1, 0)],
@@ -489,7 +528,11 @@ def measure_lettering(gray: np.ndarray, text_box: list, n_lines: int) -> Letteri
         stray[iy0:iy1, ix1 + 1 : box[2]],
         stray[iy1 + 1 : box[3], ix0:ix1],
     )
-    empty = tuple(strip.size == 0 or not strip.any() for strip in margins)
+    merged_reach = MERGED_LETTER_GAP_LETTERS * letter_height
+    empty = tuple(
+        (strip.size == 0 or not strip.any()) and _row_gap(lettering, ink, side) > merged_reach
+        for side, strip in enumerate(margins)
+    )
 
     return LetteringInk(
         bounds=(ix0 + rx0, iy0 + ry0, ix1 + rx0, iy1 + ry0),
