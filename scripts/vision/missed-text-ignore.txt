@@ -1154,3 +1154,6 @@ HELP KEEP AMERICA STRONG
 3 118 Donald Duck
 3 131 BAM SPLAT
 3 206 FIR
+
+# Vol. 4 missed-text backlog (reviewer, 2026-11-02). 084: DOGS is read aloud inside a balloon.
+4 084 DOGS
