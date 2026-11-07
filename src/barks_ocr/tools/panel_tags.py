@@ -61,14 +61,17 @@ HEADER_H = 34
 DEFAULT_NEAR_MISSES = 12
 
 # Bump JEV_QUESTION_VERSION whenever the wording changes, so old scores are re-asked.
-JEV_QUESTION_VERSION = "v1"
+JEV_QUESTION_VERSION = "v2"
 JEV_QUESTION = (
     "`image` is one panel from a Carl Barks Donald Duck comic. Does it contain at least "
-    "one silhouette: a character, figure, animal or piece of scenery (such as a skyline) "
-    "drawn as a solid, flat black or very dark shape with no interior detail? Count it "
-    "even when the silhouette is small or far away, or sits beside fully coloured "
-    "characters. A black-furred animal drawn with visible eyes, teeth or claws, or a "
-    "character wearing black clothes, is not a silhouette."
+    "one silhouette: a character, animal, figure or piece of scenery (trees, buildings, "
+    "a skyline) whose WHOLE shape is filled with flat black or one very dark colour, so "
+    "that its body, clothing and features are not drawn inside it (at most a white eye "
+    "may show)? Count it even when the silhouette is small or far away, or sits beside "
+    "fully coloured characters. Do NOT count: a normally drawn and coloured character "
+    "who wears black clothes or a black hat (such as Donald's black sailor jacket); a "
+    "black-furred animal whose face, muzzle, teeth or claws are drawn in; shadows cast "
+    "on the ground; dark doorways, windows or background areas."
 )
 DEFAULT_JEV_WORKERS = 8
 
