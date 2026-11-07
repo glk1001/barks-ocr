@@ -65,9 +65,9 @@ _SIZE_MULTIPLE = 16
 BARKS_PANELS_PNG = Path("/home/greg/Books/Carl Barks/Barks Panels Pngs")
 
 PANEL_TYPE = "Favourites"  # or "Censorship", "Closeups", "Insets", "Splash", "Silhouettes"
-TITLE = "Crown of the Mayas"
+TITLE = "Silent Night"
 EDITED = ""  # or "edited"
-IMAGE_FILENAME = "109-1.png"
+IMAGE_FILENAME = "253-2.png"
 
 _KEEP = (
     ", while keeping the exact same composition, framing, characters, poses, clothing,"
@@ -80,7 +80,12 @@ _KEEP_INK = (
 
 # The keys are the output-name styles; most match the Gemini script's suffixes.
 STYLE_PROMPTS: dict[str, str] = {
-    "photo": "Transform this comic book panel into a super-realistic 3D photograph" + _KEEP,
+    "photo": (
+        "Transform this comic book panel into a super-realistic photograph taken on location"
+        " with a camera, with real-world materials and textures such as moving water, foam and"
+        " spray, weathered wood, rough stone, feathers and woven fabric, and natural light, so"
+        " that nothing looks like clay, plastic or a miniature model" + _KEEP
+    ),
     "render3d": (
         "Transform this comic book panel into a highly detailed, realistic 3D render with"
         " lifelike textures, materials and cinematic lighting" + _KEEP
@@ -142,10 +147,27 @@ STYLES = [
     #    "clean",
 ]
 
-# Extra instructions for one panel, keyed by (TITLE, IMAGE_FILENAME) and appended to every
-# style's prompt whenever that panel is run.
-EXTRA_PROMPTS: dict[tuple[str, str], str] = {
+# Extra instructions for one panel, appended to the style's prompt when that panel is run. A
+# (TITLE, IMAGE_FILENAME) key applies to every style; a (TITLE, IMAGE_FILENAME, style) key to
+# that style alone. When both match, the panel-wide one comes first.
+EXTRA_PROMPTS: dict[tuple[str, str] | tuple[str, str, str], str] = {
     ("A Spicy Tale", "080-8.png"): "The panther must be colored black.",
+    ("Missile Fizzle", "093-7.png"): (
+        "The ducks are locked inside the two wooden crates, and each crate's front is a wire"
+        " mesh that sits in front of the ducks, so the ducks are seen through the wire."
+    ),
+    ("Pipeline to Danger", "079-6.png"): (
+        "The scene is in a dry desert far from any sea: the pale blue behind the characters is"
+        " a clear desert sky, the ground is dry desert sand, and there is no ocean, water or"
+        " waves anywhere. The duck riding the camel is seen in exact side profile facing left,"
+        " so only one eye shows: a single narrowed, angry eye just under the brim of his white"
+        " turban. His short beak points down and to the left, closed in a grim scowl, and he is"
+        " not smiling."
+    ),
+    ("Northeaster on Cape Quack", "014-6.png", "photo"): (
+        "This is a real photograph of a storm at sea at night: the sky is black, and the"
+        " crashing waves, spray and rocks are lit by the lighthouse lamp."
+    ),
 }
 
 # The models each style is run on, one output per model; a style not listed here runs on
@@ -185,6 +207,21 @@ def get_style_models(style: str) -> list[str]:
 
     """
     return STYLE_MODELS.get(style, [DEFAULT_MODEL])
+
+
+def get_extra_prompt(style: str) -> str:
+    """Return the EXTRA_PROMPTS text for the configured panel in one style.
+
+    Args:
+        style: The style being run.
+
+    Returns:
+        The panel-wide extra prompt and the one for this style, joined by a space; empty if
+        there is neither.
+
+    """
+    keys = ((TITLE, IMAGE_FILENAME), (TITLE, IMAGE_FILENAME, style))
+    return " ".join(EXTRA_PROMPTS[key] for key in keys if key in EXTRA_PROMPTS)
 
 
 def get_dest_image(srce_image: Path, style: str, model: str) -> Path:
@@ -396,6 +433,10 @@ def main() -> None:
     if unknown:
         msg = f"Unknown styles {unknown}; choose from {list(STYLE_PROMPTS)}."
         raise ValueError(msg)
+    bad_keys = [key for key in EXTRA_PROMPTS if not set(key[2:]) <= STYLE_PROMPTS.keys()]
+    if bad_keys:
+        msg = f"EXTRA_PROMPTS keys {bad_keys} name unknown styles."
+        raise ValueError(msg)
     jobs = [(style, model) for style in STYLES for model in get_style_models(style)]
     untagged = {model for _, model in jobs} - MODEL_TAGS.keys()
     if untagged:
@@ -408,12 +449,10 @@ def main() -> None:
             f"Sending {original.width}x{original.height} panel at {panel.width}x{panel.height}."
         )
 
-    extra_prompt = EXTRA_PROMPTS.get((TITLE, IMAGE_FILENAME), "")
-    if extra_prompt:
-        logger.info(f"Extra prompt for this panel: {extra_prompt}")
-
     client = get_client()
-    saved = sum(restyle_panel(client, panel, style, model, extra_prompt) for style, model in jobs)
+    saved = sum(
+        restyle_panel(client, panel, style, model, get_extra_prompt(style)) for style, model in jobs
+    )
     logger.info(f"Saved {saved} of {len(jobs)} outputs for {srce_image}.")
 
 
