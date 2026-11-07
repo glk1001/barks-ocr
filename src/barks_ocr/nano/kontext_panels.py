@@ -26,6 +26,7 @@ for. A standard 806x616 panel goes out at 1168x896.
 
 import base64
 import io
+import json
 import math
 import os
 from pathlib import Path
@@ -33,6 +34,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 from huggingface_hub import InferenceClient
 from huggingface_hub.errors import HfHubHTTPError
+from huggingface_hub.inference._common import RequestParameters
+from huggingface_hub.inference._providers import fal_ai
 from loguru import logger
 from PIL import Image
 
@@ -46,6 +49,11 @@ MODEL_TAGS: dict[str, str] = {KONTEXT_MODEL: "kontext", FLUX2_MODEL: "flux2"}
 # fal's FLUX.2 edit endpoint reads a list of images (image_urls) and returns no image when sent
 # only the single image_url the Hugging Face client fills in, so these models get the list.
 _MODELS_TAKING_IMAGE_LIST = {FLUX2_MODEL}
+
+# fal's content checker on FLUX.2 flags some ordinary panels (Farragut the Falcon 159-4) as
+# content_policy_violation, where Kontext takes them. False turns it off for FLUX.2 requests;
+# True restores fal's default.
+FLUX2_SAFETY_CHECKER = False
 
 # Resize each panel to about this many megapixels before sending; None sends it as it is.
 TARGET_MEGAPIXELS: float | None = 1.05
@@ -250,6 +258,53 @@ def _as_data_url(image: Image.Image) -> str:
     return "data:image/png;base64," + base64.b64encode(buffer.getvalue()).decode("ascii")
 
 
+class NoImageReplyError(RuntimeError):
+    """The provider answered, but its reply held no image; the message is the reply."""
+
+
+_MAX_REPLY_CHARS = 1000
+_fal_get_response = fal_ai.FalAIImageToImageTask.get_response
+
+
+def _drop_echoed_input(reply: object) -> object:
+    """Return a fal reply without the ``input`` it echoes back, which holds the whole image.
+
+    A rejection repeats the full request, base64 panel and all, inside each ``detail`` entry;
+    the reason (``msg``, ``type``) is what is worth logging.
+    """
+    if isinstance(reply, dict):
+        return {key: _drop_echoed_input(value) for key, value in reply.items() if key != "input"}
+    if isinstance(reply, list):
+        return [_drop_echoed_input(item) for item in reply]
+    return reply
+
+
+def _get_response_or_explain(
+    self: fal_ai.FalAIImageToImageTask,
+    response: bytes | dict,
+    request_params: RequestParameters | None = None,
+) -> bytes:
+    """Wrap fal's image-to-image reply parsing so a reply with no image says what it held.
+
+    The Hugging Face client reads ``reply["images"][0]["url"]`` and lets a bare
+    ``KeyError: 'images'`` escape when fal answers without one (a low balance, a moderation
+    block or a rejected input), hiding the reason. This re-reads the finished reply and puts
+    its text in the error instead.
+    """
+    try:
+        return _fal_get_response(self, response, request_params)
+    except KeyError as e:
+        reply = fal_ai.FalAIQueueTask.get_response(self, response, request_params)
+        reply_dict = fal_ai._as_dict(reply)  # noqa: SLF001
+        text = json.dumps(_drop_echoed_input(reply_dict))[:_MAX_REPLY_CHARS]
+        raise NoImageReplyError(text) from e
+
+
+# huggingface_hub has no hook for this, so its private fal provider class is patched; pinned
+# by uv.lock, and only image-to-image replies are affected.
+fal_ai.FalAIImageToImageTask.get_response = _get_response_or_explain
+
+
 def restyle_panel(
     client: InferenceClient,
     panel: Image.Image,
@@ -279,19 +334,25 @@ def restyle_panel(
         logger.warning(f'Skipping "{style}" ({tag}): "{dest_image}" already exists.')
         return False
 
-    # None is dropped from the provider payload, so other models get no image_urls key.
+    # None is dropped from the provider payload, so other models get neither key.
     image_urls = [_as_data_url(panel)] if model in _MODELS_TAKING_IMAGE_LIST else None
+    safety_checker = FLUX2_SAFETY_CHECKER if model == FLUX2_MODEL else None
 
     prompt = f"{STYLE_PROMPTS[style]} {extra_prompt}".strip()
     logger.info(f'"{style}" ({tag}): {prompt}')
     try:
-        output = client.image_to_image(panel, prompt=prompt, model=model, image_urls=image_urls)
+        output = client.image_to_image(
+            panel,
+            prompt=prompt,
+            model=model,
+            image_urls=image_urls,
+            enable_safety_checker=safety_checker,
+        )
     except HfHubHTTPError as e:
         logger.error(f'"{style}" ({tag}) failed, nothing saved: {e}')
         return False
-    except KeyError:
-        # The client raises this when the provider's reply holds no image.
-        logger.error(f'"{style}" ({tag}): the model returned no image, nothing saved.')
+    except NoImageReplyError as e:
+        logger.error(f'"{style}" ({tag}): the model returned no image, nothing saved. Reply: {e}')
         return False
 
     dest_image.parent.mkdir(parents=True, exist_ok=True)
