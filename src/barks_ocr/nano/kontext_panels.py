@@ -25,6 +25,7 @@ for. A standard 806x616 panel goes out at 1168x896.
 # cspell:words Kontext impres Ansel huggingface
 
 import base64
+import functools
 import io
 import json
 import math
@@ -38,6 +39,8 @@ from huggingface_hub.inference._common import RequestParameters
 from huggingface_hub.inference._providers import fal_ai
 from loguru import logger
 from PIL import Image
+
+from barks_ocr.nano.finishing import find_frame, finish, remove_frame
 
 KONTEXT_MODEL = "black-forest-labs/FLUX.1-Kontext-dev"
 FLUX2_MODEL = "black-forest-labs/FLUX.2-dev"
@@ -152,6 +155,11 @@ STYLE_MODELS: dict[str, list[str]] = {
     "water": [KONTEXT_MODEL, FLUX2_MODEL],
     "pastel": [KONTEXT_MODEL, FLUX2_MODEL],
 }
+
+# Styles whose outputs are finished (auto white balance + unsharp mask, see finishing.py)
+# before they are saved, so the saved output is the finished image. Outputs saved before a
+# style was added here are left as they are; finishing.py can do them by hand.
+FINISH_STYLES: set[str] = {"photo", "oil", "impres", "water", "pastel", "ansel", "recolor"}
 
 
 def get_source_image() -> Path:
@@ -305,6 +313,13 @@ def _get_response_or_explain(
 fal_ai.FalAIImageToImageTask.get_response = _get_response_or_explain
 
 
+@functools.cache
+def _has_frame(image_file: Path) -> bool:
+    """Return whether an image has a frame drawn round it, so a model's copy of it is kept."""
+    with Image.open(image_file) as image:
+        return find_frame(image) is not None
+
+
 def restyle_panel(
     client: InferenceClient,
     panel: Image.Image,
@@ -355,9 +370,19 @@ def restyle_panel(
         logger.error(f'"{style}" ({tag}): the model returned no image, nothing saved. Reply: {e}')
         return False
 
+    unframed = None if _has_frame(get_source_image()) else remove_frame(output)
+    if unframed is not None:
+        logger.info(f'"{style}" ({tag}): removed a frame the model drew around the panel.')
+        output = unframed
+
+    finished = style in FINISH_STYLES
+    if finished:
+        output = finish(output)
+
     dest_image.parent.mkdir(parents=True, exist_ok=True)
     output.save(dest_image)
-    logger.info(f'Saved "{dest_image}" ({output.width}x{output.height}).')
+    note = ", finished" if finished else ""
+    logger.info(f'Saved "{dest_image}" ({output.width}x{output.height}{note}).')
     return True
 
 
