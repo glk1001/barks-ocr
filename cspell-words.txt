@@ -72,12 +72,14 @@ hexcode
 hlines
 hotpink
 ikey
+imencode
 imread
 imwrite
 inducks
 initargs
 inpaint
 intspan
+jev
 jpgs
 kivy
 kontext
@@ -98,6 +100,7 @@ neighbours
 normalise
 normalised
 norp
+noul
 numpad
 ocrc
 onchange
@@ -134,6 +137,7 @@ timespec
 tobytes
 torchao
 touchpads
+typesafe
 uncompared
 uncurated
 ungrab

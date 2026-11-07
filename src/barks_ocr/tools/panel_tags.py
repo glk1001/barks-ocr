@@ -16,11 +16,17 @@ null (not yet labelled); ``source`` says who decided it.
 ranking signal, not a gate: small distant silhouettes score like ordinary panels
 (Back to the Klondike 30-7 scores 0.02), so a cut-off that keeps every silhouette lets
 nearly every panel through.
+
+``jev`` asks TypeSafe's Jev model a yes/no silhouette question per panel and stores the
+probability as ``jev_score`` with ``jev_model`` and ``jev_question`` (the wording's
+version). A panel already scored with the current wording is skipped, so a rerun pays
+only for what is missing. It never touches a label either.
 """
 
 # ruff: noqa: T201
 
 import json
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -34,6 +40,7 @@ from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from loguru import logger
 
 from barks_ocr.cli_setup import get_comic_titles, init_logging
+from barks_ocr.utils.typesafe_jev import JevClient, NoulAnswer
 
 APP_LOGGING_NAME = "ptag"
 
@@ -52,6 +59,18 @@ THUMB_W, THUMB_H, SHEET_COLS = 300, 230, 6
 CAPTION_H = 22
 HEADER_H = 34
 DEFAULT_NEAR_MISSES = 12
+
+# Bump JEV_QUESTION_VERSION whenever the wording changes, so old scores are re-asked.
+JEV_QUESTION_VERSION = "v1"
+JEV_QUESTION = (
+    "`image` is one panel from a Carl Barks Donald Duck comic. Does it contain at least "
+    "one silhouette: a character, figure, animal or piece of scenery (such as a skyline) "
+    "drawn as a solid, flat black or very dark shape with no interior detail? Count it "
+    "even when the silhouette is small or far away, or sits beside fully coloured "
+    "characters. A black-furred animal drawn with visible eyes, teeth or claws, or a "
+    "character wearing black clothes, is not a silhouette."
+)
+DEFAULT_JEV_WORKERS = 8
 
 app = typer.Typer(help="Tag panels (silhouettes) and build per-title contact sheets.")
 
@@ -208,8 +227,9 @@ class SheetItem:
 
     @property
     def score(self) -> float:
-        """The pixel score, 0 when not yet scored."""
-        return float(self.tag.get("pixel_score") or 0.0)
+        """The Jev score when there is one, else the pixel score; 0 when not yet scored."""
+        jev = self.tag.get("jev_score")
+        return float(jev if jev is not None else self.tag.get("pixel_score") or 0.0)
 
 
 def sheet_sections(
@@ -217,8 +237,9 @@ def sheet_sections(
 ) -> list[tuple[str, list[SheetItem]]]:
     """Split a title's panels into the sheet's Yes / Unsure / Near-miss sections.
 
-    Near misses are the highest pixel scores among panels not labelled yes or unsure, so a
-    real silhouette that was rejected (or never labelled) shows up for a second look.
+    Near misses are the highest scores (Jev's where present, else pixel) among panels not
+    labelled yes or unsure, so a real silhouette that was rejected (or never labelled)
+    shows up for a second look.
     """
     items = [SheetItem(p, r) for p in pages for r in load_tags(p)]
     labelled = [i for i in items if tag in i.row["tags"]]
@@ -230,7 +251,7 @@ def sheet_sections(
     return [
         (f"{tag.upper()}: YES ({len(yes)})", yes),
         (f"UNSURE ({len(unsure)})", unsure),
-        (f"NEAR MISSES: top {len(rest)} pixel scores not labelled yes/unsure", rest),
+        (f"NEAR MISSES: top {len(rest)} scores not labelled yes/unsure", rest),
     ]
 
 
@@ -239,7 +260,10 @@ def _caption(item: SheetItem) -> str:
     source = item.tag.get("source") or "-"
     index = item.row["index"]
     what = source if label == "yes" else label
-    return f"{item.page.fanta_page}:{index} ({item.page.story_page}-{index}) {what}"
+    scores = f"p{float(item.tag.get('pixel_score') or 0):.2f}"
+    if item.tag.get("jev_score") is not None:
+        scores += f" j{float(item.tag['jev_score']):.2f}"
+    return f"{item.page.fanta_page}:{index} ({item.page.story_page}-{index}) {what} {scores}"
 
 
 def build_sheet(title: str, sections: list[tuple[str, list[SheetItem]]], out_file: Path) -> None:
@@ -311,6 +335,52 @@ def write_sheet(
     return out
 
 
+def jev_title(pages: list[PagePanels], client: JevClient, workers: int, *, force: bool) -> int:
+    """Ask Jev about every panel of a title not yet scored with the current wording.
+
+    Args:
+        pages: The title's pages.
+        client: The Jev client.
+        workers: Concurrent requests.
+        force: Re-ask panels already scored with the current wording.
+
+    Returns:
+        The input tokens billed.
+
+    """
+    loaded = [(page, load_tags(page)) for page in pages]
+    todo: list[tuple[PagePanels, dict[str, Any]]] = []
+    for page, rows in loaded:
+        for row in rows:
+            tag = row["tags"].setdefault(
+                SILHOUETTE, {"label": None, "source": None, "pixel_score": None, "note": ""}
+            )
+            if force or tag.get("jev_question") != JEV_QUESTION_VERSION:
+                todo.append((page, row))
+    cache: dict[Path, np.ndarray] = {}
+    for page, _ in todo:
+        if page.image_file not in cache:
+            cache[page.image_file] = load_rgb(page.image_file)
+
+    def ask(item: tuple[PagePanels, dict[str, Any]]) -> NoulAnswer:
+        page, row = item
+        crop = crop_panel(cache[page.image_file], segments_size(page.segments_file), row["box"])
+        return client.ask_image_noul(crop, JEV_QUESTION)
+
+    tokens = 0
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for (_, row), answer in zip(todo, pool.map(ask, todo), strict=True):
+            tag = row["tags"][SILHOUETTE]
+            tag["jev_score"] = round(answer.probability, 4)
+            tag["jev_model"] = answer.model
+            tag["jev_question"] = JEV_QUESTION_VERSION
+            tokens += answer.input_tokens
+    for page, rows in loaded:
+        save_tags(page, rows)
+    logger.info(f"Jev scored {len(todo)} panels for {tokens} input tokens.")
+    return tokens
+
+
 NearMissesOpt = typer.Option(DEFAULT_NEAR_MISSES, "--near-misses", help="Near misses per sheet.")
 
 
@@ -330,6 +400,31 @@ def score(
         out = write_sheet(comics_database, title, tags_root, near_misses)
         logger.info(f'"{title}": scored {n} panels; sheet "{out}".')
         print(f"{title}: {n} panels scored -> {out}")
+
+
+@app.command(help="Ask Jev (TypeSafe API, billed) a silhouette question about every panel.")
+def jev(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    workers: int = typer.Option(DEFAULT_JEV_WORKERS, "--workers", help="Concurrent requests."),
+    force: bool = typer.Option(default=False, help="Re-ask panels already scored."),
+    near_misses: int = NearMissesOpt,
+    log_level_str: LogLevelArg = "INFO",
+) -> None:
+    """Score each title's panels with Jev and rebuild its contact sheet."""
+    init_logging(APP_LOGGING_NAME, "panel-tags.log", log_level_str)
+    comics_database, titles = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
+    tags_root = get_panel_tags_root(comics_database)
+    client = JevClient()
+    total = 0
+    for title in titles:
+        tokens = jev_title(
+            title_pages(comics_database, title, tags_root), client, workers, force=force
+        )
+        total += tokens
+        out = write_sheet(comics_database, title, tags_root, near_misses)
+        print(f"{title}: {tokens} input tokens -> {out}")
+    print(f"Total: {total} input tokens.")
 
 
 @app.command(help="Build the silhouette contact sheet from the tags as they stand.")
