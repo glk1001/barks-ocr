@@ -460,6 +460,69 @@ def checked_pages(
     return pages
 
 
+def parse_panel_ids(text: str) -> list[tuple[str, int]]:
+    """Parse ``014:5,15:2`` into ``[("014", 5), ("015", 2)]`` (fanta page, panel index).
+
+    Raises:
+        typer.BadParameter: On an id that is not ``page:panel``.
+
+    """
+    ids = []
+    for raw in filter(None, (t.strip() for t in text.split(","))):
+        page, sep, panel = raw.partition(":")
+        if not (sep and page.isdigit() and panel.isdigit()):
+            msg = f'"{raw}" is not a page:panel id such as 014:5.'
+            raise typer.BadParameter(msg)
+        ids.append((page.zfill(3), int(panel)))
+    return ids
+
+
+def apply_labels(
+    pages: list[PagePanels],
+    wanted: dict[tuple[str, int], str],
+    *,
+    accept_candidates: bool,
+) -> dict[str, int]:
+    """Write a reviewer's labels (source ``human``) into a title's tag files.
+
+    Args:
+        pages: The title's pages.
+        wanted: (fanta page, panel index) to ``yes``, ``no`` or ``unsure``; these override
+            any existing label.
+        accept_candidates: Also label ``yes`` every unlabelled candidate not in ``wanted``.
+            Other unlabelled panels stay unlabelled: nobody looked at them one by one.
+
+    Returns:
+        How many panels were set to each label.
+
+    Raises:
+        typer.BadParameter: If an id is not a panel of this title; nothing is written then.
+
+    """
+    loaded = [(page, load_tags(page)) for page in pages]
+    known = {(page.fanta_page, row["index"]) for page, rows in loaded for row in rows}
+    if unknown := sorted(set(wanted) - known):
+        ids = ", ".join(f"{p}:{i}" for p, i in unknown)
+        msg = f"Not panels of this title: {ids}."
+        raise typer.BadParameter(msg)
+    counts = {"yes": 0, "no": 0, "unsure": 0}
+    for page, rows in loaded:
+        for row in rows:
+            item = SheetItem(page, row)
+            label = wanted.get((page.fanta_page, row["index"]))
+            if label is None and accept_candidates and item.tag.get("label") is None:
+                label = "yes" if item.score >= 1.0 else None
+            if label is None:
+                continue
+            tag = row["tags"].setdefault(
+                SILHOUETTE, {"label": None, "source": None, "pixel_score": None, "note": ""}
+            )
+            tag["label"], tag["source"] = label, "human"
+            counts[label] += 1
+        save_tags(page, rows)
+    return counts
+
+
 NearMissesOpt = typer.Option(DEFAULT_NEAR_MISSES, "--near-misses", help="Near misses per sheet.")
 
 
@@ -506,6 +569,42 @@ def jev(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
         out = write_sheet(comics_database, title, tags_root, near_misses)
         print(f"{title}: {tokens} input tokens -> {out}")
     print(f"Total: {total} input tokens.")
+
+
+@app.command(help="Record a contact-sheet review: list the exceptions, accept the rest.")
+def label(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
+    title_str: TitleArg,
+    reject: str = typer.Option("", "--reject", help="page:panel ids to label no, e.g. 014:5,014:6"),
+    add: str = typer.Option("", "--add", help="page:panel ids to label yes (any panel)."),
+    unsure: str = typer.Option("", "--unsure", help="page:panel ids to label unsure."),
+    accept_candidates: bool = typer.Option(
+        default=False, help="Label yes every unlabelled candidate not listed above."
+    ),
+    near_misses: int = NearMissesOpt,
+    log_level_str: LogLevelArg = "INFO",
+) -> None:
+    """Label one title's panels from a contact-sheet review, then rebuild its sheet."""
+    init_logging(APP_LOGGING_NAME, "panel-tags.log", log_level_str)
+    wanted: dict[tuple[str, int], str] = {}
+    for text, lab in ((reject, "no"), (add, "yes"), (unsure, "unsure")):
+        for pid in parse_panel_ids(text):
+            if wanted.get(pid, lab) != lab:
+                msg = f"{pid[0]}:{pid[1]} is given two labels ({wanted[pid]} and {lab})."
+                raise typer.BadParameter(msg)
+            wanted[pid] = lab
+    if not wanted and not accept_candidates:
+        msg = "Nothing to do: give --reject/--add/--unsure ids and/or --accept-candidates."
+        raise typer.BadParameter(msg)
+    comics_database = ComicsDatabase()
+    tags_root = get_panel_tags_root(comics_database)
+    if (pages := checked_pages(comics_database, title_str, tags_root)) is None:
+        raise typer.Exit(code=1)
+    counts = apply_labels(pages, wanted, accept_candidates=accept_candidates)
+    out = write_sheet(comics_database, title_str, tags_root, near_misses)
+    logger.info(f'"{title_str}": labelled {counts} (source human).')
+    print(
+        f"{title_str}: yes {counts['yes']}, no {counts['no']}, unsure {counts['unsure']} -> {out}"
+    )
 
 
 @app.command(help="Build the silhouette contact sheet from the tags as they stand.")
