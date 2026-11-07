@@ -59,6 +59,10 @@ THUMB_W, THUMB_H, SHEET_COLS = 300, 230, 6
 CAPTION_H = 22
 HEADER_H = 34
 DEFAULT_NEAR_MISSES = 12
+# Unlabelled panels at or above this Jev score go in a sheet's Candidates section. On the
+# labelled Back to the Klondike panels every silhouette scored 0.94+ under question v2;
+# 0.7 leaves a margin, since a missed silhouette costs more than a false alarm.
+CANDIDATE_MIN = 0.7
 
 # Bump JEV_QUESTION_VERSION whenever the wording changes, so old scores are re-asked.
 JEV_QUESTION_VERSION = "v2"
@@ -238,23 +242,29 @@ class SheetItem:
 def sheet_sections(
     pages: list[PagePanels], tag: str, near_misses: int
 ) -> list[tuple[str, list[SheetItem]]]:
-    """Split a title's panels into the sheet's Yes / Unsure / Near-miss sections.
+    """Split a title's panels into the sheet's Yes / Unsure / Candidates / Near-miss sections.
 
-    Near misses are the highest scores (Jev's where present, else pixel) among panels not
-    labelled yes or unsure, so a real silhouette that was rejected (or never labelled)
-    shows up for a second look.
+    Candidates are unlabelled panels whose Jev score is at least ``CANDIDATE_MIN``, in page
+    order: after a Jev run over unreviewed titles, they are the panels to check. Near
+    misses are the highest remaining scores (Jev's where present, else pixel), so a real
+    silhouette that was rejected or fell under the cut-off shows up for a second look.
     """
     items = [SheetItem(p, r) for p in pages for r in load_tags(p)]
-    labelled = [i for i in items if tag in i.row["tags"]]
-    yes = [i for i in labelled if i.row["tags"][tag]["label"] == "yes"]
-    unsure = [i for i in labelled if i.row["tags"][tag]["label"] == "unsure"]
-    rest = sorted((i for i in items if i not in yes and i not in unsure), key=lambda i: -i.score)[
-        :near_misses
+    yes = [i for i in items if i.tag.get("label") == "yes"]
+    unsure = [i for i in items if i.tag.get("label") == "unsure"]
+    candidates = [
+        i
+        for i in items
+        if i.tag.get("label") is None and (i.tag.get("jev_score") or 0.0) >= CANDIDATE_MIN
     ]
+    shown = {id(i) for i in (*yes, *unsure, *candidates)}
+    rest = sorted((i for i in items if id(i) not in shown), key=lambda i: -i.score)
+    rest = rest[:near_misses]
     return [
         (f"{tag.upper()}: YES ({len(yes)})", yes),
         (f"UNSURE ({len(unsure)})", unsure),
-        (f"NEAR MISSES: top {len(rest)} scores not labelled yes/unsure", rest),
+        (f"CANDIDATES: unlabelled, Jev >= {CANDIDATE_MIN} ({len(candidates)})", candidates),
+        (f"NEAR MISSES: top {len(rest)} other scores", rest),
     ]
 
 
