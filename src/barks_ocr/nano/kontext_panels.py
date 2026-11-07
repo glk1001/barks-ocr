@@ -94,8 +94,9 @@ STYLE_PROMPTS: dict[str, str] = {
         " of the flat colors" + _KEEP_INK
     ),
     "halftone": (
-        "Recolor this comic book panel using classic printed half-tone dot shading in place of"
-        " the flat colors" + _KEEP_INK
+        "Recolor this comic book panel using Ben-Day dots like a 1950s printed comic, where every"
+        " colored area is made of evenly spaced round dots of printing ink on white paper in a"
+        " regular grid" + _KEEP_INK
     ),
     "clean": (
         "Clean up this comic book panel by sharpening and smoothing the black ink lines and"
@@ -103,7 +104,23 @@ STYLE_PROMPTS: dict[str, str] = {
     ),
 }
 
-STYLES = ["photo", "oil", "impres", "water", "pastel", "ansel", "recolor", "halftone", "clean"]
+STYLES = [
+    "photo",
+    "oil",
+    "impres",
+    "water",
+    "pastel",
+    "ansel",
+    "recolor",
+    "halftone",
+    #    "clean",
+]
+
+# Extra instructions for one panel, keyed by (TITLE, IMAGE_FILENAME) and appended to every
+# style's prompt whenever that panel is run.
+EXTRA_PROMPTS: dict[tuple[str, str], str] = {
+    ("A Spicy Tale", "080-8.png"): "The panther must be colored black.",
+}
 
 
 def get_source_image() -> Path:
@@ -188,7 +205,11 @@ def load_panel_to_send(srce_image: Path) -> Image.Image:
 
 
 def restyle_panel(
-    client: InferenceClient, panel: Image.Image, style: str, dest_image: Path
+    client: InferenceClient,
+    panel: Image.Image,
+    style: str,
+    dest_image: Path,
+    extra_prompt: str = "",
 ) -> bool:
     """Restyle one panel in one style and save it, unless the output already exists.
 
@@ -200,6 +221,7 @@ def restyle_panel(
         panel: The panel image to send, already at the size wanted back.
         style: A key of STYLE_PROMPTS.
         dest_image: Where to save the output.
+        extra_prompt: Instructions for this panel, appended to the style's prompt.
 
     Returns:
         True if an image was saved.
@@ -209,7 +231,7 @@ def restyle_panel(
         logger.warning(f'Skipping "{style}": "{dest_image}" already exists.')
         return False
 
-    prompt = STYLE_PROMPTS[style]
+    prompt = f"{STYLE_PROMPTS[style]} {extra_prompt}".strip()
     logger.info(f'"{style}": {prompt}')
     try:
         output = client.image_to_image(panel, prompt=prompt, model=MODEL)
@@ -240,9 +262,14 @@ def main() -> None:
             f"Sending {original.width}x{original.height} panel at {panel.width}x{panel.height}."
         )
 
+    extra_prompt = EXTRA_PROMPTS.get((TITLE, IMAGE_FILENAME), "")
+    if extra_prompt:
+        logger.info(f"Extra prompt for this panel: {extra_prompt}")
+
     client = get_client()
     saved = sum(
-        restyle_panel(client, panel, style, get_dest_image(srce_image, style)) for style in STYLES
+        restyle_panel(client, panel, style, get_dest_image(srce_image, style), extra_prompt)
+        for style in STYLES
     )
     logger.info(f"Saved {saved} of {len(STYLES)} styles for {srce_image}.")
 
