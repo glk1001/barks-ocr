@@ -80,6 +80,7 @@ inpaint
 intspan
 jpgs
 kivy
+kontext
 kpoe
 lanczos
 leafgrn
