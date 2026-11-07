@@ -1,4 +1,4 @@
-"""Minimal client for TypeSafe's Jev (System One API): one image, one yes/no question.
+"""Minimal client for TypeSafe's Jev (System One API): one image, yes/no questions.
 
 Docs: https://docs.typesafe.ai (images.md, api.md). Image support is marked "Dreamer-ready"
 (experimental) by TypeSafe and needs the ``TypeSafe-Danger-Zone-Images`` header. Images
@@ -40,6 +40,15 @@ class NoulAnswer:
     input_tokens: int
 
 
+@dataclass(frozen=True)
+class NoulAnswers:
+    """Yes/no answers to several questions about one image, keyed by question id."""
+
+    probabilities: dict[str, float]
+    model: str
+    input_tokens: int
+
+
 class JevError(RuntimeError):
     """A request Jev refused for a reason retrying will not fix (key, credits, format)."""
 
@@ -64,7 +73,7 @@ def fit_image(rgb: np.ndarray) -> np.ndarray:
 
 
 class JevClient:
-    """Ask Jev one yes/no question about one image per request."""
+    """Ask Jev yes/no questions about one image per request."""
 
     def __init__(self, api_key: str | None = None) -> None:
         """Create a client.
@@ -84,7 +93,7 @@ class JevClient:
         self._http = httpx.Client(timeout=TIMEOUT_S)
 
     def ask_image_noul(self, rgb: np.ndarray, instructions: str) -> NoulAnswer:
-        """Ask a yes/no question about an image, which the instructions call `image`.
+        """Ask one yes/no question about an image, which the instructions call `image`.
 
         Args:
             rgb: The image, RGB uint8; it is fitted to Jev's size limits first.
@@ -92,6 +101,26 @@ class JevClient:
 
         Returns:
             The answer.
+
+        Raises:
+            JevError: On a non-retryable refusal, or when every retry failed.
+
+        """
+        answers = self.ask_image_questions(rgb, {"q": instructions})
+        return NoulAnswer(answers.probabilities["q"], answers.model, answers.input_tokens)
+
+    def ask_image_questions(self, rgb: np.ndarray, questions: dict[str, str]) -> NoulAnswers:
+        """Ask several yes/no questions about one image in one request.
+
+        The image goes in the request's ``state``, which every question shares, rather than
+        in each question's instructions (which would send it once per question).
+
+        Args:
+            rgb: The image, RGB uint8; it is fitted to Jev's size limits first.
+            questions: Question id (an identifier) to instructions; call the picture `image`.
+
+        Returns:
+            The answers, keyed by question id.
 
         Raises:
             JevError: On a non-retryable refusal, or when every retry failed.
@@ -105,7 +134,9 @@ class JevClient:
             "model": MODEL,
             "state": {"image": "img"},
             "assets": {"img": {"type": "image", "part": "image-part"}},
-            "questions": {"q": {"type": "noul", "instructions": instructions}},
+            "questions": {
+                qid: {"type": "noul", "instructions": text} for qid, text in questions.items()
+            },
         }
         files = {
             "request": (None, json.dumps(request), "application/json"),
@@ -119,8 +150,10 @@ class JevClient:
             else:
                 if r.status_code == httpx.codes.OK:
                     body = r.json()
-                    return NoulAnswer(
-                        probability=float(body["answers"]["q"]["noul"]),
+                    return NoulAnswers(
+                        probabilities={
+                            qid: float(body["answers"][qid]["noul"]) for qid in questions
+                        },
                         model=str(body["model"]),
                         input_tokens=int(body.get("usage", {}).get("input_tokens", 0)),
                     )

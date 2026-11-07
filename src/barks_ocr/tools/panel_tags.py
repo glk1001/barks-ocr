@@ -17,8 +17,9 @@ ranking signal, not a gate: small distant silhouettes score like ordinary panels
 (Back to the Klondike 30-7 scores 0.02), so a cut-off that keeps every silhouette lets
 nearly every panel through.
 
-``jev`` asks TypeSafe's Jev model a yes/no silhouette question per panel and stores the
-probability as ``jev_score`` with ``jev_model`` and ``jev_question`` (the wording's
+``jev`` asks TypeSafe's Jev model yes/no silhouette questions per panel (one about
+figures, one about scenery) and stores the higher probability as ``jev_score``, each
+question's in ``jev_parts``, with ``jev_model`` and ``jev_question`` (the wording's
 version). A panel already scored with the current wording is skipped, so a rerun pays
 only for what is missing. It never touches a label either.
 """
@@ -40,7 +41,7 @@ from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from loguru import logger
 
 from barks_ocr.cli_setup import get_comic_titles, init_logging
-from barks_ocr.utils.typesafe_jev import JevClient, NoulAnswer
+from barks_ocr.utils.typesafe_jev import JevClient, NoulAnswers
 
 APP_LOGGING_NAME = "ptag"
 
@@ -59,24 +60,44 @@ THUMB_W, THUMB_H, SHEET_COLS = 300, 230, 6
 CAPTION_H = 22
 HEADER_H = 34
 DEFAULT_NEAR_MISSES = 12
-# Unlabelled panels at or above this Jev score go in a sheet's Candidates section. On the
-# labelled Back to the Klondike panels every silhouette scored 0.94+ under question v2;
-# 0.7 leaves a margin, since a missed silhouette costs more than a false alarm.
-CANDIDATE_MIN = 0.7
+# An unlabelled panel is a sheet Candidate when Jev's v3 figure answer is at least
+# CANDIDATE_FIGURE_MIN or its scenery answer at least CANDIDATE_SCENERY_MIN. Measured on
+# 1,331 panels (76 known silhouettes, 250 known non-silhouettes, 12 titles): figure >= 0.6
+# or scenery >= 0.95 caught all 76 and let in 17 known false alarms, against v2's 41. The
+# scenery cut-off is lowered to 0.93 because two silhouettes rest on it alone (Frozen Gold
+# 011:6 at 0.97, All at Sea 100:8 at 0.98): a missed silhouette costs more than a false
+# alarm. The scenery answer alone is noisy, so taking max() of the two would undo this.
+CANDIDATE_FIGURE_MIN = 0.6
+CANDIDATE_SCENERY_MIN = 0.93
+CANDIDATE_LEGACY_MIN = 0.7  # for a single-question (v1/v2) jev_score
 
 # Bump JEV_QUESTION_VERSION whenever the wording changes, so old scores are re-asked.
-JEV_QUESTION_VERSION = "v2"
-JEV_QUESTION = (
-    "`image` is one panel from a Carl Barks Donald Duck comic. Does it contain at least "
-    "one silhouette: a character, animal, figure or piece of scenery (trees, buildings, "
-    "a skyline) whose WHOLE shape is filled with flat black or one very dark colour, so "
-    "that its body, clothing and features are not drawn inside it (at most a white eye "
-    "may show)? Count it even when the silhouette is small or far away, or sits beside "
-    "fully coloured characters. Do NOT count: a normally drawn and coloured character "
-    "who wears black clothes or a black hat (such as Donald's black sailor jacket); a "
-    "black-furred animal whose face, muzzle, teeth or claws are drawn in; shadows cast "
-    "on the ground; dark doorways, windows or background areas."
-)
+# v3 asks two questions in one request (the image is shared state) and scores the panel
+# by the higher: v2's single question let black clothing on a character whose face is
+# drawn pass for a silhouette, so the figure question now turns on the face.
+JEV_QUESTION_VERSION = "v3"
+_JEV_PANEL = "`image` is one panel from a Carl Barks Donald Duck comic. "
+JEV_QUESTIONS = {
+    "figure": (
+        _JEV_PANEL + "Is there at least one character or animal drawn as a silhouette: its "
+        "whole body filled with flat black or one very dark colour INCLUDING its head and "
+        "face (at most a white eye may show), so that its face, clothing and features are "
+        "not drawn? Count it even when it is small or far away, or beside fully coloured "
+        "characters. Do NOT count a character whose face is drawn and coloured, however "
+        "much black it wears (Donald's black sailor jacket, a black coat or hat, a Beagle "
+        "Boy's mask); a black-and-white animal such as a penguin or puffin; or a "
+        "black-furred animal whose face, muzzle, teeth or claws are drawn in."
+    ),
+    "scenery": (
+        _JEV_PANEL + "Is there at least one object or piece of scenery (a ship, plane, "
+        "vehicle, building, skyline, tree or hill) drawn as a silhouette: a flat black or "
+        "very dark shape against a lighter sky or background, with no windows, planks, "
+        "panels or other detail drawn inside it? A silhouetted ship's masts and rigging may "
+        "still show as lines. Do NOT count a vehicle or building painted a dark colour but "
+        "drawn with its details; ordinary black outlines; shadows cast on the ground; dark "
+        "doorways or windows; or dark shading in snow, ice or water."
+    ),
+}
 DEFAULT_JEV_WORKERS = 8
 
 app = typer.Typer(help="Tag panels (silhouettes) and build per-title contact sheets.")
@@ -234,9 +255,21 @@ class SheetItem:
 
     @property
     def score(self) -> float:
-        """The Jev score when there is one, else the pixel score; 0 when not yet scored."""
+        """How close the panel comes to being a candidate: 1.0 or more means it is one.
+
+        Each Jev answer is divided by its cut-off and the larger ratio kept; a panel with no
+        Jev answer falls back to its pixel score.
+        """
+        parts = self.tag.get("jev_parts")
+        if parts:
+            return max(
+                parts.get("figure", 0.0) / CANDIDATE_FIGURE_MIN,
+                parts.get("scenery", 0.0) / CANDIDATE_SCENERY_MIN,
+            )
         jev = self.tag.get("jev_score")
-        return float(jev if jev is not None else self.tag.get("pixel_score") or 0.0)
+        if jev is not None:
+            return float(jev) / CANDIDATE_LEGACY_MIN
+        return float(self.tag.get("pixel_score") or 0.0)
 
 
 def sheet_sections(
@@ -244,38 +277,49 @@ def sheet_sections(
 ) -> list[tuple[str, list[SheetItem]]]:
     """Split a title's panels into the sheet's Yes / Unsure / Candidates / Near-miss sections.
 
-    Candidates are unlabelled panels whose Jev score is at least ``CANDIDATE_MIN``, in page
-    order: after a Jev run over unreviewed titles, they are the panels to check. Near
-    misses are the highest remaining scores (Jev's where present, else pixel), so a real
-    silhouette that was rejected or fell under the cut-off shows up for a second look.
+    Candidates are unlabelled panels that pass the Jev cut-offs (see
+    ``CANDIDATE_FIGURE_MIN``), in page order: after a Jev run over unreviewed titles,
+    they are the panels to check. Near misses are the panels closest to the cut-offs
+    among the rest, so a real silhouette that was rejected or fell just under them shows
+    up for a second look.
     """
     items = [SheetItem(p, r) for p in pages for r in load_tags(p)]
     yes = [i for i in items if i.tag.get("label") == "yes"]
     unsure = [i for i in items if i.tag.get("label") == "unsure"]
-    candidates = [
-        i
-        for i in items
-        if i.tag.get("label") is None and (i.tag.get("jev_score") or 0.0) >= CANDIDATE_MIN
-    ]
+    candidates = [i for i in items if i.tag.get("label") is None and i.score >= 1.0]
     shown = {id(i) for i in (*yes, *unsure, *candidates)}
     rest = sorted((i for i in items if id(i) not in shown), key=lambda i: -i.score)
     rest = rest[:near_misses]
     return [
         (f"{tag.upper()}: YES ({len(yes)})", yes),
         (f"UNSURE ({len(unsure)})", unsure),
-        (f"CANDIDATES: unlabelled, Jev >= {CANDIDATE_MIN} ({len(candidates)})", candidates),
+        (
+            (
+                f"CANDIDATES: unlabelled, figure >= {CANDIDATE_FIGURE_MIN} or scenery >= "
+                f"{CANDIDATE_SCENERY_MIN} ({len(candidates)})"
+            ),
+            candidates,
+        ),
         (f"NEAR MISSES: top {len(rest)} other scores", rest),
     ]
 
 
 def _caption(item: SheetItem) -> str:
-    label = item.tag.get("label") or "unlabelled"
-    source = item.tag.get("source") or "-"
+    """`page:panel (story page-panel) who scores`: who is the source of a yes, else the label.
+
+    Scores are ``f``/``s`` (v3 figure/scenery), ``j`` (a v1/v2 single score) or ``p``
+    (pixel score only).
+    """
+    label = item.tag.get("label")
+    what = (item.tag.get("source") or "-") if label == "yes" else (label or "?")
+    parts = item.tag.get("jev_parts")
+    if parts:
+        scores = f"f{parts.get('figure', 0):.2f} s{parts.get('scenery', 0):.2f}"
+    elif item.tag.get("jev_score") is not None:
+        scores = f"j{float(item.tag['jev_score']):.2f}"
+    else:
+        scores = f"p{float(item.tag.get('pixel_score') or 0):.2f}"
     index = item.row["index"]
-    what = source if label == "yes" else label
-    scores = f"p{float(item.tag.get('pixel_score') or 0):.2f}"
-    if item.tag.get("jev_score") is not None:
-        scores += f" j{float(item.tag['jev_score']):.2f}"
     return f"{item.page.fanta_page}:{index} ({item.page.story_page}-{index}) {what} {scores}"
 
 
@@ -375,16 +419,18 @@ def jev_title(pages: list[PagePanels], client: JevClient, workers: int, *, force
         if page.image_file not in cache:
             cache[page.image_file] = load_rgb(page.image_file)
 
-    def ask(item: tuple[PagePanels, dict[str, Any]]) -> NoulAnswer:
+    def ask(item: tuple[PagePanels, dict[str, Any]]) -> NoulAnswers:
         page, row = item
         crop = crop_panel(cache[page.image_file], segments_size(page.segments_file), row["box"])
-        return client.ask_image_noul(crop, JEV_QUESTION)
+        return client.ask_image_questions(crop, JEV_QUESTIONS)
 
     tokens = 0
     with ThreadPoolExecutor(max_workers=workers) as pool:
         for (_, row), answer in zip(todo, pool.map(ask, todo), strict=True):
             tag = row["tags"][SILHOUETTE]
-            tag["jev_score"] = round(answer.probability, 4)
+            parts = {qid: round(p, 4) for qid, p in answer.probabilities.items()}
+            tag["jev_score"] = max(parts.values())
+            tag["jev_parts"] = parts
             tag["jev_model"] = answer.model
             tag["jev_question"] = JEV_QUESTION_VERSION
             tokens += answer.input_tokens
