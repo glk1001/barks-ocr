@@ -1,13 +1,16 @@
-"""Restyle a Barks panel with FLUX.1 Kontext [dev] through Hugging Face Inference Providers.
+"""Restyle a Barks panel with open-weights FLUX models through Hugging Face Inference Providers.
 
-Gemini and OpenAI refuse Disney characters; the open-weights Kontext model does not. Set the
-panel and the styles in the constants below, then run:
+Gemini and OpenAI refuse Disney characters; the open-weights models do not. Most styles use
+FLUX.1 Kontext [dev]; STYLE_MODELS sends a style to FLUX.2 [dev] instead, which paints a real
+impressionist picture where Kontext keeps the ink outlines under one swirly oil texture. Set
+the panel and the styles in the constants below, then run:
 
     uv run --offline src/barks_ocr/nano/kontext_panels.py
 
 Needs ``HF_TOKEN`` (a fine-grained token with "Make calls to Inference Providers") in
 ``.env.runtime`` at the repo root; calls are billed to that Hugging Face account. Outputs go
-beside the Gemini ones as ``<panels>/AI/<title>/<edited>/<stem>-<style>-kontext.png``. An
+beside the Gemini ones as ``<panels>/AI/<title>/<edited>/<stem>-<style>-<model tag>.png``
+(tag ``kontext`` or ``flux2``), so two models' versions of a style sit side by side. An
 output that already exists is skipped, never overwritten, so a re-run only fills the gaps.
 
 Kontext follows one plain instruction far better than a list of prohibitions, so each prompt
@@ -21,6 +24,8 @@ for. A standard 806x616 panel goes out at 1168x896.
 """
 # cspell:words Kontext impres Ansel huggingface
 
+import base64
+import io
 import math
 import os
 from pathlib import Path
@@ -31,8 +36,16 @@ from huggingface_hub.errors import HfHubHTTPError
 from loguru import logger
 from PIL import Image
 
-MODEL = "black-forest-labs/FLUX.1-Kontext-dev"
+KONTEXT_MODEL = "black-forest-labs/FLUX.1-Kontext-dev"
+FLUX2_MODEL = "black-forest-labs/FLUX.2-dev"
+DEFAULT_MODEL = KONTEXT_MODEL
 PROVIDER = "fal-ai"
+
+# The output-name tag for each model.
+MODEL_TAGS: dict[str, str] = {KONTEXT_MODEL: "kontext", FLUX2_MODEL: "flux2"}
+# fal's FLUX.2 edit endpoint reads a list of images (image_urls) and returns no image when sent
+# only the single image_url the Hugging Face client fills in, so these models get the list.
+_MODELS_TAKING_IMAGE_LIST = {FLUX2_MODEL}
 
 # Resize each panel to about this many megapixels before sending; None sends it as it is.
 TARGET_MEGAPIXELS: float | None = 1.05
@@ -41,9 +54,9 @@ _SIZE_MULTIPLE = 16
 BARKS_PANELS_PNG = Path("/home/greg/Books/Carl Barks/Barks Panels Pngs")
 
 PANEL_TYPE = "Favourites"  # or "Censorship", "Closeups", "Insets", "Splash", "Silhouettes"
-TITLE = "Luck of the North"
+TITLE = "Crown of the Mayas"
 EDITED = ""  # or "edited"
-IMAGE_FILENAME = "116-6.png"
+IMAGE_FILENAME = "109-1.png"
 
 _KEEP = (
     ", while keeping the exact same composition, framing, characters, poses, clothing,"
@@ -66,8 +79,10 @@ STYLE_PROMPTS: dict[str, str] = {
         " with visible brushstrokes" + _KEEP
     ),
     "impres": (
-        "Transform this comic book panel into a very beautiful impressionist painting with"
-        " loose, visible brushstrokes and soft natural light" + _KEEP
+        "Repaint this comic book panel as an unsigned impressionist oil painting made of short,"
+        " separate dabs of pure color, with soft painted edges in place of the black ink"
+        " outlines and colored shadows, while keeping the exact same"
+        " composition, framing, characters, poses, clothing, colors, facial expressions and eyes."
     ),
     "impres-color": (
         "Transform this comic book panel into a very beautiful impressionist painting with"
@@ -122,6 +137,14 @@ EXTRA_PROMPTS: dict[tuple[str, str], str] = {
     ("A Spicy Tale", "080-8.png"): "The panther must be colored black.",
 }
 
+# The models each style is run on, one output per model; a style not listed here runs on
+# DEFAULT_MODEL alone.
+STYLE_MODELS: dict[str, list[str]] = {
+    "impres": [FLUX2_MODEL],
+    "water": [KONTEXT_MODEL, FLUX2_MODEL],
+    "pastel": [KONTEXT_MODEL, FLUX2_MODEL],
+}
+
 
 def get_source_image() -> Path:
     """Return the panel image named by the PANEL_TYPE/TITLE/EDITED/IMAGE_FILENAME constants.
@@ -135,18 +158,34 @@ def get_source_image() -> Path:
     return BARKS_PANELS_PNG / PANEL_TYPE / TITLE / EDITED / IMAGE_FILENAME
 
 
-def get_dest_image(srce_image: Path, style: str) -> Path:
-    """Return where the Kontext output for one style of a panel is saved.
+def get_style_models(style: str) -> list[str]:
+    """Return the models a style is run on.
+
+    Args:
+        style: A key of STYLE_PROMPTS.
+
+    Returns:
+        The style's models from STYLE_MODELS, or just DEFAULT_MODEL.
+
+    """
+    return STYLE_MODELS.get(style, [DEFAULT_MODEL])
+
+
+def get_dest_image(srce_image: Path, style: str, model: str) -> Path:
+    """Return where one model's output for one style of a panel is saved.
 
     Args:
         srce_image: The source panel image.
         style: A key of STYLE_PROMPTS.
+        model: The model the style is run on.
 
     Returns:
-        The output path, beside the Gemini outputs for the same title.
+        The output path, beside the Gemini outputs for the same title, tagged with the
+        model.
 
     """
-    return BARKS_PANELS_PNG / "AI" / TITLE / EDITED / f"{srce_image.stem}-{style}-kontext.png"
+    tag = MODEL_TAGS[model]
+    return BARKS_PANELS_PNG / "AI" / TITLE / EDITED / f"{srce_image.stem}-{style}-{tag}.png"
 
 
 def get_client() -> InferenceClient:
@@ -204,14 +243,21 @@ def load_panel_to_send(srce_image: Path) -> Image.Image:
     return image.resize(size, Image.Resampling.LANCZOS)
 
 
+def _as_data_url(image: Image.Image) -> str:
+    """Return an image as a base64 PNG data URL."""
+    buffer = io.BytesIO()
+    image.save(buffer, "PNG")
+    return "data:image/png;base64," + base64.b64encode(buffer.getvalue()).decode("ascii")
+
+
 def restyle_panel(
     client: InferenceClient,
     panel: Image.Image,
     style: str,
-    dest_image: Path,
+    model: str,
     extra_prompt: str = "",
 ) -> bool:
-    """Restyle one panel in one style and save it, unless the output already exists.
+    """Restyle the configured panel in one style on one model, unless that output exists.
 
     A request the provider rejects (a refusal, a bad token, no credit) is logged and skipped,
     so one failure does not stop the remaining styles.
@@ -220,23 +266,32 @@ def restyle_panel(
         client: The Inference Providers client.
         panel: The panel image to send, already at the size wanted back.
         style: A key of STYLE_PROMPTS.
-        dest_image: Where to save the output.
+        model: The model to run the style on; a key of MODEL_TAGS.
         extra_prompt: Instructions for this panel, appended to the style's prompt.
 
     Returns:
         True if an image was saved.
 
     """
+    tag = MODEL_TAGS[model]
+    dest_image = get_dest_image(get_source_image(), style, model)
     if dest_image.is_file():
-        logger.warning(f'Skipping "{style}": "{dest_image}" already exists.')
+        logger.warning(f'Skipping "{style}" ({tag}): "{dest_image}" already exists.')
         return False
 
+    # None is dropped from the provider payload, so other models get no image_urls key.
+    image_urls = [_as_data_url(panel)] if model in _MODELS_TAKING_IMAGE_LIST else None
+
     prompt = f"{STYLE_PROMPTS[style]} {extra_prompt}".strip()
-    logger.info(f'"{style}": {prompt}')
+    logger.info(f'"{style}" ({tag}): {prompt}')
     try:
-        output = client.image_to_image(panel, prompt=prompt, model=MODEL)
+        output = client.image_to_image(panel, prompt=prompt, model=model, image_urls=image_urls)
     except HfHubHTTPError as e:
-        logger.error(f'"{style}" failed, nothing saved: {e}')
+        logger.error(f'"{style}" ({tag}) failed, nothing saved: {e}')
+        return False
+    except KeyError:
+        # The client raises this when the provider's reply holds no image.
+        logger.error(f'"{style}" ({tag}): the model returned no image, nothing saved.')
         return False
 
     dest_image.parent.mkdir(parents=True, exist_ok=True)
@@ -255,6 +310,11 @@ def main() -> None:
     if unknown:
         msg = f"Unknown styles {unknown}; choose from {list(STYLE_PROMPTS)}."
         raise ValueError(msg)
+    jobs = [(style, model) for style in STYLES for model in get_style_models(style)]
+    untagged = {model for _, model in jobs} - MODEL_TAGS.keys()
+    if untagged:
+        msg = f"Models {sorted(untagged)} have no entry in MODEL_TAGS."
+        raise ValueError(msg)
 
     panel = load_panel_to_send(srce_image)
     with Image.open(srce_image) as original:
@@ -267,11 +327,8 @@ def main() -> None:
         logger.info(f"Extra prompt for this panel: {extra_prompt}")
 
     client = get_client()
-    saved = sum(
-        restyle_panel(client, panel, style, get_dest_image(srce_image, style), extra_prompt)
-        for style in STYLES
-    )
-    logger.info(f"Saved {saved} of {len(STYLES)} styles for {srce_image}.")
+    saved = sum(restyle_panel(client, panel, style, model, extra_prompt) for style, model in jobs)
+    logger.info(f"Saved {saved} of {len(jobs)} outputs for {srce_image}.")
 
 
 if __name__ == "__main__":
