@@ -108,6 +108,7 @@ parentheticals
 pcrop
 posseman
 propn
+ptag
 putalpha
 qint
 quantizer
