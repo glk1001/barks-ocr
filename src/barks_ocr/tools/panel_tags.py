@@ -152,11 +152,25 @@ def title_pages(comics_database: ComicsDatabase, title: str, tags_root: Path) ->
         tags_root: The panel-tags repo root.
 
     Returns:
-        One entry per body page, in story order.
+        One entry per body page, in story order. A page with no restored image takes the
+        file the database's own resolver gives (``get_final_srce_story_files``): for an
+        ADDED page such as Good Deeds' or Silent Night's, the original scan in
+        ``Fantagraphics-fixes-and-additions``. If even that is missing, the restored path
+        is kept and :func:`checked_pages` skips the title.
 
     """
     comic = comics_database.get_comic_book(title)
     images = comic.get_srce_restored_story_files([PageType.BODY])
+    if not all(img.is_file() for img in images):
+        try:
+            finals = comic.get_final_srce_story_files([PageType.BODY])
+        except FileNotFoundError as exc:
+            logger.warning(f'"{title}": no fallback for its missing restored images: {exc}')
+        else:
+            images = [
+                img if img.is_file() else final
+                for img, (final, _) in zip(images, finals, strict=True)
+            ]
     segments = comic.get_srce_panel_segments_files([PageType.BODY])
     volume_dir = tags_root / comics_database.get_fantagraphics_volume_title(
         comics_database.get_fanta_volume_int(title)
@@ -445,9 +459,9 @@ def checked_pages(
 ) -> list[PagePanels] | None:
     """Return a title's pages, or None (with a message) if any page image is missing.
 
-    Checked before any work so that a title whose images live elsewhere (Silent Night's
-    pages 250+ are not in the restored images directory) is skipped whole, not half-done
-    and not billed, and the rest of a volume still runs.
+    Checked before any work so that a title with an image that neither the restored
+    directory nor the database's resolver can supply is skipped whole, not half-done and
+    not billed, and the rest of a volume still runs.
     """
     pages = title_pages(comics_database, title, tags_root)
     missing = [p.image_file.name for p in pages if not p.image_file.is_file()]
