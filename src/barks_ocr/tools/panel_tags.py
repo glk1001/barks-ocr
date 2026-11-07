@@ -440,6 +440,26 @@ def jev_title(pages: list[PagePanels], client: JevClient, workers: int, *, force
     return tokens
 
 
+def checked_pages(
+    comics_database: ComicsDatabase, title: str, tags_root: Path
+) -> list[PagePanels] | None:
+    """Return a title's pages, or None (with a message) if any page image is missing.
+
+    Checked before any work so that a title whose images live elsewhere (Silent Night's
+    pages 250+ are not in the restored images directory) is skipped whole, not half-done
+    and not billed, and the rest of a volume still runs.
+    """
+    pages = title_pages(comics_database, title, tags_root)
+    missing = [p.image_file.name for p in pages if not p.image_file.is_file()]
+    if missing:
+        first = pages[0].image_file.parent / missing[0]
+        msg = f'SKIPPED "{title}": {len(missing)} page image(s) missing, e.g. "{first}".'
+        logger.warning(msg)
+        print(msg)
+        return None
+    return pages
+
+
 NearMissesOpt = typer.Option(DEFAULT_NEAR_MISSES, "--near-misses", help="Near misses per sheet.")
 
 
@@ -455,7 +475,9 @@ def score(
     comics_database, titles = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
     tags_root = get_panel_tags_root(comics_database)
     for title in titles:
-        n = score_title(title_pages(comics_database, title, tags_root))
+        if (pages := checked_pages(comics_database, title, tags_root)) is None:
+            continue
+        n = score_title(pages)
         out = write_sheet(comics_database, title, tags_root, near_misses)
         logger.info(f'"{title}": scored {n} panels; sheet "{out}".')
         print(f"{title}: {n} panels scored -> {out}")
@@ -477,9 +499,9 @@ def jev(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
     client = JevClient()
     total = 0
     for title in titles:
-        tokens = jev_title(
-            title_pages(comics_database, title, tags_root), client, workers, force=force
-        )
+        if (pages := checked_pages(comics_database, title, tags_root)) is None:
+            continue
+        tokens = jev_title(pages, client, workers, force=force)
         total += tokens
         out = write_sheet(comics_database, title, tags_root, near_misses)
         print(f"{title}: {tokens} input tokens -> {out}")
@@ -498,6 +520,8 @@ def sheet(
     comics_database, titles = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
     tags_root = get_panel_tags_root(comics_database)
     for title in titles:
+        if checked_pages(comics_database, title, tags_root) is None:
+            continue
         print(f"{title}: {write_sheet(comics_database, title, tags_root, near_misses)}")
 
 
