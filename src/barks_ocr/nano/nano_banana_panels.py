@@ -4,7 +4,7 @@ from enum import Enum, auto
 from io import BytesIO
 from pathlib import Path
 
-from google.genai.types import GenerateContentConfig
+from google.genai.types import GenerateContentConfig, GenerateContentResponse, Part
 from PIL import Image
 
 from barks_ocr.utils.gemini_ai import AI_PRO_IMAGE_MODEL, CLIENT
@@ -73,6 +73,44 @@ PROMPT_TEXT = {
 }
 
 
+def _get_response_parts(response: GenerateContentResponse) -> list[Part] | None:
+    """Return the response's content parts, or report why Gemini returned none."""
+    candidate = response.candidates[0] if response.candidates else None
+    parts = candidate.content.parts if candidate and candidate.content else None
+
+    if not parts:
+        print("WARNING: Gemini returned no content.")
+        if candidate:
+            print(f"  Finish reason: {candidate.finish_reason}")
+            print(f"  Finish message: {candidate.finish_message}")
+            print(f"  Safety ratings: {candidate.safety_ratings}")
+        print(f"  Prompt feedback: {response.prompt_feedback}")
+
+    return parts
+
+
+def _save_parts(parts: list[Part], dest_image: Path) -> None:
+    """Save the image to ``dest_image``, or a text-only reply beside it as ``.txt``."""
+    text = "\n".join(part.text for part in parts if part.text is not None)
+    images = [
+        part.inline_data.data
+        for part in parts
+        if part.inline_data is not None and part.inline_data.data is not None
+    ]
+
+    if images:
+        Image.open(BytesIO(images[-1])).save(dest_image)
+        print(f"Saved image to {dest_image}")
+        if text:
+            print(f"Text returned with the image: {text}")
+    elif text:
+        dest_text = dest_image.with_suffix(".txt")
+        dest_text.write_text(text)
+        print(f"WARNING: Gemini returned text but no image. Saved text to {dest_text}")
+    else:
+        print(f'WARNING: Gemini returned no text or image. Nothing saved to "{dest_image}".')
+
+
 def main() -> None:
     CANDIDATE_COUNT = 1
     AI_TOP_P = None
@@ -92,10 +130,10 @@ def main() -> None:
     DEST_SUFFIX_PRE = ""
     # DEST_SUFFIX_PRE = "-cl"
 
-    TITLE = "A Sticky Situation"
+    TITLE = "Luck of the North"
     EDITED = ""
     # EDITED = "edited"
-    IMAGE_FILENAME = "093-5.png"
+    IMAGE_FILENAME = "116-6.png"
     AI_TEMPERATURE = 1.0
 
     EXTRA_PROHIBITION = ""
@@ -220,14 +258,13 @@ def main() -> None:
             ),
         )
 
-        for part in response.candidates[0].content.parts:
-            if part.text is not None:
-                dest_image.write_text(part.text)
-                print(f"Saved text to {dest_image}")
-            elif part.inline_data is not None:
-                output_image = Image.open(BytesIO(part.inline_data.data))
-                output_image.save(dest_image)
-                print(f"Saved image to {dest_image}")
+        parts = _get_response_parts(response)
+        if not parts:
+            print(f'Nothing saved to "{dest_image}".')
+            print("-" * 80)
+            continue
+
+        _save_parts(parts, dest_image)
 
         print("-" * 80)
 
