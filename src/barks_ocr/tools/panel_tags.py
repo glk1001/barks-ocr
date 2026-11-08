@@ -48,6 +48,7 @@ from barks_fantagraphics.comics_consts import PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
 from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
+from intspan import intspan
 from loguru import logger
 
 from barks_ocr.cli_setup import get_comic_titles, init_logging
@@ -142,7 +143,10 @@ BOX_EDGE_D = 3
 IRREGULAR_SLANT_MIN = 200.0
 IRREGULAR_FRAMELESS_MIN = 0.10
 DEFAULT_IRREG_WORKERS = 8
-PAGE_THUMB_W, PAGE_THUMB_H, PAGE_SHEET_COLS = 330, 480, 6
+# Whole pages, large enough to see a slight slant: 3 across, 18 to a sheet (~1980x5700).
+PAGE_THUMB_W, PAGE_THUMB_H, PAGE_SHEET_COLS = 660, 940, 3
+PAGE_CAPTION = (0.7, 32)  # caption font scale, caption band height
+DEFAULT_PAGES_PER_SHEET = 18
 IRREGULAR_LIST_FILE = "irregular-pages.tsv"
 # Every page of this title is a one-page gag with its own title logo.
 ONE_PAGERS_TITLE = "All One-Pagers"
@@ -526,7 +530,11 @@ GridSection = tuple[str, list[tuple[Callable[[], np.ndarray], str]]]
 
 
 def write_grid_sheet(
-    title: str, sections: list[GridSection], layout: tuple[int, int, int], out_file: Path
+    title: str,
+    sections: list[GridSection],
+    layout: tuple[int, int, int],
+    out_file: Path,
+    caption: tuple[float, int] = (0.45, CAPTION_H),
 ) -> None:
     """Draw a contact sheet of thumbnails under section headings and write it as a PNG.
 
@@ -536,9 +544,11 @@ def write_grid_sheet(
             time, so a sheet of whole pages never holds them all at once.
         layout: (thumbnail width, thumbnail height, columns).
         out_file: The PNG to write.
+        caption: (font scale, caption band height) of each thumbnail's caption.
 
     """
     thumb_w, thumb_h, cols = layout
+    caption_scale, caption_h = caption
     width = thumb_w * cols
     blocks: list[np.ndarray] = [_text_band(title, width, HEADER_H + 6, scale=0.9)]
     for heading, items in sections:
@@ -547,21 +557,21 @@ def write_grid_sheet(
         if not n_rows:
             continue
         grid = np.full((thumb_h * n_rows, width, 3), 255, np.uint8)
-        for k, (load, caption) in enumerate(items):
+        for k, (load, text) in enumerate(items):
             img = load()
-            s = min((thumb_w - 6) / img.shape[1], (thumb_h - CAPTION_H - 4) / img.shape[0])
+            s = min((thumb_w - 6) / img.shape[1], (thumb_h - caption_h - 4) / img.shape[0])
             thumb = cv2.resize(
                 img, (int(img.shape[1] * s), int(img.shape[0] * s)), interpolation=cv2.INTER_AREA
             )
             ox, oy = (k % cols) * thumb_w, (k // cols) * thumb_h
             th, tw = thumb.shape[:2]
-            grid[oy + CAPTION_H : oy + CAPTION_H + th, ox + 3 : ox + 3 + tw] = thumb
+            grid[oy + caption_h : oy + caption_h + th, ox + 3 : ox + 3 + tw] = thumb
             cv2.putText(
                 grid,
-                caption,
-                (ox + 4, oy + 16),
+                text,
+                (ox + 4, oy + caption_h - 6),
                 cv2.FONT_HERSHEY_SIMPLEX,
-                0.45,
+                caption_scale,
                 (200, 0, 0),
                 1,
                 cv2.LINE_AA,
@@ -802,10 +812,47 @@ def volume_tagged_pages(
     return sorted(found, key=lambda tp: tp.page.fanta_page)
 
 
+def irregular_sheet_dir(tags_root: Path, volume_title: str) -> Path:
+    """Return the folder holding a volume's numbered irregular-panel sheets."""
+    return tags_root / SHEETS_SUBDIR / IRREGULAR / volume_title
+
+
+def paginate_sections(sections: list[GridSection], per_sheet: int) -> list[list[GridSection]]:
+    """Split sections across sheets of at most ``per_sheet`` thumbnails, in order.
+
+    A section that runs onto a later sheet repeats its heading there, marked continued;
+    an empty section keeps its heading (with its zero count) on the sheet where it falls.
+    """
+    sheets: list[list[GridSection]] = [[]]
+    used = 0
+    for heading, items in sections:
+        start = 0
+        while True:
+            if used == per_sheet and (items[start:] or not sheets[-1]):
+                sheets.append([])
+                used = 0
+            chunk = items[start : start + per_sheet - used]
+            sheets[-1].append((heading if start == 0 else f"{heading} (continued)", chunk))
+            used += len(chunk)
+            start += len(chunk)
+            if start >= len(items):
+                break
+    return sheets
+
+
 def write_irregular_sheet(
-    comics_database: ComicsDatabase, volume: int, tags_root: Path, near_misses: int
+    comics_database: ComicsDatabase,
+    volume: int,
+    tags_root: Path,
+    near_misses: int,
+    per_sheet: int = DEFAULT_PAGES_PER_SHEET,
 ) -> Path:
-    """Write a volume's sheet of irregular pages plus its closest near misses."""
+    """Write a volume's irregular pages and closest near misses as numbered sheets.
+
+    Returns:
+        The volume's sheet folder; its earlier sheets are replaced.
+
+    """
     tagged = volume_tagged_pages(comics_database, volume, tags_root)
     flagged = [tp for tp in tagged if is_irregular_page(tp.tag) and not tp.title_page]
     title_flagged = [tp for tp in tagged if is_irregular_page(tp.tag) and tp.title_page]
@@ -832,9 +879,20 @@ def write_irregular_sheet(
         (f"NEAR MISSES: top {len(rest)} other pages", [(loader(tp), tp.caption()) for tp in rest]),
     ]
     volume_title = comics_database.get_fantagraphics_volume_title(volume)
-    out = tags_root / SHEETS_SUBDIR / IRREGULAR / f"{volume_title}.png"
-    write_grid_sheet(volume_title, sections, (PAGE_THUMB_W, PAGE_THUMB_H, PAGE_SHEET_COLS), out)
-    return out
+    out_dir = irregular_sheet_dir(tags_root, volume_title)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for old in out_dir.glob("sheet-*.png"):
+        old.unlink()
+    sheets = paginate_sections(sections, per_sheet)
+    for n, sheet_sections in enumerate(sheets, start=1):
+        write_grid_sheet(
+            f"{volume_title} -- sheet {n} of {len(sheets)}",
+            sheet_sections,
+            (PAGE_THUMB_W, PAGE_THUMB_H, PAGE_SHEET_COLS),
+            out_dir / f"sheet-{n:02d}.png",
+            caption=PAGE_CAPTION,
+        )
+    return out_dir
 
 
 def write_irregular_list(comics_database: ComicsDatabase, tags_root: Path) -> tuple[Path, int]:
@@ -1069,6 +1127,22 @@ def irregular_label(  # noqa: PLR0913 -- a typer command: one parameter per CLI 
     logger.info(f"Volume {volume}: irregular pages labelled {counts} (source human).")
     print(f"Volume {volume}: yes {counts['yes']}, no {counts['no']} -> {sheet}")
     print(f"{n} irregular pages in the corpus -> {out}")
+
+
+@app.command(help="Rebuild volumes' irregular-panel sheets from the tags as they stand.")
+def irregular_sheet(
+    volumes_str: VolumesArg = "",
+    per_sheet: int = typer.Option(DEFAULT_PAGES_PER_SHEET, "--per-sheet", help="Pages a sheet."),
+    near_misses: int = NearMissesOpt,
+    log_level_str: LogLevelArg = "INFO",
+) -> None:
+    """Rebuild each given volume's numbered sheets without measuring again."""
+    init_logging(APP_LOGGING_NAME, "panel-tags.log", log_level_str)
+    comics_database = ComicsDatabase()
+    tags_root = get_panel_tags_root(comics_database)
+    for volume in intspan(volumes_str or f"{FIRST_VOLUME_NUMBER}-{LAST_VOLUME_NUMBER}"):
+        out = write_irregular_sheet(comics_database, volume, tags_root, near_misses, per_sheet)
+        print(f"Volume {volume}: {len(list(out.glob('sheet-*.png')))} sheets -> {out}")
 
 
 @app.command(help="Build the silhouette contact sheet from the tags as they stand.")
