@@ -22,11 +22,18 @@ figures, one about scenery) and stores the higher probability as ``jev_score``, 
 question's in ``jev_parts``, with ``jev_model`` and ``jev_question`` (the wording's
 version). A panel already scored with the current wording is skipped, so a rerun pays
 only for what is missing. It never touches a label either.
+
+``irregular`` is a page-level tag, stored beside the panels as
+``{"page": {"irregular_panels": {...}}, "panels": [...]}``: does the page have a panel that
+is not a framed rectangle (slanted or cut, round, or borderless)? It is measured from the
+page image, not the segments boxes, which are rectangles even round a triangular panel.
 """
 
 # ruff: noqa: T201
 
 import json
+import math
+from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
@@ -37,6 +44,7 @@ import numpy as np
 import typer
 from barks_fantagraphics.comics_consts import PageType
 from barks_fantagraphics.comics_database import ComicsDatabase
+from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from loguru import logger
 
@@ -100,6 +108,37 @@ JEV_QUESTIONS = {
 }
 DEFAULT_JEV_WORKERS = 8
 
+# Irregular panels (page level). A panel is a region enclosed by "gutter": page-coloured
+# pixels joined to the page edge. Its outline is traced at IRREG_WORK_W and scored twice:
+#  - slant_px: the longest total of straight outline segments more than SLANT_ANGLE off
+#    horizontal/vertical on any one panel (slanted dividers, cut corners, round panels);
+#  - frameless: the largest share of any one panel's outline with no dark frame line
+#    within FRAME_R and more than BOX_EDGE_D off the panel's bounding box (borderless
+#    panels whose art fades into the page). An unframed edge lying ON the box is a
+#    rectangle that lost its frame line, not a vignette: Back to the Klondike 061's
+#    moon panel has none in the restored image, its fill running straight to the page.
+# Calibrated on Lost in the Andes 020-040 and Back to the Klondike (eye-checked): real
+# irregular pages scored slant 300-1900 or frameless 0.13-0.50; framed rectangular pages
+# at most slant 106 and frameless 0.02. The cut-offs sit low, for recall.
+IRREGULAR = "irregular_panels"
+IRREGULAR_MEASURE = "v1"  # bump when the measure changes
+IRREG_WORK_W = 1000
+PAPER_TOL = 14  # max Lab channel distance from the page colour sampled at two corners
+PAPER_CORNER = 20
+MIN_PANEL_FRAC = 0.01  # smaller regions (page numbers, stray marks) are not panels
+SLANT_EPSILON = 3.0  # approxPolyDP tolerance, px at IRREG_WORK_W
+SLANT_MIN_SEG = 30
+SLANT_ANGLE = 4.0
+FRAME_DARK = 110  # max(R,G,B) of frame ink, tested at full resolution
+FRAME_COVER = 0.2  # share of a work pixel that must be frame ink
+FRAME_R = 4
+BOX_EDGE_D = 3
+IRREGULAR_SLANT_MIN = 200.0
+IRREGULAR_FRAMELESS_MIN = 0.10
+DEFAULT_IRREG_WORKERS = 8
+PAGE_THUMB_W, PAGE_THUMB_H, PAGE_SHEET_COLS = 330, 480, 6
+IRREGULAR_LIST_FILE = "irregular-pages.tsv"
+
 app = typer.Typer(help="Tag panels (silhouettes) and build per-title contact sheets.")
 
 
@@ -136,6 +175,92 @@ def silhouette_score(rgb: np.ndarray) -> float:
     n, _, stats, _ = cv2.connectedComponentsWithStats(solid, connectivity=8)
     blobs = (stats[i, cv2.CC_STAT_AREA] / area for i in range(1, n))
     return float(sum(b for b in blobs if b >= MIN_BLOB_FRAC))
+
+
+@dataclass(frozen=True)
+class IrregularScore:
+    """A page's irregular-panel measures (see ``IRREGULAR`` above for their meaning)."""
+
+    slant_px: float
+    frameless: float
+    regions: int
+
+
+def _slant_length(outline: np.ndarray) -> float:
+    """Total length of an outline's long straight segments that lie off the page axes."""
+    poly = cv2.approxPolyDP(outline, SLANT_EPSILON, closed=True).reshape(-1, 2)
+    total = 0.0
+    for a, b in zip(poly, np.roll(poly, -1, axis=0), strict=True):
+        dx, dy = (b - a).tolist()
+        length = math.hypot(dx, dy)
+        angle = math.degrees(math.atan2(abs(dy), abs(dx)))
+        if length >= SLANT_MIN_SEG and min(angle, 90 - angle) > SLANT_ANGLE:
+            total += length
+    return total
+
+
+def irregular_score(rgb: np.ndarray) -> IrregularScore:
+    """Measure how far a page's panels depart from framed rectangles.
+
+    Args:
+        rgb: The whole page, RGB uint8, with page-coloured margins at its corners.
+
+    Returns:
+        The page's largest per-panel slant length and frameless share, and how many
+        panel regions were found (0 means the page colour was not found).
+
+    """
+    scale = IRREG_WORK_W / rgb.shape[1]
+    size = (IRREG_WORK_W, max(1, round(rgb.shape[0] * scale)))
+    lab = cv2.cvtColor(cv2.resize(rgb, size, interpolation=cv2.INTER_AREA), cv2.COLOR_RGB2LAB)
+    lab = lab.astype(np.int16)
+    k = PAPER_CORNER
+    corners = np.concatenate([lab[3:k, 3:k].reshape(-1, 3), lab[-k:-3, -k:-3].reshape(-1, 3)])
+    paper = np.median(corners, axis=0)
+    near_paper = (np.abs(lab - paper).max(axis=2) < PAPER_TOL).astype(np.uint8)
+    _, cc = cv2.connectedComponents(near_paper, connectivity=4)
+    edge_labels = np.unique(np.concatenate([cc[0], cc[-1], cc[:, 0], cc[:, -1]]))
+    gutter = np.isin(cc, edge_labels[edge_labels > 0])
+
+    # Frame ink is found at full resolution, where a 1 px frame line is still black.
+    ink = (rgb.max(axis=2) <= FRAME_DARK).astype(np.float32)
+    ink_small = (cv2.resize(ink, size, interpolation=cv2.INTER_AREA) > FRAME_COVER).astype(np.uint8)
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * FRAME_R + 1,) * 2)
+    near_ink = cv2.dilate(ink_small, kernel)
+
+    regions = (~gutter).astype(np.uint8)
+    contours, _ = cv2.findContours(regions, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    slant, frameless, count = 0.0, 0.0, 0
+    for outline in contours:
+        if cv2.contourArea(outline) < MIN_PANEL_FRAC * regions.size:
+            continue
+        count += 1
+        pts = np.asarray(outline, dtype=np.intp).reshape(-1, 2)
+        slant = max(slant, _slant_length(outline))
+        x, y, w, h = cv2.boundingRect(outline)
+        px, py = pts[:, 0], pts[:, 1]
+        on_box = (
+            (np.abs(px - x) <= BOX_EDGE_D)
+            | (np.abs(px - (x + w - 1)) <= BOX_EDGE_D)
+            | (np.abs(py - y) <= BOX_EDGE_D)
+            | (np.abs(py - (y + h - 1)) <= BOX_EDGE_D)
+        )
+        unframed = (near_ink[py, px] == 0) & ~on_box
+        frameless = max(frameless, float(unframed.mean()))
+    return IrregularScore(slant, frameless, count)
+
+
+def is_irregular_candidate(tag: dict[str, Any]) -> bool:
+    """Whether a page's stored measures pass either irregular-panel cut-off."""
+    return irregular_closeness(tag) >= 1.0
+
+
+def irregular_closeness(tag: dict[str, Any]) -> float:
+    """Each measure over its cut-off, the larger kept: 1.0 or more is a candidate."""
+    return max(
+        float(tag.get("slant_px") or 0.0) / IRREGULAR_SLANT_MIN,
+        float(tag.get("frameless") or 0.0) / IRREGULAR_FRAMELESS_MIN,
+    )
 
 
 def get_panel_tags_root(comics_database: ComicsDatabase) -> Path:
@@ -203,10 +328,30 @@ def load_tags(page: PagePanels) -> list[dict[str, Any]]:
     return rows
 
 
-def save_tags(page: PagePanels, rows: list[dict[str, Any]]) -> None:
-    """Write a page's tag rows: indent=2, UTF-8 kept, trailing newline."""
+def load_page_tags(page: PagePanels) -> dict[str, Any]:
+    """Load a page's page-level tags (``{}`` when it has none or no file yet)."""
+    if not page.tags_file.is_file():
+        return {}
+    return json.loads(page.tags_file.read_text()).get("page", {})
+
+
+def save_tags(
+    page: PagePanels, rows: list[dict[str, Any]], page_tags: dict[str, Any] | None = None
+) -> None:
+    """Write a page's tag rows: indent=2, UTF-8 kept, trailing newline.
+
+    Args:
+        page: The page.
+        rows: Its panel rows.
+        page_tags: Its page-level tags; None keeps whatever the file already holds, so a
+            panel-only writer never drops them.
+
+    """
+    if page_tags is None:
+        page_tags = load_page_tags(page)
+    data = {"page": page_tags, "panels": rows} if page_tags else {"panels": rows}
     page.tags_file.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps({"panels": rows}, indent=2, ensure_ascii=False) + "\n"
+    text = json.dumps(data, indent=2, ensure_ascii=False) + "\n"
     if not page.tags_file.is_file() or page.tags_file.read_text() != text:
         page.tags_file.write_text(text)
 
@@ -346,31 +491,62 @@ def build_sheet(title: str, sections: list[tuple[str, list[SheetItem]]], out_fil
         out_file: The PNG to write.
 
     """
-    width = THUMB_W * SHEET_COLS
-    blocks: list[np.ndarray] = [_text_band(title, width, HEADER_H + 6, scale=0.9)]
     cache: dict[Path, np.ndarray] = {}
-    for heading, items in sections:
-        blocks.append(_text_band(heading, width, HEADER_H, scale=0.7))
-        n_rows = (len(items) + SHEET_COLS - 1) // SHEET_COLS
-        if not n_rows:
-            continue
-        grid = np.full((THUMB_H * n_rows, width, 3), 255, np.uint8)
-        for k, item in enumerate(items):
+
+    def crop_of(item: SheetItem) -> Callable[[], np.ndarray]:
+        def crop() -> np.ndarray:
             page = item.page
             if page.image_file not in cache:
                 cache[page.image_file] = load_rgb(page.image_file)
             size = segments_size(page.segments_file)
-            crop = crop_panel(cache[page.image_file], size, item.row["box"])
-            s = min((THUMB_W - 6) / crop.shape[1], (THUMB_H - CAPTION_H - 4) / crop.shape[0])
+            return crop_panel(cache[page.image_file], size, item.row["box"])
+
+        return crop
+
+    grid_sections = [
+        (heading, [(crop_of(item), _caption(item)) for item in items])
+        for heading, items in sections
+    ]
+    write_grid_sheet(title, grid_sections, (THUMB_W, THUMB_H, SHEET_COLS), out_file)
+
+
+GridSection = tuple[str, list[tuple[Callable[[], np.ndarray], str]]]
+
+
+def write_grid_sheet(
+    title: str, sections: list[GridSection], layout: tuple[int, int, int], out_file: Path
+) -> None:
+    """Draw a contact sheet of thumbnails under section headings and write it as a PNG.
+
+    Args:
+        title: Drawn at the top.
+        sections: (heading, [(image loader, caption)]) pairs; images are loaded one at a
+            time, so a sheet of whole pages never holds them all at once.
+        layout: (thumbnail width, thumbnail height, columns).
+        out_file: The PNG to write.
+
+    """
+    thumb_w, thumb_h, cols = layout
+    width = thumb_w * cols
+    blocks: list[np.ndarray] = [_text_band(title, width, HEADER_H + 6, scale=0.9)]
+    for heading, items in sections:
+        blocks.append(_text_band(heading, width, HEADER_H, scale=0.7))
+        n_rows = (len(items) + cols - 1) // cols
+        if not n_rows:
+            continue
+        grid = np.full((thumb_h * n_rows, width, 3), 255, np.uint8)
+        for k, (load, caption) in enumerate(items):
+            img = load()
+            s = min((thumb_w - 6) / img.shape[1], (thumb_h - CAPTION_H - 4) / img.shape[0])
             thumb = cv2.resize(
-                crop, (int(crop.shape[1] * s), int(crop.shape[0] * s)), interpolation=cv2.INTER_AREA
+                img, (int(img.shape[1] * s), int(img.shape[0] * s)), interpolation=cv2.INTER_AREA
             )
-            ox, oy = (k % SHEET_COLS) * THUMB_W, (k // SHEET_COLS) * THUMB_H
+            ox, oy = (k % cols) * thumb_w, (k // cols) * thumb_h
             th, tw = thumb.shape[:2]
             grid[oy + CAPTION_H : oy + CAPTION_H + th, ox + 3 : ox + 3 + tw] = thumb
             cv2.putText(
                 grid,
-                _caption(item),
+                caption,
                 (ox + 4, oy + 16),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 0.45,
@@ -537,6 +713,127 @@ def apply_labels(
     return counts
 
 
+def irregular_title(pages: list[PagePanels], workers: int) -> list[PagePanels]:
+    """Measure and store every page's irregular-panel scores; labels are untouched.
+
+    The measure is local and free, so every page is re-measured on each run.
+
+    Returns:
+        The pages that pass the cut-offs and are not labelled ``no``.
+
+    """
+
+    def measure(page: PagePanels) -> IrregularScore:
+        return irregular_score(load_rgb(page.image_file))
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        scores = list(pool.map(measure, pages))
+    flagged = []
+    for page, sc in zip(pages, scores, strict=True):
+        if not sc.regions:
+            logger.warning(f'"{page.image_file}": no panel regions found (page colour?).')
+        page_tags = load_page_tags(page)
+        tag = page_tags.setdefault(IRREGULAR, {"label": None, "source": None, "note": ""})
+        tag["slant_px"] = round(sc.slant_px, 1)
+        tag["frameless"] = round(sc.frameless, 4)
+        tag["regions"] = sc.regions
+        tag["measure"] = IRREGULAR_MEASURE
+        save_tags(page, load_tags(page), page_tags)
+        if is_irregular_page(tag):
+            flagged.append(page)
+    return flagged
+
+
+def is_irregular_page(tag: dict[str, Any]) -> bool:
+    """Return whether a page is irregular: labelled ``yes``, or unlabelled and a candidate."""
+    label = tag.get("label")
+    return label == "yes" or (label is None and is_irregular_candidate(tag))
+
+
+@dataclass(frozen=True)
+class TaggedPage:
+    """A page with its title and stored irregular-panel tag."""
+
+    title: str
+    page: PagePanels
+    tag: dict[str, Any]
+
+    def caption(self) -> str:
+        """`fanta page title story-page slant frameless label`, short enough for a thumb."""
+        t = self.tag
+        return (
+            f"{self.page.fanta_page} {self.title[:14]} p{self.page.story_page} "
+            f"s{float(t.get('slant_px') or 0):.0f} f{float(t.get('frameless') or 0):.2f}"
+            f"{' ' + t['label'] if t.get('label') else ''}"
+        )
+
+
+def volume_tagged_pages(
+    comics_database: ComicsDatabase, volume: int, tags_root: Path
+) -> list[TaggedPage]:
+    """Every page of a volume's titles that holds an irregular-panel tag, in page order."""
+    _, titles = get_comic_titles(str(volume), "", exclude_non_comics=True)
+    found = [
+        TaggedPage(title, page, tag)
+        for title in titles
+        for page in title_pages(comics_database, title, tags_root)
+        if (tag := load_page_tags(page).get(IRREGULAR)) is not None
+    ]
+    return sorted(found, key=lambda tp: tp.page.fanta_page)
+
+
+def write_irregular_sheet(
+    comics_database: ComicsDatabase, volume: int, tags_root: Path, near_misses: int
+) -> Path:
+    """Write a volume's sheet of irregular pages plus its closest near misses."""
+    tagged = volume_tagged_pages(comics_database, volume, tags_root)
+    flagged = [tp for tp in tagged if is_irregular_page(tp.tag)]
+    rest = sorted(
+        (tp for tp in tagged if not is_irregular_page(tp.tag)),
+        key=lambda tp: -irregular_closeness(tp.tag),
+    )[:near_misses]
+
+    def loader(tp: TaggedPage) -> Callable[[], np.ndarray]:
+        return lambda: load_rgb(tp.page.image_file)
+
+    sections: list[GridSection] = [
+        (
+            (
+                f"IRREGULAR PANELS: slant >= {IRREGULAR_SLANT_MIN:.0f} or frameless >= "
+                f"{IRREGULAR_FRAMELESS_MIN} or labelled yes ({len(flagged)})"
+            ),
+            [(loader(tp), tp.caption()) for tp in flagged],
+        ),
+        (f"NEAR MISSES: top {len(rest)} other pages", [(loader(tp), tp.caption()) for tp in rest]),
+    ]
+    volume_title = comics_database.get_fantagraphics_volume_title(volume)
+    out = tags_root / SHEETS_SUBDIR / IRREGULAR / f"{volume_title}.png"
+    write_grid_sheet(volume_title, sections, (PAGE_THUMB_W, PAGE_THUMB_H, PAGE_SHEET_COLS), out)
+    return out
+
+
+def write_irregular_list(comics_database: ComicsDatabase, tags_root: Path) -> tuple[Path, int]:
+    """Write every irregular page in the corpus, from the stored tags, as a TSV.
+
+    Returns:
+        The file and the number of pages listed.
+
+    """
+    columns = ["volume", "fanta_page", "title", "story_page", "slant_px", "frameless", "label"]
+    lines = ["\t".join(columns)]
+    for volume in range(FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER + 1):
+        for tp in volume_tagged_pages(comics_database, volume, tags_root):
+            if is_irregular_page(tp.tag):
+                t = tp.tag
+                lines.append(
+                    f"{volume}\t{tp.page.fanta_page}\t{tp.title}\t{tp.page.story_page}\t"
+                    f"{t.get('slant_px')}\t{t.get('frameless')}\t{t.get('label') or ''}"
+                )
+    out = tags_root / IRREGULAR_LIST_FILE
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return out, len(lines) - 1
+
+
 NearMissesOpt = typer.Option(DEFAULT_NEAR_MISSES, "--near-misses", help="Near misses per sheet.")
 
 
@@ -619,6 +916,31 @@ def label(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
     print(
         f"{title_str}: yes {counts['yes']}, no {counts['no']}, unsure {counts['unsure']} -> {out}"
     )
+
+
+@app.command(help="Find pages with irregular (slanted, round or borderless) panels.")
+def irregular(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    workers: int = typer.Option(DEFAULT_IRREG_WORKERS, "--workers", help="Pages measured at once."),
+    near_misses: int = NearMissesOpt,
+    log_level_str: LogLevelArg = "INFO",
+) -> None:
+    """Measure each title's pages, rebuild its volume's sheet, rewrite the corpus list."""
+    init_logging(APP_LOGGING_NAME, "panel-tags.log", log_level_str)
+    comics_database, titles = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
+    tags_root = get_panel_tags_root(comics_database)
+    volumes: set[int] = set()
+    for title in titles:
+        if (pages := checked_pages(comics_database, title, tags_root)) is None:
+            continue
+        flagged = irregular_title(pages, workers)
+        volumes.add(comics_database.get_fanta_volume_int(title))
+        print(f"{title}: {len(pages)} pages; irregular: {' '.join(p.fanta_page for p in flagged)}")
+    for volume in sorted(volumes):
+        print(f"Sheet: {write_irregular_sheet(comics_database, volume, tags_root, near_misses)}")
+    out, n = write_irregular_list(comics_database, tags_root)
+    print(f"{n} irregular pages in the corpus -> {out}")
 
 
 @app.command(help="Build the silhouette contact sheet from the tags as they stand.")

@@ -18,6 +18,7 @@ blueviolet
 boatner
 bocr
 bolditalic
+borderless
 boxlayout
 bufferfmt
 bunx
@@ -54,6 +55,7 @@ etype
 fastoctree
 favourites
 floatlayout
+frameless
 fromarray
 fzzzt
 fzzzzt
@@ -78,6 +80,7 @@ imwrite
 inducks
 initargs
 inpaint
+intp
 intspan
 jev
 jpgs
