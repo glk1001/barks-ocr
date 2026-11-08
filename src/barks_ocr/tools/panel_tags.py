@@ -126,6 +126,10 @@ IRREG_WORK_W = 1000
 PAPER_TOL = 14  # max Lab channel distance from the page colour sampled at two corners
 PAPER_CORNER = 20
 MIN_PANEL_FRAC = 0.01  # smaller regions (page numbers, stray marks) are not panels
+# A region with less frame ink than this share of its area is not a panel: Fantagraphics'
+# pale one-colour decorations in the empty space below short gags (Vol. 1 565, 625) have
+# no black line art at all, and every panel has some.
+MIN_REGION_INK = 0.01
 SLANT_EPSILON = 3.0  # approxPolyDP tolerance, px at IRREG_WORK_W
 SLANT_MIN_SEG = 30
 SLANT_ANGLE = 4.0
@@ -138,6 +142,8 @@ IRREGULAR_FRAMELESS_MIN = 0.10
 DEFAULT_IRREG_WORKERS = 8
 PAGE_THUMB_W, PAGE_THUMB_H, PAGE_SHEET_COLS = 330, 480, 6
 IRREGULAR_LIST_FILE = "irregular-pages.tsv"
+# Every page of this title is a one-page gag with its own title logo.
+ONE_PAGERS_TITLE = "All One-Pagers"
 
 app = typer.Typer(help="Tag panels (silhouettes) and build per-title contact sheets.")
 
@@ -233,6 +239,10 @@ def irregular_score(rgb: np.ndarray) -> IrregularScore:
     slant, frameless, count = 0.0, 0.0, 0
     for outline in contours:
         if cv2.contourArea(outline) < MIN_PANEL_FRAC * regions.size:
+            continue
+        fill = np.zeros_like(regions)
+        cv2.drawContours(fill, [outline], -1, 1, thickness=cv2.FILLED)
+        if float(ink_small[fill > 0].mean()) < MIN_REGION_INK:
             continue
         count += 1
         pts = np.asarray(outline, dtype=np.intp).reshape(-1, 2)
@@ -758,6 +768,14 @@ class TaggedPage:
     page: PagePanels
     tag: dict[str, Any]
 
+    @property
+    def title_page(self) -> bool:
+        """Whether the page carries a story's title logo, which is printed unframed.
+
+        On most such pages the logo is all the measure sees, so they are listed apart.
+        """
+        return self.page.story_page == 1 or self.title == ONE_PAGERS_TITLE
+
     def caption(self) -> str:
         """`fanta page title story-page slant frameless label`, short enough for a thumb."""
         t = self.tag
@@ -787,7 +805,8 @@ def write_irregular_sheet(
 ) -> Path:
     """Write a volume's sheet of irregular pages plus its closest near misses."""
     tagged = volume_tagged_pages(comics_database, volume, tags_root)
-    flagged = [tp for tp in tagged if is_irregular_page(tp.tag)]
+    flagged = [tp for tp in tagged if is_irregular_page(tp.tag) and not tp.title_page]
+    title_flagged = [tp for tp in tagged if is_irregular_page(tp.tag) and tp.title_page]
     rest = sorted(
         (tp for tp in tagged if not is_irregular_page(tp.tag)),
         key=lambda tp: -irregular_closeness(tp.tag),
@@ -804,6 +823,10 @@ def write_irregular_sheet(
             ),
             [(loader(tp), tp.caption()) for tp in flagged],
         ),
+        (
+            f"TITLE PAGES: flagged, but often only for the unframed logo ({len(title_flagged)})",
+            [(loader(tp), tp.caption()) for tp in title_flagged],
+        ),
         (f"NEAR MISSES: top {len(rest)} other pages", [(loader(tp), tp.caption()) for tp in rest]),
     ]
     volume_title = comics_database.get_fantagraphics_volume_title(volume)
@@ -819,16 +842,17 @@ def write_irregular_list(comics_database: ComicsDatabase, tags_root: Path) -> tu
         The file and the number of pages listed.
 
     """
-    columns = ["volume", "fanta_page", "title", "story_page", "slant_px", "frameless", "label"]
+    columns = ["volume", "fanta_page", "title", "story_page", "title_page", "slant_px"]
+    columns += ["frameless", "label"]
     lines = ["\t".join(columns)]
     for volume in range(FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER + 1):
         for tp in volume_tagged_pages(comics_database, volume, tags_root):
             if is_irregular_page(tp.tag):
                 t = tp.tag
-                lines.append(
-                    f"{volume}\t{tp.page.fanta_page}\t{tp.title}\t{tp.page.story_page}\t"
-                    f"{t.get('slant_px')}\t{t.get('frameless')}\t{t.get('label') or ''}"
-                )
+                fields: list[object] = [volume, tp.page.fanta_page, tp.title, tp.page.story_page]
+                fields += ["yes" if tp.title_page else "", t.get("slant_px")]
+                fields += [t.get("frameless"), t.get("label") or ""]
+                lines.append("\t".join(map(str, fields)))
     out = tags_root / IRREGULAR_LIST_FILE
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return out, len(lines) - 1
