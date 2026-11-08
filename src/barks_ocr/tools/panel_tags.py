@@ -27,6 +27,8 @@ only for what is missing. It never touches a label either.
 ``{"page": {"irregular_panels": {...}}, "panels": [...]}``: does the page have a panel that
 is not a framed rectangle (slanted or cut, round, or borderless)? It is measured from the
 page image, not the segments boxes, which are rectangles even round a triangular panel.
+``irregular-label`` records a review of a volume's sheet by fanta page number; a page
+labelled ``no`` leaves the list for good, since re-measuring never touches a label.
 """
 
 # ruff: noqa: T201
@@ -858,6 +860,66 @@ def write_irregular_list(comics_database: ComicsDatabase, tags_root: Path) -> tu
     return out, len(lines) - 1
 
 
+def parse_page_ids(text: str) -> list[str]:
+    """Parse ``068-076,151`` into fanta page stems ``["068", ..., "076", "151"]``.
+
+    Raises:
+        typer.BadParameter: On an item that is not a page number or a low-high range.
+
+    """
+    pages = []
+    for raw in filter(None, (t.strip() for t in text.split(","))):
+        low, sep, high = raw.partition("-")
+        if not (low.isdigit() and (not sep or high.isdigit())) or (sep and int(high) < int(low)):
+            msg = f'"{raw}" is not a page number or range such as 068 or 068-076.'
+            raise typer.BadParameter(msg)
+        pages.extend(f"{n:03d}" for n in range(int(low), int(high if sep else low) + 1))
+    return pages
+
+
+def apply_page_labels(
+    tagged: list[TaggedPage], wanted: dict[str, str], *, accept_candidates: bool
+) -> dict[str, int]:
+    """Write a reviewer's irregular-panel page labels (source ``human``).
+
+    Args:
+        tagged: The volume's (or title's) measured pages.
+        wanted: Fanta page to ``yes`` or ``no``; these override any existing label.
+        accept_candidates: Also label ``yes`` every unlabelled candidate not in ``wanted``,
+            except title pages, which are usually flagged only for their logo: a title
+            page becomes ``yes`` only when listed.
+
+    Returns:
+        How many pages were set to each label.
+
+    Raises:
+        typer.BadParameter: If a page is not a measured page in scope; nothing is written.
+
+    """
+    known = {tp.page.fanta_page: tp for tp in tagged}
+    if unknown := sorted(set(wanted) - set(known)):
+        msg = f"Not measured pages of this volume/title: {', '.join(unknown)}."
+        raise typer.BadParameter(msg)
+    counts = {"yes": 0, "no": 0}
+    for tp in tagged:
+        label = wanted.get(tp.page.fanta_page)
+        if (
+            label is None
+            and accept_candidates
+            and not tp.title_page
+            and tp.tag.get("label") is None
+            and is_irregular_candidate(tp.tag)
+        ):
+            label = "yes"
+        if label is None:
+            continue
+        page_tags = load_page_tags(tp.page)
+        page_tags[IRREGULAR]["label"], page_tags[IRREGULAR]["source"] = label, "human"
+        save_tags(tp.page, load_tags(tp.page), page_tags)
+        counts[label] += 1
+    return counts
+
+
 NearMissesOpt = typer.Option(DEFAULT_NEAR_MISSES, "--near-misses", help="Near misses per sheet.")
 
 
@@ -964,6 +1026,48 @@ def irregular(
     for volume in sorted(volumes):
         print(f"Sheet: {write_irregular_sheet(comics_database, volume, tags_root, near_misses)}")
     out, n = write_irregular_list(comics_database, tags_root)
+    print(f"{n} irregular pages in the corpus -> {out}")
+
+
+@app.command(help="Record an irregular-panel sheet review: list the exceptions, accept the rest.")
+def irregular_label(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    reject: str = typer.Option("", "--reject", help="Fanta pages to label no, e.g. 068-076,080"),
+    add: str = typer.Option("", "--add", help="Fanta pages to label yes (any measured page)."),
+    accept_candidates: bool = typer.Option(
+        default=False, help="Label yes every unlabelled flagged page not listed (not title pages)."
+    ),
+    near_misses: int = NearMissesOpt,
+    log_level_str: LogLevelArg = "INFO",
+) -> None:
+    """Label one volume's (or title's) pages from its sheet, then rebuild sheet and list."""
+    init_logging(APP_LOGGING_NAME, "panel-tags.log", log_level_str)
+    wanted: dict[str, str] = {}
+    for text, lab in ((reject, "no"), (add, "yes")):
+        for page_id in parse_page_ids(text):
+            if wanted.get(page_id, lab) != lab:
+                msg = f"Page {page_id} is given two labels ({wanted[page_id]} and {lab})."
+                raise typer.BadParameter(msg)
+            wanted[page_id] = lab
+    if not wanted and not accept_candidates:
+        msg = "Nothing to do: give --reject/--add pages and/or --accept-candidates."
+        raise typer.BadParameter(msg)
+    comics_database, titles = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
+    volumes = {comics_database.get_fanta_volume_int(title) for title in titles}
+    if len(volumes) != 1:
+        msg = "Give one --volume (or one --title): fanta page numbers are per volume."
+        raise typer.BadParameter(msg)
+    volume = volumes.pop()
+    tags_root = get_panel_tags_root(comics_database)
+    tagged = [
+        tp for tp in volume_tagged_pages(comics_database, volume, tags_root) if tp.title in titles
+    ]
+    counts = apply_page_labels(tagged, wanted, accept_candidates=accept_candidates)
+    sheet = write_irregular_sheet(comics_database, volume, tags_root, near_misses)
+    out, n = write_irregular_list(comics_database, tags_root)
+    logger.info(f"Volume {volume}: irregular pages labelled {counts} (source human).")
+    print(f"Volume {volume}: yes {counts['yes']}, no {counts['no']} -> {sheet}")
     print(f"{n} irregular pages in the corpus -> {out}")
 
 
