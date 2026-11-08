@@ -854,8 +854,18 @@ def write_irregular_sheet(
 
     """
     tagged = volume_tagged_pages(comics_database, volume, tags_root)
-    flagged = [tp for tp in tagged if is_irregular_page(tp.tag) and not tp.title_page]
-    title_flagged = [tp for tp in tagged if is_irregular_page(tp.tag) and tp.title_page]
+    # A title page waits in its own section only until reviewed: once labelled yes it is
+    # an irregular page like any other.
+    flagged = [
+        tp
+        for tp in tagged
+        if is_irregular_page(tp.tag) and (not tp.title_page or tp.tag.get("label") == "yes")
+    ]
+    title_flagged = [
+        tp
+        for tp in tagged
+        if is_irregular_page(tp.tag) and tp.title_page and tp.tag.get("label") is None
+    ]
     rest = sorted(
         (tp for tp in tagged if not is_irregular_page(tp.tag)),
         key=lambda tp: -irregular_closeness(tp.tag),
@@ -873,7 +883,10 @@ def write_irregular_sheet(
             [(loader(tp), tp.caption()) for tp in flagged],
         ),
         (
-            f"TITLE PAGES: flagged, but often only for the unframed logo ({len(title_flagged)})",
+            (
+                "TITLE PAGES, not yet reviewed: flagged, but often only for the unframed logo "
+                f"({len(title_flagged)})"
+            ),
             [(loader(tp), tp.caption()) for tp in title_flagged],
         ),
         (f"NEAR MISSES: top {len(rest)} other pages", [(loader(tp), tp.caption()) for tp in rest]),
