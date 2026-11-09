@@ -1041,6 +1041,16 @@ def selected_titles(volumes_str: str, title_str: str) -> tuple[ComicsDatabase, l
     return comics_database, titles, scope
 
 
+def review_caption(volume: int, page: PagePanels, index: int, title: str, label: str) -> str:
+    """`v7 027:3 Lost in the Andes!:7 [yes]`: volume fanta page:panel, title:story page, label.
+
+    For the review page, which has room for the whole title; an empty label is left out.
+    """
+    return f"v{volume} {page.fanta_page}:{index} {title}:{page.story_page}" + (
+        f" [{label}]" if label else ""
+    )
+
+
 @dataclass(frozen=True)
 class SilhouettePanel:
     """One panel as the silhouette review page shows it."""
@@ -1068,11 +1078,11 @@ class SilhouettePanel:
         return 1, -self.item.score
 
     def caption(self) -> str:
-        """`v7 027:3 [yes, folder] Lost in the Andes`: volume, page:panel, label, title."""
-        tag = self.item.tag
-        label = f" [{self.label}, {tag.get('source')}]" if self.label else ""
-        page, index = self.item.page.fanta_page, self.item.row["index"]
-        return f"v{self.volume} {page}:{index}{label} {self.title[:22]}"
+        """`v7 027:3 Lost in the Andes!:7 [yes, folder]`, as :func:`review_caption` says."""
+        label = f"{self.label}, {self.item.tag.get('source')}" if self.label else ""
+        return review_caption(
+            self.volume, self.item.page, self.item.row["index"], self.title, label
+        )
 
     def image(self, width: int | None = None) -> np.ndarray:
         """Return the panel's crop, optionally narrowed."""

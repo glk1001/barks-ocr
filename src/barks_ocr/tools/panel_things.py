@@ -74,6 +74,7 @@ from barks_ocr.tools.panel_tags import (
     load_tags,
     paginate_sections,
     panel_image,
+    review_caption,
     save_tags,
     segments_size,
     selected_titles,
@@ -438,6 +439,12 @@ class ThingPanel:
             f"{self.title[:22]}"
         )
 
+    def review_caption(self) -> str:
+        """`v7 027:3 Lost in the Andes!:7 [yes]`: the review page's caption."""
+        return review_caption(
+            self.volume, self.page, self.row["index"], self.title, self.label or ""
+        )
+
     def image(self, width: int | None = None) -> np.ndarray:
         """Return the panel's crop (box drawn in, for a small object), optionally narrowed."""
         panel = panel_image(self.page, self.row["box"], width)
@@ -622,7 +629,7 @@ class ThingsSession(ReviewSession[ThingPanel]):
             "cutoff": 1.0 if sure is None else sure,
             "panels": [
                 {
-                    "caption": p.caption(),
+                    "caption": p.review_caption(),
                     "score": round(p.score, 4),
                     "scores": f"jev {p.tag['jev'][thing]:.2f}",
                     "label": p.label,
