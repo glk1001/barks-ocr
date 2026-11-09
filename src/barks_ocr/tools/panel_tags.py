@@ -27,7 +27,7 @@ only for what is missing. It never touches a label either.
 candidates by figure score, then those resting on the noisier scenery answer alone. Every
 panel starts as yes and Save labels every panel on the page, so ``--limit`` sets how many
 are in hand at once. A label Save does not change keeps its source; a changed one becomes
-``human``.
+``human``. ``remaining`` lists the titles that still have unlabelled candidates.
 
 ``irregular`` is a page-level tag, stored beside the panels as
 ``{"page": {"irregular_panels": {...}}, "panels": [...]}``: does the page have a panel that
@@ -1055,6 +1055,11 @@ class SilhouettePanel:
         return self.item.tag.get("label")
 
     @property
+    def to_review(self) -> bool:
+        """Whether the panel is an unlabelled candidate."""
+        return self.label is None and self.item.score >= 1.0
+
+    @property
     def rank(self) -> tuple[int, float]:
         """Sort key, likeliest first: figure candidates, then the noisier scenery-only ones."""
         figure = self.item.tag.get("jev_parts", {}).get("figure", 0.0)
@@ -1136,11 +1141,7 @@ class SilhouetteSession(ReviewSession[SilhouettePanel]):
             limit: At most this many panels, the likeliest first.
 
         """
-        kept = [
-            p
-            for p in found
-            if (p.label is None and p.item.score >= 1.0) or (everything and p.label is not None)
-        ]
+        kept = [p for p in found if p.to_review or (everything and p.label is not None)]
         super().__init__({SILHOUETTE: sorted(kept, key=lambda p: p.rank)[:limit]} if kept else {})
 
     def panels_data(self, thing: str) -> dict[str, Any]:
@@ -1165,6 +1166,27 @@ class SilhouetteSession(ReviewSession[SilhouettePanel]):
     ) -> dict[str, int]:
         """Write labels into the panels' tags files."""
         return save_silhouette_labels(panels, labels)
+
+
+def print_remaining(found: list[SilhouettePanel], where: str) -> None:
+    """Print each title with unlabelled candidates (and its labels so far), then the totals."""
+    by_title: dict[str, list[SilhouettePanel]] = {}
+    for panel in found:
+        by_title.setdefault(panel.title, []).append(panel)
+    left = {t: ps for t, ps in by_title.items() if any(p.to_review for p in ps)}
+    if left:
+        print(f"{'Vol':>3} {'Left':>5} {'Yes':>4} {'No':>4} {'Unsure':>6}  Title")
+    for title, panels in sorted(left.items(), key=lambda kv: kv[1][0].volume):
+        labels = [p.label for p in panels]
+        print(
+            f"{panels[0].volume:>3} {sum(p.to_review for p in panels):>5} "
+            f"{labels.count('yes'):>4} {labels.count('no'):>4} {labels.count('unsure'):>6}  {title}"
+        )
+    total = sum(p.to_review for p in found)
+    print(
+        f"{total} candidates left in {len(left)} of {len(by_title)} titles ({where}). "
+        f"Panels marked unsure count as done."
+    )
 
 
 NearMissesOpt = typer.Option(DEFAULT_NEAR_MISSES, "--near-misses", help="Near misses per sheet.")
@@ -1379,6 +1401,20 @@ def review(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
             print("Add --everything to see labelled panels as well.")
         raise typer.Exit(code=1)
     run_review(session, port)
+
+
+@app.command(help="List the titles that still have unlabelled silhouette candidates.")
+def remaining(
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    log_level_str: LogLevelArg = "INFO",
+) -> None:
+    """Print, per title, the candidates a review would still offer; writes nothing."""
+    init_logging(APP_LOGGING_NAME, "panel-tags.log", log_level_str)
+    comics_database, titles, scope = selected_titles(volumes_str, title_str)
+    tags_root = get_panel_tags_root(comics_database)
+    found = scan_silhouettes(comics_database, titles, tags_root)
+    print_remaining(found, scope if title_str else scope.lower())
 
 
 if __name__ == "__main__":
