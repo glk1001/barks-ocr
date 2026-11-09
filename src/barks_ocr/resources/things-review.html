@@ -1,0 +1,184 @@
+<!doctype html>
+<!-- Review page served by `barks-ocr-panel-things review`; talks only to that local server. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Things Review</title>
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70; --line: #d8d6d0;
+    --yes: #1f9d55; --no: #c8372d; --unsure: #d99a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #18181a; --card: #232326; --text: #ececee; --muted: #9a9aa0; --line: #3a3a3e; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 14px/1.4 system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; background: var(--bg);
+           border-bottom: 1px solid var(--line); padding: 10px 16px; }
+  h1 { margin: 0 0 4px; font-size: 20px; display: flex; gap: 12px; align-items: center; }
+  select { font: inherit; font-size: 16px; padding: 4px 8px; }
+  .question { color: var(--muted); font-size: 12px; max-width: 110ch; }
+  .bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 8px; }
+  .bar label { color: var(--muted); }
+  .bar input { width: 5em; }
+  .counts span { margin-right: 10px; }
+  button { font: inherit; padding: 6px 14px; border-radius: 6px; border: 1px solid var(--line);
+           background: var(--card); color: var(--text); cursor: pointer; }
+  button.primary { background: var(--yes); color: #fff; border-color: var(--yes); }
+  button.active { outline: 2px solid var(--text); }
+  .hint { color: var(--muted); font-size: 12px; }
+  main { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+         gap: 12px; padding: 16px; }
+  .card { background: var(--card); border: 4px solid var(--line); border-radius: 8px;
+          overflow: hidden; cursor: pointer; user-select: none; }
+  .card img { display: block; width: 100%; height: auto; background: #fff; }
+  .card .cap { display: flex; justify-content: space-between; gap: 8px; padding: 4px 8px;
+               font-size: 12px; }
+  .card .cap a { color: var(--muted); text-decoration: none; }
+  .card.yes { border-color: var(--yes); }
+  .card.no { border-color: var(--no); }
+  .card.no img { opacity: 0.45; }
+  .card.unsure { border-color: var(--unsure); }
+  .card.proposed { border-style: dashed; }
+  .tag { font-weight: 600; text-transform: uppercase; }
+  .yes .tag { color: var(--yes); } .no .tag { color: var(--no); }
+  .unsure .tag { color: var(--unsure); }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Review: <select id="thing"></select></h1>
+  <div class="question" id="question"></div>
+  <div class="bar">
+    <label>Cut-off <input id="cutoff" type="number" step="0.05" min="0" max="1"></label>
+    <span class="counts" id="counts"></span>
+    <span>
+      <button data-show="all" class="active">All</button>
+      <button data-show="yes">Yes</button>
+      <button data-show="no">No</button>
+      <button data-show="unsure">Unsure</button>
+    </span>
+    <button class="primary" id="save">Save</button>
+    <span id="status" class="hint"></span>
+  </div>
+  <div class="hint">Click flips yes/no. Shift-click: unsure. Dashed border = not saved yet
+    (unlabelled panels start yes at or above the cut-off). Save labels every panel on the
+    page. ⤢ opens the panel full size. The menu shows labelled / shown per thing.</div>
+</header>
+<main id="grid"></main>
+<script>
+  "use strict";
+  let thing = null, cards = [], show = "all", dirty = false;
+  const $ = id => document.getElementById(id);
+
+  function proposal(p, cutoff) { return p.score >= cutoff ? "yes" : "no"; }
+
+  function render(card) {
+    card.el.className = "card " + card.state + (card.saved ? "" : " proposed") +
+      (show === "all" || show === card.state ? "" : " hidden");
+    card.tagEl.textContent = card.state;
+  }
+
+  function updateCounts() {
+    const n = { yes: 0, no: 0, unsure: 0 }, unsaved = cards.filter(c => !c.saved).length;
+    cards.forEach(c => n[c.state]++);
+    $("counts").innerHTML =
+      `<span>${cards.length} panels</span><span>yes ${n.yes}</span><span>no ${n.no}</span>` +
+      `<span>unsure ${n.unsure}</span><span>unsaved ${unsaved}</span>`;
+  }
+
+  function setState(card, state) {
+    card.state = state; card.saved = false; card.touched = true; dirty = true;
+    render(card); updateCounts();
+  }
+
+  async function loadThings(selected) {
+    const things = await (await fetch("/things.json")).json();
+    const sel = $("thing");
+    sel.innerHTML = "";
+    things.forEach(t => {
+      const o = document.createElement("option");
+      o.value = t.thing;
+      o.textContent = `${t.thing}  (${t.labelled}/${t.shown})`;
+      sel.appendChild(o);
+    });
+    const first = things.find(t => t.labelled < t.shown) || things[0];
+    sel.value = selected || first.thing;
+    return sel.value;
+  }
+
+  async function loadThing(name) {
+    thing = name; cards = []; dirty = false;
+    const data = await (await fetch(`/panels.json?thing=${encodeURIComponent(name)}`)).json();
+    document.title = `Review: ${name}`;
+    $("question").textContent = data.question;
+    $("cutoff").value = data.cutoff;
+    $("status").textContent = "";
+    const grid = $("grid");
+    grid.innerHTML = "";
+    data.panels.forEach((p, k) => {
+      const el = document.createElement("div");
+      const src = `/img?thing=${encodeURIComponent(name)}&k=${k}`;
+      el.innerHTML = `<img loading="lazy" src="${src}" alt="">` +
+        `<div class="cap"><span>${p.caption}</span><span>jev ${p.jev.toFixed(2)}` +
+        ` <span class="tag"></span> <a href="${src}" target="_blank" title="Full size">⤢</a>` +
+        `</span></div>`;
+      const card = { el, tagEl: el.querySelector(".tag"), p,
+                     state: p.label || proposal(p, data.cutoff), saved: !!p.label, touched: false };
+      el.addEventListener("click", ev => {
+        if (ev.target.tagName === "A") return;
+        setState(card, ev.shiftKey ? "unsure" : (card.state === "yes" ? "no" : "yes"));
+      });
+      cards.push(card); render(card); grid.appendChild(el);
+    });
+    updateCounts();
+    window.scrollTo(0, 0);
+  }
+
+  $("thing").addEventListener("change", async ev => {
+    if (dirty && !confirm(`Unsaved ${thing} changes will be lost. Switch anyway?`)) {
+      ev.target.value = thing; return;
+    }
+    await loadThing(ev.target.value);
+  });
+
+  $("cutoff").addEventListener("change", () => {
+    const cutoff = parseFloat($("cutoff").value);
+    cards.forEach(c => {
+      if (!c.saved && !c.touched) { c.state = proposal(c.p, cutoff); render(c); }
+    });
+    updateCounts();
+  });
+
+  document.querySelectorAll("[data-show]").forEach(b => b.addEventListener("click", () => {
+    show = b.dataset.show;
+    document.querySelectorAll("[data-show]").forEach(x => x.classList.toggle("active", x === b));
+    cards.forEach(render);
+  }));
+
+  $("save").addEventListener("click", async () => {
+    const status = $("status");
+    const labels = {};
+    cards.forEach((c, k) => { if (!c.saved) labels[k] = c.state; });
+    if (!Object.keys(labels).length) { status.textContent = "Nothing to save."; return; }
+    status.textContent = "Saving…";
+    const r = await fetch(`/save?thing=${encodeURIComponent(thing)}`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ labels }) });
+    if (!r.ok) { status.textContent = `Save failed: ${r.status} ${await r.text()}`; return; }
+    const n = await r.json();
+    cards.forEach(c => { c.saved = true; render(c); });
+    dirty = false; updateCounts();
+    status.textContent = `Saved: yes ${n.yes}, no ${n.no}, unsure ${n.unsure}.`;
+    await loadThings(thing);
+  });
+
+  window.addEventListener("beforeunload", ev => { if (dirty) { ev.preventDefault(); } });
+  loadThings().then(loadThing);
+</script>
+</body>
+</html>
