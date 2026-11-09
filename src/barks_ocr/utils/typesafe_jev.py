@@ -12,7 +12,7 @@ The key is ``TYPESAFE_API_KEY`` in the repo's ``.env.runtime``.
 import json
 import os
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import cv2
@@ -42,11 +42,20 @@ class NoulAnswer:
 
 @dataclass(frozen=True)
 class NoulAnswers:
-    """Yes/no answers to several questions about one image, keyed by question id."""
+    """Answers to several questions about one image, keyed by question id.
+
+    ``boxes`` holds the box questions' answers as (left, top, right, bottom) fractions of
+    the image passed in (not of the padded copy sent), with Jev's confidence, which may
+    be None. A box is always returned, even for something absent: pair it with a yes/no
+    question and ignore the box when that answer is low.
+    """
 
     probabilities: dict[str, float]
     model: str
     input_tokens: int
+    boxes: dict[str, tuple[tuple[float, float, float, float], float | None]] = field(
+        default_factory=dict
+    )
 
 
 class JevError(RuntimeError):
@@ -57,6 +66,16 @@ def fit_image(rgb: np.ndarray) -> np.ndarray:
     """Scale an image so its longer side is at most 1568 px, then pad short sides to 280.
 
     Padding (white) rather than upscaling keeps a thin banner panel's detail unchanged.
+    """
+    return _fit(rgb)[0]
+
+
+def _fit(rgb: np.ndarray) -> tuple[np.ndarray, tuple[int, int, int, int]]:
+    """Fit an image (see :func:`fit_image`), also returning where it sits in the result.
+
+    Returns:
+        The fitted image and (left, top, width, height) of the scaled original within it.
+
     """
     h, w = rgb.shape[:2]
     if max(h, w) > MAX_SIDE:
@@ -69,7 +88,23 @@ def fit_image(rgb: np.ndarray) -> np.ndarray:
             rgb, pad_h // 2, pad_h - pad_h // 2, pad_w // 2, pad_w - pad_w // 2,
             cv2.BORDER_CONSTANT, value=(255, 255, 255),
         )  # fmt: skip
-    return rgb
+    return rgb, (pad_w // 2, pad_h // 2, w, h)
+
+
+def _unfit_box(
+    box: dict[str, float], fitted: tuple[int, int], placed: tuple[int, int, int, int]
+) -> tuple[float, float, float, float]:
+    """Map a box from fractions of the fitted image to fractions of the original."""
+    fw, fh = fitted
+    left, top, w, h = placed
+
+    def fx(v: float) -> float:
+        return min(1.0, max(0.0, (v * fw - left) / w))
+
+    def fy(v: float) -> float:
+        return min(1.0, max(0.0, (v * fh - top) / h))
+
+    return fx(box["left"]), fy(box["top"]), fx(box["right"]), fy(box["bottom"])
 
 
 class JevClient:
@@ -109,8 +144,10 @@ class JevClient:
         answers = self.ask_image_questions(rgb, {"q": instructions})
         return NoulAnswer(answers.probabilities["q"], answers.model, answers.input_tokens)
 
-    def ask_image_questions(self, rgb: np.ndarray, questions: dict[str, str]) -> NoulAnswers:
-        """Ask several yes/no questions about one image in one request.
+    def ask_image_questions(
+        self, rgb: np.ndarray, questions: dict[str, str], boxes: dict[str, str] | None = None
+    ) -> NoulAnswers:
+        """Ask several yes/no (and optionally box) questions about one image in one request.
 
         The image goes in the request's ``state``, which every question shares, rather than
         in each question's instructions (which would send it once per question).
@@ -118,6 +155,8 @@ class JevClient:
         Args:
             rgb: The image, RGB uint8; it is fitted to Jev's size limits first.
             questions: Question id (an identifier) to instructions; call the picture `image`.
+            boxes: Box question id to what to find, e.g. "the camera in `image`"; ids must
+                differ from the yes/no ones.
 
         Returns:
             The answers, keyed by question id.
@@ -126,7 +165,9 @@ class JevClient:
             JevError: On a non-retryable refusal, or when every retry failed.
 
         """
-        ok, png = cv2.imencode(".png", cv2.cvtColor(fit_image(rgb), cv2.COLOR_RGB2BGR))
+        boxes = boxes or {}
+        fitted, placed = _fit(rgb)
+        ok, png = cv2.imencode(".png", cv2.cvtColor(fitted, cv2.COLOR_RGB2BGR))
         if not ok:
             msg = "PNG encoding failed."
             raise JevError(msg)
@@ -135,7 +176,8 @@ class JevClient:
             "state": {"image": "img"},
             "assets": {"img": {"type": "image", "part": "image-part"}},
             "questions": {
-                qid: {"type": "noul", "instructions": text} for qid, text in questions.items()
+                **{qid: {"type": "noul", "instructions": text} for qid, text in questions.items()},
+                **{qid: {"type": "box", "instructions": text} for qid, text in boxes.items()},
             },
         }
         files = {
@@ -150,12 +192,20 @@ class JevClient:
             else:
                 if r.status_code == httpx.codes.OK:
                     body = r.json()
+                    size = (fitted.shape[1], fitted.shape[0])
                     return NoulAnswers(
                         probabilities={
                             qid: float(body["answers"][qid]["noul"]) for qid in questions
                         },
                         model=str(body["model"]),
                         input_tokens=int(body.get("usage", {}).get("input_tokens", 0)),
+                        boxes={
+                            qid: (
+                                _unfit_box(body["answers"][qid]["box"], size, placed),
+                                body["answers"][qid].get("confidence"),
+                            )
+                            for qid in boxes
+                        },
                     )
                 status, detail = r.status_code, r.text[:300]
                 if status not in RETRY_STATUSES:
