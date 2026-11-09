@@ -48,6 +48,7 @@ divis
 docstrings
 dotenv
 dumbells
+eaddrinuse
 emcheck
 entr
 ents

@@ -1,10 +1,11 @@
 <!doctype html>
-<!-- Review page served by `barks-ocr-panel-things review`; talks only to that local server. -->
+<!-- Review page served by `barks-ocr-panel-things review` and `barks-ocr-panel-tags review`;
+     talks only to that local server. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Things Review</title>
+<title>Panel Review</title>
 <style>
   :root {
     --bg: #f6f5f2; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70; --line: #d8d6d0;
@@ -66,8 +67,8 @@
     <span id="status" class="hint"></span>
   </div>
   <div class="hint">Click flips yes/no. Shift-click: unsure. Dashed border = not saved yet
-    (unlabelled panels start yes at or above the cut-off). Save labels every panel on the
-    page. ⤢ opens the panel full size. The menu shows labelled / shown per thing.</div>
+    (unlabelled panels start as a proposed answer: yes at or above any cut-off). Save labels
+    every panel on the page. ⤢ opens the panel full size. The menu shows labelled / shown.</div>
 </header>
 <main id="grid"></main>
 <script>
@@ -75,7 +76,8 @@
   let thing = null, cards = [], show = "all", dirty = false;
   const $ = id => document.getElementById(id);
 
-  function proposal(p, cutoff) { return p.score >= cutoff ? "yes" : "no"; }
+  // With no cut-off, every unlabelled panel on offer is a proposed yes.
+  function proposal(p, cutoff) { return cutoff === null || p.score >= cutoff ? "yes" : "no"; }
 
   function render(card) {
     card.el.className = "card " + card.state + (card.saved ? "" : " proposed") +
@@ -117,6 +119,7 @@
     document.title = `Review: ${name}`;
     $("question").textContent = data.question;
     $("cutoff").value = data.cutoff;
+    $("cutoff").parentElement.hidden = data.cutoff === null;
     $("status").textContent = "";
     const grid = $("grid");
     grid.innerHTML = "";
@@ -124,7 +127,7 @@
       const el = document.createElement("div");
       const src = `/img?thing=${encodeURIComponent(name)}&k=${k}`;
       el.innerHTML = `<img loading="lazy" src="${src}" alt="">` +
-        `<div class="cap"><span>${p.caption}</span><span>jev ${p.jev.toFixed(2)}` +
+        `<div class="cap"><span>${p.caption}</span><span>${p.scores}` +
         ` <span class="tag"></span> <a href="${src}" target="_blank" title="Full size">⤢</a>` +
         `</span></div>`;
       const card = { el, tagEl: el.querySelector(".tag"), p,

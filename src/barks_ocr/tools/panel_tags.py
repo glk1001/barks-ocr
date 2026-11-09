@@ -23,6 +23,12 @@ question's in ``jev_parts``, with ``jev_model`` and ``jev_question`` (the wordin
 version). A panel already scored with the current wording is skipped, so a rerun pays
 only for what is missing. It never touches a label either.
 
+``review`` opens the unlabelled candidates in a local browser page, likeliest first: figure
+candidates by figure score, then those resting on the noisier scenery answer alone. Every
+panel starts as yes and Save labels every panel on the page, so ``--limit`` sets how many
+are in hand at once. A label Save does not change keeps its source; a changed one becomes
+``human``.
+
 ``irregular`` is a page-level tag, stored beside the panels as
 ``{"page": {"irregular_panels": {...}}, "panels": [...]}``: does the page have a panel that
 is not a framed rectangle (slanted or cut, round, or borderless)? It is measured from the
@@ -38,6 +44,7 @@ import math
 from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -52,6 +59,13 @@ from intspan import intspan
 from loguru import logger
 
 from barks_ocr.cli_setup import get_comic_titles, init_logging
+from barks_ocr.utils.panel_review import (
+    DEFAULT_PORT,
+    DEFAULT_REVIEW_LIMIT,
+    LABELS,
+    ReviewSession,
+    run_review,
+)
 from barks_ocr.utils.typesafe_jev import JevClient, NoulAnswers
 
 APP_LOGGING_NAME = "ptag"
@@ -81,6 +95,12 @@ DEFAULT_NEAR_MISSES = 12
 CANDIDATE_FIGURE_MIN = 0.6
 CANDIDATE_SCENERY_MIN = 0.93
 CANDIDATE_LEGACY_MIN = 0.7  # for a single-question (v1/v2) jev_score
+
+SILHOUETTE_RULE = (
+    "Characters or scenery drawn as solid shapes with no interior detail. A silhouette beside "
+    "fully coloured characters counts; a silhouetted skyline with no characters counts. A "
+    "black-furred character drawn with its eyes, teeth or claws does not."
+)
 
 # Bump JEV_QUESTION_VERSION whenever the wording changes, so old scores are re-asked.
 # v3 asks two questions in one request (the image is shared state) and scores the panel
@@ -381,6 +401,12 @@ def load_rgb(image_file: Path) -> np.ndarray:
     return cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
 
 
+@lru_cache(maxsize=16)
+def load_page(image_file: Path) -> np.ndarray:
+    """Load a page image, cached: a sheet or review shows several panels of one page."""
+    return load_rgb(image_file)
+
+
 def crop_panel(page_rgb: np.ndarray, segments_size: tuple[int, int], box: list[int]) -> np.ndarray:
     """Cut a panel out of a page, scaling the box if the image and segments sizes differ."""
     fx, fy = page_rgb.shape[1] / segments_size[0], page_rgb.shape[0] / segments_size[1]
@@ -392,6 +418,15 @@ def segments_size(segments_file: Path) -> tuple[int, int]:
     """Return the page size a segments file's boxes were measured on."""
     w, h = json.loads(segments_file.read_text())["size"]
     return int(w), int(h)
+
+
+def panel_image(page: PagePanels, box: list[int], width: int | None = None) -> np.ndarray:
+    """Return a copy of a panel's crop from its (cached) page, narrowed to width if wider."""
+    panel = crop_panel(load_page(page.image_file), segments_size(page.segments_file), box)
+    if width is not None and panel.shape[1] > width:
+        new_size = (width, round(panel.shape[0] * width / panel.shape[1]))
+        return cv2.resize(panel, new_size, interpolation=cv2.INTER_AREA)
+    return panel.copy()
 
 
 def score_title(pages: list[PagePanels]) -> int:
@@ -487,15 +522,19 @@ def _caption(item: SheetItem) -> str:
     """
     label = item.tag.get("label")
     what = (item.tag.get("source") or "-") if label == "yes" else (label or "?")
+    index = item.row["index"]
+    page = item.page
+    return f"{page.fanta_page}:{index} ({page.story_page}-{index}) {what} {_scores(item)}"
+
+
+def _scores(item: SheetItem) -> str:
+    """``f0.93 s0.20``: the Jev v3 answers, or else a v1/v2 ``j`` or pixel ``p`` score."""
     parts = item.tag.get("jev_parts")
     if parts:
-        scores = f"f{parts.get('figure', 0):.2f} s{parts.get('scenery', 0):.2f}"
-    elif item.tag.get("jev_score") is not None:
-        scores = f"j{float(item.tag['jev_score']):.2f}"
-    else:
-        scores = f"p{float(item.tag.get('pixel_score') or 0):.2f}"
-    index = item.row["index"]
-    return f"{item.page.fanta_page}:{index} ({item.page.story_page}-{index}) {what} {scores}"
+        return f"f{parts.get('figure', 0):.2f} s{parts.get('scenery', 0):.2f}"
+    if item.tag.get("jev_score") is not None:
+        return f"j{float(item.tag['jev_score']):.2f}"
+    return f"p{float(item.tag.get('pixel_score') or 0):.2f}"
 
 
 def build_sheet(title: str, sections: list[tuple[str, list[SheetItem]]], out_file: Path) -> None:
@@ -991,6 +1030,143 @@ def apply_page_labels(
     return counts
 
 
+def selected_titles(volumes_str: str, title_str: str) -> tuple[ComicsDatabase, list[str], str]:
+    """Return the database, the selected titles (all volumes by default) and a scope name."""
+    if not volumes_str and not title_str:
+        volumes_str = f"{FIRST_VOLUME_NUMBER}-{LAST_VOLUME_NUMBER}"
+        scope = "all"
+    else:
+        scope = title_str or f"Vol. {volumes_str}"
+    comics_database, titles = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
+    return comics_database, titles, scope
+
+
+@dataclass(frozen=True)
+class SilhouettePanel:
+    """One panel as the silhouette review page shows it."""
+
+    title: str
+    volume: int
+    item: SheetItem
+
+    @property
+    def label(self) -> str | None:
+        """The panel's silhouette label, if any."""
+        return self.item.tag.get("label")
+
+    @property
+    def rank(self) -> tuple[int, float]:
+        """Sort key, likeliest first: figure candidates, then the noisier scenery-only ones."""
+        figure = self.item.tag.get("jev_parts", {}).get("figure", 0.0)
+        if figure >= CANDIDATE_FIGURE_MIN:
+            return 0, -figure
+        return 1, -self.item.score
+
+    def caption(self) -> str:
+        """`v7 027:3 [yes, folder] Lost in the Andes`: volume, page:panel, label, title."""
+        tag = self.item.tag
+        label = f" [{self.label}, {tag.get('source')}]" if self.label else ""
+        page, index = self.item.page.fanta_page, self.item.row["index"]
+        return f"v{self.volume} {page}:{index}{label} {self.title[:22]}"
+
+    def image(self, width: int | None = None) -> np.ndarray:
+        """Return the panel's crop, optionally narrowed."""
+        return panel_image(self.item.page, self.item.row["box"], width)
+
+
+def scan_silhouettes(
+    comics_database: ComicsDatabase, titles: list[str], tags_root: Path
+) -> list[SilhouettePanel]:
+    """Return every panel of the titles that has a silhouette tag."""
+    found = []
+    for title in titles:
+        if (pages := checked_pages(comics_database, title, tags_root)) is None:
+            continue
+        volume = comics_database.get_fanta_volume_int(title)
+        for page in pages:
+            if not page.tags_file.is_file():
+                continue
+            found.extend(
+                SilhouettePanel(title, volume, SheetItem(page, row))
+                for row in load_tags(page)
+                if SILHOUETTE in row["tags"]
+            )
+    return found
+
+
+def save_silhouette_labels(
+    panels: list[SilhouettePanel], labels: dict[int, str | None]
+) -> dict[str, int]:
+    """Write review labels (by position in ``panels``) into the tags files.
+
+    A None label clears the panel's label. A label that is already there keeps its source,
+    so saving a folder or vision label unchanged does not claim it for a human. Each file is
+    re-read before writing, so it keeps whatever else was written to it meanwhile.
+
+    Returns:
+        How many panels got each label (``cleared`` for None).
+
+    """
+    by_file: dict[Path, list[tuple[SilhouettePanel, str | None]]] = {}
+    for k, label in labels.items():
+        by_file.setdefault(panels[k].item.page.tags_file, []).append((panels[k], label))
+    counts = dict.fromkeys((*LABELS, "cleared"), 0)
+    for items in by_file.values():
+        page = items[0][0].item.page
+        rows = load_tags(page)
+        for panel, label in items:
+            tag = rows[panel.item.row["index"] - 1]["tags"][SILHOUETTE]
+            if tag.get("label") != label:
+                tag["label"], tag["source"] = label, "human" if label else None
+            panel.item.tag.update(label=tag["label"], source=tag["source"])
+            counts[label or "cleared"] += 1
+        save_tags(page, rows)
+    return counts
+
+
+class SilhouetteSession(ReviewSession[SilhouettePanel]):
+    """The panels a silhouette review page offers, likeliest first."""
+
+    def __init__(self, found: list[SilhouettePanel], *, everything: bool, limit: int) -> None:
+        """Keep the unlabelled candidates (with everything, the labelled panels too).
+
+        Args:
+            found: Every panel with a silhouette tag.
+            everything: Also offer labelled panels, to look again.
+            limit: At most this many panels, the likeliest first.
+
+        """
+        kept = [
+            p
+            for p in found
+            if (p.label is None and p.item.score >= 1.0) or (everything and p.label is not None)
+        ]
+        super().__init__({SILHOUETTE: sorted(kept, key=lambda p: p.rank)[:limit]} if kept else {})
+
+    def panels_data(self, thing: str) -> dict[str, Any]:
+        """Return what the page shows: the rule and each panel, with no cut-off to adjust."""
+        return {
+            "thing": thing,
+            "question": SILHOUETTE_RULE,
+            "cutoff": None,
+            "panels": [
+                {
+                    "caption": p.caption(),
+                    "score": round(p.item.score, 4),
+                    "scores": _scores(p.item),
+                    "label": p.label,
+                }
+                for p in self.panels[thing]
+            ],
+        }
+
+    def write_labels(
+        self, panels: list[SilhouettePanel], labels: dict[int, str | None]
+    ) -> dict[str, int]:
+        """Write labels into the panels' tags files."""
+        return save_silhouette_labels(panels, labels)
+
+
 NearMissesOpt = typer.Option(DEFAULT_NEAR_MISSES, "--near-misses", help="Near misses per sheet.")
 
 
@@ -1173,6 +1349,36 @@ def sheet(
         if checked_pages(comics_database, title, tags_root) is None:
             continue
         print(f"{title}: {write_sheet(comics_database, title, tags_root, near_misses)}")
+
+
+@app.command(help="Review silhouette candidates in a local browser page; Save writes labels.")
+def review(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
+    volumes_str: VolumesArg = "",
+    title_str: TitleArg = "",
+    everything: bool = typer.Option(
+        default=False, help="Also show labelled panels, not only unlabelled candidates."
+    ),
+    limit: int = typer.Option(DEFAULT_REVIEW_LIMIT, "--limit", help="Most panels on the page."),
+    port: int = typer.Option(DEFAULT_PORT, "--port", help="Local port."),
+    log_level_str: LogLevelArg = "INFO",
+) -> None:
+    """Serve the review page on localhost until Ctrl-C."""
+    init_logging(APP_LOGGING_NAME, "panel-tags.log", log_level_str)
+    comics_database, titles, scope = selected_titles(volumes_str, title_str)
+    tags_root = get_panel_tags_root(comics_database)
+    found = scan_silhouettes(comics_database, titles, tags_root)
+    session = SilhouetteSession(found, everything=everything, limit=limit)
+    if not session.panels:
+        labelled = sum(p.label is not None for p in found)
+        where = scope if title_str else scope.lower()
+        print(
+            f"Nothing to review in {where}: {len(found)} panels -- {labelled} labelled, "
+            f"{len(found) - labelled} below the candidate cut-offs."
+        )
+        if not everything:
+            print("Add --everything to see labelled panels as well.")
+        raise typer.Exit(code=1)
+    run_review(session, port)
 
 
 if __name__ == "__main__":

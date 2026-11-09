@@ -49,24 +49,16 @@ even with a second question on its box cut out and enlarged.
 # ruff: noqa: T201
 
 import csv
-import json
-import threading
-import webbrowser
 from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
-from functools import lru_cache
-from http import HTTPStatus
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
-from urllib.parse import parse_qs, urlsplit
 
 import cv2
 import numpy as np
 import typer
 from barks_fantagraphics.comics_database import ComicsDatabase
-from barks_fantagraphics.fanta_comics_info import FIRST_VOLUME_NUMBER, LAST_VOLUME_NUMBER
 from comic_utils.common_typer_options import LogLevelArg, TitleArg, VolumesArg
 from loguru import logger
 
@@ -81,9 +73,18 @@ from barks_ocr.tools.panel_tags import (
     load_rgb,
     load_tags,
     paginate_sections,
+    panel_image,
     save_tags,
     segments_size,
+    selected_titles,
     write_grid_sheet,
+)
+from barks_ocr.utils.panel_review import (
+    DEFAULT_PORT,
+    DEFAULT_REVIEW_LIMIT,
+    LABELS,
+    ReviewSession,
+    run_review,
 )
 from barks_ocr.utils.typesafe_jev import JevClient, NoulAnswers
 
@@ -270,11 +271,6 @@ DEFAULT_PER_SHEET = 40
 DEFAULT_MIN_SCORE = 0.3
 SCORE_BANDS = (0.9, 0.7, 0.5)  # sheet sections: >= 0.9, 0.7-0.9, 0.5-0.7, min-0.5
 
-LABELS = ("yes", "no", "unsure")
-REVIEW_PAGE = Path(__file__).parents[1] / "resources" / "things-review.html"
-REVIEW_THUMB_W = 840
-DEFAULT_PORT = 8765
-DEFAULT_REVIEW_LIMIT = 300
 
 app = typer.Typer(help="Tag panels with the things they show (Jev) and build per-thing sheets.")
 
@@ -444,26 +440,13 @@ class ThingPanel:
 
     def image(self, width: int | None = None) -> np.ndarray:
         """Return the panel's crop (box drawn in, for a small object), optionally narrowed."""
-        page = self.page
-        size = segments_size(page.segments_file)
-        panel = crop_panel(load_page(page.image_file), size, self.row["box"])
-        if width is not None and panel.shape[1] > width:
-            new_size = (width, round(panel.shape[0] * width / panel.shape[1]))
-            panel = cv2.resize(panel, new_size, interpolation=cv2.INTER_AREA)
-        else:
-            panel = panel.copy()
+        panel = panel_image(self.page, self.row["box"], width)
         box = self.tag.get("box", {}).get(self.thing)
         if box is not None:
             h, w = panel.shape[:2]
             p0, p1 = (round(box[0] * w), round(box[1] * h)), (round(box[2] * w), round(box[3] * h))
             cv2.rectangle(panel, p0, p1, (255, 0, 255), max(2, w // 300))
         return panel
-
-
-@lru_cache(maxsize=16)
-def load_page(image_file: Path) -> np.ndarray:
-    """Load a page image, cached: a sheet or review shows several panels of one page."""
-    return load_rgb(image_file)
 
 
 def scan_panels(
@@ -604,8 +587,8 @@ def save_labels(panels: list[ThingPanel], labels: dict[int, str | None]) -> dict
     return counts
 
 
-class ReviewSession:
-    """The panels a review page offers, per thing, best first."""
+class ThingsSession(ReviewSession[ThingPanel]):
+    """The panels a things review page offers, per thing, best first."""
 
     def __init__(self, found: dict[str, list[ThingPanel]], *, everything: bool, limit: int) -> None:
         """Keep each thing's review band (or, with everything, all from its floor up).
@@ -616,22 +599,15 @@ class ReviewSession:
             limit: At most this many panels a thing, the best scores first.
 
         """
-        self.panels: dict[str, list[ThingPanel]] = {}
+        offered: dict[str, list[ThingPanel]] = {}
         for thing, panels in found.items():
             floor = THING_QUESTIONS[thing].floor
             kept = [
                 p for p in panels if p.in_band or (everything and (p.label or p.score >= floor))
             ]
             if kept:
-                self.panels[thing] = sorted(kept, key=lambda p: -p.score)[:limit]
-        self.lock = threading.Lock()
-
-    def things_data(self) -> list[dict[str, Any]]:
-        """Return each thing's name, panels shown and how many are labelled."""
-        return [
-            {"thing": t, "shown": len(ps), "labelled": sum(p.label is not None for p in ps)}
-            for t, ps in self.panels.items()
-        ]
+                offered[thing] = sorted(kept, key=lambda p: -p.score)[:limit]
+        super().__init__(offered)
 
     def panels_data(self, thing: str) -> dict[str, Any]:
         """Return what the page shows for a thing: the question, cut-off and each panel.
@@ -648,92 +624,32 @@ class ReviewSession:
                 {
                     "caption": p.caption(),
                     "score": round(p.score, 4),
-                    "jev": p.tag["jev"][thing],
+                    "scores": f"jev {p.tag['jev'][thing]:.2f}",
                     "label": p.label,
                 }
                 for p in self.panels[thing]
             ],
         }
 
-    def image_jpeg(self, thing: str, k: str) -> bytes | None:
-        """Return panel k of a thing as a JPEG (its box drawn in), or None if there is none."""
-        panels = self.panels.get(thing, [])
-        if not k.isdigit() or int(k) >= len(panels):
-            return None
-        rgb = panels[int(k)].image(REVIEW_THUMB_W)
-        _, jpg = cv2.imencode(".jpg", cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
-        return jpg.tobytes()
-
-    def save(self, thing: str, labels: dict[str, str | None]) -> dict[str, int] | None:
-        """Write a thing's labels (panel position -> label); None if any is out of range."""
-        panels = self.panels.get(thing, [])
-        by_index = {int(k): v for k, v in labels.items() if k.isdigit()}
-        if len(by_index) != len(labels) or any(
-            k >= len(panels) or v not in (*LABELS, None) for k, v in by_index.items()
-        ):
-            return None
-        with self.lock:
-            counts = save_labels(panels, by_index)
-        logger.info(f"Review of {thing}: saved {counts} (source human).")
-        print(f"Saved {thing}: {counts}")
-        return counts
+    def write_labels(
+        self, panels: list[ThingPanel], labels: dict[int, str | None]
+    ) -> dict[str, int]:
+        """Write labels into the panels' tags files."""
+        return save_labels(panels, labels)
 
 
-def _route(path: str) -> tuple[str, dict[str, str]]:
-    """Split a request path into its route and query parameters."""
-    parts = urlsplit(path)
-    return parts.path, {k: v[0] for k, v in parse_qs(parts.query).items()}
-
-
-class ReviewHandler(BaseHTTPRequestHandler):
-    """Requests of the review page; :func:`review_handler` binds a session to it."""
-
-    session: ReviewSession
-
-    def log_message(self, format: str, *args: Any) -> None:  # noqa: A002, ANN401
-        logger.debug(format % args)
-
-    def _send(self, status: int, body: bytes, content_type: str) -> None:
-        self.send_response(status)
-        self.send_header("Content-Type", content_type)
-        self.send_header("Content-Length", str(len(body)))
-        self.send_header("Cache-Control", "no-store")
-        self.end_headers()
-        self.wfile.write(body)
-
-    def _json(self, data: object) -> None:
-        self._send(HTTPStatus.OK, json.dumps(data).encode(), "application/json")
-
-    def do_GET(self) -> None:
-        route, query = _route(self.path)
-        thing = query.get("thing", "")
-        if route == "/":
-            self._send(HTTPStatus.OK, REVIEW_PAGE.read_bytes(), "text/html; charset=utf-8")
-        elif route == "/things.json":
-            self._json(self.session.things_data())
-        elif route == "/panels.json" and thing in self.session.panels:
-            self._json(self.session.panels_data(thing))
-        elif route == "/img" and (jpg := self.session.image_jpeg(thing, query.get("k", ""))):
-            self._send(HTTPStatus.OK, jpg, "image/jpeg")
-        else:
-            self._send(HTTPStatus.NOT_FOUND, b"", "text/plain")
-
-    def do_POST(self) -> None:
-        route, query = _route(self.path)
-        if route != "/save":
-            self._send(HTTPStatus.NOT_FOUND, b"", "text/plain")
-            return
-        body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
-        counts = self.session.save(query.get("thing", ""), body.get("labels", {}))
-        if counts is None:
-            self._send(HTTPStatus.BAD_REQUEST, b"bad thing or label", "text/plain")
-        else:
-            self._json(counts)
-
-
-def review_handler(session: ReviewSession) -> type[BaseHTTPRequestHandler]:
-    """Return the review page's request handler bound to a session."""
-    return type("BoundReviewHandler", (ReviewHandler,), {"session": session})
+def why_nothing(thing: str, panels: list[ThingPanel]) -> str:
+    """Say why a thing offers no panel to review: how its panels split, labelled or not."""
+    if not panels:
+        return f"{thing}: no panels scored."
+    spec = THING_QUESTIONS[thing]
+    labelled = sum(p.label is not None for p in panels)
+    sure = sum(p.label is None and p.source == "jev" for p in panels)
+    below = sum(p.label is None and p.score < spec.floor for p in panels)
+    parts = [f"{labelled} labelled", f"{below} below the floor ({spec.floor})"]
+    if spec.sure is not None:
+        parts.append(f"{sure} confident yes (>= {spec.sure})")
+    return f"{thing}: {len(panels)} panels -- " + ", ".join(parts) + "."
 
 
 def parse_things(text: str) -> list[str]:
@@ -749,17 +665,6 @@ def parse_things(text: str) -> list[str]:
         msg = f"Unknown thing(s) {', '.join(unknown)}; known: {', '.join(THING_QUESTIONS)}."
         raise typer.BadParameter(msg)
     return [t for t in THING_QUESTIONS if not names or t in names]
-
-
-def selected_titles(volumes_str: str, title_str: str) -> tuple[ComicsDatabase, list[str], str]:
-    """Return the database, the selected titles (all volumes by default) and a scope name."""
-    if not volumes_str and not title_str:
-        volumes_str = f"{FIRST_VOLUME_NUMBER}-{LAST_VOLUME_NUMBER}"
-        scope = "all"
-    else:
-        scope = title_str or f"Vol. {volumes_str}"
-    comics_database, titles = get_comic_titles(volumes_str, title_str, exclude_non_comics=True)
-    return comics_database, titles, scope
 
 
 ThingsOpt = typer.Option("", "--thing", help="Comma list of things (default: all).")
@@ -836,26 +741,23 @@ def review(  # noqa: PLR0913 -- a typer command: one parameter per CLI option.
     """Serve the review page on localhost until Ctrl-C, then rewrite the corpus list."""
     init_logging(APP_LOGGING_NAME, "panel-things.log", log_level_str)
     wanted = parse_things(things_str)
-    comics_database, titles, _ = selected_titles(volumes_str, title_str)
+    comics_database, titles, scope = selected_titles(volumes_str, title_str)
     tags_root = get_panel_tags_root(comics_database)
     found = scan_panels(comics_database, titles, tags_root, wanted)
-    session = ReviewSession(found, everything=everything, limit=limit)
+    session = ThingsSession(found, everything=everything, limit=limit)
     if not session.panels:
-        print("Nothing to review for those things in that selection.")
+        print(f"Nothing to review in {scope if title_str else scope.lower()}:")
+        for thing in wanted:
+            print(f"  {why_nothing(thing, found[thing])}")
+        if not everything:
+            print("Add --everything to see labelled panels and confident yeses as well.")
         raise typer.Exit(code=1)
-    server = ThreadingHTTPServer(("127.0.0.1", port), review_handler(session))
-    url = f"http://127.0.0.1:{port}/"
-    shown = sum(len(ps) for ps in session.panels.values())
-    print(f"Reviewing {len(session.panels)} things ({shown} panels) at {url} -- Ctrl-C to stop.")
-    webbrowser.open(url)
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("Stopped.")
-    finally:
-        server.server_close()
+
+    def write_list() -> None:
         out, n = write_things_list(comics_database, tags_root)
         print(f"{n} panel things in the corpus -> {out}")
+
+    run_review(session, port, write_list)
 
 
 @app.command(name="list", help="Rewrite the corpus list of panels that have a thing.")
