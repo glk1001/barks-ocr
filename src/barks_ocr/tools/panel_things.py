@@ -22,12 +22,15 @@ reviewer sees what it meant. A box is returned even when the object is absent.
 never touches them. A panel has a thing when it is labelled ``yes``, or when it is
 unlabelled and scores at least the thing's ``sure`` cut-off (source: Jev). Below that,
 down to ``floor``, is the thing's review band: panels the review page offers for a human
-to settle. Both cut-offs come from GLK's labels of the pilot (Lost in the Andes!, Back to
-the Klondike, The Firebug; 626 panels, 2026-11-09): ``sure`` is where at least ~90% of
-flagged panels were real, ``floor`` the score under which no (or nearly no) real one fell.
-A thing with ``sure`` None has none: it was weak on the pilot (``printed``, ``vase``,
-``lighthouse``), or the pilot had too few to judge, and it is judged from the corpus's
-top hits. ``things-panels.tsv`` at the repo root lists every panel that has a thing.
+to settle. Both cut-offs come from GLK's labels of the pilot (Lost in the Andes!, Back
+to the Klondike, The Firebug; 626 panels, 2026-11-09): ``sure`` is where at least ~90%
+of flagged panels were real, ``floor`` the score under which no (or nearly no) real one
+fell. A thing with ``sure`` None has none: it was weak on the pilot (``printed``,
+``vase``, ``lighthouse``) and is found only by review. Things the pilot had too few of
+to judge (``camera``, ``flashlight``, ``bicycle``, ``train``, ``kite``, ``radio_tv``)
+take the score of their 60th-best corpus hit as ``sure``: GLK looked through those top
+60 and found them mostly right, and nothing below them has been looked at.
+``things-panels.tsv`` at the repo root lists every panel that has a thing.
 
 Wording rules agreed with GLK (2026-11-09): ``animal`` is a real animal drawn as one,
 never the clothed, upright, talking cast; ``gun`` is broad (cannons too); ``car`` is any
@@ -148,6 +151,7 @@ THING_QUESTIONS: dict[str, Thing] = {
     "camera": Thing(
         "v2",
         _PANEL + "Is there a camera, still or movie? Not binoculars or a telescope." + _SMALL,
+        sure=0.98,  # GLK: its top 60 corpus hits (2026-11-09) looked mostly right
         box="the camera in `image`",
     ),
     "river": Thing(
@@ -212,6 +216,7 @@ THING_QUESTIONS: dict[str, Thing] = {
     "radio_tv": Thing(
         "v1",
         _PANEL + "Is there a radio or a television set? Not a telephone." + _SMALL,
+        sure=0.99,  # GLK: its top 60 corpus hits (2026-11-09) looked mostly right
     ),
     "suitcase": Thing(
         "v1",
@@ -219,7 +224,7 @@ THING_QUESTIONS: dict[str, Thing] = {
         "or hatbox? Not a sack, a basket or a backpack." + _SMALL,
         sure=0.8,  # 7 of 7, but only 7 of the 21 real ones
     ),
-    "kite": Thing("v1", _PANEL + "Is there a kite, flying or held?" + _SMALL),
+    "kite": Thing("v1", _PANEL + "Is there a kite, flying or held?" + _SMALL, sure=0.81),
     "boat": Thing(
         "v1",
         _PANEL + "Is there a ship or boat of any size: an ocean liner, steamer, sailing ship, "
@@ -239,14 +244,16 @@ THING_QUESTIONS: dict[str, Thing] = {
         "v1",
         _PANEL + "Is there a flashlight (an electric hand torch), lit or not? Not a lantern, "
         "a candle or a flaming torch." + _SMALL,
+        sure=0.81,  # GLK: its top 60 corpus hits (2026-11-09) looked mostly right
         box="the flashlight in `image`",
     ),
     "lighthouse": Thing("v1", _PANEL + "Is there a lighthouse?" + _SMALL),
-    "bicycle": Thing("v1", _PANEL + "Is there a bicycle or tricycle?" + _SMALL),
+    "bicycle": Thing("v1", _PANEL + "Is there a bicycle or tricycle?" + _SMALL, sure=0.94),
     "train": Thing(
         "v1",
         _PANEL + "Is there a railway train: a locomotive, or railway carriages or wagons on "
         "rails? Not a streetcar or a bus." + _SMALL,
+        sure=0.91,  # GLK: its top 60 corpus hits (2026-11-09) looked mostly right
     ),
     "airplane": Thing(
         "v1",
