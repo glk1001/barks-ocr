@@ -82,9 +82,9 @@ _KEEP_INK = (
 STYLE_PROMPTS: dict[str, str] = {
     "photo": (
         "Transform this comic book panel into a super-realistic photograph taken on location"
-        " with a camera, with real-world materials and textures such as moving water, foam and"
-        " spray, weathered wood, rough stone, feathers and woven fabric, and natural light, so"
-        " that nothing looks like clay, plastic or a miniature model" + _KEEP
+        " with a camera, with real-world materials and textures such as skin, feathers, fabric,"
+        " wood, stone and metal, and natural light, so that nothing looks like clay, plastic"
+        " or a miniature model" + _KEEP
     ),
     "render3d": (
         "Transform this comic book panel into a highly detailed, realistic 3D render with"
