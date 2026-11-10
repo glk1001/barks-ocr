@@ -164,6 +164,12 @@ EXTRA_PROMPTS: dict[tuple[str, str] | tuple[str, str, str], str] = {
         " turban. His short beak points down and to the left, closed in a grim scowl, and he is"
         " not smiling."
     ),
+    ("Stranger Than Fiction", "057-4.png"): (
+        "The scene is indoors, inside a room: the plain cream area above the ledge is the"
+        " room's painted wall, not sky, and there are no trees or outdoors anywhere. The ZOW"
+        " letters and the curtain rail above the window are bright blue, and the speech balloon"
+        " is solid white."
+    ),
     ("Silent Night", "253-2.png"): (
         "It is a cold winter night: the flat blue-violet background is the dark night sky, and"
         " there is no sea, water, waves, beach or sand anywhere. Fresh snow lies on top of the"
