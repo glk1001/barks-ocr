@@ -1169,3 +1169,11 @@ HELP KEEP AMERICA STRONG
 5 095 BAM! WHAM! BAM!
 5 104 PARK
 5 197 EXPRE
+# The Midas Touch, Vol. 26 (reviewer, 2026-11-10). 114: an illegible sign over the door; the
+# review deleted its group, but visible_text still records what the pass saw. 115: the pass
+# transcribed the sign a letter short -- the group was corrected to OFAIA in review. 107, 109:
+# the drawn $ on money bags, not given a group.
+26 107 $
+26 109 $
+26 114 MM M
+26 115 FAIA

@@ -17112,3 +17112,36 @@ Small Fryers, Daisy's Dazed Days). With this batch every one-pager in the books 
   boxes fall in no panel; Daisy's Dazed Days' title sits above its one panel.
 - `other:` values: `Gus Goose`, `the woman in the pink suit`, `a spectator`,
   `the man in the green vest`, `the man in the red beret`.
+
+### Findings to paste into the next run (2026-11-10, The Midas Touch, Vol. 26, seed flow, REVIEWED AND SYNCED -- title closed)
+
+**250 groups read, 16 speaker corrections (6.4%), every one in the nephew domain (16 of
+45, 35.6%), plus 1 type.** By the confidence the pass wrote: **high 2/185 (1.1%),
+medium 14/56 (25.0%), low 0/2.** The review added 7 groups (BERMUDA, X-99, two drawn `$`,
+ROSA, 27, and a `?` thought for `other:a factory worker`) and deleted 114's illegible
+sign, leaving 250. 38 boxes were refit, all on easyocr apart from 115 g3 (the union was
+kept); mostly captions, signs and drawn SFX. Closed with `seed sync --write`. Missed
+text: the drawn `$` on the 107 and 109 money bags, 114's illegible sign and 115's
+`FAIA` (the pass a letter short of `OFAIA`) went on the ignore list.
+
+- **UNDER-NAMING IS STILL THE ERROR: 11 OF 16 WERE `nephews` -> A NAME.** Five carried a
+  note that the tail ENDED BETWEEN two boys (112 g15/g16, 113 g5, 122 g1/g4, 123 g10),
+  and the reviewer named one boy every time. A tip between two heads is a crop to
+  settle, not a collective -- and it is no fixed side either: the named boy was on the
+  right of the pair four times and on the left twice.
+- **"NO ROSTER INK ON HIS CAP" DID NOT STOP A NAME.** 109 g12, 114 g10/g11 and 122 g3
+  noted a bare or flecked cap over a clean tail; the reviewer named all four, with a
+  `cap_colour`, and wrote on 109 g12 "Colorist error: need to color caps". The tail
+  names him; an uncoloured cap is the colourist's omission, not a reason to decline.
+- **TWO CAP READINGS REVERSED** (113 g17 red -> Dewey/blue; 120 g0 blue -> Huey/red),
+  both at a measured or stated ink. Reviewer to confirm whether these are colourist
+  swaps fixed by dialogue or misplaced blobs.
+- **A DISGUISE IS NOT A FACE.** 117 g12, the first fish-suited duck, was Scrooge, not
+  Donald "by his head". Costume keys do not travel (see the earlier costume rule).
+- **SILHOUETTES ARE STILL WHO THEY ARE.** 119 g5/g7, the falling cluster and the figures
+  under the parachute, went `unknown` -> `nephews`.
+- **A RETYPED GROUP LEFT ITS SPEAKER UNTICKED AGAIN** (113 g9 ZZZZ, sound_effect ->
+  dialogue), the known straggler class; three more untouched groups were also left
+  (114 g11, 115 g3, 117 g17). The close-out caught all four.
+- `other:` values: `a villager`, `a factory worker`, `a detective`, `the pilot`,
+  `a ground crewman`, `a secretary`, `air control`.
