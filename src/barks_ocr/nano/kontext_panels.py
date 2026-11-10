@@ -164,6 +164,11 @@ EXTRA_PROMPTS: dict[tuple[str, str] | tuple[str, str, str], str] = {
         " turban. His short beak points down and to the left, closed in a grim scowl, and he is"
         " not smiling."
     ),
+    ("Silent Night", "253-2.png"): (
+        "It is a cold winter night: the flat blue-violet background is the dark night sky, and"
+        " there is no sea, water, waves, beach or sand anywhere. Fresh snow lies on top of the"
+        " brown post and the pink globe at the left."
+    ),
     ("The Beachcombers' Picnic", "073-2.png", "halftone"): (
         "The panel has no lettering at all: add no text, signature, initials or date anywhere,"
         " and keep the sky in the corners plain dots."
