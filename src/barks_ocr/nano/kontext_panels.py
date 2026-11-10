@@ -65,9 +65,9 @@ _SIZE_MULTIPLE = 16
 BARKS_PANELS_PNG = Path("/home/greg/Books/Carl Barks/Barks Panels Pngs")
 
 PANEL_TYPE = "Favourites"  # or "Censorship", "Closeups", "Insets", "Splash", "Silhouettes"
-TITLE = "Silent Night"
+TITLE = "The Beachcombers' Picnic"
 EDITED = ""  # or "edited"
-IMAGE_FILENAME = "253-2.png"
+IMAGE_FILENAME = "073-2.png"
 
 _KEEP = (
     ", while keeping the exact same composition, framing, characters, poses, clothing,"
@@ -163,6 +163,10 @@ EXTRA_PROMPTS: dict[tuple[str, str] | tuple[str, str, str], str] = {
         " so only one eye shows: a single narrowed, angry eye just under the brim of his white"
         " turban. His short beak points down and to the left, closed in a grim scowl, and he is"
         " not smiling."
+    ),
+    ("The Beachcombers' Picnic", "073-2.png", "halftone"): (
+        "The panel has no lettering at all: add no text, signature, initials or date anywhere,"
+        " and keep the sky in the corners plain dots."
     ),
     ("Northeaster on Cape Quack", "014-6.png", "photo"): (
         "This is a real photograph of a storm at sea at night: the sky is black, and the"
