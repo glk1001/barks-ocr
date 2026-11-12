@@ -124,7 +124,7 @@ def _load_florence(model_id: str, *, quantize: bool = True) -> tuple[Any, Any, s
         trust_remote_code=True,
         torch_dtype=dtype,
         attn_implementation="eager",
-    ).to(device)  # ty: ignore[invalid-argument-type]
+    ).to(device)
     processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)
 
     if device == "cpu" and quantize:

@@ -87,18 +87,18 @@ _MAIN_WINDOW_X, _MAIN_WINDOW_Y = get_centred_position_on_primary_monitor(
     MAIN_WINDOW_WIDTH, MAIN_WINDOW_HEIGHT
 )
 
-Config.set("graphics", "position", "custom")  # ty:ignore[unresolved-attribute]
-Config.set("graphics", "left", _MAIN_WINDOW_X)  # ty:ignore[unresolved-attribute]
-Config.set("graphics", "top", _MAIN_WINDOW_Y)  # ty:ignore[unresolved-attribute]
-Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty:ignore[unresolved-attribute]
-Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty:ignore[unresolved-attribute]
+Config.set("graphics", "position", "custom")  # ty: ignore[missing-union-attribute]
+Config.set("graphics", "left", _MAIN_WINDOW_X)  # ty: ignore[missing-union-attribute]
+Config.set("graphics", "top", _MAIN_WINDOW_Y)  # ty: ignore[missing-union-attribute]
+Config.set("graphics", "width", MAIN_WINDOW_WIDTH)  # ty: ignore[missing-union-attribute]
+Config.set("graphics", "height", MAIN_WINDOW_HEIGHT)  # ty: ignore[missing-union-attribute]
 # Disable Kivy's right-click/ctrl-click multitouch emulation — laptop touchpads
 # can emit spurious events that fire phantom touches (buttons, highlights).
-Config.set("input", "mouse", "mouse,disable_multitouch")  # ty:ignore[unresolved-attribute]
+Config.set("input", "mouse", "mouse,disable_multitouch")  # ty: ignore[missing-union-attribute]
 # Stop ProbeSysfs from attaching MTD readers to /dev/input/event* for the
 # touchpad/touchscreen. Those raw touch events duplicate SDL2's mouse events
 # and cause phantom clicks and drag-selects on laptops.
-Config.remove_option("input", "%(name)s")  # ty:ignore[unresolved-attribute]
+Config.remove_option("input", "%(name)s")  # ty: ignore[missing-union-attribute]
 
 # Kivy 2.3.1 bug: textinput.py calls canvas._remove_group() but Canvas only
 # exposes remove_group() (no leading underscore). Patch the alias in.
@@ -113,7 +113,7 @@ from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivy.graphics import Color, Ellipse, InstructionGroup, Line, Rectangle
 from kivy.input.motionevent import MotionEvent
-from kivy.properties import (  # ty:ignore[unresolved-import]
+from kivy.properties import (  # ty:ignore[import-not-found]
     StringProperty,
 )
 from kivy.uix.boxlayout import BoxLayout
@@ -473,7 +473,7 @@ class BoundingBoxCanvas(Widget):
         # Widget.canvas comes from Kivy's compiled base class, which ships no stubs;
         # both checkers read it as possibly-None. It is always set on a live widget.
         # pyrefly: ignore[missing-attribute]
-        self.canvas.add(self._draw_group)  # ty:ignore[unresolved-attribute]
+        self.canvas.add(self._draw_group)  # ty: ignore[missing-union-attribute]
 
         self.bind(size=self._redraw, pos=self._redraw)
 
@@ -1600,7 +1600,7 @@ class EditorApp(App):
         # Widget.canvas comes from Kivy's compiled base class, which ships no stubs;
         # both checkers read it as possibly-None. It is always set on a live widget.
         # pyrefly: ignore[missing-attribute]
-        with rendered_view.canvas.before:  # ty:ignore[unresolved-attribute]
+        with rendered_view.canvas.before:  # ty: ignore[missing-union-attribute]
             Color(*TEXT_INPUT_BG)
             backdrop = Rectangle(pos=rendered_view.pos, size=rendered_view.size)
         rendered_view.bind(

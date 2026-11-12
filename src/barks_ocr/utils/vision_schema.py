@@ -730,8 +730,8 @@ def normalize_speaker(speaker: str, story_characters: Iterable[str] = ()) -> str
 
     """
     canonical = _ROSTER_BY_CASEFOLD
-    if story_characters:
-        canonical = canonical | {name.casefold(): name for name in story_characters}
+    if story_cast := {name.casefold(): name for name in story_characters}:
+        canonical = canonical | story_cast
     return _normalize_vocab_value(speaker, canonical)
 
 
@@ -787,6 +787,7 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
 
     """
     extra = sorted(set(story_characters) - ROSTER)
+    things = sorted(set(story_things))
     overlap_pct = int(ADDED_GROUP_MAX_OVERLAP * 100)
     added_extras = f"{SPEAKER_CONFIDENCE_KEY}, {RESULT_TEXT_OK_KEY}, {RESULT_NOTE_KEY}"
     lines = [
@@ -1301,9 +1302,9 @@ def roster_text(story_characters: Iterable[str] = (), story_things: Iterable[str
             [
                 "    The database records these notable things in THIS story --",
                 "    name them this way so they stay findable:",
-                *[f"      {name}" for name in sorted(set(story_things))],
+                *[f"      {name}" for name in things],
             ]
-            if story_things
+            if things
             else []
         ),
         f"  {BEATS_KEY} — 1 to 3 plain sentences saying what happens on the page.",

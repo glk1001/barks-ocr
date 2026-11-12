@@ -418,7 +418,7 @@ class _DraggableLabel(KivyLabel):
         # Widget.canvas comes from Kivy's compiled base class, which ships no stubs;
         # both checkers read it as possibly-None. It is always set on a live widget.
         # pyrefly: ignore[missing-attribute]
-        with self.canvas.before:  # ty: ignore[unresolved-attribute]
+        with self.canvas.before:  # ty: ignore[missing-union-attribute]
             Color(1.0, 0.85, 0.4, 1.0)
             self._bg = Rectangle(pos=self.pos, size=self.size)
         self.bind(pos=self._update_bg, size=self._update_bg)
